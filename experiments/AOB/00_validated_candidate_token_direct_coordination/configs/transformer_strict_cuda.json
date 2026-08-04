@@ -1,0 +1,103 @@
+{
+  "output_path": "results/transformer_strict_results.json",
+  "report_path": "reports/REPORT.md",
+  "merge_with_path": "results/synthetic_cuda_results.json",
+  "agent_view_log_path": "results/transformer_strict_agent_views.jsonl",
+  "coordinator_visible_log_path": "results/transformer_strict_coordinator_visible.jsonl",
+  "hidden_state_npz_path": "results/transformer_strict_hidden_states.npz",
+  "device": "cuda",
+  "cuda_memory_budget_gb": 16.0,
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "strict_dataset": {
+    "n_train": 360,
+    "n_dev": 120,
+    "n_test": 180,
+    "num_classes": 4,
+    "num_tasks": 1,
+    "n_evidence_bits": 4
+  },
+  "transformer": {
+    "model_name_or_path": "EleutherAI/pythia-70m-deduped",
+    "layers": [1, 3, 5],
+    "token_positions": ["evidence", "final", "prompt_mean"],
+    "batch_size": 32,
+    "max_length": 96
+  },
+  "training": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 6,
+    "hidden_dims": [96, 48],
+    "pca_components": 32,
+    "clusters": 8
+  },
+  "controls": [
+    "none",
+    "shuffled_activations",
+    "random_activations",
+    "wrong_task_activations",
+    "wrong_agent_activations"
+  ],
+  "run_diagnostics": true,
+  "run_stage1_mechanism_diagnostics": true,
+  "run_stage3_robustness_diagnostics": true,
+  "run_stage4_hidden_coordinators": true,
+  "stage4_agent_dropout": 0.25,
+  "run_stage5_role_attention_coordinators": true,
+  "stage5_agent_dropout": 0.25,
+  "stage5_aux_loss_weight": 0.2,
+  "stage5_variants": [
+    {"name": "self_l1_h1_cls_late_noaux", "family": "self_attention", "layers": 1, "heads": 1, "pooling": "cls", "feature_mode": "late_final", "aux": false},
+    {"name": "self_l2_h1_cls_late_noaux", "family": "self_attention", "layers": 2, "heads": 1, "pooling": "cls", "feature_mode": "late_final", "aux": false},
+    {"name": "self_l1_h4_cls_late_noaux", "family": "self_attention", "layers": 1, "heads": 4, "pooling": "cls", "feature_mode": "late_final", "aux": false},
+    {"name": "self_l1_h1_mean_late_noaux", "family": "self_attention", "layers": 1, "heads": 1, "pooling": "mean", "feature_mode": "late_final", "aux": false},
+    {"name": "self_l1_h1_cls_bundle_noaux", "family": "self_attention", "layers": 1, "heads": 1, "pooling": "cls", "feature_mode": "final_bundle", "aux": false},
+    {"name": "self_l1_h1_cls_late_aux", "family": "self_attention", "layers": 1, "heads": 1, "pooling": "cls", "feature_mode": "late_final", "aux": true},
+    {"name": "cross_l1_h1_coord_late_noaux", "family": "cross_attention", "layers": 1, "heads": 1, "pooling": "coordinator", "feature_mode": "late_final", "aux": false},
+    {"name": "cross_l2_h1_coord_late_noaux", "family": "cross_attention", "layers": 2, "heads": 1, "pooling": "coordinator", "feature_mode": "late_final", "aux": false},
+    {"name": "cross_l1_h4_coord_late_noaux", "family": "cross_attention", "layers": 1, "heads": 4, "pooling": "coordinator", "feature_mode": "late_final", "aux": false},
+    {"name": "cross_l1_h1_coord_bundle_noaux", "family": "cross_attention", "layers": 1, "heads": 1, "pooling": "coordinator", "feature_mode": "final_bundle", "aux": false},
+    {"name": "cross_l1_h1_coord_late_aux", "family": "cross_attention", "layers": 1, "heads": 1, "pooling": "coordinator", "feature_mode": "late_final", "aux": true}
+  ],
+  "stage5_prompt_variants": [
+    {"name": "self_l1_h1_cls_late_noaux", "family": "self_attention", "layers": 1, "heads": 1, "pooling": "cls", "feature_mode": "late_final", "aux": false},
+    {"name": "cross_l1_h1_coord_late_noaux", "family": "cross_attention", "layers": 1, "heads": 1, "pooling": "coordinator", "feature_mode": "late_final", "aux": false}
+  ],
+  "run_prompt_evidence_controls": true,
+  "agent_count_curve_max_agents": 5,
+  "activation_stability_probe_seed_offsets": [0, 1, 2, 3, 4],
+  "activation_stability_fixed_training_seed": 777001,
+  "prompt_robustness_seeds": [0, 1, 2, 3, 4],
+  "prompt_robustness_variants": [
+    {
+      "name": "compact_prompt",
+      "prompt_template": "compact"
+    },
+    {
+      "name": "alt_evidence_tokens",
+      "evidence_tokens": ["EV_NEG", "EV_POS"]
+    },
+    {
+      "name": "json_answer_format",
+      "answer_format": "json"
+    }
+  ],
+  "evidence_sharing_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "model_robustness_seeds": [0, 1, 2],
+  "model_robustness_variants": [
+    {
+      "model_name_or_path": "gpt2",
+      "layers": [1, 5, 11],
+      "token_positions": ["evidence", "final", "prompt_mean"],
+      "batch_size": 16,
+      "max_length": 96
+    }
+  ],
+  "run_randomized_label_leakage": true,
+  "run_telemetry_channel_ablations": false,
+  "run_layer_position_ablations": true,
+  "run_individual_hidden_label_probe": true,
+  "hidden_state_probe_name": "hidden_state_only_probe"
+}

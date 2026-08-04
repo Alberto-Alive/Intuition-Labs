@@ -1,0 +1,32 @@
+stage: "8B.4"
+stage8c_not_run: true
+no_10x_attention_capacity_claim: true
+freeze_candidate_name: "stage8b3_j_explicit_view_objective_assignment_03"
+freeze_candidate_config_id: "9737cdc966c78acf"
+capacity_C: 64
+architecture:
+  attention_routing: "dense_all_view_attention"
+  avenues: 2
+  candidate_query: "candidate_task_query"
+  chunking: "semantic_key"
+  config_id: "9737cdc966c78acf"
+  coord_hops: 1
+  coordinator: "explicit_view_objective_assignment"
+  curriculum: "mixed_n"
+  dropout: 0.05
+  epochs: 4
+  frozen: false
+  hidden_dim: 32
+  latent_views: 18
+  lr: 0.05
+  max_train_examples: 128
+  memory_compression: "slot_attention_compression"
+  model_kind: "evidence_feature_latent"
+  name: "stage8b3_j_explicit_view_objective_assignment_03"
+  regularizers: ["entropy_regularization_on_routing"]
+  roles: 9
+  top_k_views: 4
+  training_loss: "multi_positive_cross_entropy"
+  vector_dim: 128
+  view_sharing: "shared_encoder_role_avenue_embeddings"
+  weight_decay: 0.0001

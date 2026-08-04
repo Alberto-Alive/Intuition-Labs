@@ -1,0 +1,13 @@
+E20 asked one question only: when model weights are frozen after training but the bank is allowed to update during inference, does certainty on novel combinations increase as they are encountered more, and does that increase follow the same graded principle that training frequency produced in e19.
+
+The method froze the e19-trained model weights and the full post-training bank as a permanent training partition, then added a separate live inference partition that started empty and accumulated detached activations for novel combinations during inference. Novel combinations were presented in 32 balanced rounds, with every one of the 16 novel combinations shown once per round using fresh jittered examples, and certainty was probed at exposure checkpoints 0, 1, 2, 4, 8, 16, and 32 on a separate probe stream so probing never contaminated the bank. The primary analysis used a one-sided Jonckheere-Terpstra test, strict mean ordering across checkpoints, and Spearman rho on certainty growth over exposure count, run separately for layer 1 and layer 2 across 5 training seeds.
+
+The primary result was a clear pass for layer 2. Layer 2 satisfied all three pass conditions: Jonckheere-Terpstra was significant in 5 of 5 seeds, strict mean ordering held in 5 of 5 seeds, and mean Spearman rho was 0.729. Layer 1 showed the same monotonic trend but failed strict ordering in 3 seeds due to small fluctuations at high certainty.
+
+The key finding is immediate certainty growth. After one exposure, certainty jumped from approximately 0.85 to approximately 0.999. The model recognises a novel combination after seeing it once and maps it into the familiarity structure immediately. Subsequent exposures continue refining certainty toward trained-combination levels.
+
+The secondary finding is that novel accuracy does not change meaningfully across checkpoints. Certainty growth and accuracy improvement are empirically separable. The bank is learning what has been seen, not learning to predict better.
+
+The interpretation boundary is explicit. E20 validates inference-time bank accumulation as genuine inference-time learning: the model learns what it has seen since deployment without weight updates. It does not validate the full continual learning architecture. That is e21.
+
+The preregistered next experiment is e21. E21 tests whether inference-time certainty growth on novel combinations transfers back into improved learning when the model is subsequently fine-tuned on those combinations. The question is whether the familiarity map built during inference accelerates subsequent learning, connecting inference-time learning to training-time learning in a loop.

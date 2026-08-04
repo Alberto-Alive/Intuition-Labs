@@ -1,0 +1,93 @@
+{
+  "probe_answer_labels": [
+    "ABOVE_BASELINE",
+    "BELOW_BASELINE",
+    "NEAR_BASELINE"
+  ],
+  "trajectory_labels": [
+    "DECREASING",
+    "STABLE",
+    "INCREASING",
+    "VOLATILE"
+  ],
+  "attention_pattern_labels": [
+    "FOCUSED",
+    "MIXED",
+    "DIFFUSE"
+  ],
+  "confidence_labels": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "outcome_labels": [
+    "SUCCESS_LIKELY",
+    "UNCERTAIN",
+    "FAILURE_LIKELY"
+  ],
+  "train_distribution": {
+    "1": 940,
+    "0": 283,
+    "2": 163
+  },
+  "train_hard_case_count": 108,
+  "train_failure_share": 0.1176046176046176,
+  "val_failure_share": 0.06289308176100629,
+  "test_failure_share": 0.0440251572327044,
+  "probe_seed": 140,
+  "hard_mining_seed": 223,
+  "corpus_fingerprint": "8557b347e986f762",
+  "mlp_converged": null,
+  "evidence_target_names": [
+    "stability",
+    "support",
+    "success",
+    "failure",
+    "ambiguity"
+  ],
+  "evidence_target_version": "v1",
+  "label_version": "v5",
+  "cluster_to_shape": {
+    "2": "DECREASING",
+    "0": "INCREASING",
+    "3": "VOLATILE",
+    "1": "STABLE"
+  },
+  "mean_entropy_mean": 0.8576252328168319,
+  "mean_entropy_std": 0.013693992685689601,
+  "max_attention_mean": 0.24656898940108382,
+  "max_attention_std": 0.015990164435798464,
+  "agreement_values": [
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "agreement_medium": 0.875,
+  "agreement_high": 1.0,
+  "margin_low": 0.8687361210584641,
+  "margin_high": 0.980180847644806,
+  "pattern_z_threshold": 0.75,
+  "pattern_threshold_mode": "auto",
+  "attention_pattern_distribution": {
+    "DIFFUSE": 228,
+    "MIXED": 937,
+    "FOCUSED": 221
+  },
+  "pattern_threshold_search": {
+    "0.75": {
+      "DIFFUSE": 228,
+      "MIXED": 937,
+      "FOCUSED": 221
+    }
+  },
+  "correctness_labeler": "logistic_regression_full_v1",
+  "correctness_cv_folds": 5,
+  "success_min_correctness_prob": 0.9,
+  "failure_max_correctness_prob": 0.6,
+  "success_min_support_ratio": 0.01,
+  "success_min_group_size": 30,
+  "correctness_train_auroc": 0.9477337367922072,
+  "correctness_train_brier": 0.05289947012787365
+}

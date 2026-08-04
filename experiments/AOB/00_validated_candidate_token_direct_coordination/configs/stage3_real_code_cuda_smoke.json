@@ -1,0 +1,36 @@
+{
+  "output_path": "results/stage3_real_code_cuda_smoke_results.json",
+  "audit_log_path": "results/stage3_real_code_cuda_smoke_audit.jsonl",
+  "report_path": "reports/STAGE3_REAL_CODE_CUDA_SMOKE.md",
+  "checkpoint_dir": "results/stage3_real_code_cuda_smoke_checkpoints",
+  "save_checkpoints": true,
+  "device": "cuda",
+  "require_cuda": true,
+  "cuda_memory_budget_gb": 16.0,
+  "architecture": "topk_attention_no_head",
+  "architecture_changes": "forbidden",
+  "dataset": "real_program_analysis_import_restoration",
+  "control_chance_tolerance": 0.1,
+  "stop_on_failed_seed": true,
+  "stage": {
+    "n_train": 64,
+    "n_dev": 32,
+    "n_test": 32,
+    "seeds": [0],
+    "epochs": 1,
+    "patience": 1,
+    "hidden_dim": 32,
+    "tiny_layers": 1,
+    "tiny_ff_dim": 64,
+    "batch_size": 8,
+    "lr": 0.002,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": "bf16"
+  },
+  "gpu_safety": {
+    "batch_size_fallbacks": [8, 4, 2],
+    "effective_batch_size": 8,
+    "clear_cuda_cache_between_seeds": true,
+    "log_max_cuda_memory_per_seed": true
+  }
+}

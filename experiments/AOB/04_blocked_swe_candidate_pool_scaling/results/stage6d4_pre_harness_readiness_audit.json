@@ -1,0 +1,33 @@
+{
+  "benchmark": "stage6d4_self_generation_candidate_expansion",
+  "blocker": "No configured real generation backend produced accepted candidates. Configure command_line_agent, mini_swe_agent, api_generator, or provide local_jsonl_ingest outputs; dry_run is testing-only.",
+  "created_at_utc": "2026-05-17T00:26:08.212279+00:00",
+  "decision": "SELF_GENERATION_BLOCKED",
+  "decision_meaning": "backend/model/source limitations prevent reaching enough K=8 tasks",
+  "generation_worked": false,
+  "no_final_model_claim_made": true,
+  "official_harness_executed": false,
+  "official_harness_should_run_now": false,
+  "pool_all_k8_tasks": 25,
+  "pool_strict_k8_tasks": 23,
+  "quality_gates": {
+    "at_least_50_pool_all_k8_tasks": false,
+    "at_least_50_pool_strict_k8_tasks": false,
+    "candidate_order_randomized": true,
+    "duplicate_candidate_patch_audit_passes": true,
+    "exact_reference_patch_hits_zero": true,
+    "invalid_diff_rate_reported": true,
+    "near_reference_candidates_flagged_or_quarantined": true,
+    "no_fabricated_candidates": true,
+    "no_final_model_claim_made": true,
+    "no_raw_preserving_expansion": true,
+    "official_harness_not_executed": true,
+    "preferred_at_least_100_pool_strict_k8_tasks": false,
+    "selector_training_not_executed": true,
+    "source_generator_skew_reported": true
+  },
+  "quality_gates_pass": false,
+  "remaining_tasks_needed_for_100_strict_k8": 77,
+  "remaining_tasks_needed_for_50_strict_k8": 27,
+  "selector_training_executed": false
+}

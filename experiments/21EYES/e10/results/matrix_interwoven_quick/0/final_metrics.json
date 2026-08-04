@@ -1,0 +1,351 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": true,
+    "crossing_variant": false,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      "sdpa_causal",
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      "sdpa_causal"
+    ],
+    "fused_matrix_layers": [
+      1,
+      3
+    ],
+    "last_attention_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      "sdpa_causal",
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      "sdpa_causal"
+    ],
+    "matrix_interwoven_variant": true,
+    "note": "Alternates physically split per-avenue matrices with full fused matrices over concatenated avenue channels."
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e10\\configs\\matrix_interwoven_quick.yaml",
+  "controls": {
+    "avenue_controls": {
+      "avenue_order_shuffle": {
+        "accuracy": 0.010416666666666666,
+        "drop": 0.010416666666666666,
+        "examples": 96,
+        "loss": 4.5477294921875,
+        "tokens_per_sec": 87381.89256361949
+      },
+      "avenue_random": {
+        "accuracy": 0.010416666666666666,
+        "drop": 0.010416666666666666,
+        "examples": 96,
+        "loss": 5.483968138694763,
+        "tokens_per_sec": 94536.89384971658
+      },
+      "avenue_shuffle": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.553304076194763,
+        "tokens_per_sec": 90824.02403048228
+      },
+      "avenue_zero": {
+        "accuracy": 0.010416666666666666,
+        "drop": 0.010416666666666666,
+        "examples": 96,
+        "loss": 5.3463134765625,
+        "tokens_per_sec": 100664.70822781218
+      },
+      "hidden_state_shuffle": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.551350951194763,
+        "tokens_per_sec": 96910.35160859945
+      }
+    },
+    "base_accuracy": 0.020833333333333332,
+    "base_loss": 4.547810792922974,
+    "crossing_controls": {},
+    "examples": 96,
+    "full_minus_max_single_avenue": -0.010416666666666668,
+    "leave_one_avenue_out": {
+      "leave_one_0": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.548624753952026,
+        "tokens_per_sec": 92220.40435644987
+      },
+      "leave_one_1": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.550984740257263,
+        "tokens_per_sec": 100976.98187591258
+      },
+      "leave_one_2": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.545654296875,
+        "tokens_per_sec": 93441.02979758549
+      },
+      "leave_one_3": {
+        "accuracy": 0.041666666666666664,
+        "drop": -0.020833333333333332,
+        "examples": 96,
+        "loss": 4.547119140625,
+        "tokens_per_sec": 90453.17128062445
+      }
+    },
+    "max_single_avenue_accuracy": 0.03125,
+    "single_avenue": {
+      "single_avenue_0": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.5506592988967896,
+        "tokens_per_sec": 94108.49281671579
+      },
+      "single_avenue_1": {
+        "accuracy": 0.03125,
+        "drop": -0.010416666666666668,
+        "examples": 96,
+        "loss": 4.547526001930237,
+        "tokens_per_sec": 99241.79526949639
+      },
+      "single_avenue_2": {
+        "accuracy": 0.010416666666666666,
+        "drop": 0.010416666666666666,
+        "examples": 96,
+        "loss": 4.5557862520217896,
+        "tokens_per_sec": 91003.01046033527
+      },
+      "single_avenue_3": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.548299074172974,
+        "tokens_per_sec": 97544.40223832565
+      }
+    }
+  },
+  "custom_variant_rationale": "Quick follow-up requested after E10: alternate physically split private avenue transformer matrices with fused full matrices over concatenated avenue channels. The interweave happens inside QKV/out/MLP parameters, not only through residual activation-space crossing.\n",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.009765625,
+    "accuracy_by_distractor_count": {
+      "17+": 0.012195121951219513,
+      "5-8": 0.0,
+      "9-16": 0.011811023622047244
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.041666666666666664,
+      "2": 0.009174311926605505,
+      "3": 0.009523809523809525,
+      "4+": 0.0072992700729927005
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.0078125,
+      "256": 0.015625
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.008695652173913044,
+      "multi_hop_lookup": 0.015873015873015872,
+      "password_overwrite": 0.015503875968992248,
+      "variable_shadowing": 0.0
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 542.0420864031001,
+    "held_out_template_accuracy": 0.009765625,
+    "layers": {
+      "attention_entropy": [
+        2.145794253796339,
+        3.3799627758562565,
+        4.048486668616533,
+        4.040818091481924
+      ],
+      "avenue_diversity": [
+        0.9115753173828125,
+        0.12465667724609375,
+        0.11080169677734375,
+        0.0518646240234375
+      ],
+      "avenue_gate_entropy": [
+        1.3549420088529587,
+        1.3858329858630896,
+        1.3859341070055962,
+        1.3861128184944391
+      ],
+      "avenue_output_norm": [
+        5.924567624926567,
+        168.36203050613403,
+        184.89311146736145,
+        374.4022250175476
+      ],
+      "avenue_scale": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "avenue_usage_0": [
+        0.34626555629074574,
+        0.25114140613004565,
+        0.24967210507020354,
+        0.24606340052559972
+      ],
+      "avenue_usage_1": [
+        0.23695360496640205,
+        0.24233964714221656,
+        0.24316216027364135,
+        0.24799129948951304
+      ],
+      "avenue_usage_2": [
+        0.21857589506544173,
+        0.24468678748235106,
+        0.24632973177358508,
+        0.24780482635833323
+      ],
+      "avenue_usage_3": [
+        0.1982049671933055,
+        0.261832186486572,
+        0.2608360359445214,
+        0.25814049364998937
+      ],
+      "effective_attended_tokens": [
+        20.201918587088585,
+        48.726514756679535,
+        80.49502468109131,
+        79.90847212076187
+      ],
+      "matrix_interwoven_applied": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "pairwise_avenue_cosine": [
+        0.08841991424560547,
+        0.8753433227539062,
+        0.8891983032226562,
+        0.9481353759765625
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "split_matrix_applied": [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "loss": 4.587608367204666,
+    "peak_gpu_memory_mb": 729.31005859375,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.0078125,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.611175537109375,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.0078125,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 4.576141387224197,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "long": {
+        "accuracy": 0.015625,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.578063994646072,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "many_overwrite": {
+        "accuracy": 0.0078125,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.58505254983902,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 86726.73382449603,
+    "wall_clock_eval_seconds": 0.9445760999806225
+  },
+  "max_steps": 750,
+  "parameter_count": 7953152,
+  "peak_gpu_memory_mb": 729.31005859375,
+  "seed": 0,
+  "train_examples": 24000,
+  "train_examples_per_sec": 521.1905864068711,
+  "train_loss_ema": 4.5831781806336025,
+  "train_task_loss_ema": 4.5831781806336025,
+  "train_tokens": 3072000,
+  "train_tokens_per_sec": 66712.3950600795,
+  "trainable_parameter_count": 7953152,
+  "variant": "matrix_interwoven_quick",
+  "wall_clock_train_seconds": 46.048414199991385
+}

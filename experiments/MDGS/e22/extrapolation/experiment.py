@@ -1,0 +1,723 @@
+"""Deliverable 1 training loop and reporting helpers for DIGIT Extrapolation E22."""
+
+from __future__ import annotations
+
+import random
+from dataclasses import dataclass
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+from scipy.stats import spearmanr
+from torch.utils.data import DataLoader, TensorDataset
+
+from experiments.DIGIT.Extrapolation.e19.extrapolation.experiment import _jonckheere_terpstra_greater
+from experiments.DIGIT.Extrapolation.e19.extrapolation.data import (
+    LEVEL_CORE,
+    LEVEL_FAMILIAR,
+    LEVEL_NAMES,
+    LEVEL_NOVEL,
+    LEVEL_ORDER,
+    LEVEL_RARE,
+    build_frequency_level_records,
+)
+
+from .config import E22Config
+from .models import BaselineMLP, DualParameterAttentionMLP
+
+
+@dataclass(frozen=True)
+class SplitTensors:
+    """Tensorized dataset split for E22."""
+
+    part_a: torch.Tensor
+    part_b: torch.Tensor
+    part_a_noise: torch.Tensor
+    part_b_noise: torch.Tensor
+    labels: torch.Tensor
+    levels: torch.Tensor
+
+    @property
+    def size(self) -> int:
+        return int(self.labels.shape[0])
+
+
+@dataclass(frozen=True)
+class E22Dataset:
+    """Train/test tensors for one seeded E22 run."""
+
+    train: SplitTensors
+    test: SplitTensors
+
+
+@dataclass(frozen=True)
+class LevelAccuracySummary:
+    """Test accuracy broken down by one frozen familiarity level."""
+
+    level: int
+    level_name: str
+    accuracy: float
+
+
+@dataclass(frozen=True)
+class CertaintyLevelSummary:
+    """Mean certainty for one layer and one frozen familiarity level."""
+
+    level: int
+    level_name: str
+    mean_certainty: float
+
+
+@dataclass(frozen=True)
+class FullOccupancyStep:
+    """The first epoch/step where a layer reaches full prototype occupancy."""
+
+    epoch: int
+    step: int
+
+
+@dataclass(frozen=True)
+class Seed0Layer1CertaintyCheckpoint:
+    """Seed-0 layer-1 certainty summary at one requested training checkpoint."""
+
+    label: str
+    epoch: int
+    certainty_by_level: tuple[CertaintyLevelSummary, ...]
+
+
+@dataclass(frozen=True)
+class BaselineSeedTrainingResult:
+    """Deliverable 1 outputs for one baseline seed."""
+
+    arm_name: str
+    seed: int
+    parameter_count: int
+    final_training_loss: float
+    final_training_accuracy: float
+    stopping_epoch: int
+    overall_test_accuracy: float
+    level_accuracies: tuple[LevelAccuracySummary, ...]
+
+
+@dataclass(frozen=True)
+class E22SeedTrainingResult:
+    """Deliverable 1 outputs for one E22 seed."""
+
+    arm_name: str
+    seed: int
+    parameter_count: int
+    final_training_loss: float
+    final_training_accuracy: float
+    stopping_epoch: int
+    overall_test_accuracy: float
+    level_accuracies: tuple[LevelAccuracySummary, ...]
+    layer1_occupancy: int
+    layer2_occupancy: int
+    layer1_certainty_by_level: tuple[CertaintyLevelSummary, ...]
+    layer2_certainty_by_level: tuple[CertaintyLevelSummary, ...]
+
+
+@dataclass
+class BaselineTrainedSeedArtifacts:
+    """Trained baseline model plus dataset and Deliverable 1 metrics."""
+
+    config: E22Config
+    model: BaselineMLP
+    dataset: E22Dataset
+    result: BaselineSeedTrainingResult
+
+
+@dataclass
+class E22TrainedSeedArtifacts:
+    """Trained E22 model plus dataset and Deliverable 1 metrics."""
+
+    config: E22Config
+    model: DualParameterAttentionMLP
+    dataset: E22Dataset
+    result: E22SeedTrainingResult
+    seed0_layer1_checkpoints: tuple[Seed0Layer1CertaintyCheckpoint, ...] | None
+    seed0_layer1_full_occupancy: FullOccupancyStep | None
+    seed0_layer2_full_occupancy: FullOccupancyStep | None
+
+
+@dataclass(frozen=True)
+class LayerPrimaryAnalysis:
+    """Primary ordered-certainty analysis outputs for one seed and layer."""
+
+    seed: int
+    layer_name: str
+    jonckheere_terpstra_statistic: float
+    jonckheere_terpstra_p_value: float
+    strict_mean_ordering: bool
+    spearman_rho: float
+    level_means: tuple[float, float, float, float]
+
+
+@dataclass(frozen=True)
+class AggregatedLayerPrimaryAnalysis:
+    """Cross-seed summary for one certainty layer."""
+
+    layer_name: str
+    significant_seed_count: int
+    strict_mean_ordering_seed_count: int
+    mean_spearman_rho: float
+    std_spearman_rho: float
+
+
+def set_global_determinism(seed: int) -> None:
+    """Set the approved seed across Python and PyTorch."""
+    random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+def resolve_device(config: E22Config) -> torch.device:
+    """Resolve the configured device and fail fast on unavailable CUDA requests."""
+    device = torch.device(config.device)
+    if device.type == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError(
+            "E22Config.device is set to CUDA, but torch.cuda.is_available() is False. "
+            "Install a CUDA-enabled PyTorch build or override device='cpu'."
+        )
+    return device
+
+
+def build_dataset(config: E22Config) -> E22Dataset:
+    """Materialize the frozen four-level frequency dataset exactly as in E19."""
+    records = build_frequency_level_records()
+    train_noise_generator = torch.Generator()
+    train_noise_generator.manual_seed(config.seed + config.train_noise_seed_offset)
+    test_noise_generator = torch.Generator()
+    test_noise_generator.manual_seed(config.seed + config.test_noise_seed_offset)
+
+    repeats_by_level = {
+        LEVEL_CORE: config.core_repeats_per_combo,
+        LEVEL_FAMILIAR: config.familiar_repeats_per_combo,
+        LEVEL_RARE: config.rare_repeats_per_combo,
+        LEVEL_NOVEL: config.novel_repeats_per_combo,
+    }
+
+    train_part_a: list[int] = []
+    train_part_b: list[int] = []
+    train_part_a_noise: list[torch.Tensor] = []
+    train_part_b_noise: list[torch.Tensor] = []
+    train_labels: list[int] = []
+    train_levels: list[int] = []
+
+    test_part_a: list[int] = []
+    test_part_b: list[int] = []
+    test_part_a_noise: list[torch.Tensor] = []
+    test_part_b_noise: list[torch.Tensor] = []
+    test_labels: list[int] = []
+    test_levels: list[int] = []
+
+    for record in records:
+        for _ in range(repeats_by_level[record.level]):
+            train_part_a.append(record.part_a)
+            train_part_b.append(record.part_b)
+            train_part_a_noise.append(
+                torch.randn(config.embedding_dim, generator=train_noise_generator) * config.input_jitter_std
+            )
+            train_part_b_noise.append(
+                torch.randn(config.embedding_dim, generator=train_noise_generator) * config.input_jitter_std
+            )
+            train_labels.append(record.class_id)
+            train_levels.append(record.level)
+
+        for _ in range(config.test_repeats_per_combo):
+            test_part_a.append(record.part_a)
+            test_part_b.append(record.part_b)
+            test_part_a_noise.append(
+                torch.randn(config.embedding_dim, generator=test_noise_generator) * config.input_jitter_std
+            )
+            test_part_b_noise.append(
+                torch.randn(config.embedding_dim, generator=test_noise_generator) * config.input_jitter_std
+            )
+            test_labels.append(record.class_id)
+            test_levels.append(record.level)
+
+    return E22Dataset(
+        train=SplitTensors(
+            part_a=torch.tensor(train_part_a, dtype=torch.long),
+            part_b=torch.tensor(train_part_b, dtype=torch.long),
+            part_a_noise=torch.stack(train_part_a_noise).to(dtype=torch.float32),
+            part_b_noise=torch.stack(train_part_b_noise).to(dtype=torch.float32),
+            labels=torch.tensor(train_labels, dtype=torch.long),
+            levels=torch.tensor(train_levels, dtype=torch.long),
+        ),
+        test=SplitTensors(
+            part_a=torch.tensor(test_part_a, dtype=torch.long),
+            part_b=torch.tensor(test_part_b, dtype=torch.long),
+            part_a_noise=torch.stack(test_part_a_noise).to(dtype=torch.float32),
+            part_b_noise=torch.stack(test_part_b_noise).to(dtype=torch.float32),
+            labels=torch.tensor(test_labels, dtype=torch.long),
+            levels=torch.tensor(test_levels, dtype=torch.long),
+        ),
+    )
+
+
+def make_loader(split: SplitTensors, config: E22Config, *, shuffle: bool) -> DataLoader[tuple[torch.Tensor, ...]]:
+    """Create a deterministic DataLoader for one split."""
+    generator = torch.Generator()
+    generator.manual_seed(config.seed)
+    dataset = TensorDataset(
+        split.part_a,
+        split.part_b,
+        split.part_a_noise,
+        split.part_b_noise,
+        split.labels,
+        split.levels,
+    )
+    return DataLoader(
+        dataset,
+        batch_size=config.batch_size,
+        shuffle=shuffle,
+        generator=generator if shuffle else None,
+        pin_memory=config.device.startswith("cuda"),
+    )
+
+
+def make_e22_model(config: E22Config) -> DualParameterAttentionMLP:
+    """Instantiate the approved E22 dual-parameter model."""
+    return DualParameterAttentionMLP(
+        part_a_vocab_size=config.num_part_a_values,
+        part_b_vocab_size=config.num_part_b_values,
+        embedding_dim=config.embedding_dim,
+        hidden_dim=config.hidden_dim,
+        key_dim=config.key_dim,
+        num_classes=config.num_classes,
+        num_prototypes=config.num_prototypes,
+        prototype_lambda=config.prototype_lambda,
+        eps=config.prototype_eps,
+    )
+
+
+def make_baseline_model(config: E22Config) -> BaselineMLP:
+    """Instantiate the matched baseline MLP."""
+    return BaselineMLP(
+        part_a_vocab_size=config.num_part_a_values,
+        part_b_vocab_size=config.num_part_b_values,
+        embedding_dim=config.embedding_dim,
+        hidden_dim=config.hidden_dim,
+        num_classes=config.num_classes,
+    )
+
+
+def count_trainable_parameters(model: torch.nn.Module) -> int:
+    """Return the exact number of trainable parameters."""
+    return sum(parameter.numel() for parameter in model.parameters() if parameter.requires_grad)
+
+
+def _move_batch_to_device(
+    batch: tuple[torch.Tensor, ...],
+    device: torch.device,
+) -> tuple[torch.Tensor, ...]:
+    return tuple(item.to(device, non_blocking=device.type == "cuda") for item in batch)
+
+
+def evaluate_accuracy_metrics(
+    model: torch.nn.Module,
+    split: SplitTensors,
+    config: E22Config,
+) -> tuple[float, tuple[LevelAccuracySummary, ...]]:
+    """Evaluate overall test accuracy and per-level accuracies."""
+    device = resolve_device(config)
+    loader = make_loader(split, config, shuffle=False)
+    model.eval()
+
+    total_correct = 0
+    total_examples = 0
+    correct_by_level = {level: 0 for level in LEVEL_ORDER}
+    total_by_level = {level: 0 for level in LEVEL_ORDER}
+
+    with torch.no_grad():
+        for batch in loader:
+            part_a, part_b, part_a_noise, part_b_noise, labels, levels = _move_batch_to_device(batch, device)
+            outputs = model(
+                part_a,
+                part_b,
+                part_a_noise=part_a_noise,
+                part_b_noise=part_b_noise,
+            )
+            predictions = outputs.logits.argmax(dim=-1)
+            total_correct += int((predictions == labels).sum().item())
+            total_examples += labels.size(0)
+
+            predictions_cpu = predictions.cpu()
+            labels_cpu = labels.cpu()
+            for level in LEVEL_ORDER:
+                level_mask = levels.cpu() == level
+                if int(level_mask.sum().item()) == 0:
+                    continue
+                correct_by_level[level] += int((predictions_cpu[level_mask] == labels_cpu[level_mask]).sum().item())
+                total_by_level[level] += int(level_mask.sum().item())
+
+    return (
+        total_correct / total_examples,
+        tuple(
+            LevelAccuracySummary(
+                level=level,
+                level_name=LEVEL_NAMES[level],
+                accuracy=correct_by_level[level] / total_by_level[level],
+            )
+            for level in LEVEL_ORDER
+        ),
+    )
+
+
+def evaluate_certainty_by_level(
+    model: DualParameterAttentionMLP,
+    split: SplitTensors,
+    config: E22Config,
+    *,
+    layer_name: str,
+) -> tuple[CertaintyLevelSummary, ...]:
+    """Evaluate mean certainty per level for one E22 layer."""
+    if layer_name not in {"layer1", "layer2"}:
+        raise ValueError("layer_name must be 'layer1' or 'layer2'")
+
+    device = resolve_device(config)
+    loader = make_loader(split, config, shuffle=False)
+    model.eval()
+
+    certainties_by_level: dict[int, list[torch.Tensor]] = {level: [] for level in LEVEL_ORDER}
+
+    with torch.no_grad():
+        for batch in loader:
+            part_a, part_b, part_a_noise, part_b_noise, _labels, levels = _move_batch_to_device(batch, device)
+            outputs = model(
+                part_a,
+                part_b,
+                part_a_noise=part_a_noise,
+                part_b_noise=part_b_noise,
+            )
+            certainty = outputs.layer1_certainty if layer_name == "layer1" else outputs.layer2_certainty
+            certainty_cpu = certainty.detach().cpu()
+            levels_cpu = levels.cpu()
+
+            for level in LEVEL_ORDER:
+                level_mask = levels_cpu == level
+                if int(level_mask.sum().item()) == 0:
+                    continue
+                certainties_by_level[level].append(certainty_cpu[level_mask])
+
+    return tuple(
+        CertaintyLevelSummary(
+            level=level,
+            level_name=LEVEL_NAMES[level],
+            mean_certainty=float(torch.cat(certainties_by_level[level]).mean().item()),
+        )
+        for level in LEVEL_ORDER
+    )
+
+
+def _collect_test_certainties_by_level(
+    model: DualParameterAttentionMLP,
+    split: SplitTensors,
+    config: E22Config,
+) -> dict[str, dict[int, np.ndarray]]:
+    """Collect per-example layer certainties grouped by frozen familiarity level."""
+    device = resolve_device(config)
+    loader = make_loader(split, config, shuffle=False)
+    model.eval()
+
+    layer1_by_level: dict[int, list[torch.Tensor]] = {level: [] for level in LEVEL_ORDER}
+    layer2_by_level: dict[int, list[torch.Tensor]] = {level: [] for level in LEVEL_ORDER}
+
+    with torch.no_grad():
+        for batch in loader:
+            part_a, part_b, part_a_noise, part_b_noise, _labels, levels = _move_batch_to_device(batch, device)
+            outputs = model(
+                part_a,
+                part_b,
+                part_a_noise=part_a_noise,
+                part_b_noise=part_b_noise,
+            )
+            layer1_certainty = outputs.layer1_certainty.detach().cpu()
+            layer2_certainty = outputs.layer2_certainty.detach().cpu()
+            levels_cpu = levels.cpu()
+
+            for level in LEVEL_ORDER:
+                level_mask = levels_cpu == level
+                if int(level_mask.sum().item()) == 0:
+                    continue
+                layer1_by_level[level].append(layer1_certainty[level_mask])
+                layer2_by_level[level].append(layer2_certainty[level_mask])
+
+    return {
+        "layer1": {
+            level: torch.cat(layer1_by_level[level]).numpy()
+            for level in LEVEL_ORDER
+        },
+        "layer2": {
+            level: torch.cat(layer2_by_level[level]).numpy()
+            for level in LEVEL_ORDER
+        },
+    }
+
+
+def analyze_primary_seed(
+    artifacts: E22TrainedSeedArtifacts,
+) -> tuple[LayerPrimaryAnalysis, LayerPrimaryAnalysis]:
+    """Run the frozen E19 ordered-certainty analysis for one trained E22 seed."""
+    certainties_by_layer = _collect_test_certainties_by_level(
+        artifacts.model,
+        artifacts.dataset.test,
+        artifacts.config,
+    )
+    analyses: list[LayerPrimaryAnalysis] = []
+
+    for layer_name in ("layer1", "layer2"):
+        level_arrays = tuple(
+            certainties_by_layer[layer_name][level] for level in LEVEL_ORDER
+        )
+        level_means = tuple(float(values.mean()) for values in level_arrays)
+        jt_statistic, jt_p_value = _jonckheere_terpstra_greater(level_arrays)
+        strict_mean_ordering = bool(
+            level_means[0] > level_means[1] > level_means[2] > level_means[3]
+        )
+        rank_vector = np.concatenate(
+            [
+                np.full(certainties_by_layer[layer_name][level].shape[0], level, dtype=np.int64)
+                for level in LEVEL_ORDER
+            ]
+        )
+        certainty_vector = np.concatenate(
+            [certainties_by_layer[layer_name][level] for level in LEVEL_ORDER]
+        )
+        spearman_result = spearmanr(rank_vector, certainty_vector)
+        analyses.append(
+            LayerPrimaryAnalysis(
+                seed=artifacts.result.seed,
+                layer_name=layer_name,
+                jonckheere_terpstra_statistic=jt_statistic,
+                jonckheere_terpstra_p_value=jt_p_value,
+                strict_mean_ordering=strict_mean_ordering,
+                spearman_rho=float(spearman_result.statistic),
+                level_means=level_means,
+            )
+        )
+
+    return analyses[0], analyses[1]
+
+
+def aggregate_primary_analysis(
+    per_seed_layer_analyses: tuple[LayerPrimaryAnalysis, ...],
+) -> AggregatedLayerPrimaryAnalysis:
+    """Aggregate the ordered-certainty analysis across seeds for one layer."""
+    spearman_rhos = np.array([item.spearman_rho for item in per_seed_layer_analyses], dtype=np.float64)
+    return AggregatedLayerPrimaryAnalysis(
+        layer_name=per_seed_layer_analyses[0].layer_name,
+        significant_seed_count=sum(item.jonckheere_terpstra_p_value < 0.05 for item in per_seed_layer_analyses),
+        strict_mean_ordering_seed_count=sum(item.strict_mean_ordering for item in per_seed_layer_analyses),
+        mean_spearman_rho=float(spearman_rhos.mean()),
+        std_spearman_rho=float(spearman_rhos.std(ddof=0)),
+    )
+
+
+def train_baseline_single_seed_artifacts(config: E22Config) -> BaselineTrainedSeedArtifacts:
+    """Train one baseline seed and return Deliverable 1 metrics."""
+    set_global_determinism(config.seed)
+    dataset = build_dataset(config)
+    device = resolve_device(config)
+    model = make_baseline_model(config).to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
+    train_loader = make_loader(dataset.train, config, shuffle=True)
+
+    best_loss = float("inf")
+    epochs_without_meaningful_decrease = 0
+    final_training_loss = float("inf")
+    final_training_accuracy = 0.0
+    stopping_epoch = 0
+
+    for epoch in range(1, config.max_epochs + 1):
+        model.train()
+        epoch_loss_sum = 0.0
+        epoch_correct = 0
+        epoch_examples = 0
+
+        for batch in train_loader:
+            part_a, part_b, part_a_noise, part_b_noise, labels, _levels = _move_batch_to_device(batch, device)
+
+            optimizer.zero_grad(set_to_none=True)
+            outputs = model(
+                part_a,
+                part_b,
+                part_a_noise=part_a_noise,
+                part_b_noise=part_b_noise,
+            )
+            loss = F.cross_entropy(outputs.logits, labels)
+            loss.backward()
+            optimizer.step()
+
+            batch_size = labels.size(0)
+            epoch_loss_sum += float(loss.item()) * batch_size
+            predictions = outputs.logits.argmax(dim=-1)
+            epoch_correct += int((predictions == labels).sum().item())
+            epoch_examples += batch_size
+
+        final_training_loss = epoch_loss_sum / epoch_examples
+        final_training_accuracy = epoch_correct / epoch_examples
+        stopping_epoch = epoch
+
+        if best_loss - final_training_loss > config.loss_improvement_tolerance:
+            best_loss = final_training_loss
+            epochs_without_meaningful_decrease = 0
+        else:
+            epochs_without_meaningful_decrease += 1
+
+        if epochs_without_meaningful_decrease >= config.loss_patience_epochs:
+            break
+
+    overall_test_accuracy, level_accuracies = evaluate_accuracy_metrics(model, dataset.test, config)
+    result = BaselineSeedTrainingResult(
+        arm_name="baseline",
+        seed=config.seed,
+        parameter_count=count_trainable_parameters(model),
+        final_training_loss=final_training_loss,
+        final_training_accuracy=final_training_accuracy,
+        stopping_epoch=stopping_epoch,
+        overall_test_accuracy=overall_test_accuracy,
+        level_accuracies=level_accuracies,
+    )
+    return BaselineTrainedSeedArtifacts(
+        config=config,
+        model=model,
+        dataset=dataset,
+        result=result,
+    )
+
+
+def train_e22_single_seed_artifacts(config: E22Config) -> E22TrainedSeedArtifacts:
+    """Train one E22 seed and return Deliverable 1 metrics plus seed-0 diagnostics."""
+    set_global_determinism(config.seed)
+    dataset = build_dataset(config)
+    device = resolve_device(config)
+    model = make_e22_model(config).to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
+    train_loader = make_loader(dataset.train, config, shuffle=True)
+
+    best_loss = float("inf")
+    epochs_without_meaningful_decrease = 0
+    final_training_loss = float("inf")
+    final_training_accuracy = 0.0
+    stopping_epoch = 0
+
+    seed0_checkpoints: list[Seed0Layer1CertaintyCheckpoint] = []
+    layer1_full_occupancy: FullOccupancyStep | None = None
+    layer2_full_occupancy: FullOccupancyStep | None = None
+
+    for epoch in range(1, config.max_epochs + 1):
+        model.train()
+        epoch_loss_sum = 0.0
+        epoch_correct = 0
+        epoch_examples = 0
+
+        for step, batch in enumerate(train_loader, start=1):
+            part_a, part_b, part_a_noise, part_b_noise, labels, _levels = _move_batch_to_device(batch, device)
+
+            optimizer.zero_grad(set_to_none=True)
+            outputs = model(
+                part_a,
+                part_b,
+                part_a_noise=part_a_noise,
+                part_b_noise=part_b_noise,
+            )
+            loss = F.cross_entropy(outputs.logits, labels)
+            loss.backward()
+            optimizer.step()
+            model.update_prototypes(outputs.layer1_semantic, outputs.layer2_semantic)
+
+            if config.seed == 0:
+                if layer1_full_occupancy is None and model.layer1.occupancy == config.num_prototypes:
+                    layer1_full_occupancy = FullOccupancyStep(epoch=epoch, step=step)
+                if layer2_full_occupancy is None and model.layer2.occupancy == config.num_prototypes:
+                    layer2_full_occupancy = FullOccupancyStep(epoch=epoch, step=step)
+
+            batch_size = labels.size(0)
+            epoch_loss_sum += float(loss.item()) * batch_size
+            predictions = outputs.logits.argmax(dim=-1)
+            epoch_correct += int((predictions == labels).sum().item())
+            epoch_examples += batch_size
+
+        final_training_loss = epoch_loss_sum / epoch_examples
+        final_training_accuracy = epoch_correct / epoch_examples
+        stopping_epoch = epoch
+
+        if config.seed == 0 and epoch in config.seed0_report_epochs:
+            seed0_checkpoints.append(
+                Seed0Layer1CertaintyCheckpoint(
+                    label=f"epoch_{epoch}",
+                    epoch=epoch,
+                    certainty_by_level=evaluate_certainty_by_level(model, dataset.test, config, layer_name="layer1"),
+                )
+            )
+
+        if best_loss - final_training_loss > config.loss_improvement_tolerance:
+            best_loss = final_training_loss
+            epochs_without_meaningful_decrease = 0
+        else:
+            epochs_without_meaningful_decrease += 1
+
+        if epochs_without_meaningful_decrease >= config.loss_patience_epochs:
+            break
+
+    overall_test_accuracy, level_accuracies = evaluate_accuracy_metrics(model, dataset.test, config)
+    layer1_certainty_by_level = evaluate_certainty_by_level(model, dataset.test, config, layer_name="layer1")
+    layer2_certainty_by_level = evaluate_certainty_by_level(model, dataset.test, config, layer_name="layer2")
+
+    if config.seed == 0:
+        seed0_checkpoints.append(
+            Seed0Layer1CertaintyCheckpoint(
+                label="final",
+                epoch=stopping_epoch,
+                certainty_by_level=layer1_certainty_by_level,
+            )
+        )
+
+    result = E22SeedTrainingResult(
+        arm_name="e22",
+        seed=config.seed,
+        parameter_count=count_trainable_parameters(model),
+        final_training_loss=final_training_loss,
+        final_training_accuracy=final_training_accuracy,
+        stopping_epoch=stopping_epoch,
+        overall_test_accuracy=overall_test_accuracy,
+        level_accuracies=level_accuracies,
+        layer1_occupancy=model.layer1.occupancy,
+        layer2_occupancy=model.layer2.occupancy,
+        layer1_certainty_by_level=layer1_certainty_by_level,
+        layer2_certainty_by_level=layer2_certainty_by_level,
+    )
+    return E22TrainedSeedArtifacts(
+        config=config,
+        model=model,
+        dataset=dataset,
+        result=result,
+        seed0_layer1_checkpoints=tuple(seed0_checkpoints) if config.seed == 0 else None,
+        seed0_layer1_full_occupancy=layer1_full_occupancy,
+        seed0_layer2_full_occupancy=layer2_full_occupancy,
+    )
+
+
+def run_deliverable1_suite(
+    seeds: tuple[int, ...] | list[int],
+) -> tuple[list[BaselineTrainedSeedArtifacts], list[E22TrainedSeedArtifacts]]:
+    """Run Deliverable 1 training for both arms across the requested seeds."""
+    baseline_runs: list[BaselineTrainedSeedArtifacts] = []
+    e22_runs: list[E22TrainedSeedArtifacts] = []
+
+    for seed in seeds:
+        config = E22Config(seed=seed)
+        baseline_runs.append(train_baseline_single_seed_artifacts(config))
+        e22_runs.append(train_e22_single_seed_artifacts(config))
+
+    return baseline_runs, e22_runs
+
+
+def run_e22_training_suite(
+    seeds: tuple[int, ...] | list[int],
+) -> list[E22TrainedSeedArtifacts]:
+    """Run E22 training across the requested seeds for Deliverable 2 analysis."""
+    return [train_e22_single_seed_artifacts(E22Config(seed=seed)) for seed in seeds]

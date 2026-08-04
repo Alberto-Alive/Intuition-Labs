@@ -1,0 +1,572 @@
+# DIGIT Extrapolation E22
+
+`e22` is the intrinsic dual-parameter familiarity architecture test.
+
+This experiment replaces the external bank mechanism with a new layer
+primitive: every hidden layer has a semantic parameter set learned by gradient
+descent and a familiarity parameter set updated only by detached experience.
+
+## Goal
+
+Answer one question only:
+
+Does a dual-parameter layer architecture with intrinsic familiarity prototypes
+produce graded familiarity ordering on the `e19` four-level frequency task,
+using the intrinsic nearest-prototype max-cosine certainty score and the same
+ordered-trend analysis used in `e19`.
+
+This experiment does not test:
+
+- inference-time prototype updates on new environments
+- continual learning claims beyond the training run itself
+- retrieval augmentation
+- label-conditioned retrieval
+- prototype gradients
+- alternative certainty readouts
+- alternative repulsion thresholds
+- alternative warmup rules
+
+## Interpretation Boundary
+
+`e22` is the architectural replacement test for the external bank line.
+
+A positive result validates that the dual-parameter attention architecture
+produces intrinsic graded familiarity without an external bank. It validates
+the architecture as a replacement for the external bank mechanism used in
+`e14` through `e21`.
+
+It does not yet validate the full continual-learning or inference-time learning
+properties of the architecture. Those must be tested in subsequent experiments
+that use `e22` as the foundation.
+
+If `e22` fails on the same ordered-familiarity criterion that `e19` passed, the
+new layer primitive is not yet a valid replacement for the external bank
+mechanism and should not advance unchanged.
+
+## Accepted Design Decisions
+
+The following design decisions are frozen into the experiment spec and may not
+be changed in implementation:
+
+- semantic activations and familiarity prototypes live in the same raw hidden
+  space `R^d_h`
+- with `d_h = 32` and `d_k = 32`, the key width is split evenly:
+  `W_k_s : R^32 -> R^16` and `W_k_f : R^32 -> R^16`
+- familiarity attention is proper multi-key attention over the valid prototype
+  set, not a scalar self-gate
+- the familiarity branch is not exposed as random noise during warmup
+- invalid prototypes are masked out of attention, certainty, repulsion, and
+  nearest prototype assignment
+- if no valid prototype exists, `attention_output = 0` and the layer reduces to
+  the semantic path
+- the familiarity occupancy gate is fixed to `g_f = n_valid / K_p`
+- the first `K_p` detached activations seed empty prototype slots; EMA updates
+  begin only after all slots are valid
+- prototype assignment and repulsion are defined in L2-normalized space
+- `K_p = 32`, `lambda = 0.99`, and `d_thr = sqrt(2 / K_p)`
+- repulsion magnitude is not a fitted hyperparameter; it is the minimum
+  symmetric correction needed to restore the threshold floor
+- certainty is the nearest-prototype max-cosine score computed on detached
+  per-layer semantic activations
+- certainty is not derived from attention weights
+
+## Frozen Experiment Spec
+
+### Model
+
+Train two models only:
+
+1. the `e22` dual-parameter architecture
+2. a standard baseline 2-layer MLP
+
+Both models use the `e19` task, training setup, and seeds.
+
+The `e22` model has two hidden layers. Each hidden layer contains:
+
+- semantic parameters:
+  `W_semantic`, `W_q`, `W_k_s`, `W_k_f`, `W_v`, plus their biases
+- familiarity buffers:
+  `K_p = 32` prototype vectors and one validity mask
+
+Semantic parameters are standard PyTorch parameters updated by gradient descent
+from task loss.
+
+Familiarity prototypes are PyTorch buffers, never parameters. They are updated
+only from detached activations after the forward pass. They are never touched
+by the optimizer.
+
+### Exact Layer Architecture And Tensor Shapes
+
+Freeze the dimensions to match `e19`:
+
+- `embedding_dim = 16`
+- `d_h = 32`
+- `d_k = 32`
+- `K_p = 32`
+- `num_classes = 4`
+
+Per batch, with batch size `B`:
+
+- `part_a_embedding(part_a) in R^(B x 16)`
+- `part_b_embedding(part_b) in R^(B x 16)`
+- concatenated input `x_0 in R^(B x 32)`
+
+Layer 1 uses these trainable tensors:
+
+- `W_semantic_1 in R^(32 x 32)`, `b_semantic_1 in R^32`
+- `W_q_1 in R^(32 x 32)`, `b_q_1 in R^32`
+- `W_k_s_1 in R^(16 x 32)`, `b_k_s_1 in R^16`
+- `W_k_f_1 in R^(16 x 32)`, `b_k_f_1 in R^16`
+- `W_v_1 in R^(32 x 32)`, `b_v_1 in R^32`
+
+Layer 1 uses these familiarity buffers:
+
+- prototypes `P_1 in R^(32 x 32)`
+- validity mask `M_1 in {0,1}^32`
+
+Layer 1 forward computation for one batch:
+
+1. semantic state:
+   `h_semantic_1 = ReLU(x_0 W_semantic_1^T + b_semantic_1) in R^(B x 32)`
+2. occupancy gate:
+   `g_f_1 = n_valid_1 / 32`
+3. query:
+   `Q_1 = h_semantic_1 W_q_1^T + b_q_1 in R^(B x 32)`
+4. valid prototype subset:
+   `P_1_valid in R^(n_valid_1 x 32)`
+5. semantic key half for every valid prototype:
+    `K_s_1 = P_1_valid W_k_s_1^T + b_k_s_1 in R^(n_valid_1 x 16)`
+6. familiarity key half for every valid prototype:
+    `K_f_1 = P_1_valid W_k_f_1^T + b_k_f_1 in R^(n_valid_1 x 16)`
+7. full prototype keys:
+    `K_1 = concat(K_s_1, K_f_1) in R^(n_valid_1 x 32)`
+8. prototype values:
+    `V_1 = P_1_valid W_v_1^T + b_v_1 in R^(n_valid_1 x 32)`
+9. attention logits:
+    `A_logits_1 = Q_1 K_1^T / sqrt(32) in R^(B x n_valid_1)`
+10. attention weights:
+    `A_1 = softmax(A_logits_1, dim=-1) in R^(B x n_valid_1)`
+11. familiarity attention output:
+    `attention_output_1 = A_1 V_1 in R^(B x 32)`
+12. if `n_valid_1 = 0`, set:
+    `attention_output_1 = 0 in R^(B x 32)`
+13. final layer output:
+    `h_out_1 = h_semantic_1 + g_f_1 attention_output_1 in R^(B x 32)`
+
+Layer 2 has the same structure and dimensions:
+
+- input `x_1 = h_out_1 in R^(B x 32)`
+- `W_semantic_2 in R^(32 x 32)`, `b_semantic_2 in R^32`
+- `W_q_2 in R^(32 x 32)`, `b_q_2 in R^32`
+- `W_k_s_2 in R^(16 x 32)`, `b_k_s_2 in R^16`
+- `W_k_f_2 in R^(16 x 32)`, `b_k_f_2 in R^16`
+- `W_v_2 in R^(32 x 32)`, `b_v_2 in R^32`
+- prototypes `P_2 in R^(32 x 32)`
+- validity mask `M_2 in {0,1}^32`
+
+Layer 2 forward computation is identical:
+
+1. `h_semantic_2 = ReLU(x_1 W_semantic_2^T + b_semantic_2) in R^(B x 32)`
+2. `z_2 = normalize(h_semantic_2.detach()) in R^(B x 32)`
+3. `g_f_2 = n_valid_2 / 32`
+4. `Q_2 in R^(B x 32)`
+5. `K_s_2 in R^(n_valid_2 x 16)`
+6. `K_f_2 in R^(n_valid_2 x 16)`
+7. `K_2 = concat(K_s_2, K_f_2) in R^(n_valid_2 x 32)`
+8. `V_2 in R^(n_valid_2 x 32)`
+9. `A_logits_2 = Q_2 K_2^T / sqrt(32) in R^(B x n_valid_2)`
+10. `A_2 = softmax(A_logits_2, dim=-1) in R^(B x n_valid_2)`
+11. `attention_output_2 in R^(B x 32)`, else zero when `n_valid_2 = 0`
+12. `h_out_2 = h_semantic_2 + g_f_2 attention_output_2 in R^(B x 32)`
+
+Classifier head:
+
+- `W_cls in R^(4 x 32)`, `b_cls in R^4`
+- logits:
+  `logits = h_out_2 W_cls^T + b_cls in R^(B x 4)`
+
+Frozen constants for familiarity computation:
+
+- `eps = 1e-8`
+
+### Prototype Update Rule
+
+Prototype updates happen after the forward pass during training only. They use
+the detached semantic activations from each hidden layer separately.
+
+The buffers are updated in normalized space. Invalid prototypes are excluded
+from assignment, familiarity computation, certainty computation, and repulsion.
+
+Exact pseudocode for one layer:
+
+```text
+constants:
+    K_p = 32
+    lambda = 0.99
+    eps = 1e-8
+    d_thr = sqrt(2.0 / K_p)
+
+state:
+    prototypes P[0:K_p] in R^32
+    valid_mask M[0:K_p] in {False, True}
+
+function normalize_row(x):
+    return x / max(||x||_2, eps)
+
+after each training forward pass:
+    for each activation row h in h_semantic.detach():
+        z = normalize_row(h)
+
+        if any slot in M is False:
+            j = first index where M[j] is False
+            P[j] = z
+            M[j] = True
+        else:
+            distances = [||P[j] - z||_2 for j where M[j] is True]
+            j_star = argmin(distances)
+            P[j_star] = normalize_row(lambda * P[j_star] + (1.0 - lambda) * z)
+
+        valid_indices = [j for j in range(K_p) if M[j] is True]
+        for each pair (i, j) with i < j and i, j in valid_indices:
+            diff = P[i] - P[j]
+            dist = ||diff||_2
+            if dist < d_thr:
+                unit = diff / max(dist, eps)
+                delta = 0.5 * (d_thr - dist) * unit
+                P[i] = P[i] + delta
+                P[j] = P[j] - delta
+
+        for each j in valid_indices:
+            P[j] = normalize_row(P[j])
+```
+
+This pseudocode is exact for the approved first implementation.
+
+### Familiarity Attention
+
+For each hidden layer `l` and each example `x`, the semantic system produces
+one query and the valid prototypes provide the attended key-value set.
+
+Query:
+
+`Q_l(x) = W_q_l h_semantic_l(x) in R^32`
+
+For each valid prototype `p_l,j`:
+
+`k_l,j = concat(W_k_s_l p_l,j, W_k_f_l p_l,j) in R^32`
+
+`v_l,j = W_v_l p_l,j in R^32`
+
+Stacking over valid prototypes:
+
+`K_l in R^(n_valid_l x 32)`
+
+`V_l in R^(n_valid_l x 32)`
+
+Attention:
+
+`A_l(x) = softmax(Q_l(x) K_l^T / sqrt(32)) in R^(n_valid_l)`
+
+`attention_output_l(x) = A_l(x) V_l in R^32`
+
+Warmup rule:
+
+- if `n_valid_l = 0`, set `attention_output_l(x) = 0`
+- always apply `g_f_l = n_valid_l / 32`
+
+Final layer output:
+
+`h_out_l(x) = h_semantic_l(x) + g_f_l attention_output_l(x)`
+
+### Certainty Score
+
+Certainty is defined separately from the attention mechanism for direct
+comparability with `e19`.
+
+For each layer `l` and each example `x`, certainty is:
+
+`certainty_l(x) = max_j cos(normalize(h_semantic_l(x).detach()), normalize(p_l,j))`
+
+Where:
+
+- the maximum is taken over valid prototypes only
+- `h_semantic_l(x)` is the semantic activation before familiarity attention
+- prototypes are the layer's familiarity buffers
+- the activation is detached before certainty is computed
+- attention weights are never used
+
+Equivalent implementation form:
+
+```text
+z = normalize(h_semantic_l.detach())
+P_valid = normalize(valid prototypes)
+similarities = z @ P_valid^T
+certainty_l = rowwise_max(similarities)
+```
+
+During evaluation, prototypes are frozen. No prototype updates are allowed on
+the validation or test set.
+
+### Baseline
+
+The baseline is a standard 2-layer MLP with the same input embeddings, same
+hidden width, same classifier width, same optimizer, same early stopping, same
+batch size, same seeds, and the same dataset.
+
+Baseline architecture:
+
+- `part_a_embedding : 8 -> 16`
+- `part_b_embedding : 8 -> 16`
+- concatenated input `x_0 in R^(B x 32)`
+- hidden layer 1:
+  `h_1 = ReLU(x_0 W_1^T + b_1) in R^(B x 32)`
+- hidden layer 2:
+  `h_2 = ReLU(h_1 W_2^T + b_2) in R^(B x 32)`
+- classifier:
+  `logits = h_2 W_cls^T + b_cls in R^(B x 4)`
+
+The baseline has:
+
+- no familiarity prototypes
+- no occupancy gate
+- no attention interaction
+- no prototype updates
+- no certainty-fed forward computation
+
+Because the hidden dimensions are fixed to match `e19`, the baseline cannot be
+made exactly parameter-count equal without adding a second architectural change.
+Therefore the baseline is matched on hidden width, training setup, seeds, and
+task, and both models' exact trainable parameter counts must be reported
+explicitly in every results summary.
+
+### Dataset
+
+Use the `e19` four-level frequency dataset exactly.
+
+Frozen dataset requirements:
+
+- same 8 x 8 combination grid
+- same fixed level assignment
+- same fixed class lookup table
+- same training frequencies:
+  core `200`, familiar `20`, rare `2`, novel `0`
+- same test set containing all 64 combinations
+- same independent Gaussian jitter construction used in `e19`
+- same level names and order:
+  core, familiar, rare, novel
+
+This preserves direct comparability to `e19`.
+
+### Training Setup
+
+Use the same training setup as `e19` for both `e22` and the baseline:
+
+- seeds:
+  `0, 1, 2, 3, 4`
+- optimizer:
+  Adam
+- learning rate:
+  `1e-3`
+- batch size:
+  `64`
+- max epochs:
+  `200`
+- early stopping improvement tolerance:
+  `1e-4`
+- early stopping patience:
+  `20` epochs
+- embedding dimension:
+  `16`
+- hidden dimension:
+  `32`
+- input jitter standard deviation:
+  `0.05`
+
+Training rules:
+
+- the optimizer updates semantic parameters only
+- familiarity prototypes are registered as buffers, not parameters
+- prototype updates use detached semantic activations only
+- prototype updates occur after the forward pass during training
+- prototype updates do not occur during evaluation
+- `g_f` is always applied during warmup and after warmup
+- repulsion threshold is always `sqrt(2 / 32) = 0.25`
+- repulsion magnitude is never tuned
+
+### Logging
+
+For each seed and each model arm, log:
+
+- seed
+- arm name:
+  `e22` or `baseline`
+- exact trainable parameter count
+- final training loss
+- final training accuracy
+- stopping epoch
+- overall test accuracy at stopping epoch
+- test accuracy by level at stopping epoch
+- novel test accuracy at stopping epoch
+
+For `e22`, additionally log:
+
+- layer 1 occupancy at end of training
+- layer 2 occupancy at end of training
+- layer 1 mean certainty by level
+- layer 2 mean certainty by level
+- per-seed Jonckheere-Terpstra statistic and p-value for each layer
+- per-seed strict mean ordering result for each layer
+- per-seed Spearman rho for each layer
+
+For direct comparability to `e19`, certainty analyses are run on frozen
+post-training prototypes and frozen model weights.
+
+### Primary Analysis
+
+The primary analysis is the same ordered-certainty analysis used in `e19`,
+applied to the intrinsic per-layer certainty score defined above.
+
+For each seed and for each `e22` layer separately:
+
+1. run the frozen test set through the trained model
+2. compute per-example certainty from the corresponding layer prototypes
+3. group certainty values by the four frozen familiarity levels
+4. compute the level means in this exact order:
+   core, familiar, rare, novel
+5. run a one-sided Jonckheere-Terpstra test for decreasing certainty by level
+6. test strict mean ordering:
+   `core > familiar > rare > novel`
+7. compute Spearman rho between level rank
+   `(core = 0, familiar = 1, rare = 2, novel = 3)` and certainty
+
+Report per seed and per layer:
+
+- Jonckheere-Terpstra statistic
+- Jonckheere-Terpstra p-value
+- strict mean ordering boolean
+- Spearman rho
+- level means:
+  core, familiar, rare, novel
+
+Aggregate across seeds for each layer:
+
+- significant seed count at `p < 0.05`
+- strict mean ordering seed count
+- mean Spearman rho
+- standard deviation of Spearman rho
+
+### Secondary Analyses
+
+Secondary question 1:
+
+Does `e22` reach the same training accuracy as the baseline with the same or
+fewer epochs.
+
+Report for each seed:
+
+- `e22` final training accuracy
+- baseline final training accuracy
+- `e22` stopping epoch
+- baseline stopping epoch
+- training-accuracy difference
+- stopping-epoch difference
+
+Aggregate across seeds:
+
+- mean and standard deviation of final training accuracy for each arm
+- mean and standard deviation of stopping epoch for each arm
+- count of seeds where `e22` reaches at least the baseline training accuracy
+- count of seeds where `e22` stops in the same or fewer epochs
+
+Secondary question 2:
+
+Does `e22` generalize better to novel combinations than the baseline.
+
+Report for each seed:
+
+- `e22` novel test accuracy at its stopping epoch
+- baseline novel test accuracy at its stopping epoch
+- novel-accuracy difference
+
+Aggregate across seeds:
+
+- mean and standard deviation of novel test accuracy for each arm
+- count of seeds where `e22` novel accuracy exceeds baseline
+
+These secondary analyses are descriptive. They do not override the primary
+architectural pass or fail decision.
+
+### Pass / Fail Criteria
+
+Primary pass condition:
+
+- for at least one layer, the Jonckheere-Terpstra test is significant at
+  `p < 0.05` in at least `4 of 5` seeds
+- for that same layer, strict mean ordering
+  `core > familiar > rare > novel` holds in at least `4 of 5` seeds
+- for that same layer, mean Spearman rho across seeds is negative
+
+Primary fail condition:
+
+- no layer satisfies all three pass criteria above
+- or Jonckheere-Terpstra is not significant in `3 or more` seeds for both
+  layers
+- or strict mean ordering fails in `3 or more` seeds for both layers
+- or mean Spearman rho is zero or positive for both layers
+
+This is the validation gate for the architecture. The experiment must end with
+an explicit `PASS` or `FAIL` statement on this criterion before any broader
+claims are made.
+
+### Preregistered Next Experiment
+
+If and only if `e22` passes, the next experiment may test whether the same
+intrinsic dual-parameter architecture supports inference-time and continual
+learning properties that previously depended on the external bank line.
+
+Those properties must be specified separately after `e22` concludes.
+
+## Non-Negotiable Constraints
+
+- familiarity prototypes are buffers, never parameters
+- gradient descent never touches prototype positions
+- prototype updates always use detached semantic activations
+- invalid prototypes are masked out of familiarity computation, certainty
+  computation, repulsion, and nearest-prototype assignment
+- the first `32` detached activations seed empty prototype slots before EMA
+  replacement begins
+- occupancy gate `g_f = n_valid / 32` is always applied
+- repulsion is always computed in L2-normalized space
+- repulsion threshold is always `d_thr = sqrt(2 / 32)`
+- repulsion magnitude is never fitted
+- certainty is always nearest-prototype max cosine
+- certainty never uses attention weights
+- evaluation always uses frozen weights and frozen prototypes
+- the baseline uses the same hidden dimensions, same training setup, same
+  dataset, and same seeds
+- no alternative certainty metric may be substituted before the first report
+- no alternative warmup rule may be substituted before the first report
+
+## Required Deliverables After Approval
+
+- one runnable `e22` dual-parameter model
+- one runnable matched baseline MLP
+- exact per-layer prototype buffers and validity masks
+- prototype update logic exactly matching the frozen pseudocode
+- certainty computation exactly matching the frozen max-cosine definition
+- tests proving prototypes are buffers and receive no gradients
+- tests proving prototype buffers are excluded from the optimizer parameter set
+- tests proving prototype updates use detached activations only
+- tests proving warmup with zero valid prototypes produces zero attention output
+  and semantic-only behavior
+- tests proving invalid prototypes are masked correctly from attention and
+  certainty
+- tests proving multi-key attention weights are non-trivial and vary across
+  examples
+- five-seed primary ordered-certainty analysis matching the `e19` procedure
+- secondary training-speed and novel-accuracy comparisons against baseline
+- one explicit `PASS` or `FAIL` conclusion on the primary criterion
+
+## Approval Gate
+
+No implementation begins until this spec is approved.

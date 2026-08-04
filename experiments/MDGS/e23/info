@@ -1,0 +1,26 @@
+1. Question
+E23 asked: does the dual-parameter attention architecture from e22 generalise better to compositionally novel inputs than a matched baseline, and if so is that improvement caused specifically by experience-updated familiarity prototypes rather than by extra parameters and attention structure alone.
+
+2. Method
+E23 trained three models on the same withheld-quadrant compositional generalisation task: a standard baseline MLP, the dual-parameter e23 model, and an active learned-memory ablation. The e23 model and the ablation started from identical memory tensors and identical non-memory trainable weights at step zero. All three models used the same dataset, same optimizer, same learning rate, same batch size, same stopping rule, and the only intended difference between e23 and the ablation was the memory update mechanism.
+
+3. Primary Result
+FAIL. E23 is worse than baseline in all 5 seeds, with mean delta_e23_vs_baseline = -0.174. E23 beats the learned-memory ablation in all 5 seeds, with mean delta_e23_vs_ablation = +0.098.
+
+4. Per-Combination Breakdown
+The per-combination 4x4 withheld-grid breakdown shows that baseline failures are concentrated on 2 to 3 specific combinations, while most withheld combinations are solved cleanly. E23 failures are scattered broadly across the grid rather than concentrated in a small corner of the task. Scattered failures are the signature of noise interference from random-initialised prototypes disrupting the semantic weights' ability to find clean compositional structure.
+
+5. Cross-Entropy
+E23 mean withheld cross-entropy is 1.56 versus baseline 0.20. The model is deeply uncertain about predictions the semantic weights would otherwise get right. The attention pathway is spreading probability mass incorrectly.
+
+6. Stopping Epoch
+E23 converges faster to a worse solution. The attention pathway provides a shortcut that prevents the semantic weights from finding the deeper compositional structure.
+
+7. Genuine Finding
+Experience-updated prototypes beat gradient-trained slots in all 5 seeds. The familiarity update mechanism is real and consistently better than gradient-trained memory. The problem is not the mechanism; it is that the mechanism fires too early and too loudly before it has earned the right to contribute.
+
+8. Architectural Meaning
+The fundamental problem is that the attention contribution is always active at full strength from step zero regardless of whether the prototypes have learned anything meaningful. The fix is a learned gate that starts near zero and opens gradually as the prototypes become reliable. The minimal targeted fix is: h_out = h_semantic + sigma(gate) times attention_output, where gate is initialised to a large negative value.
+
+9. Preregistered Next Question
+Does a gated version of the dual-parameter architecture, where the familiarity contribution starts silent and gradually opens, achieve better compositional generalisation than the plain baseline while preserving the familiarity signal.

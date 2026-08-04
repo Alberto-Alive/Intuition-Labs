@@ -1,0 +1,524 @@
+{
+  "rows": [
+    {
+      "accuracy": 0.17708333333333334,
+      "accuracy_by_task_family": {
+        "compositional_role_evidence": 0.1875,
+        "conflict_resolution": 0.1875,
+        "constraint_satisfaction": 0.125,
+        "multi_hop_binding": 0.125,
+        "needle_binding": 0.25,
+        "sparse_relevant_evidence": 0.1875
+      },
+      "architecture_name": "compute_match_monolithic_high",
+      "architecture_parameters": {
+        "attention_routing": "dense_all_view_attention",
+        "avenues": 1,
+        "candidate_query": "candidate_task_query",
+        "chunking": "semantic_key",
+        "config_id": "87544a1196dc83e5",
+        "coord_hops": 1,
+        "coordinator": "mixture_of_views",
+        "curriculum": "mixed_n",
+        "dropout": 0.0,
+        "epochs": 6,
+        "frozen": false,
+        "hidden_dim": 128,
+        "latent_views": 1,
+        "lr": 0.003,
+        "max_train_examples": 512,
+        "memory_compression": "mean_pooling",
+        "model_kind": "monolithic_transformer",
+        "name": "compute_match_monolithic_high",
+        "regularizers": [
+          "entropy_regularization_on_routing"
+        ],
+        "roles": 1,
+        "top_k_views": 0,
+        "training_loss": "multi_positive_cross_entropy",
+        "vector_dim": 128,
+        "view_sharing": "shared_encoder_role_avenue_embeddings",
+        "weight_decay": 0.0001
+      },
+      "compute": {
+        "attention_ops": 3276800.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 5898240.0,
+        "latent_views": 1,
+        "model_kind": "monolithic_transformer",
+        "parameter_count_estimate": 49280,
+        "projection_ops": 2621440.0
+      },
+      "config_id": "87544a1196dc83e5",
+      "diagnostic": "compute_match_monolithic_high",
+      "diagnostics": {
+        "parameter_count": 49409,
+        "training_trace": [
+          {
+            "epoch": 0.0,
+            "loss": 2.080196055273215
+          },
+          {
+            "epoch": 1.0,
+            "loss": 1.917043221493562
+          },
+          {
+            "epoch": 2.0,
+            "loss": 1.6111374503622453
+          },
+          {
+            "epoch": 3.0,
+            "loss": 1.4366707564331591
+          },
+          {
+            "epoch": 4.0,
+            "loss": 1.3513534868446488
+          },
+          {
+            "epoch": 5.0,
+            "loss": 1.235344394420584
+          }
+        ]
+      },
+      "n_blocks": 8,
+      "seed": 0,
+      "train_accuracy_sample": 0.5833333333333334,
+      "train_wall_clock_seconds": 3.1103984999936074
+    },
+    {
+      "accuracy": 0.08333333333333333,
+      "accuracy_by_task_family": {
+        "compositional_role_evidence": 0.0,
+        "conflict_resolution": 0.1875,
+        "constraint_satisfaction": 0.125,
+        "multi_hop_binding": 0.0625,
+        "needle_binding": 0.0625,
+        "sparse_relevant_evidence": 0.0625
+      },
+      "architecture_name": "compute_match_monolithic_high",
+      "architecture_parameters": {
+        "attention_routing": "dense_all_view_attention",
+        "avenues": 1,
+        "candidate_query": "candidate_task_query",
+        "chunking": "semantic_key",
+        "config_id": "87544a1196dc83e5",
+        "coord_hops": 1,
+        "coordinator": "mixture_of_views",
+        "curriculum": "mixed_n",
+        "dropout": 0.0,
+        "epochs": 6,
+        "frozen": false,
+        "hidden_dim": 128,
+        "latent_views": 1,
+        "lr": 0.003,
+        "max_train_examples": 512,
+        "memory_compression": "mean_pooling",
+        "model_kind": "monolithic_transformer",
+        "name": "compute_match_monolithic_high",
+        "regularizers": [
+          "entropy_regularization_on_routing"
+        ],
+        "roles": 1,
+        "top_k_views": 0,
+        "training_loss": "multi_positive_cross_entropy",
+        "vector_dim": 128,
+        "view_sharing": "shared_encoder_role_avenue_embeddings",
+        "weight_decay": 0.0001
+      },
+      "compute": {
+        "attention_ops": 8388608.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 12582912.0,
+        "latent_views": 1,
+        "model_kind": "monolithic_transformer",
+        "parameter_count_estimate": 49280,
+        "projection_ops": 4194304.0
+      },
+      "config_id": "87544a1196dc83e5",
+      "diagnostic": "compute_match_monolithic_high",
+      "diagnostics": {
+        "parameter_count": 49409,
+        "training_trace": [
+          {
+            "epoch": 0.0,
+            "loss": 2.0821704094608626
+          },
+          {
+            "epoch": 1.0,
+            "loss": 2.0003322338064513
+          },
+          {
+            "epoch": 2.0,
+            "loss": 1.829452507197857
+          },
+          {
+            "epoch": 3.0,
+            "loss": 1.6469712083538373
+          },
+          {
+            "epoch": 4.0,
+            "loss": 1.5917685562744737
+          },
+          {
+            "epoch": 5.0,
+            "loss": 1.525241098056237
+          }
+        ]
+      },
+      "n_blocks": 16,
+      "seed": 0,
+      "train_accuracy_sample": 0.46875,
+      "train_wall_clock_seconds": 3.247106300026644
+    },
+    {
+      "accuracy": 0.15625,
+      "accuracy_by_task_family": {
+        "compositional_role_evidence": 0.3125,
+        "conflict_resolution": 0.125,
+        "constraint_satisfaction": 0.0625,
+        "multi_hop_binding": 0.0625,
+        "needle_binding": 0.25,
+        "sparse_relevant_evidence": 0.125
+      },
+      "architecture_name": "compute_low_latent_r4_a8_301861",
+      "architecture_parameters": {
+        "attention_routing": "sparsemax_routing",
+        "avenues": 2,
+        "candidate_query": "candidate_task_query",
+        "chunking": "overlapping",
+        "config_id": "bd6995aafe682de7",
+        "coord_hops": 1,
+        "coordinator": "role_first_avenue_aggregation",
+        "curriculum": "mixed_n",
+        "dropout": 0.0,
+        "epochs": 8,
+        "frozen": false,
+        "hidden_dim": 16,
+        "latent_views": 8,
+        "lr": 0.001,
+        "max_train_examples": 512,
+        "memory_compression": "slot_attention_compression",
+        "model_kind": "trainable_latent",
+        "name": "compute_low_latent_r4_a8_301861",
+        "regularizers": [
+          "role_diversity_penalty"
+        ],
+        "roles": 4,
+        "top_k_views": 0,
+        "training_loss": "auxiliary_evidence_location",
+        "vector_dim": 128,
+        "view_sharing": "shared_encoder_low_rank_adapters",
+        "weight_decay": 0.0001
+      },
+      "compute": {
+        "attention_ops": 1024.0,
+        "encoder_passes": 8,
+        "estimated_forward_compute": 18432.0,
+        "latent_views": 8,
+        "model_kind": "trainable_latent",
+        "parameter_count_estimate": 4448,
+        "projection_ops": 17408.0
+      },
+      "config_id": "bd6995aafe682de7",
+      "diagnostic": "compute_match_latent_low",
+      "diagnostics": {
+        "avenue_usage_distribution": [
+          0.21875,
+          0.78125
+        ],
+        "parameter_count": 5121,
+        "role_usage_distribution": [
+          0.0,
+          0.34375,
+          0.03125,
+          0.625
+        ],
+        "routing_entropy_mean": 1.990178119391203,
+        "top_selected_views_by_task_family": {
+          "compositional_role_evidence": [
+            [
+              7,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              6,
+              1
+            ]
+          ],
+          "conflict_resolution": [
+            [
+              7,
+              5
+            ]
+          ],
+          "constraint_satisfaction": [
+            [
+              7,
+              4
+            ]
+          ],
+          "multi_hop_binding": [
+            [
+              6,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "needle_binding": [
+            [
+              3,
+              5
+            ]
+          ],
+          "sparse_relevant_evidence": [
+            [
+              7,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "training_trace": [
+          {
+            "epoch": 0.0,
+            "loss": 2.0800480594237647
+          },
+          {
+            "epoch": 1.0,
+            "loss": 2.0391268456975618
+          },
+          {
+            "epoch": 2.0,
+            "loss": 1.813768136004607
+          },
+          {
+            "epoch": 3.0,
+            "loss": 1.6297321611394484
+          },
+          {
+            "epoch": 4.0,
+            "loss": 1.4764211812677484
+          },
+          {
+            "epoch": 5.0,
+            "loss": 1.3794560061457257
+          },
+          {
+            "epoch": 6.0,
+            "loss": 1.3173528750000212
+          },
+          {
+            "epoch": 7.0,
+            "loss": 1.2122019936553745
+          }
+        ]
+      },
+      "n_blocks": 8,
+      "seed": 0,
+      "train_accuracy_sample": 0.6770833333333334,
+      "train_wall_clock_seconds": 3.1316147000179626
+    },
+    {
+      "accuracy": 0.09375,
+      "accuracy_by_task_family": {
+        "compositional_role_evidence": 0.0,
+        "conflict_resolution": 0.125,
+        "constraint_satisfaction": 0.1875,
+        "multi_hop_binding": 0.125,
+        "needle_binding": 0.0,
+        "sparse_relevant_evidence": 0.125
+      },
+      "architecture_name": "compute_low_latent_r4_a8_301861",
+      "architecture_parameters": {
+        "attention_routing": "sparsemax_routing",
+        "avenues": 2,
+        "candidate_query": "candidate_task_query",
+        "chunking": "overlapping",
+        "config_id": "bd6995aafe682de7",
+        "coord_hops": 1,
+        "coordinator": "role_first_avenue_aggregation",
+        "curriculum": "mixed_n",
+        "dropout": 0.0,
+        "epochs": 8,
+        "frozen": false,
+        "hidden_dim": 16,
+        "latent_views": 8,
+        "lr": 0.001,
+        "max_train_examples": 512,
+        "memory_compression": "slot_attention_compression",
+        "model_kind": "trainable_latent",
+        "name": "compute_low_latent_r4_a8_301861",
+        "regularizers": [
+          "role_diversity_penalty"
+        ],
+        "roles": 4,
+        "top_k_views": 0,
+        "training_loss": "auxiliary_evidence_location",
+        "vector_dim": 128,
+        "view_sharing": "shared_encoder_low_rank_adapters",
+        "weight_decay": 0.0001
+      },
+      "compute": {
+        "attention_ops": 1024.0,
+        "encoder_passes": 8,
+        "estimated_forward_compute": 19456.0,
+        "latent_views": 8,
+        "model_kind": "trainable_latent",
+        "parameter_count_estimate": 4448,
+        "projection_ops": 18432.0
+      },
+      "config_id": "bd6995aafe682de7",
+      "diagnostic": "compute_match_latent_low",
+      "diagnostics": {
+        "avenue_usage_distribution": [
+          0.40625,
+          0.59375
+        ],
+        "parameter_count": 5121,
+        "role_usage_distribution": [
+          0.09375,
+          0.03125,
+          0.46875,
+          0.40625
+        ],
+        "routing_entropy_mean": 1.9986474364995956,
+        "top_selected_views_by_task_family": {
+          "compositional_role_evidence": [
+            [
+              7,
+              4
+            ]
+          ],
+          "conflict_resolution": [
+            [
+              4,
+              6
+            ]
+          ],
+          "constraint_satisfaction": [
+            [
+              1,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "multi_hop_binding": [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "needle_binding": [
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "sparse_relevant_evidence": [
+            [
+              7,
+              6
+            ]
+          ]
+        },
+        "training_trace": [
+          {
+            "epoch": 0.0,
+            "loss": 2.0823601111769676
+          },
+          {
+            "epoch": 1.0,
+            "loss": 2.0709715274473033
+          },
+          {
+            "epoch": 2.0,
+            "loss": 1.9877806218961875
+          },
+          {
+            "epoch": 3.0,
+            "loss": 1.7910059529046218
+          },
+          {
+            "epoch": 4.0,
+            "loss": 1.6968072056770325
+          },
+          {
+            "epoch": 5.0,
+            "loss": 1.6566109195894871
+          },
+          {
+            "epoch": 6.0,
+            "loss": 1.6027719152722664
+          },
+          {
+            "epoch": 7.0,
+            "loss": 1.538564673314492
+          }
+        ]
+      },
+      "n_blocks": 16,
+      "seed": 0,
+      "train_accuracy_sample": 0.5,
+      "train_wall_clock_seconds": 3.3365180999971926
+    }
+  ],
+  "summary": {
+    "best_accuracy": 0.17708333333333334,
+    "best_by_n": {
+      "16": 0.09375,
+      "8": 0.17708333333333334
+    },
+    "best_train_accuracy_sample": 0.6770833333333334,
+    "mean_accuracy": 0.12760416666666666,
+    "rows": 4
+  }
+}

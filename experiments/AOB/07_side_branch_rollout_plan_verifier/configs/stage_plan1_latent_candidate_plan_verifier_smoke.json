@@ -1,0 +1,35 @@
+{
+  "device": "auto",
+  "seeds": [0],
+  "max_variants": 5,
+  "enforce_overfit_gates": true,
+  "dataset": {
+    "num_candidates": 8,
+    "train_examples": 160,
+    "dev_examples": 64,
+    "test_examples": 64,
+    "grid_size": 7,
+    "obstacle_density": 0.16,
+    "plan_horizon": 16,
+    "min_goal_distance": 4,
+    "level": 4,
+    "max_generation_attempts": 400,
+    "length_balanced": true
+  },
+  "training": {
+    "epochs": 8,
+    "batch_size": 16,
+    "lr": 0.0008,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "gradient_clip_norm": 1.0
+  },
+  "overfit_training": {
+    "epochs": 60,
+    "batch_size": 8,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "patience": 60,
+    "gradient_clip_norm": 1.0
+  }
+}

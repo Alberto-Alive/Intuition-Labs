@@ -1,0 +1,5737 @@
+{
+  "aggregate": {
+    "all_eval_ablations": {
+      "private_view_cross_causal_mean::cross_task_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.05059356623678468,
+          "planner": 0.83049276471138,
+          "reader": 0.1189137389883399
+        },
+        "attention_entropy_mean": 0.5816301107406616,
+        "attention_entropy_raw": [
+          0.35775718092918396,
+          0.8055030405521393
+        ],
+        "attention_entropy_std": 0.22387292981147766,
+        "inject_norm_ratio_mean": 0.6938891410827637,
+        "inject_norm_ratio_raw": [
+          0.71114581823349,
+          0.6766324639320374
+        ],
+        "inject_norm_ratio_std": 0.01725667715072632,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.6640625,
+        "mean_actions_raw": [
+          13.453125,
+          13.875
+        ],
+        "mean_actions_std": 0.2109375,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.046875,
+        "rollout_success_rate_raw": [
+          0.078125,
+          0.015625
+        ],
+        "rollout_success_rate_std": 0.03125,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5719480982310633,
+        "supervised_action_accuracy_raw": [
+          0.5678092399403875,
+          0.5760869565217391
+        ],
+        "supervised_action_accuracy_std": 0.00413885829067584,
+        "valid_action_rate_mean": 0.3600994286969897,
+        "valid_action_rate_raw": [
+          0.3902439024390244,
+          0.32995495495495497
+        ],
+        "valid_action_rate_std": 0.030144473742034716
+      },
+      "private_view_cross_causal_mean::mask_actor_peer_reads": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 0.5130449533462524,
+        "attention_entropy_raw": [
+          0.322469025850296,
+          0.7036208808422089
+        ],
+        "attention_entropy_std": 0.19057592749595642,
+        "inject_norm_ratio_mean": 0.6517733782529831,
+        "inject_norm_ratio_raw": [
+          0.6811900436878204,
+          0.6223567128181458
+        ],
+        "inject_norm_ratio_std": 0.02941666543483734,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.4375,
+        "mean_actions_raw": [
+          13.40625,
+          13.46875
+        ],
+        "mean_actions_std": 0.03125,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.078125,
+        "rollout_success_rate_raw": [
+          0.09375,
+          0.0625
+        ],
+        "rollout_success_rate_std": 0.015625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.4503753552221122,
+        "supervised_action_accuracy_raw": [
+          0.4783904619970194,
+          0.422360248447205
+        ],
+        "supervised_action_accuracy_std": 0.028015106774907206,
+        "valid_action_rate_mean": 0.4592507260720718,
+        "valid_action_rate_raw": [
+          0.4370629370629371,
+          0.4814385150812065
+        ],
+        "valid_action_rate_std": 0.022187789009134706
+      },
+      "private_view_cross_causal_mean::remove_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.6015625,
+        "mean_actions_raw": [
+          13.5,
+          13.703125
+        ],
+        "mean_actions_std": 0.1015625,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.0625,
+        "rollout_success_rate_raw": [
+          0.078125,
+          0.046875
+        ],
+        "rollout_success_rate_std": 0.015625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.46261026927456006,
+        "supervised_action_accuracy_raw": [
+          0.4873323397913562,
+          0.43788819875776397
+        ],
+        "supervised_action_accuracy_std": 0.02472207051679612,
+        "valid_action_rate_mean": 0.44033611005532325,
+        "valid_action_rate_raw": [
+          0.48842592592592593,
+          0.3922462941847206
+        ],
+        "valid_action_rate_std": 0.048089815870602654
+      },
+      "private_view_cross_causal_mean::role_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.07692707190290093,
+          "planner": 0.43591636791825294,
+          "reader": 0.48715656250715256
+        },
+        "attention_entropy_mean": 0.6423584520816803,
+        "attention_entropy_raw": [
+          0.4529401659965515,
+          0.8317767381668091
+        ],
+        "attention_entropy_std": 0.18941828608512878,
+        "inject_norm_ratio_mean": 0.6605709940195084,
+        "inject_norm_ratio_raw": [
+          0.7128112018108368,
+          0.6083307862281799
+        ],
+        "inject_norm_ratio_std": 0.05224020779132843,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 12.8671875,
+        "mean_actions_raw": [
+          12.71875,
+          13.015625
+        ],
+        "mean_actions_std": 0.1484375,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.171875,
+        "rollout_success_rate_raw": [
+          0.203125,
+          0.140625
+        ],
+        "rollout_success_rate_std": 0.03125,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5933123362738473,
+        "supervised_action_accuracy_raw": [
+          0.5856929955290611,
+          0.6009316770186336
+        ],
+        "supervised_action_accuracy_std": 0.007619340744786263,
+        "valid_action_rate_mean": 0.47118257622459303,
+        "valid_action_rate_raw": [
+          0.5257985257985258,
+          0.41656662665066024
+        ],
+        "valid_action_rate_std": 0.05461594957393279
+      },
+      "private_view_qa_hard_aux_bias::action_answer_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy_mean": 0.2908804938197136,
+        "attention_entropy_raw": [
+          0.2788515090942383,
+          0.3029094785451889
+        ],
+        "attention_entropy_std": 0.012028984725475311,
+        "inject_norm_ratio_mean": 0.2877868339419365,
+        "inject_norm_ratio_raw": [
+          0.32320618629455566,
+          0.2523674815893173
+        ],
+        "inject_norm_ratio_std": 0.03541935235261917,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.5625,
+        "mean_actions_raw": [
+          13.578125,
+          13.546875
+        ],
+        "mean_actions_std": 0.015625,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.2908804938197136,
+        "qa_answer_entropy_raw": [
+          0.2788515090942383,
+          0.3029094785451889
+        ],
+        "qa_answer_entropy_std": 0.012028984725475311,
+        "qa_irrelevant_rate_mean": 0.0013452266139211133,
+        "qa_irrelevant_rate_raw": [
+          0.0013095902977511287,
+          0.001380862930091098
+        ],
+        "qa_irrelevant_rate_std": 3.563631616998464e-05,
+        "qa_no_rate_mean": 0.4938119575381279,
+        "qa_no_rate_raw": [
+          0.47147221863269806,
+          0.5161516964435577
+        ],
+        "qa_no_rate_std": 0.02233973890542984,
+        "qa_yes_rate_mean": 0.5039378628134727,
+        "qa_yes_rate_raw": [
+          0.5263553857803345,
+          0.481520339846611
+        ],
+        "qa_yes_rate_std": 0.022417522966861725,
+        "rollout_success_rate_mean": 0.0625,
+        "rollout_success_rate_raw": [
+          0.0625,
+          0.0625
+        ],
+        "rollout_success_rate_std": 0.0,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.3862826410937601,
+        "supervised_action_accuracy_raw": [
+          0.4247391952309985,
+          0.34782608695652173
+        ],
+        "supervised_action_accuracy_std": 0.03845655413723839,
+        "valid_action_rate_mean": 0.3467308537169691,
+        "valid_action_rate_raw": [
+          0.38434982738780205,
+          0.3091118800461361
+        ],
+        "valid_action_rate_std": 0.03761897367083297
+      },
+      "private_view_qa_hard_aux_bias::cross_task_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy_mean": 0.3115754500031471,
+        "attention_entropy_raw": [
+          0.33566243946552277,
+          0.2874884605407715
+        ],
+        "attention_entropy_std": 0.02408698946237564,
+        "inject_norm_ratio_mean": 0.29634370282292366,
+        "inject_norm_ratio_raw": [
+          0.3337756097316742,
+          0.2589117959141731
+        ],
+        "inject_norm_ratio_std": 0.037431906908750534,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.515625,
+        "mean_actions_raw": [
+          13.5625,
+          13.46875
+        ],
+        "mean_actions_std": 0.046875,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.3115754500031471,
+        "qa_answer_entropy_raw": [
+          0.33566243946552277,
+          0.2874884605407715
+        ],
+        "qa_answer_entropy_std": 0.02408698946237564,
+        "qa_irrelevant_rate_mean": 0.0015653328882763162,
+        "qa_irrelevant_rate_raw": [
+          0.001258214731933549,
+          0.0018724510446190834
+        ],
+        "qa_irrelevant_rate_std": 0.0003071181563427672,
+        "qa_no_rate_mean": 0.4730655997991562,
+        "qa_no_rate_raw": [
+          0.44598522782325745,
+          0.5001459717750549
+        ],
+        "qa_no_rate_std": 0.027080371975898743,
+        "qa_yes_rate_mean": 0.5243658944964409,
+        "qa_yes_rate_raw": [
+          0.5519247800111771,
+          0.4968070089817047
+        ],
+        "qa_yes_rate_std": 0.027558885514736176,
+        "rollout_success_rate_mean": 0.0859375,
+        "rollout_success_rate_raw": [
+          0.078125,
+          0.09375
+        ],
+        "rollout_success_rate_std": 0.0078125,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5464565726504429,
+        "supervised_action_accuracy_raw": [
+          0.5245901639344263,
+          0.5683229813664596
+        ],
+        "supervised_action_accuracy_std": 0.021866408716016694,
+        "valid_action_rate_mean": 0.39479241288611844,
+        "valid_action_rate_raw": [
+          0.39631336405529954,
+          0.39327146171693733
+        ],
+        "valid_action_rate_std": 0.0015209511691811062
+      },
+      "private_view_qa_hard_aux_bias::mask_actor_peer_reads": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.03987367916852236,
+        "inject_norm_ratio_raw": [
+          0.04287576861679554,
+          0.036871589720249176
+        ],
+        "inject_norm_ratio_std": 0.003002089448273182,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.2734375,
+        "mean_actions_raw": [
+          13.546875,
+          13.0
+        ],
+        "mean_actions_std": 0.2734375,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.1015625,
+        "rollout_success_rate_raw": [
+          0.0625,
+          0.140625
+        ],
+        "rollout_success_rate_std": 0.0390625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.512794938489878,
+        "supervised_action_accuracy_raw": [
+          0.5007451564828614,
+          0.5248447204968945
+        ],
+        "supervised_action_accuracy_std": 0.012049782007016507,
+        "valid_action_rate_mean": 0.4454421191553545,
+        "valid_action_rate_raw": [
+          0.45098039215686275,
+          0.43990384615384615
+        ],
+        "valid_action_rate_std": 0.005538273001508304
+      },
+      "private_view_qa_hard_aux_bias::remove_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.234375,
+        "mean_actions_raw": [
+          13.546875,
+          12.921875
+        ],
+        "mean_actions_std": 0.3125,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.109375,
+        "rollout_success_rate_raw": [
+          0.0625,
+          0.15625
+        ],
+        "rollout_success_rate_std": 0.046875,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5143789745536004,
+        "supervised_action_accuracy_raw": [
+          0.4992548435171386,
+          0.5295031055900621
+        ],
+        "supervised_action_accuracy_std": 0.015124131036461735,
+        "valid_action_rate_mean": 0.4421304335092028,
+        "valid_action_rate_raw": [
+          0.4429065743944637,
+          0.44135429262394194
+        ],
+        "valid_action_rate_std": 0.0007761408852608731
+      },
+      "private_view_qa_hard_aux_bias::role_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy_mean": 0.28156086057424545,
+        "attention_entropy_raw": [
+          0.28510555624961853,
+          0.2780161648988724
+        ],
+        "attention_entropy_std": 0.0035446956753730774,
+        "inject_norm_ratio_mean": 0.34887515753507614,
+        "inject_norm_ratio_raw": [
+          0.3911351263523102,
+          0.3066151887178421
+        ],
+        "inject_norm_ratio_std": 0.04225996881723404,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 12.5234375,
+        "mean_actions_raw": [
+          12.34375,
+          12.703125
+        ],
+        "mean_actions_std": 0.1796875,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.28156086057424545,
+        "qa_answer_entropy_raw": [
+          0.28510555624961853,
+          0.2780161648988724
+        ],
+        "qa_answer_entropy_std": 0.0035446956753730774,
+        "qa_irrelevant_rate_mean": 0.0015641305944882333,
+        "qa_irrelevant_rate_raw": [
+          0.001326566154602915,
+          0.0018016950343735516
+        ],
+        "qa_irrelevant_rate_std": 0.00023756443988531828,
+        "qa_no_rate_mean": 0.535449743270874,
+        "qa_no_rate_raw": [
+          0.513635516166687,
+          0.557263970375061
+        ],
+        "qa_no_rate_std": 0.02181422710418701,
+        "qa_yes_rate_mean": 0.46208930760622025,
+        "qa_yes_rate_raw": [
+          0.4841541200876236,
+          0.4400244951248169
+        ],
+        "qa_yes_rate_std": 0.02206481248140335,
+        "rollout_success_rate_mean": 0.1953125,
+        "rollout_success_rate_raw": [
+          0.21875,
+          0.171875
+        ],
+        "rollout_success_rate_std": 0.0234375,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5873510844109562,
+        "supervised_action_accuracy_raw": [
+          0.5737704918032787,
+          0.6009316770186336
+        ],
+        "supervised_action_accuracy_std": 0.013580592607677466,
+        "valid_action_rate_mean": 0.48084839709156585,
+        "valid_action_rate_raw": [
+          0.47215189873417723,
+          0.48954489544895446
+        ],
+        "valid_action_rate_std": 0.008696498357388616
+      }
+    },
+    "methods": {
+      "private_view_cross_causal_mean": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.05146703589707613,
+          "planner": 0.8220428675413132,
+          "reader": 0.12649008398875594
+        },
+        "attention_entropy_mean": 0.577025979757309,
+        "attention_entropy_raw": [
+          0.3549996316432953,
+          0.7990523278713226
+        ],
+        "attention_entropy_std": 0.22202634811401367,
+        "inject_norm_ratio_mean": 0.6250113695859909,
+        "inject_norm_ratio_raw": [
+          0.661087691783905,
+          0.5889350473880768
+        ],
+        "inject_norm_ratio_std": 0.036076322197914124,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 11.5703125,
+        "mean_actions_raw": [
+          12.15625,
+          10.984375
+        ],
+        "mean_actions_std": 0.5859375,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.328125,
+        "rollout_success_rate_raw": [
+          0.265625,
+          0.390625
+        ],
+        "rollout_success_rate_std": 0.0625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.6727455545167591,
+        "supervised_action_accuracy_raw": [
+          0.6482861400894188,
+          0.6972049689440993
+        ],
+        "supervised_action_accuracy_std": 0.024459414427340287,
+        "valid_action_rate_mean": 0.4359163994193084,
+        "valid_action_rate_raw": [
+          0.42802056555269924,
+          0.4438122332859175
+        ],
+        "valid_action_rate_std": 0.007895833866609137
+      },
+      "private_view_no_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 13.2578125,
+        "mean_actions_raw": [
+          13.125,
+          13.390625
+        ],
+        "mean_actions_std": 0.1328125,
+        "param_count_mean": 173636.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.109375,
+        "rollout_success_rate_raw": [
+          0.125,
+          0.09375
+        ],
+        "rollout_success_rate_std": 0.015625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.5339092482713295,
+        "supervised_action_accuracy_raw": [
+          0.5305514157973175,
+          0.5372670807453416
+        ],
+        "supervised_action_accuracy_std": 0.003357832474012057,
+        "valid_action_rate_mean": 0.4107010890704006,
+        "valid_action_rate_raw": [
+          0.4083333333333333,
+          0.4130688448074679
+        ],
+        "valid_action_rate_std": 0.0023677557370672953
+      },
+      "private_view_qa_hard_aux_bias": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy_mean": 0.32035163044929504,
+        "attention_entropy_raw": [
+          0.3108528107404709,
+          0.3298504501581192
+        ],
+        "attention_entropy_std": 0.009498819708824158,
+        "inject_norm_ratio_mean": 0.32547030597925186,
+        "inject_norm_ratio_raw": [
+          0.3594801723957062,
+          0.29146043956279755
+        ],
+        "inject_norm_ratio_std": 0.034009866416454315,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 12.1796875,
+        "mean_actions_raw": [
+          12.1875,
+          12.171875
+        ],
+        "mean_actions_std": 0.0078125,
+        "param_count_mean": 250318.0,
+        "qa_answer_entropy_mean": 0.32035163044929504,
+        "qa_answer_entropy_raw": [
+          0.3108528107404709,
+          0.3298504501581192
+        ],
+        "qa_answer_entropy_std": 0.009498819708824158,
+        "qa_irrelevant_rate_mean": 0.0017766066594049335,
+        "qa_irrelevant_rate_raw": [
+          0.0017153031076304615,
+          0.0018379102111794055
+        ],
+        "qa_irrelevant_rate_std": 6.1303551774472e-05,
+        "qa_no_rate_mean": 0.4582008123397827,
+        "qa_no_rate_raw": [
+          0.45816129446029663,
+          0.4582403302192688
+        ],
+        "qa_no_rate_std": 3.9517879486083984e-05,
+        "qa_yes_rate_mean": 0.5389797165989876,
+        "qa_yes_rate_raw": [
+          0.5390339940786362,
+          0.538925439119339
+        ],
+        "qa_yes_rate_std": 5.427747964859009e-05,
+        "rollout_success_rate_mean": 0.265625,
+        "rollout_success_rate_raw": [
+          0.25,
+          0.28125
+        ],
+        "rollout_success_rate_std": 0.015625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.6204237672519926,
+        "supervised_action_accuracy_raw": [
+          0.5886736214605067,
+          0.6521739130434783
+        ],
+        "supervised_action_accuracy_std": 0.03175014579148577,
+        "valid_action_rate_mean": 0.47083539054014023,
+        "valid_action_rate_raw": [
+          0.43846153846153846,
+          0.503209242618742
+        ],
+        "valid_action_rate_std": 0.03237385207860177
+      },
+      "role_clones_no_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 11.171875,
+        "mean_actions_raw": [
+          11.4375,
+          10.90625
+        ],
+        "mean_actions_std": 0.265625,
+        "param_count_mean": 173636.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.4140625,
+        "rollout_success_rate_raw": [
+          0.375,
+          0.453125
+        ],
+        "rollout_success_rate_std": 0.0390625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.6725581083207598,
+        "supervised_action_accuracy_raw": [
+          0.6572280178837556,
+          0.687888198757764
+        ],
+        "supervised_action_accuracy_std": 0.015330090437004174,
+        "valid_action_rate_mean": 0.4180190865392143,
+        "valid_action_rate_raw": [
+          0.4248633879781421,
+          0.41117478510028654
+        ],
+        "valid_action_rate_std": 0.00684430143892778
+      },
+      "single_actor": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "lora_delta_norm_ratio_mean": 0.0,
+        "lora_delta_norm_ratio_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_delta_norm_ratio_std": 0.0,
+        "lora_gate_entropy_mean": 0.0,
+        "lora_gate_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "lora_gate_entropy_std": 0.0,
+        "mean_actions_mean": 11.171875,
+        "mean_actions_raw": [
+          11.4375,
+          10.90625
+        ],
+        "mean_actions_std": 0.265625,
+        "param_count_mean": 173636.0,
+        "qa_answer_entropy_mean": 0.0,
+        "qa_answer_entropy_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_answer_entropy_std": 0.0,
+        "qa_irrelevant_rate_mean": 0.0,
+        "qa_irrelevant_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_irrelevant_rate_std": 0.0,
+        "qa_no_rate_mean": 0.0,
+        "qa_no_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_no_rate_std": 0.0,
+        "qa_yes_rate_mean": 0.0,
+        "qa_yes_rate_raw": [
+          0.0,
+          0.0
+        ],
+        "qa_yes_rate_std": 0.0,
+        "rollout_success_rate_mean": 0.4140625,
+        "rollout_success_rate_raw": [
+          0.375,
+          0.453125
+        ],
+        "rollout_success_rate_std": 0.0390625,
+        "seeds": 2,
+        "supervised_action_accuracy_mean": 0.6725581083207598,
+        "supervised_action_accuracy_raw": [
+          0.6572280178837556,
+          0.687888198757764
+        ],
+        "supervised_action_accuracy_std": 0.015330090437004174,
+        "valid_action_rate_mean": 0.4180190865392143,
+        "valid_action_rate_raw": [
+          0.4248633879781421,
+          0.41117478510028654
+        ],
+        "valid_action_rate_std": 0.00684430143892778
+      }
+    },
+    "proposed_eval_ablations": {}
+  },
+  "causality_audit": {
+    "actor_only_emits_action": true,
+    "future_observations_in_input": false,
+    "gold_future_actions_in_input": false,
+    "role_specific_tools_or_privileged_observations": "False for Stage 11A-E; Stage 11F private-view methods intentionally mask different current-step fields by role.",
+    "subtask_query_source": "learned role/subtask embedding plus role token in the causal stream",
+    "success_labels_in_input": false,
+    "summary_source": "last non-pad token or causal-prefix mean hidden state at the current decision step, depending on method config"
+  },
+  "claim_boundary": "Development-only Stage 11F task-redesign branch on the same small randomly initialized GPT-style causal decoder. This tests whether architectural information partitioning can create cooperation pressure; it is not evidence for spontaneous specialization from identical role clones.",
+  "config": {
+    "batch_size": 96,
+    "cross_layers": [
+      1,
+      2
+    ],
+    "d_model": 64,
+    "dev_worlds": 64,
+    "epochs": 16,
+    "ff_mult": 4,
+    "grid_size": 7,
+    "lr": 0.0015,
+    "max_seq_len": 64,
+    "max_steps": 14,
+    "min_path_len": 4,
+    "n_heads": 4,
+    "n_layers": 3,
+    "obstacle_density": 0.16,
+    "recovery_states_per_world": 4,
+    "train_worlds": 192,
+    "weight_decay": 0.0001
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+    "cuda_total_memory": 17094475776,
+    "device": "cuda",
+    "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128"
+  },
+  "hypothesis": "Private role views plus a constrained latent question/answer relay may create real inter-agent dependence: the Actor is missing goal and map evidence, specialists hold complementary private state, and the Actor can only recover it through low-bandwidth action-conditioned answers.",
+  "new_stage11b_variants": [
+    {
+      "cross_layers": [],
+      "cross_mode": "none",
+      "lora_alpha": 1.0,
+      "lora_basis_count": 0,
+      "lora_gate_mode": "softmax",
+      "lora_rank": 0,
+      "name": "single_actor",
+      "private_view": false,
+      "qa_aux_weight": 0.0,
+      "qa_temperature": 0.75,
+      "query_mode": "subtask",
+      "read_topk": 0,
+      "role_dropout": 0.0,
+      "roles": [
+        "actor"
+      ],
+      "shared_query": false,
+      "slot_count": 0,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "none",
+      "lora_alpha": 1.0,
+      "lora_basis_count": 0,
+      "lora_gate_mode": "softmax",
+      "lora_rank": 0,
+      "name": "role_clones_no_path",
+      "private_view": false,
+      "qa_aux_weight": 0.0,
+      "qa_temperature": 0.75,
+      "query_mode": "subtask",
+      "read_topk": 0,
+      "role_dropout": 0.0,
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "slot_count": 0,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "none",
+      "lora_alpha": 1.0,
+      "lora_basis_count": 0,
+      "lora_gate_mode": "softmax",
+      "lora_rank": 0,
+      "name": "private_view_no_path",
+      "private_view": true,
+      "qa_aux_weight": 0.0,
+      "qa_temperature": 0.75,
+      "query_mode": "subtask",
+      "read_topk": 0,
+      "role_dropout": 0.0,
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "slot_count": 0,
+      "summary_mode": "causal_mean"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "cross_peer",
+      "lora_alpha": 1.0,
+      "lora_basis_count": 0,
+      "lora_gate_mode": "softmax",
+      "lora_rank": 0,
+      "name": "private_view_cross_causal_mean",
+      "private_view": true,
+      "qa_aux_weight": 0.0,
+      "qa_temperature": 0.75,
+      "query_mode": "subtask",
+      "read_topk": 0,
+      "role_dropout": 0.0,
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "slot_count": 0,
+      "summary_mode": "causal_mean"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "qa_hard_bias",
+      "lora_alpha": 1.0,
+      "lora_basis_count": 0,
+      "lora_gate_mode": "softmax",
+      "lora_rank": 0,
+      "name": "private_view_qa_hard_aux_bias",
+      "private_view": true,
+      "qa_aux_weight": 0.35,
+      "qa_temperature": 0.75,
+      "query_mode": "subtask",
+      "read_topk": 0,
+      "role_dropout": 0.0,
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "slot_count": 0,
+      "summary_mode": "causal_mean"
+    }
+  ],
+  "report_title": "Stage 11F Private-View Q/A Retest 16 Epochs Extra Seeds",
+  "results": [
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "single_actor",
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 671,
+        "dev_worlds": 64,
+        "train_step_examples": 1974,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2313045539243286,
+        "backbone_grad_norm": 0.7662036734864989,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3740685543964232,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.3671609617414928
+        },
+        {
+          "dev_action_accuracy": 0.47242921013412814,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.2015940348307292
+        },
+        {
+          "dev_action_accuracy": 0.5484351713859911,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0976436194919406
+        },
+        {
+          "dev_action_accuracy": 0.5961251862891207,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9227828440212068
+        },
+        {
+          "dev_action_accuracy": 0.646795827123696,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.797682211512611
+        },
+        {
+          "dev_action_accuracy": 0.7093889716840537,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7005402360643659
+        },
+        {
+          "dev_action_accuracy": 0.6587183308494784,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6055262812546321
+        },
+        {
+          "dev_action_accuracy": 0.676602086438152,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5542266822996593
+        },
+        {
+          "dev_action_accuracy": 0.684053651266766,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.49627656596047537
+        },
+        {
+          "dev_action_accuracy": 0.6706408345752608,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4555493607407525
+        },
+        {
+          "dev_action_accuracy": 0.6721311475409836,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.39366455447106136
+        },
+        {
+          "dev_action_accuracy": 0.6721311475409836,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3580506124666759
+        },
+        {
+          "dev_action_accuracy": 0.669150521609538,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.31106866541362943
+        },
+        {
+          "dev_action_accuracy": 0.6572280178837556,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2571080845026743
+        },
+        {
+          "dev_action_accuracy": 0.639344262295082,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2239413722639992
+        },
+        {
+          "dev_action_accuracy": 0.6572280178837556,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2057470725405784
+        }
+      ],
+      "method": "single_actor",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 2,
+          "collision_or_wall_budget": 38
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 11.4375,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.375,
+        "supervised_action_accuracy": 0.6572280178837556,
+        "trace_examples": [
+          {
+            "actions": "DDDDDDDDDDDDDD",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              5,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUURLRUUUUU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUURRRD",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              1,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              4
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4248633879781421
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          40,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 1,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.4938840999966487,
+      "seed": 104,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "role_clones_no_path",
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 671,
+        "dev_worlds": 64,
+        "train_step_examples": 1974,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2313045539243286,
+        "backbone_grad_norm": 0.7662036774535006,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3740685543964232,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.367160990124657
+        },
+        {
+          "dev_action_accuracy": 0.47242921013412814,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.201594040507362
+        },
+        {
+          "dev_action_accuracy": 0.5484351713859911,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0976436194919406
+        },
+        {
+          "dev_action_accuracy": 0.5961251862891207,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9227828525361561
+        },
+        {
+          "dev_action_accuracy": 0.646795827123696,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7976822228658766
+        },
+        {
+          "dev_action_accuracy": 0.7093889716840537,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7005402644475301
+        },
+        {
+          "dev_action_accuracy": 0.6587183308494784,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6055262585481008
+        },
+        {
+          "dev_action_accuracy": 0.676602086438152,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5542266666889191
+        },
+        {
+          "dev_action_accuracy": 0.684053651266766,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4962766695590246
+        },
+        {
+          "dev_action_accuracy": 0.6706408345752608,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4555493351959047
+        },
+        {
+          "dev_action_accuracy": 0.6721311475409836,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3936645970458076
+        },
+        {
+          "dev_action_accuracy": 0.6721311475409836,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.35805105453445796
+        },
+        {
+          "dev_action_accuracy": 0.669150521609538,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3110688300359817
+        },
+        {
+          "dev_action_accuracy": 0.6572280178837556,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2571087564740862
+        },
+        {
+          "dev_action_accuracy": 0.639344262295082,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.22394275381451562
+        },
+        {
+          "dev_action_accuracy": 0.6572280178837556,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.20574851014784404
+        }
+      ],
+      "method": "role_clones_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 2,
+          "collision_or_wall_budget": 38
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 11.4375,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.375,
+        "supervised_action_accuracy": 0.6572280178837556,
+        "trace_examples": [
+          {
+            "actions": "DDDDDDDDDDDDDD",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              5,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUURLRUUUUU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUURRRD",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              1,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              4
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4248633879781421
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          40,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.108227099990472,
+      "seed": 104,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_no_path",
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 671,
+        "dev_worlds": 64,
+        "train_step_examples": 1974,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.22818011173565,
+        "backbone_grad_norm": 0.8161041858864264,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3949329359165425,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.3679283346448625
+        },
+        {
+          "dev_action_accuracy": 0.47242921013412814,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.211303324926467
+        },
+        {
+          "dev_action_accuracy": 0.5171385991058122,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1627606267020816
+        },
+        {
+          "dev_action_accuracy": 0.5439642324888226,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.108229628631047
+        },
+        {
+          "dev_action_accuracy": 0.4918032786885246,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.048704011099679
+        },
+        {
+          "dev_action_accuracy": 0.5469448584202683,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9960126309167772
+        },
+        {
+          "dev_action_accuracy": 0.5350223546944859,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9392831268764678
+        },
+        {
+          "dev_action_accuracy": 0.5305514157973175,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9274255832036337
+        },
+        {
+          "dev_action_accuracy": 0.563338301043219,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9020217742238726
+        },
+        {
+          "dev_action_accuracy": 0.5305514157973175,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8768151005109152
+        },
+        {
+          "dev_action_accuracy": 0.5529061102831595,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8369769198553902
+        },
+        {
+          "dev_action_accuracy": 0.5275707898658718,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8221106131871542
+        },
+        {
+          "dev_action_accuracy": 0.5514157973174366,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7823171388535273
+        },
+        {
+          "dev_action_accuracy": 0.5275707898658718,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7555642326672872
+        },
+        {
+          "dev_action_accuracy": 0.5216095380029806,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7266902668135506
+        },
+        {
+          "dev_action_accuracy": 0.5305514157973175,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6892691510064262
+        }
+      ],
+      "method": "private_view_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 55
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 13.125,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.125,
+        "supervised_action_accuracy": 0.5305514157973175,
+        "trace_examples": [
+          {
+            "actions": "DDDDDDDDDDDDDD",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              5,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLU",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUURRRRRRRRR",
+            "final": [
+              1,
+              4
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              1,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "UUUULLLLLLULUU",
+            "final": [
+              0,
+              0
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4083333333333333
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          56,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.5881690999958664,
+      "seed": 104,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.017547886993270367,
+            "planner": 0.8732971251010895,
+            "reader": 0.10915504768490791
+          },
+          "attention_entropy": 0.35775718092918396,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 58
+          },
+          "inject_norm_ratio": 0.71114581823349,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.453125,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.078125,
+          "supervised_action_accuracy": 0.5678092399403875,
+          "trace_examples": [
+            {
+              "actions": "DDDDDDDDRRRRRR",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "LDDLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUUUURRRRRRRR",
+              "final": [
+                0,
+                2
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLDDDDDRDD",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LLLLLLLLLLLULU",
+              "final": [
+                4,
+                5
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.3902439024390244
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.322469025850296,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 56
+          },
+          "inject_norm_ratio": 0.6811900436878204,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.40625,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.09375,
+          "supervised_action_accuracy": 0.4783904619970194,
+          "trace_examples": [
+            {
+              "actions": "LLLLDDDDDRRRLR",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUULLDLLDRRUU",
+              "final": [
+                2,
+                2
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "UUULLLLLLLLLLL",
+              "final": [
+                3,
+                6
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4370629370629371
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 57
+          },
+          "inject_norm_ratio": 0.0,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.5,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.078125,
+          "supervised_action_accuracy": 0.4873323397913562,
+          "trace_examples": [
+            {
+              "actions": "DDDDDDDDDDRRRR",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULLLLLLLLLLRDD",
+              "final": [
+                4,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "RUURDDLLLULRUL",
+              "final": [
+                4,
+                0
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLRDD",
+              "final": [
+                1,
+                4
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULULLLLLRURRRR",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.48842592592592593
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.03075245115906,
+            "planner": 0.5281997472047806,
+            "reader": 0.441047802567482
+          },
+          "attention_entropy": 0.4529401659965515,
+          "failure_counts": {
+            "budget_exhausted": 3,
+            "collision_or_wall_budget": 48
+          },
+          "inject_norm_ratio": 0.7128112018108368,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 12.71875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.203125,
+          "supervised_action_accuracy": 0.5856929955290611,
+          "trace_examples": [
+            {
+              "actions": "DDDLLLLDLDDRLD",
+              "final": [
+                2,
+                0
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUULLDDRRRRUD",
+              "final": [
+                4,
+                4
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.5257985257985258
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_cross_causal_mean",
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 671,
+        "dev_worlds": 64,
+        "train_step_examples": 1974,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.014138693955254,
+        "backbone_grad_norm": 1.733088602459817,
+        "cross_qkv_grad_norm": 0.6252439721159126,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.4187779433681073,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.3675296363376437
+        },
+        {
+          "dev_action_accuracy": 0.46944858420268254,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1961260296049572
+        },
+        {
+          "dev_action_accuracy": 0.5156482861400894,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1196764480499994
+        },
+        {
+          "dev_action_accuracy": 0.5365126676602087,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0517672584170388
+        },
+        {
+          "dev_action_accuracy": 0.5171385991058122,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9882609304927644
+        },
+        {
+          "dev_action_accuracy": 0.5067064083457526,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9428923413867042
+        },
+        {
+          "dev_action_accuracy": 0.5514157973174366,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.904904203755515
+        },
+        {
+          "dev_action_accuracy": 0.5469448584202683,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.842658091159094
+        },
+        {
+          "dev_action_accuracy": 0.6140089418777943,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.773670684723627
+        },
+        {
+          "dev_action_accuracy": 0.5812220566318927,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.714080810546875
+        },
+        {
+          "dev_action_accuracy": 0.6363636363636364,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6559916266373226
+        },
+        {
+          "dev_action_accuracy": 0.624441132637854,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6151131008352552
+        },
+        {
+          "dev_action_accuracy": 0.5618479880774963,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6017318637598128
+        },
+        {
+          "dev_action_accuracy": 0.6035767511177347,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5898327245598748
+        },
+        {
+          "dev_action_accuracy": 0.6318926974664679,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5224279236225855
+        },
+        {
+          "dev_action_accuracy": 0.6482861400894188,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4595818264143808
+        }
+      ],
+      "method": "private_view_cross_causal_mean",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.02867886796593666,
+          "planner": 0.8465015590190887,
+          "reader": 0.1248195618391037
+        },
+        "attention_entropy": 0.3549996316432953,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 46
+        },
+        "inject_norm_ratio": 0.661087691783905,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 12.15625,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.265625,
+        "supervised_action_accuracy": 0.6482861400894188,
+        "trace_examples": [
+          {
+            "actions": "DDDDDDDDDDDRDD",
+            "final": [
+              4,
+              5
+            ],
+            "goal": [
+              5,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUURRRRRRRRRR",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUULLDDRRRRRU",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              1,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.42802056555269924
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.25580355525016785,
+            "attention_mass": [
+              [
+                0.0,
+                0.39532944560050964,
+                0.599740743637085,
+                0.004929837305098772
+              ],
+              [
+                0.07256190478801727,
+                0.0,
+                0.9270062446594238,
+                0.00043182485387660563
+              ],
+              [
+                0.06342938542366028,
+                0.9346796274185181,
+                0.0,
+                0.0018909773789346218
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.7011315822601318,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.3891344964504242,
+            "attention_mass": [
+              [
+                0.0,
+                0.18109072744846344,
+                0.7183722853660583,
+                0.10053703933954239
+              ],
+              [
+                0.04673520475625992,
+                0.0,
+                0.8441405296325684,
+                0.1091243252158165
+              ],
+              [
+                0.6794086694717407,
+                0.0896969735622406,
+                0.0,
+                0.2308943271636963
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.661248505115509,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          58,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 250318,
+      "runtime_seconds": 6.783450899994932,
+      "seed": 104,
+      "trainable_param_count": 250318
+    },
+    {
+      "ablations": {
+        "action_answer_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.2788515090942383,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 58
+          },
+          "inject_norm_ratio": 0.32320618629455566,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.578125,
+          "qa_answer_entropy": 0.2788515090942383,
+          "qa_irrelevant_rate": 0.0013095902977511287,
+          "qa_no_rate": 0.47147221863269806,
+          "qa_yes_rate": 0.5263553857803345,
+          "rollout_success_rate": 0.0625,
+          "supervised_action_accuracy": 0.4247391952309985,
+          "trace_examples": [
+            {
+              "actions": "LLLLDDDDDDDDDD",
+              "final": [
+                2,
+                0
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DDLLLLLLLLLLLD",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUUURUUUUUUUU",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLRLD",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULLLLLLLLLLRRD",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.38434982738780205
+        },
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.33566243946552277,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 57
+          },
+          "inject_norm_ratio": 0.3337756097316742,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.5625,
+          "qa_answer_entropy": 0.33566243946552277,
+          "qa_irrelevant_rate": 0.001258214731933549,
+          "qa_no_rate": 0.44598522782325745,
+          "qa_yes_rate": 0.5519247800111771,
+          "rollout_success_rate": 0.078125,
+          "supervised_action_accuracy": 0.5245901639344263,
+          "trace_examples": [
+            {
+              "actions": "DDDDDDRRRRRRRR",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DLLLLLLLLLLLLL",
+              "final": [
+                4,
+                3
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUUURUUUUUUUU",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLDLLRDD",
+              "final": [
+                4,
+                2
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.39631336405529954
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 58
+          },
+          "inject_norm_ratio": 0.04287576861679554,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.546875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.0625,
+          "supervised_action_accuracy": 0.5007451564828614,
+          "trace_examples": [
+            {
+              "actions": "LLLLDDDDDDDRDD",
+              "final": [
+                4,
+                1
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                3,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURRRURRRRRRR",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.45098039215686275
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 58
+          },
+          "inject_norm_ratio": 0.0,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.546875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.0625,
+          "supervised_action_accuracy": 0.4992548435171386,
+          "trace_examples": [
+            {
+              "actions": "LLLLDDDDDDDRDD",
+              "final": [
+                4,
+                1
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                3,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLLLLRLUDRUD",
+              "final": [
+                4,
+                1
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4429065743944637
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.28510555624961853,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 49
+          },
+          "inject_norm_ratio": 0.3911351263523102,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 12.34375,
+          "qa_answer_entropy": 0.28510555624961853,
+          "qa_irrelevant_rate": 0.001326566154602915,
+          "qa_no_rate": 0.513635516166687,
+          "qa_yes_rate": 0.4841541200876236,
+          "rollout_success_rate": 0.21875,
+          "supervised_action_accuracy": 0.5737704918032787,
+          "trace_examples": [
+            {
+              "actions": "DDDDDDDDDDDDDD",
+              "final": [
+                2,
+                4
+              ],
+              "goal": [
+                5,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURRRRRRRRRRR",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                3
+              ],
+              "goal": [
+                1,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.47215189873417723
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "qa_hard_bias",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_qa_hard_aux_bias",
+        "private_view": true,
+        "qa_aux_weight": 0.35,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 671,
+        "dev_worlds": 64,
+        "train_step_examples": 1974,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2900342139846743,
+        "backbone_grad_norm": 2.521626032842749,
+        "cross_qkv_grad_norm": 2.3938483099884658,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.36661698956780925,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.7218665877978007,
+          "train_loss": 1.6554668517339797
+        },
+        {
+          "dev_action_accuracy": 0.4217585692995529,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.6023927330970764,
+          "train_loss": 1.4528603951136272
+        },
+        {
+          "dev_action_accuracy": 0.47242921013412814,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.6027837452434358,
+          "train_loss": 1.379531082652864
+        },
+        {
+          "dev_action_accuracy": 0.5290611028315947,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.5944731377419972,
+          "train_loss": 1.2961472386405581
+        },
+        {
+          "dev_action_accuracy": 0.5678092399403875,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.5828671966280256,
+          "train_loss": 1.2434357631774176
+        },
+        {
+          "dev_action_accuracy": 0.5439642324888226,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.5679924601600284,
+          "train_loss": 1.192820566041129
+        },
+        {
+          "dev_action_accuracy": 0.5439642324888226,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.5408219581558591,
+          "train_loss": 1.1468357472192674
+        },
+        {
+          "dev_action_accuracy": 0.5529061102831595,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.5102522330624717,
+          "train_loss": 1.0950009340331668
+        },
+        {
+          "dev_action_accuracy": 0.5454545454545454,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.48059242963790894,
+          "train_loss": 1.06426340341568
+        },
+        {
+          "dev_action_accuracy": 0.5529061102831595,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.4731778317973727,
+          "train_loss": 1.0333418136551267
+        },
+        {
+          "dev_action_accuracy": 0.5543964232488823,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.4379147645973024,
+          "train_loss": 0.9799801253137135
+        },
+        {
+          "dev_action_accuracy": 0.5737704918032787,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.4180209409622919,
+          "train_loss": 0.9332281152407328
+        },
+        {
+          "dev_action_accuracy": 0.5976154992548435,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.4166514291649773,
+          "train_loss": 0.8721133981432233
+        },
+        {
+          "dev_action_accuracy": 0.5856929955290611,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.399613877137502,
+          "train_loss": 0.8019389169556754
+        },
+        {
+          "dev_action_accuracy": 0.5946348733233979,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.40450207108543035,
+          "train_loss": 0.7786096249307904
+        },
+        {
+          "dev_action_accuracy": 0.5886736214605067,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.3821715556439899,
+          "train_loss": 0.7201950294630868
+        }
+      ],
+      "method": "private_view_qa_hard_aux_bias",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy": 0.3108528107404709,
+        "failure_counts": {
+          "budget_exhausted": 3,
+          "collision_or_wall_budget": 45
+        },
+        "inject_norm_ratio": 0.3594801723957062,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 12.1875,
+        "qa_answer_entropy": 0.3108528107404709,
+        "qa_irrelevant_rate": 0.0017153031076304615,
+        "qa_no_rate": 0.45816129446029663,
+        "qa_yes_rate": 0.5390339940786362,
+        "rollout_success_rate": 0.25,
+        "supervised_action_accuracy": 0.5886736214605067,
+        "trace_examples": [
+          {
+            "actions": "DDDDDDDDDDDDDD",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              5,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUL",
+            "final": [
+              0,
+              4
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUURRRRRRRRRRR",
+            "final": [
+              3,
+              2
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              1,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              4
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.43846153846153846
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.3215227723121643,
+            "attention_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.3333333432674408,
+                0.3333333432674408,
+                0.3333333432674408,
+                0.0
+              ]
+            ],
+            "inject_norm_ratio": 0.2934282124042511,
+            "layer": 1,
+            "qa_answer_entropy": 0.3215227723121643,
+            "qa_irrelevant_rate": 0.0013009279500693083,
+            "qa_no_rate": 0.5190186500549316,
+            "qa_yes_rate": 0.4788644313812256
+          },
+          {
+            "attention_entropy": 0.23618024587631226,
+            "attention_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.3333333432674408,
+                0.3333333432674408,
+                0.3333333432674408,
+                0.0
+              ]
+            ],
+            "inject_norm_ratio": 0.35298416018486023,
+            "layer": 2,
+            "qa_answer_entropy": 0.23618024587631226,
+            "qa_irrelevant_rate": 0.001318252645432949,
+            "qa_no_rate": 0.4239257872104645,
+            "qa_yes_rate": 0.5738463401794434
+          }
+        ],
+        "logits_shape": [
+          60,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.35,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 250318,
+      "runtime_seconds": 10.283464099979028,
+      "seed": 104,
+      "trainable_param_count": 250318
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "single_actor",
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 644,
+        "dev_worlds": 64,
+        "train_step_examples": 1994,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.8970022388247971,
+        "backbone_grad_norm": 0.977112347238914,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.40372670807453415,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.356588397707258
+        },
+        {
+          "dev_action_accuracy": 0.5201863354037267,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1799391451336088
+        },
+        {
+          "dev_action_accuracy": 0.5683229813664596,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.032229522864024
+        },
+        {
+          "dev_action_accuracy": 0.6133540372670807,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8822642309325082
+        },
+        {
+          "dev_action_accuracy": 0.656832298136646,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7358657802854266
+        },
+        {
+          "dev_action_accuracy": 0.6785714285714286,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6434505865687415
+        },
+        {
+          "dev_action_accuracy": 0.718944099378882,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5484490508124942
+        },
+        {
+          "dev_action_accuracy": 0.6847826086956522,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.48503347095989047
+        },
+        {
+          "dev_action_accuracy": 0.7096273291925466,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.46091375606400625
+        },
+        {
+          "dev_action_accuracy": 0.6599378881987578,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.45240157416888643
+        },
+        {
+          "dev_action_accuracy": 0.7127329192546584,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.38759762048721313
+        },
+        {
+          "dev_action_accuracy": 0.6754658385093167,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3599045886879876
+        },
+        {
+          "dev_action_accuracy": 0.6785714285714286,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.30524917656467077
+        },
+        {
+          "dev_action_accuracy": 0.6677018633540373,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.26230954556238084
+        },
+        {
+          "dev_action_accuracy": 0.6583850931677019,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.25943851187115624
+        },
+        {
+          "dev_action_accuracy": 0.687888198757764,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2401812814530872
+        }
+      ],
+      "method": "single_actor",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 0,
+          "collision_or_wall_budget": 35
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 10.90625,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.453125,
+        "supervised_action_accuracy": 0.687888198757764,
+        "trace_examples": [
+          {
+            "actions": "UUUR",
+            "final": [
+              2,
+              6
+            ],
+            "goal": [
+              2,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DDDDD",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              4,
+              3
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              2
+            ],
+            "goal": [
+              6,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "UUUUUL",
+            "final": [
+              0,
+              3
+            ],
+            "goal": [
+              0,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.41117478510028654
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          35,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 1,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.2787404999835417,
+      "seed": 105,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "role_clones_no_path",
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 644,
+        "dev_worlds": 64,
+        "train_step_examples": 1994,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.8970022388247971,
+        "backbone_grad_norm": 0.9771123470899863,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.40372670807453415,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.3565884147371565
+        },
+        {
+          "dev_action_accuracy": 0.5201863354037267,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1799391564868746
+        },
+        {
+          "dev_action_accuracy": 0.5683229813664596,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0322295200257074
+        },
+        {
+          "dev_action_accuracy": 0.6133540372670807,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8822642451240903
+        },
+        {
+          "dev_action_accuracy": 0.656832298136646,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7358658086685907
+        },
+        {
+          "dev_action_accuracy": 0.6785714285714286,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6434505525089446
+        },
+        {
+          "dev_action_accuracy": 0.718944099378882,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5484490167526972
+        },
+        {
+          "dev_action_accuracy": 0.6847826086956522,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.485033461025783
+        },
+        {
+          "dev_action_accuracy": 0.7096273291925466,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4609138610817137
+        },
+        {
+          "dev_action_accuracy": 0.6599378881987578,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4524019984971909
+        },
+        {
+          "dev_action_accuracy": 0.7127329192546584,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3875975197269803
+        },
+        {
+          "dev_action_accuracy": 0.6754658385093167,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.35990467241832186
+        },
+        {
+          "dev_action_accuracy": 0.6785714285714286,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.3052495207105364
+        },
+        {
+          "dev_action_accuracy": 0.6677018633540373,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.26230684987136293
+        },
+        {
+          "dev_action_accuracy": 0.6583850931677019,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.2594397302184786
+        },
+        {
+          "dev_action_accuracy": 0.687888198757764,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.24017211440063657
+        }
+      ],
+      "method": "role_clones_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 0,
+          "collision_or_wall_budget": 35
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 10.90625,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.453125,
+        "supervised_action_accuracy": 0.687888198757764,
+        "trace_examples": [
+          {
+            "actions": "UUUR",
+            "final": [
+              2,
+              6
+            ],
+            "goal": [
+              2,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DDDDD",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              4,
+              3
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              2
+            ],
+            "goal": [
+              6,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "UUUUUL",
+            "final": [
+              0,
+              3
+            ],
+            "goal": [
+              0,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.41117478510028654
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          35,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": false,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.220515900000464,
+      "seed": 105,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_no_path",
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 644,
+        "dev_worlds": 64,
+        "train_step_examples": 1994,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.0533009499444557,
+        "backbone_grad_norm": 1.1061490884036207,
+        "cross_qkv_grad_norm": 0.0,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.38198757763975155,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.371779651868911
+        },
+        {
+          "dev_action_accuracy": 0.4860248447204969,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.2151648487363542
+        },
+        {
+          "dev_action_accuracy": 0.5263975155279503,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1588654688426427
+        },
+        {
+          "dev_action_accuracy": 0.5263975155279503,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.068516024521419
+        },
+        {
+          "dev_action_accuracy": 0.515527950310559,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0144176000640506
+        },
+        {
+          "dev_action_accuracy": 0.5574534161490683,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9714493496077401
+        },
+        {
+          "dev_action_accuracy": 0.5263975155279503,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.9404256201925731
+        },
+        {
+          "dev_action_accuracy": 0.5636645962732919,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8992170010294233
+        },
+        {
+          "dev_action_accuracy": 0.5481366459627329,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8779116301309495
+        },
+        {
+          "dev_action_accuracy": 0.5559006211180124,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8534217164629981
+        },
+        {
+          "dev_action_accuracy": 0.5357142857142857,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8288173420088631
+        },
+        {
+          "dev_action_accuracy": 0.5248447204968945,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8130527791522798
+        },
+        {
+          "dev_action_accuracy": 0.5046583850931677,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7745902964047023
+        },
+        {
+          "dev_action_accuracy": 0.5403726708074534,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7381470231782823
+        },
+        {
+          "dev_action_accuracy": 0.5263975155279503,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7210257166907901
+        },
+        {
+          "dev_action_accuracy": 0.5372670807453416,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.694132061231704
+        }
+      ],
+      "method": "private_view_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 5,
+          "collision_or_wall_budget": 53
+        },
+        "inject_norm_ratio": 0.0,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 13.390625,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.09375,
+        "supervised_action_accuracy": 0.5372670807453416,
+        "trace_examples": [
+          {
+            "actions": "UUUULLLLLLLLLL",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              2,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DDDDD",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDLLLLLLLLLLLL",
+            "final": [
+              6,
+              1
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              5,
+              6
+            ],
+            "goal": [
+              6,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "LLLLLLLLLLLLLL",
+            "final": [
+              5,
+              4
+            ],
+            "goal": [
+              0,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4130688448074679
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          58,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.593289399985224,
+      "seed": 105,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.083639245480299,
+            "planner": 0.7876884043216705,
+            "reader": 0.1286724302917719
+          },
+          "attention_entropy": 0.8055030405521393,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 63
+          },
+          "inject_norm_ratio": 0.6766324639320374,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.015625,
+          "supervised_action_accuracy": 0.5760869565217391,
+          "trace_examples": [
+            {
+              "actions": "RDRLRUULLLLLLL",
+              "final": [
+                4,
+                4
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UULLLLLLLLLLLL",
+              "final": [
+                0,
+                0
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDRRRRDRRRDDRD",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                5,
+                6
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.32995495495495497
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.7036208808422089,
+          "failure_counts": {
+            "budget_exhausted": 10,
+            "collision_or_wall_budget": 50
+          },
+          "inject_norm_ratio": 0.6223567128181458,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.46875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.0625,
+          "supervised_action_accuracy": 0.422360248447205,
+          "trace_examples": [
+            {
+              "actions": "RUUDUDUDUDLULD",
+              "final": [
+                4,
+                4
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DLLLLLLLLLLLLL",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLUUDRRRDURU",
+              "final": [
+                2,
+                2
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UULLUUUUULLULL",
+              "final": [
+                4,
+                0
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "UURLLRLLRLLURU",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4814385150812065
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 3,
+            "collision_or_wall_budget": 58
+          },
+          "inject_norm_ratio": 0.0,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.703125,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.046875,
+          "supervised_action_accuracy": 0.43788819875776397,
+          "trace_examples": [
+            {
+              "actions": "UULLLLLURRDURR",
+              "final": [
+                2,
+                0
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLUUULULLLLL",
+              "final": [
+                0,
+                0
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UULLLUUUUULULL",
+              "final": [
+                4,
+                0
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.3922462941847206
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.12310169264674187,
+            "planner": 0.3436329886317253,
+            "reader": 0.5332653224468231
+          },
+          "attention_entropy": 0.8317767381668091,
+          "failure_counts": {
+            "budget_exhausted": 4,
+            "collision_or_wall_budget": 51
+          },
+          "inject_norm_ratio": 0.6083307862281799,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.015625,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.140625,
+          "supervised_action_accuracy": 0.6009316770186336,
+          "trace_examples": [
+            {
+              "actions": "RUUU",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DDLLLRDRLRLRLR",
+              "final": [
+                4,
+                5
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUUULLURURLURD",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                2
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "UULUURLRLRLU",
+              "final": [
+                0,
+                3
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.41656662665066024
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_cross_causal_mean",
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 644,
+        "dev_worlds": 64,
+        "train_step_examples": 1994,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.8491049081614273,
+        "backbone_grad_norm": 1.239595014877977,
+        "cross_qkv_grad_norm": 0.4322693323631002,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.30434782608695654,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.381572922070821
+        },
+        {
+          "dev_action_accuracy": 0.4301242236024845,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.237442243666876
+        },
+        {
+          "dev_action_accuracy": 0.48757763975155277,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.1592297383717127
+        },
+        {
+          "dev_action_accuracy": 0.546583850931677,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 1.0017592566353934
+        },
+        {
+          "dev_action_accuracy": 0.5838509316770186,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.8852895186060951
+        },
+        {
+          "dev_action_accuracy": 0.6319875776397516,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7738742459388006
+        },
+        {
+          "dev_action_accuracy": 0.6708074534161491,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.7278477081230709
+        },
+        {
+          "dev_action_accuracy": 0.672360248447205,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6577449795745668
+        },
+        {
+          "dev_action_accuracy": 0.6630434782608695,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.603403722956067
+        },
+        {
+          "dev_action_accuracy": 0.656832298136646,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.6087905012425923
+        },
+        {
+          "dev_action_accuracy": 0.7003105590062112,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5623500460670108
+        },
+        {
+          "dev_action_accuracy": 0.687888198757764,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.5137218648479098
+        },
+        {
+          "dev_action_accuracy": 0.6909937888198758,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4736384962286268
+        },
+        {
+          "dev_action_accuracy": 0.6925465838509317,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.4461157932167962
+        },
+        {
+          "dev_action_accuracy": 0.717391304347826,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.42299551765124005
+        },
+        {
+          "dev_action_accuracy": 0.6972049689440993,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.0,
+          "train_loss": 0.38781959669930594
+        }
+      ],
+      "method": "private_view_cross_causal_mean",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.0742552038282156,
+          "planner": 0.7975841760635376,
+          "reader": 0.12816060613840818
+        },
+        "attention_entropy": 0.7990523278713226,
+        "failure_counts": {
+          "budget_exhausted": 0,
+          "collision_or_wall_budget": 39
+        },
+        "inject_norm_ratio": 0.5889350473880768,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 10.984375,
+        "qa_answer_entropy": 0.0,
+        "qa_irrelevant_rate": 0.0,
+        "qa_no_rate": 0.0,
+        "qa_yes_rate": 0.0,
+        "rollout_success_rate": 0.390625,
+        "supervised_action_accuracy": 0.6972049689440993,
+        "trace_examples": [
+          {
+            "actions": "RUUU",
+            "final": [
+              2,
+              6
+            ],
+            "goal": [
+              2,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DDDDD",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUULLUUL",
+            "final": [
+              2,
+              0
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              2
+            ],
+            "goal": [
+              6,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "UULUURURRLLURL",
+            "final": [
+              0,
+              4
+            ],
+            "goal": [
+              0,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4438122332859175
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.6220597624778748,
+            "attention_mass": [
+              [
+                0.0,
+                0.49239498376846313,
+                0.46050503849983215,
+                0.04709998145699501
+              ],
+              [
+                0.2585811913013458,
+                0.0,
+                0.20339763164520264,
+                0.5380212664604187
+              ],
+              [
+                0.21381402015686035,
+                0.18765400350093842,
+                0.0,
+                0.5985320806503296
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.7414119839668274,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.785181999206543,
+            "attention_mass": [
+              [
+                0.0,
+                0.2780941128730774,
+                0.27553313970565796,
+                0.4463728070259094
+              ],
+              [
+                0.3024856746196747,
+                0.0,
+                0.39755308628082275,
+                0.2999613285064697
+              ],
+              [
+                0.4788016378879547,
+                0.17494027316570282,
+                0.0,
+                0.34625810384750366
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.5033014416694641,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          60,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.0,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 250318,
+      "runtime_seconds": 6.754074800002854,
+      "seed": 105,
+      "trainable_param_count": 250318
+    },
+    {
+      "ablations": {
+        "action_answer_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.3029094785451889,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 60
+          },
+          "inject_norm_ratio": 0.2523674815893173,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.546875,
+          "qa_answer_entropy": 0.3029094785451889,
+          "qa_irrelevant_rate": 0.001380862930091098,
+          "qa_no_rate": 0.5161516964435577,
+          "qa_yes_rate": 0.481520339846611,
+          "rollout_success_rate": 0.0625,
+          "supervised_action_accuracy": 0.34782608695652173,
+          "trace_examples": [
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UDUDDDDDDUDUDD",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "RRRRRRRRRRRURR",
+              "final": [
+                5,
+                6
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DULLUDLLLLLDDD",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.3091118800461361
+        },
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.2874884605407715,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 57
+          },
+          "inject_norm_ratio": 0.2589117959141731,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.46875,
+          "qa_answer_entropy": 0.2874884605407715,
+          "qa_irrelevant_rate": 0.0018724510446190834,
+          "qa_no_rate": 0.5001459717750549,
+          "qa_yes_rate": 0.4968070089817047,
+          "rollout_success_rate": 0.09375,
+          "supervised_action_accuracy": 0.5683229813664596,
+          "trace_examples": [
+            {
+              "actions": "RUUU",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULLLDDDDDDDDDD",
+              "final": [
+                3,
+                3
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDRRRLLLLLLLLL",
+              "final": [
+                6,
+                1
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                5,
+                6
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LLLLLLLLLLLLLL",
+              "final": [
+                5,
+                4
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.39327146171693733
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 55
+          },
+          "inject_norm_ratio": 0.036871589720249176,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 13.0,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.140625,
+          "supervised_action_accuracy": 0.5248447204968945,
+          "trace_examples": [
+            {
+              "actions": "UUULLLLLLLLLLL",
+              "final": [
+                2,
+                4
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DDDDLLDLLLLLLL",
+              "final": [
+                6,
+                1
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLUUULULLLLL",
+              "final": [
+                0,
+                0
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                5,
+                6
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LDRUUUUULLLULL",
+              "final": [
+                0,
+                0
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.43990384615384615
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 54
+          },
+          "inject_norm_ratio": 0.0,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 12.921875,
+          "qa_answer_entropy": 0.0,
+          "qa_irrelevant_rate": 0.0,
+          "qa_no_rate": 0.0,
+          "qa_yes_rate": 0.0,
+          "rollout_success_rate": 0.15625,
+          "supervised_action_accuracy": 0.5295031055900621,
+          "trace_examples": [
+            {
+              "actions": "UUULLLLLLLLLLL",
+              "final": [
+                2,
+                4
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DDDDLLDLLLLLLL",
+              "final": [
+                6,
+                1
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLUUULULLLLL",
+              "final": [
+                0,
+                0
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                5,
+                6
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "UULULLLLLLLLLL",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.44135429262394194
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3333333432674408,
+            "planner": 0.3333333432674408,
+            "reader": 0.3333333432674408
+          },
+          "attention_entropy": 0.2780161648988724,
+          "failure_counts": {
+            "budget_exhausted": 6,
+            "collision_or_wall_budget": 47
+          },
+          "inject_norm_ratio": 0.3066151887178421,
+          "lora_delta_norm_ratio": 0.0,
+          "lora_gate_entropy": 0.0,
+          "mean_actions": 12.703125,
+          "qa_answer_entropy": 0.2780161648988724,
+          "qa_irrelevant_rate": 0.0018016950343735516,
+          "qa_no_rate": 0.557263970375061,
+          "qa_yes_rate": 0.4400244951248169,
+          "rollout_success_rate": 0.171875,
+          "supervised_action_accuracy": 0.6009316770186336,
+          "trace_examples": [
+            {
+              "actions": "UULLRLRRUR",
+              "final": [
+                2,
+                6
+              ],
+              "goal": [
+                2,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DDDDLLDRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULLUURRURLRDD",
+              "final": [
+                3,
+                4
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "ULLLLLLLLLLLLL",
+              "final": [
+                5,
+                2
+              ],
+              "goal": [
+                6,
+                0
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "UULULLLLLLLLLL",
+              "final": [
+                2,
+                3
+              ],
+              "goal": [
+                0,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.48954489544895446
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "qa_hard_bias",
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "name": "private_view_qa_hard_aux_bias",
+        "private_view": true,
+        "qa_aux_weight": 0.35,
+        "qa_temperature": 0.75,
+        "query_mode": "subtask",
+        "read_topk": 0,
+        "role_dropout": 0.0,
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "slot_count": 0,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 644,
+        "dev_worlds": 64,
+        "train_step_examples": 1994,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.6496553687257367,
+        "backbone_grad_norm": 4.759577172784243,
+        "cross_qkv_grad_norm": 4.484082229211096,
+        "lora_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.2841614906832298,
+          "epoch": 1.0,
+          "qa_aux_loss": 0.7453269021851676,
+          "train_loss": 1.6713170040221441
+        },
+        {
+          "dev_action_accuracy": 0.41770186335403725,
+          "epoch": 2.0,
+          "qa_aux_loss": 0.5980470208894639,
+          "train_loss": 1.4671998648416429
+        },
+        {
+          "dev_action_accuracy": 0.4611801242236025,
+          "epoch": 3.0,
+          "qa_aux_loss": 0.595039046946026,
+          "train_loss": 1.3963055837722051
+        },
+        {
+          "dev_action_accuracy": 0.5046583850931677,
+          "epoch": 4.0,
+          "qa_aux_loss": 0.5831350400334313,
+          "train_loss": 1.3178364152000064
+        },
+        {
+          "dev_action_accuracy": 0.5201863354037267,
+          "epoch": 5.0,
+          "qa_aux_loss": 0.573762195450919,
+          "train_loss": 1.233320497331165
+        },
+        {
+          "dev_action_accuracy": 0.5543478260869565,
+          "epoch": 6.0,
+          "qa_aux_loss": 0.543491318112328,
+          "train_loss": 1.1794356334777105
+        },
+        {
+          "dev_action_accuracy": 0.5543478260869565,
+          "epoch": 7.0,
+          "qa_aux_loss": 0.5189874981130872,
+          "train_loss": 1.128639768986475
+        },
+        {
+          "dev_action_accuracy": 0.5434782608695652,
+          "epoch": 8.0,
+          "qa_aux_loss": 0.49397559818767367,
+          "train_loss": 1.0866698679469882
+        },
+        {
+          "dev_action_accuracy": 0.5512422360248447,
+          "epoch": 9.0,
+          "qa_aux_loss": 0.47168944705100285,
+          "train_loss": 1.0494601130485535
+        },
+        {
+          "dev_action_accuracy": 0.5590062111801242,
+          "epoch": 10.0,
+          "qa_aux_loss": 0.44347410684540156,
+          "train_loss": 1.005133330821991
+        },
+        {
+          "dev_action_accuracy": 0.5791925465838509,
+          "epoch": 11.0,
+          "qa_aux_loss": 0.41274925214903696,
+          "train_loss": 0.9504274413699195
+        },
+        {
+          "dev_action_accuracy": 0.639751552795031,
+          "epoch": 12.0,
+          "qa_aux_loss": 0.4006851925736382,
+          "train_loss": 0.8618864672524589
+        },
+        {
+          "dev_action_accuracy": 0.6350931677018633,
+          "epoch": 13.0,
+          "qa_aux_loss": 0.4018589840048835,
+          "train_loss": 0.804462750752767
+        },
+        {
+          "dev_action_accuracy": 0.6350931677018633,
+          "epoch": 14.0,
+          "qa_aux_loss": 0.39371541142463684,
+          "train_loss": 0.7522357248124623
+        },
+        {
+          "dev_action_accuracy": 0.6708074534161491,
+          "epoch": 15.0,
+          "qa_aux_loss": 0.3824226898806436,
+          "train_loss": 0.7308177550633749
+        },
+        {
+          "dev_action_accuracy": 0.6521739130434783,
+          "epoch": 16.0,
+          "qa_aux_loss": 0.39467193541072665,
+          "train_loss": 0.7071532380013239
+        }
+      ],
+      "method": "private_view_qa_hard_aux_bias",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.3333333432674408,
+          "planner": 0.3333333432674408,
+          "reader": 0.3333333432674408
+        },
+        "attention_entropy": 0.3298504501581192,
+        "failure_counts": {
+          "budget_exhausted": 4,
+          "collision_or_wall_budget": 42
+        },
+        "inject_norm_ratio": 0.29146043956279755,
+        "lora_delta_norm_ratio": 0.0,
+        "lora_gate_entropy": 0.0,
+        "mean_actions": 12.171875,
+        "qa_answer_entropy": 0.3298504501581192,
+        "qa_irrelevant_rate": 0.0018379102111794055,
+        "qa_no_rate": 0.4582403302192688,
+        "qa_yes_rate": 0.538925439119339,
+        "rollout_success_rate": 0.28125,
+        "supervised_action_accuracy": 0.6521739130434783,
+        "trace_examples": [
+          {
+            "actions": "UUULLLLLLLLLLL",
+            "final": [
+              2,
+              4
+            ],
+            "goal": [
+              2,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DDDDD",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              4,
+              3
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "ULLLLLLLLLLLLL",
+            "final": [
+              5,
+              2
+            ],
+            "goal": [
+              6,
+              0
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "UULUURLLLLLURL",
+            "final": [
+              0,
+              0
+            ],
+            "goal": [
+              0,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.503209242618742
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.307872474193573,
+            "attention_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.3333333432674408,
+                0.3333333432674408,
+                0.3333333432674408,
+                0.0
+              ]
+            ],
+            "inject_norm_ratio": 0.23128309845924377,
+            "layer": 1,
+            "qa_answer_entropy": 0.307872474193573,
+            "qa_irrelevant_rate": 0.0018037098925560713,
+            "qa_no_rate": 0.47943246364593506,
+            "qa_yes_rate": 0.5179244875907898
+          },
+          {
+            "attention_entropy": 0.2979464828968048,
+            "attention_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.3333333432674408,
+                0.3333333432674408,
+                0.3333333432674408,
+                0.0
+              ]
+            ],
+            "inject_norm_ratio": 0.27345186471939087,
+            "layer": 2,
+            "qa_answer_entropy": 0.2979464828968048,
+            "qa_irrelevant_rate": 0.0009580159676261246,
+            "qa_no_rate": 0.5528709292411804,
+            "qa_yes_rate": 0.44511619210243225
+          }
+        ],
+        "logits_shape": [
+          60,
+          4
+        ],
+        "lora_alpha": 1.0,
+        "lora_basis_count": 0,
+        "lora_diagnostics": [],
+        "lora_gate_mode": "softmax",
+        "lora_rank": 0,
+        "private_view": true,
+        "qa_aux_weight": 0.35,
+        "qa_temperature": 0.75,
+        "read_topk": 0,
+        "role_count": 4,
+        "role_dropout": 0.0,
+        "slot_count": 0
+      },
+      "param_count": 250318,
+      "runtime_seconds": 9.9258894000086,
+      "seed": 105,
+      "trainable_param_count": 250318
+    }
+  ],
+  "seeds": [
+    104,
+    105
+  ],
+  "still_not_tried_after_stage11b": [
+    "A pretrained causal decoder checkpoint.",
+    "Full token-level cross-role attention instead of role summaries.",
+    "Learned or external subtask decomposition beyond fixed role/subtask tokens.",
+    "Learned residual gate schedules or initialized near-zero gates.",
+    "Retrained mechanism controls for every variant.",
+    "Actor-only source routing or fixed sparse role-routing graphs.",
+    "Stateful multi-turn latent Q/A with learned query selection rather than fixed action-conditioned questions.",
+    "More role-count schedules beyond four roles and Actor/Critic two-role.",
+    "Larger model/data/epoch scaling and difficulty-sliced validation.",
+    "Held-out final evaluation."
+  ],
+  "tried_before_stage11b": [
+    "Single Actor baseline with one Actor stream and no cross-agent path.",
+    "Role Clones, No Latent Cross-Agent Path with Planner/Reader/Critic/Actor streams.",
+    "Capacity Control, Self Read with the cross block restricted to self-state reads.",
+    "Base Proposed Cross-Agent Latent Attention with middle-plus-late insertion, last-token summaries, and subtask-only Q.",
+    "Shared-Query Control replacing role/subtask-specific Q with a learned shared query.",
+    "Eval-time ablations on the base proposed model: remove path, role K/V shuffle, cross-task K/V shuffle, Actor peer-read mask.",
+    "Stage 11B layer, query, summary, and role-count variants: late-only, every-layer, subtask+state Q, causal-mean summaries, and Actor/Critic two-role.",
+    "Stage 11C longer retest of the causal-mean summary variant against selected controls.",
+    "Stage 11D complementary-specialization variants: slot self-read, slot bottlenecks, sparse top-k slot reads, and source-role dropout.",
+    "Stage 11E transverse-linearity diagnostics: role-gated shared-basis LoRA, fixed-role hard LoRA, no-path/self-read controls, and LoRA plus cross-agent causal-mean/slot reads."
+  ]
+}

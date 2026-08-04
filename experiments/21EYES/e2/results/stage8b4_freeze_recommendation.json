@@ -1,0 +1,66 @@
+{
+  "decision": "STAGE8B4_TOP3_WIN_CLEANQKV_NOT_COMPETITIVE",
+  "freeze_conditions": {
+    "controls_pass": true,
+    "evidence_controls_degrade": true,
+    "frozen_comparator_lower": true,
+    "reaches_N64_accuracy_ge_085": true
+  },
+  "no_10x_attention_capacity_claim": true,
+  "recommend_freeze_for_stage8c": true,
+  "selected_candidate": {
+    "accuracy_by_N": {
+      "128": 0.8333333333333334,
+      "16": 1.0,
+      "256": 0.8333333333333334,
+      "32": 1.0,
+      "64": 1.0,
+      "8": 1.0
+    },
+    "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+    "architecture_parameters": {
+      "attention_routing": "dense_all_view_attention",
+      "avenues": 2,
+      "candidate_query": "candidate_task_query",
+      "chunking": "semantic_key",
+      "config_id": "9737cdc966c78acf",
+      "coord_hops": 1,
+      "coordinator": "explicit_view_objective_assignment",
+      "curriculum": "mixed_n",
+      "dropout": 0.05,
+      "epochs": 4,
+      "frozen": false,
+      "hidden_dim": 32,
+      "latent_views": 18,
+      "lr": 0.05,
+      "max_train_examples": 128,
+      "memory_compression": "slot_attention_compression",
+      "model_kind": "evidence_feature_latent",
+      "name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "regularizers": [
+        "entropy_regularization_on_routing"
+      ],
+      "roles": 9,
+      "top_k_views": 4,
+      "training_loss": "multi_positive_cross_entropy",
+      "vector_dim": 128,
+      "view_sharing": "shared_encoder_role_avenue_embeddings",
+      "weight_decay": 0.0001
+    },
+    "candidate_evidence_mismatch_degradation": 0.8111111111111111,
+    "capacity_C": 64,
+    "config_id": "9737cdc966c78acf",
+    "controls_pass": true,
+    "cross_task_evidence_shuffle_degradation": 0.8159722222222222,
+    "dev_template_accuracy": 0.9444444444444444,
+    "freeze_scope": "candidate_for_stage8c_only_stage8c_not_run",
+    "frozen_comparator_gap": 0.8159722222222222,
+    "hard_disqualifiers": [],
+    "held_out_template_dev_accuracy": 0.9444444444444444,
+    "hidden_state_similarity": 0.005169619548018851,
+    "model_kind": "evidence_feature_latent",
+    "ready_for_stage8c_freeze": true
+  },
+  "stage": "8B.4",
+  "stage8c_not_run": true
+}

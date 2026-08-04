@@ -1,0 +1,1793 @@
+{
+  "baselines": {
+    "n_values": [
+      8,
+      16,
+      32
+    ],
+    "required_replays": [
+      {
+        "accuracy_by_N": {
+          "16": 1.0,
+          "32": 0.8125,
+          "8": 1.0
+        },
+        "architecture_family": "Stage 8B.4 best candidate replay",
+        "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+        "capacity_C": 16,
+        "config_id": "a842c81158bc2d86",
+        "controls_pass": true,
+        "hard_disqualifiers": [],
+        "held_out_template_dev_accuracy": 0.9375,
+        "mechanisms": [
+          "explicit_views",
+          "memory_slots"
+        ],
+        "selection_score": 0.6362738063950181
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.9375,
+          "32": 0.875,
+          "8": 1.0
+        },
+        "architecture_family": "Clean-QKV Activation Cache v2",
+        "architecture_name": "e2_d_cleanqkv_v1_replay",
+        "capacity_C": 32,
+        "config_id": "239bd459e396fbe8",
+        "controls_pass": true,
+        "hard_disqualifiers": [],
+        "held_out_template_dev_accuracy": 0.9375,
+        "mechanisms": [
+          "activation_cache",
+          "memory_gate",
+          "memory_dropout"
+        ],
+        "selection_score": 0.7559920361912028
+      }
+    ],
+    "round": "round1",
+    "rows": [
+      {
+        "accuracy_by_N": {
+          "16": 0.125,
+          "32": 0.1875,
+          "8": 0.0
+        },
+        "architecture_name": "e2_round1_random_candidate",
+        "baseline": "random candidate",
+        "held_out_template_dev_accuracy": 0.10416666666666667,
+        "model_kind": "random_candidate",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.0625,
+          "32": 0.0,
+          "8": 0.1875
+        },
+        "architecture_name": "e2_round1_candidate_only",
+        "baseline": "candidate-only",
+        "held_out_template_dev_accuracy": 0.08333333333333333,
+        "model_kind": "candidate_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.0,
+          "32": 0.125,
+          "8": 0.1875
+        },
+        "architecture_name": "e2_round1_query_only",
+        "baseline": "query-only",
+        "held_out_template_dev_accuracy": 0.10416666666666667,
+        "model_kind": "query_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.0,
+          "32": 0.25,
+          "8": 0.1875
+        },
+        "architecture_name": "e2_round1_evidence_only",
+        "baseline": "evidence-only",
+        "held_out_template_dev_accuracy": 0.14583333333333334,
+        "model_kind": "evidence_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.4375,
+          "32": 0.1875,
+          "8": 0.25
+        },
+        "architecture_name": "e2_round1_retrieval_topk",
+        "baseline": "retrieval/top-k",
+        "held_out_template_dev_accuracy": 0.2916666666666667,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.3125,
+          "32": 0.3125,
+          "8": 0.25
+        },
+        "architecture_name": "e2_round1_legacy_hashed_feature",
+        "baseline": "legacy hashed feature",
+        "held_out_template_dev_accuracy": 0.2916666666666667,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.3125,
+          "32": 0.375,
+          "8": 0.1875
+        },
+        "architecture_name": "e2_round1_raw_latent_comparator",
+        "baseline": "raw latent comparator",
+        "held_out_template_dev_accuracy": 0.2916666666666667,
+        "model_kind": "raw_latent_selector",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "16": 1.0,
+          "32": 0.8125,
+          "8": 1.0
+        },
+        "architecture_name": "e2_round1_true_monolithic_transformer",
+        "baseline": "true monolithic transformer",
+        "held_out_template_dev_accuracy": 0.9375,
+        "model_kind": "monolithic_transformer",
+        "parameter_count": 12436
+      }
+    ],
+    "seeds": [
+      0
+    ]
+  },
+  "evaluated_variants": 80,
+  "family_counts": {
+    "A": 1,
+    "B": 8,
+    "C": 8,
+    "D": 8,
+    "E": 8,
+    "F": 8,
+    "G": 8,
+    "H": 8,
+    "I": 8,
+    "J": 15
+  },
+  "killed_variants": [],
+  "n_schedule": [
+    8,
+    16,
+    32
+  ],
+  "required_variants": 80,
+  "round": 1,
+  "screen": "wide_screen",
+  "seeds": [
+    0
+  ],
+  "survivor_count": 80,
+  "survivors": [
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_00",
+      "capacity_C": 32,
+      "config_id": "5114c2e4e870f881",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "learned_memory_slots"
+      ],
+      "selection_score": 0.8204113287080403
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_05",
+      "capacity_C": 32,
+      "config_id": "a89fa043f42f4129",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "typed_memory_slots"
+      ],
+      "selection_score": 0.8204113287080403
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_00",
+      "capacity_C": 32,
+      "config_id": "4853bcc4c08bd387",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8177057010024127
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_04",
+      "capacity_C": 32,
+      "config_id": "0d4fa369615ad5fe",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8177057010024127
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_01",
+      "capacity_C": 32,
+      "config_id": "9fb1f0c917af867b",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "typed_memory_slots"
+      ],
+      "selection_score": 0.8136501188486741
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_06",
+      "capacity_C": 32,
+      "config_id": "65a40574158638de",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "learned_memory_slots"
+      ],
+      "selection_score": 0.8136501188486741
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_01",
+      "capacity_C": 32,
+      "config_id": "28c7614fb748f12b",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8113066617808076
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_05",
+      "capacity_C": 32,
+      "config_id": "f141f6e1769263a5",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8113066617808076
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_00",
+      "capacity_C": 32,
+      "config_id": "7993fc10bbeaff44",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "entity_matching"
+      ],
+      "selection_score": 0.8083790085750581
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_02",
+      "capacity_C": 32,
+      "config_id": "f5896d0d9be36fbb",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "learned_memory_slots"
+      ],
+      "selection_score": 0.8083790085750581
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_07",
+      "capacity_C": 32,
+      "config_id": "b2632b85a3c9c8da",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "typed_memory_slots"
+      ],
+      "selection_score": 0.8083790085750581
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_02",
+      "capacity_C": 32,
+      "config_id": "6abaf9e02cc0da33",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8063122096332591
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_06",
+      "capacity_C": 32,
+      "config_id": "b78c52b3f647e193",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8063122096332591
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_03",
+      "capacity_C": 32,
+      "config_id": "75e7434f23d6ecba",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "typed_memory_slots"
+      ],
+      "selection_score": 0.8046420776165503
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_03",
+      "capacity_C": 32,
+      "config_id": "c9bb2bfcf1491901",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8027935121033885
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_07",
+      "capacity_C": 32,
+      "config_id": "2e9ad14d23d457e0",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.8027935121033885
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_06",
+      "capacity_C": 32,
+      "config_id": "c96c6c9aa8f95206",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "negative_evidence"
+      ],
+      "selection_score": 0.8009067390353821
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_04",
+      "capacity_C": 32,
+      "config_id": "6216b483875da61d",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "learned_memory_slots"
+      ],
+      "selection_score": 0.8009067390353821
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_03",
+      "capacity_C": 32,
+      "config_id": "6f570737cdeb368d",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "contradiction_detection"
+      ],
+      "selection_score": 0.7981586979505477
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_13",
+      "capacity_C": 16,
+      "config_id": "512cae06982f4c44",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade",
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "t_realized"
+      ],
+      "selection_score": 0.7690768573009614
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_06",
+      "capacity_C": 32,
+      "config_id": "403b8d59e84b26e2",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "explicit_views",
+        "activation_cache"
+      ],
+      "selection_score": 0.7674030457353405
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_03",
+      "capacity_C": 16,
+      "config_id": "502f436c9c331c2c",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade",
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "t_realized"
+      ],
+      "selection_score": 0.7664940231714661
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_04",
+      "capacity_C": 32,
+      "config_id": "5b71952ba5e43c88",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7573809250800917
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_v1_replay",
+      "capacity_C": 32,
+      "config_id": "239bd459e396fbe8",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7559920361912028
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_01",
+      "capacity_C": 32,
+      "config_id": "1d579184d5f5abfa",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "explicit_views",
+        "wda"
+      ],
+      "selection_score": 0.7559331979294096
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_09",
+      "capacity_C": 32,
+      "config_id": "41155b89436ca3ea",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "typed_memory_slots",
+        "hierarchical"
+      ],
+      "selection_score": 0.7482462656826425
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_05",
+      "capacity_C": 32,
+      "config_id": "2677996871e75c09",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "support_evidence"
+      ],
+      "selection_score": 0.7473504109498835
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_05",
+      "capacity_C": 32,
+      "config_id": "caf30ad813504500",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "explicit_views",
+        "support_contradiction"
+      ],
+      "selection_score": 0.7473504109498835
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_04",
+      "capacity_C": 32,
+      "config_id": "cc244ce0595013e9",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "memory_slots",
+        "dat"
+      ],
+      "selection_score": 0.7455018454367217
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_14",
+      "capacity_C": 32,
+      "config_id": "0fcbc2981590f229",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "memory_slots",
+        "dat"
+      ],
+      "selection_score": 0.74194305524726
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_03",
+      "capacity_C": 32,
+      "config_id": "fcf704116f07e293",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.740867031283881
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.875,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_07",
+      "capacity_C": 32,
+      "config_id": "7b09a473791f755f",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9583333333333334,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.740867031283881
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_02",
+      "capacity_C": 16,
+      "config_id": "4b75505ab39bd8fb",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade",
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "wda"
+      ],
+      "selection_score": 0.7399567949999092
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_12",
+      "capacity_C": 16,
+      "config_id": "3f393de8fcb8c573",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade",
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "wda"
+      ],
+      "selection_score": 0.7346382402495194
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_00",
+      "capacity_C": 16,
+      "config_id": "c1211447b472814e",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7307390376152947
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_04",
+      "capacity_C": 16,
+      "config_id": "246cc50f870ff11f",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7307390376152947
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_03",
+      "capacity_C": 16,
+      "config_id": "3d9b99f6c7367db1",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7287133001609082
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_01",
+      "capacity_C": 16,
+      "config_id": "74856b02ea09304b",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7281263277884656
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_05",
+      "capacity_C": 16,
+      "config_id": "e757bf7dfffefa0a",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7281263277884656
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_07",
+      "capacity_C": 16,
+      "config_id": "8419de208565842f",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7273244112720193
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_02",
+      "capacity_C": 16,
+      "config_id": "6ccb1d8c447386bb",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.726977189049797
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_02",
+      "capacity_C": 16,
+      "config_id": "6d2b6fc9d5ae6e00",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.72602421059526
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_06",
+      "capacity_C": 16,
+      "config_id": "a6e44cfbcf08bf31",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.72602421059526
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_06",
+      "capacity_C": 16,
+      "config_id": "97634fc62ef99030",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7255883001609081
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_07",
+      "capacity_C": 16,
+      "config_id": "4e00037b4750fa06",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7247870443647778
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_08",
+      "capacity_C": 16,
+      "config_id": "bfd16b8ef47da61a",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "champion",
+        "t_realized"
+      ],
+      "selection_score": 0.7247870443647778
+    },
+    {
+      "accuracy_by_N": {
+        "16": 0.9375,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_03",
+      "capacity_C": 16,
+      "config_id": "0120f74f0c43e154",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.8958333333333334,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.7233981554758889
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_07",
+      "capacity_C": 16,
+      "config_id": "1354610f04d0719f",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "champion",
+        "wda"
+      ],
+      "selection_score": 0.7194876390711554
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_03",
+      "capacity_C": 16,
+      "config_id": "2af2c3d7a968c22a",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "explicit_views"
+      ],
+      "selection_score": 0.7130459860382117
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_06",
+      "capacity_C": 16,
+      "config_id": "cab95bc16d9cf8aa",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "memory_slots"
+      ],
+      "selection_score": 0.7121534427314365
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_00",
+      "capacity_C": 16,
+      "config_id": "b0f2c4e849acdf82",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "memory_slots"
+      ],
+      "selection_score": 0.7117728606945724
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_02",
+      "capacity_C": 16,
+      "config_id": "ba623d2d8427c685",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "memory_slots"
+      ],
+      "selection_score": 0.7076395538425476
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_04",
+      "capacity_C": 16,
+      "config_id": "8df4867feaf68c0d",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9166666666666666,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "memory_slots"
+      ],
+      "selection_score": 0.7076061940279056
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_05",
+      "capacity_C": 16,
+      "config_id": "d3873eb4e4ef7549",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "explicit_views"
+      ],
+      "selection_score": 0.707257214565668
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_11",
+      "capacity_C": 16,
+      "config_id": "ad9cc39b05d043ee",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "wda"
+      ],
+      "selection_score": 0.7069876390711555
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_01",
+      "capacity_C": 16,
+      "config_id": "20d31988607f52d5",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "explicit_views"
+      ],
+      "selection_score": 0.7051738812323348
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_04",
+      "capacity_C": 16,
+      "config_id": "1ad2b46c20353c12",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "multi_hop_bridge_detection"
+      ],
+      "selection_score": 0.7033442863528357
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_00",
+      "capacity_C": 16,
+      "config_id": "5965ccd8e5999118",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.7033442863528357
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_04",
+      "capacity_C": 16,
+      "config_id": "b80743a96b5bba04",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.7033442863528357
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_07",
+      "capacity_C": 16,
+      "config_id": "7d75c6d69fafb651",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "explicit_views"
+      ],
+      "selection_score": 0.7033237638159895
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_01",
+      "capacity_C": 16,
+      "config_id": "0bb3ed8d5515a7da",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "rule_matching"
+      ],
+      "selection_score": 0.701898806395018
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_01",
+      "capacity_C": 16,
+      "config_id": "e9f71abf210e2ee5",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.701898806395018
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_05",
+      "capacity_C": 16,
+      "config_id": "939c63352b481516",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.701898806395018
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_00",
+      "capacity_C": 16,
+      "config_id": "dd93cf5fb64e9f54",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "memory_slots"
+      ],
+      "selection_score": 0.701898806395018
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_02",
+      "capacity_C": 16,
+      "config_id": "4d5f2e0344505131",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "exception_detection"
+      ],
+      "selection_score": 0.7000172259267678
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_02",
+      "capacity_C": 16,
+      "config_id": "1adb2f1fdf753acc",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.7000172259267678
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_06",
+      "capacity_C": 16,
+      "config_id": "5641785adf7454e1",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.7000172259267678
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hybrid Synthesis Variants",
+      "architecture_name": "e2_j_hybrid_synthesis_10",
+      "capacity_C": 16,
+      "config_id": "287732b88fc0e61e",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "memory_slots"
+      ],
+      "selection_score": 0.7000172259267678
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_07",
+      "capacity_C": 16,
+      "config_id": "8518ca4f103b1ed8",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "uncertainty"
+      ],
+      "selection_score": 0.6987997235915734
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_01",
+      "capacity_C": 16,
+      "config_id": "7db270bad2bd0657",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9166666666666666,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.6856577446053526
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.75,
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_activation_cache_v2_05",
+      "capacity_C": 16,
+      "config_id": "269fe34ac8183975",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "forced_closed_gate_does_not_degrade"
+      ],
+      "held_out_template_dev_accuracy": 0.9166666666666666,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.6856577446053526
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_02",
+      "capacity_C": 16,
+      "config_id": "ea7ba8b503886a87",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6613383253937875
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_05",
+      "capacity_C": 16,
+      "config_id": "b3deec68e830739c",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6613383253937875
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_01",
+      "capacity_C": 16,
+      "config_id": "0bb6340ad667e65e",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6475687590549702
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_04",
+      "capacity_C": 16,
+      "config_id": "5153125e6a984ce6",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6475687590549702
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_07",
+      "capacity_C": 16,
+      "config_id": "9fedc7ee877501bd",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6475687590549702
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_00",
+      "capacity_C": 16,
+      "config_id": "cd70f510bd6216c4",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6451272119943607
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_03",
+      "capacity_C": 16,
+      "config_id": "203ab717e5a32717",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6451272119943607
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_06",
+      "capacity_C": 16,
+      "config_id": "9572738517f2977e",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.6451272119943607
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 0.8125,
+        "8": 1.0
+      },
+      "architecture_family": "Stage 8 Champion Replay",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "capacity_C": 16,
+      "config_id": "926587a996d5acde",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.9375,
+      "mechanisms": [
+        "explicit_views",
+        "memory_slots"
+      ],
+      "selection_score": 0.6362738063950181
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+DIGIT Extrapolation E3 partial-monotone run
+Success shape: guard_only
+Experiment label: traj_ctx_only
+Device: cuda
+Results dir: W:\Intuition-Labs\experiments\DIGIT\Extrapolation\results\e3\ab_sweep\seed_123\traj_ctx_only
+Trace dir: W:\Intuition-Labs\experiments\DIGIT\Extrapolation\e3\trace_cache
+Trace label version: v5
+Evidence target version: v1
+Corpus fingerprint: 726b34ec9024ecba
+Pattern z-threshold: 0.75
+Pattern threshold mode: auto
+Trace records train/val/test: 1313/318/318
+Failure shares train/val/test: 0.106/0.079/0.053
+Train hard-mined cases: 35
+Train label distribution: {'trajectory_shape': {1: 488, 3: 141, 2: 286, 0: 398}, 'attention_pattern': {2: 174, 1: 957, 0: 182}, 'confidence': {2: 433, 1: 447, 0: 433}, 'outcome': {1: 913, 0: 261, 2: 139}}
+Train attention-pattern distribution: {'DIFFUSE': 174, 'MIXED': 957, 'FOCUSED': 182}
+Success modes: {'success_core_mode': 'guard_identity', 'success_residual_mode': 'disabled'}
+Path scale overrides: {'outcome_trajectory_context': 0.8, 'outcome_pattern_context': 0.0}
+Default path scales: {'shared_trace': 1.0, 'success_trace': 0.25, 'success_core': 1.0, 'success_residual': 1.0, 'success_bonus': 1.0, 'failure_trace': 1.0, 'ambiguity_trace': 1.0, 'cert_context': 1.0, 'outcome_context': 0.8, 'outcome_trajectory_context': 0.8, 'outcome_pattern_context': 0.0, 'success_raw': 0.5, 'failure_raw': 1.0, 'ambiguity_raw': 1.0}
+Stage 1: joint primitive training (selection: non-collapsed -> outcome_macro_f1 -> failure_recall -> confidence_macro_f1 -> trajectory_macro_f1 -> joint_acc)
+Stage1 Epoch 01/25 | train_loss=0.8920 | val_loss=0.8963 | val_outcome_acc=0.704 | val_outcome_macro_f1=0.276 | val_failure_recall=0.000 | val_confidence_macro_f1=0.179 | val_trajectory_macro_f1=0.450 | val_pattern_macro_f1=0.930 | val_joint_acc=0.182 | val_collapsed=True
+  Val audit: out_share=0.000/1.000/0.000 | conf_share=0.000/1.000/0.000 | cert_std(st/su/fa)=0.0093/0.0122/0.0180 | succ_vs_fail_corr=0.238
+  Val success guard: base_over_rate=0.000 | base_target_over=0.075 | proposal_over_rate=0.997 | success_over_rate=0.997 | success_prob_over_rate=0.000 | bonus_weight=0.324 | bonus_frac=0.092 | proposal_gain_frac=0.049 | bonus_zero_raw_frac=0.773 | guard_target_over=0.075
+  Val success parts: core_frac=0.951 | resid_frac=0.000 | base_vs_stability=0.837 | core_vs_stability=0.837 | core_vs_good=-0.072 | base_vs_support=0.517 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.912/0.066 | support=0.992/0.010 | success=0.883/0.078 | failure=-0.125/0.114
+Stage1 Epoch 02/25 | train_loss=0.5531 | val_loss=0.8323 | val_outcome_acc=0.704 | val_outcome_macro_f1=0.276 | val_failure_recall=0.000 | val_confidence_macro_f1=0.179 | val_trajectory_macro_f1=0.542 | val_pattern_macro_f1=0.927 | val_joint_acc=0.198 | val_collapsed=True
+  Val audit: out_share=0.000/1.000/0.000 | conf_share=0.000/1.000/0.000 | cert_std(st/su/fa)=0.0093/0.0122/0.0242 | succ_vs_fail_corr=0.234
+  Val success guard: base_over_rate=0.000 | base_target_over=0.075 | proposal_over_rate=0.997 | success_over_rate=0.997 | success_prob_over_rate=0.000 | bonus_weight=0.324 | bonus_frac=0.092 | proposal_gain_frac=0.049 | bonus_zero_raw_frac=0.773 | guard_target_over=0.075
+  Val success parts: core_frac=0.951 | resid_frac=0.000 | base_vs_stability=0.837 | core_vs_stability=0.837 | core_vs_good=0.278 | base_vs_support=0.517 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=-0.000
+  Val target fit: stability=0.912/0.066 | support=0.992/0.010 | success=0.883/0.078 | failure=-0.137/0.153
+Stage1 Epoch 03/25 | train_loss=0.4913 | val_loss=0.8318 | val_outcome_acc=0.704 | val_outcome_macro_f1=0.276 | val_failure_recall=0.000 | val_confidence_macro_f1=0.179 | val_trajectory_macro_f1=0.468 | val_pattern_macro_f1=0.939 | val_joint_acc=0.164 | val_collapsed=True
+  Val audit: out_share=0.000/1.000/0.000 | conf_share=0.000/1.000/0.000 | cert_std(st/su/fa)=0.0093/0.0122/0.0223 | succ_vs_fail_corr=0.323
+  Val success guard: base_over_rate=0.000 | base_target_over=0.075 | proposal_over_rate=0.997 | success_over_rate=0.997 | success_prob_over_rate=0.000 | bonus_weight=0.324 | bonus_frac=0.093 | proposal_gain_frac=0.049 | bonus_zero_raw_frac=0.774 | guard_target_over=0.075
+  Val success parts: core_frac=0.951 | resid_frac=0.000 | base_vs_stability=0.837 | core_vs_stability=0.837 | core_vs_good=0.239 | base_vs_support=0.517 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=0.000
+  Val target fit: stability=0.912/0.066 | support=0.992/0.010 | success=0.883/0.078 | failure=-0.219/0.141
+Stage1 Epoch 04/25 | train_loss=0.4713 | val_loss=0.8227 | val_outcome_acc=0.704 | val_outcome_macro_f1=0.276 | val_failure_recall=0.000 | val_confidence_macro_f1=0.179 | val_trajectory_macro_f1=0.496 | val_pattern_macro_f1=0.915 | val_joint_acc=0.186 | val_collapsed=True
+  Val audit: out_share=0.000/1.000/0.000 | conf_share=0.000/1.000/0.000 | cert_std(st/su/fa)=0.0093/0.0122/0.0251 | succ_vs_fail_corr=0.233
+  Val success guard: base_over_rate=0.000 | base_target_over=0.075 | proposal_over_rate=0.997 | success_over_rate=0.997 | success_prob_over_rate=0.000 | bonus_weight=0.324 | bonus_frac=0.093 | proposal_gain_frac=0.049 | bonus_zero_raw_frac=0.774 | guard_target_over=0.075
+  Val success parts: core_frac=0.951 | resid_frac=0.000 | base_vs_stability=0.837 | core_vs_stability=0.837 | core_vs_good=0.158 | base_vs_support=0.517 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=-0.000
+  Val target fit: stability=0.912/0.066 | support=0.992/0.010 | success=0.883/0.078 | failure=-0.130/0.159
+Stage1 Epoch 05/25 | train_loss=0.6649 | val_loss=0.5834 | val_outcome_acc=0.673 | val_outcome_macro_f1=0.606 | val_failure_recall=1.000 | val_confidence_macro_f1=0.537 | val_trajectory_macro_f1=0.506 | val_pattern_macro_f1=0.917 | val_joint_acc=0.245 | val_collapsed=False
+  Val audit: out_share=0.182/0.585/0.233 | conf_share=0.289/0.711/0.000 | cert_std(st/su/fa)=0.0090/0.0115/0.3746 | succ_vs_fail_corr=-0.813
+  Val success guard: base_over_rate=0.000 | base_target_over=0.148 | proposal_over_rate=0.000 | success_over_rate=0.000 | success_prob_over_rate=0.000 | bonus_weight=0.141 | bonus_frac=0.042 | proposal_gain_frac=0.017 | bonus_zero_raw_frac=0.599 | guard_target_over=0.148
+  Val success parts: core_frac=0.983 | resid_frac=0.000 | base_vs_stability=0.873 | core_vs_stability=0.873 | core_vs_good=0.112 | base_vs_support=0.456 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.885/0.064 | support=0.992/0.011 | success=0.873/0.074 | failure=0.816/2.372
+Stage1 Epoch 06/25 | train_loss=0.5456 | val_loss=0.5127 | val_outcome_acc=0.758 | val_outcome_macro_f1=0.701 | val_failure_recall=1.000 | val_confidence_macro_f1=0.865 | val_trajectory_macro_f1=0.443 | val_pattern_macro_f1=0.953 | val_joint_acc=0.321 | val_collapsed=False
+Stage1 Epoch 07/25 | train_loss=0.4842 | val_loss=0.4530 | val_outcome_acc=0.767 | val_outcome_macro_f1=0.705 | val_failure_recall=1.000 | val_confidence_macro_f1=0.923 | val_trajectory_macro_f1=0.554 | val_pattern_macro_f1=0.924 | val_joint_acc=0.384 | val_collapsed=False
+Stage1 Epoch 08/25 | train_loss=0.4504 | val_loss=0.4524 | val_outcome_acc=0.770 | val_outcome_macro_f1=0.717 | val_failure_recall=1.000 | val_confidence_macro_f1=0.892 | val_trajectory_macro_f1=0.557 | val_pattern_macro_f1=0.919 | val_joint_acc=0.365 | val_collapsed=False
+Stage1 Epoch 09/25 | train_loss=0.4399 | val_loss=0.4222 | val_outcome_acc=0.783 | val_outcome_macro_f1=0.730 | val_failure_recall=1.000 | val_confidence_macro_f1=0.913 | val_trajectory_macro_f1=0.574 | val_pattern_macro_f1=0.946 | val_joint_acc=0.371 | val_collapsed=False
+Stage1 Epoch 10/25 | train_loss=0.4161 | val_loss=0.3981 | val_outcome_acc=0.799 | val_outcome_macro_f1=0.739 | val_failure_recall=0.920 | val_confidence_macro_f1=0.948 | val_trajectory_macro_f1=0.548 | val_pattern_macro_f1=0.933 | val_joint_acc=0.409 | val_collapsed=False
+  Val audit: out_share=0.220/0.635/0.145 | conf_share=0.311/0.409/0.280 | cert_std(st/su/fa)=0.0104/0.0131/0.3443 | succ_vs_fail_corr=-0.804
+  Val success guard: base_over_rate=0.000 | base_target_over=0.248 | proposal_over_rate=0.000 | success_over_rate=0.000 | success_prob_over_rate=0.000 | bonus_weight=0.046 | bonus_frac=0.014 | proposal_gain_frac=0.005 | bonus_zero_raw_frac=0.501 | guard_target_over=0.248
+  Val success parts: core_frac=0.995 | resid_frac=0.000 | base_vs_stability=0.871 | core_vs_stability=0.871 | core_vs_good=0.114 | base_vs_support=0.469 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.907/0.074 | support=0.991/0.014 | success=0.884/0.084 | failure=0.815/2.180
+Stage1 Epoch 11/25 | train_loss=0.4002 | val_loss=0.4126 | val_outcome_acc=0.780 | val_outcome_macro_f1=0.710 | val_failure_recall=0.960 | val_confidence_macro_f1=0.907 | val_trajectory_macro_f1=0.636 | val_pattern_macro_f1=0.941 | val_joint_acc=0.481 | val_collapsed=False
+Stage1 Epoch 12/25 | train_loss=0.3909 | val_loss=0.3693 | val_outcome_acc=0.802 | val_outcome_macro_f1=0.747 | val_failure_recall=0.960 | val_confidence_macro_f1=0.951 | val_trajectory_macro_f1=0.667 | val_pattern_macro_f1=0.934 | val_joint_acc=0.519 | val_collapsed=False
+Stage1 Epoch 13/25 | train_loss=0.3743 | val_loss=0.3448 | val_outcome_acc=0.805 | val_outcome_macro_f1=0.753 | val_failure_recall=1.000 | val_confidence_macro_f1=0.956 | val_trajectory_macro_f1=0.693 | val_pattern_macro_f1=0.949 | val_joint_acc=0.519 | val_collapsed=False
+Stage1 Epoch 14/25 | train_loss=0.3594 | val_loss=0.3408 | val_outcome_acc=0.852 | val_outcome_macro_f1=0.809 | val_failure_recall=0.960 | val_confidence_macro_f1=0.951 | val_trajectory_macro_f1=0.678 | val_pattern_macro_f1=0.933 | val_joint_acc=0.544 | val_collapsed=False
+Stage1 Epoch 15/25 | train_loss=0.3483 | val_loss=0.3303 | val_outcome_acc=0.881 | val_outcome_macro_f1=0.825 | val_failure_recall=0.960 | val_confidence_macro_f1=0.950 | val_trajectory_macro_f1=0.680 | val_pattern_macro_f1=0.941 | val_joint_acc=0.566 | val_collapsed=False
+  Val audit: out_share=0.204/0.648/0.148 | conf_share=0.318/0.355/0.327 | cert_std(st/su/fa)=0.0107/0.0142/0.3191 | succ_vs_fail_corr=-0.794
+  Val success guard: base_over_rate=0.000 | base_target_over=0.270 | proposal_over_rate=0.000 | success_over_rate=0.000 | success_prob_over_rate=0.019 | bonus_weight=0.035 | bonus_frac=0.010 | proposal_gain_frac=0.004 | bonus_zero_raw_frac=0.483 | guard_target_over=0.270
+  Val success parts: core_frac=0.996 | resid_frac=0.000 | base_vs_stability=0.875 | core_vs_stability=0.875 | core_vs_good=0.282 | base_vs_support=0.463 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.906/0.076 | support=0.990/0.016 | success=0.883/0.091 | failure=0.815/2.020
+Stage1 Epoch 16/25 | train_loss=0.3375 | val_loss=0.3326 | val_outcome_acc=0.811 | val_outcome_macro_f1=0.756 | val_failure_recall=1.000 | val_confidence_macro_f1=0.947 | val_trajectory_macro_f1=0.720 | val_pattern_macro_f1=0.927 | val_joint_acc=0.535 | val_collapsed=False
+Stage1 Epoch 17/25 | train_loss=0.3334 | val_loss=0.3212 | val_outcome_acc=0.846 | val_outcome_macro_f1=0.782 | val_failure_recall=0.960 | val_confidence_macro_f1=0.954 | val_trajectory_macro_f1=0.704 | val_pattern_macro_f1=0.929 | val_joint_acc=0.566 | val_collapsed=False
+Stage1 Epoch 18/25 | train_loss=0.3239 | val_loss=0.3082 | val_outcome_acc=0.827 | val_outcome_macro_f1=0.765 | val_failure_recall=1.000 | val_confidence_macro_f1=0.972 | val_trajectory_macro_f1=0.713 | val_pattern_macro_f1=0.926 | val_joint_acc=0.557 | val_collapsed=False
+Stage1 Epoch 19/25 | train_loss=0.3089 | val_loss=0.2965 | val_outcome_acc=0.849 | val_outcome_macro_f1=0.790 | val_failure_recall=0.960 | val_confidence_macro_f1=0.959 | val_trajectory_macro_f1=0.723 | val_pattern_macro_f1=0.933 | val_joint_acc=0.572 | val_collapsed=False
+Stage1 Epoch 20/25 | train_loss=0.3064 | val_loss=0.3050 | val_outcome_acc=0.921 | val_outcome_macro_f1=0.878 | val_failure_recall=0.920 | val_confidence_macro_f1=0.969 | val_trajectory_macro_f1=0.739 | val_pattern_macro_f1=0.922 | val_joint_acc=0.657 | val_collapsed=False
+  Val audit: out_share=0.198/0.695/0.107 | conf_share=0.314/0.374/0.311 | cert_std(st/su/fa)=0.0112/0.0154/0.3056 | succ_vs_fail_corr=-0.782
+  Val success guard: base_over_rate=0.000 | base_target_over=0.270 | proposal_over_rate=0.000 | success_over_rate=0.000 | success_prob_over_rate=0.116 | bonus_weight=0.026 | bonus_frac=0.008 | proposal_gain_frac=0.003 | bonus_zero_raw_frac=0.492 | guard_target_over=0.270
+  Val success parts: core_frac=0.997 | resid_frac=0.000 | base_vs_stability=0.877 | core_vs_stability=0.877 | core_vs_good=0.106 | base_vs_support=0.460 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.906/0.080 | support=0.989/0.018 | success=0.882/0.099 | failure=0.818/1.935
+Stage1 Epoch 21/25 | train_loss=0.3010 | val_loss=0.3113 | val_outcome_acc=0.890 | val_outcome_macro_f1=0.836 | val_failure_recall=0.960 | val_confidence_macro_f1=0.940 | val_trajectory_macro_f1=0.707 | val_pattern_macro_f1=0.913 | val_joint_acc=0.579 | val_collapsed=False
+Stage1 Epoch 22/25 | train_loss=0.2856 | val_loss=0.3001 | val_outcome_acc=0.843 | val_outcome_macro_f1=0.785 | val_failure_recall=1.000 | val_confidence_macro_f1=0.973 | val_trajectory_macro_f1=0.691 | val_pattern_macro_f1=0.937 | val_joint_acc=0.550 | val_collapsed=False
+Stage1 Epoch 23/25 | train_loss=0.2866 | val_loss=0.2794 | val_outcome_acc=0.843 | val_outcome_macro_f1=0.781 | val_failure_recall=0.960 | val_confidence_macro_f1=0.979 | val_trajectory_macro_f1=0.743 | val_pattern_macro_f1=0.925 | val_joint_acc=0.604 | val_collapsed=False
+Stage1 Epoch 24/25 | train_loss=0.2804 | val_loss=0.2653 | val_outcome_acc=0.846 | val_outcome_macro_f1=0.782 | val_failure_recall=0.960 | val_confidence_macro_f1=0.967 | val_trajectory_macro_f1=0.750 | val_pattern_macro_f1=0.937 | val_joint_acc=0.629 | val_collapsed=False
+Stage1 Epoch 25/25 | train_loss=0.2858 | val_loss=0.2698 | val_outcome_acc=0.865 | val_outcome_macro_f1=0.804 | val_failure_recall=0.960 | val_confidence_macro_f1=0.991 | val_trajectory_macro_f1=0.714 | val_pattern_macro_f1=0.934 | val_joint_acc=0.610 | val_collapsed=False
+  Val audit: out_share=0.179/0.651/0.170 | conf_share=0.330/0.371/0.299 | cert_std(st/su/fa)=0.0120/0.0168/0.2985 | succ_vs_fail_corr=-0.777
+  Val success guard: base_over_rate=0.000 | base_target_over=0.270 | proposal_over_rate=0.000 | success_over_rate=0.000 | success_prob_over_rate=0.119 | bonus_weight=0.020 | bonus_frac=0.006 | proposal_gain_frac=0.002 | bonus_zero_raw_frac=0.501 | guard_target_over=0.270
+  Val success parts: core_frac=0.998 | resid_frac=0.000 | base_vs_stability=0.876 | core_vs_stability=0.876 | core_vs_good=0.123 | base_vs_support=0.457 | resid_vs_good=nan | resid_vs_pattern=nan | resid_vs_trace=nan | bonus_weight_vs_zero_raw=nan
+  Val target fit: stability=0.907/0.085 | support=0.989/0.020 | success=0.881/0.108 | failure=0.820/1.891
+Stage 2: generation-only training
+Stage2 Epoch 01/8 | train_gen_loss=0.3267 | val_gen_loss=0.0151
+Stage2 Epoch 02/8 | train_gen_loss=0.0110 | val_gen_loss=0.0034
+Stage2 Epoch 03/8 | train_gen_loss=0.0035 | val_gen_loss=0.0014
+Stage2 Epoch 04/8 | train_gen_loss=0.0018 | val_gen_loss=0.0009
+Stage2 Epoch 05/8 | train_gen_loss=0.0013 | val_gen_loss=0.0007
+Stage2 Epoch 06/8 | train_gen_loss=0.0010 | val_gen_loss=0.0005
+Stage2 Epoch 07/8 | train_gen_loss=0.0008 | val_gen_loss=0.0004
+Stage2 Epoch 08/8 | train_gen_loss=0.0006 | val_gen_loss=0.0003
+Test metrics: trajectory_acc=0.840, trajectory_macro_f1=0.789, pattern_acc=0.962, pattern_macro_f1=0.942, confidence_acc=0.965, confidence_macro_f1=0.966, outcome_acc=0.887, outcome_macro_f1=0.821, failure_recall=0.824, joint_acc=0.704
+Trajectory confusion: DECREASING: [87, 13, 0, 0] | STABLE: [5, 98, 10, 3] | INCREASING: [0, 4, 70, 0] | VOLATILE: [3, 10, 3, 12]
+Pattern confusion: FOCUSED: [31, 0, 0] | MIXED: [4, 234, 7] | DIFFUSE: [0, 1, 41]
+Pattern per-class: FOCUSED(p/r/f1)=0.886/1.000/0.939 | MIXED(p/r/f1)=0.996/0.955/0.975 | DIFFUSE(p/r/f1)=0.854/0.976/0.911
+Outcome confusion: SUCCESS_LIKELY: [58, 18, 0] | UNCERTAIN: [7, 210, 8] | FAILURE_LIKELY: [0, 3, 14]
+Outcome per-class: SUCCESS(p/r/f1)=0.892/0.763/0.823 | UNCERTAIN(p/r/f1)=0.909/0.933/0.921 | FAILURE(p/r/f1)=0.636/0.824/0.718
+Primitive predictions preserved through stage 2: True
+Baselines: majority_outcome=UNCERTAIN, majority_acc=0.708, majority_macro_f1=0.276, entropy_threshold_acc=0.261, entropy_threshold_macro_f1=0.242, logreg_outcome_acc=0.755, logreg_outcome_macro_f1=0.617, mlp_outcome_acc=0.881, mlp_outcome_macro_f1=0.818, mlp_converged=True, mlp_n_iter=49
+Correctness baselines: logreg_acc=0.884, logreg_auroc=0.751, mlp_acc=0.890, mlp_auroc=0.704, mlp_converged=True
+Safety metrics: unsafe_success_rate_label=0.108, unsafe_success_rate_correctness=0.031, success_precision_vs_is_correct=0.969, success_auroc=0.798, success_auprc=0.960, success_brier=0.593, success_ece_10bin=0.668
+Corpus label audit: P(correct|SUCCESS)=0.998, P(correct|UNCERTAIN)=0.900, P(correct|FAILURE)=0.420, correctness_separation=0.097, max_outcome_share_swing=0.208, label_revision_trigger=True
+Prediction audit: pred_share_SUCCESS=0.204, pred_share_UNCERTAIN=0.726, pred_share_FAILURE=0.069, pred_conf_LOW=0.289, pred_conf_MEDIUM=0.330, pred_conf_HIGH=0.381, P(correct|pred_SUCCESS)=0.969, P(correct|pred_UNCERTAIN)=0.909, P(correct|pred_FAILURE)=0.364
+Prediction guard audit: pred_SUCCESS_over_guard=0.569, pred_UNCERTAIN_over_guard=0.000, pred_FAILURE_over_guard=0.000
+Collapse audit: collapsed_model=False, all_success_mode=False, all_uncertain_mode=False, all_failure_mode=False, single_confidence_mode=False
+Evidence geometry: stability_std=0.0084, support_std=0.0054, success_guard_std=0.0120, success_core_std=0.0120, success_residual_std=0.0000, success_base_std=0.0120, success_trace_strength_std=0.0025, success_bonus_weight_std=0.0067, success_bonus_zero_raw_std=0.0000, success_bonus_std=0.0014, success_proposal_std=0.0123, success_std=0.0123, failure_std=0.2862, ambiguity_std=0.2458, success_vs_failure_corr=-0.720, success_guard_vs_success_corr=1.000, success_guard_vs_base_corr=1.000, success_guard_vs_proposal_corr=1.000, success_guard_vs_target_corr=0.883, success_guard_vs_clipped_target_corr=0.906, success_core_vs_clipped_target_corr=0.906, success_base_vs_clipped_target_corr=0.906, success_base_vs_stability_corr=0.782, success_core_vs_stability_corr=0.782, success_core_vs_good_corr=0.065, success_core_vs_pattern_corr=-0.291, success_residual_vs_good_corr=nan, success_residual_vs_pattern_corr=nan, success_residual_vs_trace_corr=nan, bonus_weight_vs_success_corr=0.704, bonus_weight_vs_zero_raw_corr=nan, proposal_vs_success_corr=1.000, ambiguity_vs_high_conf_corr=-0.939, stability_vs_agreement_corr=0.897, support_vs_support_ratio_corr=0.666
+Success guard: utilization_mean=1.003, core_utilization_mean=1.000, base_utilization_mean=1.000, proposal_utilization_mean=1.003, guard_target_mae=0.117, guard_target_bias_mean=-0.052, guard_target_over_rate=0.274, base_target_excess_mean=0.033, base_target_over_rate=0.274, guard_low_sat_rate=0.000, guard_high_sat_rate=0.000, base_over_guard_mean=0.000, base_over_guard_rate=0.000, bonus_weight_mean=0.027, bonus_weight_std=0.007, bonus_weight_zero_raw_mean=0.011, bonus_weight_zero_raw_fraction_mean=0.466, bonus_mean=0.005, bonus_zero_raw_mean=0.002, bonus_zero_raw_fraction_of_bonus_mean=0.466, bonus_evidence_fraction_of_bonus_mean=0.534, success_core_fraction_of_success_mean=0.997, success_residual_fraction_of_success_mean=0.000, bonus_fraction_of_success_mean=0.008, success_trace_strength_mean=0.019, success_trace_strength_std=0.003, success_residual_weight_mean=0.000, success_residual_weight_std=0.000, proposal_gain_mean=0.002, proposal_gain_fraction_of_success_mean=0.003, success_over_guard_mean=0.002, success_over_guard_rate=0.000, proposal_over_guard_mean=0.002, proposal_over_guard_rate=0.000, success_prob_over_guard_mean=0.016, success_prob_over_guard_rate=0.116
+Evidence target fit: stability(corr/mae/spread)=0.907/0.133/0.068 | support(corr/mae/spread)=0.989/0.278/0.018 | success(corr/mae/spread)=0.888/0.162/0.089 | failure(corr/mae/spread)=0.806/0.143/2.042 | ambiguity(corr/mae/spread)=0.594/0.177/1.440
+Monotonicity: violation_rate=0.498, all_supported_violation_rate=0.204, stability_cert_violation_rate=0.000, support_cert_violation_rate=0.000, success_guard_violation_rate=0.000, trajectory_good_violation_rate=0.721, pattern_focused_violation_rate=0.572, success_core_violation_rate=0.000, success_base_violation_rate=0.000, success_base_guard_gap_violation_rate=0.000, success_cert_violation_rate=0.000, failure_cert_violation_rate=0.245
+Path audit: zero_success_core(cert_shift/outcome_flip)=0.651/0.289, zero_success_residual(cert_shift/outcome_flip)=0.000/0.000, zero_success_base(cert_shift/outcome_flip)=0.651/0.289, zero_success_bonus(cert_shift/outcome_flip)=0.002/0.000, zero_success_trace(cert_shift/outcome_flip)=0.000/0.000, zero_success_raw(cert_shift/outcome_flip)=0.001/0.000, zero_failure_trace(cert_shift/outcome_flip)=0.185/0.129, zero_failure_raw(cert_shift/outcome_flip)=0.051/0.053, zero_ambiguity_trace(cert_shift/outcome_flip)=0.000/0.270, zero_ambiguity_raw(cert_shift/outcome_flip)=0.000/0.186, zero_shared_trace(cert_shift/outcome_flip)=0.185/0.252, zero_cert_context(cert_shift/outcome_flip)=0.030/0.066, zero_outcome_trajectory_context(cert_shift/outcome_flip)=0.000/0.274, zero_outcome_pattern_context(cert_shift/outcome_flip)=0.000/0.000, zero_outcome_context(cert_shift/outcome_flip)=0.000/0.274
+Outcome-context flips by base label: SUCCESS=1.000, UNCERTAIN=0.082, FAILURE=0.136
+Path dominance: cert_driver=zero_success_core:0.651, outcome_driver=zero_success_core:0.289, confidence_driver=certs_only_outcome:0.623, single_path_cert_driver=zero_success_core:0.651, single_path_outcome_driver=zero_success_core:0.289
+Reference metrics fingerprint mismatch: b860894951a862dd != 726b34ec9024ecba
+Acceptance: failure_recall_ok=True, outcome_macro_f1_ok=True, outcome_acc_ok=True, beats_majority=True, beats_entropy_threshold=True, trajectory_ok=True, not_collapsed=True, monotonicity_ok=False
+Ground truth: trajectory=STABLE, pattern=MIXED, confidence=MEDIUM, outcome=UNCERTAIN
+Prediction: trajectory=STABLE, pattern=MIXED, confidence=MEDIUM, outcome=UNCERTAIN
+Decoder logits shape: (1, 47, 53)
+Executor features shape: (1, 21)
+Reference text: attention pattern is mixed and the outcome remains uncertain.
+Generated text: attention pattern is mixed and the outcome remains uncertain.

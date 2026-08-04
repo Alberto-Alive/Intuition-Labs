@@ -1,0 +1,147 @@
+{
+  "acceptance": {
+    "all_pass": true,
+    "detection_auroc_at_least_e2": true,
+    "monotonicity_ok": true,
+    "nonfailure_monotonicity_ok": true,
+    "threshold_stability_ok": true
+  },
+  "beats_e2_on_failed_bars": {
+    "detection_auroc_at_least_e2": true,
+    "monotonicity": true,
+    "nonfailure_monotonicity": true,
+    "threshold_stability": true
+  },
+  "corpus": "experiments/MDGS/e2/trace_cache",
+  "e2_reference": {
+    "correctness_separation_success_minus_uncertain": 0.097,
+    "failure_incorrect_auroc": 0.774,
+    "failure_recall": 0.812,
+    "max_outcome_share_swing": 0.208,
+    "monotonicity_violation_rate": 0.443,
+    "nonfailure_monotonicity_violation_rate": 0.247,
+    "unsafe_success_rate_correctness": 0.016
+  },
+  "evidence_level": "real_cached_trace_heldout_split",
+  "gate": {
+    "correctness_separation_success_minus_uncertain": 0.12362099185483033,
+    "detection_auroc_incorrect": 0.8207175146676926,
+    "failure_recall": 0.6486486486486487,
+    "incorrect_caught_rate": 0.8648648648648649,
+    "max_outcome_share_swing": 0.025157243013381958,
+    "monotonicity_violation_rate": 0.0,
+    "nonfailure_monotonicity_violation_rate": 0.0,
+    "outcome_share": {
+      "FAILURE_LIKELY": 0.2578616440296173,
+      "SUCCESS_LIKELY": 0.5754716992378235,
+      "UNCERTAIN": 0.1666666716337204
+    },
+    "unsafe_success_rate_correctness": 0.0273224043715847
+  },
+  "gate_monotonicity_detail": {
+    "monotonicity_violation_rate": 0.0,
+    "nonfailure_monotonicity_violation_rate": 0.0,
+    "per_check_nonfailure_violation_rate": {
+      "higher_entropy": 0.0,
+      "higher_variation_ratio": 0.0,
+      "lower_agreement": 0.0,
+      "lower_attention_concentration": 0.0,
+      "lower_margin": 0.0
+    },
+    "per_check_success_violation_rate": {
+      "higher_entropy": 0.0,
+      "higher_variation_ratio": 0.0,
+      "lower_agreement": 0.0,
+      "lower_attention_concentration": 0.0,
+      "lower_margin": 0.0
+    }
+  },
+  "gate_params": {
+    "count_weight": 0.25,
+    "feature_names": [
+      "mean_step_entropy",
+      "aux_entropy",
+      "disagreement",
+      "low_margin",
+      "low_attention_concentration",
+      "low_top_prob",
+      "low_support_ratio",
+      "low_abs_margin"
+    ],
+    "t_high": 2.6610392283649893,
+    "t_low": 1.3708138016757752,
+    "weights": [
+      0.04897136333367404,
+      0.21648816525353035,
+      0.0,
+      0.749777300504595,
+      0.0,
+      0.540119027880576,
+      0.6209368720396872,
+      1.16115394801472
+    ]
+  },
+  "gate_threshold_swing_detail": {
+    "band_delta": 0.0645112713344607,
+    "max_outcome_share_swing": 0.025157243013381958,
+    "scenarios": {
+      "t_high_down": {
+        "max_outcome_share_swing": 0.006289318203926086,
+        "outcome_share": {
+          "FAILURE_LIKELY": 0.2641509473323822,
+          "SUCCESS_LIKELY": 0.5754716992378235,
+          "UNCERTAIN": 0.1603773534297943
+        }
+      },
+      "t_high_up": {
+        "max_outcome_share_swing": 0.025157243013381958,
+        "outcome_share": {
+          "FAILURE_LIKELY": 0.23270440101623535,
+          "SUCCESS_LIKELY": 0.5754716992378235,
+          "UNCERTAIN": 0.19182389974594116
+        }
+      },
+      "t_low_down": {
+        "max_outcome_share_swing": 0.006289303302764893,
+        "outcome_share": {
+          "FAILURE_LIKELY": 0.2578616440296173,
+          "SUCCESS_LIKELY": 0.5691823959350586,
+          "UNCERTAIN": 0.1729559749364853
+        }
+      },
+      "t_low_up": {
+        "max_outcome_share_swing": 0.012578621506690979,
+        "outcome_share": {
+          "FAILURE_LIKELY": 0.2578616440296173,
+          "SUCCESS_LIKELY": 0.5880503058433533,
+          "UNCERTAIN": 0.15408805012702942
+        }
+      }
+    }
+  },
+  "raw_margin_control": {
+    "correctness_separation_success_minus_uncertain": 0.05921052631578949,
+    "detection_auroc_incorrect": 0.7610849283447149,
+    "failure_recall": 0.5405405405405406,
+    "monotonicity_violation_rate": 0.0,
+    "outcome_share": {
+      "FAILURE_LIKELY": 0.23270440101623535,
+      "SUCCESS_LIKELY": 0.7169811129570007,
+      "UNCERTAIN": 0.050314463675022125
+    },
+    "unsafe_success_rate_correctness": 0.06578947368421052
+  },
+  "scope": "MDGS monotone relative/count uncertainty gate, held-out e2 test split",
+  "splits": {
+    "test": 318,
+    "train": 1313
+  },
+  "targets": {
+    "failure_recall_min": 0.7,
+    "max_outcome_share_swing_max": 0.1,
+    "monotonicity_violation_rate_max": 0.05,
+    "nonfailure_monotonicity_violation_rate_max": 0.05,
+    "separation_min": 0.1,
+    "unsafe_success_max": 0.02
+  }
+}

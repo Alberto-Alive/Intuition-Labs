@@ -1,0 +1,25 @@
+**E18 Summary**
+
+1. **Question**
+
+`e18` asked one question only: does threshold-gated certainty-modulated gradient updating improve learning on low-certainty inputs relative to the matched `e16` baseline, without slowing convergence on already-learned high-certainty inputs.
+
+2. **Method**
+
+`e18` reused the `e16` model, forward gate, live bank, and training setup, with one change only: backward modulation was to be applied only to examples whose certainty fell below the frozen threshold `0.95`. High-certainty examples above `0.95` were left completely unmodified, and low-certainty examples below `0.95` were to receive the asymmetric scaling with batch normalization only over the low-certainty subset. Before any full training run, a seed-0 safety diagnostic measured both layer-1 gradient norms and the fraction of examples per batch that actually fell below the threshold during training.
+
+3. **Result**
+
+`E18 INCONCLUSIVE — dataset design incompatibility.` The mechanism never fires during training because all training examples are seen combinations scoring above `0.95` certainty. The diagnostic confirmed `0.0` modulated fraction at every training step.
+
+4. **What This Reveals About The Backward Modulation Mechanism**
+
+The backward modulation mechanism requires low-certainty examples to appear during training. The current fully-withheld holdout design prevents this by construction.
+
+5. **What E19 Must Change**
+
+The dataset must include low-certainty training examples. Two options are available: frequency imbalance, where rare combinations score lower certainty, or partial exposure, where some unseen combinations appear rarely in training. The choice between these determines what question `e19` actually answers and must be decided before any spec is written.
+
+6. **Question For E19 Design**
+
+Which dataset change is more faithful to the original idea. The original idea says certainty comes from counting existence. A frequency imbalance tests whether modulation helps the model learn from rare existence. Partial exposure tests whether modulation helps the model extend to novel existence. The more important question to answer first is whether certainty helps the model learn from rare existence, because that keeps the existence-count interpretation intact while still producing low-certainty training examples.

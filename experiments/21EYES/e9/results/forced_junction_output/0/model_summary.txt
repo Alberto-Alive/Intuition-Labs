@@ -1,0 +1,81 @@
+MultiAvenueTransformer(
+  (impl): JunctionAvenueTransformer(
+    (token_emb): Embedding(224, 128)
+    (pos_emb): Embedding(256, 128)
+    (drop): Dropout(p=0.1, inplace=False)
+    (blocks): ModuleList(
+      (0-3): 4 x ModuleList(
+        (0-3): 4 x AvenueTransformerBlock(
+          (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (attn): CausalSelfAttention(
+            (qkv): Linear(in_features=128, out_features=384, bias=True)
+            (out_proj): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (mlp): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=128, out_features=512, bias=True)
+              (1): GELU(approximate='none')
+              (2): Dropout(p=0.1, inplace=False)
+              (3): Linear(in_features=512, out_features=128, bias=True)
+              (4): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (junctions): ModuleList(
+      (0-3): 4 x PrefixJunction(
+        (context_proj): Sequential(
+          (0): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (1): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (q_proj): Linear(in_features=128, out_features=128, bias=True)
+        (k_proj): Linear(in_features=128, out_features=128, bias=True)
+        (v_proj): Linear(in_features=128, out_features=128, bias=True)
+        (out_proj): Linear(in_features=128, out_features=128, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (reads): ModuleList(
+      (0-3): 4 x ModuleList(
+        (0-3): 4 x JunctionRead(
+          (q_proj): Linear(in_features=128, out_features=128, bias=True)
+          (k_proj): Linear(in_features=128, out_features=128, bias=True)
+          (v_proj): Linear(in_features=128, out_features=128, bias=True)
+          (out_proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+      )
+    )
+    (final_junction): PrefixJunction(
+      (context_proj): Sequential(
+        (0): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (1): Linear(in_features=128, out_features=128, bias=True)
+      )
+      (q_proj): Linear(in_features=128, out_features=128, bias=True)
+      (k_proj): Linear(in_features=128, out_features=128, bias=True)
+      (v_proj): Linear(in_features=128, out_features=128, bias=True)
+      (out_proj): Linear(in_features=128, out_features=128, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (final_read): JunctionRead(
+      (q_proj): Linear(in_features=128, out_features=128, bias=True)
+      (k_proj): Linear(in_features=128, out_features=128, bias=True)
+      (v_proj): Linear(in_features=128, out_features=128, bias=True)
+      (out_proj): Linear(in_features=128, out_features=128, bias=True)
+    )
+    (final_fuse): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): Linear(in_features=256, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+      (3): Linear(in_features=128, out_features=128, bias=True)
+    )
+    (ln_f): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (lm_head): Linear(in_features=128, out_features=224, bias=False)
+  )
+)
+
+total_parameters: 4826513
+trainable_parameters: 4826513
+frozen_parameters: 0

@@ -1,0 +1,14 @@
+# DIGRAG — Evidence-Bucket RAG PoC
+# Core
+numpy
+pandas
+matplotlib
+scikit-learn
+pyyaml
+# Models (shared decoder + embeddings, run on GPU)
+torch>=2.3            # install the CUDA build matching your driver
+transformers>=4.44
+accelerate>=0.30
+sentence-transformers>=3.0
+# Lexical retrieval uses the `rg` (ripgrep) binary on PATH; a pure-python
+# fallback is provided so ripgrep is optional.

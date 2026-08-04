@@ -1,0 +1,82 @@
+variant: four_avenue_leave_one_out
+seed: 0
+seeds:
+- 0
+model:
+  variant: four_avenue_leave_one_out
+  d_model: 128
+  n_layers: 4
+  n_heads: 4
+  d_ff: 512
+  dropout: 0.1
+  max_seq_len: 256
+  num_avenues: 4
+  avenue_dim: 128
+  leave_one_prob: 1.0
+  avenue_scale_init: 0.1
+  align_stride: 8
+data:
+  seq_len_train: 128
+  seq_len_eval:
+  - 128
+  - 256
+  batch_size: 48
+  eval_batch_size: 32
+  eval_examples: 128
+  control_examples: 96
+  train_distractor_range:
+  - 4
+  - 14
+  train_overwrite_range:
+  - 1
+  - 4
+  eval_distractor_range:
+  - 6
+  - 18
+  eval_overwrite_range:
+  - 2
+  - 5
+  eval_profiles:
+    in_distribution:
+      seq_len: 128
+      distractor_range:
+      - 6
+      - 16
+      overwrite_range:
+      - 2
+      - 5
+      examples: 128
+    high_distractor:
+      seq_len: 128
+      distractor_range:
+      - 18
+      - 30
+      overwrite_range:
+      - 1
+      - 4
+      examples: 128
+    many_overwrite:
+      seq_len: 128
+      distractor_range:
+      - 6
+      - 18
+      overwrite_range:
+      - 5
+      - 8
+      examples: 128
+loss:
+  lambda_align: 0.0
+  lambda_div: 0.0
+training:
+  device: cuda
+  amp: true
+  optimizer: AdamW
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  betas:
+  - 0.9
+  - 0.95
+  max_steps: 2500
+  eval_every: 250
+  log_every: 50
+  grad_clip: 1.0

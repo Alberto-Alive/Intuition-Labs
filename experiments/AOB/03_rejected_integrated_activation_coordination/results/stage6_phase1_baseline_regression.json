@@ -1,0 +1,3356 @@
+{
+  "artifact_comparison": {
+    "completed_stage6_artifact_budget_matches_stage4": false,
+    "config_comparison": {
+      "identified_differences": [
+        "epochs: stage4=50 stage6_artifact=12",
+        "patience: stage4=6 stage6_artifact=4",
+        "completed Stage 6 artifact used reduced exploratory training budget; code default has been restored to 50/6 for future runs"
+      ],
+      "stage4_variant_config": {
+        "coordinator_family": "candidate_token_cross_attention",
+        "coordinator_layers": 1,
+        "description": "Candidate-token direct readout with lower LR for stability.",
+        "dropout": 0.0,
+        "epochs": 50,
+        "family": "candidate_conditioned_readout_training",
+        "gradient_clip_norm": 1.0,
+        "lr": 0.0003,
+        "message_updates": {
+          "aux_loss_weight": 0.0,
+          "coordinator_family": "candidate_token_cross_attention",
+          "readout_source": "pooled",
+          "use_message_head": false,
+          "use_private_cue_aux": false
+        },
+        "name": "candidate_token_direct_lr3e4_clip1",
+        "patience": 6,
+        "weight_decay": 0.0001
+      },
+      "stage6_variant_plan_from_completed_artifact": {
+        "coordinator_family": "candidate_token_cross_attention",
+        "coordinator_layers": 1,
+        "description": "Proven Stage 4 clone baseline: candidate queries attend directly over per-role token states.",
+        "dropout": 0.0,
+        "epochs": 12,
+        "family": "stage4_clone_baseline",
+        "gradient_clip_norm": 1.0,
+        "lr": 0.0003,
+        "name": "candidate_token_direct_lr3e4_clip1",
+        "patience": 4,
+        "weight_decay": 0.0001
+      }
+    },
+    "description": "Comparison of completed Stage 4 cheap-screen artifact against completed Stage 6 cheap-screen artifact.",
+    "mean_comparison": {
+      "dev": {
+        "candidate_evidence_mismatch": {
+          "stage4_mean": 0.1328125,
+          "stage6_mean": 0.13411458333333334,
+          "stage6_minus_stage4": 0.0013020833333333333
+        },
+        "candidate_only": {
+          "stage4_mean": 0.12760416666666666,
+          "stage6_mean": 0.18619791666666666,
+          "stage6_minus_stage4": 0.05859375
+        },
+        "frozen": {
+          "stage4_mean": 0.12760416666666666,
+          "stage6_mean": 0.16796875,
+          "stage6_minus_stage4": 0.040364583333333336
+        },
+        "oracle": {
+          "stage4_mean": 1.0,
+          "stage6_mean": 1.0,
+          "stage6_minus_stage4": 0.0
+        },
+        "schema_only": {
+          "stage4_mean": 0.12890625,
+          "stage6_mean": 0.16145833333333334,
+          "stage6_minus_stage4": 0.032552083333333336
+        },
+        "trainable": {
+          "stage4_mean": 0.8763020833333334,
+          "stage6_mean": 0.7356770833333334,
+          "stage6_minus_stage4": -0.140625
+        },
+        "value_shuffle_within_schema": {
+          "stage4_mean": 0.1328125,
+          "stage6_mean": 0.12890625,
+          "stage6_minus_stage4": -0.00390625
+        },
+        "view_masked_candidates_visible": {
+          "stage4_mean": 0.1328125,
+          "stage6_mean": 0.18229166666666666,
+          "stage6_minus_stage4": 0.049479166666666664
+        }
+      },
+      "test": {
+        "candidate_evidence_mismatch": {
+          "stage4_mean": 0.11588541666666667,
+          "stage6_mean": 0.11979166666666667,
+          "stage6_minus_stage4": 0.00390625
+        },
+        "candidate_only": {
+          "stage4_mean": 0.13671875,
+          "stage6_mean": 0.13151041666666666,
+          "stage6_minus_stage4": -0.005208333333333333
+        },
+        "frozen": {
+          "stage4_mean": 0.08854166666666667,
+          "stage6_mean": 0.15234375,
+          "stage6_minus_stage4": 0.06380208333333333
+        },
+        "oracle": {
+          "stage4_mean": 1.0,
+          "stage6_mean": 1.0,
+          "stage6_minus_stage4": 0.0
+        },
+        "schema_only": {
+          "stage4_mean": 0.125,
+          "stage6_mean": 0.09765625,
+          "stage6_minus_stage4": -0.02734375
+        },
+        "trainable": {
+          "stage4_mean": 0.8880208333333334,
+          "stage6_mean": 0.6979166666666666,
+          "stage6_minus_stage4": -0.19010416666666666
+        },
+        "value_shuffle_within_schema": {
+          "stage4_mean": 0.14322916666666666,
+          "stage6_mean": 0.12109375,
+          "stage6_minus_stage4": -0.022135416666666668
+        },
+        "view_masked_candidates_visible": {
+          "stage4_mean": 0.11979166666666667,
+          "stage6_mean": 0.10416666666666667,
+          "stage6_minus_stage4": -0.015625
+        }
+      }
+    },
+    "per_seed_comparison": [
+      {
+        "dev": {
+          "candidate_evidence_mismatch": {
+            "delta": 0.0,
+            "stage4": 0.12890625,
+            "stage4_pass": true,
+            "stage6": 0.12890625,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": 0.0390625,
+            "stage4": 0.18359375,
+            "stage4_pass": false,
+            "stage6": 0.22265625,
+            "stage6_pass": false
+          },
+          "frozen": {
+            "delta": 0.04296875,
+            "stage4": 0.16796875,
+            "stage4_pass": null,
+            "stage6": 0.2109375,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": 0.00390625,
+            "stage4": 0.19921875,
+            "stage4_pass": false,
+            "stage6": 0.203125,
+            "stage6_pass": false
+          },
+          "trainable": {
+            "delta": -0.28125,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 0.71875,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": 0.015625,
+            "stage4": 0.125,
+            "stage4_pass": true,
+            "stage6": 0.140625,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": -0.0078125,
+            "stage4": 0.1875,
+            "stage4_pass": false,
+            "stage6": 0.1796875,
+            "stage6_pass": true
+          }
+        },
+        "seed": 0,
+        "test": {
+          "candidate_evidence_mismatch": {
+            "delta": 0.01171875,
+            "stage4": 0.09765625,
+            "stage4_pass": true,
+            "stage6": 0.109375,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": -0.00390625,
+            "stage4": 0.140625,
+            "stage4_pass": true,
+            "stage6": 0.13671875,
+            "stage6_pass": true
+          },
+          "frozen": {
+            "delta": 0.05078125,
+            "stage4": 0.06640625,
+            "stage4_pass": null,
+            "stage6": 0.1171875,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": -0.0078125,
+            "stage4": 0.15234375,
+            "stage4_pass": true,
+            "stage6": 0.14453125,
+            "stage6_pass": true
+          },
+          "trainable": {
+            "delta": -0.328125,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 0.671875,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": 0.0234375,
+            "stage4": 0.1015625,
+            "stage4_pass": true,
+            "stage6": 0.125,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": 0.015625,
+            "stage4": 0.14453125,
+            "stage4_pass": true,
+            "stage6": 0.16015625,
+            "stage6_pass": true
+          }
+        }
+      },
+      {
+        "dev": {
+          "candidate_evidence_mismatch": {
+            "delta": -0.0234375,
+            "stage4": 0.13671875,
+            "stage4_pass": true,
+            "stage6": 0.11328125,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": 0.015625,
+            "stage4": 0.09375,
+            "stage4_pass": true,
+            "stage6": 0.109375,
+            "stage6_pass": true
+          },
+          "frozen": {
+            "delta": 0.07421875,
+            "stage4": 0.0546875,
+            "stage4_pass": null,
+            "stage6": 0.12890625,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": 0.04296875,
+            "stage4": 0.1015625,
+            "stage4_pass": true,
+            "stage6": 0.14453125,
+            "stage6_pass": true
+          },
+          "trainable": {
+            "delta": -0.140625,
+            "stage4": 0.62890625,
+            "stage4_pass": null,
+            "stage6": 0.48828125,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": -0.03125,
+            "stage4": 0.140625,
+            "stage4_pass": true,
+            "stage6": 0.109375,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": 0.015625,
+            "stage4": 0.12109375,
+            "stage4_pass": true,
+            "stage6": 0.13671875,
+            "stage6_pass": true
+          }
+        },
+        "seed": 1,
+        "test": {
+          "candidate_evidence_mismatch": {
+            "delta": 0.03515625,
+            "stage4": 0.109375,
+            "stage4_pass": true,
+            "stage6": 0.14453125,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": 0.00390625,
+            "stage4": 0.15234375,
+            "stage4_pass": true,
+            "stage6": 0.15625,
+            "stage6_pass": true
+          },
+          "frozen": {
+            "delta": 0.0859375,
+            "stage4": 0.109375,
+            "stage4_pass": null,
+            "stage6": 0.1953125,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": -0.05859375,
+            "stage4": 0.17578125,
+            "stage4_pass": true,
+            "stage6": 0.1171875,
+            "stage6_pass": true
+          },
+          "trainable": {
+            "delta": -0.2421875,
+            "stage4": 0.6640625,
+            "stage4_pass": null,
+            "stage6": 0.421875,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": -0.046875,
+            "stage4": 0.1640625,
+            "stage4_pass": true,
+            "stage6": 0.1171875,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": -0.0546875,
+            "stage4": 0.1640625,
+            "stage4_pass": true,
+            "stage6": 0.109375,
+            "stage6_pass": true
+          }
+        }
+      },
+      {
+        "dev": {
+          "candidate_evidence_mismatch": {
+            "delta": 0.02734375,
+            "stage4": 0.1328125,
+            "stage4_pass": true,
+            "stage6": 0.16015625,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": 0.12109375,
+            "stage4": 0.10546875,
+            "stage4_pass": true,
+            "stage6": 0.2265625,
+            "stage6_pass": false
+          },
+          "frozen": {
+            "delta": 0.00390625,
+            "stage4": 0.16015625,
+            "stage4_pass": null,
+            "stage6": 0.1640625,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": 0.05078125,
+            "stage4": 0.0859375,
+            "stage4_pass": true,
+            "stage6": 0.13671875,
+            "stage6_pass": true
+          },
+          "trainable": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": 0.00390625,
+            "stage4": 0.1328125,
+            "stage4_pass": true,
+            "stage6": 0.13671875,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": 0.140625,
+            "stage4": 0.08984375,
+            "stage4_pass": true,
+            "stage6": 0.23046875,
+            "stage6_pass": false
+          }
+        },
+        "seed": 2,
+        "test": {
+          "candidate_evidence_mismatch": {
+            "delta": -0.03515625,
+            "stage4": 0.140625,
+            "stage4_pass": true,
+            "stage6": 0.10546875,
+            "stage6_pass": true
+          },
+          "candidate_only": {
+            "delta": -0.015625,
+            "stage4": 0.1171875,
+            "stage4_pass": true,
+            "stage6": 0.1015625,
+            "stage6_pass": true
+          },
+          "frozen": {
+            "delta": 0.0546875,
+            "stage4": 0.08984375,
+            "stage4_pass": null,
+            "stage6": 0.14453125,
+            "stage6_pass": null
+          },
+          "oracle": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "schema_only": {
+            "delta": -0.015625,
+            "stage4": 0.046875,
+            "stage4_pass": true,
+            "stage6": 0.03125,
+            "stage6_pass": true
+          },
+          "trainable": {
+            "delta": 0.0,
+            "stage4": 1.0,
+            "stage4_pass": null,
+            "stage6": 1.0,
+            "stage6_pass": null
+          },
+          "value_shuffle_within_schema": {
+            "delta": -0.04296875,
+            "stage4": 0.1640625,
+            "stage4_pass": true,
+            "stage6": 0.12109375,
+            "stage6_pass": true
+          },
+          "view_masked_candidates_visible": {
+            "delta": -0.0078125,
+            "stage4": 0.05078125,
+            "stage4_pass": true,
+            "stage6": 0.04296875,
+            "stage6_pass": true
+          }
+        }
+      }
+    ],
+    "regression_reasons": [
+      "Stage 6 baseline mean controls failed",
+      "Stage 6 completed artifact did not use the original Stage 4 50-epoch/6-patience baseline budget",
+      "candidate_only mean above near-chance threshold: 0.1862",
+      "view_masked_candidates_visible mean above near-chance threshold: 0.1823",
+      "no_candidate_position_shortcut_audit mean above near-chance threshold: 0.1914"
+    ],
+    "seeds_compared": [
+      0,
+      1,
+      2
+    ],
+    "stage6_artifact_baseline_controls_clean": false,
+    "stage6_baseline_summary": {
+      "attention_mask_audits_pass": true,
+      "candidate_order_delta": 0.00390625,
+      "control_means": {
+        "candidate_evidence_mismatch": 0.13411458333333334,
+        "candidate_metadata_only": 0.125,
+        "candidate_only": 0.18619791666666666,
+        "candidate_order_shuffled_with_gold_remap": 0.7395833333333334,
+        "candidate_token_ablation": 0.125,
+        "coordination_token_ablation": 0.7356770833333334,
+        "cross_example_view_bundle_shuffle": 0.14713541666666666,
+        "cross_stream_attention_disabled": 0.078125,
+        "early_mixing_disabled": 0.7356770833333334,
+        "evidence_only_no_candidates": 0.125,
+        "hidden_states_shuffled": 0.15885416666666666,
+        "late_mixing_only_control": 0.7356770833333334,
+        "no_candidate_position_shortcut_audit": 0.19140625,
+        "null_evidence_values": 0.16145833333333334,
+        "physical_order_shuffled_roles_preserved": 0.7356770833333334,
+        "randomized_labels": 0.07552083333333333,
+        "role_token_ablation": 0.078125,
+        "schema_only": 0.16145833333333334,
+        "schema_preserved_role_value_shuffle": 0.16145833333333334,
+        "value_shuffle_within_schema": 0.12890625,
+        "view_masked_candidates_visible": 0.18229166666666666
+      },
+      "controls_pass": false,
+      "dev_wins_trainable_over_frozen": 3,
+      "leakage_pass": true,
+      "mean_dev_delta": 0.5677083333333334,
+      "mean_dev_frozen": 0.16796875,
+      "mean_dev_trainable": 0.7356770833333334,
+      "mean_test_delta": 0.5455729166666666,
+      "min_dev_trainable": 0.48828125,
+      "n_seeds": 3,
+      "physical_order_delta": 0.0,
+      "selection_passed": false,
+      "std_dev_trainable": 0.20925090901916585,
+      "update_audits_pass": true,
+      "variant": "candidate_token_direct_lr3e4_clip1"
+    }
+  },
+  "baseline_regression_clean": false,
+  "direct_control_path": {
+    "control_path_regression_clean": true,
+    "description": "Same cheap-size Stage 4 clone fit evaluated through original Stage 4 controls and new Stage 6 controls.",
+    "device": "cuda",
+    "elapsed_seconds": 659.190786000021,
+    "exact_threshold_parity": false,
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "mean_comparison": {
+      "dev": {
+        "candidate_evidence_mismatch": {
+          "mean_delta_stage6_minus_stage4": -0.0026041666666666665,
+          "stage4_mean": 0.11197916666666667,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.109375,
+          "stage6_pass_every_seed": true
+        },
+        "candidate_metadata_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.125,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.125,
+          "stage6_pass_every_seed": true
+        },
+        "candidate_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.11588541666666667,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.11588541666666667,
+          "stage6_pass_every_seed": true
+        },
+        "candidate_order_shuffled_with_gold_remap": {
+          "mean_delta_stage6_minus_stage4": -0.0013020833333333333,
+          "stage4_mean": 0.7942708333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.79296875,
+          "stage6_pass_every_seed": true
+        },
+        "cross_example_view_bundle_shuffle": {
+          "mean_delta_stage6_minus_stage4": -0.010416666666666666,
+          "stage4_mean": 0.15104166666666666,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.140625,
+          "stage6_pass_every_seed": true
+        },
+        "evidence_only_no_candidates": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.125,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.125,
+          "stage6_pass_every_seed": true
+        },
+        "frozen": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.1484375,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 0.1484375,
+          "stage6_pass_every_seed": null
+        },
+        "hidden_states_shuffled": {
+          "mean_delta_stage6_minus_stage4": 0.026041666666666668,
+          "stage4_mean": 0.13411458333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.16015625,
+          "stage6_pass_every_seed": false
+        },
+        "null_evidence_values": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.14583333333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.14583333333333334,
+          "stage6_pass_every_seed": true
+        },
+        "oracle": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 1.0,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 1.0,
+          "stage6_pass_every_seed": null
+        },
+        "physical_order_shuffled_roles_preserved": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.79296875,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.79296875,
+          "stage6_pass_every_seed": true
+        },
+        "randomized_labels": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.15885416666666666,
+          "stage4_pass_every_seed": false,
+          "stage6_mean": 0.15885416666666666,
+          "stage6_pass_every_seed": false
+        },
+        "schema_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.14583333333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.14583333333333334,
+          "stage6_pass_every_seed": true
+        },
+        "schema_preserved_role_value_shuffle": {
+          "mean_delta_stage6_minus_stage4": 0.006510416666666667,
+          "stage4_mean": 0.13541666666666666,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.14192708333333334,
+          "stage6_pass_every_seed": true
+        },
+        "trainable": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.79296875,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 0.79296875,
+          "stage6_pass_every_seed": null
+        },
+        "value_shuffle_within_schema": {
+          "mean_delta_stage6_minus_stage4": 0.006510416666666667,
+          "stage4_mean": 0.1171875,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.12369791666666667,
+          "stage6_pass_every_seed": true
+        },
+        "view_masked_candidates_visible": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.12890625,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.12890625,
+          "stage6_pass_every_seed": true
+        }
+      },
+      "test": {
+        "candidate_evidence_mismatch": {
+          "mean_delta_stage6_minus_stage4": -0.009114583333333334,
+          "stage4_mean": 0.11328125,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.10416666666666667,
+          "stage6_pass_every_seed": true
+        },
+        "candidate_metadata_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.125,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.125,
+          "stage6_pass_every_seed": true
+        },
+        "candidate_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.12369791666666667,
+          "stage4_pass_every_seed": false,
+          "stage6_mean": 0.12369791666666667,
+          "stage6_pass_every_seed": false
+        },
+        "candidate_order_shuffled_with_gold_remap": {
+          "mean_delta_stage6_minus_stage4": 0.0013020833333333333,
+          "stage4_mean": 0.7760416666666666,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.77734375,
+          "stage6_pass_every_seed": true
+        },
+        "cross_example_view_bundle_shuffle": {
+          "mean_delta_stage6_minus_stage4": -0.01953125,
+          "stage4_mean": 0.1484375,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.12890625,
+          "stage6_pass_every_seed": true
+        },
+        "evidence_only_no_candidates": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.125,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.125,
+          "stage6_pass_every_seed": true
+        },
+        "frozen": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.15755208333333334,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 0.15755208333333334,
+          "stage6_pass_every_seed": null
+        },
+        "hidden_states_shuffled": {
+          "mean_delta_stage6_minus_stage4": 0.0234375,
+          "stage4_mean": 0.14192708333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.16536458333333334,
+          "stage6_pass_every_seed": true
+        },
+        "null_evidence_values": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.15755208333333334,
+          "stage4_pass_every_seed": false,
+          "stage6_mean": 0.15755208333333334,
+          "stage6_pass_every_seed": false
+        },
+        "oracle": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 1.0,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 1.0,
+          "stage6_pass_every_seed": null
+        },
+        "physical_order_shuffled_roles_preserved": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.7799479166666666,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.7799479166666666,
+          "stage6_pass_every_seed": true
+        },
+        "randomized_labels": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.10416666666666667,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.10416666666666667,
+          "stage6_pass_every_seed": true
+        },
+        "schema_only": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.15364583333333334,
+          "stage4_pass_every_seed": false,
+          "stage6_mean": 0.15364583333333334,
+          "stage6_pass_every_seed": false
+        },
+        "schema_preserved_role_value_shuffle": {
+          "mean_delta_stage6_minus_stage4": 0.00390625,
+          "stage4_mean": 0.13020833333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.13411458333333334,
+          "stage6_pass_every_seed": true
+        },
+        "trainable": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.7799479166666666,
+          "stage4_pass_every_seed": null,
+          "stage6_mean": 0.7799479166666666,
+          "stage6_pass_every_seed": null
+        },
+        "value_shuffle_within_schema": {
+          "mean_delta_stage6_minus_stage4": 0.0013020833333333333,
+          "stage4_mean": 0.13411458333333334,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.13541666666666666,
+          "stage6_pass_every_seed": true
+        },
+        "view_masked_candidates_visible": {
+          "mean_delta_stage6_minus_stage4": 0.0,
+          "stage4_mean": 0.15104166666666666,
+          "stage4_pass_every_seed": true,
+          "stage6_mean": 0.15104166666666666,
+          "stage6_pass_every_seed": true
+        }
+      }
+    },
+    "per_seed": [
+      {
+        "attention_mask_audit": {
+          "attention": null,
+          "mask": {
+            "all_role_token_keys_masked": false,
+            "candidate_tokens_can_see_gold": false,
+            "candidate_tokens_can_see_role_tokens": true,
+            "control_mode": "none",
+            "coordination_tokens_can_see_candidates": false,
+            "family": "candidate_token_cross_attention",
+            "role_tokens_can_see_candidates": false,
+            "role_tokens_can_see_other_roles": false,
+            "role_tokens_can_see_other_roles_initially": false,
+            "uses_candidate_position_embedding": false,
+            "uses_packed_position_embedding": false
+          },
+          "representation_change": null
+        },
+        "comparisons": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "delta": -0.046875,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1328125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.0859375,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1484375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1484375,
+              "stage6_pass": true
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": true,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": -0.03125,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.17578125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1796875,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.1796875,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.02734375,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.18359375,
+              "stage6_pass": false
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15625,
+              "stage6_pass": true
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": true,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.21875,
+              "stage4_pass": false,
+              "stage6_accuracy": 0.21875,
+              "stage6_pass": false
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15625,
+              "stage6_pass": true
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": -0.015625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.14453125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12890625,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": -0.00390625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.09375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.08984375,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.14453125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "delta": 0.04296875,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.0859375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12890625,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.09765625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.09765625,
+              "stage6_pass": true
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": true,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": -0.02734375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1796875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15234375,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.0234375,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1796875,
+              "stage6_pass": true
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.13671875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": true,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.10546875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.10546875,
+              "stage6_pass": true
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.13671875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": 0.0390625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1484375,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": -0.0234375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.15234375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12890625,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.140625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.140625,
+              "stage6_pass": true
+            }
+          }
+        },
+        "cuda_max_memory_allocated": 135110144,
+        "dataset_summary": {
+          "candidate_representation": "balanced_categories_v3",
+          "constructed_fallback": false,
+          "dataset_source": "real_import_restore_candidate_balanced_34b",
+          "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+          "hardening": {
+            "balanced_non_identifying_candidate_categories": true,
+            "candidate_attributes_are_model_safe_opaque": false,
+            "candidate_query_structured_features_are_non_identifying": true,
+            "family_ids_removed_from_model_inputs": true,
+            "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+            "oracle_metadata_separated_from_model_record": true,
+            "role_pair_ids_removed_from_model_inputs": true
+          },
+          "minimum_single_view_candidate_ambiguity": 1,
+          "num_candidates": 8,
+          "num_views": 4,
+          "open_ended_code_repair_claim_allowed": false,
+          "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+          "problem_families_by_split": {
+            "dev": [
+              "dev_real_import_restore_0",
+              "dev_real_import_restore_1",
+              "dev_real_import_restore_2",
+              "dev_real_import_restore_3",
+              "dev_real_import_restore_6"
+            ],
+            "test": [
+              "test_real_import_restore_1",
+              "test_real_import_restore_2",
+              "test_real_import_restore_3",
+              "test_real_import_restore_6"
+            ],
+            "train": [
+              "train_real_import_restore_0",
+              "train_real_import_restore_1",
+              "train_real_import_restore_2",
+              "train_real_import_restore_3",
+              "train_real_import_restore_4",
+              "train_real_import_restore_5",
+              "train_real_import_restore_6"
+            ]
+          },
+          "program_analysis_artifacts": [
+            "redacted_ast_usage_shape",
+            "redacted_module_resolution_shape",
+            "redacted_provider_shape",
+            "redacted_import_slot_shape"
+          ],
+          "publishable_proof_dataset": false,
+          "real_correct_patch_source": "existing repository import statement restored after deletion",
+          "source_file_examples": [
+            "src/agents/simulated.py",
+            "src/agents/strict_coordination.py",
+            "src/agents/transformer_strict.py",
+            "src/coordinators/activation.py",
+            "src/coordinators/baselines.py",
+            "src/coordinators/mlp.py",
+            "src/coordinators/probes.py",
+            "src/coordinators/role_attention.py",
+            "src/coordinators/set_hidden.py",
+            "src/datasets/multiview_code_patch_selection.py"
+          ],
+          "source_files_used": 33,
+          "split_sizes": {
+            "dev": 256,
+            "test": 256,
+            "train": 512
+          }
+        },
+        "no_gold_token_audit": {
+          "failures": [],
+          "model_records_checked": 1024,
+          "oracle_metadata_kept_out_of_model_record": true,
+          "passes": true
+        },
+        "output_leakage_audit_passes": true,
+        "seed": 0,
+        "split_leakage_audit_passes": true,
+        "stage4": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.1328125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.1484375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.17578125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1796875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.21875,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.09375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.09765625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.1796875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.125,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.10546875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.140625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage4_frozen_audit": {
+          "activation_requires_grad_before_coordinator": false,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.0,
+          "agent_parameter_delta": 0.0,
+          "agent_trainable": false,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 0.6049171150865951,
+          "coordinator_parameter_delta": 0.633650541305542,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": false,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_randomized_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.015655962800767736,
+          "agent_parameter_delta": 0.3849613666534424,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 0.8402737192018495,
+          "coordinator_parameter_delta": 0.2561606466770172,
+          "cuda_max_memory_allocated": 135110144,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_trainable_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.3487334252432238,
+          "agent_parameter_delta": 6.403982162475586,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 1.2046251896235434,
+          "coordinator_parameter_delta": 2.9933347702026367,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage6": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.1484375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1796875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.18359375,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.21875,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.09765625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.125,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.1796875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 1.0,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.10546875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.1484375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.140625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage_config": {
+          "epochs": 50,
+          "n_dev": 256,
+          "n_test": 256,
+          "n_train": 512,
+          "patience": 6
+        }
+      },
+      {
+        "attention_mask_audit": {
+          "attention": null,
+          "mask": {
+            "all_role_token_keys_masked": false,
+            "candidate_tokens_can_see_gold": false,
+            "candidate_tokens_can_see_role_tokens": true,
+            "control_mode": "none",
+            "coordination_tokens_can_see_candidates": false,
+            "family": "candidate_token_cross_attention",
+            "role_tokens_can_see_candidates": false,
+            "role_tokens_can_see_other_roles": false,
+            "role_tokens_can_see_other_roles_initially": false,
+            "uses_candidate_position_embedding": false,
+            "uses_packed_position_embedding": false
+          },
+          "representation_change": null
+        },
+        "comparisons": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "delta": -0.0234375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1171875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.09375,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.03125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.03125,
+              "stage6_pass": true
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.85546875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.85546875,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": -0.03515625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.16796875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1328125,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1015625,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.1015625,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.015625,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.12109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.12890625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12890625,
+              "stage6_pass": true
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.85546875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.85546875,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.13671875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.12890625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12890625,
+              "stage6_pass": true
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": 0.01171875,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.85546875,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.85546875,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": 0.046875,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.09765625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.08984375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.08984375,
+              "stage6_pass": true
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "delta": -0.00390625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.08984375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.0859375,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.0859375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.0859375,
+              "stage6_pass": true
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": 0.00390625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.87890625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.8828125,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": -0.0546875,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1640625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.109375,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1640625,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.1640625,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.015625,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.171875,
+              "stage6_pass": true
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.14453125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.890625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.890625,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.08984375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.08984375,
+              "stage6_pass": true
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1328125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1328125,
+              "stage6_pass": true
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": 0.03125,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.12109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15234375,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.890625,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.890625,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": 0.02734375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.12890625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15625,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15625,
+              "stage6_pass": true
+            }
+          }
+        },
+        "cuda_max_memory_allocated": 135110144,
+        "dataset_summary": {
+          "candidate_representation": "balanced_categories_v3",
+          "constructed_fallback": false,
+          "dataset_source": "real_import_restore_candidate_balanced_34b",
+          "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+          "hardening": {
+            "balanced_non_identifying_candidate_categories": true,
+            "candidate_attributes_are_model_safe_opaque": false,
+            "candidate_query_structured_features_are_non_identifying": true,
+            "family_ids_removed_from_model_inputs": true,
+            "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+            "oracle_metadata_separated_from_model_record": true,
+            "role_pair_ids_removed_from_model_inputs": true
+          },
+          "minimum_single_view_candidate_ambiguity": 1,
+          "num_candidates": 8,
+          "num_views": 4,
+          "open_ended_code_repair_claim_allowed": false,
+          "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+          "problem_families_by_split": {
+            "dev": [
+              "dev_real_import_restore_0",
+              "dev_real_import_restore_1",
+              "dev_real_import_restore_2"
+            ],
+            "test": [
+              "test_real_import_restore_1",
+              "test_real_import_restore_2",
+              "test_real_import_restore_3",
+              "test_real_import_restore_5"
+            ],
+            "train": [
+              "train_real_import_restore_0",
+              "train_real_import_restore_1",
+              "train_real_import_restore_2",
+              "train_real_import_restore_3",
+              "train_real_import_restore_4",
+              "train_real_import_restore_5",
+              "train_real_import_restore_6"
+            ]
+          },
+          "program_analysis_artifacts": [
+            "redacted_ast_usage_shape",
+            "redacted_module_resolution_shape",
+            "redacted_provider_shape",
+            "redacted_import_slot_shape"
+          ],
+          "publishable_proof_dataset": false,
+          "real_correct_patch_source": "existing repository import statement restored after deletion",
+          "source_file_examples": [
+            "src/agents/simulated.py",
+            "src/agents/strict_coordination.py",
+            "src/agents/transformer_strict.py",
+            "src/coordinators/activation.py",
+            "src/coordinators/baselines.py",
+            "src/coordinators/mlp.py",
+            "src/coordinators/probes.py",
+            "src/coordinators/role_attention.py",
+            "src/coordinators/set_hidden.py",
+            "src/datasets/multiview_code_patch_selection.py"
+          ],
+          "source_files_used": 33,
+          "split_sizes": {
+            "dev": 256,
+            "test": 256,
+            "train": 512
+          }
+        },
+        "no_gold_token_audit": {
+          "failures": [],
+          "model_records_checked": 1024,
+          "oracle_metadata_kept_out_of_model_record": true,
+          "passes": true
+        },
+        "output_leakage_audit_passes": true,
+        "seed": 1,
+        "split_leakage_audit_passes": true,
+        "stage4": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.1171875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.03125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.85546875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.16796875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1015625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.85546875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.85546875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.09765625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.87890625,
+              "delta_from_trainable": -0.01171875,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.1640625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1640625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.890625,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.1328125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.890625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage4_frozen_audit": {
+          "activation_requires_grad_before_coordinator": false,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.0,
+          "agent_parameter_delta": 0.0,
+          "agent_trainable": false,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 1.0872059706263009,
+          "coordinator_parameter_delta": 1.1129034757614136,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": false,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_randomized_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.011378018855159487,
+          "agent_parameter_delta": 1.1227233409881592,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 0.7125853236698203,
+          "coordinator_parameter_delta": 0.37117108702659607,
+          "cuda_max_memory_allocated": 135110144,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_trainable_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.27375695066200484,
+          "agent_parameter_delta": 7.070218086242676,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 1.179473309801928,
+          "coordinator_parameter_delta": 2.591965436935425,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage6": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.09375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.03125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.85546875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.1328125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1015625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.85546875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.12890625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.85546875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.8828125,
+              "delta_from_trainable": -0.0078125,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1640625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.171875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.890625,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.08984375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.1328125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.890625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage_config": {
+          "epochs": 50,
+          "n_dev": 256,
+          "n_test": 256,
+          "n_train": 512,
+          "patience": 6
+        }
+      },
+      {
+        "attention_mask_audit": {
+          "attention": null,
+          "mask": {
+            "all_role_token_keys_masked": false,
+            "candidate_tokens_can_see_gold": false,
+            "candidate_tokens_can_see_role_tokens": true,
+            "control_mode": "none",
+            "coordination_tokens_can_see_candidates": false,
+            "family": "candidate_token_cross_attention",
+            "role_tokens_can_see_candidates": false,
+            "role_tokens_can_see_other_roles": false,
+            "role_tokens_can_see_other_roles_initially": false,
+            "uses_candidate_position_embedding": false,
+            "uses_packed_position_embedding": false
+          },
+          "representation_change": null
+        },
+        "comparisons": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "delta": 0.0625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.0859375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1484375,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.16796875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.16796875,
+              "stage6_pass": true
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": -0.00390625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.52734375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.5234375,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": 0.03515625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1640625,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.1640625,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.03515625,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.16015625,
+              "stage6_pass": true
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15234375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15234375,
+              "stage6_pass": true
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.5234375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.5234375,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.12109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12109375,
+              "stage6_pass": true
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15234375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15234375,
+              "stage6_pass": true
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": 0.0234375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.13671875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.16015625,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.5234375,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.5234375,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": -0.0234375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.16015625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.13671875,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15234375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15234375,
+              "stage6_pass": true
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "delta": -0.06640625,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1640625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.09765625,
+              "stage6_pass": true
+            },
+            "candidate_metadata_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "candidate_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1875,
+              "stage4_pass": false,
+              "stage6_accuracy": 0.1875,
+              "stage6_pass": false
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.44921875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.44921875,
+              "stage6_pass": true
+            },
+            "cross_example_view_bundle_shuffle": {
+              "delta": 0.0234375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.1015625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "evidence_only_no_candidates": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.125,
+              "stage6_pass": true
+            },
+            "frozen": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.18359375,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.18359375,
+              "stage6_pass": null
+            },
+            "hidden_states_shuffled": {
+              "delta": 0.03125,
+              "differs": true,
+              "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+              "stage4_accuracy": 0.11328125,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.14453125,
+              "stage6_pass": true
+            },
+            "null_evidence_values": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.19140625,
+              "stage4_pass": false,
+              "stage6_accuracy": 0.19140625,
+              "stage6_pass": false
+            },
+            "oracle": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 1.0,
+              "stage4_pass": null,
+              "stage6_accuracy": 1.0,
+              "stage6_pass": null
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.44921875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.44921875,
+              "stage6_pass": true
+            },
+            "randomized_labels": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.1171875,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1171875,
+              "stage6_pass": true
+            },
+            "schema_only": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.19140625,
+              "stage4_pass": false,
+              "stage6_accuracy": 0.19140625,
+              "stage6_pass": false
+            },
+            "schema_preserved_role_value_shuffle": {
+              "delta": -0.05859375,
+              "differs": true,
+              "reason": "same semantic control, different evaluator seed offsets and control construction call sites",
+              "stage4_accuracy": 0.16015625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.1015625,
+              "stage6_pass": true
+            },
+            "trainable": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.44921875,
+              "stage4_pass": null,
+              "stage6_accuracy": 0.44921875,
+              "stage6_pass": null
+            },
+            "value_shuffle_within_schema": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.12109375,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.12109375,
+              "stage6_pass": true
+            },
+            "view_masked_candidates_visible": {
+              "delta": 0.0,
+              "differs": false,
+              "reason": "same numeric result",
+              "stage4_accuracy": 0.15625,
+              "stage4_pass": true,
+              "stage6_accuracy": 0.15625,
+              "stage6_pass": true
+            }
+          }
+        },
+        "cuda_max_memory_allocated": 135110144,
+        "dataset_summary": {
+          "candidate_representation": "balanced_categories_v3",
+          "constructed_fallback": false,
+          "dataset_source": "real_import_restore_candidate_balanced_34b",
+          "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+          "hardening": {
+            "balanced_non_identifying_candidate_categories": true,
+            "candidate_attributes_are_model_safe_opaque": false,
+            "candidate_query_structured_features_are_non_identifying": true,
+            "family_ids_removed_from_model_inputs": true,
+            "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+            "oracle_metadata_separated_from_model_record": true,
+            "role_pair_ids_removed_from_model_inputs": true
+          },
+          "minimum_single_view_candidate_ambiguity": 1,
+          "num_candidates": 8,
+          "num_views": 4,
+          "open_ended_code_repair_claim_allowed": false,
+          "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+          "problem_families_by_split": {
+            "dev": [
+              "dev_real_import_restore_0",
+              "dev_real_import_restore_2",
+              "dev_real_import_restore_3",
+              "dev_real_import_restore_4"
+            ],
+            "test": [
+              "test_real_import_restore_0",
+              "test_real_import_restore_6"
+            ],
+            "train": [
+              "train_real_import_restore_0",
+              "train_real_import_restore_1",
+              "train_real_import_restore_2",
+              "train_real_import_restore_3",
+              "train_real_import_restore_4",
+              "train_real_import_restore_5",
+              "train_real_import_restore_6"
+            ]
+          },
+          "program_analysis_artifacts": [
+            "redacted_ast_usage_shape",
+            "redacted_module_resolution_shape",
+            "redacted_provider_shape",
+            "redacted_import_slot_shape"
+          ],
+          "publishable_proof_dataset": false,
+          "real_correct_patch_source": "existing repository import statement restored after deletion",
+          "source_file_examples": [
+            "src/agents/simulated.py",
+            "src/agents/strict_coordination.py",
+            "src/agents/transformer_strict.py",
+            "src/coordinators/activation.py",
+            "src/coordinators/baselines.py",
+            "src/coordinators/mlp.py",
+            "src/coordinators/probes.py",
+            "src/coordinators/role_attention.py",
+            "src/coordinators/set_hidden.py",
+            "src/datasets/multiview_code_patch_selection.py"
+          ],
+          "source_files_used": 32,
+          "split_sizes": {
+            "dev": 256,
+            "test": 256,
+            "train": 512
+          }
+        },
+        "no_gold_token_audit": {
+          "failures": [],
+          "model_records_checked": 1024,
+          "oracle_metadata_kept_out_of_model_record": true,
+          "passes": true
+        },
+        "output_leakage_audit_passes": true,
+        "seed": 2,
+        "split_leakage_audit_passes": true,
+        "stage4": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.0859375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.16796875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.52734375,
+              "delta_from_trainable": 0.00390625,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1640625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.5234375,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.5234375,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.16015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.1640625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.1875,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.44921875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.1015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.18359375,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.11328125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.19140625,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.44921875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.1171875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.19140625,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.16015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.44921875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage4_frozen_audit": {
+          "activation_requires_grad_before_coordinator": false,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.0,
+          "agent_parameter_delta": 0.0,
+          "agent_trainable": false,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 0.7217625884633158,
+          "coordinator_parameter_delta": 0.3915330469608307,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": false,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_randomized_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.013728601143792677,
+          "agent_parameter_delta": 2.227308988571167,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 0.6601005528472201,
+          "coordinator_parameter_delta": 0.4704306423664093,
+          "cuda_max_memory_allocated": 135110144,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage4_trainable_audit": {
+          "activation_requires_grad_before_coordinator": true,
+          "active_message_readout_grad_norm_mean": 0.0,
+          "active_message_readout_parameter_delta": 0.0,
+          "agent_grad_norm_mean": 0.27135874451167885,
+          "agent_parameter_delta": 5.927401065826416,
+          "agent_trainable": true,
+          "batch_size": 32,
+          "coordinator_grad_norm_mean": 1.3743699527720161,
+          "coordinator_parameter_delta": 2.1797914505004883,
+          "cuda_max_memory_allocated": 131747328,
+          "device": "cuda",
+          "gradient_accumulation_steps": 1,
+          "loss_backward_reaches_shared_agent": true,
+          "message_head_grad_norm_mean": 0.0,
+          "message_head_parameter_delta": 0.0,
+          "mixed_precision": "bf16",
+          "per_clone_gradient_contribution": false,
+          "shared_parameter_identity": true
+        },
+        "stage6": {
+          "dev": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.1484375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.16796875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.5234375,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.1640625,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.16015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.5234375,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.16015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.5234375,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.13671875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15234375,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          },
+          "test": {
+            "candidate_evidence_mismatch": {
+              "accuracy": 0.09765625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_metadata_only": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "candidate_only": {
+              "accuracy": 0.1875,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "candidate_order_shuffled_with_gold_remap": {
+              "accuracy": 0.44921875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "cross_example_view_bundle_shuffle": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "evidence_only_no_candidates": {
+              "accuracy": 0.125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "frozen": {
+              "accuracy": 0.18359375,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "hidden_states_shuffled": {
+              "accuracy": 0.14453125,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "null_evidence_values": {
+              "accuracy": 0.19140625,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "oracle": {
+              "accuracy": 1.0,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "physical_order_shuffled_roles_preserved": {
+              "accuracy": 0.44921875,
+              "delta_from_trainable": 0.0,
+              "pass": true,
+              "rule": "abs(delta_from_trainable) <= 0.08"
+            },
+            "randomized_labels": {
+              "accuracy": 0.1171875,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "schema_only": {
+              "accuracy": 0.19140625,
+              "pass": false,
+              "rule": "<= 0.18"
+            },
+            "schema_preserved_role_value_shuffle": {
+              "accuracy": 0.1015625,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "trainable": {
+              "accuracy": 0.44921875,
+              "pass": null,
+              "rule": "reported, not a collapse gate"
+            },
+            "value_shuffle_within_schema": {
+              "accuracy": 0.12109375,
+              "pass": true,
+              "rule": "<= 0.18"
+            },
+            "view_masked_candidates_visible": {
+              "accuracy": 0.15625,
+              "pass": true,
+              "rule": "<= 0.18"
+            }
+          }
+        },
+        "stage_config": {
+          "epochs": 50,
+          "n_dev": 256,
+          "n_test": 256,
+          "n_train": 512,
+          "patience": 6
+        }
+      }
+    ],
+    "ran": true,
+    "stage6_only_control_failures": [
+      {
+        "control": "hidden_states_shuffled",
+        "reason": "same corruption family; Stage 4 records hidden_states_shuffled_across_examples and Stage 6 records hidden_states_shuffled with its own evaluation seed offset",
+        "seed": 0,
+        "split": "dev",
+        "stage4_accuracy": 0.15625,
+        "stage6_accuracy": 0.18359375
+      }
+    ],
+    "unexplained_control_path_differences": []
+  },
+  "metadata": {
+    "baseline": "candidate_token_direct_lr3e4_clip1",
+    "cheap_screen_sizes": {
+      "n_dev": 256,
+      "n_test": 256,
+      "n_train": 512
+    },
+    "created_at_utc": "2026-05-16T07:36:54.706057+00:00",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "stage4_final_config": "configs\\stage4_final_candidate_token_direct_validation.json",
+    "stage4_source": "results/stage4_schema_aware_architecture_search_results.json",
+    "stage6_config": "configs\\stage6_integrated_multiperspective_search.json",
+    "stage6_source": "results/stage6_integrated_results.json"
+  },
+  "regression_reasons": [
+    "direct control-path regression found explainable Stage 6-only threshold flips from evaluator seed/control call-site differences",
+    "Stage 6 baseline mean controls failed",
+    "Stage 6 completed artifact did not use the original Stage 4 50-epoch/6-patience baseline budget",
+    "candidate_only mean above near-chance threshold: 0.1862",
+    "view_masked_candidates_visible mean above near-chance threshold: 0.1823",
+    "no_candidate_position_shortcut_audit mean above near-chance threshold: 0.1914"
+  ]
+}

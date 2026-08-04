@@ -1,0 +1,298 @@
+{
+  "dataset_config": {
+    "candidate_representation": "sanitized_redacted_v3",
+    "dataset_source": "real_import_restore_candidate_sanitized_v3",
+    "generator_version": "real_import_restore_candidate_sanitized_v3_stage34",
+    "include_private_signal_tokens": false,
+    "max_files": 40,
+    "n_dev": 128,
+    "n_test": 256,
+    "n_train": 256,
+    "n_views": 4,
+    "num_candidates": 8,
+    "snippet_radius": 2,
+    "source_roots": [
+      "src",
+      "tests"
+    ]
+  },
+  "metadata": {
+    "all_role_structured_target": 0.9,
+    "architecture_changes": "none",
+    "config_path": "configs\\stage34_candidate_sanitization_cuda_smoke.json",
+    "dataset_source": "real_import_restore_candidate_sanitized_v3",
+    "pairwise_structured_target": 0.7,
+    "preferred_max": 0.15,
+    "scope": "dataset-only shortcut diagnostics before any Stage 3.4 training",
+    "stage": "stage3.4_candidate_sanitization_diagnostics",
+    "static_frequency_max": 0.2,
+    "strict_max": 0.18
+  },
+  "seed_rows": [
+    {
+      "baselines": {
+        "all_role_structured_oracle_accuracy": 1.0,
+        "candidate_metadata_only_accuracy": 0.125,
+        "candidate_only_accuracy": 0.125,
+        "family_only_accuracy": 0.12109375,
+        "lexical_overlap_accuracy": 0.125,
+        "pairwise_structured_oracle": {
+          "0,1": 1.0,
+          "0,2": 0.52734375,
+          "0,3": 0.5,
+          "1,2": 0.47265625,
+          "1,3": 0.52734375,
+          "2,3": 1.0
+        },
+        "role_pair_only_accuracy": 0.125,
+        "single_view_text": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        },
+        "static_frequency_accuracy": 0.125,
+        "view_masked_candidates_visible_accuracy": 0.125
+      },
+      "gate_results": [
+        {
+          "gate": "exact symbol/module/path/candidate leakage remains 0",
+          "pass": true,
+          "value": {
+            "exact_candidate_symbol_module_or_path_rate": 0.0,
+            "exact_gold_import_statement_rate": 0.0,
+            "exact_gold_module_path_rate": 0.0,
+            "exact_gold_path_rate": 0.0,
+            "exact_gold_symbol_rate": 0.0,
+            "model_record_oracle_key_assertion_failures": 0,
+            "passes": true
+          }
+        },
+        {
+          "gate": "candidate-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "candidate-metadata-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "role-pair-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "family-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.12109375
+        },
+        {
+          "gate": "view-masked + candidates-visible baseline <= 0.18",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "lexical-overlap baseline <= 0.18",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "static frequency baseline <= 0.20",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view baselines <= 0.18",
+          "pass": true,
+          "value": {
+            "0": 0.125,
+            "1": 0.125,
+            "2": 0.125,
+            "3": 0.125
+          }
+        },
+        {
+          "gate": "at least one pairwise-role oracle >= 0.70",
+          "pass": true,
+          "value": {
+            "0,1": 1.0,
+            "0,2": 0.52734375,
+            "0,3": 0.5,
+            "1,2": 0.47265625,
+            "1,3": 0.52734375,
+            "2,3": 1.0
+          }
+        },
+        {
+          "gate": "all-role structured oracle >= 0.90",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 16,
+          "1": 16,
+          "2": 16,
+          "3": 16,
+          "4": 16,
+          "5": 16,
+          "6": 16,
+          "7": 16
+        },
+        "test": {
+          "0": 32,
+          "1": 32,
+          "2": 32,
+          "3": 32,
+          "4": 32,
+          "5": 32,
+          "6": 32,
+          "7": 32
+        },
+        "train": {
+          "0": 32,
+          "1": 32,
+          "2": 32,
+          "3": 32,
+          "4": 32,
+          "5": 32,
+          "6": 32,
+          "7": 32
+        }
+      },
+      "leakage": {
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "model_record_oracle_key_assertion_failures": 0,
+        "passes": true
+      },
+      "seed": 0,
+      "split_sizes": {
+        "dev": 128,
+        "test": 256,
+        "train": 256
+      }
+    }
+  ],
+  "summary": {
+    "gate_table": [
+      {
+        "gate": "exact symbol/module/path/candidate leakage remains 0",
+        "pass": true,
+        "value": [
+          {
+            "exact_candidate_symbol_module_or_path_rate": 0.0,
+            "exact_gold_import_statement_rate": 0.0,
+            "exact_gold_module_path_rate": 0.0,
+            "exact_gold_path_rate": 0.0,
+            "exact_gold_symbol_rate": 0.0,
+            "model_record_oracle_key_assertion_failures": 0,
+            "passes": true
+          }
+        ]
+      },
+      {
+        "gate": "candidate-only baseline <= 0.18",
+        "pass": true,
+        "preferred": true,
+        "value": 0.125
+      },
+      {
+        "gate": "candidate-metadata-only baseline <= 0.18",
+        "pass": true,
+        "preferred": true,
+        "value": 0.125
+      },
+      {
+        "gate": "role-pair-only baseline <= 0.18",
+        "pass": true,
+        "preferred": true,
+        "value": 0.125
+      },
+      {
+        "gate": "family-only baseline <= 0.18",
+        "pass": true,
+        "preferred": true,
+        "value": 0.12109375
+      },
+      {
+        "gate": "view-masked + candidates-visible <= 0.18",
+        "pass": true,
+        "value": 0.125
+      },
+      {
+        "gate": "lexical-overlap baseline <= 0.18",
+        "pass": true,
+        "value": 0.125
+      },
+      {
+        "gate": "static frequency baseline <= 0.20",
+        "pass": true,
+        "value": 0.125
+      },
+      {
+        "gate": "single-view baselines <= 0.18",
+        "pass": true,
+        "value": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "gate": "at least one pairwise-role oracle >= 0.70",
+        "pass": true,
+        "value": {
+          "0,1": 1.0,
+          "0,2": 0.52734375,
+          "0,3": 0.5,
+          "1,2": 0.47265625,
+          "1,3": 0.52734375,
+          "2,3": 1.0
+        }
+      },
+      {
+        "gate": "all-role structured oracle >= 0.90",
+        "pass": true,
+        "value": 1.0
+      }
+    ],
+    "leakage_passes": true,
+    "max_pairwise_structured_oracle_accuracy": 1.0,
+    "max_single_view_accuracy": 0.125,
+    "mean_all_role_structured_oracle_accuracy": 1.0,
+    "mean_candidate_metadata_only_accuracy": 0.125,
+    "mean_candidate_only_accuracy": 0.125,
+    "mean_family_only_accuracy": 0.12109375,
+    "mean_lexical_overlap_accuracy": 0.125,
+    "mean_pairwise_structured_oracle": {
+      "0,1": 1.0,
+      "0,2": 0.52734375,
+      "0,3": 0.5,
+      "1,2": 0.47265625,
+      "1,3": 0.52734375,
+      "2,3": 1.0
+    },
+    "mean_role_pair_only_accuracy": 0.125,
+    "mean_single_view_text": {
+      "0": 0.125,
+      "1": 0.125,
+      "2": 0.125,
+      "3": 0.125
+    },
+    "mean_static_frequency_accuracy": 0.125,
+    "mean_view_masked_candidates_visible_accuracy": 0.125,
+    "pretraining_dataset_validity_passed": true
+  }
+}

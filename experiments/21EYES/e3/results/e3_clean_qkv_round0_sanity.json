@@ -1,0 +1,220 @@
+{
+  "baselines_run": [
+    "oracle_evidence_model",
+    "current_only_model",
+    "retrieval_topk",
+    "post_attention_memory_baseline",
+    "clean_qkv_v1_reference_if_available",
+    "e2_champion_reference_if_available"
+  ],
+  "failures": [],
+  "no_final_templates_used": true,
+  "passes": true,
+  "round": 0,
+  "sanity": [
+    {
+      "current_only_accuracy": 0.2,
+      "dataset_audit": {
+        "clean_qkv_cases": [
+          "current_input_overrides_memory",
+          "memory_irrelevant",
+          "memory_misleading",
+          "memory_required",
+          "memory_stale",
+          "multiple_old_activations_combine",
+          "old_activation_contradicts_one_candidate",
+          "old_activation_supports_one_candidate"
+        ],
+        "e3_task_families": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "irrelevant_memory_distractor_history",
+          "memory_dependent_recall",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence",
+          "stale_memory_update",
+          "support_vs_contradiction_memory"
+        ],
+        "failures": [],
+        "passes": true,
+        "summary": {
+          "all_have_k8": true,
+          "all_have_randomized_order_flag": true,
+          "candidate_index_histogram": [
+            4,
+            9,
+            6,
+            4,
+            6,
+            1,
+            5,
+            5
+          ],
+          "n_blocks": {
+            "8": 40
+          },
+          "num_examples": 40,
+          "splits": {
+            "dev": 40
+          },
+          "task_families": {
+            "compositional_role_evidence": 4,
+            "conflict_resolution": 4,
+            "constraint_satisfaction": 4,
+            "irrelevant_memory_distractor_history": 4,
+            "memory_dependent_recall": 4,
+            "multi_hop_binding": 4,
+            "needle_binding": 4,
+            "sparse_relevant_evidence": 4,
+            "stale_memory_update": 4,
+            "support_vs_contradiction_memory": 4
+          }
+        }
+      },
+      "final_templates_used": false,
+      "labels_valid": true,
+      "n_blocks": 8,
+      "oracle_evidence_accuracy": 1.0,
+      "post_attention_memory_baseline_accuracy": 0.95,
+      "retrieval_topk_accuracy": 0.775
+    },
+    {
+      "current_only_accuracy": 0.25,
+      "dataset_audit": {
+        "clean_qkv_cases": [
+          "current_input_overrides_memory",
+          "memory_irrelevant",
+          "memory_misleading",
+          "memory_required",
+          "memory_stale",
+          "multiple_old_activations_combine",
+          "old_activation_contradicts_one_candidate",
+          "old_activation_supports_one_candidate"
+        ],
+        "e3_task_families": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "irrelevant_memory_distractor_history",
+          "memory_dependent_recall",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence",
+          "stale_memory_update",
+          "support_vs_contradiction_memory"
+        ],
+        "failures": [],
+        "passes": true,
+        "summary": {
+          "all_have_k8": true,
+          "all_have_randomized_order_flag": true,
+          "candidate_index_histogram": [
+            7,
+            5,
+            6,
+            3,
+            5,
+            5,
+            3,
+            6
+          ],
+          "n_blocks": {
+            "16": 40
+          },
+          "num_examples": 40,
+          "splits": {
+            "dev": 40
+          },
+          "task_families": {
+            "compositional_role_evidence": 4,
+            "conflict_resolution": 4,
+            "constraint_satisfaction": 4,
+            "irrelevant_memory_distractor_history": 4,
+            "memory_dependent_recall": 4,
+            "multi_hop_binding": 4,
+            "needle_binding": 4,
+            "sparse_relevant_evidence": 4,
+            "stale_memory_update": 4,
+            "support_vs_contradiction_memory": 4
+          }
+        }
+      },
+      "final_templates_used": false,
+      "labels_valid": true,
+      "n_blocks": 16,
+      "oracle_evidence_accuracy": 1.0,
+      "post_attention_memory_baseline_accuracy": 0.9,
+      "retrieval_topk_accuracy": 0.725
+    },
+    {
+      "current_only_accuracy": 0.225,
+      "dataset_audit": {
+        "clean_qkv_cases": [
+          "current_input_overrides_memory",
+          "memory_irrelevant",
+          "memory_misleading",
+          "memory_required",
+          "memory_stale",
+          "multiple_old_activations_combine",
+          "old_activation_contradicts_one_candidate",
+          "old_activation_supports_one_candidate"
+        ],
+        "e3_task_families": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "irrelevant_memory_distractor_history",
+          "memory_dependent_recall",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence",
+          "stale_memory_update",
+          "support_vs_contradiction_memory"
+        ],
+        "failures": [],
+        "passes": true,
+        "summary": {
+          "all_have_k8": true,
+          "all_have_randomized_order_flag": true,
+          "candidate_index_histogram": [
+            5,
+            4,
+            11,
+            3,
+            4,
+            4,
+            6,
+            3
+          ],
+          "n_blocks": {
+            "32": 40
+          },
+          "num_examples": 40,
+          "splits": {
+            "dev": 40
+          },
+          "task_families": {
+            "compositional_role_evidence": 4,
+            "conflict_resolution": 4,
+            "constraint_satisfaction": 4,
+            "irrelevant_memory_distractor_history": 4,
+            "memory_dependent_recall": 4,
+            "multi_hop_binding": 4,
+            "needle_binding": 4,
+            "sparse_relevant_evidence": 4,
+            "stale_memory_update": 4,
+            "support_vs_contradiction_memory": 4
+          }
+        }
+      },
+      "final_templates_used": false,
+      "labels_valid": true,
+      "n_blocks": 32,
+      "oracle_evidence_accuracy": 1.0,
+      "post_attention_memory_baseline_accuracy": 0.825,
+      "retrieval_topk_accuracy": 0.6
+    }
+  ]
+}

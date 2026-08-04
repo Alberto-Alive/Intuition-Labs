@@ -1,0 +1,98 @@
+stage: "8B.3"
+decision: "STAGE8B3_TOP3_SELECTED"
+no_stage8c_run: true
+no_10x_attention_capacity_claim: true
+top3:
+  - rank: 1
+    config_id: "26e1c7a05997e96c"
+    architecture_family: "Memory Slot Attention"
+    selection_score: 0.956017
+    capacity_C: 32
+    architecture:
+      name: "stage8b3_f_memory_slot_attention_02"
+      model_kind: "evidence_feature_latent"
+      roles: 8
+      avenues: 2
+      chunking: "semantic_key"
+      candidate_query: "candidate_task_query"
+      coordinator: "memory_slot_attention"
+      view_sharing: "shared_encoder_role_avenue_embeddings"
+      memory_compression: "slot_attention_compression"
+      attention_routing: "dense_all_view_attention"
+      training_loss: "multi_positive_cross_entropy"
+      regularizers: ["entropy_regularization_on_routing"]
+      curriculum: "mixed_n"
+      vector_dim: 128
+      hidden_dim: 32
+      coord_hops: 1
+      top_k_views: 4
+      epochs: 4
+      lr: 0.05
+      weight_decay: 0.0001
+      dropout: 0.0
+      frozen: false
+      max_train_examples: 128
+      config_id: "26e1c7a05997e96c"
+      latent_views: 16
+  - rank: 2
+    config_id: "552e1a052b9675b3"
+    architecture_family: "Explicit View Objective Assignment"
+    selection_score: 0.956017
+    capacity_C: 32
+    architecture:
+      name: "stage8b3_j_explicit_view_objective_assignment_02"
+      model_kind: "evidence_feature_latent"
+      roles: 8
+      avenues: 2
+      chunking: "semantic_key"
+      candidate_query: "candidate_task_query"
+      coordinator: "explicit_view_objective_assignment"
+      view_sharing: "partially_shared_role_adapters"
+      memory_compression: "slot_attention_compression"
+      attention_routing: "dense_all_view_attention"
+      training_loss: "multi_positive_cross_entropy"
+      regularizers: ["entropy_regularization_on_routing"]
+      curriculum: "mixed_n"
+      vector_dim: 128
+      hidden_dim: 32
+      coord_hops: 1
+      top_k_views: 4
+      epochs: 4
+      lr: 0.05
+      weight_decay: 0.0001
+      dropout: 0.0
+      frozen: false
+      max_train_examples: 128
+      config_id: "552e1a052b9675b3"
+      latent_views: 16
+  - rank: 3
+    config_id: "9737cdc966c78acf"
+    architecture_family: "Explicit View Objective Assignment"
+    selection_score: 0.945696
+    capacity_C: 32
+    architecture:
+      name: "stage8b3_j_explicit_view_objective_assignment_03"
+      model_kind: "evidence_feature_latent"
+      roles: 9
+      avenues: 2
+      chunking: "semantic_key"
+      candidate_query: "candidate_task_query"
+      coordinator: "explicit_view_objective_assignment"
+      view_sharing: "shared_encoder_role_avenue_embeddings"
+      memory_compression: "slot_attention_compression"
+      attention_routing: "dense_all_view_attention"
+      training_loss: "multi_positive_cross_entropy"
+      regularizers: ["entropy_regularization_on_routing"]
+      curriculum: "mixed_n"
+      vector_dim: 128
+      hidden_dim: 32
+      coord_hops: 1
+      top_k_views: 4
+      epochs: 4
+      lr: 0.05
+      weight_decay: 0.0001
+      dropout: 0.05
+      frozen: false
+      max_train_examples: 128
+      config_id: "9737cdc966c78acf"
+      latent_views: 18

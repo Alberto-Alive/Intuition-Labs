@@ -1,0 +1,603 @@
+{
+  "dataset_diagnostics": {
+    "dataset_config": {
+      "candidate_representation": "balanced_categories_v3",
+      "dataset_source": "real_import_restore_candidate_balanced_34b",
+      "generator_version": "real_import_restore_candidate_balanced_34b_stage38_schema_aware",
+      "include_private_signal_tokens": false,
+      "max_files": 40,
+      "n_dev": 128,
+      "n_test": 256,
+      "n_train": 256,
+      "n_views": 4,
+      "num_candidates": 8,
+      "snippet_radius": 2,
+      "source_roots": [
+        "src",
+        "tests"
+      ]
+    },
+    "metadata": {
+      "all_role_structured_target": 0.9,
+      "architecture_changes": "none",
+      "config_path": "configs\\stage34_candidate_sanitization_cuda_smoke.json",
+      "dataset_source": "real_import_restore_candidate_sanitized_v3",
+      "pairwise_structured_target": 0.7,
+      "preferred_max": 0.15,
+      "scope": "dataset-only shortcut diagnostics before any Stage 3.4 training",
+      "stage": "stage3.4_candidate_sanitization_diagnostics",
+      "static_frequency_max": 0.2,
+      "strict_max": 0.18
+    },
+    "seed_rows": [
+      {
+        "baselines": {
+          "all_role_structured_oracle_accuracy": 1.0,
+          "candidate_metadata_only_accuracy": 0.125,
+          "candidate_only_accuracy": 0.125,
+          "family_only_accuracy": 0.12109375,
+          "lexical_overlap_accuracy": 0.125,
+          "pairwise_structured_oracle": {
+            "0,1": 0.4375,
+            "0,2": 0.52734375,
+            "0,3": 0.48828125,
+            "1,2": 0.50390625,
+            "1,3": 0.4296875,
+            "2,3": 0.51171875
+          },
+          "role_pair_only_accuracy": 0.125,
+          "single_view_text": {
+            "0": 0.125,
+            "1": 0.125,
+            "2": 0.125,
+            "3": 0.125
+          },
+          "static_frequency_accuracy": 0.1328125,
+          "view_masked_candidates_visible_accuracy": 0.125
+        },
+        "gate_results": [
+          {
+            "gate": "exact symbol/module/path/candidate leakage remains 0",
+            "pass": true,
+            "value": {
+              "exact_candidate_symbol_module_or_path_rate": 0.0,
+              "exact_gold_import_statement_rate": 0.0,
+              "exact_gold_module_path_rate": 0.0,
+              "exact_gold_path_rate": 0.0,
+              "exact_gold_symbol_rate": 0.0,
+              "model_record_oracle_key_assertion_failures": 0,
+              "passes": true
+            }
+          },
+          {
+            "gate": "candidate-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "candidate-metadata-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "role-pair-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "family-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.12109375
+          },
+          {
+            "gate": "view-masked + candidates-visible baseline <= 0.18",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "lexical-overlap baseline <= 0.18",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "static frequency baseline <= 0.20",
+            "pass": true,
+            "value": 0.1328125
+          },
+          {
+            "gate": "single-view baselines <= 0.18",
+            "pass": true,
+            "value": {
+              "0": 0.125,
+              "1": 0.125,
+              "2": 0.125,
+              "3": 0.125
+            }
+          },
+          {
+            "gate": "at least one pairwise-role oracle >= 0.70",
+            "pass": false,
+            "value": {
+              "0,1": 0.4375,
+              "0,2": 0.52734375,
+              "0,3": 0.48828125,
+              "1,2": 0.50390625,
+              "1,3": 0.4296875,
+              "2,3": 0.51171875
+            }
+          },
+          {
+            "gate": "all-role structured oracle >= 0.90",
+            "pass": true,
+            "value": 1.0
+          }
+        ],
+        "label_counts": {
+          "dev": {
+            "0": 16,
+            "1": 16,
+            "2": 16,
+            "3": 16,
+            "4": 16,
+            "5": 16,
+            "6": 16,
+            "7": 16
+          },
+          "test": {
+            "0": 32,
+            "1": 32,
+            "2": 32,
+            "3": 32,
+            "4": 32,
+            "5": 32,
+            "6": 32,
+            "7": 32
+          },
+          "train": {
+            "0": 32,
+            "1": 32,
+            "2": 32,
+            "3": 32,
+            "4": 32,
+            "5": 32,
+            "6": 32,
+            "7": 32
+          }
+        },
+        "leakage": {
+          "exact_candidate_symbol_module_or_path_rate": 0.0,
+          "exact_gold_import_statement_rate": 0.0,
+          "exact_gold_module_path_rate": 0.0,
+          "exact_gold_path_rate": 0.0,
+          "exact_gold_symbol_rate": 0.0,
+          "model_record_oracle_key_assertion_failures": 0,
+          "passes": true
+        },
+        "seed": 0,
+        "split_sizes": {
+          "dev": 128,
+          "test": 256,
+          "train": 256
+        }
+      }
+    ],
+    "summary": {
+      "gate_table": [
+        {
+          "gate": "exact symbol/module/path/candidate leakage remains 0",
+          "pass": true,
+          "value": [
+            {
+              "exact_candidate_symbol_module_or_path_rate": 0.0,
+              "exact_gold_import_statement_rate": 0.0,
+              "exact_gold_module_path_rate": 0.0,
+              "exact_gold_path_rate": 0.0,
+              "exact_gold_symbol_rate": 0.0,
+              "model_record_oracle_key_assertion_failures": 0,
+              "passes": true
+            }
+          ]
+        },
+        {
+          "gate": "candidate-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "candidate-metadata-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "role-pair-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.125
+        },
+        {
+          "gate": "family-only baseline <= 0.18",
+          "pass": true,
+          "preferred": true,
+          "value": 0.12109375
+        },
+        {
+          "gate": "view-masked + candidates-visible <= 0.18",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "lexical-overlap baseline <= 0.18",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "static frequency baseline <= 0.20",
+          "pass": true,
+          "value": 0.1328125
+        },
+        {
+          "gate": "single-view baselines <= 0.18",
+          "pass": true,
+          "value": {
+            "0": 0.125,
+            "1": 0.125,
+            "2": 0.125,
+            "3": 0.125
+          }
+        },
+        {
+          "gate": "at least one pairwise-role oracle >= 0.70",
+          "pass": false,
+          "value": {
+            "0,1": 0.4375,
+            "0,2": 0.52734375,
+            "0,3": 0.48828125,
+            "1,2": 0.50390625,
+            "1,3": 0.4296875,
+            "2,3": 0.51171875
+          }
+        },
+        {
+          "gate": "all-role structured oracle >= 0.90",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "leakage_passes": true,
+      "max_pairwise_structured_oracle_accuracy": 0.52734375,
+      "max_single_view_accuracy": 0.125,
+      "mean_all_role_structured_oracle_accuracy": 1.0,
+      "mean_candidate_metadata_only_accuracy": 0.125,
+      "mean_candidate_only_accuracy": 0.125,
+      "mean_family_only_accuracy": 0.12109375,
+      "mean_lexical_overlap_accuracy": 0.125,
+      "mean_pairwise_structured_oracle": {
+        "0,1": 0.4375,
+        "0,2": 0.52734375,
+        "0,3": 0.48828125,
+        "1,2": 0.50390625,
+        "1,3": 0.4296875,
+        "2,3": 0.51171875
+      },
+      "mean_role_pair_only_accuracy": 0.125,
+      "mean_single_view_text": {
+        "0": 0.125,
+        "1": 0.125,
+        "2": 0.125,
+        "3": 0.125
+      },
+      "mean_static_frequency_accuracy": 0.1328125,
+      "mean_view_masked_candidates_visible_accuracy": 0.125,
+      "pretraining_dataset_validity_passed": false
+    }
+  },
+  "metadata": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "none",
+    "candidate_representation": "balanced_categories_v3",
+    "config_path": "configs\\stage34_candidate_sanitization_cuda_smoke.json",
+    "created_at_utc": "2026-05-15T16:28:48.641679+00:00",
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "device": "cuda",
+    "full_10_seed_validation_run": false,
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "schema_policy": "role-specific schema fields are preserved by default and treated as legitimate program-analysis evidence",
+    "scope": "one-seed tiny smoke plus dataset-only and cheap positive-control diagnostics; no full 10-seed validation",
+    "stage": "stage3.8_schema_aware_controls",
+    "stage_config": {
+      "batch_size": 32,
+      "epochs": 3,
+      "gradient_accumulation_steps": 1,
+      "hidden_dim": 64,
+      "lr": 0.002,
+      "max_candidates": 1,
+      "mixed_precision": "bf16",
+      "n_dev": 128,
+      "n_test": 256,
+      "n_train": 256,
+      "name": "stage3",
+      "patience": 2,
+      "seeds": [
+        0
+      ],
+      "tiny_ff_dim": 128,
+      "tiny_layers": 3
+    }
+  },
+  "positive_control_bridge": {
+    "rows": {
+      "all_view_tfidf_logistic_candidate_scorer": {
+        "dev": 0.1328125,
+        "test": 0.1171875,
+        "train": 0.2734375
+      },
+      "candidate_pair_compatibility_mlp": {
+        "dev": 1.0,
+        "test": 1.0,
+        "train": 1.0
+      },
+      "single_agent_full_context_tiny_transformer": {
+        "dev": 0.1484375,
+        "test": 0.1640625,
+        "train": 0.2265625
+      },
+      "small_cross_encoder_all_views_candidate": {
+        "dev": 0.40625,
+        "test": 0.28515625,
+        "train": 0.57421875
+      }
+    },
+    "summary": {
+      "at_least_one_model_facing_positive_control_ge_0_50": true,
+      "best_test_accuracy": 1.0,
+      "target": 0.5
+    }
+  },
+  "role_embedding_shuffle_reclassification": {
+    "diagnostic_only": true,
+    "expected_behavior": "may not collapse when private view schema text exposes role identity",
+    "explanation": "Role schema is legitimate evidence for schema-aware program-analysis agents. Shuffling runtime role embeddings alone is not a valid corruption when role identity is recoverable from the view schema.",
+    "implementation": {
+      "does_not_change_candidate_set": true,
+      "does_not_change_view_text": true,
+      "shuffles_runtime_role_ids": true
+    },
+    "new_name": "role_embedding_shuffle",
+    "old_name": "role_labels_shuffled",
+    "primary_gate": false
+  },
+  "schema_dataset_baselines": {
+    "rows": {
+      "candidate_only_baseline": {
+        "dev": 0.125,
+        "test": 0.125,
+        "train": 0.125
+      },
+      "evidence_only_no_candidates_baseline": {
+        "dev": 0.125,
+        "test": 0.125,
+        "train": 0.125
+      },
+      "null_evidence_values_baseline": {
+        "dev": 0.125,
+        "test": 0.125,
+        "train": 0.125
+      },
+      "schema_only_baseline": {
+        "dev": 0.125,
+        "test": 0.125,
+        "train": 0.125
+      }
+    },
+    "summary": {
+      "candidate_only_near_chance": true,
+      "evidence_only_no_candidates_near_chance": true,
+      "null_evidence_values_near_chance": true,
+      "schema_only_near_chance": true
+    }
+  },
+  "summary": {
+    "best_positive_control_test_accuracy": 1.0,
+    "full_validation_justified": true,
+    "positive_control_learnability_confirmed": true,
+    "replacement_primary_controls": [
+      "value_shuffle_within_schema",
+      "cross_example_view_bundle_shuffle",
+      "candidate_evidence_mismatch",
+      "schema_preserved_role_value_shuffle",
+      "null_evidence_values",
+      "schema_only",
+      "evidence_only_no_candidates",
+      "candidate_only"
+    ],
+    "role_embedding_shuffle_primary_gate": false,
+    "role_specific_schemas_treated_as_legitimate_evidence": true,
+    "schema_aware_corruption_controls_collapse": true,
+    "shortcut_diagnostics_pass": true,
+    "tiny_smoke_frozen_accuracy": 0.0546875,
+    "tiny_smoke_trainable_accuracy": 0.37890625,
+    "validation_decision": "justified"
+  },
+  "tiny_smoke": {
+    "control_rows": [
+      {
+        "accuracy": {
+          "frozen": 0.0546875,
+          "raw_latent": 0.09375,
+          "text_only": 0.125,
+          "trainable": 0.37890625
+        },
+        "condition": "none",
+        "control": "none",
+        "trainable_near_chance": false,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.0625,
+          "raw_latent": 0.11328125,
+          "text_only": 0.125,
+          "trainable": 0.078125
+        },
+        "condition": "none",
+        "control": "candidate_only",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": true
+      },
+      {
+        "accuracy": {
+          "frozen": 0.02734375,
+          "raw_latent": 0.1171875,
+          "text_only": 0.125,
+          "trainable": 0.14453125
+        },
+        "condition": "none",
+        "control": "view_masked_candidates_visible",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.02734375,
+          "raw_latent": 0.12890625,
+          "text_only": 0.125,
+          "trainable": 0.1015625
+        },
+        "condition": "none",
+        "control": "schema_only",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.03515625,
+          "raw_latent": 0.09375,
+          "text_only": 0.125,
+          "trainable": 0.125
+        },
+        "condition": "none",
+        "control": "value_shuffle_within_schema",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.03125,
+          "raw_latent": 0.1015625,
+          "text_only": 0.125,
+          "trainable": 0.15234375
+        },
+        "condition": "none",
+        "control": "cross_example_view_bundle_shuffle",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.1484375,
+          "raw_latent": 0.14453125,
+          "text_only": 0.125,
+          "trainable": 0.15234375
+        },
+        "condition": "none",
+        "control": "candidate_evidence_mismatch",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.03125,
+          "raw_latent": 0.12109375,
+          "text_only": 0.125,
+          "trainable": 0.13671875
+        },
+        "condition": "none",
+        "control": "schema_preserved_role_value_shuffle",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.02734375,
+          "raw_latent": 0.12890625,
+          "text_only": 0.125,
+          "trainable": 0.1171875
+        },
+        "condition": "none",
+        "control": "null_evidence_values",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.125,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.125
+        },
+        "condition": "none",
+        "control": "evidence_only_no_candidates",
+        "trainable_near_chance": true,
+        "zero_role_embeddings": false
+      },
+      {
+        "accuracy": {
+          "frozen": 0.0234375,
+          "raw_latent": 0.08203125,
+          "text_only": 0.125,
+          "trainable": 0.28515625
+        },
+        "condition": "role_labels_shuffled",
+        "control": "role_embedding_shuffle_diagnostic",
+        "trainable_near_chance": false,
+        "zero_role_embeddings": false
+      }
+    ],
+    "primary_accuracy": {
+      "candidate_evidence_mismatch": 0.15234375,
+      "candidate_only": 0.078125,
+      "cross_example_view_bundle_shuffle": 0.15234375,
+      "evidence_only_no_candidates": 0.125,
+      "frozen": 0.0546875,
+      "null_evidence_values": 0.1171875,
+      "oracle": 1.0,
+      "raw_latent": 0.09375,
+      "schema_only": 0.1015625,
+      "schema_preserved_role_value_shuffle": 0.13671875,
+      "text_only": 0.125,
+      "trainable": 0.37890625,
+      "value_shuffle_within_schema": 0.125
+    },
+    "seed": 0,
+    "split": "test",
+    "summary": {
+      "candidate_evidence_mismatch_collapsed": true,
+      "candidate_only_collapsed": true,
+      "cross_example_bundle_shuffle_collapsed": true,
+      "evidence_only_no_candidates_collapsed": true,
+      "null_evidence_values_collapsed": true,
+      "oracle_high": true,
+      "schema_only_collapsed": true,
+      "schema_preserved_role_value_shuffle_collapsed": true,
+      "trainable_above_chance": true,
+      "trainable_beats_frozen": true,
+      "trainable_beats_text_raw": true,
+      "value_shuffle_collapsed": true
+    }
+  }
+}

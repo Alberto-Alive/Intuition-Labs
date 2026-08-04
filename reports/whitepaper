@@ -1,0 +1,263 @@
+Yes — here is a white paper draft you can use and refine.
+
+# Goal-Led Private Science
+
+## An agentic research operating system for sensitive datasets
+
+### Abstract
+
+Modern science increasingly depends on datasets that are too sensitive, too regulated, or too commercially valuable to expose directly. Today, the dominant answer is to move researchers into controlled environments such as Trusted Research Environments, secure data enclaves, or clean rooms, where they work under rules, tooling constraints, and output checks. Those models are valuable, but they still assume that external researchers should directly interact with the protected environment through approved queries, templates, or workspaces. ([GOV.UK][1])
+
+This paper proposes a different paradigm: a goal-led, agentic research system in which outside scientists do not query the data directly. Instead, they provide research goals. A protected internal agent stack decomposes those goals into experiments, interacts with private datasets through a constrained interface, evaluates feasibility, runs analysis, and returns approved deliverables. The outside party sees outcomes, reports, or approved artifacts—not raw data, not schema-level access, and not the internal reasoning or intermediate queries.
+
+The result is not “a better query interface.” It is a shift from **researcher-access systems** to a **research execution system**. In this model, the core product is not access to data. The product is progress on a scientific objective under strict control.
+
+---
+
+## 1. The problem with current data-sharing practice
+
+Sensitive research data is usually handled through one of three broad patterns.
+
+The first is the **Trusted Research Environment** model: approved researchers enter a secure environment and work inside it. The defining principle is often summarized as “users go to the data; the data does not travel to them.” HDR UK describes TREs in exactly those terms. ([HDR UK][2])
+
+The second is the **clean room** model: collaborators can run approved analyses under policy constraints. AWS Clean Rooms, for example, is built around analysis rules, result controls, and SQL analysis templates that allow controlled queries over shared datasets. ([AWS Documentation][3])
+
+The third is the **privacy-preserving ML** model: train models with formal privacy mechanisms such as differential privacy, then release the model or its outputs under a mathematical privacy framework. NIST describes differential privacy as a framework that quantifies privacy loss when an entity’s data appears in a dataset. ([NIST Computer Security Resource Center][4])
+
+All three are important. But they still share an assumption: the outside party should interact, directly or indirectly, with the protected computation environment as a user of tools. Even when the environment is secure, the scientist still often has to understand the interface, frame the right queries, iterate manually, and bear the cognitive burden of navigating access rules, schemas, and output restrictions. ([AWS Documentation][5])
+
+That is a poor fit for many real collaborations. In practice, what researchers and partners often want is not access. They want answers, evidence, models, experimental design, and deliverables.
+
+---
+
+## 2. Vision: from data access to research execution
+
+The proposed system replaces direct protected-data interaction with a **goal-led agentic workflow**.
+
+An outside scientist states a goal such as:
+
+* identify whether a research direction is feasible,
+* design a cohort-stratified experiment,
+* test a mechanistic hypothesis,
+* evaluate a biomarker candidate,
+* generate a reproducible analysis package,
+* propose next experiments.
+
+The external user does **not** receive direct query access to the private dataset. They do **not** see internal prompts, hidden analysis steps, or low-level data structures. Instead, internal agents—operating inside a protected environment—translate the goal into a sequence of constrained actions.
+
+This is the central design move:
+
+**Do not expose the data.
+Do not expose the query language.
+Do not expose the internal reasoning trace.
+Expose only the approved outcome of the research workflow.**
+
+This changes the product boundary. The user is no longer a database user or even necessarily a clean-room analyst. The user becomes a customer of a private research operating system.
+
+---
+
+## 3. Proposed architecture
+
+### 3.1 Outer interface: goals, not queries
+
+The public-facing layer accepts high-level objectives, problem statements, and steering instructions. These are not executed directly against the data. Instead, they are translated into internal tasks by a controlled planner.
+
+This means the system can support multiple operating modes:
+
+* **Goal-only mode** for nontechnical or external scientists,
+* **Guided query mode** for advanced collaborators,
+* **TRE-like workspace mode** for selected approved users.
+
+The key difference is that these are all surfaces of the same protected platform rather than separate products.
+
+### 3.2 Internal planner agents
+
+Planner agents break a scientific objective into:
+
+* cohort discovery tasks,
+* feasibility tests,
+* literature-grounding steps,
+* hypothesis refinement,
+* internal analysis plans,
+* validation workflows,
+* candidate experiment proposals.
+
+These agents operate under strict permissions. They do not have arbitrary freedom. They call approved tools and query interfaces.
+
+### 3.3 DIGIT as constrained private interface
+
+DIGIT serves as a bounded reasoning interface over private data. Its role is not to expose raw tables. Its role is to answer protected internal questions in constrained form—for example through coarse evidence primitives, thresholded signals, abstentions, or tightly bounded structured outputs.
+
+In this architecture, DIGIT is not the full product. DIGIT is one protected component inside a larger research execution stack.
+
+### 3.4 Internal experiment agents
+
+Experiment agents run model training, hypothesis tests, workflow generation, and simulation or evaluation steps within the enclave. These agents may use the outputs of DIGIT, approved derived views, or tightly controlled internal tools.
+
+### 3.5 Output review and release
+
+The outside world does not receive raw intermediate results. It receives one of a small number of approved release types, such as:
+
+* feasibility confirmation,
+* no-go decision,
+* experimental plan,
+* model card,
+* report,
+* reproducible package,
+* candidate ranking,
+* approved summary.
+
+This is where the system aligns with established safe-output thinking. The Five Safes framework and secure research services both emphasize that controlled access alone is not enough; outputs must also be governed. ([GOV.UK][1])
+
+---
+
+## 4. The key idea: an agentic trusted research environment
+
+The best way to understand this system is not as a chatbot over private data and not as a thin privacy layer over LLMs.
+
+It is better understood as an **agentic Trusted Research Environment**.
+
+Existing TRE practice focuses on safe people, safe projects, safe settings, safe data, and safe outputs. The Five Safes framework has become a standard way to reason about these systems. ([GOV.UK][1])
+
+This proposal extends that logic:
+
+* **Safe people** become partially automated through privileged internal agents.
+* **Safe projects** become goal-validation and policy-screening pipelines.
+* **Safe settings** become sealed agentic execution environments.
+* **Safe data** remains protected and hidden from external parties.
+* **Safe outputs** become the main external contract.
+
+In other words, the platform does not eliminate governance. It encodes governance into the workflow itself.
+
+---
+
+## 5. Why this can outperform current practice
+
+### 5.1 Lower friction
+
+Traditional clean rooms and TREs still require researchers to operate inside constrained interfaces, templates, or workspaces. AWS Clean Rooms explicitly centers SQL analysis templates, analysis rules, and parameterized queries. ([AWS Documentation][5])
+
+A goal-led system removes much of that burden. Scientists think in hypotheses and desired outcomes, not in SQL or table joins.
+
+### 5.2 Better protection by default
+
+TREs and clean rooms are strong because they reduce exposure. But many still rely on the user to behave correctly within the allowed interface. This proposal narrows the surface further: external users do not even see the protected interaction layer.
+
+That does not eliminate leakage risk, but it turns a broad attack surface into a narrow governance chokepoint.
+
+### 5.3 Higher leverage for scarce datasets
+
+The same private dataset can support many collaborations without being copied, rehosted, or manually exposed to different external teams. The platform becomes a reusable execution substrate.
+
+### 5.4 Better fit for commercial and multi-party settings
+
+A pharmaceutical company may not want to expose its identity, schema, or data asset boundaries to outside researchers. In this design, the platform can truthfully say: “we can support this line of research through our protected collaborators,” without necessarily disclosing ownership, source identity, or direct table-level feasibility evidence.
+
+This is commercially important. The system can broker value without brokering raw access.
+
+---
+
+## 6. What this is not
+
+It is not a claim that no information can ever leak.
+
+It is not a replacement for every form of differential privacy.
+
+It is not a guarantee that hiding internal prompts solves the privacy problem.
+
+NIST’s differential privacy guidance is helpful here because it makes a critical distinction: meaningful privacy claims depend on the whole system, including threat model, access model, side channels, and release model—not just on one algorithmic component. ([NIST Computer Security Resource Center][4])
+
+This proposal should therefore be framed honestly:
+
+* It is a **strong architectural control model**.
+* It can incorporate **formal privacy mechanisms** where needed.
+* Its strength comes from **workflow design, mediation, output governance, and least-privilege execution**.
+
+---
+
+## 7. Main risks
+
+The strongest remaining risk is not raw exfiltration. It is **oracle behavior**.
+
+If outside users can repeatedly steer the system with small goal variations, they may learn more than intended from the pattern of outcomes. For example, even a simple “can support / cannot support” signal may become too informative if repeated enough across nearby cohort definitions.
+
+That is why repeated-use controls matter.
+
+The second major risk is **over-informative outputs**. A report, model artifact, ranking, or chart can reveal more than intended even if no raw rows are ever shown. This is exactly why secure research systems perform output checking and release review. ([Office for National Statistics][6])
+
+The third risk is **internal trace leakage** through logs, debugging, or agent memory. A hidden interface is only hidden if the surrounding operational systems are also protected.
+
+These risks are manageable, but only if treated as first-class product design concerns.
+
+---
+
+## 8. Design principles for deployment
+
+A production-grade version of this vision should follow eight principles.
+
+**1. Goal validation before execution.**
+Not every user objective should be allowed to trigger protected analysis.
+
+**2. Internal query compilation.**
+Free-text goals should be compiled into a tiny approved internal query DSL rather than passed downstream without structure.
+
+**3. Least-privilege agents.**
+Planner agents, DIGIT, experiment runners, and release systems should each have minimal permissions.
+
+**4. Output governance.**
+Release types must be standardized, policy-checked, and often reviewed.
+
+**5. Steering limits.**
+Related requests should be rate-limited, grouped, or reviewed to reduce oracle-style leakage.
+
+**6. Hidden traces.**
+Internal prompts, tool calls, and intermediate reasoning should not be visible externally.
+
+**7. Multi-mode platform design.**
+Goal mode, guided-query mode, and workspace mode can coexist, but under one consistent policy framework.
+
+**8. Formal privacy where it matters.**
+Where a mathematical guarantee is required—such as model training or released aggregate analytics—use formal mechanisms such as differential privacy rather than relying only on interface design. NIST explicitly frames DP as the tool for quantifying privacy loss in those settings. ([NIST Computer Security Resource Center][4])
+
+---
+
+## 9. Competitive position
+
+Relative to today’s market, this system is best viewed as a **layer above** existing secure data infrastructure.
+
+* Compared with **TREs**, it offers less direct researcher control but far lower friction. TREs remain the stronger answer for researchers who need hands-on exploration inside a secure environment. ([HDR UK][2])
+* Compared with **clean rooms**, it offers a more natural user experience by replacing query-first interaction with goal-first interaction. Clean rooms still remain more familiar and easier to audit for buyers used to query controls and SQL templates. ([AWS Documentation][5])
+* Compared with **DP-only solutions**, it offers a broader operating model for end-to-end research execution, while DP remains the stronger tool for formal guarantees on specific releases or training pipelines. ([NIST Computer Security Resource Center][4])
+
+The strategic position is therefore not “better than TREs” or “better than clean rooms.”
+
+It is:
+
+**a private research operating system that can sit on top of TREs, clean rooms, and formal privacy tooling.**
+
+---
+
+## 10. Conclusion
+
+Sensitive scientific data should not force a choice between two bad extremes: either expose external researchers to complex secure tooling, or lock the data away so tightly that collaboration slows to a crawl.
+
+There is a third path.
+
+A goal-led, agentic research platform can allow outside scientists to collaborate with protected datasets without direct access to those datasets, their schemas, or their internal query interfaces. It can combine the governance instincts of the Five Safes, the environmental discipline of TREs, the policy controls of clean rooms, and the selective use of formal privacy methods such as differential privacy where they are most needed. ([GOV.UK][1])
+
+The central insight is simple:
+
+**Researchers do not always need access to data.
+They need progress on scientific goals.**
+
+The winning system is therefore not the one that exposes the best query interface.
+It is the one that can turn a protected dataset into a protected scientific collaborator.
+
+---
+
+[1]: https://www.gov.uk/data-ethics-guidance/the-five-safes-framework?utm_source=chatgpt.com "The Five Safes Framework"
+[2]: https://www.hdruk.ac.uk/access-to-health-data/trusted-research-environments/?utm_source=chatgpt.com "Trusted Research Environments"
+[3]: https://docs.aws.amazon.com/clean-rooms/latest/userguide/analysis-rules.html?utm_source=chatgpt.com "Analysis rules in AWS Clean Rooms"
+[4]: https://csrc.nist.gov/pubs/sp/800/226/final?utm_source=chatgpt.com "Guidelines for Evaluating Differential Privacy Guarantees"
+[5]: https://docs.aws.amazon.com/clean-rooms/latest/userguide/sql-analysis-templates.html?utm_source=chatgpt.com "SQL analysis templates - AWS Clean Rooms"
+[6]: https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/secureresearchservice/aboutthesecureresearchservice?utm_source=chatgpt.com "About the Secure Research Service"

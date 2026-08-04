@@ -1,0 +1,44 @@
+{
+  "device": "auto",
+  "seeds": [0],
+  "max_variants": 8,
+  "variants": [
+    "P0_flat_baseline",
+    "P1_pairwise_pooled_composed_only",
+    "P2_pairwise_token_composed_only",
+    "P3_binary_tree_root_intermediate",
+    "P4_all_pairs_shared_composer",
+    "P5_recursive_weight_tied_composer",
+    "P6_candidate_guided_composition",
+    "P7_residual_pyramid"
+  ],
+  "run_overfit_gates": true,
+  "dataset": {
+    "dataset_root": "W:\\HocusPocus\\ARC-AGI-2",
+    "data_split": "training",
+    "num_candidates": 8,
+    "train_tasks": 24,
+    "dev_tasks": 8,
+    "test_tasks": 8,
+    "include_evaluation": false,
+    "max_train_pairs": 6,
+    "max_grid_size": 30,
+    "negative_difficulty": "mixed_hard"
+  },
+  "training": {
+    "epochs": 4,
+    "batch_size": 8,
+    "lr": 0.0007,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "gradient_clip_norm": 1.0
+  },
+  "overfit_training": {
+    "epochs": 24,
+    "batch_size": 8,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 24,
+    "gradient_clip_norm": 1.0
+  }
+}

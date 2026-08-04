@@ -1,0 +1,11 @@
+configs:
+  - config_id: 5114c2e4e870f881
+    architecture_name: e2_c_memory_slot_attention_00
+    architecture_family: Memory Slot Attention
+    held_out_template_dev_accuracy: 0.95625
+    capacity_C: 256
+    controls_pass: true
+    no_stage8c_run: true
+    no_10x_attention_capacity_claim: true
+    architecture_parameters_json: >
+      {"activation_cache": false, "champion_reference": false, "cleanqkv_v1_replay": false, "cleanqkv_v2": false, "config_id": "5114c2e4e870f881", "dat_mode": "none", "family_code": "C", "family_name": "Memory Slot Attention", "frozen": false, "hierarchical": false, "mechanisms": ["memory_slots", "learned_memory_slots"], "mutation_description": "initial", "name": "e2_c_memory_slot_attention_00", "parent_config_id": null, "stage8_config": {"attention_routing": "dense_all_view_attention", "avenues": 2, "candidate_query": "candidate_task_query", "chunking": "semantic_key", "config_id": "128ae62656fe53b3", "coord_hops": 1, "coordinator": "memory_slot_attention", "curriculum": "mixed_n", "dropout": 0.05, "epochs": 4, "frozen": false, "hidden_dim": 32, "latent_views": 12, "lr": 0.05, "max_train_examples": 128, "memory_compression": "slot_attention_compression", "model_kind": "evidence_feature_latent", "name": "e2_c_memory_slot_attention_00", "regularizers": ["entropy_regularization_on_routing"], "roles": 6, "top_k_views": 4, "training_loss": "multi_positive_cross_entropy", "vector_dim": 128, "view_sharing": "shared_encoder_role_avenue_embeddings", "weight_decay": 0.0001}, "support_contradiction": false, "trealized_mode": "none", "typed_memory_slots": true, "wda_scope": "none"}

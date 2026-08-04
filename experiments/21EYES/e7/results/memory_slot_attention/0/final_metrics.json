@@ -1,0 +1,371 @@
+{
+  "attention_kernel_summary": {
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal"
+    ],
+    "last_attention_paths": [
+      "manual_dense",
+      "manual_dense",
+      "manual_dense",
+      "manual_dense"
+    ],
+    "note": "Slot operations are dense tensor projections over causal hidden states; token self-attention uses SDPA during training.",
+    "slot_variant": true
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e7\\configs\\memory_slot_attention.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.2171875,
+    "accuracy_by_distractor_count": {
+      "17+": 0.10106382978723404,
+      "5-8": 0.41379310344827586,
+      "9-16": 0.21428571428571427
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.07407407407407407,
+      "2": 0.23076923076923078,
+      "3": 0.21875,
+      "4+": 0.22253521126760564
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.1796875,
+      "256": 0.2734375,
+      "512": 0.2734375
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.18292682926829268,
+      "multi_hop_lookup": 0.24528301886792453,
+      "password_overwrite": 0.17341040462427745,
+      "variable_shadowing": 0.2777777777777778
+    },
+    "control": null,
+    "examples": 640,
+    "examples_per_sec": 52.82241774164058,
+    "held_out_template_accuracy": 0.2171875,
+    "layers": {
+      "attention_entropy": [
+        3.431696492433548,
+        1.7553754150867462,
+        1.5302815347909928,
+        1.590733140707016
+      ],
+      "distractor_slot_concentration": [
+        0.02083942631725222,
+        0.029304305420373565,
+        0.4674103902245406,
+        0.24201960184145718
+      ],
+      "effective_attended_tokens": [
+        64.90235252380371,
+        9.218820488452911,
+        8.611258339881896,
+        9.757172787189484
+      ],
+      "innovation_norm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "innovation_stable_ratio": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "slot_diversity": [
+        0.0071750511764548715,
+        0.008784903562627733,
+        0.010315332026220859,
+        0.011341203865595163
+      ],
+      "slot_norm": [
+        10.52681610584259,
+        10.688182425498962,
+        10.532206583023072,
+        9.9635822057724
+      ],
+      "slot_read_entropy": [
+        4.158070909976959,
+        4.157385206222534,
+        4.156028831005097,
+        4.1467549204826355
+      ],
+      "slot_read_max": [
+        0.016989127872511743,
+        0.017495294846594334,
+        0.018468343140557408,
+        0.02302969335578382
+      ],
+      "slot_to_token_entropy": [
+        5.267435765266418,
+        5.267006206512451,
+        5.2342467427253725,
+        5.2552859544754025
+      ],
+      "slot_utilization": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_norm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "token_to_slot_entropy": [
+        4.148997378349304,
+        4.130090951919556,
+        2.497751259803772,
+        3.37329677939415
+      ],
+      "token_to_slot_max": [
+        0.021162611618638038,
+        0.02850545858964324,
+        0.47017337530851366,
+        0.2630754355341196
+      ],
+      "useful_evidence_slot_concentration": [
+        0.02065557833702769,
+        0.028809998897486366,
+        0.47493194707494696,
+        0.24192441846244037
+      ],
+      "useful_top10_position_recall": [
+        0.05,
+        0.0671875,
+        0.10546875,
+        0.1265625
+      ],
+      "useful_top10_recall": [
+        0.065625,
+        0.15703125,
+        0.44375,
+        0.853125
+      ],
+      "useful_top10_slot_recall": [
+        0.065625,
+        0.15703125,
+        0.44375,
+        0.853125
+      ],
+      "useful_top1_position_recall": [
+        0.0046875,
+        0.00625,
+        0.00390625,
+        0.00546875
+      ],
+      "useful_top1_recall": [
+        0.00625,
+        0.003125,
+        0.1109375,
+        0.20546875
+      ],
+      "useful_top1_slot_recall": [
+        0.00625,
+        0.003125,
+        0.1109375,
+        0.20546875
+      ],
+      "useful_top3_position_recall": [
+        0.0140625,
+        0.01171875,
+        0.0171875,
+        0.02265625
+      ],
+      "useful_top3_recall": [
+        0.01953125,
+        0.02109375,
+        0.21875,
+        0.7265625
+      ],
+      "useful_top3_slot_recall": [
+        0.01953125,
+        0.02109375,
+        0.21875,
+        0.7265625
+      ],
+      "useful_top5_position_recall": [
+        0.025,
+        0.02578125,
+        0.0484375,
+        0.03984375
+      ],
+      "useful_top5_recall": [
+        0.0375,
+        0.06328125,
+        0.31171875,
+        0.790625
+      ],
+      "useful_top5_slot_recall": [
+        0.0375,
+        0.06328125,
+        0.31171875,
+        0.790625
+      ],
+      "useful_vs_distractor_auc": [
+        0.5350406198122073,
+        0.5153596227348316,
+        0.5018185757973697,
+        0.4910811568319332
+      ],
+      "useful_vs_distractor_slot_auc": [
+        0.5350406198122073,
+        0.5153596227348316,
+        0.5018185757973697,
+        0.4910811568319332
+      ]
+    },
+    "loss": 3.743236541748047,
+    "peak_gpu_memory_mb": 5618.796875,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.078125,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.7178802490234375,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.2421875,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 3.463756561279297,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.21875,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.734699249267578,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.2734375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.4345016479492188,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "seq_len_512": {
+        "accuracy": 0.2734375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.365345001220703,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 512
+      }
+    },
+    "slot_diagnostics": {
+      "cross_layer_slot_cosine": 0.9940310046076775,
+      "cross_layer_slot_cosine_by_pair": [
+        0.9921008944511414,
+        0.9942756772041321,
+        0.9957164034247399
+      ],
+      "predicted_actual_slot_cosine": 0.0,
+      "predicted_actual_slot_cosine_by_pair": []
+    },
+    "tokens": 147456,
+    "tokens_per_sec": 12170.28504767399,
+    "wall_clock_eval_seconds": 12.116067900002236
+  },
+  "max_steps": 5000,
+  "parameter_count": 1782016,
+  "peak_gpu_memory_mb": 5618.796875,
+  "seed": 0,
+  "slot_controls": {
+    "base_accuracy": 0.22916666666666666,
+    "base_loss": 3.553899129231771,
+    "controls": {
+      "hidden_state_shuffle": {
+        "accuracy": 0.3020833333333333,
+        "drop": -0.07291666666666666,
+        "examples": 96,
+        "loss": 3.537968953450521,
+        "tokens_per_sec": 10180.750576938653
+      },
+      "slot_random": {
+        "accuracy": 0.15625,
+        "drop": 0.07291666666666666,
+        "examples": 96,
+        "loss": 3.83221435546875,
+        "tokens_per_sec": 10037.306629801922
+      },
+      "slot_shuffle": {
+        "accuracy": 0.22916666666666666,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.5538482666015625,
+        "tokens_per_sec": 9871.255150715078
+      },
+      "slot_zero": {
+        "accuracy": 0.2708333333333333,
+        "drop": -0.04166666666666666,
+        "examples": 96,
+        "loss": 3.5137430826822915,
+        "tokens_per_sec": 9848.466815391654
+      }
+    },
+    "examples": 96
+  },
+  "train_examples": 120000,
+  "train_examples_per_sec": 138.9375772954706,
+  "train_loss_ema": 3.4179230526609734,
+  "train_task_loss_ema": 3.417913704107273,
+  "train_tokens": 15360000,
+  "train_tokens_per_sec": 17784.009893820235,
+  "trainable_parameter_count": 1782016,
+  "variant": "memory_slot_attention",
+  "wall_clock_train_seconds": 863.697225299984
+}

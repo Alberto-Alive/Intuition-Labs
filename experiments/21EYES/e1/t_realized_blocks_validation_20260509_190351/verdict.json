@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "implementation_path_clean": true,
+    "no_controller_present": true,
+    "no_hypernetwork_present": true,
+    "task_learns": true,
+    "baseline_not_saturated": true,
+    "tblock_beats_fixed_small": true,
+    "tblock_improves_nll": false,
+    "tblock_ablations_hurt": true,
+    "tblock_approaches_medium": true,
+    "v_only_is_efficient": true,
+    "stacking_helps": true,
+    "stacking_not_just_more_depth": true,
+    "compute_reasonable": true,
+    "training_speed_not_catastrophic": true
+  },
+  "final_verdict": "STRONG_T_BLOCK_RESULT",
+  "selected_best_base_tblock": "tblock_all",
+  "selected_best_depth_tblock": "tblock_4block_all",
+  "thresholds": {
+    "random_accuracy": 0.1,
+    "effect_threshold": 0.02,
+    "ablation_nll_threshold": 0.05
+  },
+  "key_metrics": {
+    "fixed_small_accuracy": 0.4624,
+    "fixed_small_nll": 1.262915496826172,
+    "fixed_medium_accuracy": 0.46319999999999995,
+    "best_base_tblock_accuracy": 0.48600000000000004,
+    "best_base_tblock_nll": 1.2834951286315917,
+    "best_base_tblock_latency_ratio": 1.2047021877500739
+  },
+  "ablation_summary": {
+    "fixed_normal_attention": {
+      "accuracy": 0.3499,
+      "nll": 1.8734019577026366,
+      "accuracy_drop": 0.14915,
+      "nll_increase": 0.6578834604263306
+    },
+    "k_only": {
+      "accuracy": 0.37215000000000004,
+      "nll": 1.743825617980957,
+      "accuracy_drop": 0.12689999999999999,
+      "nll_increase": 0.5283071207046508
+    },
+    "random_T": {
+      "accuracy": 0.31015000000000004,
+      "nll": 2.163961646270752,
+      "accuracy_drop": 0.1889,
+      "nll_increase": 0.9484431489944457
+    },
+    "shuffle_T": {
+      "accuracy": 0.2834,
+      "nll": 2.377883708953857,
+      "accuracy_drop": 0.21564999999999998,
+      "nll_increase": 1.1623652116775514
+    },
+    "sigma_zero": {
+      "accuracy": 0.3499,
+      "nll": 1.8734019577026366,
+      "accuracy_drop": 0.14915,
+      "nll_increase": 0.6578834604263306
+    },
+    "t_zero": {
+      "accuracy": 0.3499,
+      "nll": 1.8734019577026366,
+      "accuracy_drop": 0.14915,
+      "nll_increase": 0.6578834604263306
+    },
+    "v_only": {
+      "accuracy": 0.48464999999999997,
+      "nll": 1.276796820640564,
+      "accuracy_drop": 0.0144,
+      "nll_increase": 0.06127832336425779
+    }
+  }
+}

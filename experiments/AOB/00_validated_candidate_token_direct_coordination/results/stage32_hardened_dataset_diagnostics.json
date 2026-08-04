@@ -1,0 +1,1430 @@
+{
+  "dataset_config": {
+    "candidate_representation": "hardened_redacted_v1",
+    "dataset_source": "real_import_restore_hardened",
+    "generator_version": "import_restore_redacted_v1_stage32",
+    "include_private_signal_tokens": false,
+    "max_files": 40,
+    "n_dev": 512,
+    "n_test": 1024,
+    "n_train": 2048,
+    "n_views": 4,
+    "num_candidates": 8,
+    "snippet_radius": 2,
+    "source_roots": [
+      "src",
+      "tests"
+    ]
+  },
+  "metadata": {
+    "architecture_changes": "none",
+    "config_path": "configs\\stage32_hardened_real_code_cuda.json",
+    "dataset_source": "real_import_restore_hardened",
+    "near_chance_threshold": 0.225,
+    "scope": "dataset-only shortcut diagnostics before Stage 3.2 training",
+    "stage": "stage3.2_hardened_dataset_diagnostics"
+  },
+  "seed_rows": [
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.11328125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.123046875,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.1318359375,
+          "single_view_text_role_3": 0.125
+        },
+        "static_import_frequency_accuracy": 0.158203125
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.11328125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.158203125
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.123046875,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1318359375,
+            "single_view_text_role_3": 0.125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 0,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.09765625,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.1220703125,
+          "single_view_text_role_2": 0.1220703125,
+          "single_view_text_role_3": 0.1162109375
+        },
+        "static_import_frequency_accuracy": 0.021484375
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.09765625
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.021484375
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.1220703125,
+            "single_view_text_role_2": 0.1220703125,
+            "single_view_text_role_3": 0.1162109375
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 1,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.0859375,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.1318359375
+        },
+        "static_import_frequency_accuracy": 0.0654296875
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.0859375
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.0654296875
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1318359375
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 2,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.1240234375,
+          "single_view_text_role_3": 0.125
+        },
+        "static_import_frequency_accuracy": 0.134765625
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.134765625
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1240234375,
+            "single_view_text_role_3": 0.125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 3,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.126953125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.1240234375,
+          "single_view_text_role_3": 0.125
+        },
+        "static_import_frequency_accuracy": 0.228515625
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.126953125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.228515625
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1240234375,
+            "single_view_text_role_3": 0.125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 4,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.119140625,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.12890625
+        },
+        "static_import_frequency_accuracy": 0.06640625
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.06640625
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.119140625,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.12890625
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 5,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.1220703125
+        },
+        "static_import_frequency_accuracy": 0.1494140625
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.1494140625
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1220703125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 6,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.1328125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.103515625,
+          "single_view_text_role_3": 0.125
+        },
+        "static_import_frequency_accuracy": 0.1484375
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.1328125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.1484375
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.103515625,
+            "single_view_text_role_3": 0.125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 7,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.05078125,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.1240234375,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.1240234375
+        },
+        "static_import_frequency_accuracy": 0.080078125
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.05078125
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.080078125
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.1240234375,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1240234375
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 8,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    },
+    {
+      "baselines": {
+        "candidate_lexical_overlap_accuracy": 0.041015625,
+        "candidate_order_accuracy": 0.125,
+        "explicit_structured_oracle_accuracy": 1.0,
+        "majority_accuracy": 0.125,
+        "single_view_text": {
+          "single_view_text_role_0": 0.1259765625,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.125
+        },
+        "static_import_frequency_accuracy": 0.189453125
+      },
+      "gate_results": [
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "value": 0.0
+        },
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "value": 0.041015625
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "value": 0.189453125
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "value": 0.125
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "value": {
+            "single_view_text_role_0": 0.1259765625,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.125
+          }
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "value": 1.0
+        }
+      ],
+      "label_counts": {
+        "dev": {
+          "0": 64,
+          "1": 64,
+          "2": 64,
+          "3": 64,
+          "4": 64,
+          "5": 64,
+          "6": 64,
+          "7": 64
+        },
+        "test": {
+          "0": 128,
+          "1": 128,
+          "2": 128,
+          "3": 128,
+          "4": 128,
+          "5": 128,
+          "6": 128,
+          "7": 128
+        },
+        "train": {
+          "0": 256,
+          "1": 256,
+          "2": 256,
+          "3": 256,
+          "4": 256,
+          "5": 256,
+          "6": 256,
+          "7": 256
+        }
+      },
+      "leakage": {
+        "exact_candidate_patch_text_rate": 0.0,
+        "exact_candidate_symbol_module_or_path_rate": 0.0,
+        "exact_gold_full_import_statement_rate": 0.0,
+        "exact_gold_module_path_rate": 0.0,
+        "exact_gold_symbol_rate": 0.0,
+        "exact_gold_target_path_rate": 0.0
+      },
+      "seed": 9,
+      "split_sizes": {
+        "dev": 512,
+        "test": 1024,
+        "train": 2048
+      }
+    }
+  ],
+  "summary": {
+    "gate_table": [
+      {
+        "gate": "candidate lexical-overlap baseline <= 0.2250",
+        "pass": true,
+        "values": [
+          0.11328125,
+          0.09765625,
+          0.0859375,
+          0.125,
+          0.126953125,
+          0.125,
+          0.125,
+          0.1328125,
+          0.05078125,
+          0.041015625
+        ]
+      },
+      {
+        "gate": "candidate-order baseline near chance <= 0.2250",
+        "pass": true,
+        "values": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ]
+      },
+      {
+        "gate": "exact candidate patch text leakage == 0.0000",
+        "pass": true,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "gate": "exact gold full import leakage == 0.0000",
+        "pass": true,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "gate": "exact gold module path leakage == 0.0000",
+        "pass": true,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "gate": "exact gold symbol leakage == 0.0000",
+        "pass": true,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "gate": "explicit structured oracle >= 0.9000",
+        "pass": true,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "gate": "majority baseline near chance <= 0.2250",
+        "pass": true,
+        "values": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ]
+      },
+      {
+        "gate": "single-view text baselines <= 0.2250",
+        "pass": true,
+        "values": [
+          {
+            "single_view_text_role_0": 0.123046875,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1318359375,
+            "single_view_text_role_3": 0.125
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.1220703125,
+            "single_view_text_role_2": 0.1220703125,
+            "single_view_text_role_3": 0.1162109375
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1318359375
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1240234375,
+            "single_view_text_role_3": 0.125
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.1240234375,
+            "single_view_text_role_3": 0.125
+          },
+          {
+            "single_view_text_role_0": 0.119140625,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.12890625
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1220703125
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.103515625,
+            "single_view_text_role_3": 0.125
+          },
+          {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.1240234375,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1240234375
+          },
+          {
+            "single_view_text_role_0": 0.1259765625,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.125
+          }
+        ]
+      },
+      {
+        "gate": "static import-frequency baseline <= 0.3000",
+        "pass": true,
+        "values": [
+          0.158203125,
+          0.021484375,
+          0.0654296875,
+          0.134765625,
+          0.228515625,
+          0.06640625,
+          0.1494140625,
+          0.1484375,
+          0.080078125,
+          0.189453125
+        ]
+      }
+    ],
+    "max_single_view_accuracy": 0.1318359375,
+    "mean_candidate_lexical_overlap_accuracy": 0.10234375,
+    "mean_candidate_order_accuracy": 0.125,
+    "mean_explicit_structured_oracle_accuracy": 1.0,
+    "mean_majority_accuracy": 0.125,
+    "mean_static_import_frequency_accuracy": 0.12421875,
+    "pretraining_dataset_validity_passed": true
+  }
+}

@@ -1,0 +1,4417 @@
+{
+  "audit": [
+    {
+      "benchmark": "stage0_original",
+      "dev_fingerprint": "de304bd142f7a0f0d0e860931037575e449c3f42ccc9a11de268c4efa2c5b2eb",
+      "dev_test_overlap": 0,
+      "seed": 0,
+      "test_fingerprint": "f878de8712a9d98d97f229826f1ea71934018883010411f3313de23c44a83beb",
+      "train_dev_overlap": 0,
+      "train_fingerprint": "abcdf28b50e6f45c02a358588741b3ee235cc9ae43acf218225721bb0322254a",
+      "train_test_overlap": 0,
+      "type": "split_overlap"
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 0,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 1,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 2,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 3,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 4,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 5,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 6,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 7,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 8,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 9,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 10,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 11,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 12,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 13,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 14,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 15,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 16,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 17,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_fit",
+      "event_index": 18,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "redundancy_probe_fit",
+      "event_index": 19,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": null,
+      "event": "test_gate_opened",
+      "event_index": 20,
+      "method": null,
+      "seed": 0,
+      "split_inputs": [],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 21,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 22,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 23,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 24,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 25,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 26,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 27,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 28,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 29,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 30,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 31,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 32,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 33,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 34,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 35,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 36,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 37,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 38,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 39,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 40,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 41,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 42,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 43,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 44,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "event": "redundancy_probe_test",
+      "event_index": 45,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "dev_fingerprint": "de304bd142f7a0f0d0e860931037575e449c3f42ccc9a11de268c4efa2c5b2eb",
+      "dev_test_overlap": 0,
+      "seed": 0,
+      "test_fingerprint": "f878de8712a9d98d97f229826f1ea71934018883010411f3313de23c44a83beb",
+      "train_dev_overlap": 0,
+      "train_fingerprint": "abcdf28b50e6f45c02a358588741b3ee235cc9ae43acf218225721bb0322254a",
+      "train_test_overlap": 0,
+      "type": "split_overlap"
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 0,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 1,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 2,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 3,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 4,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 5,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 6,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 7,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 8,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 9,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 10,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 11,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 12,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 13,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 14,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 15,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 16,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 17,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_fit",
+      "event_index": 18,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "redundancy_probe_fit",
+      "event_index": 19,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": null,
+      "event": "test_gate_opened",
+      "event_index": 20,
+      "method": null,
+      "seed": 0,
+      "split_inputs": [],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 21,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 22,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 23,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 24,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 25,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 26,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 27,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 28,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 29,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 30,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 31,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 32,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 33,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 34,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 35,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 36,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 37,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 38,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 39,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 40,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 41,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 42,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 43,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 44,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "event": "redundancy_probe_test",
+      "event_index": 45,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "dev_fingerprint": "ac84d570407de7eb9f52008ab717d7a41c89f5162f9b53e607c819c74c04cbbb",
+      "dev_test_overlap": 0,
+      "seed": 0,
+      "test_fingerprint": "24e1663c29430103a20b8b92639f90ca745e67d295cbc73de812fab1bb34c769",
+      "train_dev_overlap": 0,
+      "train_fingerprint": "e2b8fee3240f879fbd41664ce5b4806217177326a344da9a1bc5f3006eae7c88",
+      "train_test_overlap": 0,
+      "type": "split_overlap"
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 0,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 1,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 2,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 3,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 4,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 5,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 6,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 7,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 8,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 9,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 10,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 11,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 12,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 13,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 14,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 15,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "fit_start",
+      "event_index": 16,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "dev_predict",
+      "event_index": 17,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_fit",
+      "event_index": 18,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "redundancy_probe_fit",
+      "event_index": 19,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": null,
+      "event": "test_gate_opened",
+      "event_index": 20,
+      "method": null,
+      "seed": 0,
+      "split_inputs": [],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 21,
+      "method": "single_agent",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 22,
+      "method": "independent_swarm",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 23,
+      "method": "text_only_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 24,
+      "method": "capacity_matched_text_only",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 25,
+      "method": "activation_pool_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 26,
+      "method": "activation_pca_mlp",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 27,
+      "method": "activation_cluster_router",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 28,
+      "method": "telemetry_only_label_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "test_predict",
+      "event_index": 29,
+      "method": "output_only_oracle_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 30,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 31,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 32,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 33,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 34,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 35,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 36,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 37,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 38,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 39,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 40,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 41,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 42,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 43,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "agent_correctness_probe_test",
+      "event_index": 44,
+      "method": "agent_correctness_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "event": "redundancy_probe_test",
+      "event_index": 45,
+      "method": "redundancy_probe",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "type": "test_access_summary",
+      "violation_events": [],
+      "violations": 0
+    }
+  ],
+  "diagnostics": [
+    {
+      "accuracy": 0.5625,
+      "agent_id": 0,
+      "auc": 0.5028195488721805,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 0,
+      "auc": 0.9736842105263158,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8875,
+      "agent_id": 0,
+      "auc": 0.9630325814536341,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5625,
+      "agent_id": 1,
+      "auc": 0.38476190476190475,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8875,
+      "agent_id": 1,
+      "auc": 0.9834920634920635,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.875,
+      "agent_id": 1,
+      "auc": 0.9873015873015873,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5625,
+      "agent_id": 2,
+      "auc": 0.5333333333333333,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8875,
+      "agent_id": 2,
+      "auc": 0.9688888888888889,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8125,
+      "agent_id": 2,
+      "auc": 0.9682539682539683,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5625,
+      "agent_id": 3,
+      "auc": 0.42603174603174604,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 3,
+      "auc": 0.9796825396825397,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.975,
+      "agent_id": 3,
+      "auc": 0.9961904761904762,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5375,
+      "agent_id": 4,
+      "auc": 0.44437460716530486,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.7375,
+      "agent_id": 4,
+      "auc": 0.9641734758013828,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8375,
+      "agent_id": 4,
+      "auc": 0.9604022627278441,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "benchmark": "stage0_original",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.3675
+    },
+    {
+      "benchmark": "stage0_original",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.815
+    },
+    {
+      "accuracy": 0.575,
+      "agent_id": 0,
+      "auc": 0.5747342088805504,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9,
+      "agent_id": 0,
+      "auc": 0.9787367104440275,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9,
+      "agent_id": 0,
+      "auc": 0.9555972482801751,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.3625,
+      "agent_id": 1,
+      "auc": 0.4942528735632184,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.875,
+      "agent_id": 1,
+      "auc": 0.9628127112914131,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 1,
+      "auc": 0.9810682893847193,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6375,
+      "agent_id": 2,
+      "auc": 0.6835839598997494,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.875,
+      "agent_id": 2,
+      "auc": 0.9617794486215538,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.8375,
+      "agent_id": 2,
+      "auc": 0.9580200501253133,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.425,
+      "agent_id": 3,
+      "auc": 0.5601023017902813,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.875,
+      "agent_id": 3,
+      "auc": 0.9635549872122762,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9,
+      "agent_id": 3,
+      "auc": 0.9859335038363172,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6875,
+      "agent_id": 4,
+      "auc": 0.5163636363636364,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.8875,
+      "agent_id": 4,
+      "auc": 0.9752727272727273,
+      "benchmark": "stage0_original",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.8875,
+      "agent_id": 4,
+      "auc": 0.9723636363636363,
+      "benchmark": "stage0_original",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "benchmark": "stage0_original",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.33
+    },
+    {
+      "benchmark": "stage0_original",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.82
+    },
+    {
+      "accuracy": 0.6,
+      "agent_id": 0,
+      "auc": 0.650062656641604,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 0,
+      "auc": 0.9329573934837093,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.875,
+      "agent_id": 0,
+      "auc": 0.9348370927318296,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.6375,
+      "agent_id": 1,
+      "auc": 0.49628127112914133,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 1,
+      "auc": 0.9993238674780257,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 1,
+      "auc": 0.9891818796484111,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.65,
+      "agent_id": 2,
+      "auc": 0.6230818414322251,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.975,
+      "agent_id": 2,
+      "auc": 0.9968030690537084,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8,
+      "agent_id": 2,
+      "auc": 0.9955242966751918,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5375,
+      "agent_id": 3,
+      "auc": 0.4522888459058672,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.825,
+      "agent_id": 3,
+      "auc": 0.9232753062540296,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9,
+      "agent_id": 3,
+      "auc": 0.9626047711154094,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5625,
+      "agent_id": 4,
+      "auc": 0.5571428571428572,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.95,
+      "agent_id": 4,
+      "auc": 0.9739682539682539,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 4,
+      "auc": 0.9701587301587301,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.38
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.9525
+    },
+    {
+      "accuracy": 0.65,
+      "agent_id": 0,
+      "auc": 0.71875,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 0,
+      "auc": 0.9797979797979798,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.95,
+      "agent_id": 0,
+      "auc": 0.9924242424242424,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6125,
+      "agent_id": 1,
+      "auc": 0.5529953917050692,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 1,
+      "auc": 0.9874917709019092,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.8625,
+      "agent_id": 1,
+      "auc": 0.9855167873601053,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.65,
+      "agent_id": 2,
+      "auc": 0.6679561573178594,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9375,
+      "agent_id": 2,
+      "auc": 0.9877498388136686,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.85,
+      "agent_id": 2,
+      "auc": 0.9722759509993553,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.5375,
+      "agent_id": 3,
+      "auc": 0.66541588492808,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.8375,
+      "agent_id": 3,
+      "auc": 0.9362101313320825,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 3,
+      "auc": 0.9768605378361476,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6625,
+      "agent_id": 4,
+      "auc": 0.4018169112508735,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.925,
+      "agent_id": 4,
+      "auc": 0.9846261355695318,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.9125,
+      "agent_id": 4,
+      "auc": 0.983927323549965,
+      "benchmark": "stage0_label_reduced",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2810,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.315
+    },
+    {
+      "benchmark": "stage0_label_reduced",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.9275
+    },
+    {
+      "accuracy": 0.7125,
+      "agent_id": 0,
+      "auc": 0.5293668954996186,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.725,
+      "agent_id": 0,
+      "auc": 0.543859649122807,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.7125,
+      "agent_id": 0,
+      "auc": 0.4630053394355454,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.825,
+      "agent_id": 1,
+      "auc": 0.48917748917748916,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.825,
+      "agent_id": 1,
+      "auc": 0.6309523809523809,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.825,
+      "agent_id": 1,
+      "auc": 0.5573593073593074,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 2,
+      "auc": 0.39869281045751637,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 2,
+      "auc": 0.44724556489262374,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8,
+      "agent_id": 2,
+      "auc": 0.5564892623716153,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.675,
+      "agent_id": 3,
+      "auc": 0.5908119658119658,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.675,
+      "agent_id": 3,
+      "auc": 0.5776353276353277,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.675,
+      "agent_id": 3,
+      "auc": 0.4893162393162393,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8,
+      "agent_id": 4,
+      "auc": 0.591796875,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8,
+      "agent_id": 4,
+      "auc": 0.498046875,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8,
+      "agent_id": 4,
+      "auc": 0.466796875,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "benchmark": "strict_coordination",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.305
+    },
+    {
+      "benchmark": "strict_coordination",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "dev",
+      "value": 0.76
+    },
+    {
+      "accuracy": 0.7375,
+      "agent_id": 0,
+      "auc": 0.5117029862792575,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7375,
+      "agent_id": 0,
+      "auc": 0.46731234866828086,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7375,
+      "agent_id": 0,
+      "auc": 0.4350282485875706,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.75,
+      "agent_id": 1,
+      "auc": 0.5791666666666667,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.75,
+      "agent_id": 1,
+      "auc": 0.5733333333333334,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.75,
+      "agent_id": 1,
+      "auc": 0.49916666666666665,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 2,
+      "auc": 0.5471521942110178,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 2,
+      "auc": 0.4098972922502334,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.775,
+      "agent_id": 2,
+      "auc": 0.47619047619047616,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.775,
+      "agent_id": 3,
+      "auc": 0.5761648745519713,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.775,
+      "agent_id": 3,
+      "auc": 0.4453405017921147,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.775,
+      "agent_id": 3,
+      "auc": 0.525089605734767,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 4,
+      "auc": 0.453781512605042,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_output_only",
+      "n_examples": 80,
+      "param_count": 1898,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 4,
+      "auc": 0.4864612511671335,
+      "benchmark": "strict_coordination",
+      "feature_mode": "activation_only",
+      "n_examples": 80,
+      "param_count": 2042,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7875,
+      "agent_id": 4,
+      "auc": 0.44724556489262374,
+      "benchmark": "strict_coordination",
+      "feature_mode": "text_plus_activation",
+      "n_examples": 80,
+      "param_count": 2666,
+      "probe": "agent_correctness_probe",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "benchmark": "strict_coordination",
+      "clusters": 6,
+      "metric": "cluster_purity_by_answer_label",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.305
+    },
+    {
+      "benchmark": "strict_coordination",
+      "clusters": 6,
+      "metric": "cluster_purity_by_correctness",
+      "probe": "redundancy_probe",
+      "seed": 0,
+      "split": "test",
+      "value": 0.7675
+    }
+  ],
+  "metadata": {
+    "agent_config": {
+      "activation_noise": 0.85,
+      "activation_signal_strength": 1.25,
+      "agent_quality_signal_strength": 0.25,
+      "agent_signal_strength": 1.0,
+      "confidence_noise": 0.28,
+      "hidden_dim": 16,
+      "hidden_label_signal_strength": 0.0,
+      "n_agents": 5,
+      "num_layers": 3,
+      "reasoning_mode_signal_strength": 0.35,
+      "stuckness_signal_strength": 0.25,
+      "task_signal_strength": 1.0
+    },
+    "config": {
+      "agents": {
+        "activation_noise": 0.85,
+        "activation_signal_strength": 1.25,
+        "agent_quality_signal_strength": 0.25,
+        "agent_signal_strength": 1.0,
+        "confidence_noise": 0.28,
+        "hidden_dim": 16,
+        "hidden_label_signal_strength": 0.0,
+        "n_agents": 5,
+        "num_layers": 3,
+        "reasoning_mode_signal_strength": 0.35,
+        "stuckness_signal_strength": 0.25,
+        "task_signal_strength": 1.0
+      },
+      "controls": [
+        "none"
+      ],
+      "cuda_memory_budget_gb": 16.0,
+      "dataset": {
+        "feature_mod": 997,
+        "n_dev": 80,
+        "n_test": 80,
+        "n_train": 240,
+        "num_classes": 4,
+        "num_tasks": 4
+      },
+      "deterministic": true,
+      "device": "cpu",
+      "label_reduced_agents": {
+        "agent_quality_signal_strength": 0.35,
+        "agent_signal_strength": 1.0,
+        "hidden_label_signal_strength": 0.0,
+        "reasoning_mode_signal_strength": 0.45,
+        "stuckness_signal_strength": 0.35,
+        "task_signal_strength": 0.0
+      },
+      "output_path": "results/validation_parity_cpu.json",
+      "report_path": "reports/VALIDATION_PARITY_CPU.md",
+      "run_diagnostics": true,
+      "run_label_signal_ablation": true,
+      "run_randomized_label_leakage": false,
+      "run_strict_coordination": true,
+      "run_telemetry_channel_ablations": false,
+      "seeds": [
+        0
+      ],
+      "strict_agents": {
+        "activation_noise": 0.65,
+        "confidence_noise": 0.2,
+        "evidence_signal_strength": 1.35,
+        "hidden_dim": 16,
+        "n_agents": 5,
+        "num_layers": 3,
+        "reasoning_mode_signal_strength": 0.35,
+        "uncertainty_signal_strength": 0.45
+      },
+      "strict_dataset": {
+        "n_dev": 80,
+        "n_evidence_bits": 4,
+        "n_test": 80,
+        "n_train": 240,
+        "num_classes": 4,
+        "num_tasks": 1
+      },
+      "training": {
+        "batch_size": 128,
+        "clusters": 6,
+        "epochs": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "lr": 0.003,
+        "patience": 4,
+        "pca_components": 8,
+        "weight_decay": 0.0001
+      }
+    },
+    "config_path": "configs\\validation_parity_cpu.json",
+    "dataset_config": {
+      "feature_mod": 997,
+      "n_dev": 80,
+      "n_test": 80,
+      "n_train": 240,
+      "num_classes": 4,
+      "num_tasks": 4
+    },
+    "device_used": "cpu",
+    "hardware": {
+      "cuda_available": true,
+      "deterministic": true,
+      "fallback_reason": "cuda unavailable or not requested",
+      "torch_version": "2.11.0+cu128"
+    },
+    "label_reduced_agent_config": {
+      "activation_noise": 0.85,
+      "activation_signal_strength": 1.25,
+      "agent_quality_signal_strength": 0.35,
+      "agent_signal_strength": 1.0,
+      "confidence_noise": 0.28,
+      "hidden_dim": 16,
+      "hidden_label_signal_strength": 0.0,
+      "n_agents": 5,
+      "num_layers": 3,
+      "reasoning_mode_signal_strength": 0.45,
+      "stuckness_signal_strength": 0.35,
+      "task_signal_strength": 0.0
+    },
+    "strict_agent_config": {
+      "activation_noise": 0.65,
+      "confidence_noise": 0.2,
+      "evidence_signal_strength": 1.35,
+      "hidden_dim": 16,
+      "n_agents": 5,
+      "num_layers": 3,
+      "reasoning_mode_signal_strength": 0.35,
+      "uncertainty_signal_strength": 0.45
+    },
+    "strict_dataset_config": {
+      "n_dev": 80,
+      "n_evidence_bits": 4,
+      "n_test": 80,
+      "n_train": 240,
+      "num_classes": 4,
+      "num_tasks": 1
+    },
+    "training_config": {
+      "batch_size": 128,
+      "epochs": 8,
+      "hidden_dims": [
+        48,
+        24
+      ],
+      "lr": 0.003,
+      "patience": 4,
+      "weight_decay": 0.0001
+    }
+  },
+  "metrics": [
+    {
+      "accuracy": 0.475,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.5,
+        "1": 0.65,
+        "2": 0.45,
+        "3": 0.3
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.6,
+        "1": 0.45,
+        "2": 0.6,
+        "3": 0.4
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5875,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4060
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 4060,
+      "per_task_accuracy": {
+        "0": 0.4,
+        "1": 0.65,
+        "2": 0.65,
+        "3": 0.65
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.55,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.550000011920929,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "target_feature_dim": 137
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.5,
+        "1": 0.6,
+        "2": 0.6,
+        "3": 0.5
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.4125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4124999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.15,
+        "1": 0.65,
+        "2": 0.4,
+        "3": 0.45
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.4125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4124999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4444,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.15,
+        "1": 0.5,
+        "2": 0.65,
+        "3": 0.35
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.7625,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.95,
+        "1": 0.5,
+        "2": 0.7,
+        "3": 0.9
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.2875,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.2874999940395355,
+        "epochs_run": 7,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.0,
+        "1": 0.5,
+        "2": 0.25,
+        "3": 0.4
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.55,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.550000011920929,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          10,
+          234
+        ],
+        "param_count": 4444,
+        "param_delta_from_target": 0,
+        "target_param_count": 4444,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.2,
+        "1": 0.65,
+        "2": 0.7,
+        "3": 0.65
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.4875,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.55,
+        "1": 0.6,
+        "2": 0.5,
+        "3": 0.3
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.525,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.7,
+        "1": 0.65,
+        "2": 0.45,
+        "3": 0.3
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4060
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 4060,
+      "per_task_accuracy": {
+        "0": 0.8,
+        "1": 0.6,
+        "2": 0.35,
+        "3": 0.3
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.550000011920929,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "target_feature_dim": 137
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.8,
+        "1": 0.65,
+        "2": 0.4,
+        "3": 0.55
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.525,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4124999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.75,
+        "1": 0.5,
+        "2": 0.45,
+        "3": 0.4
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4124999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4444,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.7,
+        "1": 0.45,
+        "2": 0.65,
+        "3": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7625,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.95,
+        "1": 0.7,
+        "2": 0.6,
+        "3": 0.8
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.3125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.2874999940395355,
+        "epochs_run": 7,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.4,
+        "1": 0.15,
+        "2": 0.3,
+        "3": 0.4
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_original",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.550000011920929,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          10,
+          234
+        ],
+        "param_count": 4444,
+        "param_delta_from_target": 0,
+        "target_param_count": 4444,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.65,
+        "1": 0.6,
+        "2": 0.45,
+        "3": 0.35
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.475,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.6,
+        "1": 0.75,
+        "2": 0.15,
+        "3": 0.4
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.6,
+        "1": 0.5,
+        "2": 0.4,
+        "3": 0.55
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5625,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5625,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4060
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 4060,
+      "per_task_accuracy": {
+        "0": 0.6,
+        "1": 0.75,
+        "2": 0.3,
+        "3": 0.6
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5875,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "target_feature_dim": 137
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.55,
+        "1": 0.75,
+        "2": 0.4,
+        "3": 0.65
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.475,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4749999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.45,
+        "1": 0.7,
+        "2": 0.3,
+        "3": 0.45
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.4875,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.48750001192092896,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4444,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.65,
+        "1": 0.5,
+        "2": 0.35,
+        "3": 0.45
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.8875,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.95,
+        "1": 1.0,
+        "2": 0.75,
+        "3": 0.85
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.2125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.21250000596046448,
+        "epochs_run": 6,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.0,
+        "1": 0.25,
+        "2": 0.4,
+        "3": 0.2
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.512499988079071,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          10,
+          234
+        ],
+        "param_count": 4444,
+        "param_delta_from_target": 0,
+        "target_param_count": 4444,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.5,
+        "1": 0.7,
+        "2": 0.35,
+        "3": 0.5
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.55,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.7,
+        "1": 0.65,
+        "2": 0.15,
+        "3": 0.7
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.575,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.6,
+        "1": 0.65,
+        "2": 0.3,
+        "3": 0.75
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.7,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5625,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4060
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 4060,
+      "per_task_accuracy": {
+        "0": 0.75,
+        "1": 0.85,
+        "2": 0.45,
+        "3": 0.75
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "target_feature_dim": 137
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.65,
+        "1": 0.75,
+        "2": 0.35,
+        "3": 0.7
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.4749999940395355,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7900,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7900,
+      "per_task_accuracy": {
+        "0": 0.8,
+        "1": 0.55,
+        "2": 0.45,
+        "3": 0.65
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.48750001192092896,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4444,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.7,
+        "1": 0.6,
+        "2": 0.4,
+        "3": 0.75
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.925,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.95,
+        "1": 0.9,
+        "2": 0.9,
+        "3": 0.95
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.2875,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.21250000596046448,
+        "epochs_run": 6,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.4,
+        "1": 0.25,
+        "2": 0.2,
+        "3": 0.3
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.6125,
+      "benchmark": "stage0_label_reduced",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.512499988079071,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          10,
+          234
+        ],
+        "param_count": 4444,
+        "param_delta_from_target": 0,
+        "target_param_count": 4444,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4444,
+      "per_task_accuracy": {
+        "0": 0.7,
+        "1": 0.6,
+        "2": 0.35,
+        "3": 0.8
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.2875,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.2875
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.1625,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.1625
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.3125,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.3125,
+        "epochs_run": 5,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 3916
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 3916,
+      "per_task_accuracy": {
+        "0": 0.3125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.3,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.30000001192092896,
+        "epochs_run": 5,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7756,
+        "target_feature_dim": 134
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7756,
+      "per_task_accuracy": {
+        "0": 0.3
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.375,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.375,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7756,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7756,
+      "per_task_accuracy": {
+        "0": 0.375
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.45,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.44999998807907104,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4300,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4300,
+      "per_task_accuracy": {
+        "0": 0.45
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.175,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.175
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.5875,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.5875
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.3375,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.3375000059604645,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          9,
+          249
+        ],
+        "param_count": 4300,
+        "param_delta_from_target": 0,
+        "target_param_count": 4300,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4300,
+      "per_task_accuracy": {
+        "0": 0.3375
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.2625,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_index": 0
+      },
+      "method": "single_agent",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.2625
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.15,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "selection": "highest_visible_confidence"
+      },
+      "method": "independent_swarm",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.15
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.275,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.3125,
+        "epochs_run": 5,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 3916
+      },
+      "method": "text_only_coordinator",
+      "n_examples": 80,
+      "param_count": 3916,
+      "per_task_accuracy": {
+        "0": 0.275
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.2625,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.30000001192092896,
+        "epochs_run": 5,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7756,
+        "target_feature_dim": 134
+      },
+      "method": "capacity_matched_text_only",
+      "n_examples": 80,
+      "param_count": 7756,
+      "per_task_accuracy": {
+        "0": 0.2625
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.4,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.375,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 7756,
+        "pooling": "mean"
+      },
+      "method": "activation_pool_mlp",
+      "n_examples": 80,
+      "param_count": 7756,
+      "per_task_accuracy": {
+        "0": 0.4
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.4375,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.44999998807907104,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 4300,
+        "pca_components": 8,
+        "pooling": "mean"
+      },
+      "method": "activation_pca_mlp",
+      "n_examples": 80,
+      "param_count": 4300,
+      "per_task_accuracy": {
+        "0": 0.4375
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.225,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "clusters": 6,
+        "confidence_weight": 0.05,
+        "param_count": 0,
+        "pooling": "mean"
+      },
+      "method": "activation_cluster_router",
+      "n_examples": 80,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.225
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.5,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.5874999761581421,
+        "epochs_run": 8,
+        "hidden_dims": [
+          48,
+          24
+        ],
+        "param_count": 1708,
+        "pca_components": 8,
+        "pooling": "mean",
+        "visible_outputs": false
+      },
+      "method": "telemetry_only_label_probe",
+      "n_examples": 80,
+      "param_count": 1708,
+      "per_task_accuracy": {
+        "0": 0.5
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.2625,
+      "benchmark": "strict_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.3375000059604645,
+        "epochs_run": 8,
+        "hidden_activations": false,
+        "hidden_dims": [
+          9,
+          249
+        ],
+        "param_count": 4300,
+        "param_delta_from_target": 0,
+        "target_param_count": 4300,
+        "uses_visible_traces": true
+      },
+      "method": "output_only_oracle_probe",
+      "n_examples": 80,
+      "param_count": 4300,
+      "per_task_accuracy": {
+        "0": 0.2625
+      },
+      "seed": 0,
+      "split": "test"
+    }
+  ],
+  "validation": {
+    "probe_access": [
+      {
+        "artifact": "single_agent",
+        "dev_labels_for_early_stopping": false,
+        "hidden_activations": false,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": false,
+        "visible_agent_answers": true,
+        "visible_confidence": false,
+        "visible_traces": false
+      },
+      {
+        "artifact": "independent_swarm",
+        "dev_labels_for_early_stopping": false,
+        "hidden_activations": false,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": false,
+        "visible_agent_answers": true,
+        "visible_confidence": true,
+        "visible_traces": false
+      },
+      {
+        "artifact": "text_only_coordinator",
+        "dev_labels_for_early_stopping": true,
+        "hidden_activations": false,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": true,
+        "visible_agent_answers": true,
+        "visible_confidence": true,
+        "visible_traces": false
+      },
+      {
+        "artifact": "output_only_oracle_probe",
+        "dev_labels_for_early_stopping": true,
+        "hidden_activations": false,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": true,
+        "visible_agent_answers": true,
+        "visible_confidence": true,
+        "visible_traces": true
+      },
+      {
+        "artifact": "telemetry_only_label_probe",
+        "dev_labels_for_early_stopping": true,
+        "hidden_activations": true,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": true,
+        "visible_agent_answers": false,
+        "visible_confidence": false,
+        "visible_traces": false
+      },
+      {
+        "artifact": "activation_pca_mlp",
+        "dev_labels_for_early_stopping": true,
+        "hidden_activations": true,
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": true,
+        "visible_agent_answers": true,
+        "visible_confidence": true,
+        "visible_traces": false
+      },
+      {
+        "artifact": "agent_correctness_probe",
+        "dev_labels_for_early_stopping": true,
+        "hidden_activations": "varies_by_feature_mode",
+        "test_labels_or_eval_feedback": false,
+        "train_labels_for_fit": true,
+        "visible_agent_answers": "varies_by_feature_mode",
+        "visible_confidence": "varies_by_feature_mode",
+        "visible_traces": "varies_by_feature_mode"
+      }
+    ]
+  }
+}

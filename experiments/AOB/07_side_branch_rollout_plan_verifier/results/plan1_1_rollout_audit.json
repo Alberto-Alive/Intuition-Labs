@@ -1,0 +1,3943 @@
+{
+  "rollout_audit": [
+    {
+      "benchmark": "PLAN-1.1_ROLLOUT_CONTROL_REPAIR",
+      "condition_metrics": {
+        "interpretation": {
+          "action_mismatch_drop": 0.171875,
+          "final_only_drop": 0.265625,
+          "final_state_cue_sufficient": false,
+          "no_final_drop": 0.0,
+          "order_shuffle_drop": 0.078125,
+          "prefix_carries_signal": false,
+          "prefix_only_drop": 0.140625,
+          "state_mismatch_drop": 0.25,
+          "suffix_carries_signal": false,
+          "suffix_only_drop": 0.125,
+          "uses_temporal_order": true
+        },
+        "normal_evaluation": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.5
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.5
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.38461538461538464
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.42857142857142855
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.25
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.2857142857142857
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.3492063492063492
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.3492063492063492
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "gold_ranks": [
+            1,
+            8,
+            2,
+            7,
+            1,
+            2,
+            3,
+            1,
+            1,
+            1,
+            6,
+            4,
+            3,
+            2,
+            2,
+            4,
+            2,
+            6,
+            1,
+            2,
+            2,
+            3,
+            6,
+            2,
+            4,
+            3,
+            4,
+            1,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            3,
+            1,
+            4,
+            2,
+            3,
+            1,
+            1,
+            5,
+            3,
+            5,
+            2,
+            3,
+            4,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            4,
+            1,
+            2,
+            1,
+            2,
+            4,
+            1,
+            1,
+            2,
+            1,
+            3
+          ],
+          "mean_gold_rank": 2.5,
+          "mean_gold_vs_best_wrong_logit_margin": -0.1765941772609949,
+          "min_gold_vs_best_wrong_logit_margin": -2.3313705921173096,
+          "mrr": 0.5807477678571429,
+          "selected_collision_rate": 0.53125,
+          "selected_constraint_violation_rate": 0.53125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 18,
+            "near_miss": 2,
+            "valid_but_long": 7,
+            "valid_shortest": 22,
+            "wrong_goal": 6
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.109375,
+          "selected_valid_plan_average_cost": 6.9655172413793105,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 18,
+            "near_miss": 2,
+            "valid_but_long": 7,
+            "valid_shortest": 22,
+            "wrong_goal": 6
+          },
+          "selected_wrong_goal_rate": 0.015625,
+          "top1": 0.34375,
+          "top2": 0.625,
+          "top3": 0.765625
+        },
+        "rollout_action_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.1
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.25
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.42857142857142855
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 1.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.15873015873015872
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 1.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.15873015873015872
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "gold_ranks": [
+            1,
+            5,
+            3,
+            6,
+            2,
+            1,
+            4,
+            8,
+            1,
+            3,
+            4,
+            1,
+            2,
+            5,
+            6,
+            4,
+            2,
+            2,
+            2,
+            5,
+            1,
+            4,
+            6,
+            2,
+            1,
+            2,
+            1,
+            3,
+            8,
+            7,
+            8,
+            1,
+            5,
+            5,
+            1,
+            1,
+            6,
+            4,
+            2,
+            2,
+            3,
+            6,
+            4,
+            4,
+            6,
+            6,
+            8,
+            3,
+            5,
+            2,
+            5,
+            4,
+            1,
+            3,
+            3,
+            3,
+            3,
+            6,
+            4,
+            5,
+            7,
+            6,
+            7,
+            4
+          ],
+          "mean_gold_rank": 3.828125,
+          "mean_gold_vs_best_wrong_logit_margin": -0.5712328162044287,
+          "min_gold_vs_best_wrong_logit_margin": -3.4565489888191223,
+          "mrr": 0.39888392857142857,
+          "selected_collision_rate": 0.578125,
+          "selected_constraint_violation_rate": 0.578125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 2,
+            "invalid_dead_end": 6,
+            "near_miss": 2,
+            "valid_but_long": 13,
+            "valid_shortest": 11,
+            "wrong_goal": 19
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.375,
+          "selected_valid_but_suboptimal_rate": 0.203125,
+          "selected_valid_plan_average_cost": 7.666666666666667,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 2,
+            "invalid_dead_end": 6,
+            "near_miss": 2,
+            "valid_but_long": 13,
+            "valid_shortest": 11,
+            "wrong_goal": 19
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.171875,
+          "top2": 0.328125,
+          "top3": 0.46875
+        },
+        "rollout_final_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.2857142857142857
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.125
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.078125
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.07936507936507936
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.07936507936507936
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.078125
+            }
+          },
+          "gold_ranks": [
+            4,
+            4,
+            4,
+            2,
+            5,
+            4,
+            2,
+            6,
+            1,
+            6,
+            5,
+            2,
+            4,
+            4,
+            4,
+            6,
+            5,
+            4,
+            6,
+            4,
+            6,
+            6,
+            4,
+            1,
+            3,
+            3,
+            4,
+            4,
+            3,
+            7,
+            3,
+            2,
+            6,
+            4,
+            5,
+            2,
+            6,
+            6,
+            5,
+            3,
+            2,
+            2,
+            4,
+            2,
+            5,
+            4,
+            7,
+            2,
+            3,
+            7,
+            6,
+            5,
+            1,
+            3,
+            7,
+            3,
+            1,
+            4,
+            4,
+            3,
+            4,
+            1,
+            2,
+            6
+          ],
+          "mean_gold_rank": 3.953125,
+          "mean_gold_vs_best_wrong_logit_margin": -0.22992504201829433,
+          "min_gold_vs_best_wrong_logit_margin": -1.1270097494125366,
+          "mrr": 0.33288690476190474,
+          "selected_collision_rate": 0.6875,
+          "selected_constraint_violation_rate": 0.6875,
+          "selected_family_distribution": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 7,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 6,
+            "valid_shortest": 5,
+            "wrong_goal": 25
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.171875,
+          "selected_valid_but_suboptimal_rate": 0.09375,
+          "selected_valid_plan_average_cost": 7.818181818181818,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 7,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 6,
+            "valid_shortest": 5,
+            "wrong_goal": 25
+          },
+          "selected_wrong_goal_rate": 0.140625,
+          "top1": 0.078125,
+          "top2": 0.234375,
+          "top3": 0.375
+        },
+        "rollout_no_final": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.5
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.5
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.38461538461538464
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.42857142857142855
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.25
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.2857142857142857
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.3492063492063492
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.3492063492063492
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "gold_ranks": [
+            1,
+            8,
+            2,
+            7,
+            1,
+            2,
+            3,
+            1,
+            1,
+            1,
+            6,
+            4,
+            3,
+            2,
+            2,
+            3,
+            2,
+            6,
+            1,
+            2,
+            2,
+            3,
+            5,
+            2,
+            4,
+            3,
+            5,
+            1,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            3,
+            1,
+            4,
+            2,
+            3,
+            1,
+            1,
+            5,
+            3,
+            5,
+            2,
+            3,
+            4,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            4,
+            1,
+            2,
+            1,
+            2,
+            4,
+            1,
+            1,
+            3,
+            1,
+            3
+          ],
+          "mean_gold_rank": 2.5,
+          "mean_gold_vs_best_wrong_logit_margin": -0.1792688467539847,
+          "min_gold_vs_best_wrong_logit_margin": -2.367812991142273,
+          "mrr": 0.5791852678571427,
+          "selected_collision_rate": 0.53125,
+          "selected_constraint_violation_rate": 0.53125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 18,
+            "near_miss": 2,
+            "valid_but_long": 7,
+            "valid_shortest": 22,
+            "wrong_goal": 6
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.109375,
+          "selected_valid_plan_average_cost": 6.9655172413793105,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 18,
+            "near_miss": 2,
+            "valid_but_long": 7,
+            "valid_shortest": 22,
+            "wrong_goal": 6
+          },
+          "selected_wrong_goal_rate": 0.015625,
+          "top1": 0.34375,
+          "top2": 0.609375,
+          "top3": 0.78125
+        },
+        "rollout_order_shuffle": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.7
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.25
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.265625
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.2698412698412698
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.2698412698412698
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.265625
+            }
+          },
+          "gold_ranks": [
+            2,
+            3,
+            2,
+            4,
+            2,
+            2,
+            5,
+            1,
+            2,
+            1,
+            4,
+            1,
+            4,
+            5,
+            6,
+            4,
+            3,
+            7,
+            1,
+            1,
+            2,
+            4,
+            6,
+            2,
+            2,
+            2,
+            4,
+            2,
+            3,
+            1,
+            1,
+            1,
+            3,
+            1,
+            3,
+            1,
+            1,
+            4,
+            3,
+            1,
+            4,
+            5,
+            7,
+            5,
+            4,
+            4,
+            3,
+            1,
+            1,
+            1,
+            8,
+            3,
+            2,
+            3,
+            1,
+            2,
+            4,
+            6,
+            4,
+            1,
+            2,
+            2,
+            3,
+            4
+          ],
+          "mean_gold_rank": 2.921875,
+          "mean_gold_vs_best_wrong_logit_margin": -0.20898000989109278,
+          "min_gold_vs_best_wrong_logit_margin": -2.9038342237472534,
+          "mrr": 0.504594494047619,
+          "selected_collision_rate": 0.515625,
+          "selected_constraint_violation_rate": 0.515625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 16,
+            "near_miss": 3,
+            "valid_but_long": 13,
+            "valid_shortest": 17,
+            "wrong_goal": 7
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.46875,
+          "selected_valid_but_suboptimal_rate": 0.203125,
+          "selected_valid_plan_average_cost": 7.133333333333334,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 16,
+            "near_miss": 3,
+            "valid_but_long": 13,
+            "valid_shortest": 17,
+            "wrong_goal": 7
+          },
+          "selected_wrong_goal_rate": 0.015625,
+          "top1": 0.265625,
+          "top2": 0.484375,
+          "top3": 0.640625
+        },
+        "rollout_prefix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.4
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.0
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.203125
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.20634920634920634
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.20634920634920634
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.203125
+            }
+          },
+          "gold_ranks": [
+            4,
+            8,
+            4,
+            8,
+            4,
+            2,
+            7,
+            1,
+            2,
+            1,
+            6,
+            6,
+            4,
+            7,
+            3,
+            5,
+            3,
+            8,
+            1,
+            3,
+            2,
+            5,
+            6,
+            2,
+            6,
+            1,
+            7,
+            4,
+            2,
+            2,
+            2,
+            1,
+            3,
+            5,
+            4,
+            1,
+            5,
+            3,
+            4,
+            2,
+            1,
+            8,
+            3,
+            6,
+            3,
+            2,
+            5,
+            1,
+            1,
+            1,
+            5,
+            2,
+            2,
+            8,
+            1,
+            2,
+            3,
+            6,
+            8,
+            1,
+            1,
+            7,
+            4,
+            5
+          ],
+          "mean_gold_rank": 3.75,
+          "mean_gold_vs_best_wrong_logit_margin": -0.6610154709778726,
+          "min_gold_vs_best_wrong_logit_margin": -3.0439950227737427,
+          "mrr": 0.4279389880952381,
+          "selected_collision_rate": 0.609375,
+          "selected_constraint_violation_rate": 0.609375,
+          "selected_family_distribution": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 12,
+            "invalid_dead_end": 2,
+            "near_miss": 2,
+            "valid_but_long": 12,
+            "valid_shortest": 13,
+            "wrong_goal": 14
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.390625,
+          "selected_valid_but_suboptimal_rate": 0.1875,
+          "selected_valid_plan_average_cost": 7.52,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 12,
+            "invalid_dead_end": 2,
+            "near_miss": 2,
+            "valid_but_long": 12,
+            "valid_shortest": 13,
+            "wrong_goal": 14
+          },
+          "selected_wrong_goal_rate": 0.0,
+          "top1": 0.203125,
+          "top2": 0.390625,
+          "top3": 0.515625
+        },
+        "rollout_state_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.25
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.14285714285714285
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.09523809523809523
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.09523809523809523
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "gold_ranks": [
+            1,
+            8,
+            7,
+            2,
+            4,
+            2,
+            3,
+            4,
+            2,
+            5,
+            2,
+            7,
+            3,
+            1,
+            3,
+            2,
+            5,
+            1,
+            5,
+            3,
+            8,
+            4,
+            8,
+            2,
+            7,
+            4,
+            5,
+            5,
+            8,
+            4,
+            5,
+            5,
+            4,
+            5,
+            3,
+            8,
+            3,
+            7,
+            4,
+            7,
+            8,
+            4,
+            5,
+            3,
+            7,
+            5,
+            2,
+            7,
+            6,
+            7,
+            4,
+            7,
+            1,
+            5,
+            2,
+            8,
+            1,
+            3,
+            1,
+            5,
+            4,
+            4,
+            2,
+            4
+          ],
+          "mean_gold_rank": 4.390625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.8134031910449266,
+          "min_gold_vs_best_wrong_logit_margin": -3.282811999320984,
+          "mrr": 0.32646949404761905,
+          "selected_collision_rate": 0.578125,
+          "selected_constraint_violation_rate": 0.578125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 14,
+            "invalid_collision": 5,
+            "invalid_dead_end": 4,
+            "near_miss": 1,
+            "valid_but_long": 18,
+            "valid_shortest": 6,
+            "wrong_goal": 16
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.375,
+          "selected_valid_but_suboptimal_rate": 0.28125,
+          "selected_valid_plan_average_cost": 8.25,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 14,
+            "invalid_collision": 5,
+            "invalid_dead_end": 4,
+            "near_miss": 1,
+            "valid_but_long": 18,
+            "valid_shortest": 6,
+            "wrong_goal": 16
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.09375,
+          "top2": 0.234375,
+          "top3": 0.359375
+        },
+        "rollout_suffix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "11": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "7": {
+              "n": 7,
+              "top1": 0.2857142857142857
+            },
+            "8": {
+              "n": 8,
+              "top1": 0.375
+            },
+            "9": {
+              "n": 7,
+              "top1": 0.2857142857142857
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.21875
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 63,
+              "top1": 0.2222222222222222
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 63,
+              "top1": 0.2222222222222222
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.21875
+            }
+          },
+          "gold_ranks": [
+            4,
+            5,
+            3,
+            1,
+            3,
+            4,
+            1,
+            5,
+            1,
+            4,
+            4,
+            2,
+            3,
+            3,
+            4,
+            5,
+            2,
+            4,
+            4,
+            4,
+            2,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            2,
+            1,
+            4,
+            4,
+            1,
+            3,
+            2,
+            3,
+            1,
+            5,
+            4,
+            2,
+            2,
+            1,
+            1,
+            5,
+            3,
+            2,
+            5,
+            4,
+            2,
+            2,
+            2,
+            3,
+            3,
+            1,
+            4,
+            5,
+            3,
+            1,
+            2,
+            1,
+            3,
+            3,
+            1,
+            2,
+            4
+          ],
+          "mean_gold_rank": 2.765625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.2732921033166349,
+          "min_gold_vs_best_wrong_logit_margin": -2.2385390996932983,
+          "mrr": 0.4854166666666667,
+          "selected_collision_rate": 0.5625,
+          "selected_constraint_violation_rate": 0.5625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 10,
+            "invalid_dead_end": 2,
+            "near_miss": 4,
+            "valid_but_long": 10,
+            "valid_shortest": 14,
+            "wrong_goal": 15
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.375,
+          "selected_valid_but_suboptimal_rate": 0.15625,
+          "selected_valid_plan_average_cost": 7.958333333333333,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 10,
+            "invalid_dead_end": 2,
+            "near_miss": 4,
+            "valid_but_long": 10,
+            "valid_shortest": 14,
+            "wrong_goal": 15
+          },
+          "selected_wrong_goal_rate": 0.0625,
+          "top1": 0.21875,
+          "top2": 0.453125,
+          "top3": 0.671875
+        }
+      },
+      "normal_top1": 0.34375,
+      "seed": 0,
+      "variant": "P1_rollout_enabled"
+    },
+    {
+      "benchmark": "PLAN-1.1_ROLLOUT_CONTROL_REPAIR",
+      "condition_metrics": {
+        "interpretation": {
+          "action_mismatch_drop": 0.3125,
+          "final_only_drop": 0.359375,
+          "final_state_cue_sufficient": false,
+          "no_final_drop": 0.015625,
+          "order_shuffle_drop": 0.046875,
+          "prefix_carries_signal": false,
+          "prefix_only_drop": 0.171875,
+          "state_mismatch_drop": 0.265625,
+          "suffix_carries_signal": false,
+          "suffix_only_drop": 0.25,
+          "uses_temporal_order": false
+        },
+        "normal_evaluation": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.45454545454545453
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.5
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.25
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.359375
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.359375
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.359375
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.359375
+            }
+          },
+          "gold_ranks": [
+            1,
+            4,
+            1,
+            1,
+            3,
+            3,
+            1,
+            2,
+            1,
+            3,
+            4,
+            7,
+            4,
+            1,
+            1,
+            2,
+            3,
+            6,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            4,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            1,
+            4,
+            1,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            6,
+            4,
+            1,
+            2,
+            1,
+            7,
+            4,
+            1,
+            1,
+            3,
+            4,
+            3,
+            5,
+            1,
+            3,
+            5,
+            5,
+            4,
+            4,
+            3,
+            1
+          ],
+          "mean_gold_rank": 2.515625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.27655933634378016,
+          "min_gold_vs_best_wrong_logit_margin": -2.1435906887054443,
+          "mrr": 0.5815476190476191,
+          "selected_collision_rate": 0.515625,
+          "selected_constraint_violation_rate": 0.515625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 3,
+            "invalid_collision": 14,
+            "invalid_dead_end": 2,
+            "near_miss": 7,
+            "valid_but_long": 6,
+            "valid_shortest": 23,
+            "wrong_goal": 9
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.09375,
+          "selected_valid_plan_average_cost": 6.0344827586206895,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 3,
+            "invalid_collision": 14,
+            "invalid_dead_end": 2,
+            "near_miss": 7,
+            "valid_but_long": 6,
+            "valid_shortest": 23,
+            "wrong_goal": 9
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.359375,
+          "top2": 0.59375,
+          "top3": 0.734375
+        },
+        "rollout_action_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.25
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.046875
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.046875
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.046875
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.046875
+            }
+          },
+          "gold_ranks": [
+            5,
+            1,
+            2,
+            1,
+            6,
+            6,
+            4,
+            6,
+            4,
+            2,
+            8,
+            5,
+            2,
+            4,
+            6,
+            3,
+            5,
+            2,
+            2,
+            7,
+            4,
+            2,
+            4,
+            3,
+            3,
+            4,
+            4,
+            3,
+            5,
+            4,
+            4,
+            4,
+            8,
+            2,
+            2,
+            6,
+            3,
+            8,
+            8,
+            5,
+            5,
+            6,
+            2,
+            3,
+            4,
+            6,
+            4,
+            5,
+            2,
+            5,
+            3,
+            4,
+            6,
+            3,
+            3,
+            5,
+            8,
+            2,
+            6,
+            6,
+            3,
+            1,
+            6,
+            7
+          ],
+          "mean_gold_rank": 4.25,
+          "mean_gold_vs_best_wrong_logit_margin": -1.077784271677956,
+          "min_gold_vs_best_wrong_logit_margin": -4.57636584341526,
+          "mrr": 0.3066778273809524,
+          "selected_collision_rate": 0.578125,
+          "selected_constraint_violation_rate": 0.578125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 13,
+            "invalid_collision": 2,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 22,
+            "valid_shortest": 3,
+            "wrong_goal": 14
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.390625,
+          "selected_valid_but_suboptimal_rate": 0.34375,
+          "selected_valid_plan_average_cost": 8.56,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 13,
+            "invalid_collision": 2,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 22,
+            "valid_shortest": 3,
+            "wrong_goal": 14
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.046875,
+          "top2": 0.21875,
+          "top3": 0.375
+        },
+        "rollout_final_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.0
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "gold_ranks": [
+            5,
+            4,
+            3,
+            5,
+            5,
+            4,
+            5,
+            6,
+            4,
+            4,
+            7,
+            4,
+            2,
+            5,
+            3,
+            6,
+            6,
+            2,
+            3,
+            4,
+            4,
+            3,
+            5,
+            3,
+            4,
+            4,
+            6,
+            2,
+            7,
+            8,
+            5,
+            3,
+            4,
+            4,
+            4,
+            2,
+            5,
+            5,
+            2,
+            3,
+            5,
+            3,
+            7,
+            2,
+            5,
+            3,
+            3,
+            3,
+            3,
+            5,
+            2,
+            6,
+            6,
+            4,
+            2,
+            7,
+            3,
+            3,
+            4,
+            6,
+            5,
+            5,
+            5,
+            6
+          ],
+          "mean_gold_rank": 4.265625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.3884461906272918,
+          "min_gold_vs_best_wrong_logit_margin": -2.5201772451400757,
+          "mrr": 0.2686941964285714,
+          "selected_collision_rate": 0.6875,
+          "selected_constraint_violation_rate": 0.6875,
+          "selected_family_distribution": {
+            "deceptive_prefix": 12,
+            "invalid_collision": 7,
+            "invalid_dead_end": 7,
+            "near_miss": 6,
+            "valid_but_long": 9,
+            "wrong_goal": 23
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.140625,
+          "selected_valid_but_suboptimal_rate": 0.140625,
+          "selected_valid_plan_average_cost": 8.777777777777779,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 12,
+            "invalid_collision": 7,
+            "invalid_dead_end": 7,
+            "near_miss": 6,
+            "valid_but_long": 9,
+            "wrong_goal": 23
+          },
+          "selected_wrong_goal_rate": 0.171875,
+          "top1": 0.0,
+          "top2": 0.125,
+          "top3": 0.34375
+        },
+        "rollout_no_final": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.45454545454545453
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.45454545454545453
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.3076923076923077
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.25
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.34375
+            }
+          },
+          "gold_ranks": [
+            1,
+            4,
+            1,
+            2,
+            3,
+            3,
+            1,
+            2,
+            1,
+            2,
+            4,
+            5,
+            4,
+            1,
+            1,
+            2,
+            3,
+            6,
+            3,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            4,
+            3,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            5,
+            1,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            6,
+            4,
+            2,
+            2,
+            1,
+            7,
+            4,
+            1,
+            1,
+            3,
+            4,
+            3,
+            5,
+            1,
+            3,
+            5,
+            5,
+            4,
+            4,
+            3,
+            1
+          ],
+          "mean_gold_rank": 2.515625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.31284483743365854,
+          "min_gold_vs_best_wrong_logit_margin": -2.5533065795898438,
+          "mrr": 0.5738467261904762,
+          "selected_collision_rate": 0.53125,
+          "selected_constraint_violation_rate": 0.53125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 4,
+            "invalid_collision": 13,
+            "invalid_dead_end": 2,
+            "near_miss": 8,
+            "valid_but_long": 5,
+            "valid_shortest": 22,
+            "wrong_goal": 10
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.421875,
+          "selected_valid_but_suboptimal_rate": 0.078125,
+          "selected_valid_plan_average_cost": 5.962962962962963,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 4,
+            "invalid_collision": 13,
+            "invalid_dead_end": 2,
+            "near_miss": 8,
+            "valid_but_long": 5,
+            "valid_shortest": 22,
+            "wrong_goal": 10
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.34375,
+          "top2": 0.59375,
+          "top3": 0.734375
+        },
+        "rollout_order_shuffle": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.6363636363636364
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.36363636363636365
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.3125
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.3125
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.3125
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.3125
+            }
+          },
+          "gold_ranks": [
+            1,
+            5,
+            1,
+            3,
+            4,
+            2,
+            1,
+            3,
+            1,
+            3,
+            3,
+            6,
+            5,
+            1,
+            1,
+            2,
+            3,
+            5,
+            5,
+            1,
+            1,
+            2,
+            2,
+            3,
+            1,
+            1,
+            3,
+            4,
+            1,
+            2,
+            2,
+            1,
+            1,
+            1,
+            4,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            7,
+            6,
+            4,
+            2,
+            2,
+            7,
+            3,
+            2,
+            1,
+            3,
+            1,
+            3,
+            4,
+            2,
+            1,
+            5,
+            4,
+            5,
+            5,
+            4,
+            2
+          ],
+          "mean_gold_rank": 2.671875,
+          "mean_gold_vs_best_wrong_logit_margin": -0.3533302121795714,
+          "min_gold_vs_best_wrong_logit_margin": -2.073352098464966,
+          "mrr": 0.5484747023809524,
+          "selected_collision_rate": 0.515625,
+          "selected_constraint_violation_rate": 0.515625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 10,
+            "invalid_dead_end": 3,
+            "near_miss": 6,
+            "valid_but_long": 9,
+            "valid_shortest": 20,
+            "wrong_goal": 11
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.140625,
+          "selected_valid_plan_average_cost": 6.0,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 10,
+            "invalid_dead_end": 3,
+            "near_miss": 6,
+            "valid_but_long": 9,
+            "valid_shortest": 20,
+            "wrong_goal": 11
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.3125,
+          "top2": 0.5625,
+          "top3": 0.71875
+        },
+        "rollout_prefix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.2727272727272727
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.2727272727272727
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.15384615384615385
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.0
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.25
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.1875
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.1875
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.1875
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.1875
+            }
+          },
+          "gold_ranks": [
+            2,
+            5,
+            2,
+            3,
+            4,
+            5,
+            1,
+            3,
+            1,
+            5,
+            6,
+            7,
+            5,
+            1,
+            2,
+            2,
+            6,
+            6,
+            4,
+            4,
+            4,
+            3,
+            3,
+            7,
+            2,
+            2,
+            4,
+            4,
+            3,
+            3,
+            1,
+            1,
+            2,
+            1,
+            4,
+            3,
+            1,
+            5,
+            3,
+            1,
+            2,
+            1,
+            2,
+            7,
+            5,
+            2,
+            2,
+            1,
+            8,
+            6,
+            3,
+            1,
+            4,
+            5,
+            2,
+            6,
+            2,
+            3,
+            5,
+            8,
+            6,
+            2,
+            5,
+            1
+          ],
+          "mean_gold_rank": 3.4375,
+          "mean_gold_vs_best_wrong_logit_margin": -0.9001266681589186,
+          "min_gold_vs_best_wrong_logit_margin": -4.4718204736709595,
+          "mrr": 0.43456101190476193,
+          "selected_collision_rate": 0.640625,
+          "selected_constraint_violation_rate": 0.640625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 6,
+            "invalid_dead_end": 7,
+            "near_miss": 7,
+            "valid_but_long": 7,
+            "valid_shortest": 12,
+            "wrong_goal": 16
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.296875,
+          "selected_valid_but_suboptimal_rate": 0.109375,
+          "selected_valid_plan_average_cost": 6.526315789473684,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 9,
+            "invalid_collision": 6,
+            "invalid_dead_end": 7,
+            "near_miss": 7,
+            "valid_but_long": 7,
+            "valid_shortest": 12,
+            "wrong_goal": 16
+          },
+          "selected_wrong_goal_rate": 0.0625,
+          "top1": 0.1875,
+          "top2": 0.40625,
+          "top3": 0.5625
+        },
+        "rollout_state_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.09090909090909091
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.23076923076923078
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "gold_ranks": [
+            1,
+            6,
+            2,
+            3,
+            4,
+            8,
+            6,
+            8,
+            1,
+            8,
+            2,
+            1,
+            7,
+            8,
+            2,
+            4,
+            7,
+            5,
+            2,
+            3,
+            5,
+            6,
+            2,
+            2,
+            2,
+            5,
+            5,
+            2,
+            4,
+            2,
+            4,
+            3,
+            7,
+            7,
+            3,
+            4,
+            8,
+            6,
+            7,
+            2,
+            5,
+            6,
+            2,
+            2,
+            4,
+            5,
+            4,
+            5,
+            4,
+            3,
+            5,
+            1,
+            2,
+            6,
+            1,
+            5,
+            7,
+            2,
+            7,
+            5,
+            1,
+            4,
+            6,
+            5
+          ],
+          "mean_gold_rank": 4.234375,
+          "mean_gold_vs_best_wrong_logit_margin": -0.9172903361031786,
+          "min_gold_vs_best_wrong_logit_margin": -4.201338395476341,
+          "mrr": 0.3423177083333333,
+          "selected_collision_rate": 0.578125,
+          "selected_constraint_violation_rate": 0.578125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 19,
+            "invalid_dead_end": 6,
+            "near_miss": 5,
+            "valid_but_long": 18,
+            "valid_shortest": 6,
+            "wrong_goal": 10
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.375,
+          "selected_valid_but_suboptimal_rate": 0.28125,
+          "selected_valid_plan_average_cost": 8.041666666666666,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 19,
+            "invalid_dead_end": 6,
+            "near_miss": 5,
+            "valid_but_long": 18,
+            "valid_shortest": 6,
+            "wrong_goal": 10
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.09375,
+          "top2": 0.3125,
+          "top3": 0.390625
+        },
+        "rollout_suffix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 1,
+              "top1": 0.0
+            },
+            "12": {
+              "n": 2,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 11,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 22,
+              "top1": 0.09090909090909091
+            },
+            "6": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 6,
+              "top1": 0.3333333333333333
+            },
+            "9": {
+              "n": 4,
+              "top1": 0.75
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.109375
+            }
+          },
+          "by_number_of_constraints": {
+            "8": {
+              "n": 64,
+              "top1": 0.109375
+            }
+          },
+          "by_obstacle_density": {
+            "0.16": {
+              "n": 64,
+              "top1": 0.109375
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.109375
+            }
+          },
+          "gold_ranks": [
+            3,
+            1,
+            2,
+            2,
+            6,
+            3,
+            3,
+            4,
+            2,
+            5,
+            2,
+            1,
+            1,
+            2,
+            3,
+            4,
+            4,
+            1,
+            2,
+            3,
+            3,
+            2,
+            5,
+            2,
+            2,
+            4,
+            1,
+            3,
+            4,
+            7,
+            2,
+            2,
+            4,
+            2,
+            3,
+            2,
+            5,
+            3,
+            2,
+            2,
+            4,
+            1,
+            2,
+            5,
+            5,
+            1,
+            2,
+            3,
+            5,
+            3,
+            3,
+            5,
+            4,
+            3,
+            3,
+            5,
+            3,
+            4,
+            3,
+            3,
+            3,
+            5,
+            5,
+            6
+          ],
+          "mean_gold_rank": 3.125,
+          "mean_gold_vs_best_wrong_logit_margin": -0.2197485996875912,
+          "min_gold_vs_best_wrong_logit_margin": -1.6822707504034042,
+          "mrr": 0.4097842261904762,
+          "selected_collision_rate": 0.6875,
+          "selected_constraint_violation_rate": 0.6875,
+          "selected_family_distribution": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 11,
+            "invalid_dead_end": 7,
+            "near_miss": 5,
+            "valid_but_long": 12,
+            "valid_shortest": 7,
+            "wrong_goal": 11
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.296875,
+          "selected_valid_but_suboptimal_rate": 0.1875,
+          "selected_valid_plan_average_cost": 7.842105263157895,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 11,
+            "invalid_collision": 11,
+            "invalid_dead_end": 7,
+            "near_miss": 5,
+            "valid_but_long": 12,
+            "valid_shortest": 7,
+            "wrong_goal": 11
+          },
+          "selected_wrong_goal_rate": 0.015625,
+          "top1": 0.109375,
+          "top2": 0.375,
+          "top3": 0.65625
+        }
+      },
+      "normal_top1": 0.359375,
+      "seed": 1,
+      "variant": "P1_rollout_enabled"
+    },
+    {
+      "benchmark": "PLAN-1.1_ROLLOUT_CONTROL_REPAIR",
+      "condition_metrics": {
+        "interpretation": {
+          "action_mismatch_drop": 0.15625,
+          "final_only_drop": 0.25,
+          "final_state_cue_sufficient": false,
+          "no_final_drop": 0.015625,
+          "order_shuffle_drop": -0.015625,
+          "prefix_carries_signal": false,
+          "prefix_only_drop": 0.078125,
+          "state_mismatch_drop": 0.125,
+          "suffix_carries_signal": false,
+          "suffix_only_drop": 0.078125,
+          "uses_temporal_order": false
+        },
+        "normal_evaluation": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.2
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.42857142857142855
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.3333333333333333
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.25
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.2459016393442623
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.2459016393442623
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.25
+            }
+          },
+          "gold_ranks": [
+            3,
+            2,
+            3,
+            3,
+            2,
+            3,
+            4,
+            2,
+            1,
+            3,
+            1,
+            4,
+            2,
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            4,
+            3,
+            1,
+            1,
+            2,
+            5,
+            2,
+            2,
+            1,
+            1,
+            3,
+            2,
+            5,
+            3,
+            3,
+            3,
+            3,
+            5,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            3,
+            4,
+            2,
+            5,
+            3,
+            3,
+            5
+          ],
+          "mean_gold_rank": 2.40625,
+          "mean_gold_vs_best_wrong_logit_margin": -0.2695598844438791,
+          "min_gold_vs_best_wrong_logit_margin": -2.9123669862747192,
+          "mrr": 0.5377604166666667,
+          "selected_collision_rate": 0.5,
+          "selected_constraint_violation_rate": 0.5,
+          "selected_family_distribution": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 19,
+            "invalid_dead_end": 3,
+            "near_miss": 2,
+            "valid_but_long": 14,
+            "valid_shortest": 16,
+            "wrong_goal": 5
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.46875,
+          "selected_valid_but_suboptimal_rate": 0.21875,
+          "selected_valid_plan_average_cost": 7.666666666666667,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 19,
+            "invalid_dead_end": 3,
+            "near_miss": 2,
+            "valid_but_long": 14,
+            "valid_shortest": 16,
+            "wrong_goal": 5
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.25,
+          "top2": 0.578125,
+          "top3": 0.84375
+        },
+        "rollout_action_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.1
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.07142857142857142
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.4
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.09836065573770492
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.09836065573770492
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.09375
+            }
+          },
+          "gold_ranks": [
+            4,
+            4,
+            1,
+            5,
+            7,
+            6,
+            8,
+            3,
+            1,
+            8,
+            3,
+            6,
+            3,
+            3,
+            8,
+            2,
+            4,
+            5,
+            4,
+            8,
+            2,
+            8,
+            8,
+            6,
+            7,
+            4,
+            7,
+            6,
+            5,
+            6,
+            8,
+            4,
+            4,
+            2,
+            1,
+            7,
+            5,
+            5,
+            4,
+            4,
+            3,
+            8,
+            6,
+            8,
+            6,
+            5,
+            6,
+            5,
+            1,
+            6,
+            8,
+            7,
+            4,
+            3,
+            8,
+            2,
+            5,
+            6,
+            3,
+            1,
+            5,
+            2,
+            1,
+            4
+          ],
+          "mean_gold_rank": 4.828125,
+          "mean_gold_vs_best_wrong_logit_margin": -1.9415425505139865,
+          "min_gold_vs_best_wrong_logit_margin": -7.229506254196167,
+          "mrr": 0.29905133928571426,
+          "selected_collision_rate": 0.578125,
+          "selected_constraint_violation_rate": 0.578125,
+          "selected_family_distribution": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 4,
+            "invalid_dead_end": 8,
+            "near_miss": 4,
+            "valid_but_long": 19,
+            "valid_shortest": 6,
+            "wrong_goal": 18
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.390625,
+          "selected_valid_but_suboptimal_rate": 0.296875,
+          "selected_valid_plan_average_cost": 8.6,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 4,
+            "invalid_dead_end": 8,
+            "near_miss": 4,
+            "valid_but_long": 19,
+            "valid_shortest": 6,
+            "wrong_goal": 18
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.09375,
+          "top2": 0.171875,
+          "top3": 0.28125
+        },
+        "rollout_final_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.0
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.0
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.0
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.0
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.0
+            }
+          },
+          "gold_ranks": [
+            4,
+            4,
+            7,
+            5,
+            5,
+            3,
+            6,
+            6,
+            4,
+            4,
+            5,
+            6,
+            4,
+            3,
+            7,
+            8,
+            7,
+            4,
+            5,
+            4,
+            4,
+            4,
+            6,
+            4,
+            4,
+            5,
+            6,
+            6,
+            5,
+            4,
+            6,
+            5,
+            6,
+            8,
+            3,
+            6,
+            4,
+            5,
+            6,
+            3,
+            6,
+            2,
+            4,
+            4,
+            2,
+            6,
+            6,
+            6,
+            3,
+            2,
+            8,
+            3,
+            5,
+            4,
+            6,
+            5,
+            4,
+            6,
+            7,
+            2,
+            6,
+            4,
+            3,
+            7
+          ],
+          "mean_gold_rank": 4.875,
+          "mean_gold_vs_best_wrong_logit_margin": -0.477220204542391,
+          "min_gold_vs_best_wrong_logit_margin": -2.349267542362213,
+          "mrr": 0.23056175595238096,
+          "selected_collision_rate": 0.609375,
+          "selected_constraint_violation_rate": 0.609375,
+          "selected_family_distribution": {
+            "deceptive_prefix": 13,
+            "invalid_collision": 6,
+            "invalid_dead_end": 7,
+            "near_miss": 2,
+            "valid_but_long": 16,
+            "wrong_goal": 20
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.25,
+          "selected_valid_but_suboptimal_rate": 0.25,
+          "selected_valid_plan_average_cost": 9.375,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 13,
+            "invalid_collision": 6,
+            "invalid_dead_end": 7,
+            "near_miss": 2,
+            "valid_but_long": 16,
+            "wrong_goal": 20
+          },
+          "selected_wrong_goal_rate": 0.140625,
+          "top1": 0.0,
+          "top2": 0.0625,
+          "top3": 0.171875
+        },
+        "rollout_no_final": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.2
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.35714285714285715
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.3333333333333333
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.234375
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.22950819672131148
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.22950819672131148
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.234375
+            }
+          },
+          "gold_ranks": [
+            3,
+            2,
+            3,
+            3,
+            2,
+            3,
+            5,
+            2,
+            1,
+            3,
+            1,
+            4,
+            2,
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            5,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            4,
+            3,
+            1,
+            1,
+            2,
+            7,
+            2,
+            2,
+            1,
+            1,
+            4,
+            2,
+            5,
+            3,
+            3,
+            3,
+            3,
+            5,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            3,
+            4,
+            2,
+            5,
+            3,
+            3,
+            5
+          ],
+          "mean_gold_rank": 2.5,
+          "mean_gold_vs_best_wrong_logit_margin": -0.2998192699160427,
+          "min_gold_vs_best_wrong_logit_margin": -2.939303159713745,
+          "mrr": 0.5261904761904762,
+          "selected_collision_rate": 0.515625,
+          "selected_constraint_violation_rate": 0.515625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 20,
+            "invalid_dead_end": 3,
+            "near_miss": 2,
+            "valid_but_long": 14,
+            "valid_shortest": 15,
+            "wrong_goal": 5
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.21875,
+          "selected_valid_plan_average_cost": 7.724137931034483,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 20,
+            "invalid_dead_end": 3,
+            "near_miss": 2,
+            "valid_but_long": 14,
+            "valid_shortest": 15,
+            "wrong_goal": 5
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.234375,
+          "top2": 0.578125,
+          "top3": 0.828125
+        },
+        "rollout_order_shuffle": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.25
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.15384615384615385
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.2
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.35714285714285715
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.5
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.16666666666666666
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.265625
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.26229508196721313
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.3333333333333333
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.26229508196721313
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.265625
+            }
+          },
+          "gold_ranks": [
+            2,
+            4,
+            3,
+            1,
+            2,
+            6,
+            5,
+            2,
+            1,
+            4,
+            1,
+            1,
+            3,
+            3,
+            3,
+            1,
+            1,
+            4,
+            2,
+            3,
+            1,
+            2,
+            1,
+            2,
+            3,
+            2,
+            2,
+            3,
+            1,
+            4,
+            3,
+            1,
+            4,
+            5,
+            3,
+            1,
+            1,
+            2,
+            5,
+            6,
+            1,
+            1,
+            2,
+            4,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            1,
+            2,
+            2,
+            1,
+            1,
+            4,
+            4,
+            4,
+            2,
+            5,
+            3,
+            4,
+            5
+          ],
+          "mean_gold_rank": 2.6875,
+          "mean_gold_vs_best_wrong_logit_margin": -0.4539908394217491,
+          "min_gold_vs_best_wrong_logit_margin": -4.304730653762817,
+          "mrr": 0.5161458333333333,
+          "selected_collision_rate": 0.484375,
+          "selected_constraint_violation_rate": 0.484375,
+          "selected_family_distribution": {
+            "deceptive_prefix": 6,
+            "invalid_collision": 17,
+            "invalid_dead_end": 1,
+            "near_miss": 1,
+            "valid_but_long": 13,
+            "valid_shortest": 17,
+            "wrong_goal": 9
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.46875,
+          "selected_valid_but_suboptimal_rate": 0.203125,
+          "selected_valid_plan_average_cost": 7.333333333333333,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 6,
+            "invalid_collision": 17,
+            "invalid_dead_end": 1,
+            "near_miss": 1,
+            "valid_but_long": 13,
+            "valid_shortest": 17,
+            "wrong_goal": 9
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.265625,
+          "top2": 0.484375,
+          "top3": 0.71875
+        },
+        "rollout_prefix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.4
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.2857142857142857
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.0
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.18032786885245902
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.18032786885245902
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "gold_ranks": [
+            6,
+            7,
+            6,
+            3,
+            1,
+            3,
+            7,
+            2,
+            1,
+            6,
+            3,
+            7,
+            2,
+            2,
+            4,
+            1,
+            8,
+            4,
+            5,
+            2,
+            4,
+            3,
+            1,
+            2,
+            1,
+            5,
+            8,
+            1,
+            2,
+            8,
+            5,
+            4,
+            3,
+            8,
+            4,
+            1,
+            1,
+            2,
+            8,
+            3,
+            3,
+            1,
+            5,
+            8,
+            4,
+            5,
+            3,
+            3,
+            4,
+            4,
+            6,
+            1,
+            1,
+            2,
+            6,
+            2,
+            8,
+            4,
+            4,
+            5,
+            5,
+            3,
+            5,
+            5
+          ],
+          "mean_gold_rank": 3.921875,
+          "mean_gold_vs_best_wrong_logit_margin": -1.0781275164335966,
+          "min_gold_vs_best_wrong_logit_margin": -4.894253253936768,
+          "mrr": 0.39484747023809524,
+          "selected_collision_rate": 0.59375,
+          "selected_constraint_violation_rate": 0.59375,
+          "selected_family_distribution": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 14,
+            "invalid_dead_end": 2,
+            "near_miss": 6,
+            "valid_but_long": 12,
+            "valid_shortest": 11,
+            "wrong_goal": 14
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.359375,
+          "selected_valid_but_suboptimal_rate": 0.1875,
+          "selected_valid_plan_average_cost": 7.608695652173913,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 5,
+            "invalid_collision": 14,
+            "invalid_dead_end": 2,
+            "near_miss": 6,
+            "valid_but_long": 12,
+            "valid_shortest": 11,
+            "wrong_goal": 14
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.171875,
+          "top2": 0.3125,
+          "top3": 0.46875
+        },
+        "rollout_state_mismatch": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.0
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.07692307692307693
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.14285714285714285
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.16666666666666666
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.3333333333333333
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.125
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.6666666666666666
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.09836065573770492
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.6666666666666666
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.09836065573770492
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.125
+            }
+          },
+          "gold_ranks": [
+            7,
+            3,
+            5,
+            2,
+            7,
+            4,
+            8,
+            8,
+            6,
+            4,
+            3,
+            1,
+            4,
+            5,
+            6,
+            8,
+            6,
+            2,
+            3,
+            4,
+            5,
+            2,
+            2,
+            3,
+            7,
+            1,
+            6,
+            8,
+            2,
+            1,
+            6,
+            2,
+            8,
+            1,
+            8,
+            8,
+            3,
+            5,
+            5,
+            1,
+            2,
+            2,
+            8,
+            7,
+            7,
+            7,
+            5,
+            6,
+            1,
+            5,
+            4,
+            4,
+            7,
+            8,
+            4,
+            7,
+            5,
+            8,
+            8,
+            7,
+            6,
+            1,
+            2,
+            1
+          ],
+          "mean_gold_rank": 4.71875,
+          "mean_gold_vs_best_wrong_logit_margin": -1.7609285719227046,
+          "min_gold_vs_best_wrong_logit_margin": -6.920761823654175,
+          "mrr": 0.33350074404761904,
+          "selected_collision_rate": 0.609375,
+          "selected_constraint_violation_rate": 0.609375,
+          "selected_family_distribution": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 5,
+            "invalid_dead_end": 5,
+            "near_miss": 7,
+            "valid_but_long": 14,
+            "valid_shortest": 8,
+            "wrong_goal": 17
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.34375,
+          "selected_valid_but_suboptimal_rate": 0.21875,
+          "selected_valid_plan_average_cost": 8.5,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 5,
+            "invalid_dead_end": 5,
+            "near_miss": 7,
+            "valid_but_long": 14,
+            "valid_shortest": 8,
+            "wrong_goal": 17
+          },
+          "selected_wrong_goal_rate": 0.046875,
+          "top1": 0.125,
+          "top2": 0.265625,
+          "top3": 0.34375
+        },
+        "rollout_suffix_only": {
+          "by_goal_distance": {
+            "10": {
+              "n": 4,
+              "top1": 0.5
+            },
+            "4": {
+              "n": 13,
+              "top1": 0.0
+            },
+            "5": {
+              "n": 10,
+              "top1": 0.0
+            },
+            "6": {
+              "n": 14,
+              "top1": 0.14285714285714285
+            },
+            "7": {
+              "n": 5,
+              "top1": 0.2
+            },
+            "8": {
+              "n": 12,
+              "top1": 0.3333333333333333
+            },
+            "9": {
+              "n": 6,
+              "top1": 0.3333333333333333
+            }
+          },
+          "by_map_size": {
+            "7": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "by_number_of_constraints": {
+            "4": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "8": {
+              "n": 61,
+              "top1": 0.18032786885245902
+            }
+          },
+          "by_obstacle_density": {
+            "0.08": {
+              "n": 3,
+              "top1": 0.0
+            },
+            "0.16": {
+              "n": 61,
+              "top1": 0.18032786885245902
+            }
+          },
+          "by_plan_length": {
+            "16": {
+              "n": 64,
+              "top1": 0.171875
+            }
+          },
+          "gold_ranks": [
+            3,
+            2,
+            4,
+            2,
+            4,
+            1,
+            5,
+            1,
+            3,
+            3,
+            1,
+            3,
+            4,
+            5,
+            2,
+            7,
+            2,
+            2,
+            2,
+            3,
+            2,
+            4,
+            1,
+            3,
+            4,
+            4,
+            2,
+            4,
+            1,
+            1,
+            6,
+            4,
+            5,
+            3,
+            4,
+            3,
+            1,
+            2,
+            4,
+            3,
+            3,
+            5,
+            1,
+            3,
+            2,
+            6,
+            6,
+            5,
+            4,
+            3,
+            7,
+            4,
+            5,
+            3,
+            1,
+            5,
+            1,
+            4,
+            6,
+            2,
+            4,
+            2,
+            1,
+            5
+          ],
+          "mean_gold_rank": 3.25,
+          "mean_gold_vs_best_wrong_logit_margin": -0.23280741879716516,
+          "min_gold_vs_best_wrong_logit_margin": -1.1563354134559631,
+          "mrr": 0.4279017857142857,
+          "selected_collision_rate": 0.515625,
+          "selected_constraint_violation_rate": 0.515625,
+          "selected_family_distribution": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 8,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 18,
+            "valid_shortest": 11,
+            "wrong_goal": 9
+          },
+          "selected_near_miss_rate": 0.0,
+          "selected_plan_success_rate": 0.453125,
+          "selected_valid_but_suboptimal_rate": 0.28125,
+          "selected_valid_plan_average_cost": 8.620689655172415,
+          "selected_vs_gold_family_confusion": {
+            "deceptive_prefix": 8,
+            "invalid_collision": 8,
+            "invalid_dead_end": 5,
+            "near_miss": 5,
+            "valid_but_long": 18,
+            "valid_shortest": 11,
+            "wrong_goal": 9
+          },
+          "selected_wrong_goal_rate": 0.03125,
+          "top1": 0.171875,
+          "top2": 0.359375,
+          "top3": 0.5625
+        }
+      },
+      "normal_top1": 0.25,
+      "seed": 2,
+      "variant": "P1_rollout_enabled"
+    }
+  ]
+}

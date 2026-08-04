@@ -1,0 +1,947 @@
+{
+  "config": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "audit_log_path": "results/stage32_hardened_real_code_smoke_audit.jsonl",
+    "checkpoint_dir": "results/stage32_hardened_real_code_smoke_checkpoints",
+    "control_chance_tolerance": 0.1,
+    "cuda_memory_budget_gb": 16.0,
+    "dataset": "real_import_restore_hardened",
+    "dataset_config": {
+      "candidate_representation": "hardened_redacted_v1",
+      "generator_version": "import_restore_redacted_v1_stage32_smoke",
+      "max_files": 40,
+      "snippet_radius": 2,
+      "source_roots": [
+        "src",
+        "tests"
+      ]
+    },
+    "dataset_diagnostics": {
+      "single_view_epochs": 4,
+      "single_view_feature_dim": 128,
+      "single_view_lr": 0.002,
+      "single_view_patience": 2,
+      "use_cuda_for_single_view": false
+    },
+    "dataset_diagnostics_output_path": "results/stage32_hardened_dataset_diagnostics.json",
+    "device": "cuda",
+    "gpu_safety": {
+      "batch_size_fallbacks": [
+        32,
+        16,
+        8
+      ],
+      "clear_cuda_cache_between_seeds": true,
+      "effective_batch_size": 32,
+      "log_max_cuda_memory_per_seed": true
+    },
+    "output_path": "results/stage32_hardened_real_code_smoke_results.json",
+    "report_path": "reports/STAGE32_HARDENED_REAL_CODE_SMOKE.md",
+    "require_cuda": true,
+    "save_checkpoints": true,
+    "stage": {
+      "batch_size": 32,
+      "epochs": 8,
+      "gradient_accumulation_steps": 1,
+      "hidden_dim": 64,
+      "lr": 0.002,
+      "mixed_precision": "bf16",
+      "n_dev": 128,
+      "n_test": 256,
+      "n_train": 256,
+      "name": "stage32_smoke",
+      "patience": 4,
+      "seeds": [
+        0
+      ],
+      "tiny_ff_dim": 128,
+      "tiny_layers": 3
+    },
+    "stop_on_failed_seed": false
+  },
+  "dataset_diagnostics": {
+    "available": true,
+    "dataset_config": {
+      "candidate_representation": "hardened_redacted_v1",
+      "dataset_source": "real_import_restore_hardened",
+      "generator_version": "import_restore_redacted_v1_stage32_smoke",
+      "include_private_signal_tokens": false,
+      "max_files": 40,
+      "n_dev": 128,
+      "n_test": 256,
+      "n_train": 256,
+      "n_views": 4,
+      "num_candidates": 8,
+      "snippet_radius": 2,
+      "source_roots": [
+        "src",
+        "tests"
+      ]
+    },
+    "metadata": {
+      "architecture_changes": "none",
+      "config_path": "configs\\stage32_hardened_real_code_cuda_smoke.json",
+      "dataset_source": "real_import_restore_hardened",
+      "near_chance_threshold": 0.225,
+      "scope": "dataset-only shortcut diagnostics before Stage 3.2 training",
+      "stage": "stage3.2_hardened_dataset_diagnostics"
+    },
+    "path": "results\\stage32_hardened_dataset_diagnostics.json",
+    "seed_rows": [
+      {
+        "baselines": {
+          "candidate_lexical_overlap_accuracy": 0.11328125,
+          "candidate_order_accuracy": 0.125,
+          "explicit_structured_oracle_accuracy": 1.0,
+          "majority_accuracy": 0.125,
+          "single_view_text": {
+            "single_view_text_role_0": 0.125,
+            "single_view_text_role_1": 0.125,
+            "single_view_text_role_2": 0.125,
+            "single_view_text_role_3": 0.1015625
+          },
+          "static_import_frequency_accuracy": 0.08984375
+        },
+        "gate_results": [
+          {
+            "gate": "exact gold symbol leakage == 0.0000",
+            "pass": true,
+            "value": 0.0
+          },
+          {
+            "gate": "exact gold module path leakage == 0.0000",
+            "pass": true,
+            "value": 0.0
+          },
+          {
+            "gate": "exact gold full import leakage == 0.0000",
+            "pass": true,
+            "value": 0.0
+          },
+          {
+            "gate": "exact candidate patch text leakage == 0.0000",
+            "pass": true,
+            "value": 0.0
+          },
+          {
+            "gate": "candidate lexical-overlap baseline <= 0.2250",
+            "pass": true,
+            "value": 0.11328125
+          },
+          {
+            "gate": "static import-frequency baseline <= 0.3000",
+            "pass": true,
+            "value": 0.08984375
+          },
+          {
+            "gate": "candidate-order baseline near chance <= 0.2250",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "majority baseline near chance <= 0.2250",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "single-view text baselines <= 0.2250",
+            "pass": true,
+            "value": {
+              "single_view_text_role_0": 0.125,
+              "single_view_text_role_1": 0.125,
+              "single_view_text_role_2": 0.125,
+              "single_view_text_role_3": 0.1015625
+            }
+          },
+          {
+            "gate": "explicit structured oracle >= 0.9000",
+            "pass": true,
+            "value": 1.0
+          }
+        ],
+        "label_counts": {
+          "dev": {
+            "0": 16,
+            "1": 16,
+            "2": 16,
+            "3": 16,
+            "4": 16,
+            "5": 16,
+            "6": 16,
+            "7": 16
+          },
+          "test": {
+            "0": 32,
+            "1": 32,
+            "2": 32,
+            "3": 32,
+            "4": 32,
+            "5": 32,
+            "6": 32,
+            "7": 32
+          },
+          "train": {
+            "0": 32,
+            "1": 32,
+            "2": 32,
+            "3": 32,
+            "4": 32,
+            "5": 32,
+            "6": 32,
+            "7": 32
+          }
+        },
+        "leakage": {
+          "exact_candidate_patch_text_rate": 0.0,
+          "exact_candidate_symbol_module_or_path_rate": 0.0,
+          "exact_gold_full_import_statement_rate": 0.0,
+          "exact_gold_module_path_rate": 0.0,
+          "exact_gold_symbol_rate": 0.0,
+          "exact_gold_target_path_rate": 0.0
+        },
+        "seed": 0,
+        "split_sizes": {
+          "dev": 128,
+          "test": 256,
+          "train": 256
+        }
+      }
+    ],
+    "summary": {
+      "gate_table": [
+        {
+          "gate": "candidate lexical-overlap baseline <= 0.2250",
+          "pass": true,
+          "values": [
+            0.11328125
+          ]
+        },
+        {
+          "gate": "candidate-order baseline near chance <= 0.2250",
+          "pass": true,
+          "values": [
+            0.125
+          ]
+        },
+        {
+          "gate": "exact candidate patch text leakage == 0.0000",
+          "pass": true,
+          "values": [
+            0.0
+          ]
+        },
+        {
+          "gate": "exact gold full import leakage == 0.0000",
+          "pass": true,
+          "values": [
+            0.0
+          ]
+        },
+        {
+          "gate": "exact gold module path leakage == 0.0000",
+          "pass": true,
+          "values": [
+            0.0
+          ]
+        },
+        {
+          "gate": "exact gold symbol leakage == 0.0000",
+          "pass": true,
+          "values": [
+            0.0
+          ]
+        },
+        {
+          "gate": "explicit structured oracle >= 0.9000",
+          "pass": true,
+          "values": [
+            1.0
+          ]
+        },
+        {
+          "gate": "majority baseline near chance <= 0.2250",
+          "pass": true,
+          "values": [
+            0.125
+          ]
+        },
+        {
+          "gate": "single-view text baselines <= 0.2250",
+          "pass": true,
+          "values": [
+            {
+              "single_view_text_role_0": 0.125,
+              "single_view_text_role_1": 0.125,
+              "single_view_text_role_2": 0.125,
+              "single_view_text_role_3": 0.1015625
+            }
+          ]
+        },
+        {
+          "gate": "static import-frequency baseline <= 0.3000",
+          "pass": true,
+          "values": [
+            0.08984375
+          ]
+        }
+      ],
+      "max_single_view_accuracy": 0.125,
+      "mean_candidate_lexical_overlap_accuracy": 0.11328125,
+      "mean_candidate_order_accuracy": 0.125,
+      "mean_explicit_structured_oracle_accuracy": 1.0,
+      "mean_majority_accuracy": 0.125,
+      "mean_static_import_frequency_accuracy": 0.08984375,
+      "pretraining_dataset_validity_passed": true
+    }
+  },
+  "failed_or_interrupted_seeds": [],
+  "metadata": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "architecture_selection": "locked before Stage 3.2",
+    "benchmark": "real_shared_weight_latent_coordination",
+    "config_path": "configs\\stage32_hardened_real_code_cuda_smoke.json",
+    "created_or_updated_at_utc": "2026-05-14T17:39:18+00:00",
+    "dataset": "real_import_restore_hardened",
+    "device": "cuda",
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "success_claim": "not evaluated until all Stage 3.2 gates pass",
+    "task": "stage32_hardened_real_code_import_restoration"
+  },
+  "oom_retries": [],
+  "stage32_rows": [
+    {
+      "architecture_changes_forbidden": true,
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "cross_attention",
+          "ff_dim": 64,
+          "input_dim": 32,
+          "model_dim": 32,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Top-k token attention sent directly to coordinator without message head.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "coordinator_family": "candidate_query_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "active_message",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "architecture_locked": true,
+      "batch_size": 32,
+      "candidate": "topk_attention_no_head",
+      "checkpoint_paths": {
+        "candidate_order_baseline": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\candidate_order_baseline.pt",
+        "explicit_evidence_oracle": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\explicit_evidence_oracle.pt",
+        "frozen": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\frozen_topk_attention_no_head.pt",
+        "majority_baseline": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\majority_baseline.pt",
+        "raw_latent": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\raw_latent_baseline.pt",
+        "single_agent_full_context": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\single_agent_full_context.pt",
+        "single_view_text_role_0": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\single_view_text_role_0.pt",
+        "single_view_text_role_1": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\single_view_text_role_1.pt",
+        "single_view_text_role_2": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\single_view_text_role_2.pt",
+        "single_view_text_role_3": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\single_view_text_role_3.pt",
+        "text_only": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\text_only_multi_agent_baseline.pt",
+        "trainable": "results\\stage32_hardened_real_code_smoke_checkpoints\\seed_0\\trainable_topk_attention_no_head.pt"
+      },
+      "combined_message_final_label_probe": {
+        "combined_activation": 0.12890625,
+        "combined_message": 0.1171875
+      },
+      "completed_at_utc": "2026-05-14T17:40:13+00:00",
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_max_memory_allocated": 112745984,
+      "cuda_max_memory_allocated_gb": 0.10500288009643555,
+      "cuda_total_memory": 17094475776,
+      "dataset_config": {
+        "candidate_representation": "hardened_redacted_v1",
+        "dataset_source": "real_import_restore_hardened",
+        "generator_version": "import_restore_redacted_v1_stage32_smoke",
+        "include_private_signal_tokens": false,
+        "max_files": 40,
+        "n_dev": 128,
+        "n_test": 256,
+        "n_train": 256,
+        "n_views": 4,
+        "num_candidates": 8,
+        "snippet_radius": 2,
+        "source_roots": [
+          "src",
+          "tests"
+        ]
+      },
+      "dataset_summary": {
+        "candidate_representation": "hardened_redacted_v1",
+        "constructed_fallback": false,
+        "dataset_source": "real_import_restore_hardened",
+        "generator_version": "import_restore_redacted_v1_stage32_smoke",
+        "hardening": {
+          "candidate_names_removed_from_private_views": true,
+          "candidate_patch_text_redacted": true,
+          "candidate_query_uses_structured_nontext_features": true,
+          "distractors": "real import pairs sampled by same package family, symbol type, provider category, provider-name parity, usage pattern, and import-slot parity where possible",
+          "exact_symbol_module_path_removed_from_private_views": true
+        },
+        "minimum_single_view_candidate_ambiguity": 4,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_import_restore_redacted_typed_placeholders_v1",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_3",
+            "dev_real_import_restore_4",
+            "dev_real_import_restore_5"
+          ],
+          "test": [
+            "test_real_import_restore_1",
+            "test_real_import_restore_2",
+            "test_real_import_restore_3",
+            "test_real_import_restore_6"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "ast_import_deletion_name_usage",
+          "module_export_resolution",
+          "provider_module_name_parity_analysis",
+          "traceback_import_block_location"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/agents/strict_coordination.py",
+          "src/agents/transformer.py",
+          "src/agents/transformer_strict.py",
+          "src/coordinators/activation.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/coordinators/role_attention.py",
+          "src/coordinators/set_hidden.py",
+          "src/datasets/multiview_code_patch_selection.py"
+        ],
+        "source_files_used": 33,
+        "split_sizes": {
+          "dev": 128,
+          "test": 256,
+          "train": 256
+        }
+      },
+      "description": "Top-k token attention sent directly to coordinator without message head.",
+      "dev_accuracy": {
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.0,
+        "evidence_token_diagnostic_frozen": null,
+        "evidence_token_diagnostic_trainable": null,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.0,
+        "hidden_states_shuffled_across_examples": 0.0,
+        "majority_baseline": 0.125,
+        "physical_order_shuffled_roles_preserved": 0.0,
+        "randomized_labels": 0.4453125,
+        "raw_latent": 0.140625,
+        "role_labels_shuffled": 0.0,
+        "single_agent_full_context": 0.125,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.0,
+        "view_masked": 0.0,
+        "view_shuffled": 0.0
+      },
+      "dev_delta": 0.0,
+      "device": "cuda",
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.011169015988432719,
+        "active_message_readout_parameter_delta": 0.15944138169288635,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "batch_size": 32,
+        "coordinator_grad_norm_mean": 0.32202513552224804,
+        "coordinator_parameter_delta": 0.7317811846733093,
+        "cuda_max_memory_allocated": 109349376,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": false,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "gradient_accumulation_steps": 1,
+      "hardened_dataset_mode": "real_import_restore_hardened",
+      "leakage_audit_passes": true,
+      "message_collapse": {
+        "active_message_readout": {
+          "between_label_cosine": 0.9716294407844543,
+          "mean_cosine_similarity": 0.9716296195983887,
+          "norm_mean": 16.174888610839844,
+          "norm_std": 0.002793320920318365,
+          "variance_mean": 0.028766009956598282,
+          "within_label_cosine": 0.9716309309005737
+        }
+      },
+      "mixed_precision": "bf16",
+      "output_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "examples_checked": 640,
+        "passes": true,
+        "seed": 0,
+        "text_only_private_views_excluded": true,
+        "type": "real_shared_weight_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "per_family_accuracy": {
+        "test_real_import_restore_1": 0.2564102564102564,
+        "test_real_import_restore_2": 0.0,
+        "test_real_import_restore_3": 0.0,
+        "test_real_import_restore_6": 0.0
+      },
+      "per_role_ablation": {
+        "accuracy_drop": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "accuracy_when_role_masked": {
+          "0": 0.15625,
+          "1": 0.15625,
+          "2": 0.15625,
+          "3": 0.15625
+        },
+        "base_accuracy": 0.15625,
+        "one_role_only_failure": false
+      },
+      "private_cue_probes": {
+        "active_message_readout": {
+          "mean": 0.681640625,
+          "per_role": {
+            "0": 0.58203125,
+            "1": 0.640625,
+            "2": 0.52734375,
+            "3": 0.9765625
+          }
+        },
+        "raw_pooled_activation": {
+          "mean": 0.55859375,
+          "per_role": {
+            "0": 0.58203125,
+            "1": 0.640625,
+            "2": 0.51953125,
+            "3": 0.4921875
+          }
+        }
+      },
+      "rejection_reasons": [
+        "trainable <= frozen on dev",
+        "trainable <= text-only on dev",
+        "trainable <= raw-latent on dev",
+        "trainable <= a single-view baseline on dev",
+        "randomized_labels control above threshold on dev"
+      ],
+      "seed": 0,
+      "selection_valid": false,
+      "split_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "candidate_patch_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_file_patch_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_issue_hash_overlap": 2,
+        "dev_test_problem_family_overlap": 0,
+        "dev_test_source_import_key_overlap": 0,
+        "dev_test_target_file_overlap": 0,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_file_patch_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_issue_hash_overlap": 2,
+        "train_dev_problem_family_overlap": 0,
+        "train_dev_source_import_key_overlap": 0,
+        "train_dev_target_file_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_file_patch_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_issue_hash_overlap": 3,
+        "train_test_problem_family_overlap": 0,
+        "train_test_source_import_key_overlap": 0,
+        "train_test_target_file_overlap": 0,
+        "type": "real_shared_weight_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage32_hardened_real_code",
+      "stage_config": {
+        "batch_size": 32,
+        "epochs": 8,
+        "gradient_accumulation_steps": 1,
+        "hidden_dim": 64,
+        "lr": 0.002,
+        "max_candidates": 1,
+        "mixed_precision": "bf16",
+        "n_dev": 128,
+        "n_test": 256,
+        "n_train": 256,
+        "name": "stage3",
+        "patience": 4,
+        "seeds": [
+          0
+        ],
+        "tiny_ff_dim": 128,
+        "tiny_layers": 3
+      },
+      "status": "completed",
+      "success_criteria": {
+        "corruption_controls_near_chance": {
+          "candidate_order_baseline": true,
+          "hidden_states_shuffled_across_examples": true,
+          "majority_baseline": true,
+          "randomized_labels": true,
+          "role_labels_shuffled": true,
+          "view_masked": true,
+          "view_shuffled": true
+        },
+        "frozen_agent_unchanged": true,
+        "invariance_controls_preserve_accuracy": {
+          "candidate_order_shuffled": true,
+          "physical_order_shuffled_roles_preserved": true
+        },
+        "leakage_audits_pass": true,
+        "role_label_shuffle_drops_or_near_chance": true,
+        "single_view_accuracy": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.125
+        },
+        "trainable_agent_changed": true,
+        "trainable_beats_candidate_order": true,
+        "trainable_beats_every_single_view": true,
+        "trainable_beats_frozen": false,
+        "trainable_beats_majority": true,
+        "trainable_beats_raw_latent": true,
+        "trainable_beats_text_only": true
+      },
+      "test_accuracy": {
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.15625,
+        "evidence_token_diagnostic_frozen": null,
+        "evidence_token_diagnostic_trainable": null,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.17578125,
+        "hidden_states_shuffled_across_examples": 0.15625,
+        "majority_baseline": 0.125,
+        "physical_order_shuffled_roles_preserved": 0.15625,
+        "randomized_labels": 0.1328125,
+        "raw_latent": 0.109375,
+        "role_labels_shuffled": 0.15625,
+        "single_agent_full_context": 0.125,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.15625,
+        "view_masked": 0.15625,
+        "view_shuffled": 0.15625
+      },
+      "test_delta": -0.01953125,
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.06374588152433046,
+        "active_message_readout_parameter_delta": 0.1823570877313614,
+        "agent_grad_norm_mean": 0.21899136269525088,
+        "agent_parameter_delta": 2.7856640815734863,
+        "agent_trainable": true,
+        "batch_size": 32,
+        "coordinator_grad_norm_mean": 0.7665991801176931,
+        "coordinator_parameter_delta": 0.7409923076629639,
+        "cuda_max_memory_allocated": 109349376,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "bootstrap_95_ci_delta": [
+      -0.01953125,
+      -0.01953125
+    ],
+    "completed_seeds": [
+      0
+    ],
+    "mean_delta": -0.01953125,
+    "mean_frozen_accuracy": 0.17578125,
+    "mean_trainable_accuracy": 0.15625,
+    "n_completed": 1,
+    "n_failed_or_interrupted": 0,
+    "passed_stage32_hardened_success_criteria": false,
+    "std_delta": 0.0,
+    "success_criteria": [
+      {
+        "criterion": "pre-training shortcut diagnostics passed",
+        "pass": true,
+        "value": [
+          {
+            "gate": "candidate lexical-overlap baseline <= 0.2250",
+            "pass": true,
+            "values": [
+              0.11328125
+            ]
+          },
+          {
+            "gate": "candidate-order baseline near chance <= 0.2250",
+            "pass": true,
+            "values": [
+              0.125
+            ]
+          },
+          {
+            "gate": "exact candidate patch text leakage == 0.0000",
+            "pass": true,
+            "values": [
+              0.0
+            ]
+          },
+          {
+            "gate": "exact gold full import leakage == 0.0000",
+            "pass": true,
+            "values": [
+              0.0
+            ]
+          },
+          {
+            "gate": "exact gold module path leakage == 0.0000",
+            "pass": true,
+            "values": [
+              0.0
+            ]
+          },
+          {
+            "gate": "exact gold symbol leakage == 0.0000",
+            "pass": true,
+            "values": [
+              0.0
+            ]
+          },
+          {
+            "gate": "explicit structured oracle >= 0.9000",
+            "pass": true,
+            "values": [
+              1.0
+            ]
+          },
+          {
+            "gate": "majority baseline near chance <= 0.2250",
+            "pass": true,
+            "values": [
+              0.125
+            ]
+          },
+          {
+            "gate": "single-view text baselines <= 0.2250",
+            "pass": true,
+            "values": [
+              {
+                "single_view_text_role_0": 0.125,
+                "single_view_text_role_1": 0.125,
+                "single_view_text_role_2": 0.125,
+                "single_view_text_role_3": 0.1015625
+              }
+            ]
+          },
+          {
+            "gate": "static import-frequency baseline <= 0.3000",
+            "pass": true,
+            "values": [
+              0.08984375
+            ]
+          }
+        ]
+      },
+      {
+        "criterion": "completed Stage 3.2 seeds >= 10",
+        "pass": false,
+        "value": 1
+      },
+      {
+        "criterion": "trainable beats frozen on at least 8/10 seeds",
+        "pass": false,
+        "value": 0
+      },
+      {
+        "criterion": "mean trainable-frozen delta >= +0.20",
+        "pass": false,
+        "value": -0.01953125
+      },
+      {
+        "criterion": "bootstrap 95% CI lower bound for delta > +0.05",
+        "pass": false,
+        "value": [
+          -0.01953125,
+          -0.01953125
+        ]
+      },
+      {
+        "criterion": "trainable beats text-only, raw-latent, majority, candidate-order, and full-context baselines by mean accuracy",
+        "pass": true,
+        "value": {
+          "candidate_order_mean": 0.125,
+          "full_context_mean": 0.125,
+          "majority_mean": 0.125,
+          "raw_latent_mean": 0.109375,
+          "text_only_mean": 0.125,
+          "trainable_mean": 0.15625
+        }
+      },
+      {
+        "criterion": "trainable beats every single-view baseline by mean accuracy",
+        "pass": true,
+        "value": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.125
+        }
+      },
+      {
+        "criterion": "corruption controls plus majority/candidate-order remain near chance",
+        "pass": true,
+        "value": {
+          "candidate_order_baseline": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "hidden_states_shuffled_across_examples": {
+            "max_accuracy": 0.15625,
+            "mean_accuracy": 0.15625
+          },
+          "majority_baseline": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "randomized_labels": {
+            "max_accuracy": 0.1328125,
+            "mean_accuracy": 0.1328125
+          },
+          "role_labels_shuffled": {
+            "max_accuracy": 0.15625,
+            "mean_accuracy": 0.15625
+          },
+          "view_masked": {
+            "max_accuracy": 0.15625,
+            "mean_accuracy": 0.15625
+          },
+          "view_shuffled": {
+            "max_accuracy": 0.15625,
+            "mean_accuracy": 0.15625
+          }
+        }
+      },
+      {
+        "criterion": "invariance controls preserve accuracy",
+        "pass": true,
+        "value": {
+          "candidate_order_shuffled": {
+            "mean_accuracy": 0.15625,
+            "mean_delta_from_trainable": 0.0
+          },
+          "physical_order_shuffled_roles_preserved": {
+            "mean_accuracy": 0.15625,
+            "mean_delta_from_trainable": 0.0
+          }
+        }
+      },
+      {
+        "criterion": "role-label shuffle drops substantially or remains near chance",
+        "pass": true,
+        "value": {
+          "max_accuracy": 0.15625,
+          "mean_accuracy": 0.15625,
+          "mean_delta_from_trainable": 0.0
+        }
+      },
+      {
+        "criterion": "explicit structured oracle remains high",
+        "pass": true,
+        "value": 1.0
+      },
+      {
+        "criterion": "no single role explains the result",
+        "pass": true,
+        "value": 0
+      },
+      {
+        "criterion": "leakage audits pass",
+        "pass": true,
+        "value": "split_candidate_patch_hash_and_output"
+      },
+      {
+        "criterion": "shared trainable model receives gradients and changes",
+        "pass": true,
+        "value": "all_completed_seeds"
+      },
+      {
+        "criterion": "frozen comparator remains frozen",
+        "pass": true,
+        "value": "all_completed_seeds"
+      }
+    ]
+  }
+}

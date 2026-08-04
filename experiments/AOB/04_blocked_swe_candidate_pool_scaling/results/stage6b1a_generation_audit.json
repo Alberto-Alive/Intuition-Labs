@@ -1,0 +1,616 @@
+{
+  "accepted_candidate_rows": 9,
+  "accepted_candidates_per_task_distribution": {
+    "0": 21,
+    "1": 1,
+    "2": 1,
+    "3": 2
+  },
+  "attempts_path": "results\\stage6b1a_generation_attempts.jsonl",
+  "benchmark": "stage6b1a_generator_reliability_ramp",
+  "benchmark_dataset_audit": {
+    "benchmark_jsonl": null,
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "error": null,
+    "loaded": true,
+    "missing_requested_task_ids": [],
+    "requested_task_ids": [],
+    "rows": 500,
+    "selected_task_ids": [
+      "django__django-13363",
+      "matplotlib__matplotlib-25287",
+      "django__django-15629",
+      "pydata__xarray-3993",
+      "django__django-14725",
+      "matplotlib__matplotlib-24149",
+      "django__django-13590",
+      "django__django-15103",
+      "django__django-16595",
+      "sympy__sympy-13480",
+      "sympy__sympy-18763",
+      "sphinx-doc__sphinx-9367",
+      "django__django-15987",
+      "django__django-15127",
+      "sympy__sympy-12481",
+      "sympy__sympy-23413",
+      "sphinx-doc__sphinx-10673",
+      "matplotlib__matplotlib-26113",
+      "astropy__astropy-14995",
+      "django__django-12708",
+      "django__django-14765",
+      "django__django-11299",
+      "django__django-11099",
+      "sympy__sympy-13091",
+      "pydata__xarray-6992"
+    ],
+    "split": "test"
+  },
+  "candidate_count_k": 8,
+  "candidate_diversity_by_normalized_patch_edit_distance": {
+    "mean_pairwise_distance": 0.27625201705387703,
+    "method": "1 - SequenceMatcher ratio on normalized patch text",
+    "min_pairwise_distance": 0.044240160873312284,
+    "per_task": [
+      {
+        "candidate_count": 1,
+        "instance_id": "astropy__astropy-14995",
+        "mean_pairwise_distance": 0.0,
+        "min_pairwise_distance": 0.0,
+        "pair_count": 0
+      },
+      {
+        "candidate_count": 3,
+        "instance_id": "django__django-11099",
+        "mean_pairwise_distance": 0.18999735934090414,
+        "min_pairwise_distance": 0.12992218816316903,
+        "pair_count": 3
+      },
+      {
+        "candidate_count": 2,
+        "instance_id": "matplotlib__matplotlib-26113",
+        "mean_pairwise_distance": 0.044240160873312284,
+        "min_pairwise_distance": 0.044240160873312284,
+        "pair_count": 1
+      },
+      {
+        "candidate_count": 3,
+        "instance_id": "sphinx-doc__sphinx-9367",
+        "mean_pairwise_distance": 0.4398439601603714,
+        "min_pairwise_distance": 0.11093051605038606,
+        "pair_count": 3
+      }
+    ],
+    "tasks_checked": 4
+  },
+  "candidate_file_save_audit": {
+    "attempts_output_exists": true,
+    "attempts_output_rows": 47,
+    "candidate_patch_root": "results\\stage6b1a_candidate_patches",
+    "jsonl_output_exists": true,
+    "jsonl_output_rows": 9,
+    "missing_candidate_patch_files": [],
+    "missing_trajectories": [],
+    "passes": true,
+    "trajectory_root": "results\\stage6b1a_trajectories"
+  },
+  "candidate_schema_audit": {
+    "passes": true,
+    "required_keys": [
+      "candidate_id",
+      "generator_name",
+      "instance_id",
+      "model_name_or_path",
+      "model_patch",
+      "seed",
+      "source_visible_to_selector",
+      "temperature",
+      "trajectory_path"
+    ],
+    "rows": [
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-00-856b0f490a92",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-01-a61dd5ca87c3",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-02-6cf26b943817",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-26113-stage6b1a-candidate-00-aae58b5ee8a5",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-26113-stage6b1a-candidate-01-ca41a17792cc",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14995-stage6b1a-candidate-00-69be7a01b84c",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-00-c52b90f8aa28",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-01-d87c6e27aea3",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-02-1fcd44915da5",
+        "missing": []
+      }
+    ]
+  },
+  "created_at_utc": "2026-05-16T18:33:18.635838+00:00",
+  "dataset_name": "princeton-nlp/SWE-bench_Verified",
+  "duplicate_patch_hash_audit": {
+    "duplicate_rate": 0.0,
+    "duplicates_excluded": [],
+    "duplicates_excluded_total": 0,
+    "passes": true,
+    "patch_bearing_attempts": 10,
+    "threshold": 0.25
+  },
+  "empty_patch_audit": {
+    "passes": true,
+    "rows": [],
+    "total": 0
+  },
+  "environment": {
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "mini_swe_agent_available": false,
+    "packages": {
+      "datasets": "4.8.2",
+      "mini-swe-agent": "not found",
+      "numpy": "2.4.3",
+      "pytest": "8.4.2",
+      "swebench": "4.1.0"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.0",
+    "runner_argv": [
+      "W:\\HocusPocus\\armyofbots - m4 but picpalac choose\\src\\experiments\\run_stage6b1a_generator_reliability_ramp.py",
+      "--n-tasks",
+      "25",
+      "--k",
+      "8",
+      "--include-default-hf-public",
+      "--previous-stage6b1-jsonl",
+      "results/stage6b1_generated_candidates.jsonl"
+    ],
+    "split": "test"
+  },
+  "exact_reference_patch_hash_audit": {
+    "hits": [],
+    "hits_total": 0,
+    "passes": true
+  },
+  "extends_benchmark": "stage6b1_candidate_generation",
+  "failure_taxonomy": {
+    "status_counts": {
+      "accepted": 9,
+      "invalid_diff": 1,
+      "no_patch_found": 16,
+      "task_skipped": 21
+    },
+    "terminal_statuses": [
+      "accepted",
+      "duplicate_patch",
+      "empty_response",
+      "exact_reference_hash",
+      "generator_call_failed",
+      "invalid_diff",
+      "near_reference_similarity_flag",
+      "no_patch_found",
+      "patch_apply_check_failed",
+      "repo_setup_failed",
+      "task_skipped",
+      "timeout",
+      "unknown_error"
+    ]
+  },
+  "generation_build_audit": {
+    "accepted_candidate_rows": 9,
+    "accepted_candidates_per_task": {
+      "astropy__astropy-14995": 1,
+      "django__django-11099": 3,
+      "django__django-11299": 0,
+      "django__django-12708": 0,
+      "django__django-13363": 0,
+      "django__django-13590": 0,
+      "django__django-14725": 0,
+      "django__django-14765": 0,
+      "django__django-15103": 0,
+      "django__django-15127": 0,
+      "django__django-15629": 0,
+      "django__django-15987": 0,
+      "django__django-16595": 0,
+      "matplotlib__matplotlib-24149": 0,
+      "matplotlib__matplotlib-25287": 0,
+      "matplotlib__matplotlib-26113": 2,
+      "pydata__xarray-3993": 0,
+      "pydata__xarray-6992": 0,
+      "sphinx-doc__sphinx-10673": 0,
+      "sphinx-doc__sphinx-9367": 3,
+      "sympy__sympy-12481": 0,
+      "sympy__sympy-13091": 0,
+      "sympy__sympy-13480": 0,
+      "sympy__sympy-18763": 0,
+      "sympy__sympy-23413": 0
+    },
+    "accepted_candidates_per_task_distribution": {
+      "0": 21,
+      "1": 1,
+      "2": 1,
+      "3": 2
+    },
+    "candidate_diversity_by_normalized_patch_edit_distance": {
+      "mean_pairwise_distance": 0.27625201705387703,
+      "method": "1 - SequenceMatcher ratio on normalized patch text",
+      "min_pairwise_distance": 0.044240160873312284,
+      "per_task": [
+        {
+          "candidate_count": 1,
+          "instance_id": "astropy__astropy-14995",
+          "mean_pairwise_distance": 0.0,
+          "min_pairwise_distance": 0.0,
+          "pair_count": 0
+        },
+        {
+          "candidate_count": 3,
+          "instance_id": "django__django-11099",
+          "mean_pairwise_distance": 0.18999735934090414,
+          "min_pairwise_distance": 0.12992218816316903,
+          "pair_count": 3
+        },
+        {
+          "candidate_count": 2,
+          "instance_id": "matplotlib__matplotlib-26113",
+          "mean_pairwise_distance": 0.044240160873312284,
+          "min_pairwise_distance": 0.044240160873312284,
+          "pair_count": 1
+        },
+        {
+          "candidate_count": 3,
+          "instance_id": "sphinx-doc__sphinx-9367",
+          "mean_pairwise_distance": 0.4398439601603714,
+          "min_pairwise_distance": 0.11093051605038606,
+          "pair_count": 3
+        }
+      ],
+      "tasks_checked": 4
+    },
+    "candidate_order_randomizable": true,
+    "duplicate_patch_hash_audit": {
+      "duplicate_rate": 0.0,
+      "duplicates_excluded": [],
+      "duplicates_excluded_total": 0,
+      "passes": true,
+      "patch_bearing_attempts": 10,
+      "threshold": 0.25
+    },
+    "empty_patch_audit": {
+      "passes": true,
+      "rows": [],
+      "total": 0
+    },
+    "exact_reference_patch_hash_audit": {
+      "hits": [],
+      "hits_total": 0,
+      "passes": true
+    },
+    "generated_candidate_files_saved": true,
+    "generator_source_distribution": {
+      "accepted_by_config_name": {
+        "hf_message_trajectory": 9
+      },
+      "accepted_by_generator_name": {
+        "qwen/qwen3-coder-next": 9
+      },
+      "accepted_by_model_name_or_path": {
+        "qwen/qwen3-coder-next": 9
+      },
+      "accepted_by_prompt_variant": {
+        "hf_message_trajectory": 9
+      }
+    },
+    "invalid_diff_audit": {
+      "invalid_diff_rate": 0.038461538461538464,
+      "passes": true,
+      "reason_counts": {
+        "invalid_hunk_line_prefix": 1
+      },
+      "rows": [
+        {
+          "attempt_id": "hf-public-00000019-00",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "hf_message_trajectory",
+          "failure_message": null,
+          "generation_attempt_index": 4,
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "matplotlib__matplotlib-26113",
+          "invalid_diff_reason": "invalid_hunk_line_prefix",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "d60ffeadf6d81ec783a5f050cfbecf7d4e8a076fa212d26a2a1b3c9c21e702ad",
+          "patch_length": 7859,
+          "prompt_variant": "hf_message_trajectory",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 31,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\matplotlib__matplotlib-26113\\000031_04_qwen_qwen3-coder-next_7dd3edbdaf4e.json"
+        }
+      ],
+      "total": 1
+    },
+    "max_attempts_per_task": 32,
+    "missing_candidate_fabrication_used": false,
+    "near_reference_similarity_audit": {
+      "flags": [],
+      "flags_total": 0,
+      "passes": true,
+      "threshold": 0.98
+    },
+    "patch_apply_check_audit": {
+      "enabled_rows": 0,
+      "required_failure_rows": [],
+      "status_counts": {
+        "not_requested": 47
+      }
+    },
+    "raw_preserving_expansion_used": false,
+    "rejection_reason_counts": {
+      "invalid_diff": 1,
+      "no_patch_found": 16
+    },
+    "source_visible_to_selector_all_false": true,
+    "tasks_attempted": 25,
+    "tasks_with_at_least_1_candidate": 4,
+    "tasks_with_at_least_1_candidate_ids": [
+      "sphinx-doc__sphinx-9367",
+      "matplotlib__matplotlib-26113",
+      "astropy__astropy-14995",
+      "django__django-11099"
+    ],
+    "tasks_with_at_least_4_candidate_ids": [],
+    "tasks_with_at_least_4_candidates": 0,
+    "tasks_with_at_least_8_candidate_ids": [],
+    "tasks_with_at_least_8_candidates": 0,
+    "terminal_status_counts": {
+      "accepted": 9,
+      "invalid_diff": 1,
+      "no_patch_found": 16,
+      "task_skipped": 21
+    }
+  },
+  "generator_source_distribution": {
+    "accepted_by_config_name": {
+      "hf_message_trajectory": 9
+    },
+    "accepted_by_generator_name": {
+      "qwen/qwen3-coder-next": 9
+    },
+    "accepted_by_model_name_or_path": {
+      "qwen/qwen3-coder-next": 9
+    },
+    "accepted_by_prompt_variant": {
+      "hf_message_trajectory": 9
+    }
+  },
+  "invalid_diff_audit": {
+    "invalid_diff_rate": 0.038461538461538464,
+    "passes": true,
+    "reason_counts": {
+      "invalid_hunk_line_prefix": 1
+    },
+    "rows": [
+      {
+        "attempt_id": "hf-public-00000019-00",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "hf_message_trajectory",
+        "failure_message": null,
+        "generation_attempt_index": 4,
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "matplotlib__matplotlib-26113",
+        "invalid_diff_reason": "invalid_hunk_line_prefix",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "d60ffeadf6d81ec783a5f050cfbecf7d4e8a076fa212d26a2a1b3c9c21e702ad",
+        "patch_length": 7859,
+        "prompt_variant": "hf_message_trajectory",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 31,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\matplotlib__matplotlib-26113\\000031_04_qwen_qwen3-coder-next_7dd3edbdaf4e.json"
+      }
+    ],
+    "total": 1
+  },
+  "near_reference_similarity_audit": {
+    "flags": [],
+    "flags_total": 0,
+    "passes": true,
+    "threshold": 0.98
+  },
+  "no_final_model_claim_made": true,
+  "official_harness_evaluation_executed": false,
+  "output_path": "results\\stage6b1a_generated_candidates.jsonl",
+  "patch_apply_check_audit": {
+    "enabled_rows": 0,
+    "required_failure_rows": [],
+    "status_counts": {
+      "not_requested": 47
+    }
+  },
+  "quality_gates": {
+    "all_generated_candidate_files_saved": true,
+    "at_least_20_tasks_with_k8_unique_generated_candidates": false,
+    "at_least_25_tasks_attempted": true,
+    "candidate_order_randomizable": true,
+    "duplicate_rate_below_threshold": true,
+    "generator_reliability_quality_gates_pass": false,
+    "invalid_diff_rate_reported_and_below_50_percent": true,
+    "no_exact_reference_patch_hits": true,
+    "no_final_model_claim_made": true,
+    "no_missing_candidate_fabrication": true,
+    "no_raw_preserving_expansion": true,
+    "official_harness_evaluation_executed": false,
+    "selector_training_executed": false
+  },
+  "raw_preserving_expansion_audit": {
+    "missing_candidate_fabrication_used": false,
+    "passes": true,
+    "raw_preserving_expansion_used": false
+  },
+  "rejection_reason_counts": {
+    "invalid_diff": 1,
+    "no_patch_found": 16
+  },
+  "requested_tasks": 25,
+  "seed": 606282,
+  "selector_training_executed": false,
+  "source_generation_audit": {
+    "errors": [
+      {
+        "candidate_attempts": 0,
+        "error": "DatasetGenerationError: An error occurred while generating the dataset",
+        "loaded": false,
+        "records": 0,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory"
+      }
+    ],
+    "sources": [
+      {
+        "candidate_attempts": 0,
+        "error": null,
+        "loaded": true,
+        "records": 4,
+        "source_name": "file:results/stage6b1_generated_candidates.jsonl",
+        "terminal_no_patch_rows": 0
+      },
+      {
+        "candidate_attempts": 0,
+        "error": "DatasetGenerationError: An error occurred while generating the dataset",
+        "loaded": false,
+        "records": 0,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory"
+      },
+      {
+        "candidate_attempts": 26,
+        "error": null,
+        "loaded": true,
+        "records": 55,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories"
+      },
+      {
+        "candidate_attempts": 0,
+        "error": null,
+        "loaded": true,
+        "records": 200,
+        "source_name": "hf:antieval/swebench-trajectories"
+      },
+      {
+        "candidate_attempts": 26,
+        "datasets": [
+          "togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories",
+          "hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "antieval/swebench-trajectories"
+        ],
+        "source_name": "hf-public-stage6b1-compatible"
+      },
+      {
+        "command_templates": 0,
+        "error": null,
+        "records": 0,
+        "source_name": "local-generator-wrapper"
+      },
+      {
+        "command_templates": 0,
+        "error": null,
+        "records": 0,
+        "source_name": "api-generator-wrapper"
+      },
+      {
+        "enabled": false,
+        "records": 0,
+        "source_name": "mini-swe-agent"
+      }
+    ]
+  },
+  "split": "test",
+  "tasks_attempted": 25,
+  "tasks_with_at_least_1_candidate": 4,
+  "tasks_with_at_least_4_candidates": 0,
+  "tasks_with_at_least_8_candidates": 0,
+  "trajectory_path_audit": {
+    "missing_total": 0,
+    "passes": true,
+    "rows": [
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-00-856b0f490a92",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\sphinx-doc__sphinx-9367\\000048_01_qwen_qwen3-coder-next_dd943eafb210.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-01-a61dd5ca87c3",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\sphinx-doc__sphinx-9367\\000048_02_qwen_qwen3-coder-next_dd943eafb210.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9367-stage6b1a-candidate-02-6cf26b943817",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\sphinx-doc__sphinx-9367\\000048_03_qwen_qwen3-coder-next_dd943eafb210.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-26113-stage6b1a-candidate-00-aae58b5ee8a5",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\matplotlib__matplotlib-26113\\000031_03_qwen_qwen3-coder-next_7dd3edbdaf4e.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-26113-stage6b1a-candidate-01-ca41a17792cc",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\matplotlib__matplotlib-26113\\000031_05_qwen_qwen3-coder-next_7dd3edbdaf4e.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14995-stage6b1a-candidate-00-69be7a01b84c",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\astropy__astropy-14995\\000002_03_qwen_qwen3-coder-next_84cd9c2846c0.json"
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-00-c52b90f8aa28",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\django__django-11099\\000005_00_qwen_qwen3-coder-next_6c18aab804f3.json"
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-01-d87c6e27aea3",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\django__django-11099\\000005_01_qwen_qwen3-coder-next_6c18aab804f3.json"
+      },
+      {
+        "candidate_id": "django__django-11099-stage6b1a-candidate-02-1fcd44915da5",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1a_trajectories\\hf_messages\\django__django-11099\\000005_02_qwen_qwen3-coder-next_6c18aab804f3.json"
+      }
+    ]
+  }
+}

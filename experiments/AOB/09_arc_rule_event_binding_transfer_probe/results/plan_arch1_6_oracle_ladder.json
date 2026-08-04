@@ -1,0 +1,809 @@
+{
+  "oracle_ladder": [
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "A_direct_oracle_input",
+      "note": "candidate_valid_under_constraint fed as diagnostic input",
+      "seed": 0,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "B_violation_type_input",
+      "note": "violation_type and violation_step fed as diagnostic input",
+      "seed": 0,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [
+        {
+          "aux_loss": 6.139939546585083,
+          "dev_top1": 0.125,
+          "epoch": 0.0,
+          "loss": 5.142231225967407,
+          "phase": "finetune",
+          "rank_loss": 2.072261333465576
+        },
+        {
+          "aux_loss": 5.225617527961731,
+          "dev_top1": 0.3125,
+          "epoch": 1.0,
+          "loss": 4.630620718002319,
+          "phase": "finetune",
+          "rank_loss": 2.017811954021454
+        },
+        {
+          "aux_loss": 4.407641410827637,
+          "dev_top1": 0.640625,
+          "epoch": 2.0,
+          "loss": 4.148552894592285,
+          "phase": "finetune",
+          "rank_loss": 1.9447320401668549
+        },
+        {
+          "aux_loss": 3.700147867202759,
+          "dev_top1": 0.578125,
+          "epoch": 3.0,
+          "loss": 3.701952874660492,
+          "phase": "finetune",
+          "rank_loss": 1.8518789112567902
+        },
+        {
+          "aux_loss": 3.1056137681007385,
+          "dev_top1": 0.765625,
+          "epoch": 4.0,
+          "loss": 3.2987887859344482,
+          "phase": "finetune",
+          "rank_loss": 1.7459819316864014
+        },
+        {
+          "aux_loss": 2.6366801261901855,
+          "dev_top1": 0.859375,
+          "epoch": 5.0,
+          "loss": 2.9369757771492004,
+          "phase": "finetune",
+          "rank_loss": 1.618635654449463
+        },
+        {
+          "aux_loss": 2.283306837081909,
+          "dev_top1": 0.890625,
+          "epoch": 6.0,
+          "loss": 2.6051893830299377,
+          "phase": "finetune",
+          "rank_loss": 1.4635359048843384
+        },
+        {
+          "aux_loss": 2.0270944833755493,
+          "dev_top1": 0.90625,
+          "epoch": 7.0,
+          "loss": 2.298531413078308,
+          "phase": "finetune",
+          "rank_loss": 1.2849842607975006
+        }
+      ],
+      "level": "C_parsed_event_input",
+      "note": "parsed active rule plus candidate event tokens",
+      "seed": 0,
+      "top1": 0.921875,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.395197510719299,
+          "dev_top1": 0.234375,
+          "epoch": 0.0,
+          "loss": 3.9430792331695557,
+          "phase": "finetune",
+          "rank_loss": 2.0547600984573364
+        },
+        {
+          "aux_loss": 4.607770681381226,
+          "dev_top1": 0.203125,
+          "epoch": 1.0,
+          "loss": 3.596417009830475,
+          "phase": "finetune",
+          "rank_loss": 1.9836972951889038
+        },
+        {
+          "aux_loss": 3.9386086463928223,
+          "dev_top1": 0.84375,
+          "epoch": 2.0,
+          "loss": 3.2718125581741333,
+          "phase": "finetune",
+          "rank_loss": 1.8932995200157166
+        },
+        {
+          "aux_loss": 3.3960683345794678,
+          "dev_top1": 0.8125,
+          "epoch": 3.0,
+          "loss": 2.930646300315857,
+          "phase": "finetune",
+          "rank_loss": 1.7420223653316498
+        },
+        {
+          "aux_loss": 2.9294148087501526,
+          "dev_top1": 0.875,
+          "epoch": 4.0,
+          "loss": 2.6125155091285706,
+          "phase": "finetune",
+          "rank_loss": 1.5872203707695007
+        },
+        {
+          "aux_loss": 2.555274784564972,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 2.2917591333389282,
+          "phase": "finetune",
+          "rank_loss": 1.3974129557609558
+        },
+        {
+          "aux_loss": 2.2268545627593994,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.9949910938739777,
+          "phase": "finetune",
+          "rank_loss": 1.2155920267105103
+        },
+        {
+          "aux_loss": 1.9335671663284302,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 1.6919237971305847,
+          "phase": "finetune",
+          "rank_loss": 1.0151752680540085
+        }
+      ],
+      "level": "D_structured_constraint_input",
+      "note": "constraint-example-derived rule tokens plus event tokens",
+      "seed": 0,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.5063252449035645,
+          "dev_top1": 0.1875,
+          "epoch": 0.0,
+          "loss": 2.2025302052497864,
+          "phase": "pretrain",
+          "rank_loss": 2.050484538078308
+        },
+        {
+          "aux_loss": 4.586812734603882,
+          "dev_top1": 0.1875,
+          "epoch": 1.0,
+          "loss": 1.8347251117229462,
+          "phase": "pretrain",
+          "rank_loss": 2.0423513054847717
+        },
+        {
+          "aux_loss": 4.592403531074524,
+          "dev_top1": 0.796875,
+          "epoch": 0.0,
+          "loss": 3.814863085746765,
+          "phase": "finetune",
+          "rank_loss": 1.9779016077518463
+        },
+        {
+          "aux_loss": 3.8147201538085938,
+          "dev_top1": 1.0,
+          "epoch": 1.0,
+          "loss": 3.3077564239501953,
+          "phase": "finetune",
+          "rank_loss": 1.7818683087825775
+        },
+        {
+          "aux_loss": 3.1825467944145203,
+          "dev_top1": 1.0,
+          "epoch": 2.0,
+          "loss": 2.777887761592865,
+          "phase": "finetune",
+          "rank_loss": 1.5048690438270569
+        },
+        {
+          "aux_loss": 2.632788836956024,
+          "dev_top1": 1.0,
+          "epoch": 3.0,
+          "loss": 2.312094032764435,
+          "phase": "finetune",
+          "rank_loss": 1.2589785158634186
+        },
+        {
+          "aux_loss": 2.1906686425209045,
+          "dev_top1": 1.0,
+          "epoch": 4.0,
+          "loss": 1.8625458180904388,
+          "phase": "finetune",
+          "rank_loss": 0.9862783402204514
+        },
+        {
+          "aux_loss": 1.835911899805069,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 1.4537646770477295,
+          "phase": "finetune",
+          "rank_loss": 0.7193998843431473
+        },
+        {
+          "aux_loss": 1.551942616701126,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.0986294150352478,
+          "phase": "finetune",
+          "rank_loss": 0.47785232216119766
+        }
+      ],
+      "level": "E_raw_constraint_examples",
+      "note": "visible constraint examples parsed to rule tokens plus rollout-derived event tokens",
+      "seed": 0,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "A_direct_oracle_input",
+      "note": "candidate_valid_under_constraint fed as diagnostic input",
+      "seed": 1,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "B_violation_type_input",
+      "note": "violation_type and violation_step fed as diagnostic input",
+      "seed": 1,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [
+        {
+          "aux_loss": 5.3897093534469604,
+          "dev_top1": 0.3125,
+          "epoch": 0.0,
+          "loss": 4.745220065116882,
+          "phase": "finetune",
+          "rank_loss": 2.0503652691841125
+        },
+        {
+          "aux_loss": 4.625960826873779,
+          "dev_top1": 0.28125,
+          "epoch": 1.0,
+          "loss": 4.322050452232361,
+          "phase": "finetune",
+          "rank_loss": 2.009070098400116
+        },
+        {
+          "aux_loss": 3.9559568762779236,
+          "dev_top1": 0.5,
+          "epoch": 2.0,
+          "loss": 3.9304017424583435,
+          "phase": "finetune",
+          "rank_loss": 1.9524233043193817
+        },
+        {
+          "aux_loss": 3.3581684231758118,
+          "dev_top1": 0.71875,
+          "epoch": 3.0,
+          "loss": 3.5611841678619385,
+          "phase": "finetune",
+          "rank_loss": 1.8821000158786774
+        },
+        {
+          "aux_loss": 2.8886017203330994,
+          "dev_top1": 0.890625,
+          "epoch": 4.0,
+          "loss": 3.2072510719299316,
+          "phase": "finetune",
+          "rank_loss": 1.762950211763382
+        },
+        {
+          "aux_loss": 2.5341570377349854,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 2.8979645371437073,
+          "phase": "finetune",
+          "rank_loss": 1.6308859884738922
+        },
+        {
+          "aux_loss": 2.288132965564728,
+          "dev_top1": 0.96875,
+          "epoch": 6.0,
+          "loss": 2.608686327934265,
+          "phase": "finetune",
+          "rank_loss": 1.464619904756546
+        },
+        {
+          "aux_loss": 2.135962963104248,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 2.3466764092445374,
+          "phase": "finetune",
+          "rank_loss": 1.2786949276924133
+        }
+      ],
+      "level": "C_parsed_event_input",
+      "note": "parsed active rule plus candidate event tokens",
+      "seed": 1,
+      "top1": 0.984375,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.557494044303894,
+          "dev_top1": 0.28125,
+          "epoch": 0.0,
+          "loss": 4.020259857177734,
+          "phase": "finetune",
+          "rank_loss": 2.075136959552765
+        },
+        {
+          "aux_loss": 4.647356271743774,
+          "dev_top1": 0.625,
+          "epoch": 1.0,
+          "loss": 3.631538212299347,
+          "phase": "finetune",
+          "rank_loss": 2.004963457584381
+        },
+        {
+          "aux_loss": 3.893193006515503,
+          "dev_top1": 1.0,
+          "epoch": 2.0,
+          "loss": 3.1694639325141907,
+          "phase": "finetune",
+          "rank_loss": 1.8068464398384094
+        },
+        {
+          "aux_loss": 3.3012972474098206,
+          "dev_top1": 1.0,
+          "epoch": 3.0,
+          "loss": 2.722751557826996,
+          "phase": "finetune",
+          "rank_loss": 1.5672975480556488
+        },
+        {
+          "aux_loss": 2.8569332361221313,
+          "dev_top1": 1.0,
+          "epoch": 4.0,
+          "loss": 2.290609836578369,
+          "phase": "finetune",
+          "rank_loss": 1.2906831800937653
+        },
+        {
+          "aux_loss": 2.5321133732795715,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 1.8769067227840424,
+          "phase": "finetune",
+          "rank_loss": 0.990667074918747
+        },
+        {
+          "aux_loss": 2.2929704785346985,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.533945381641388,
+          "phase": "finetune",
+          "rank_loss": 0.7314056903123856
+        },
+        {
+          "aux_loss": 2.1039156913757324,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 1.2378657162189484,
+          "phase": "finetune",
+          "rank_loss": 0.5014952570199966
+        }
+      ],
+      "level": "D_structured_constraint_input",
+      "note": "constraint-example-derived rule tokens plus event tokens",
+      "seed": 1,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.185467004776001,
+          "dev_top1": 0.21875,
+          "epoch": 0.0,
+          "loss": 2.074186831712723,
+          "phase": "pretrain",
+          "rank_loss": 2.0655396580696106
+        },
+        {
+          "aux_loss": 4.4395352602005005,
+          "dev_top1": 0.15625,
+          "epoch": 1.0,
+          "loss": 1.7758141160011292,
+          "phase": "pretrain",
+          "rank_loss": 2.059809386730194
+        },
+        {
+          "aux_loss": 4.441503047943115,
+          "dev_top1": 0.21875,
+          "epoch": 0.0,
+          "loss": 3.806057333946228,
+          "phase": "finetune",
+          "rank_loss": 2.0294560492038727
+        },
+        {
+          "aux_loss": 3.818920612335205,
+          "dev_top1": 0.6875,
+          "epoch": 1.0,
+          "loss": 3.460374891757965,
+          "phase": "finetune",
+          "rank_loss": 1.9328066110610962
+        },
+        {
+          "aux_loss": 3.279596209526062,
+          "dev_top1": 0.765625,
+          "epoch": 2.0,
+          "loss": 3.109525740146637,
+          "phase": "finetune",
+          "rank_loss": 1.797687292098999
+        },
+        {
+          "aux_loss": 2.820767402648926,
+          "dev_top1": 0.921875,
+          "epoch": 3.0,
+          "loss": 2.7509466409683228,
+          "phase": "finetune",
+          "rank_loss": 1.622639775276184
+        },
+        {
+          "aux_loss": 2.444769561290741,
+          "dev_top1": 1.0,
+          "epoch": 4.0,
+          "loss": 2.3875954151153564,
+          "phase": "finetune",
+          "rank_loss": 1.4096876084804535
+        },
+        {
+          "aux_loss": 2.12758731842041,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 2.031546026468277,
+          "phase": "finetune",
+          "rank_loss": 1.180511087179184
+        },
+        {
+          "aux_loss": 1.876440316438675,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.6954538226127625,
+          "phase": "finetune",
+          "rank_loss": 0.9448776841163635
+        },
+        {
+          "aux_loss": 1.655227541923523,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 1.3699401915073395,
+          "phase": "finetune",
+          "rank_loss": 0.7078491747379303
+        }
+      ],
+      "level": "E_raw_constraint_examples",
+      "note": "visible constraint examples parsed to rule tokens plus rollout-derived event tokens",
+      "seed": 1,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "A_direct_oracle_input",
+      "note": "candidate_valid_under_constraint fed as diagnostic input",
+      "seed": 2,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [],
+      "level": "B_violation_type_input",
+      "note": "violation_type and violation_step fed as diagnostic input",
+      "seed": 2,
+      "top1": 1.0,
+      "uses_oracle_input": true,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": false,
+      "history": [
+        {
+          "aux_loss": 5.535802602767944,
+          "dev_top1": 0.0625,
+          "epoch": 0.0,
+          "loss": 4.870677947998047,
+          "phase": "finetune",
+          "rank_loss": 2.102776527404785
+        },
+        {
+          "aux_loss": 4.640413045883179,
+          "dev_top1": 0.125,
+          "epoch": 1.0,
+          "loss": 4.395803451538086,
+          "phase": "finetune",
+          "rank_loss": 2.075597047805786
+        },
+        {
+          "aux_loss": 3.8748549818992615,
+          "dev_top1": 0.15625,
+          "epoch": 2.0,
+          "loss": 4.001450181007385,
+          "phase": "finetune",
+          "rank_loss": 2.064022660255432
+        },
+        {
+          "aux_loss": 3.221402585506439,
+          "dev_top1": 0.15625,
+          "epoch": 3.0,
+          "loss": 3.6552144289016724,
+          "phase": "finetune",
+          "rank_loss": 2.0445131063461304
+        },
+        {
+          "aux_loss": 2.6913381218910217,
+          "dev_top1": 0.234375,
+          "epoch": 4.0,
+          "loss": 3.3417715430259705,
+          "phase": "finetune",
+          "rank_loss": 1.9961025714874268
+        },
+        {
+          "aux_loss": 2.2931519150733948,
+          "dev_top1": 0.5,
+          "epoch": 5.0,
+          "loss": 3.0738421082496643,
+          "phase": "finetune",
+          "rank_loss": 1.9272661209106445
+        },
+        {
+          "aux_loss": 2.008881092071533,
+          "dev_top1": 0.921875,
+          "epoch": 6.0,
+          "loss": 2.813887894153595,
+          "phase": "finetune",
+          "rank_loss": 1.8094473779201508
+        },
+        {
+          "aux_loss": 1.7875965535640717,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 2.50893634557724,
+          "phase": "finetune",
+          "rank_loss": 1.6151379942893982
+        }
+      ],
+      "level": "C_parsed_event_input",
+      "note": "parsed active rule plus candidate event tokens",
+      "seed": 2,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.214999437332153,
+          "dev_top1": 0.265625,
+          "epoch": 0.0,
+          "loss": 3.8607192039489746,
+          "phase": "finetune",
+          "rank_loss": 2.0354694426059723
+        },
+        {
+          "aux_loss": 4.57628607749939,
+          "dev_top1": 0.34375,
+          "epoch": 1.0,
+          "loss": 3.4481170773506165,
+          "phase": "finetune",
+          "rank_loss": 1.84641695022583
+        },
+        {
+          "aux_loss": 3.955712378025055,
+          "dev_top1": 0.828125,
+          "epoch": 2.0,
+          "loss": 3.0453856587409973,
+          "phase": "finetune",
+          "rank_loss": 1.6608864068984985
+        },
+        {
+          "aux_loss": 3.391132175922394,
+          "dev_top1": 1.0,
+          "epoch": 3.0,
+          "loss": 2.6422945261001587,
+          "phase": "finetune",
+          "rank_loss": 1.455398291349411
+        },
+        {
+          "aux_loss": 2.90958970785141,
+          "dev_top1": 1.0,
+          "epoch": 4.0,
+          "loss": 2.238127291202545,
+          "phase": "finetune",
+          "rank_loss": 1.2197708785533905
+        },
+        {
+          "aux_loss": 2.511190116405487,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 1.8840607106685638,
+          "phase": "finetune",
+          "rank_loss": 1.0051442235708237
+        },
+        {
+          "aux_loss": 2.194967031478882,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.5945813059806824,
+          "phase": "finetune",
+          "rank_loss": 0.826342910528183
+        },
+        {
+          "aux_loss": 1.9416960775852203,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 1.3128309845924377,
+          "phase": "finetune",
+          "rank_loss": 0.6332373470067978
+        }
+      ],
+      "level": "D_structured_constraint_input",
+      "note": "constraint-example-derived rule tokens plus event tokens",
+      "seed": 2,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    },
+    {
+      "benchmark": "plan_arch1_6_oracle_to_latent_constraint_binding",
+      "chance": 0.125,
+      "claimable": true,
+      "history": [
+        {
+          "aux_loss": 5.388069272041321,
+          "dev_top1": 0.421875,
+          "epoch": 0.0,
+          "loss": 2.155227780342102,
+          "phase": "pretrain",
+          "rank_loss": 2.010700613260269
+        },
+        {
+          "aux_loss": 4.611280679702759,
+          "dev_top1": 0.421875,
+          "epoch": 1.0,
+          "loss": 1.8445122838020325,
+          "phase": "pretrain",
+          "rank_loss": 2.035773456096649
+        },
+        {
+          "aux_loss": 4.624254584312439,
+          "dev_top1": 0.4375,
+          "epoch": 0.0,
+          "loss": 3.829560399055481,
+          "phase": "finetune",
+          "rank_loss": 1.9798585176467896
+        },
+        {
+          "aux_loss": 3.949779987335205,
+          "dev_top1": 0.90625,
+          "epoch": 1.0,
+          "loss": 3.3871099948883057,
+          "phase": "finetune",
+          "rank_loss": 1.807198017835617
+        },
+        {
+          "aux_loss": 3.374073028564453,
+          "dev_top1": 1.0,
+          "epoch": 2.0,
+          "loss": 2.9339205026626587,
+          "phase": "finetune",
+          "rank_loss": 1.584291249513626
+        },
+        {
+          "aux_loss": 2.893458068370819,
+          "dev_top1": 1.0,
+          "epoch": 3.0,
+          "loss": 2.501321792602539,
+          "phase": "finetune",
+          "rank_loss": 1.343938559293747
+        },
+        {
+          "aux_loss": 2.5203095078468323,
+          "dev_top1": 1.0,
+          "epoch": 4.0,
+          "loss": 2.100060760974884,
+          "phase": "finetune",
+          "rank_loss": 1.0919369459152222
+        },
+        {
+          "aux_loss": 2.214598774909973,
+          "dev_top1": 1.0,
+          "epoch": 5.0,
+          "loss": 1.735000342130661,
+          "phase": "finetune",
+          "rank_loss": 0.849160835146904
+        },
+        {
+          "aux_loss": 1.959269791841507,
+          "dev_top1": 1.0,
+          "epoch": 6.0,
+          "loss": 1.4243997931480408,
+          "phase": "finetune",
+          "rank_loss": 0.6406918615102768
+        },
+        {
+          "aux_loss": 1.747949093580246,
+          "dev_top1": 1.0,
+          "epoch": 7.0,
+          "loss": 1.1459318399429321,
+          "phase": "finetune",
+          "rank_loss": 0.446752205491066
+        }
+      ],
+      "level": "E_raw_constraint_examples",
+      "note": "visible constraint examples parsed to rule tokens plus rollout-derived event tokens",
+      "seed": 2,
+      "top1": 1.0,
+      "uses_oracle_input": false,
+      "works": true
+    }
+  ]
+}

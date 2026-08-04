@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "control_failure": 15,
+    "did_not_beat_frozen": 7,
+    "frozen_high_suspicious": 11,
+    "generic_shortcut_above_chance": 15,
+    "micro_overfit_failure": 5
+  },
+  "failure_reasons": {
+    "control_failure": "one or more shortcut, mismatch, shuffle, or invariance controls failed",
+    "did_not_beat_frozen": "trainable shared model did not beat exact frozen comparator",
+    "endpoint_heuristic_solves": "endpoint heuristic is still too predictive",
+    "frozen_high_suspicious": "same-architecture frozen comparator solved too much of the task",
+    "generic_shortcut_above_chance": "candidate-only, endpoint, length, action-stat, state-goal, or constraint-only control exceeded chance window",
+    "micro_overfit_failure": "variant could not memorize small learned-constraint training sets"
+  }
+}

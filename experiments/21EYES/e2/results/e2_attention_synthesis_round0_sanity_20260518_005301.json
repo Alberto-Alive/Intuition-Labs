@@ -1,0 +1,59 @@
+{
+  "champion_replay_accuracy_N8": 1.0,
+  "dataset_audit": {
+    "e2_task_families": [
+      "compositional_role_evidence",
+      "conflict_resolution",
+      "constraint_satisfaction",
+      "irrelevant_memory_distractor_history",
+      "memory_dependent_recall",
+      "multi_hop_binding",
+      "needle_binding",
+      "sparse_relevant_evidence",
+      "stale_memory_update",
+      "support_vs_contradiction_memory"
+    ],
+    "failures": [],
+    "passes": true,
+    "summary": {
+      "all_have_k8": true,
+      "all_have_randomized_order_flag": true,
+      "candidate_index_histogram": [
+        3,
+        4,
+        10,
+        4,
+        8,
+        4,
+        9,
+        6
+      ],
+      "n_blocks": {
+        "8": 48
+      },
+      "num_examples": 48,
+      "splits": {
+        "dev": 48
+      },
+      "task_families": {
+        "compositional_role_evidence": 5,
+        "conflict_resolution": 5,
+        "constraint_satisfaction": 5,
+        "irrelevant_memory_distractor_history": 5,
+        "memory_dependent_recall": 5,
+        "multi_hop_binding": 5,
+        "needle_binding": 5,
+        "sparse_relevant_evidence": 5,
+        "stale_memory_update": 4,
+        "support_vs_contradiction_memory": 4
+      }
+    }
+  },
+  "decision_if_failed": "E2_NO_PROMISING_NEW_ARCHITECTURE",
+  "no_final_templates_used": true,
+  "oracle_evidence_accuracy_N8": 1.0,
+  "passes": true,
+  "retrieval_topk_accuracy_N8": 0.4583333333333333,
+  "round": 0,
+  "screen": "sanity"
+}

@@ -1,0 +1,96 @@
+{
+  "experiment_name": "t_realized_blocks_validation",
+  "quick": false,
+  "task": {
+    "n_train": 5000,
+    "n_val": 1000,
+    "n_test": 1000,
+    "seq_len": 16,
+    "vocab_size": 64,
+    "num_rules": 6,
+    "num_classes": 10,
+    "batch_size": 128
+  },
+  "train": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "epochs": 20,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "grad_clip": 5.0,
+    "dropout": 0.05,
+    "device": "cuda"
+  },
+  "benchmarks": [
+    "rule_switching_sequence",
+    "compositional_rule_switching_easy"
+  ],
+  "models": [
+    "fixed_small_transformer",
+    "fixed_medium_transformer",
+    "fixed_large_transformer",
+    "tblock_1",
+    "tblock_2",
+    "tblock_every_other",
+    "tblock_all",
+    "v_only_tblock_1",
+    "v_only_tblock_2",
+    "k_only_tblock_1",
+    "fixed_small_4block",
+    "tblock_4block_1",
+    "tblock_4block_2",
+    "tblock_4block_all"
+  ],
+  "model_sizes": {
+    "small": {
+      "d_model": 64,
+      "nhead": 4,
+      "num_layers": 2,
+      "dim_feedforward": 128
+    },
+    "medium": {
+      "d_model": 96,
+      "nhead": 4,
+      "num_layers": 3,
+      "dim_feedforward": 192
+    },
+    "large": {
+      "d_model": 128,
+      "nhead": 8,
+      "num_layers": 4,
+      "dim_feedforward": 256
+    },
+    "small_4block": {
+      "d_model": 64,
+      "nhead": 4,
+      "num_layers": 4,
+      "dim_feedforward": 128
+    }
+  },
+  "placement_candidates": {
+    "tblock_1": [
+      "first_layer",
+      "middle_layer",
+      "last_layer"
+    ],
+    "tblock_2": [
+      "first_and_last",
+      "first_two",
+      "last_two"
+    ]
+  },
+  "ablations": {
+    "t_zero": "t_zero",
+    "sigma_zero": "sigma_zero",
+    "shuffle_T": "shuffle_T",
+    "random_T": "random_T",
+    "fixed_normal_attention": "fixed_normal_attention",
+    "v_only": "v_only",
+    "k_only": "k_only"
+  }
+}

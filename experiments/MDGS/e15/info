@@ -1,0 +1,23 @@
+1. Question
+
+e15 asked one question only: can a live online mechanism, accumulating during training rather than built after training, produce the same certainty signal that the frozen post-hoc bank produced in e14.
+
+2. Method
+
+A 2-layer MLP was trained on the same synthetic compositional task used in e14, with the same dataset structure, hyperparameters, and five-seed evaluation setup. During training, each hidden layer maintained a live circular-buffer memory bank that stored detached activation vectors, queried certainty before each batch update, and then wrote that batch's activations into the bank after the optimizer step. After training, the final live bank state was frozen, the full test set was evaluated with live certainty, and the resulting per-example certainty values were compared against both seen versus unseen status and the archived frozen post-hoc certainty from e14.
+
+3. Primary Result
+
+Both layers achieved rank-biserial correlation of 1.0 across all 5 seeds. Cohen's d was 3.75 for layer 1 and 3.47 for layer 2. Both exceed the preregistered threshold by an order of magnitude.
+
+4. Secondary Result
+
+Pearson correlation between live and frozen certainty was 0.99996 for both layers. The live mechanism replicates the post-hoc signal to four decimal places.
+
+5. Interpretation Boundary
+
+e15 validates that the live mechanism produces the signal. It does not yet validate that the signal shapes computation or modulates gradients. Those are e16.
+
+6. Preregistered Next Experiment
+
+e16 tests whether feeding live certainty back into the forward pass, as a prior over the prediction, changes model behavior on unseen combinations in a meaningful way. That is the first test of the full architectural claim.

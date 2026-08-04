@@ -1,0 +1,1258 @@
+{
+  "benchmark": "stage6d2_pool_scaling",
+  "benchmark_dataset_audit": {
+    "benchmark_jsonl": null,
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "error": null,
+    "loaded": true,
+    "missing_requested_task_ids": [],
+    "requested_task_ids": [
+      "psf__requests-1142",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "rows": 500,
+    "selected_task_ids": [
+      "psf__requests-1142",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "split": "test"
+  },
+  "blocker_diagnosis": [
+    "official harness throughput / complete official labels remain below the 50-task minimum",
+    "insufficient public generated K=8 patch supply available locally",
+    "insufficient oracle-positive tasks in pool_strict",
+    "generator/source skew remains high",
+    "patch-only shortcut dominance remains"
+  ],
+  "created_at_utc": "2026-05-16T23:01:12.387522+00:00",
+  "dataset_name": "princeton-nlp/SWE-bench_Verified",
+  "decision": "Do not train the selector; Stage 6D.2 gates did not pass.",
+  "expansion_status": {
+    "compute_limit_documented": true,
+    "minimum_strict_oracle_positive": 15,
+    "minimum_strict_tasks": 50,
+    "missing_strict_tasks_for_minimum": 32,
+    "missing_strict_tasks_for_preferred": 82,
+    "new_harness_runs_executed": false,
+    "new_harness_runs_reason": "No additional local generated K=8 SWE-bench Verified candidate supply was found beyond the existing Stage 6B/6D pools; running Docker on the same incomplete supply would not reach the Stage 6D.2 minimum. Missing candidates and labels were not fabricated.",
+    "pool_all_complete_tasks": 20,
+    "pool_strict_complete_tasks": 18,
+    "pool_strict_oracle_positive_tasks": 5,
+    "preferred_strict_oracle_positive": 30,
+    "preferred_strict_tasks": 100,
+    "source_supply_limit_documented": true
+  },
+  "no_fabricated_candidates": true,
+  "no_final_swe_bench_improvement_claim": true,
+  "no_raw_preserving_expansion": true,
+  "no_reference_or_gold_candidates": true,
+  "no_selector_architecture_change": true,
+  "no_selector_training_executed": true,
+  "official_harness": {
+    "batching_plan": "candidate-slot batches: slot_0 through slot_7",
+    "cache_resume_required": true,
+    "command_module": "python -m swebench.harness.run_evaluation",
+    "label_acceptance_rule": "official resolved only",
+    "new_harness_runs_executed": false,
+    "raw_log_visibility": "results harness logs only; never copied into selector-visible fields",
+    "reason": "No additional local generated K=8 SWE-bench Verified candidate supply was found beyond the existing Stage 6B/6D pools; running Docker on the same incomplete supply would not reach the Stage 6D.2 minimum. Missing candidates and labels were not fabricated."
+  },
+  "official_labels_hidden_from_selector_visible_inputs": true,
+  "output_all": "results/stage6d2_labeled_candidate_pools_all.jsonl",
+  "output_strict": "results/stage6d2_labeled_candidate_pools_strict.jsonl",
+  "pool_all": {
+    "audits": {
+      "candidate_order_randomized_audit": {
+        "candidate_order_randomized_tasks": 20,
+        "candidate_order_source_counts": {
+          "stage6b1b_input_order": 20
+        },
+        "examples_checked": 20,
+        "not_randomized_task_ids": [],
+        "passes": true
+      },
+      "duplicate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 20,
+        "passes": true
+      },
+      "exact_reference_hash_audit": {
+        "hits": [],
+        "hits_total": 0,
+        "missing_reference_hashes": [],
+        "passes": true
+      },
+      "near_reference_similarity_audit": {
+        "missing_reference_patches": [],
+        "near_hits": [
+          {
+            "candidate_id": "django__django-13925-stage6b1b-candidate-06-ae442df4266b",
+            "candidate_index": 6,
+            "instance_id": "django__django-13925",
+            "similarity": 0.9589257503949447
+          },
+          {
+            "candidate_id": "django__django-7530-stage6b1b-candidate-00-dd336eac01f9",
+            "candidate_index": 0,
+            "instance_id": "django__django-7530",
+            "similarity": 0.9583333333333334
+          }
+        ],
+        "near_hits_total": 2,
+        "passes": false,
+        "threshold": 0.95
+      },
+      "output_leakage_audit": {
+        "benchmark": "stage6d2_pool_scaling",
+        "examples_checked": 20,
+        "hidden_pass_fail_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 606420,
+        "type": "stage6_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "source_generator_leakage_audit": {
+        "candidate_source_agent_visible_by_design": true,
+        "examples_checked": 20,
+        "generator_metadata_pass_rates_excluded_from_selector_visible_inputs": true,
+        "passes": true,
+        "selector_visible_forbidden_source_or_label_hits": []
+      }
+    },
+    "baselines": {
+      "best_generator_on_dev_baseline": {
+        "best_generator": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "dev_generator_rates": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.06666666666666667
+        },
+        "dev_task_count": 4,
+        "does_not_equal_oracle": true,
+        "pass_at_1": 0.15,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "candidate_evidence_mismatch": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.5714285714285714,
+        "cost_tokens_latency": {},
+        "method": "candidate_evidence_mismatch",
+        "mrr": 0.2571428571428571,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.2,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.21052631578947367
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.4444444444444444,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.4444444444444444,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          2,
+          6,
+          7,
+          2,
+          1,
+          1,
+          0,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          2,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.5714285714285715,
+        "split": "pool_all",
+        "top_2_accuracy": 0.3,
+        "unavailable": false
+      },
+      "embedding_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.7142857142857143,
+        "cost_tokens_latency": {},
+        "method": "issue_context_patch_reranker",
+        "mrr": 0.28125,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.25,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.2631578947368421
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.4444444444444444,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.4444444444444444,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          3,
+          6,
+          7,
+          2,
+          1,
+          1,
+          0,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.7142857142857143,
+        "split": "pool_all",
+        "top_2_accuracy": 0.3,
+        "unavailable": false
+      },
+      "first_candidate_baseline": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.42857142857142855,
+        "cost_tokens_latency": {},
+        "method": "first_candidate_baseline",
+        "mrr": 0.18422619047619046,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.15,
+        "per_generator_accuracy": {
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.15
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.2222222222222222,
+          "matplotlib/matplotlib": 0.25,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.2222222222222222,
+          "matplotlib": 0.25,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selection_efficiency": 0.4285714285714286,
+        "split": "pool_all",
+        "top_2_accuracy": 0.15,
+        "unavailable": false
+      },
+      "issue_context_patch_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.7142857142857143,
+        "cost_tokens_latency": {},
+        "method": "issue_context_patch_reranker",
+        "mrr": 0.28125,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.25,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.2631578947368421
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.4444444444444444,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.4444444444444444,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          3,
+          6,
+          7,
+          2,
+          1,
+          1,
+          0,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.7142857142857143,
+        "split": "pool_all",
+        "top_2_accuracy": 0.3,
+        "unavailable": false
+      },
+      "patch_only_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.7142857142857143,
+        "cost_tokens_latency": {},
+        "method": "patch_only_reranker",
+        "mrr": 0.28214285714285714,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.25,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.2631578947368421
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.4444444444444444,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.4444444444444444,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          2,
+          6,
+          7,
+          2,
+          1,
+          1,
+          0,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.7142857142857143,
+        "split": "pool_all",
+        "top_2_accuracy": 0.3,
+        "unavailable": false
+      },
+      "random_baseline": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.14285714285714285,
+        "cost_tokens_latency": {},
+        "method": "random_baseline",
+        "mrr": 0.14750000000000002,
+        "n_examples": 20,
+        "n_oracle_positive_examples": 7,
+        "oracle_pass_at_8": 0.35,
+        "pass_at_1": 0.05,
+        "per_generator_accuracy": {
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.05
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.1111111111111111,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.1111111111111111,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1,
+          2,
+          7,
+          3,
+          3,
+          4,
+          1,
+          7,
+          6,
+          2,
+          6,
+          7,
+          7
+        ],
+        "selection_efficiency": 0.14285714285714288,
+        "split": "pool_all",
+        "top_2_accuracy": 0.1,
+        "unavailable": false
+      }
+    },
+    "official_candidate_labels": 160,
+    "per_generator_pass_rate": {
+      "qwen/qwen3-coder-next": {
+        "candidate_count": 4,
+        "pass_rate": 0.5
+      },
+      "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": {
+        "candidate_count": 156,
+        "pass_rate": 0.07692307692307693
+      }
+    },
+    "per_repository_oracle_pass_at_8": {
+      "astropy/astropy": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 2
+      },
+      "django/django": {
+        "oracle_pass_at_8": 0.5555555555555556,
+        "oracle_positive_tasks": 5,
+        "tasks": 9
+      },
+      "matplotlib/matplotlib": {
+        "oracle_pass_at_8": 0.25,
+        "oracle_positive_tasks": 1,
+        "tasks": 4
+      },
+      "psf/requests": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 1
+      },
+      "pydata/xarray": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 2
+      },
+      "pytest-dev/pytest": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 1
+      },
+      "sphinx-doc/sphinx": {
+        "oracle_pass_at_8": 1.0,
+        "oracle_positive_tasks": 1,
+        "tasks": 1
+      }
+    },
+    "source_generator_skew": {
+      "high_generator_skew": true,
+      "repo_counts": {
+        "astropy/astropy": 2,
+        "django/django": 9,
+        "matplotlib/matplotlib": 4,
+        "psf/requests": 1,
+        "pydata/xarray": 2,
+        "pytest-dev/pytest": 1,
+        "sphinx-doc/sphinx": 1
+      },
+      "source_agent_counts": {
+        "qwen/qwen3-coder-next": 4,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 156
+      },
+      "task_source_signature_counts": {
+        "qwen/qwen3-coder-next|swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 2,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 18
+      },
+      "unique_repositories": 7,
+      "unique_source_agents": 2
+    },
+    "summary": {
+      "candidate_count": 160,
+      "candidate_count_distribution": {
+        "8": 20
+      },
+      "complete_tasks": 20,
+      "label_count_distribution": {
+        "8": 20
+      },
+      "official_label_count": 160,
+      "oracle_empty_tasks": 13,
+      "oracle_pass_at_8": 0.35,
+      "oracle_positive_tasks": 7,
+      "repos": {
+        "astropy/astropy": 2,
+        "django/django": 9,
+        "matplotlib/matplotlib": 4,
+        "psf/requests": 1,
+        "pydata/xarray": 2,
+        "pytest-dev/pytest": 1,
+        "sphinx-doc/sphinx": 1
+      },
+      "task_ids": [
+        "psf__requests-1142",
+        "django__django-13925",
+        "astropy__astropy-14598",
+        "matplotlib__matplotlib-22871",
+        "django__django-13279",
+        "matplotlib__matplotlib-24177",
+        "django__django-7530",
+        "astropy__astropy-14096",
+        "django__django-13344",
+        "django__django-15916",
+        "django__django-11119",
+        "pytest-dev__pytest-7236",
+        "django__django-15098",
+        "pydata__xarray-6599",
+        "sphinx-doc__sphinx-8035",
+        "django__django-13516",
+        "django__django-14539",
+        "matplotlib__matplotlib-20676",
+        "matplotlib__matplotlib-24637",
+        "pydata__xarray-7229"
+      ]
+    },
+    "validation": {
+      "candidate_count": 8,
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 20,
+        "passes": true
+      },
+      "errors": [],
+      "examples_checked": 20,
+      "passes": true
+    }
+  },
+  "pool_all_input": "results/stage6d1_labeled_candidate_pools.jsonl",
+  "pool_strict": {
+    "audits": {
+      "candidate_order_randomized_audit": {
+        "candidate_order_randomized_tasks": 18,
+        "candidate_order_source_counts": {
+          "stage6b1b_input_order": 18
+        },
+        "examples_checked": 18,
+        "not_randomized_task_ids": [],
+        "passes": true
+      },
+      "duplicate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 18,
+        "passes": true
+      },
+      "exact_reference_hash_audit": {
+        "hits": [],
+        "hits_total": 0,
+        "missing_reference_hashes": [],
+        "passes": true
+      },
+      "near_reference_similarity_audit": {
+        "missing_reference_patches": [],
+        "near_hits": [],
+        "near_hits_total": 0,
+        "passes": true,
+        "threshold": 0.95
+      },
+      "output_leakage_audit": {
+        "benchmark": "stage6d2_pool_scaling",
+        "examples_checked": 18,
+        "hidden_pass_fail_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 606521,
+        "type": "stage6_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "source_generator_leakage_audit": {
+        "candidate_source_agent_visible_by_design": true,
+        "examples_checked": 18,
+        "generator_metadata_pass_rates_excluded_from_selector_visible_inputs": true,
+        "passes": true,
+        "selector_visible_forbidden_source_or_label_hits": []
+      }
+    },
+    "baselines": {
+      "best_generator_on_dev_baseline": {
+        "best_generator": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "dev_generator_rates": {
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.0625
+        },
+        "dev_task_count": 4,
+        "does_not_equal_oracle": true,
+        "pass_at_1": 0.1111111111111111,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "candidate_evidence_mismatch": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.4,
+        "cost_tokens_latency": {},
+        "method": "candidate_evidence_mismatch",
+        "mrr": 0.1746031746031746,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.1111111111111111,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.11764705882352941
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.2857142857142857,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.2857142857142857,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          2,
+          7,
+          2,
+          1,
+          1,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          2,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.39999999999999997,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.2222222222222222,
+        "unavailable": false
+      },
+      "embedding_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.6,
+        "cost_tokens_latency": {},
+        "method": "issue_context_patch_reranker",
+        "mrr": 0.2013888888888889,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.16666666666666666,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.17647058823529413
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.2857142857142857,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.2857142857142857,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          3,
+          7,
+          2,
+          1,
+          1,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.6,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.2222222222222222,
+        "unavailable": false
+      },
+      "first_candidate_baseline": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.4,
+        "cost_tokens_latency": {},
+        "method": "first_candidate_baseline",
+        "mrr": 0.1412037037037037,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.1111111111111111,
+        "per_generator_accuracy": {
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.1111111111111111
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.14285714285714285,
+          "matplotlib/matplotlib": 0.25,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.14285714285714285,
+          "matplotlib": 0.25,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selection_efficiency": 0.39999999999999997,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.1111111111111111,
+        "unavailable": false
+      },
+      "issue_context_patch_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.6,
+        "cost_tokens_latency": {},
+        "method": "issue_context_patch_reranker",
+        "mrr": 0.2013888888888889,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.16666666666666666,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.17647058823529413
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.2857142857142857,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.2857142857142857,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          3,
+          7,
+          2,
+          1,
+          1,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.6,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.2222222222222222,
+        "unavailable": false
+      },
+      "patch_only_reranker": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.6,
+        "cost_tokens_latency": {},
+        "method": "patch_only_reranker",
+        "mrr": 0.20238095238095238,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.16666666666666666,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.17647058823529413
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.2857142857142857,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 1.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.2857142857142857,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 1.0
+        },
+        "predictions": [
+          2,
+          7,
+          2,
+          1,
+          1,
+          7,
+          2,
+          3,
+          0,
+          6,
+          0,
+          0,
+          3,
+          5,
+          6,
+          0,
+          1,
+          2
+        ],
+        "selection_efficiency": 0.6,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.2222222222222222,
+        "unavailable": false
+      },
+      "random_baseline": {
+        "benchmark": "stage6_latent_patch_selector",
+        "conditional_selector_accuracy": 0.2,
+        "cost_tokens_latency": {},
+        "method": "random_baseline",
+        "mrr": 0.1111111111111111,
+        "n_examples": 18,
+        "n_oracle_positive_examples": 5,
+        "oracle_pass_at_8": 0.2777777777777778,
+        "pass_at_1": 0.05555555555555555,
+        "per_generator_accuracy": {
+          "qwen/qwen3-coder-next": 0.0,
+          "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 0.058823529411764705
+        },
+        "per_repository_accuracy": {
+          "astropy/astropy": 0.0,
+          "django/django": 0.14285714285714285,
+          "matplotlib/matplotlib": 0.0,
+          "psf/requests": 0.0,
+          "pydata/xarray": 0.0,
+          "pytest-dev/pytest": 0.0,
+          "sphinx-doc/sphinx": 0.0
+        },
+        "per_task_family_accuracy": {
+          "astropy": 0.0,
+          "django": 0.14285714285714285,
+          "matplotlib": 0.0,
+          "psf": 0.0,
+          "pydata": 0.0,
+          "pytest-dev": 0.0,
+          "sphinx-doc": 0.0
+        },
+        "predictions": [
+          3,
+          5,
+          5,
+          2,
+          1,
+          6,
+          2,
+          4,
+          2,
+          6,
+          2,
+          6,
+          7,
+          5,
+          0,
+          5,
+          5,
+          3
+        ],
+        "selection_efficiency": 0.19999999999999998,
+        "split": "pool_strict",
+        "top_2_accuracy": 0.1111111111111111,
+        "unavailable": false
+      }
+    },
+    "official_candidate_labels": 144,
+    "per_generator_pass_rate": {
+      "qwen/qwen3-coder-next": {
+        "candidate_count": 2,
+        "pass_rate": 0.0
+      },
+      "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": {
+        "candidate_count": 142,
+        "pass_rate": 0.035211267605633804
+      }
+    },
+    "per_repository_oracle_pass_at_8": {
+      "astropy/astropy": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 2
+      },
+      "django/django": {
+        "oracle_pass_at_8": 0.42857142857142855,
+        "oracle_positive_tasks": 3,
+        "tasks": 7
+      },
+      "matplotlib/matplotlib": {
+        "oracle_pass_at_8": 0.25,
+        "oracle_positive_tasks": 1,
+        "tasks": 4
+      },
+      "psf/requests": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 1
+      },
+      "pydata/xarray": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 2
+      },
+      "pytest-dev/pytest": {
+        "oracle_pass_at_8": 0.0,
+        "oracle_positive_tasks": 0,
+        "tasks": 1
+      },
+      "sphinx-doc/sphinx": {
+        "oracle_pass_at_8": 1.0,
+        "oracle_positive_tasks": 1,
+        "tasks": 1
+      }
+    },
+    "source_generator_skew": {
+      "high_generator_skew": true,
+      "repo_counts": {
+        "astropy/astropy": 2,
+        "django/django": 7,
+        "matplotlib/matplotlib": 4,
+        "psf/requests": 1,
+        "pydata/xarray": 2,
+        "pytest-dev/pytest": 1,
+        "sphinx-doc/sphinx": 1
+      },
+      "source_agent_counts": {
+        "qwen/qwen3-coder-next": 2,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 142
+      },
+      "task_source_signature_counts": {
+        "qwen/qwen3-coder-next|swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 1,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 17
+      },
+      "unique_repositories": 7,
+      "unique_source_agents": 2
+    },
+    "summary": {
+      "candidate_count": 144,
+      "candidate_count_distribution": {
+        "8": 18
+      },
+      "complete_tasks": 18,
+      "label_count_distribution": {
+        "8": 18
+      },
+      "official_label_count": 144,
+      "oracle_empty_tasks": 13,
+      "oracle_pass_at_8": 0.2777777777777778,
+      "oracle_positive_tasks": 5,
+      "repos": {
+        "astropy/astropy": 2,
+        "django/django": 7,
+        "matplotlib/matplotlib": 4,
+        "psf/requests": 1,
+        "pydata/xarray": 2,
+        "pytest-dev/pytest": 1,
+        "sphinx-doc/sphinx": 1
+      },
+      "task_ids": [
+        "psf__requests-1142",
+        "astropy__astropy-14598",
+        "matplotlib__matplotlib-22871",
+        "django__django-13279",
+        "matplotlib__matplotlib-24177",
+        "astropy__astropy-14096",
+        "django__django-13344",
+        "django__django-15916",
+        "django__django-11119",
+        "pytest-dev__pytest-7236",
+        "django__django-15098",
+        "pydata__xarray-6599",
+        "sphinx-doc__sphinx-8035",
+        "django__django-13516",
+        "django__django-14539",
+        "matplotlib__matplotlib-20676",
+        "matplotlib__matplotlib-24637",
+        "pydata__xarray-7229"
+      ]
+    },
+    "validation": {
+      "candidate_count": 8,
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 18,
+        "passes": true
+      },
+      "errors": [],
+      "examples_checked": 18,
+      "passes": true
+    }
+  },
+  "pool_strict_input": "results/stage6d1_pool_strict.jsonl",
+  "quality_gates": {
+    "duplicate_patch_hash_audit_passes": true,
+    "evidence_use_diagnostic_passes": true,
+    "near_reference_tasks_quarantined": true,
+    "no_exact_reference_hash_hits": true,
+    "no_fabricated_candidates": true,
+    "no_final_model_claim_made": true,
+    "no_raw_preserving_expansion": true,
+    "no_selector_training_executed": true,
+    "oracle_pass_at_8_between_0_20_and_0_80": true,
+    "output_leakage_audit_passes": true,
+    "pool_strict_has_at_least_15_oracle_positive_tasks": false,
+    "pool_strict_has_at_least_50_complete_k8_tasks_or_compute_limit_documented": true,
+    "source_generator_leakage_audit_passes": true
+  },
+  "quality_gates_pass": false,
+  "raw_harness_logs_hidden_from_selector_visible_inputs": true,
+  "seed": 606420,
+  "source_coverage_audit_path": "results/stage6d2_source_coverage_audit.json",
+  "source_coverage_summary": {
+    "candidate_source_files_scanned": 3,
+    "complete_official_labels_missing_for_extra_k8_tasks": 5,
+    "extra_k8_generated_tasks_without_complete_official_labels": [
+      "sphinx-doc__sphinx-9591",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "sympy__sympy-15349"
+    ],
+    "overlap_k8_sources_with_pool_all": 20,
+    "overlap_k8_sources_with_pool_strict": 18,
+    "patch_records_loaded": 213,
+    "raw_records_loaded": 213,
+    "source_roots_scanned": [
+      "results/stage6b0_public_sources"
+    ],
+    "source_supply_can_reach_100_tasks_before_harness": false,
+    "source_supply_can_reach_50_tasks_before_harness": false,
+    "tasks_with_at_least_k8_unique_generated_candidates": 25,
+    "unique_instance_ids_in_generated_sources": 31
+  },
+  "split": "test"
+}

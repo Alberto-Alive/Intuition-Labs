@@ -1,0 +1,3458 @@
+{
+  "metadata": {
+    "architecture_selection": {},
+    "benchmark": "stage7_taubench_trajectory_selector",
+    "candidate_pool_path": "results\\stage7_local_smoke_candidates.jsonl",
+    "config": {
+      "batch_size": 4,
+      "bootstrap_samples": 200,
+      "device": "cpu",
+      "domain": "retail",
+      "epochs": 1,
+      "hidden_dim": 8,
+      "max_length": 128,
+      "mixed_precision": "none",
+      "patience": 1,
+      "phase": "smoke",
+      "run_controls": true,
+      "run_latent": true,
+      "save_checkpoints": true,
+      "seed_for_pool": 707000,
+      "synthetic_if_missing": true,
+      "synthetic_tasks": 12,
+      "tiny_ff_dim": 64,
+      "tiny_heads": 1,
+      "tiny_layers": 1
+    },
+    "created_at_utc": "2026-05-17T01:14:02.880578+00:00",
+    "dataset_summary": {
+      "candidate_generators_audit_only": [
+        "alternate_prompt_agent",
+        "base_tool_agent_temp0",
+        "base_tool_agent_temp02",
+        "base_tool_agent_temp05",
+        "conservative_agent",
+        "planning_agent",
+        "policy_aware_agent",
+        "retry_agent"
+      ],
+      "dataset_names": [
+        "stage7_taubench_trajectory_selection"
+      ],
+      "domains": [
+        "retail"
+      ],
+      "num_avenues": 4,
+      "num_candidates": 8,
+      "num_roles": 4,
+      "oracle_empty_tasks": 2,
+      "oracle_pass_at_8": 0.8333333333333334,
+      "selector_only_no_trajectory_generation_claim": true,
+      "selector_visible_generator_identity_blinded": true,
+      "split_sizes": {
+        "dev": 2,
+        "test": 2,
+        "train": 8
+      }
+    },
+    "dataset_validation": {
+      "candidate_count": 8,
+      "duplicate_trajectory_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 12,
+        "passes": true
+      },
+      "errors": [],
+      "examples_checked": 12,
+      "output_leakage_audit": {
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "examples_checked": 12,
+        "generator_identity_blinded_from_selector_visible_text": true,
+        "generator_identity_visible_hits": [],
+        "hidden_success_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 0,
+        "type": "stage7_output_leakage",
+        "visible_text_forbidden_pattern_hits": []
+      },
+      "passes": true
+    },
+    "domain": "retail",
+    "phase": "smoke",
+    "primary_claim_template": "Given a fixed pool of K=8 tau-bench trajectories for the same task, a trained shared-weight latent cloned-agent selector chooses successful trajectories more reliably than specified baselines.",
+    "selected_architecture": "stage5_stage7_4x4_candidate_token_direct",
+    "selector_scope": "selector only; no trajectory generation or end-to-end tau-bench SOTA claim"
+  },
+  "rows": [
+    {
+      "architecture": "stage5_stage7_4x4_candidate_token_direct",
+      "architecture_config": {
+        "avenue_prompt_mode": "stage7_taubench_trajectory_selection",
+        "avenue_topk": 0,
+        "coordinator_family": "candidate_token_cross_attention",
+        "description": "Stage 5/6 candidate-token-direct selector with four tau-bench roles and four Stage 7 avenues per role.",
+        "gradient_clip_norm": 1.0,
+        "lr": 0.0003,
+        "name": "stage5_stage7_4x4_candidate_token_direct",
+        "num_avenues": 4,
+        "weight_decay": 0.0001
+      },
+      "checkpoint_paths": {
+        "frozen": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\frozen_same_architecture_latent_selector.pt",
+        "randomized_labels": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\randomized_labels_trainable_latent_selector.pt",
+        "raw_latent": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\raw_latent_selector.pt",
+        "static_trajectory_feature_reranker": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\static_trajectory_feature_reranker.pt",
+        "text_only_multi_agent_reviewer": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\text_only_multi_agent_reviewer.pt",
+        "text_only_single_reviewer": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\text_only_single_reviewer.pt",
+        "trainable": "results\\stage7_local_smoke_checkpoints\\stage5_stage7_4x4_candidate_token_direct\\seed_0\\trainable_shared_weight_latent_selector.pt"
+      },
+      "completed_at_utc": "2026-05-17T01:14:02.878732+00:00",
+      "controls": {
+        "candidate_evidence_mismatch": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "candidate_evidence_mismatch",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0,
+            "retry_agent": 1.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "candidate_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "candidate_only",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "retry_agent": 0.5
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            2
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-6"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "candidate_order_shuffled_with_label_remap": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "candidate_order_shuffled_with_label_remap",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            3,
+            0
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "cross_task_policy_shuffle": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "cross_task_policy_shuffle",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "cross_task_tool_observation_shuffle": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "cross_task_tool_observation_shuffle",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0,
+            "retry_agent": 1.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "cross_task_user_goal_shuffle": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "cross_task_user_goal_shuffle",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "evidence_only_no_candidate": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "evidence_only_no_candidate",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0,
+            "retry_agent": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            2
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-6"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "hidden_states_shuffled_across_examples": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "hidden_states_shuffled_across_examples",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "physical_order_shuffled_roles_avenues_preserved": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "physical_order_shuffled_roles_avenues_preserved",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "policy_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "policy_only",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "retry_agent": 0.5
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            2
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-6"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "randomized_labels": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "randomized_labels",
+          "mrr": 0.125,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 1.0,
+          "oracle_positive_by_example": [
+            true,
+            true
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "schema_template_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "schema_template_only",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "tool_observations_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "tool_observations_only",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "retry_agent": 0.5
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            2
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-6"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "trajectory_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 1.0,
+          "correct_by_example": [
+            true,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "trajectory_only",
+          "mrr": 0.5,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.5,
+          "per_domain_accuracy": {
+            "retail": 0.5
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "retry_agent": 0.5
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.5
+          },
+          "predictions": [
+            7,
+            2
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-6",
+            "retail-9-cand-6"
+          ],
+          "selection_efficiency": 1.0,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "user_goal_only": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "correct_by_example": [
+            false,
+            false
+          ],
+          "cost_tokens_latency": {},
+          "method": "user_goal_only",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp0": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "predictions": [
+            4,
+            5
+          ],
+          "selected_candidate_ids": [
+            "retail-4-cand-0",
+            "retail-9-cand-0"
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        }
+      },
+      "device": "cpu",
+      "domain": "retail",
+      "duplicate_trajectory_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 12,
+        "passes": true
+      },
+      "elapsed_seconds": 5.192232400004286,
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": false,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "avenue_prompt_mode": "stage7_taubench_trajectory_selection",
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "best_dev_conditional_selector_accuracy": 0.0,
+        "coordinator_grad_norm_mean": 5.481891933860742e-07,
+        "coordinator_parameter_delta": 0.005971880163997412,
+        "epochs_run": 1,
+        "loss_backward_reaches_shared_agent": false,
+        "method": "frozen_same_architecture_latent_selector",
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_successful_candidates",
+        "no_detach_between_clone_activations_and_loss": false,
+        "num_avenues": 4,
+        "param_count": 801,
+        "per_clone_gradient_contribution": false,
+        "seed": 7200,
+        "shared_parameter_count": 22,
+        "shared_parameter_identity": true
+      },
+      "generator_identity_only_diagnostic": {
+        "audit_only_not_selector_visible": true,
+        "available": true,
+        "metrics": {
+          "benchmark": "stage7_taubench_trajectory_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "generator_identity_only_diagnostic_audit_only",
+          "mrr": 0.07142857142857142,
+          "n_examples": 2,
+          "n_oracle_positive_examples": 1,
+          "oracle_pass_at_8": 0.5,
+          "oracle_positive_by_example": [
+            true,
+            false
+          ],
+          "pass_at_1": 0.0,
+          "per_domain_accuracy": {
+            "retail": 0.0
+          },
+          "per_selected_generator_accuracy_audit_only": {
+            "base_tool_agent_temp02": 0.0
+          },
+          "per_task_type_accuracy": {
+            "status_lookup": 0.0
+          },
+          "selection_efficiency": 0.0,
+          "split": "audit",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        }
+      },
+      "invariance_audit": {
+        "base_pass_at_1": 0.0,
+        "candidate_order_invariance_passes": true,
+        "candidate_order_pass_at_1": 0.0,
+        "candidate_order_selected_candidate_id_match_rate": 1.0,
+        "passes": true,
+        "physical_order_invariance_passes": true,
+        "physical_order_pass_at_1": 0.0,
+        "physical_role_avenue_order_prediction_match_rate": 1.0
+      },
+      "metrics": {
+        "dev": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.5,
+            "correct_by_example": [
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 3.4500262700021267e-06,
+              "latency_seconds_total": 6.900052540004253e-06,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.75,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.5,
+            "per_domain_accuracy": {
+              "retail": 0.5
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 0.5
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.5
+            },
+            "predictions": [
+              0,
+              3
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-1",
+              "retail-8-cand-1"
+            ],
+            "selection_efficiency": 0.5,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.125,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "planning_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              2,
+              7
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-3",
+              "retail-8-cand-3"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "first_trajectory_order_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_trajectory"
+            },
+            "method": "first_trajectory_order_baseline",
+            "mrr": 1.0,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 1.0,
+            "per_domain_accuracy": {
+              "retail": 1.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 1.0,
+              "base_tool_agent_temp05": 1.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 1.0
+            },
+            "predictions": [
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-1",
+              "retail-8-cand-2"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.025448500004131347,
+              "latency_seconds_total": 0.050897000008262694,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.41666666666666663,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              6,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-0",
+              "retail-8-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "available": false,
+              "reason": "OPENAI_API_KEY and STAGE7_LLM_JUDGE_MODEL are required"
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.41666666666666663,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              6,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-0",
+              "retail-8-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 1.0,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 1.0,
+            "per_domain_accuracy": {
+              "retail": 1.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 1.0,
+              "base_tool_agent_temp05": 1.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 1.0
+            },
+            "predictions": [
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-1",
+              "retail-8-cand-2"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "random_trajectory": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_trajectory"
+            },
+            "method": "random_trajectory",
+            "mrr": 0.35,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0,
+              "base_tool_agent_temp02": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              6,
+              3
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-0",
+              "retail-8-cand-1"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.024694599997019395,
+              "latency_seconds_total": 0.04938919999403879,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.225,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              3,
+              6
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-6",
+              "retail-8-cand-6"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.007974449981702492,
+              "latency_seconds_total": 0.015948899963404983,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.225,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "conservative_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              1,
+              1
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-5",
+              "retail-8-cand-5"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "static_trajectory_feature_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.0005763499939348549,
+              "latency_seconds_total": 0.0011526999878697097,
+              "method": "static_trajectory_feature_reranker"
+            },
+            "method": "static_trajectory_feature_reranker",
+            "mrr": 0.125,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              6,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-0",
+              "retail-8-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.016058300010627136,
+              "latency_seconds_total": 0.03211660002125427,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 1.0,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 1.0,
+            "per_domain_accuracy": {
+              "retail": 1.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 1.0,
+              "base_tool_agent_temp05": 1.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 1.0
+            },
+            "predictions": [
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-1",
+              "retail-8-cand-2"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "text_only_single_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.015939150005578995,
+              "latency_seconds_total": 0.03187830001115799,
+              "method": "text_only_single_reviewer"
+            },
+            "method": "text_only_single_reviewer",
+            "mrr": 1.0,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 1.0,
+            "per_domain_accuracy": {
+              "retail": 1.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 1.0,
+              "base_tool_agent_temp05": 1.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 1.0
+            },
+            "predictions": [
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-1",
+              "retail-8-cand-2"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 4334,
+              "latency_seconds_per_selector_decision": 0.024942549993284047,
+              "latency_seconds_total": 0.04988509998656809,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.29166666666666663,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 1.0,
+            "oracle_positive_by_example": [
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "exchange_item": 0.0
+            },
+            "predictions": [
+              3,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-3-cand-6",
+              "retail-8-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          }
+        },
+        "test": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 2.8999929782003164e-06,
+              "latency_seconds_total": 5.799985956400633e-06,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              3,
+              4
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-1",
+              "retail-9-cand-1"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.0625,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "planning_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              6,
+              1
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-3",
+              "retail-9-cand-3"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "first_trajectory_order_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_trajectory"
+            },
+            "method": "first_trajectory_order_baseline",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "alternate_prompt_agent": 0.0,
+              "policy_aware_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-4",
+              "retail-9-cand-7"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.031288650003261864,
+              "latency_seconds_total": 0.06257730000652373,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              4,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-0",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "available": false,
+              "reason": "OPENAI_API_KEY and STAGE7_LLM_JUDGE_MODEL are required"
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              4,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-0",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.5,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.5,
+            "per_domain_accuracy": {
+              "retail": 0.5
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0,
+              "retry_agent": 1.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.5
+            },
+            "predictions": [
+              7,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-6",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "random_trajectory": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_trajectory"
+            },
+            "method": "random_trajectory",
+            "mrr": 0.08333333333333333,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "conservative_agent": 0.0,
+              "planning_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              6,
+              3
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-3",
+              "retail-9-cand-5"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.024637449998408556,
+              "latency_seconds_total": 0.04927489999681711,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              4,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-0",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.007920250005554408,
+              "latency_seconds_total": 0.015840500011108816,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.08333333333333333,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "conservative_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              2,
+              3
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-5",
+              "retail-9-cand-5"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "static_trajectory_feature_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.0005557500116992742,
+              "latency_seconds_total": 0.0011115000233985484,
+              "method": "static_trajectory_feature_reranker"
+            },
+            "method": "static_trajectory_feature_reranker",
+            "mrr": 0.0625,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              4,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-0",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.016170649993000552,
+              "latency_seconds_total": 0.032341299986001104,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.5,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.5,
+            "per_domain_accuracy": {
+              "retail": 0.5
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "policy_aware_agent": 0.0,
+              "retry_agent": 1.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.5
+            },
+            "predictions": [
+              7,
+              7
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-6",
+              "retail-9-cand-4"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "text_only_single_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.01601675001438707,
+              "latency_seconds_total": 0.03203350002877414,
+              "method": "text_only_single_reviewer"
+            },
+            "method": "text_only_single_reviewer",
+            "mrr": 0.5,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.5,
+            "per_domain_accuracy": {
+              "retail": 0.5
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "policy_aware_agent": 0.0,
+              "retry_agent": 1.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.5
+            },
+            "predictions": [
+              7,
+              7
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-6",
+              "retail-9-cand-4"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2176.0,
+              "estimated_tokens_total": 4352,
+              "latency_seconds_per_selector_decision": 0.025089099974138662,
+              "latency_seconds_total": 0.050178199948277324,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.07142857142857142,
+            "n_examples": 2,
+            "n_oracle_positive_examples": 1,
+            "oracle_pass_at_8": 0.5,
+            "oracle_positive_by_example": [
+              true,
+              false
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0
+            },
+            "per_task_type_accuracy": {
+              "status_lookup": 0.0
+            },
+            "predictions": [
+              4,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-4-cand-0",
+              "retail-9-cand-0"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          }
+        },
+        "train": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.14285714285714285,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 1.9500002963468432e-06,
+              "latency_seconds_total": 1.5600002370774746e-05,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.3052083333333333,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.125,
+            "per_domain_accuracy": {
+              "retail": 0.125
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp02": 0.125
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.0
+            },
+            "predictions": [
+              6,
+              1,
+              5,
+              3,
+              4,
+              7,
+              6,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-1",
+              "retail-1-cand-1",
+              "retail-10-cand-1",
+              "retail-11-cand-1",
+              "retail-2-cand-1",
+              "retail-5-cand-1",
+              "retail-6-cand-1",
+              "retail-7-cand-1"
+            ],
+            "selection_efficiency": 0.14285714285714285,
+            "split": "train",
+            "top_2_accuracy": 0.125,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.11160714285714285,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "planning_agent": 0.0,
+              "policy_aware_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.0,
+              "return_item": 0.0
+            },
+            "predictions": [
+              1,
+              5,
+              2,
+              6,
+              2,
+              4,
+              1,
+              7
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-3",
+              "retail-1-cand-3",
+              "retail-10-cand-3",
+              "retail-11-cand-3",
+              "retail-2-cand-3",
+              "retail-5-cand-4",
+              "retail-6-cand-3",
+              "retail-7-cand-3"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "first_trajectory_order_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.14285714285714285,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_trajectory"
+            },
+            "method": "first_trajectory_order_baseline",
+            "mrr": 0.315625,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.125,
+            "per_domain_accuracy": {
+              "retail": 0.125
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.5,
+              "base_tool_agent_temp02": 0.0,
+              "base_tool_agent_temp05": 0.0,
+              "conservative_agent": 0.0,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-5",
+              "retail-1-cand-6",
+              "retail-10-cand-0",
+              "retail-11-cand-2",
+              "retail-2-cand-5",
+              "retail-5-cand-6",
+              "retail-6-cand-0",
+              "retail-7-cand-1"
+            ],
+            "selection_efficiency": 0.14285714285714285,
+            "split": "train",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.2857142857142857,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.014204612496541813,
+              "latency_seconds_total": 0.1136368999723345,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.4458333333333333,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.25,
+            "per_domain_accuracy": {
+              "retail": 0.25
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.3333333333333333,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.5
+            },
+            "predictions": [
+              2,
+              0,
+              0,
+              4,
+              3,
+              0,
+              0,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-6",
+              "retail-10-cand-0",
+              "retail-11-cand-0",
+              "retail-2-cand-0",
+              "retail-5-cand-6",
+              "retail-6-cand-0",
+              "retail-7-cand-0"
+            ],
+            "selection_efficiency": 0.2857142857142857,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.2857142857142857,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "available": false,
+              "reason": "OPENAI_API_KEY and STAGE7_LLM_JUDGE_MODEL are required"
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.40937500000000004,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.25,
+            "per_domain_accuracy": {
+              "retail": 0.25
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.25
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.5
+            },
+            "predictions": [
+              2,
+              2,
+              0,
+              4,
+              3,
+              1,
+              0,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-0",
+              "retail-10-cand-0",
+              "retail-11-cand-0",
+              "retail-2-cand-0",
+              "retail-5-cand-0",
+              "retail-6-cand-0",
+              "retail-7-cand-0"
+            ],
+            "selection_efficiency": 0.2857142857142857,
+            "split": "train",
+            "top_2_accuracy": 0.375,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.875,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.875,
+            "per_domain_accuracy": {
+              "retail": 0.875
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "alternate_prompt_agent": 1.0,
+              "base_tool_agent_temp0": 0.6666666666666666,
+              "base_tool_agent_temp02": 1.0,
+              "planning_agent": 1.0,
+              "policy_aware_agent": 1.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.6666666666666666,
+              "modify_address": 1.0,
+              "return_item": 1.0
+            },
+            "predictions": [
+              2,
+              7,
+              1,
+              3,
+              5,
+              5,
+              0,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-7",
+              "retail-10-cand-4",
+              "retail-11-cand-1",
+              "retail-2-cand-4",
+              "retail-5-cand-3",
+              "retail-6-cand-0",
+              "retail-7-cand-0"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.875,
+            "unavailable": false
+          },
+          "random_trajectory": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.14285714285714285,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_trajectory"
+            },
+            "method": "random_trajectory",
+            "mrr": 0.3260416666666667,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.125,
+            "per_domain_accuracy": {
+              "retail": 0.125
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "alternate_prompt_agent": 0.0,
+              "base_tool_agent_temp02": 0.3333333333333333,
+              "conservative_agent": 0.0,
+              "policy_aware_agent": 0.0,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.0
+            },
+            "predictions": [
+              6,
+              3,
+              7,
+              3,
+              6,
+              7,
+              7,
+              3
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-1",
+              "retail-1-cand-4",
+              "retail-10-cand-5",
+              "retail-11-cand-1",
+              "retail-2-cand-6",
+              "retail-5-cand-1",
+              "retail-6-cand-7",
+              "retail-7-cand-7"
+            ],
+            "selection_efficiency": 0.14285714285714285,
+            "split": "train",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.013919012497353833,
+              "latency_seconds_total": 0.11135209997883067,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.2043154761904762,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.0,
+              "return_item": 0.0
+            },
+            "predictions": [
+              2,
+              2,
+              0,
+              5,
+              6,
+              1,
+              3,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-0",
+              "retail-10-cand-0",
+              "retail-11-cand-6",
+              "retail-2-cand-6",
+              "retail-5-cand-0",
+              "retail-6-cand-6",
+              "retail-7-cand-6"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.14285714285714285,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.004801937495358288,
+              "latency_seconds_total": 0.038415499962866306,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.3125,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.125,
+            "per_domain_accuracy": {
+              "retail": 0.125
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "conservative_agent": 0.125
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.0,
+              "return_item": 0.5
+            },
+            "predictions": [
+              0,
+              4,
+              7,
+              1,
+              0,
+              3,
+              2,
+              6
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-5",
+              "retail-1-cand-5",
+              "retail-10-cand-5",
+              "retail-11-cand-5",
+              "retail-2-cand-5",
+              "retail-5-cand-5",
+              "retail-6-cand-5",
+              "retail-7-cand-5"
+            ],
+            "selection_efficiency": 0.14285714285714285,
+            "split": "train",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "static_trajectory_feature_reranker": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.0,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.00047937499766703695,
+              "latency_seconds_total": 0.0038349999813362956,
+              "method": "static_trajectory_feature_reranker"
+            },
+            "method": "static_trajectory_feature_reranker",
+            "mrr": 0.11160714285714285,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.0,
+            "per_domain_accuracy": {
+              "retail": 0.0
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.0,
+              "base_tool_agent_temp02": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.0,
+              "return_item": 0.0
+            },
+            "predictions": [
+              2,
+              2,
+              0,
+              4,
+              3,
+              1,
+              6,
+              0
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-0",
+              "retail-10-cand-0",
+              "retail-11-cand-0",
+              "retail-2-cand-0",
+              "retail-5-cand-0",
+              "retail-6-cand-1",
+              "retail-7-cand-1"
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.01607458750368096,
+              "latency_seconds_total": 0.12859670002944767,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.875,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.875,
+            "per_domain_accuracy": {
+              "retail": 0.875
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "alternate_prompt_agent": 1.0,
+              "base_tool_agent_temp0": 1.0,
+              "base_tool_agent_temp02": 1.0,
+              "conservative_agent": 1.0,
+              "planning_agent": 1.0,
+              "policy_aware_agent": 0.6666666666666666
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.6666666666666666,
+              "modify_address": 1.0,
+              "return_item": 1.0
+            },
+            "predictions": [
+              5,
+              7,
+              1,
+              3,
+              5,
+              5,
+              0,
+              6
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-4",
+              "retail-1-cand-7",
+              "retail-10-cand-4",
+              "retail-11-cand-1",
+              "retail-2-cand-4",
+              "retail-5-cand-3",
+              "retail-6-cand-0",
+              "retail-7-cand-5"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.875,
+            "unavailable": false
+          },
+          "text_only_single_reviewer": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 1.0,
+            "correct_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.015966562496032566,
+              "latency_seconds_total": 0.12773249996826053,
+              "method": "text_only_single_reviewer"
+            },
+            "method": "text_only_single_reviewer",
+            "mrr": 0.875,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.875,
+            "per_domain_accuracy": {
+              "retail": 0.875
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "alternate_prompt_agent": 1.0,
+              "base_tool_agent_temp0": 1.0,
+              "base_tool_agent_temp02": 1.0,
+              "planning_agent": 1.0,
+              "policy_aware_agent": 0.6666666666666666
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.6666666666666666,
+              "modify_address": 1.0,
+              "return_item": 1.0
+            },
+            "predictions": [
+              5,
+              7,
+              1,
+              3,
+              5,
+              5,
+              0,
+              2
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-4",
+              "retail-1-cand-7",
+              "retail-10-cand-4",
+              "retail-11-cand-1",
+              "retail-2-cand-4",
+              "retail-5-cand-3",
+              "retail-6-cand-0",
+              "retail-7-cand-0"
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.875,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage7_taubench_trajectory_selector",
+            "conditional_selector_accuracy": 0.14285714285714285,
+            "correct_by_example": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "cost_tokens_latency": {
+              "estimated_tokens_per_selector_decision": 2167.0,
+              "estimated_tokens_total": 17336,
+              "latency_seconds_per_selector_decision": 0.014059862500289455,
+              "latency_seconds_total": 0.11247890000231564,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.3013392857142857,
+            "n_examples": 8,
+            "n_oracle_positive_examples": 7,
+            "oracle_pass_at_8": 0.875,
+            "oracle_positive_by_example": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass_at_1": 0.125,
+            "per_domain_accuracy": {
+              "retail": 0.125
+            },
+            "per_selected_generator_accuracy_audit_only": {
+              "base_tool_agent_temp0": 0.25,
+              "retry_agent": 0.0
+            },
+            "per_task_type_accuracy": {
+              "cancel_order": 0.0,
+              "modify_address": 0.3333333333333333,
+              "return_item": 0.0
+            },
+            "predictions": [
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              0,
+              5
+            ],
+            "selected_candidate_ids": [
+              "retail-0-cand-0",
+              "retail-1-cand-0",
+              "retail-10-cand-6",
+              "retail-11-cand-0",
+              "retail-2-cand-6",
+              "retail-5-cand-6",
+              "retail-6-cand-0",
+              "retail-7-cand-6"
+            ],
+            "selection_efficiency": 0.14285714285714285,
+            "split": "train",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          }
+        }
+      },
+      "near_duplicate_trajectory_audit": {
+        "examples_checked": 12,
+        "near_duplicates": [
+          {
+            "id": "retail-0",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-0-cand-5",
+            "right_candidate_id": "retail-0-cand-2"
+          },
+          {
+            "id": "retail-0",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-0-cand-3",
+            "right_candidate_id": "retail-0-cand-0"
+          },
+          {
+            "id": "retail-0",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-0-cand-3",
+            "right_candidate_id": "retail-0-cand-6"
+          },
+          {
+            "id": "retail-0",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-0-cand-0",
+            "right_candidate_id": "retail-0-cand-6"
+          },
+          {
+            "id": "retail-0",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-0-cand-7",
+            "right_candidate_id": "retail-0-cand-1"
+          },
+          {
+            "id": "retail-0",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-0-cand-4",
+            "right_candidate_id": "retail-0-cand-1"
+          },
+          {
+            "id": "retail-1",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-1-cand-6",
+            "right_candidate_id": "retail-1-cand-0"
+          },
+          {
+            "id": "retail-1",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-1-cand-6",
+            "right_candidate_id": "retail-1-cand-3"
+          },
+          {
+            "id": "retail-1",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-1-cand-1",
+            "right_candidate_id": "retail-1-cand-4"
+          },
+          {
+            "id": "retail-1",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-1-cand-0",
+            "right_candidate_id": "retail-1-cand-3"
+          },
+          {
+            "id": "retail-1",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-1-cand-5",
+            "right_candidate_id": "retail-1-cand-2"
+          },
+          {
+            "id": "retail-10",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-10-cand-0",
+            "right_candidate_id": "retail-10-cand-3"
+          },
+          {
+            "id": "retail-10",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-10-cand-0",
+            "right_candidate_id": "retail-10-cand-6"
+          },
+          {
+            "id": "retail-10",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-10-cand-3",
+            "right_candidate_id": "retail-10-cand-6"
+          },
+          {
+            "id": "retail-10",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-10-cand-2",
+            "right_candidate_id": "retail-10-cand-5"
+          },
+          {
+            "id": "retail-10",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-10-cand-1",
+            "right_candidate_id": "retail-10-cand-7"
+          },
+          {
+            "id": "retail-11",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-11-cand-2",
+            "right_candidate_id": "retail-11-cand-5"
+          },
+          {
+            "id": "retail-11",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-11-cand-0",
+            "right_candidate_id": "retail-11-cand-6"
+          },
+          {
+            "id": "retail-11",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-11-cand-0",
+            "right_candidate_id": "retail-11-cand-3"
+          },
+          {
+            "id": "retail-11",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-11-cand-6",
+            "right_candidate_id": "retail-11-cand-3"
+          },
+          {
+            "id": "retail-2",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-2-cand-5",
+            "right_candidate_id": "retail-2-cand-2"
+          },
+          {
+            "id": "retail-2",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-2-cand-7",
+            "right_candidate_id": "retail-2-cand-1"
+          },
+          {
+            "id": "retail-2",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-2-cand-3",
+            "right_candidate_id": "retail-2-cand-0"
+          },
+          {
+            "id": "retail-2",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-2-cand-3",
+            "right_candidate_id": "retail-2-cand-6"
+          },
+          {
+            "id": "retail-2",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-2-cand-0",
+            "right_candidate_id": "retail-2-cand-6"
+          },
+          {
+            "id": "retail-5",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-5-cand-6",
+            "right_candidate_id": "retail-5-cand-0"
+          },
+          {
+            "id": "retail-5",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-5-cand-2",
+            "right_candidate_id": "retail-5-cand-5"
+          },
+          {
+            "id": "retail-5",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-5-cand-4",
+            "right_candidate_id": "retail-5-cand-1"
+          },
+          {
+            "id": "retail-5",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-5-cand-7",
+            "right_candidate_id": "retail-5-cand-1"
+          },
+          {
+            "id": "retail-6",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-6-cand-3",
+            "right_candidate_id": "retail-6-cand-6"
+          },
+          {
+            "id": "retail-6",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-6-cand-5",
+            "right_candidate_id": "retail-6-cand-2"
+          },
+          {
+            "id": "retail-6",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-6-cand-4",
+            "right_candidate_id": "retail-6-cand-1"
+          },
+          {
+            "id": "retail-6",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-6-cand-1",
+            "right_candidate_id": "retail-6-cand-7"
+          },
+          {
+            "id": "retail-7",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-7-cand-1",
+            "right_candidate_id": "retail-7-cand-4"
+          },
+          {
+            "id": "retail-7",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-7-cand-1",
+            "right_candidate_id": "retail-7-cand-7"
+          },
+          {
+            "id": "retail-7",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-7-cand-4",
+            "right_candidate_id": "retail-7-cand-7"
+          },
+          {
+            "id": "retail-7",
+            "jaccard": 0.9846153846153847,
+            "left_candidate_id": "retail-7-cand-0",
+            "right_candidate_id": "retail-7-cand-5"
+          },
+          {
+            "id": "retail-7",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-7-cand-6",
+            "right_candidate_id": "retail-7-cand-3"
+          },
+          {
+            "id": "retail-3",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-3-cand-5",
+            "right_candidate_id": "retail-3-cand-2"
+          },
+          {
+            "id": "retail-3",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-3-cand-3",
+            "right_candidate_id": "retail-3-cand-6"
+          },
+          {
+            "id": "retail-3",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-3-cand-3",
+            "right_candidate_id": "retail-3-cand-0"
+          },
+          {
+            "id": "retail-3",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-3-cand-6",
+            "right_candidate_id": "retail-3-cand-0"
+          },
+          {
+            "id": "retail-8",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-8-cand-0",
+            "right_candidate_id": "retail-8-cand-6"
+          },
+          {
+            "id": "retail-8",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-8-cand-0",
+            "right_candidate_id": "retail-8-cand-3"
+          },
+          {
+            "id": "retail-8",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-8-cand-1",
+            "right_candidate_id": "retail-8-cand-4"
+          },
+          {
+            "id": "retail-8",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-8-cand-1",
+            "right_candidate_id": "retail-8-cand-7"
+          },
+          {
+            "id": "retail-8",
+            "jaccard": 0.9861111111111112,
+            "left_candidate_id": "retail-8-cand-6",
+            "right_candidate_id": "retail-8-cand-3"
+          },
+          {
+            "id": "retail-4",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-4-cand-4",
+            "right_candidate_id": "retail-4-cand-7"
+          },
+          {
+            "id": "retail-4",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-4-cand-4",
+            "right_candidate_id": "retail-4-cand-1"
+          },
+          {
+            "id": "retail-4",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-4-cand-7",
+            "right_candidate_id": "retail-4-cand-1"
+          },
+          {
+            "id": "retail-4",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-4-cand-5",
+            "right_candidate_id": "retail-4-cand-2"
+          },
+          {
+            "id": "retail-4",
+            "jaccard": 0.9859154929577465,
+            "left_candidate_id": "retail-4-cand-0",
+            "right_candidate_id": "retail-4-cand-3"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 0.9857142857142858,
+            "left_candidate_id": "retail-9-cand-7",
+            "right_candidate_id": "retail-9-cand-1"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 0.9857142857142858,
+            "left_candidate_id": "retail-9-cand-3",
+            "right_candidate_id": "retail-9-cand-6"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 0.9857142857142858,
+            "left_candidate_id": "retail-9-cand-3",
+            "right_candidate_id": "retail-9-cand-0"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 1.0,
+            "left_candidate_id": "retail-9-cand-6",
+            "right_candidate_id": "retail-9-cand-0"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 0.9857142857142858,
+            "left_candidate_id": "retail-9-cand-5",
+            "right_candidate_id": "retail-9-cand-2"
+          },
+          {
+            "id": "retail-9",
+            "jaccard": 0.9857142857142858,
+            "left_candidate_id": "retail-9-cand-1",
+            "right_candidate_id": "retail-9-cand-4"
+          }
+        ],
+        "passes": false,
+        "threshold": 0.98
+      },
+      "output_leakage_audit": {
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "examples_checked": 12,
+        "generator_identity_blinded_from_selector_visible_text": true,
+        "generator_identity_visible_hits": [],
+        "hidden_success_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 0,
+        "type": "stage7_output_leakage",
+        "visible_text_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "paired_tests_vs_best_baseline": {
+        "absolute_pass_at_1_delta": -0.5,
+        "available": true,
+        "best_baseline_method": "text_only_single_reviewer",
+        "best_baseline_pass_at_1": 0.5,
+        "best_baseline_selection_efficiency": 1.0,
+        "paired_bootstrap_95_ci": {
+          "lower": -1.0,
+          "mean": -0.5,
+          "upper": 0.0
+        },
+        "paired_sign_test": {
+          "losses": 1,
+          "ties": 1,
+          "two_sided_p_value": 1.0,
+          "wins": 0
+        },
+        "trainable_pass_at_1": 0.0,
+        "trainable_selection_efficiency": 0.0
+      },
+      "phase": "smoke",
+      "randomized_labels_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 1.0446278336788638e-08,
+        "agent_parameter_delta": 0.0002767867117654532,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage7_taubench_trajectory_selection",
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "best_dev_conditional_selector_accuracy": 0.0,
+        "coordinator_grad_norm_mean": 2.4744836600755756e-07,
+        "coordinator_parameter_delta": 0.004018169827759266,
+        "epochs_run": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "method": "randomized_labels_trainable_latent_selector",
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_successful_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 36185,
+        "per_clone_gradient_contribution": false,
+        "seed": 7400,
+        "shared_parameter_count": 22,
+        "shared_parameter_identity": true
+      },
+      "raw_latent_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.17339750880541438,
+        "agent_parameter_delta": 0.028673525899648666,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "single",
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "best_dev_conditional_selector_accuracy": 0.0,
+        "coordinator_grad_norm_mean": 2.1018527866935615,
+        "coordinator_parameter_delta": 0.011966708116233349,
+        "epochs_run": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "method": "raw_latent_selector",
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_successful_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 1,
+        "param_count": 36184,
+        "per_clone_gradient_contribution": true,
+        "seed": 7100,
+        "shared_parameter_count": 22,
+        "shared_parameter_identity": true
+      },
+      "seed": 0,
+      "split_leakage_audit": {
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "candidate_trajectory_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_task_overlap": 0,
+        "dev_test_task_text_hash_overlap": 0,
+        "near_duplicate_task_text_overlaps": [],
+        "passes": true,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_task_overlap": 0,
+        "train_dev_task_text_hash_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_task_overlap": 0,
+        "train_test_task_text_hash_overlap": 0,
+        "type": "stage7_taubench_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage7_taubench_trajectory_selector",
+      "status": "completed",
+      "success_gates": {
+        "bootstrap_ci_lower_vs_best_baseline_gt_0": false,
+        "candidate_order_invariance_passes": true,
+        "checkpoints_saved": true,
+        "leakage_audits_pass": true,
+        "mismatch_or_cross_task_shuffle_degrades": false,
+        "oracle_pass_at_8_between_0_25_and_0_85": true,
+        "physical_role_avenue_order_invariance_passes": true,
+        "randomized_labels_collapse": true,
+        "selection_efficiency_improves": false,
+        "trainable_beats_best_non_oracle_by_5_points": false,
+        "trainable_beats_frozen": false
+      },
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 2.3315436454765237e-08,
+        "agent_parameter_delta": 0.000888538546860218,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage7_taubench_trajectory_selection",
+        "benchmark": "stage7_taubench_trajectory_selector",
+        "best_dev_conditional_selector_accuracy": 0.0,
+        "coordinator_grad_norm_mean": 2.80493032645971e-07,
+        "coordinator_parameter_delta": 0.005173754412680864,
+        "epochs_run": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "method": "trainable_shared_weight_latent_selector",
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_successful_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 36185,
+        "per_clone_gradient_contribution": false,
+        "seed": 7300,
+        "shared_parameter_count": 22,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "completed_rows": 1,
+    "completed_seeds": [
+      0
+    ],
+    "conclusion_policy": "No final claim is allowed until Stage 7C gates pass.",
+    "frozen_pass_at_1_mean": 0.0,
+    "oracle_pass_at_8_mean": 0.5,
+    "phase": "smoke",
+    "stage7c_final_claim_allowed": false,
+    "stage7c_success_gates": {
+      "checkpoints_saved": true,
+      "completed_seeds_gte_10": false,
+      "invariance_and_leakage_audits_pass": true,
+      "oracle_pass_at_8_between_0_25_and_0_85": true,
+      "paired_bootstrap_ci_lower_gt_0_all_rows": false,
+      "trainable_beats_best_non_oracle_by_5_points": false,
+      "trainable_beats_frozen_on_8_of_10_seeds": false
+    },
+    "trainable_pass_at_1_mean": 0.0,
+    "trainable_pass_at_1_std": 0.0
+  }
+}

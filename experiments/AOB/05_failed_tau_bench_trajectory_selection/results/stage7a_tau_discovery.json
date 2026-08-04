@@ -1,0 +1,185 @@
+{
+  "airline_task_count": 50,
+  "artifact": "stage7a_tau_discovery",
+  "available_agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "available_builtin_agents_or_examples": {
+    "agents_from_registry": [
+      "llm_agent",
+      "llm_agent_gt",
+      "llm_agent_solo",
+      "discrete_time_audio_native_agent"
+    ],
+    "official_final_result_files": [
+      "claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json",
+      "o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json"
+    ],
+    "users_from_registry": [
+      "user_simulator",
+      "dummy_user"
+    ]
+  },
+  "available_domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "available_task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "available_users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "created_at_utc": "2026-05-17T01:48:36.960676+00:00",
+  "evaluator_output_format": {
+    "command": "tau2 evaluate-trajs <results.json> -o <output_dir>",
+    "input_model": "tau2.data_model.simulation.Results JSON",
+    "label_field": "simulations[].reward_info.reward > 0",
+    "updated_output_filename_pattern": "updated_<input_filename>"
+  },
+  "retail_task_count": 114,
+  "task_json_format": {
+    "retail_tasks_path": "W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u03c4-bench trajectory selection\\external\\tau2-bench\\data\\tau2\\domains\\retail\\tasks.json",
+    "sample_task_description_keys": [
+      "purpose",
+      "relevant_policies",
+      "notes"
+    ],
+    "sample_task_evaluation_criteria_keys": [
+      "actions",
+      "communicate_info",
+      "nl_assertions",
+      "reward_basis"
+    ],
+    "sample_task_keys": [
+      "id",
+      "description",
+      "user_scenario",
+      "initial_state",
+      "evaluation_criteria"
+    ],
+    "sample_task_user_scenario_keys": [
+      "persona",
+      "instructions"
+    ],
+    "task_count_in_file": 114,
+    "top_level_type": "list"
+  },
+  "task_summary": {
+    "airline": {
+      "first_task_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "splits": {
+        "base": 50,
+        "test": 20,
+        "train": 30
+      },
+      "task_count": 50
+    },
+    "retail": {
+      "first_task_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "splits": {
+        "base": 114,
+        "test": 40,
+        "train": 74
+      },
+      "task_count": 114
+    }
+  },
+  "tau2_data_dir": "W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u03c4-bench trajectory selection\\external\\tau2-bench\\data",
+  "trajectory_json_format": {
+    "info_keys": [
+      "git_commit",
+      "num_trials",
+      "max_steps",
+      "max_errors",
+      "user_info",
+      "agent_info",
+      "environment_info",
+      "seed"
+    ],
+    "message_keys": [
+      "role",
+      "content",
+      "tool_calls",
+      "turn_idx",
+      "timestamp",
+      "cost",
+      "usage",
+      "raw_data"
+    ],
+    "messages_are_selector_visible_source": true,
+    "results_top_keys": [
+      "timestamp",
+      "info",
+      "tasks",
+      "simulations"
+    ],
+    "reward_info_is_not_selector_visible": true,
+    "reward_info_keys": [
+      "reward",
+      "db_check",
+      "env_assertions",
+      "action_checks",
+      "nl_assertions",
+      "communicate_checks",
+      "reward_basis",
+      "reward_breakdown",
+      "info"
+    ],
+    "simulation_keys": [
+      "id",
+      "task_id",
+      "timestamp",
+      "start_time",
+      "end_time",
+      "duration",
+      "termination_reason",
+      "agent_cost",
+      "user_cost",
+      "reward_info",
+      "messages",
+      "trial",
+      "seed"
+    ],
+    "source_result_file": "claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json"
+  }
+}

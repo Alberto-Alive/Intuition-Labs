@@ -1,0 +1,268 @@
+{
+  "benchmark": "stage6b_real_candidate_pool_validation",
+  "build_only": false,
+  "candidate_count_audit": {
+    "bad_examples": [],
+    "expected_k": 8,
+    "passes": true
+  },
+  "candidate_order_baseline_audit": {
+    "first_candidate_pass_at_1": 0.0,
+    "random_candidate_pass_at_1": 0.0
+  },
+  "candidate_order_randomized_audit": {
+    "examples_checked": 1,
+    "identity_orders": [],
+    "passes": true
+  },
+  "candidate_pool_validation": {
+    "candidate_count": 8,
+    "duplicate_candidate_patch_hash_audit": {
+      "duplicates": [],
+      "examples_checked": 1,
+      "passes": true
+    },
+    "errors": [],
+    "examples_checked": 1,
+    "passes": true
+  },
+  "created_at_utc": "2026-05-16T17:18:35.094293+00:00",
+  "duplicate_candidate_patch_hash_audit": {
+    "duplicates": [],
+    "examples_checked": 1,
+    "passes": true
+  },
+  "environment": {
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "docker_version": "29.0.1 linux/amd64",
+    "official_harness_module": "swebench.harness.run_evaluation",
+    "packages": {
+      "datasets": "4.8.5",
+      "docker": "7.1.0",
+      "numpy": "2.4.5",
+      "swebench": "4.1.0",
+      "torch": "2.12.0"
+    },
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "split": "test",
+    "trajectory_dataset": "togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories",
+    "wsl": "Linux Syschestrator 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "generator_source_baseline_audit": {
+    "best_generator_pass_rate": 0.0,
+    "per_generator_pass_rate": {
+      "coderforge_qwen3_candidate_generator_0": 0.0,
+      "coderforge_qwen3_candidate_generator_1": 0.0,
+      "coderforge_qwen3_candidate_generator_2": 0.0,
+      "coderforge_qwen3_candidate_generator_3": 0.0
+    }
+  },
+  "harness_config": {
+    "cache_level": "env",
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "env_image_tag": "latest",
+    "instance_image_tag": "latest",
+    "max_workers": 1,
+    "namespace": "swebench",
+    "official_harness_command_template": "python -m swebench.harness.run_evaluation --dataset_name {dataset_name} --split {split} --predictions_path {predictions_path} --max_workers {max_workers} --timeout {timeout} --run_id {run_id} --cache_level {cache_level} --clean False --report_dir {report_dir} --namespace {namespace}",
+    "runner_argv": [
+      "/mnt/w/HocusPocus/armyofbots - m4 but picpalac choose/src/experiments/run_stage6b_real_candidate_pool_validation.py",
+      "--n-tasks",
+      "1",
+      "--reuse-harness",
+      "--max-workers",
+      "1",
+      "--timeout",
+      "1800",
+      "--selector-epochs",
+      "1",
+      "--pool-output",
+      "results/stage6b_real_candidate_pools.jsonl",
+      "--pool-audit",
+      "results/stage6b_real_candidate_pool_audit.json",
+      "--selector-results",
+      "results/stage6b_real_selector_results.json",
+      "--selector-audit",
+      "results/stage6b_real_selector_audit.jsonl",
+      "--report",
+      "reports/STAGE6B_REAL_CANDIDATE_POOL_VALIDATION.md"
+    ],
+    "split": "test",
+    "timeout": 1800
+  },
+  "issue_repo_split_audit": {
+    "benchmark": "stage6b_real_candidate_pool_validation",
+    "candidate_patch_hash_leakage_audit_passes": true,
+    "dev_test_candidate_hash_overlap": 0,
+    "dev_test_file_path_overlap": 0,
+    "dev_test_id_overlap": 0,
+    "dev_test_issue_text_hash_overlap": 0,
+    "dev_test_repo_issue_overlap": 0,
+    "near_duplicate_issue_text_overlaps": [],
+    "passes": true,
+    "seed": 0,
+    "train_dev_candidate_hash_overlap": 0,
+    "train_dev_file_path_overlap": 0,
+    "train_dev_id_overlap": 0,
+    "train_dev_issue_text_hash_overlap": 0,
+    "train_dev_repo_issue_overlap": 0,
+    "train_test_candidate_hash_overlap": 0,
+    "train_test_file_path_overlap": 0,
+    "train_test_id_overlap": 0,
+    "train_test_issue_text_hash_overlap": 0,
+    "train_test_repo_issue_overlap": 0,
+    "type": "stage6_swe_split_leakage"
+  },
+  "no_gold_reference_patch_candidate_audit": {
+    "exact_reference_hash_hits": [],
+    "passes": true,
+    "source_rows_checked": 1
+  },
+  "official_harness_result_availability_audit": {
+    "available_candidate_results": 8,
+    "expected_candidate_results": 8,
+    "passes": true,
+    "rows": [
+      {
+        "available": 8,
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "expected": 8
+      }
+    ]
+  },
+  "oracle_pass_at_8_distribution": {
+    "oracle_empty_tasks": 1,
+    "oracle_pass_at_8": 0.0,
+    "oracle_positive_tasks": 0,
+    "positive_candidates_per_task_histogram": {
+      "0": 1
+    }
+  },
+  "output_leakage_audit": {
+    "benchmark": "stage6b_real_candidate_pool_validation",
+    "examples_checked": 1,
+    "hidden_pass_fail_labels_excluded_from_visible_text": true,
+    "passes": true,
+    "seed": 0,
+    "type": "stage6_output_leakage",
+    "visible_text_or_candidate_forbidden_pattern_hits": []
+  },
+  "patch_application_success_failure_audit": {
+    "applied_count": 8,
+    "explicit_apply_status_available_count": 8,
+    "rows": [
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-6",
+        "candidate_index": 0,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_3",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_0/stage6b_real_candidate_slot_0/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_0/stage6b_real_candidate_slot_0/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-5",
+        "candidate_index": 1,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_2",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_1/stage6b_real_candidate_slot_1/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_1/stage6b_real_candidate_slot_1/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-0",
+        "candidate_index": 2,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_0",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_2/stage6b_real_candidate_slot_2/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_2/stage6b_real_candidate_slot_2/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-3",
+        "candidate_index": 3,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_1",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_3/stage6b_real_candidate_slot_3/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_3/stage6b_real_candidate_slot_3/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-7",
+        "candidate_index": 4,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_3",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_4/stage6b_real_candidate_slot_4/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_4/stage6b_real_candidate_slot_4/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-4",
+        "candidate_index": 5,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_2",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_5/stage6b_real_candidate_slot_5/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_5/stage6b_real_candidate_slot_5/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-2",
+        "candidate_index": 6,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_1",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_6/stage6b_real_candidate_slot_6/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_6/stage6b_real_candidate_slot_6/astropy__astropy-8872/test_output.txt"
+      },
+      {
+        "applied": true,
+        "candidate_id": "astropy__astropy-8872-stage6b-candidate-1",
+        "candidate_index": 7,
+        "candidate_source_agent": "coderforge_qwen3_candidate_generator_0",
+        "example_id": "stage6b-real-astropy__astropy-8872",
+        "report_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_7/stage6b_real_candidate_slot_7/astropy__astropy-8872/report.json",
+        "resolved": false,
+        "result_available": true,
+        "test_output_path": "logs/run_evaluation/stage6b_real_seed_606200_slot_7/stage6b_real_candidate_slot_7/astropy__astropy-8872/test_output.txt"
+      }
+    ]
+  },
+  "per_generator_pass_rate": {
+    "coderforge_qwen3_candidate_generator_0": 0.0,
+    "coderforge_qwen3_candidate_generator_1": 0.0,
+    "coderforge_qwen3_candidate_generator_2": 0.0,
+    "coderforge_qwen3_candidate_generator_3": 0.0
+  },
+  "per_repository_oracle_pass_at_8": {
+    "astropy/astropy": 0.0
+  },
+  "requested_tasks": 1,
+  "stage6b_real_success_criteria": {
+    "all_audits_ran": true,
+    "at_least_100_real_tasks_complete_or_documented": false,
+    "first_candidate_not_trivially_equal_oracle": false,
+    "generator_source_not_trivially_equal_oracle": false,
+    "k8_valid_generated_candidates_per_task": true,
+    "no_final_claim_made": true,
+    "no_gold_reference_patch_leakage": true,
+    "official_harness_labels_available_for_all_evaluated_candidates": true,
+    "oracle_pass_at_8_between_0_20_and_0_80": false
+  },
+  "tasks_built": 1,
+  "tasks_with_all_official_labels": 1
+}

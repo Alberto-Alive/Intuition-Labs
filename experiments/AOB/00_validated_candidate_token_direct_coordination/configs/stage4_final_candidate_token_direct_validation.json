@@ -1,0 +1,82 @@
+{
+  "output_path": "results/stage4_final_candidate_token_direct_validation_results.json",
+  "audit_log_path": "results/stage4_final_candidate_token_direct_validation_audit.jsonl",
+  "report_path": "reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md",
+  "checkpoint_dir": "results/stage4_final_candidate_token_direct_validation_checkpoints",
+  "save_checkpoints": true,
+  "device": "cuda",
+  "require_cuda": true,
+  "cuda_memory_budget_gb": 16.0,
+  "architecture": "candidate_token_direct_lr3e4_clip1",
+  "architecture_changes": "forbidden_after_medium_selection",
+  "dataset": "real_import_restore_candidate_balanced_34b",
+  "near_chance_max": 0.18,
+  "static_frequency_max": 0.20,
+  "oracle_min": 0.90,
+  "positive_control_min": 0.50,
+  "invariance_tolerance": 0.08,
+  "stop_on_preflight_failure": true,
+  "stop_on_failed_seed": false,
+  "selected_variant": {
+    "name": "candidate_token_direct_lr3e4_clip1",
+    "family": "candidate_conditioned_readout_training",
+    "description": "Candidate queries attend directly over role token states with lower LR for stability.",
+    "readout_source": "pooled",
+    "coordinator_family": "candidate_token_cross_attention",
+    "use_message_head": false,
+    "use_private_cue_aux": false,
+    "lr": 0.0003,
+    "gradient_clip_norm": 1.0,
+    "epochs": 50,
+    "patience": 6,
+    "dropout": 0.0,
+    "weight_decay": 0.0001
+  },
+  "stage": {
+    "name": "stage4_final_candidate_token_direct_validation",
+    "n_train": 2048,
+    "n_dev": 512,
+    "n_test": 1024,
+    "seeds": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "epochs": 50,
+    "patience": 6,
+    "hidden_dim": 64,
+    "tiny_layers": 3,
+    "tiny_ff_dim": 128,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": "bf16"
+  },
+  "dataset_config": {
+    "source_roots": ["src", "tests"],
+    "max_files": 40,
+    "snippet_radius": 2,
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "generator_version": "real_import_restore_candidate_balanced_34b_stage4_final_candidate_token_direct",
+    "candidate_representation": "balanced_categories_v3"
+  },
+  "dataset_diagnostics": {
+    "baseline_epochs": 4,
+    "baseline_patience": 2,
+    "baseline_lr": 0.002,
+    "baseline_feature_dim": 128,
+    "single_view_epochs": 4,
+    "single_view_patience": 2,
+    "single_view_lr": 0.002,
+    "single_view_feature_dim": 128
+  },
+  "positive_control": {
+    "epochs": 8,
+    "patience": 3,
+    "lr": 0.002,
+    "hidden_dims": [64],
+    "batch_size": 32
+  },
+  "gpu_safety": {
+    "batch_size_fallbacks": [32, 16, 8],
+    "effective_batch_size": 32,
+    "clear_cuda_cache_between_seeds": true,
+    "log_max_cuda_memory_per_seed": true
+  }
+}

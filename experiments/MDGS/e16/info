@@ -1,0 +1,25 @@
+**E16 Summary**
+
+1. **Question**
+
+`e16` asked one question only: does feeding live certainty back into the forward pass, as a prior that shapes the prediction, change model behavior on unseen combinations in a meaningful and interpretable way.
+
+2. **Method**
+
+`e16` reused the `e15` live online bank and matched `e15` exactly in data, seeds, optimizer, training loop, and hyperparameters, with one change only: live certainty was fed back into the forward pass as a multiplicative gate. At each hidden layer, certainty was computed from the pre-gate activation, the gate was defined as `certainty^2`, invalid early certainty produced gate `1.0`, and the bank was updated with the detached pre-gate activation after the optimizer step. The primary comparison was against matched `e15`, using a difference-in-differences metric on output confidence between seen and unseen combinations across 5 seeds.
+
+3. **Primary Result**
+
+`DiD` was negative in `5` of `5` seeds. Mean `DiD` was `-0.0455`. Mean unseen-side confidence shift was `-0.0455` versus mean seen-side shift `0.0000017`. The effect is specific to unseen combinations.
+
+4. **Secondary Result**
+
+Unseen accuracy mean difference across seeds was `0.0035`, which is near zero. The gate produces honest uncertainty, not better guessing.
+
+5. **Interpretation Boundary**
+
+`e16` validates that live certainty can shape forward computation specifically on unseen combinations. It does not yet validate gradient modulation or continual learning. Those are `e17`.
+
+6. **Preregistered Next Experiment**
+
+`e17` tests whether certainty-modulated gradients, updating weights more strongly on confident errors and more cautiously on uncertain errors, improve learning dynamics relative to the `e16` baseline. That is the first test of the backward-pass claim.

@@ -1,0 +1,110 @@
+{
+  "baselines": {
+    "candidate_only": 0.1375,
+    "clean_qkv_v1_reference": 0.5243,
+    "current_only_no_memory": 0.21875,
+    "e2_memory_slot_champion_reference": 1.0,
+    "e3_parent_reference": 0.684375,
+    "evidence_only": 0.1375,
+    "post_attention_memory_addition": 0.81125,
+    "query_only": 0.21875,
+    "random_candidate": 0.125,
+    "stage8_champion_reference": 0.82
+  },
+  "c128_reached": true,
+  "evaluated_count": 4,
+  "finalists": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "036872b917847147",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7575000000000001,
+      "selection_score": 0.6332500000000001,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_v_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "69e276df98ce9305",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "sc_wda_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01_e31_mut0",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "9b097bb7b6b5bb82",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00_e31_mut0",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "2090b178a34e9e71",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "wda_v_gate_calibration"
+    }
+  ],
+  "round": 4,
+  "screen": "final_development_screen",
+  "top_configs": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "036872b917847147",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7575000000000001,
+      "selection_score": 0.6332500000000001,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_v_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "69e276df98ce9305",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "sc_wda_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01_e31_mut0",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "9b097bb7b6b5bb82",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00_e31_mut0",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "2090b178a34e9e71",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.755,
+      "selection_score": 0.6300000000000001,
+      "variant": "wda_v_gate_calibration"
+    }
+  ]
+}

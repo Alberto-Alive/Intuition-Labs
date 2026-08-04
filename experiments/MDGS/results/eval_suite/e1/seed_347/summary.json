@@ -1,0 +1,204 @@
+{
+  "variant": "e1",
+  "train_loop_seed": 347,
+  "corpus_fingerprint": "de718ff12a86a7e4",
+  "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_347",
+  "test_metrics": {
+    "trajectory_acc": 0.6006289124488831,
+    "trajectory_macro_f1": 0.4833176970947869,
+    "trajectory_confusion": [
+      [
+        79,
+        21,
+        0,
+        0
+      ],
+      [
+        46,
+        56,
+        14,
+        0
+      ],
+      [
+        6,
+        12,
+        56,
+        0
+      ],
+      [
+        24,
+        4,
+        0,
+        0
+      ]
+    ],
+    "pattern_acc": 0.9654088020324707,
+    "pattern_macro_f1": 0.9489932927432928,
+    "pattern_confusion": [
+      [
+        31,
+        0,
+        0
+      ],
+      [
+        2,
+        235,
+        8
+      ],
+      [
+        0,
+        1,
+        41
+      ]
+    ],
+    "confidence_acc": 0.9654088020324707,
+    "confidence_macro_f1": 0.9662934512864331,
+    "confidence_confusion": [
+      [
+        96,
+        0,
+        0
+      ],
+      [
+        2,
+        102,
+        0
+      ],
+      [
+        0,
+        9,
+        109
+      ]
+    ],
+    "outcome_acc": 0.8207547068595886,
+    "outcome_macro_f1": 0.6557183968710764,
+    "outcome_confusion": [
+      [
+        208,
+        0,
+        0
+      ],
+      [
+        0,
+        36,
+        37
+      ],
+      [
+        14,
+        6,
+        17
+      ]
+    ],
+    "joint_acc": 0.46855345368385315,
+    "success_likely_precision": 0.9369369369369369,
+    "success_likely_recall": 1.0,
+    "success_likely_f1": 0.9674418604651163,
+    "uncertain_precision": 0.8571428571428571,
+    "uncertain_recall": 0.4931506849315068,
+    "uncertain_f1": 0.6260869565217392,
+    "failure_likely_precision": 0.3148148148148148,
+    "failure_likely_recall": 0.4594594594594595,
+    "failure_likely_f1": 0.37362637362637363,
+    "failure_recall": 0.4594594594594595,
+    "pattern_focused_precision": 0.9393939393939394,
+    "pattern_focused_recall": 1.0,
+    "pattern_focused_f1": 0.96875,
+    "pattern_mixed_precision": 0.9957627118644068,
+    "pattern_mixed_recall": 0.9591836734693877,
+    "pattern_mixed_f1": 0.9771309771309772,
+    "pattern_diffuse_precision": 0.8367346938775511,
+    "pattern_diffuse_recall": 0.9761904761904762,
+    "pattern_diffuse_f1": 0.9010989010989011,
+    "unsafe_success_rate_label": 0.06306306306306306,
+    "unsafe_success_rate_correctness": 0.06306306306306306,
+    "success_precision_vs_is_correct": 0.9369369369369369,
+    "success_auroc": 0.743483697220352,
+    "success_auprc": 0.9486769284331518,
+    "success_brier": 0.2678440337460902,
+    "success_ece_10bin": 0.26869541096410265,
+    "success_label_auroc": 0.9568618881118882,
+    "success_label_auprc": 0.9603392854109277,
+    "success_label_brier": 0.048174798379582356,
+    "success_label_ece_10bin": 0.051153729087673135,
+    "nonfailure_correct_auroc": 0.7520438588054246,
+    "nonfailure_correct_auprc": 0.9469237871144061,
+    "nonfailure_correct_brier": 0.12819966533919422,
+    "nonfailure_correct_ece_10bin": 0.13270354003399468,
+    "failure_incorrect_auroc": 0.7520438588054247,
+    "failure_incorrect_auprc": 0.28639871397505084,
+    "failure_incorrect_brier": 0.12819966533919422,
+    "failure_incorrect_ece_10bin": 0.1327035400339947,
+    "predicted_success_rate": 0.6981132075471698,
+    "loss": 0.44733706753958696
+  },
+  "label_audit": {
+    "p_is_correct_given_outcome": {
+      "SUCCESS_LIKELY": 1.0,
+      "UNCERTAIN": 1.0,
+      "FAILURE_LIKELY": 0.0
+    },
+    "correctness_separation_success_minus_uncertain": 0.0,
+    "max_outcome_share_swing": 0.030785017957927124,
+    "label_revision_trigger": true
+  },
+  "correctness_baselines": {
+    "majority": {
+      "positive_label": 1,
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.4691151919866444
+    },
+    "logistic_regression": {
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.5909327956054653,
+      "auroc": 0.751178224487833,
+      "auprc": 0.9391876736580158,
+      "brier": 0.08979844640927075,
+      "ece_10bin": 0.05710227356928392
+    },
+    "mlp": {
+      "accuracy": 0.889937106918239,
+      "macro_f1": 0.5437589670014347,
+      "auroc": 0.7036645186111378,
+      "auprc": 0.9424874138825272,
+      "brier": 0.11098464639363805,
+      "ece_10bin": 0.12714844154861737,
+      "converged": true,
+      "n_iter": 14
+    }
+  },
+  "monotonicity": {
+    "num_examples": 318,
+    "trace_input_dim": 9,
+    "supported_checks": [
+      "lower_agreement",
+      "lower_margin",
+      "higher_entropy",
+      "lower_attention_concentration"
+    ],
+    "lower_agreement_violation_rate": 0.26696428582072257,
+    "lower_margin_violation_rate": 0.021875,
+    "higher_entropy_violation_rate": 0.15089285746216774,
+    "lower_attention_concentration_violation_rate": 0.85,
+    "lower_agreement__nonfailure_violation_rate": 0.16294642873108386,
+    "lower_margin__nonfailure_violation_rate": 0.0,
+    "higher_entropy__nonfailure_violation_rate": 0.059375,
+    "lower_attention_concentration__nonfailure_violation_rate": 0.7866071432828903,
+    "monotonicity_violation_rate": 0.3224330358207226,
+    "all_supported_monotonicity_violation_rate": 0.28733258941210804,
+    "nonfailure_monotonicity_violation_rate": 0.25223214300349356,
+    "all_supported_nonfailure_monotonicity_violation_rate": 0.25223214300349356
+  },
+  "acceptance": {
+    "failure_recall_ok": true,
+    "outcome_macro_f1_ok": true,
+    "outcome_acc_ok": true,
+    "trajectory_ok": false,
+    "monotonicity_ok": false,
+    "label_revision_trigger": true
+  },
+  "artifacts": {
+    "metrics": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_347\\metrics.json",
+    "predictions": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_347\\predictions.jsonl",
+    "summary": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_347\\summary.json"
+  }
+}

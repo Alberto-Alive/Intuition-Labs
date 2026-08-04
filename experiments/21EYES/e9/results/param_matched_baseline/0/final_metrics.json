@@ -1,0 +1,389 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": false,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal"
+    ],
+    "junction_variant": false,
+    "last_attention_paths": [
+      "manual_dense",
+      "manual_dense",
+      "manual_dense",
+      "manual_dense"
+    ],
+    "note": "E8-style references use per-token avenue MLP pathways; baselines use causal SDPA."
+  },
+  "avenue_controls": {},
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e9\\configs\\param_matched_baseline.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.189453125,
+    "accuracy_by_distractor_count": {
+      "17+": 0.08433734939759036,
+      "5-8": 0.3917525773195876,
+      "9-16": 0.18072289156626506
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.08,
+      "2": 0.17475728155339806,
+      "3": 0.23232323232323232,
+      "4+": 0.18947368421052632
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.171875,
+      "256": 0.2421875
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.2018348623853211,
+      "multi_hop_lookup": 0.1875,
+      "password_overwrite": 0.17164179104477612,
+      "variable_shadowing": 0.2
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 1354.804156656304,
+    "held_out_template_accuracy": 0.189453125,
+    "layers": {
+      "attention_entropy": [
+        3.5319919735193253,
+        1.3053979352116585,
+        1.8923328146338463,
+        1.6356758177280426
+      ],
+      "avenue_diversity": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_gate_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_output_norm": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_scale": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_to_junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_usage_0": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_usage_1": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_usage_2": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "avenue_usage_3": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "distractor_avenue_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "distractor_junction_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "effective_attended_tokens": [
+        53.65956950187683,
+        5.267385333776474,
+        10.002545416355133,
+        10.272319793701172
+      ],
+      "final_avenue_to_junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_diversity": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_effective_source_tokens": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_norm": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_token_utilization": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_contribution_norm": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_diversity": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_effective_source_tokens": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_norm": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_read_gate": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_read_scale": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_to_avenue_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_token_utilization": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "pairwise_avenue_cosine": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "query_useful_gate_cosine": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "useful_evidence_avenue_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_evidence_junction_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_evidence_junction_mass": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top1_avenue_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top1_junction_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top1_position_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top3_avenue_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top3_junction_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top3_position_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_vs_distractor_avenue_auc": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_vs_distractor_junction_auc": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "loss": 3.7381505966186523,
+    "peak_gpu_memory_mb": 987.47900390625,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.0859375,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.531364440917969,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.265625,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 3.1685218811035156,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.1640625,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.9311904907226562,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.2421875,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.3215255737304688,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 216768.66506500865,
+    "wall_clock_eval_seconds": 0.37791440001456067
+  },
+  "max_steps": 2500,
+  "parameter_count": 5065984,
+  "peak_gpu_memory_mb": 987.47900390625,
+  "seed": 0,
+  "train_examples": 160000,
+  "train_examples_per_sec": 1617.5755520228474,
+  "train_loss_ema": 3.359406014260881,
+  "train_task_loss_ema": 3.359406014260881,
+  "train_tokens": 20480000,
+  "train_tokens_per_sec": 207049.67065892447,
+  "trainable_parameter_count": 5065984,
+  "variant": "param_matched_baseline",
+  "wall_clock_train_seconds": 98.9134633000067
+}

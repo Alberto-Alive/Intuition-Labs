@@ -1,0 +1,189 @@
+project: DIGIT Validation
+version: 1
+owner: Alberto-Alive
+status_scale:
+  - todo
+  - in_progress
+  - blocked
+  - done
+milestones:
+  - id: V0
+    name: Validation setup
+  - id: V1
+    name: Privacy evaluation
+  - id: V2
+    name: Utility evaluation
+  - id: V3
+    name: Robustness and governance
+  - id: V4
+    name: Final report
+
+tasks:
+  - id: VAL-001
+    milestone: V0
+    title: Freeze context of use
+    status: todo
+    priority: high
+    depends_on: []
+    deliverable: context_of_use.md updated and signed off
+
+  - id: VAL-002
+    milestone: V0
+    title: Freeze threat model
+    status: todo
+    priority: high
+    depends_on: [VAL-001]
+    deliverable: threat_model.md with attacker classes, query limits, privacy unit
+
+  - id: VAL-003
+    milestone: V0
+    title: Define common evaluation harness
+    status: done
+    priority: high
+    depends_on: [VAL-001, VAL-002]
+    deliverable: harness.md — seeds, baselines, metrics, per-run file structure, results folder convention
+
+  - id: VAL-004
+    milestone: V1
+    title: Run comparative membership inference benchmark
+    status: in_progress
+    priority: high
+    depends_on: [VAL-003]
+    spec: attacks/membership_inference.md
+    deliverable: attack results table for DIGIT vs raw vs DP, in mechanism and system modes
+    notes: >
+      Validation infrastructure complete. Run:
+        python3 -m Validation.runners.run_comparative_mia
+          --datasets nist_genomics tcga
+          --modes mechanism system
+          --train
+      MIMIC-IV requires PhysioNet download first (see data/mimic_iv_demo.py).
+
+  - id: VAL-004A
+    milestone: V1
+    title: Run comparative DIGIT-vs-DP attack suite
+    status: in_progress
+    priority: high
+    depends_on: [VAL-003, VAL-004]
+    spec: attacks/comparative_attack_plan.md
+    deliverable: comparative suite summaries for MIA, repeated-query attacks, linkage, white-box attacks, and auxiliary amplification
+    notes: >
+      Primary entry point:
+        python3 -m Validation.runners.run_comparative_suite
+          --datasets nist_genomics tcga
+          --modes mechanism system
+          --train
+
+  - id: VAL-005
+    milestone: V1
+    title: Run attribute inference benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-003]
+    spec: attacks/attribute_inference.md
+    deliverable: attribute leakage metrics and failure analysis
+
+  - id: VAL-006
+    milestone: V1
+    title: Run subgroup presence benchmark
+    status: todo
+    priority: medium
+    depends_on: [VAL-003]
+    spec: attacks/subgroup_presence.md
+    deliverable: subgroup exposure table
+
+  - id: VAL-007
+    milestone: V1
+    title: Run reconstruction and inversion benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-003]
+    spec: attacks/reconstruction_inversion.md
+    deliverable: reconstruction risk analysis with examples
+
+  - id: VAL-008
+    milestone: V1
+    title: Run linkage attack benchmark
+    status: todo
+    priority: medium
+    depends_on: [VAL-003]
+    spec: attacks/linkage_attack.md
+    deliverable: linkage precision recall results
+
+  - id: VAL-009
+    milestone: V1
+    title: Run adaptive query attack benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-003, VAL-002]
+    spec: attacks/adaptive_query_attack.md
+    deliverable: repeated-query leakage curve
+
+  - id: VAL-010
+    milestone: V1
+    title: Run composition stress benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-009]
+    spec: attacks/composition_stress.md
+    deliverable: cumulative leakage summary under query budget
+
+  - id: VAL-011
+    milestone: V2
+    title: Run NIST genomics utility benchmark
+    status: todo
+    priority: medium
+    depends_on: [VAL-003]
+    spec: utility/nist_genomics_utility.md
+    deliverable: utility retention results, caveats, and comparative frontier points
+
+  - id: VAL-012
+    milestone: V2
+    title: Run PRISM drug-response utility benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-003]
+    spec: utility/prism_drug_response.md
+    deliverable: drug-response ranking and classification results
+
+  - id: VAL-013
+    milestone: V2
+    title: Run TCGA subtype prediction benchmark
+    status: todo
+    priority: high
+    depends_on: [VAL-003]
+    spec: utility/tcga_subtype_prediction.md
+    deliverable: subtype prediction utility results and subgroup analysis
+
+  - id: VAL-014
+    milestone: V2
+    title: Run MIMIC-IV demo sanity benchmark
+    status: todo
+    priority: medium
+    depends_on: [VAL-003]
+    spec: utility/mimic_sanity_check.md
+    deliverable: healthcare-style sanity check before full access
+
+  - id: VAL-015
+    milestone: V3
+    title: Run robustness sweeps
+    status: todo
+    priority: medium
+    depends_on: [VAL-004, VAL-005, VAL-012, VAL-013]
+    deliverable: robustness/stress_plan.md updated with findings
+
+  - id: VAL-016
+    milestone: V3
+    title: Finalize governance package
+    status: todo
+    priority: medium
+    depends_on: [VAL-001, VAL-002]
+    deliverable: governance docs updated with release criteria and revalidation triggers
+
+  - id: VAL-017
+    milestone: V4
+    title: Write validation report
+    status: todo
+    priority: high
+    depends_on: [VAL-004, VAL-005, VAL-007, VAL-009, VAL-012, VAL-013, VAL-016]
+    deliverable: validation_report.md with results, limits, and recommended claims

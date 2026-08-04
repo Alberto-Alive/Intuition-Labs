@@ -1,0 +1,34 @@
+{
+  "device": "auto",
+  "seeds": [0],
+  "max_variants": 12,
+  "run_overfit_gates": true,
+  "dataset": {
+    "dataset_root": "W:\\HocusPocus\\ARC-AGI-2",
+    "data_split": "training",
+    "num_candidates": 8,
+    "train_tasks": 24,
+    "dev_tasks": 8,
+    "test_tasks": 8,
+    "include_evaluation": false,
+    "max_train_pairs": 6,
+    "max_grid_size": 30,
+    "negative_difficulty": "mixed_hard"
+  },
+  "training": {
+    "epochs": 4,
+    "batch_size": 8,
+    "lr": 0.0007,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "gradient_clip_norm": 1.0
+  },
+  "overfit_training": {
+    "epochs": 24,
+    "batch_size": 8,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 24,
+    "gradient_clip_norm": 1.0
+  }
+}

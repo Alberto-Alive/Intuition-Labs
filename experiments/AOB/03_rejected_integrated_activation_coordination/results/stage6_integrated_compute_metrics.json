@@ -1,0 +1,648 @@
+{
+  "metadata": {
+    "config_path": "configs\\stage6_integrated_multiperspective_search.json",
+    "created_at_utc": "2026-05-16T05:59:33.115305+00:00",
+    "dataset_or_label_changes": "none",
+    "device": "cuda",
+    "fixed_benchmark": "Stage 4 schema-aware balanced_categories_v3",
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "phase_requested": "cheap",
+    "run_randomized_label_controls": true,
+    "selection_policy": "cheap/medium selection uses dev metrics and controls only; final seeds are reserved",
+    "stage": "stage6_integrated_multiperspective_search"
+  },
+  "rows": [
+    {
+      "accuracy_per_ms": 0.498572112693747,
+      "attention_operation_estimate": 0.0,
+      "cuda_max_memory_allocated": 130190336,
+      "cuda_max_memory_allocated_gb": 0.12124919891357422,
+      "delta_per_gb_memory": 4.574772493098105,
+      "frozen_param_count": 38401,
+      "frozen_train_seconds": 18.256626799993683,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.347598437405395,
+        "seconds": 0.17249259998789057
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 26.037079399975482,
+      "seed": 0,
+      "total_fit_seconds": 89.37059409997892,
+      "trainable_param_count": 417729,
+      "trainable_train_seconds": 45.07688790000975,
+      "variant": "candidate_token_direct_lr3e4_clip1"
+    },
+    {
+      "accuracy_per_ms": 0.05588349855836732,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 148871168,
+      "cuda_max_memory_allocated_gb": 0.13864707946777344,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 16.06499499999336,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.397997656113148,
+        "seconds": 0.17894369998248294
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 26.717342899995856,
+      "seed": 0,
+      "total_fit_seconds": 65.78217890000087,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 22.999841000011656,
+      "variant": "integrated_bridge_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.31933679214183885,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": 2.149940694487996,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 19.680612100026337,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.35779453125906,
+        "seconds": 0.17379770000115968
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.735441199998604,
+      "seed": 0,
+      "total_fit_seconds": 82.30785870004911,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 34.89180540002417,
+      "variant": "integrated_bridge_late2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.7175302162142896,
+      "attention_operation_estimate": 32.0,
+      "cuda_max_memory_allocated": 108459008,
+      "cuda_max_memory_allocated_gb": 0.10101032257080078,
+      "delta_per_gb_memory": 8.23709130734443,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 26.79929140000604,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3936695311258518,
+        "seconds": 0.17838969998410903
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 23.46084049998899,
+      "seed": 0,
+      "total_fit_seconds": 96.63613189998432,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 46.37599999998929,
+      "variant": "integrated_summary_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 1.5097923506037774,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 5.805771726142584,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 15.75530049999361,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 0.623533593625325,
+        "seconds": 0.0798122999840416
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 14.06911820001551,
+      "seed": 0,
+      "total_fit_seconds": 71.20732350001344,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 41.382904800004326,
+      "variant": "integrated_router_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.4071699131436496,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 2.973003879087507,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 19.63012279997929,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3431125000806787,
+        "seconds": 0.17191840001032688
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.898926499998197,
+      "seed": 0,
+      "total_fit_seconds": 91.39642809997895,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 43.86737880000146,
+      "variant": "integrated_router_plus_tokens_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.37183592602910803,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 151739392,
+      "cuda_max_memory_allocated_gb": 0.14131832122802734,
+      "delta_per_gb_memory": 2.4877347603976165,
+      "frozen_param_count": 209921,
+      "frozen_train_seconds": 20.98108460000367,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.4077109374284191,
+        "seconds": 0.18018699999083765
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 20.908188199973665,
+      "seed": 0,
+      "total_fit_seconds": 91.42978239996592,
+      "trainable_param_count": 589249,
+      "trainable_train_seconds": 49.54050959998858,
+      "variant": "integrated_candidate_guided2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.6322959692321082,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 149680640,
+      "cuda_max_memory_allocated_gb": 0.13940095901489258,
+      "delta_per_gb_memory": 5.296098787391609,
+      "frozen_param_count": 109505,
+      "frozen_train_seconds": 28.191845399996964,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3714898436774092,
+        "seconds": 0.17555069999070838
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.891424500005087,
+      "seed": 0,
+      "total_fit_seconds": 104.00504210000508,
+      "trainable_param_count": 488833,
+      "trainable_train_seconds": 47.92177220000303,
+      "variant": "integrated_early_mixing1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 1.345257008198142,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": 4.942071466550328,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 22.587385699996958,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 0.6097812499774591,
+        "seconds": 0.07805199999711476
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 12.92429940000875,
+      "seed": 0,
+      "total_fit_seconds": 83.5106193999818,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 47.9989342999761,
+      "variant": "integrated_late_mixing_only2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.3159618669315515,
+      "attention_operation_estimate": 0.0,
+      "cuda_max_memory_allocated": 130190336,
+      "cuda_max_memory_allocated_gb": 0.12124919891357422,
+      "delta_per_gb_memory": 1.8685690464766909,
+      "frozen_param_count": 38401,
+      "frozen_train_seconds": 8.758673300006194,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3352085936730873,
+        "seconds": 0.17090669999015518
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 21.699322900007246,
+      "seed": 1,
+      "total_fit_seconds": 53.25445980002405,
+      "trainable_param_count": 417729,
+      "trainable_train_seconds": 22.79646360001061,
+      "variant": "candidate_token_direct_lr3e4_clip1"
+    },
+    {
+      "accuracy_per_ms": 0.12018866186491328,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 148871168,
+      "cuda_max_memory_allocated_gb": 0.13864707946777344,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 15.795782700006384,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3650414061885385,
+        "seconds": 0.17472529999213293
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 30.590234799979953,
+      "seed": 1,
+      "total_fit_seconds": 69.17332059997716,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 22.787303099990822,
+      "variant": "integrated_bridge_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.11834566289222796,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 16.4587554000027,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.386299218665954,
+        "seconds": 0.1774462999892421
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.07815339998342,
+      "seed": 1,
+      "total_fit_seconds": 66.89700139997876,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 23.36009259999264,
+      "variant": "integrated_bridge_late2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.6378451767221868,
+      "attention_operation_estimate": 32.0,
+      "cuda_max_memory_allocated": 108459008,
+      "cuda_max_memory_allocated_gb": 0.10101032257080078,
+      "delta_per_gb_memory": 6.883578651208022,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 16.119955600006506,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3718062500629458,
+        "seconds": 0.17559120000805706
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 30.439924399979645,
+      "seed": 1,
+      "total_fit_seconds": 92.13270229997579,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 45.57282229998964,
+      "variant": "integrated_summary_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.13936933385933298,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 14.282799400010845,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3733742187014286,
+        "seconds": 0.17579189999378286
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.933934500004398,
+      "seed": 1,
+      "total_fit_seconds": 62.165111500013154,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 19.94837759999791,
+      "variant": "integrated_router_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.2953041814511752,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 14.190866399992956,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 0.6481664061084302,
+        "seconds": 0.08296529998187907
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 17.460367899999255,
+      "seed": 1,
+      "total_fit_seconds": 51.7435351999884,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 20.09230089999619,
+      "variant": "integrated_router_plus_tokens_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.24928449413391973,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 151739392,
+      "cuda_max_memory_allocated_gb": 0.14131832122802734,
+      "delta_per_gb_memory": -0.027641497337751293,
+      "frozen_param_count": 209921,
+      "frozen_train_seconds": 7.260122900013812,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 0.6581335937880795,
+        "seconds": 0.08424110000487417
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 9.921413100004429,
+      "seed": 1,
+      "total_fit_seconds": 27.249808100023074,
+      "trainable_param_count": 589249,
+      "trainable_train_seconds": 10.068272100004833,
+      "variant": "integrated_candidate_guided2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.4038988182663307,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 149680640,
+      "cuda_max_memory_allocated_gb": 0.13940095901489258,
+      "delta_per_gb_memory": 2.5499734902255895,
+      "frozen_param_count": 109505,
+      "frozen_train_seconds": 13.998783499991987,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3733328123635147,
+        "seconds": 0.17578659998252988
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 24.04248179998831,
+      "seed": 1,
+      "total_fit_seconds": 68.51455149997491,
+      "trainable_param_count": 488833,
+      "trainable_train_seconds": 30.473286199994618,
+      "variant": "integrated_early_mixing1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.11994667513618058,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": -0.13960653860311661,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 11.876162300002761,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3677953124897613,
+        "seconds": 0.17507779999868944
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 14.774073499982478,
+      "seed": 1,
+      "total_fit_seconds": 48.2415750999935,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 21.591339300008258,
+      "variant": "integrated_late_mixing_only2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.7186073837451957,
+      "attention_operation_estimate": 0.0,
+      "cuda_max_memory_allocated": 130190336,
+      "cuda_max_memory_allocated_gb": 0.12124919891357422,
+      "delta_per_gb_memory": 7.0554589858344015,
+      "frozen_param_count": 38401,
+      "frozen_train_seconds": 23.61608179999166,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3915804688622302,
+        "seconds": 0.17812230001436546
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 46.04104670000379,
+      "seed": 2,
+      "total_fit_seconds": 114.64218709999113,
+      "trainable_param_count": 417729,
+      "trainable_train_seconds": 44.98505859999568,
+      "variant": "candidate_token_direct_lr3e4_clip1"
+    },
+    {
+      "accuracy_per_ms": 0.0578367406507517,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 148871168,
+      "cuda_max_memory_allocated_gb": 0.13864707946777344,
+      "delta_per_gb_memory": 0.2535664662750547,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 6.2984182000218425,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.418324218775524,
+        "seconds": 0.18154550000326708
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 30.364001300011296,
+      "seed": 2,
+      "total_fit_seconds": 53.44466300003114,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 16.782243499998003,
+      "variant": "integrated_bridge_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.12347598364912275,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": -0.19544915404436325,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 16.770318599999882,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3919710936534102,
+        "seconds": 0.1781722999876365
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 12.879377200006275,
+      "seed": 2,
+      "total_fit_seconds": 55.11186180001823,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 25.462166000012076,
+      "variant": "integrated_bridge_late2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.5501493684562708,
+      "attention_operation_estimate": 32.0,
+      "cuda_max_memory_allocated": 108459008,
+      "cuda_max_memory_allocated_gb": 0.10101032257080078,
+      "delta_per_gb_memory": 6.303501798578132,
+      "frozen_param_count": 76033,
+      "frozen_train_seconds": 15.605593499989482,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3206640626322041,
+        "seconds": 0.16904500001692213
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 18.65502489998471,
+      "seed": 2,
+      "total_fit_seconds": 80.92865989997517,
+      "trainable_param_count": 455361,
+      "trainable_train_seconds": 46.66804150000098,
+      "variant": "integrated_summary_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.033121722331493866,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 16.349522399978014,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.4152343749174179,
+        "seconds": 0.1811499999894295
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 23.097267500008456,
+      "seed": 2,
+      "total_fit_seconds": 62.3131732000038,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 22.866383300017333,
+      "variant": "integrated_router_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.7333339826839811,
+      "attention_operation_estimate": 4144.0,
+      "cuda_max_memory_allocated": 149544448,
+      "cuda_max_memory_allocated_gb": 0.13927412033081055,
+      "delta_per_gb_memory": 6.6471879183371625,
+      "frozen_param_count": 76161,
+      "frozen_train_seconds": 13.692181399994297,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.36363515616722,
+        "seconds": 0.17454529998940416
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 23.47842669999227,
+      "seed": 2,
+      "total_fit_seconds": 83.62453359999927,
+      "trainable_param_count": 455489,
+      "trainable_train_seconds": 46.4539255000127,
+      "variant": "integrated_router_plus_tokens_late1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.7033090691494402,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 151739392,
+      "cuda_max_memory_allocated_gb": 0.14131832122802734,
+      "delta_per_gb_memory": 6.495751874371554,
+      "frozen_param_count": 209921,
+      "frozen_train_seconds": 20.861956000007922,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.4218500000424683,
+        "seconds": 0.18199680000543594
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 37.025491000007605,
+      "seed": 2,
+      "total_fit_seconds": 107.60200490002171,
+      "trainable_param_count": 589249,
+      "trainable_train_seconds": 49.714557900006184,
+      "variant": "integrated_candidate_guided2_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.7489944165049283,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 149680640,
+      "cuda_max_memory_allocated_gb": 0.13940095901489258,
+      "delta_per_gb_memory": 6.641139749268843,
+      "frozen_param_count": 109505,
+      "frozen_train_seconds": 16.629222999996273,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.3351234374567866,
+        "seconds": 0.1708957999944687
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 27.56059009997989,
+      "seed": 2,
+      "total_fit_seconds": 87.16635309997946,
+      "trainable_param_count": 488833,
+      "trainable_train_seconds": 42.9765400000033,
+      "variant": "integrated_early_mixing1_lr3e4"
+    },
+    {
+      "accuracy_per_ms": 0.09025591160080279,
+      "attention_operation_estimate": 4128.0,
+      "cuda_max_memory_allocated": 150218752,
+      "cuda_max_memory_allocated_gb": 0.13990211486816406,
+      "delta_per_gb_memory": 0.0,
+      "frozen_param_count": 142977,
+      "frozen_train_seconds": 13.849670700001298,
+      "inference_latency": {
+        "examples": 128.0,
+        "ms_per_example": 1.2983914064079727,
+        "seconds": 0.1661941000202205
+      },
+      "phase": "cheap",
+      "randomized_train_seconds": 19.638357999996515,
+      "seed": 2,
+      "total_fit_seconds": 53.24207259999821,
+      "trainable_param_count": 522305,
+      "trainable_train_seconds": 19.754043900000397,
+      "variant": "integrated_late_mixing_only2_lr3e4"
+    }
+  ],
+  "summary_by_variant": {
+    "candidate_token_direct_lr3e4_clip1": {
+      "mean_accuracy_per_ms": 0.511047121123498,
+      "mean_cuda_max_memory_gb": 0.12124919891357422,
+      "mean_latency_ms_per_example": 1.3581291666469042,
+      "mean_total_fit_seconds": 85.75574699999804
+    },
+    "integrated_bridge_late1_lr3e4": {
+      "mean_accuracy_per_ms": 0.0779696336913441,
+      "mean_cuda_max_memory_gb": 0.13864707946777344,
+      "mean_latency_ms_per_example": 1.3937877603590703,
+      "mean_total_fit_seconds": 62.800054166669725
+    },
+    "integrated_bridge_late2_lr3e4": {
+      "mean_accuracy_per_ms": 0.18705281289439651,
+      "mean_cuda_max_memory_gb": 0.13990211486816406,
+      "mean_latency_ms_per_example": 1.378688281192808,
+      "mean_total_fit_seconds": 68.10557396668203
+    },
+    "integrated_candidate_guided2_lr3e4": {
+      "mean_accuracy_per_ms": 0.4414764964374893,
+      "mean_cuda_max_memory_gb": 0.14131832122802734,
+      "mean_latency_ms_per_example": 1.162564843752989,
+      "mean_total_fit_seconds": 75.42719846667023
+    },
+    "integrated_early_mixing1_lr3e4": {
+      "mean_accuracy_per_ms": 0.5950630680011224,
+      "mean_cuda_max_memory_gb": 0.13940095901489258,
+      "mean_latency_ms_per_example": 1.3599820311659034,
+      "mean_total_fit_seconds": 86.56198223331982
+    },
+    "integrated_late_mixing_only2_lr3e4": {
+      "mean_accuracy_per_ms": 0.5184865316450418,
+      "mean_cuda_max_memory_gb": 0.13990211486816406,
+      "mean_latency_ms_per_example": 1.0919893229583977,
+      "mean_total_fit_seconds": 61.66475569999117
+    },
+    "integrated_router_late1_lr3e4": {
+      "mean_accuracy_per_ms": 0.5607611355982014,
+      "mean_cuda_max_memory_gb": 0.13927412033081055,
+      "mean_latency_ms_per_example": 1.1373807290813904,
+      "mean_total_fit_seconds": 65.2285360666768
+    },
+    "integrated_router_plus_tokens_late1_lr3e4": {
+      "mean_accuracy_per_ms": 0.4786026924262686,
+      "mean_cuda_max_memory_gb": 0.13927412033081055,
+      "mean_latency_ms_per_example": 1.1183046874521096,
+      "mean_total_fit_seconds": 75.5881656333222
+    },
+    "integrated_summary_late1_lr3e4": {
+      "mean_accuracy_per_ms": 0.6351749204642491,
+      "mean_cuda_max_memory_gb": 0.10101032257080078,
+      "mean_latency_ms_per_example": 1.3620466146070005,
+      "mean_total_fit_seconds": 89.89916469997843
+    }
+  }
+}

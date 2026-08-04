@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "control_failure": 15,
+    "did_not_beat_frozen": 8,
+    "micro_overfit_failure": 5
+  },
+  "failure_reasons": {
+    "control_failure": "one or more shortcut, mismatch, shuffle, audit, or ablation gates failed",
+    "did_not_beat_frozen": "trainable shared model did not beat exact frozen comparator",
+    "frozen_high_suspicious": "same-architecture frozen comparator solved too much of the task",
+    "micro_overfit_failure": "variant could not memorize small repaired learned-constraint sets",
+    "shortcut_above_chance": "model-side shortcut control exceeded chance window",
+    "shortcut_decomposition_above_chance": "standalone shortcut probe exceeded chance window"
+  }
+}

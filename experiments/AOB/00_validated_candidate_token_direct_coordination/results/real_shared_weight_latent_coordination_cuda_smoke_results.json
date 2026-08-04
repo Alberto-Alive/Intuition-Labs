@@ -1,0 +1,3623 @@
+{
+  "audit": [
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "dev_ids": [
+        "dev-00000",
+        "dev-00001",
+        "dev-00002",
+        "dev-00003",
+        "dev-00004",
+        "dev-00005",
+        "dev-00006",
+        "dev-00007",
+        "dev-00008",
+        "dev-00009",
+        "dev-00010",
+        "dev-00011",
+        "dev-00012",
+        "dev-00013",
+        "dev-00014",
+        "dev-00015",
+        "dev-00016",
+        "dev-00017",
+        "dev-00018",
+        "dev-00019",
+        "dev-00020",
+        "dev-00021",
+        "dev-00022",
+        "dev-00023",
+        "dev-00024",
+        "dev-00025",
+        "dev-00026",
+        "dev-00027",
+        "dev-00028",
+        "dev-00029",
+        "dev-00030",
+        "dev-00031"
+      ],
+      "dev_test_candidate_hash_overlap": 0,
+      "dev_test_file_patch_overlap": 0,
+      "dev_test_id_overlap": 0,
+      "dev_test_issue_hash_overlap": 0,
+      "dev_test_problem_family_overlap": 0,
+      "seed": 0,
+      "test_ids": [
+        "test-00000",
+        "test-00001",
+        "test-00002",
+        "test-00003",
+        "test-00004",
+        "test-00005",
+        "test-00006",
+        "test-00007",
+        "test-00008",
+        "test-00009",
+        "test-00010",
+        "test-00011",
+        "test-00012",
+        "test-00013",
+        "test-00014",
+        "test-00015",
+        "test-00016",
+        "test-00017",
+        "test-00018",
+        "test-00019",
+        "test-00020",
+        "test-00021",
+        "test-00022",
+        "test-00023",
+        "test-00024",
+        "test-00025",
+        "test-00026",
+        "test-00027",
+        "test-00028",
+        "test-00029",
+        "test-00030",
+        "test-00031"
+      ],
+      "train_dev_candidate_hash_overlap": 0,
+      "train_dev_file_patch_overlap": 0,
+      "train_dev_id_overlap": 0,
+      "train_dev_issue_hash_overlap": 0,
+      "train_dev_problem_family_overlap": 0,
+      "train_ids": [
+        "train-00000",
+        "train-00001",
+        "train-00002",
+        "train-00003",
+        "train-00004",
+        "train-00005",
+        "train-00006",
+        "train-00007",
+        "train-00008",
+        "train-00009",
+        "train-00010",
+        "train-00011",
+        "train-00012",
+        "train-00013",
+        "train-00014",
+        "train-00015",
+        "train-00016",
+        "train-00017",
+        "train-00018",
+        "train-00019",
+        "train-00020",
+        "train-00021",
+        "train-00022",
+        "train-00023",
+        "train-00024",
+        "train-00025",
+        "train-00026",
+        "train-00027",
+        "train-00028",
+        "train-00029",
+        "train-00030",
+        "train-00031",
+        "train-00032",
+        "train-00033",
+        "train-00034",
+        "train-00035",
+        "train-00036",
+        "train-00037",
+        "train-00038",
+        "train-00039",
+        "train-00040",
+        "train-00041",
+        "train-00042",
+        "train-00043",
+        "train-00044",
+        "train-00045",
+        "train-00046",
+        "train-00047",
+        "train-00048",
+        "train-00049",
+        "train-00050",
+        "train-00051",
+        "train-00052",
+        "train-00053",
+        "train-00054",
+        "train-00055",
+        "train-00056",
+        "train-00057",
+        "train-00058",
+        "train-00059",
+        "train-00060",
+        "train-00061",
+        "train-00062",
+        "train-00063"
+      ],
+      "train_test_candidate_hash_overlap": 0,
+      "train_test_file_patch_overlap": 0,
+      "train_test_id_overlap": 0,
+      "train_test_issue_hash_overlap": 0,
+      "train_test_problem_family_overlap": 0,
+      "type": "real_shared_weight_split_leakage"
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "examples_checked": 128,
+      "passes": true,
+      "seed": 0,
+      "type": "real_shared_weight_output_leakage",
+      "visible_text_or_candidate_forbidden_pattern_hits": []
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "event": "fit",
+      "event_index": 0,
+      "method": "frozen_shared_agent_latent_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "event": "fit",
+      "event_index": 1,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "randomized_labels",
+      "event": "fit",
+      "event_index": 2,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "event": "fit",
+      "event_index": 3,
+      "method": "text_output_only_multi_agent_coordinator",
+      "seed": 0,
+      "split_inputs": [
+        "train",
+        "dev"
+      ],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": null,
+      "event": "test_gate_opened",
+      "event_index": 4,
+      "method": null,
+      "seed": 0,
+      "split_inputs": [],
+      "test_split_passed": false
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "event": "predict",
+      "event_index": 5,
+      "method": "all_real_shared_weight_methods",
+      "seed": 0,
+      "split_inputs": [
+        "test"
+      ],
+      "test_split_passed": true
+    },
+    {
+      "type": "test_access_summary",
+      "violation_events": [],
+      "violations": 0
+    }
+  ],
+  "diagnostics": [
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "candidate_patch_length_mean_by_position": {
+        "0": 331.921875,
+        "1": 331.953125,
+        "2": 331.546875,
+        "3": 331.453125
+      },
+      "candidate_value_counts_by_position": {
+        "0": {
+          "contract_legacy": 28,
+          "contract_updated": 36,
+          "guard_soft": 29,
+          "guard_strict": 35,
+          "patch_boundary": 33,
+          "patch_local": 31,
+          "policy_default": 26,
+          "policy_explicit": 38
+        },
+        "1": {
+          "contract_legacy": 29,
+          "contract_updated": 35,
+          "guard_soft": 29,
+          "guard_strict": 35,
+          "patch_boundary": 37,
+          "patch_local": 27,
+          "policy_default": 35,
+          "policy_explicit": 29
+        },
+        "2": {
+          "contract_legacy": 38,
+          "contract_updated": 26,
+          "guard_soft": 29,
+          "guard_strict": 35,
+          "patch_boundary": 31,
+          "patch_local": 33,
+          "policy_default": 34,
+          "policy_explicit": 30
+        },
+        "3": {
+          "contract_legacy": 33,
+          "contract_updated": 31,
+          "guard_soft": 29,
+          "guard_strict": 35,
+          "patch_boundary": 27,
+          "patch_local": 37,
+          "policy_default": 33,
+          "policy_explicit": 31
+        }
+      },
+      "chance": 0.25,
+      "label_counts": {
+        "0": 16,
+        "1": 16,
+        "2": 16,
+        "3": 16
+      },
+      "probe": "benchmark_validity_label_and_candidate_audit",
+      "problem_families": [
+        "cache_lookup",
+        "json_flag",
+        "list_window",
+        "metric_average",
+        "path_joiner",
+        "string_normalizer"
+      ],
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "candidate_patch_length_mean_by_position": {
+        "0": 347.03125,
+        "1": 347.78125,
+        "2": 347.53125,
+        "3": 348.03125
+      },
+      "candidate_value_counts_by_position": {
+        "0": {
+          "contract_legacy": 16,
+          "contract_updated": 16,
+          "guard_soft": 15,
+          "guard_strict": 17,
+          "patch_boundary": 12,
+          "patch_local": 20,
+          "policy_default": 22,
+          "policy_explicit": 10
+        },
+        "1": {
+          "contract_legacy": 14,
+          "contract_updated": 18,
+          "guard_soft": 15,
+          "guard_strict": 17,
+          "patch_boundary": 17,
+          "patch_local": 15,
+          "policy_default": 15,
+          "policy_explicit": 17
+        },
+        "2": {
+          "contract_legacy": 19,
+          "contract_updated": 13,
+          "guard_soft": 15,
+          "guard_strict": 17,
+          "patch_boundary": 16,
+          "patch_local": 16,
+          "policy_default": 15,
+          "policy_explicit": 17
+        },
+        "3": {
+          "contract_legacy": 15,
+          "contract_updated": 17,
+          "guard_soft": 15,
+          "guard_strict": 17,
+          "patch_boundary": 19,
+          "patch_local": 13,
+          "policy_default": 12,
+          "policy_explicit": 20
+        }
+      },
+      "chance": 0.25,
+      "label_counts": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "probe": "benchmark_validity_label_and_candidate_audit",
+      "problem_families": [
+        "date_bucket",
+        "retry_budget",
+        "token_counter"
+      ],
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "candidate_patch_length_mean_by_position": {
+        "0": 359.40625,
+        "1": 359.78125,
+        "2": 359.40625,
+        "3": 358.78125
+      },
+      "candidate_value_counts_by_position": {
+        "0": {
+          "contract_legacy": 23,
+          "contract_updated": 9,
+          "guard_soft": 18,
+          "guard_strict": 14,
+          "patch_boundary": 18,
+          "patch_local": 14,
+          "policy_default": 13,
+          "policy_explicit": 19
+        },
+        "1": {
+          "contract_legacy": 14,
+          "contract_updated": 18,
+          "guard_soft": 18,
+          "guard_strict": 14,
+          "patch_boundary": 21,
+          "patch_local": 11,
+          "policy_default": 19,
+          "policy_explicit": 13
+        },
+        "2": {
+          "contract_legacy": 13,
+          "contract_updated": 19,
+          "guard_soft": 18,
+          "guard_strict": 14,
+          "patch_boundary": 14,
+          "patch_local": 18,
+          "policy_default": 11,
+          "policy_explicit": 21
+        },
+        "3": {
+          "contract_legacy": 14,
+          "contract_updated": 18,
+          "guard_soft": 18,
+          "guard_strict": 14,
+          "patch_boundary": 11,
+          "patch_local": 21,
+          "policy_default": 21,
+          "policy_explicit": 11
+        }
+      },
+      "chance": 0.25,
+      "label_counts": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "probe": "benchmark_validity_label_and_candidate_audit",
+      "problem_families": [
+        "inventory_delta",
+        "pagination_cursor",
+        "permission_merge"
+      ],
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "benchmark": "real_shared_weight_latent_coordination",
+      "dataset_fixes_applied": [
+        "candidate patch order randomized with balanced gold position",
+        "eight semantically close candidates generated from a balanced four-attribute codeword set",
+        "each view carries only one generic high/low cue",
+        "role text removed from clone prompts so role embeddings carry slot identity",
+        "problem families are disjoint across train/dev/test",
+        "masked control removes all distributed evidence cues"
+      ],
+      "failed_shortcuts_found": [
+        "old masked and shuffled view controls stayed above chance",
+        "old role-label shuffle stayed above chance because textual role cues were available",
+        "old single partial-view baseline matched the trainable latent method",
+        "old candidate index distribution was not exactly balanced in small splits"
+      ],
+      "probe": "benchmark_validity_fixes_applied",
+      "seed": 0,
+      "split": "all"
+    },
+    {
+      "activation_requires_grad_before_coordinator": false,
+      "agent_grad_norm_mean": 0.0,
+      "agent_grad_norm_std": 0.0,
+      "agent_mode": "pretrained_adapter",
+      "agent_parameter_delta": 0.0,
+      "agent_trainable": false,
+      "batch_size": 2,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "best_dev_selection_acc": 0.25,
+      "clone_activation_requires_grad": false,
+      "condition": "none",
+      "coordination_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "coordinator_grad_norm_mean": 3.7083884330285337,
+      "coordinator_grad_norm_std": 1.604857541647711,
+      "coordinator_parameter_delta": 0.22935348749160767,
+      "cuda_max_memory_allocated": 428324352,
+      "device": "cuda",
+      "epochs_run": 1,
+      "gradient_accumulation_steps": 4,
+      "lora_modules_installed": 24,
+      "loss_backward_reaches_shared_agent": false,
+      "max_length": 128,
+      "method": "frozen_shared_agent_latent_coordinator",
+      "no_detach_between_clone_activations_and_loss": false,
+      "param_count": 38340,
+      "per_clone_activation_grad_norms": [],
+      "per_clone_gradient_contribution": false,
+      "pretrained_model_name_or_path": "EleutherAI/pythia-70m-deduped",
+      "probe": "real_shared_weight_training_audit",
+      "seed": 0,
+      "shared_parameter_count": 129,
+      "shared_parameter_identity": true,
+      "split": "dev",
+      "trainable_parameter_names": [],
+      "visible_explicit_evidence": false
+    },
+    {
+      "activation_requires_grad_before_coordinator": true,
+      "agent_grad_norm_mean": 3.2950859862089303,
+      "agent_grad_norm_std": 1.10627110177114,
+      "agent_mode": "pretrained_adapter",
+      "agent_parameter_delta": 0.5464761853218079,
+      "agent_trainable": true,
+      "batch_size": 2,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "best_dev_selection_acc": 0.25,
+      "clone_activation_requires_grad": true,
+      "condition": "none",
+      "coordination_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "coordinator_grad_norm_mean": 3.9059726869601006,
+      "coordinator_grad_norm_std": 1.4397099322625326,
+      "coordinator_parameter_delta": 0.21301083266735077,
+      "cuda_max_memory_allocated": 520116736,
+      "device": "cuda",
+      "epochs_run": 1,
+      "gradient_accumulation_steps": 4,
+      "lora_modules_installed": 24,
+      "loss_backward_reaches_shared_agent": true,
+      "max_length": 128,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "no_detach_between_clone_activations_and_loss": true,
+      "param_count": 174660,
+      "per_clone_activation_grad_norms": [
+        0.010058456100523472,
+        0.01475249882787466,
+        0.010993490926921368,
+        0.018985936418175697
+      ],
+      "per_clone_gradient_contribution": true,
+      "pretrained_model_name_or_path": "EleutherAI/pythia-70m-deduped",
+      "probe": "real_shared_weight_training_audit",
+      "seed": 17,
+      "shared_parameter_count": 129,
+      "shared_parameter_identity": true,
+      "split": "dev",
+      "trainable_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "visible_explicit_evidence": false
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "epoch": 1,
+      "method": "frozen_shared_agent_latent_coordinator",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "epoch": 1,
+      "method": "frozen_shared_agent_latent_coordinator",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "epoch": 1,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "epoch": 1,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "activation_requires_grad_before_coordinator": true,
+      "agent_grad_norm_mean": 3.4691922994251385,
+      "agent_grad_norm_std": 1.0919554180463902,
+      "agent_mode": "pretrained_adapter",
+      "agent_parameter_delta": 0.5268484950065613,
+      "agent_trainable": true,
+      "batch_size": 2,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "best_dev_selection_acc": 0.25,
+      "clone_activation_requires_grad": true,
+      "condition": "randomized_labels",
+      "coordination_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "coordinator_grad_norm_mean": 3.148671721308726,
+      "coordinator_grad_norm_std": 1.295608040513055,
+      "coordinator_parameter_delta": 0.26891183853149414,
+      "cuda_max_memory_allocated": 612128256,
+      "device": "cuda",
+      "epochs_run": 1,
+      "gradient_accumulation_steps": 4,
+      "lora_modules_installed": 24,
+      "loss_backward_reaches_shared_agent": true,
+      "max_length": 128,
+      "method": "trainable_shared_agent_latent_coordinator",
+      "no_detach_between_clone_activations_and_loss": true,
+      "param_count": 174660,
+      "per_clone_activation_grad_norms": [
+        0.018078701570630074,
+        0.017928706482052803,
+        0.015035801567137241,
+        0.022966893389821053
+      ],
+      "per_clone_gradient_contribution": true,
+      "pretrained_model_name_or_path": "EleutherAI/pythia-70m-deduped",
+      "probe": "real_shared_weight_training_audit",
+      "seed": 23000,
+      "shared_parameter_count": 129,
+      "shared_parameter_identity": true,
+      "split": "dev",
+      "trainable_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "visible_explicit_evidence": false
+    },
+    {
+      "activation_requires_grad_before_coordinator": true,
+      "agent_grad_norm_mean": 3.6647920842417614,
+      "agent_grad_norm_std": 1.1130398276644258,
+      "agent_mode": "pretrained_adapter",
+      "agent_parameter_delta": 0.5410253405570984,
+      "agent_trainable": true,
+      "batch_size": 2,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "best_dev_selection_acc": 0.25,
+      "clone_activation_requires_grad": true,
+      "condition": "visible_explicit_evidence",
+      "coordination_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "coordinator_grad_norm_mean": 3.798757207361734,
+      "coordinator_grad_norm_std": 1.8661541802758663,
+      "coordinator_parameter_delta": 0.28911930322647095,
+      "cuda_max_memory_allocated": 701649408,
+      "device": "cuda",
+      "epochs_run": 1,
+      "gradient_accumulation_steps": 4,
+      "lora_modules_installed": 24,
+      "loss_backward_reaches_shared_agent": true,
+      "max_length": 128,
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "no_detach_between_clone_activations_and_loss": true,
+      "param_count": 174660,
+      "per_clone_activation_grad_norms": [
+        0.0213418360799551,
+        0.01946229860186577,
+        0.020998692139983177,
+        0.021191921085119247
+      ],
+      "per_clone_gradient_contribution": true,
+      "pretrained_model_name_or_path": "EleutherAI/pythia-70m-deduped",
+      "probe": "real_shared_weight_training_audit",
+      "seed": 24000,
+      "shared_parameter_count": 129,
+      "shared_parameter_identity": true,
+      "split": "dev",
+      "trainable_parameter_names": [
+        "pretrained_model.layers.0.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.0.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.0.attention.dense.lora_a.weight",
+        "pretrained_model.layers.0.attention.dense.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.0.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.1.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.1.attention.dense.lora_a.weight",
+        "pretrained_model.layers.1.attention.dense.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.1.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.2.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.2.attention.dense.lora_a.weight",
+        "pretrained_model.layers.2.attention.dense.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.2.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.3.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.3.attention.dense.lora_a.weight",
+        "pretrained_model.layers.3.attention.dense.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.3.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.4.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.4.attention.dense.lora_a.weight",
+        "pretrained_model.layers.4.attention.dense.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.4.mlp.dense_4h_to_h.lora_b.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_a.weight",
+        "pretrained_model.layers.5.attention.query_key_value.lora_b.weight",
+        "pretrained_model.layers.5.attention.dense.lora_a.weight",
+        "pretrained_model.layers.5.attention.dense.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_h_to_4h.lora_b.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_a.weight",
+        "pretrained_model.layers.5.mlp.dense_4h_to_h.lora_b.weight",
+        "activation_adapter.0.weight",
+        "activation_adapter.0.bias",
+        "activation_adapter.1.weight",
+        "activation_adapter.1.bias",
+        "activation_adapter.3.weight",
+        "activation_adapter.3.bias"
+      ],
+      "visible_explicit_evidence": true
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "visible_explicit_evidence",
+      "epoch": 1,
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "visible_explicit_evidence",
+      "epoch": 1,
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "probe": "real_shared_weight_learning_curve",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "view_masked",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_local",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "dev-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_explicit"
+          ],
+          "id": "dev-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "token_counter"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "dev-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "view_shuffled",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_local",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "dev-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_explicit"
+          ],
+          "id": "dev-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "token_counter"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "dev-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "hidden_states_shuffled_across_examples",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_local",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "dev-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_explicit"
+          ],
+          "id": "dev-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "token_counter"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "dev-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "role_labels_shuffled",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_local",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "dev-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_explicit"
+          ],
+          "id": "dev-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "token_counter"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "dev-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "retry_budget"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "dev-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "date_bucket"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "view_masked",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "test-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "permission_merge"
+        },
+        {
+          "evidence_bits": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "view_shuffled",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "test-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "permission_merge"
+        },
+        {
+          "evidence_bits": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "hidden_states_shuffled_across_examples",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "test-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "permission_merge"
+        },
+        {
+          "evidence_bits": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "chance": 0.25,
+      "condition": "role_labels_shuffled",
+      "correct_examples": [
+        {
+          "evidence_bits": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00001",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_explicit"
+          ],
+          "id": "test-00005",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        },
+        {
+          "evidence_bits": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_local",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00009",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "permission_merge"
+        },
+        {
+          "evidence_bits": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "gold_tuple": [
+            "guard_strict",
+            "patch_boundary",
+            "contract_legacy",
+            "policy_default"
+          ],
+          "id": "test-00013",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "inventory_delta"
+        },
+        {
+          "evidence_bits": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "gold_tuple": [
+            "guard_soft",
+            "patch_boundary",
+            "contract_updated",
+            "policy_default"
+          ],
+          "id": "test-00017",
+          "label": 1,
+          "prediction": 1,
+          "problem_family": "pagination_cursor"
+        }
+      ],
+      "probe": "benchmark_validity_control_inspection",
+      "seed": 0,
+      "split": "test"
+    }
+  ],
+  "metadata": {
+    "agent_config": {
+      "adapter_hidden_dim": 64,
+      "agent_mode": "pretrained_adapter",
+      "allow_tiny_fallback": false,
+      "hidden_dim": 64,
+      "local_files_only": true,
+      "lora_alpha": 4.0,
+      "lora_rank": 2,
+      "lora_target_modules": [
+        "query_key_value",
+        "dense",
+        "dense_h_to_4h",
+        "dense_4h_to_h"
+      ],
+      "max_length": 128,
+      "model_name_or_path": "EleutherAI/pythia-70m-deduped",
+      "tiny_ff_dim": 128,
+      "tiny_heads": 2,
+      "tiny_layers": 1,
+      "tiny_vocab_size": 4096,
+      "train_top_layers": 0
+    },
+    "baseline_training_config": {
+      "batch_size": 16,
+      "epochs": 2,
+      "hidden_dims": [
+        32
+      ],
+      "lr": 0.002,
+      "patience": 1,
+      "weight_decay": 0.0001
+    },
+    "config": {
+      "agent": {
+        "adapter_hidden_dim": 64,
+        "agent_mode": "pretrained_adapter",
+        "allow_tiny_fallback": false,
+        "hidden_dim": 64,
+        "local_files_only": true,
+        "lora_alpha": 4.0,
+        "lora_rank": 2,
+        "lora_target_modules": [
+          "query_key_value",
+          "dense",
+          "dense_h_to_4h",
+          "dense_4h_to_h"
+        ],
+        "max_length": 128,
+        "model_name_or_path": "EleutherAI/pythia-70m-deduped",
+        "train_top_layers": 0
+      },
+      "audit_log_path": "results/real_shared_weight_latent_coordination_cuda_smoke_audit.jsonl",
+      "baseline_training": {
+        "batch_size": 16,
+        "epochs": 2,
+        "hidden_dims": [
+          32
+        ],
+        "lr": 0.002,
+        "patience": 1,
+        "weight_decay": 0.0001
+      },
+      "controls": [
+        "none",
+        "randomized_labels",
+        "view_masked",
+        "view_shuffled",
+        "hidden_states_shuffled_across_examples",
+        "role_labels_shuffled",
+        "physical_order_shuffled_roles_preserved",
+        "candidate_order_shuffled"
+      ],
+      "coordinator": {
+        "dropout": 0.0,
+        "family": "cross_attention",
+        "ff_dim": 128,
+        "input_dim": 64,
+        "model_dim": 64,
+        "num_heads": 2,
+        "num_layers": 1
+      },
+      "coordinator_families": [
+        "cross_attention"
+      ],
+      "dataset": {
+        "include_private_signal_tokens": true,
+        "max_files": 40,
+        "n_dev": 32,
+        "n_test": 32,
+        "n_train": 64,
+        "n_views": 4,
+        "num_candidates": 4,
+        "snippet_radius": 2,
+        "source_roots": [
+          "src",
+          "tests"
+        ]
+      },
+      "deterministic": false,
+      "device": "cuda",
+      "large_full_context_ff_dim": 128,
+      "large_full_context_heads": 2,
+      "large_full_context_hidden_dim": 64,
+      "large_full_context_layers": 1,
+      "output_path": "results/real_shared_weight_latent_coordination_cuda_smoke_results.json",
+      "positive_control_training": {
+        "batch_size": 16,
+        "epochs": 10,
+        "hidden_dims": [
+          64,
+          32
+        ],
+        "lr": 0.005,
+        "patience": 3,
+        "weight_decay": 0.0001
+      },
+      "report_path": "reports/REAL_SHARED_WEIGHT_CUDA_SMOKE.md",
+      "seeds": [
+        0
+      ],
+      "text_feature_dim": 128,
+      "training": {
+        "batch_size": 2,
+        "epochs": 1,
+        "gradient_accumulation_steps": 4,
+        "lr": 0.0005,
+        "patience": 1,
+        "weight_decay": 0.0001
+      }
+    },
+    "config_path": "configs\\real_shared_weight_latent_coordination_cuda_smoke.json",
+    "coordinator_config": {
+      "dropout": 0.0,
+      "family": "cross_attention",
+      "ff_dim": 128,
+      "input_dim": 64,
+      "model_dim": 64,
+      "num_heads": 2,
+      "num_layers": 1
+    },
+    "dataset_config": {
+      "dataset_source": "constructed_local_code_patch_selection",
+      "generator_version": "balanced_distributed_tuple_v2",
+      "include_private_signal_tokens": true,
+      "max_files": 40,
+      "n_dev": 32,
+      "n_test": 32,
+      "n_train": 64,
+      "n_views": 4,
+      "num_candidates": 4,
+      "snippet_radius": 2,
+      "source_roots": [
+        "src",
+        "tests"
+      ]
+    },
+    "dataset_summary_by_seed": {
+      "0": {
+        "constructed_fallback": true,
+        "dataset_source": "constructed_local_code_patch_selection",
+        "num_candidates": 4,
+        "num_views": 4,
+        "problem_families_by_split": {
+          "dev": [
+            "date_bucket",
+            "retry_budget",
+            "token_counter"
+          ],
+          "test": [
+            "inventory_delta",
+            "pagination_cursor",
+            "permission_merge"
+          ],
+          "train": [
+            "cache_lookup",
+            "json_flag",
+            "list_window",
+            "metric_average",
+            "path_joiner",
+            "string_normalizer"
+          ]
+        },
+        "publishable_proof_dataset": false,
+        "source_file_examples": [
+          "cache.py",
+          "dates.py",
+          "flags.py",
+          "inventory.py",
+          "metrics.py",
+          "normalizers.py",
+          "pagination.py",
+          "paths.py",
+          "permissions.py",
+          "retries.py"
+        ],
+        "source_files_used": 12,
+        "split_sizes": {
+          "dev": 32,
+          "test": 32,
+          "train": 64
+        }
+      }
+    },
+    "device_requested": "cuda",
+    "device_used": "cuda",
+    "environment": {
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_total_memory": 17094475776,
+      "device": "cuda",
+      "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+      "torch": "2.11.0+cu128"
+    },
+    "previous_run_summary": {},
+    "stage": "real_shared_weight_latent_coordination",
+    "training_config": {
+      "batch_size": 2,
+      "epochs": 1,
+      "gradient_accumulation_steps": 4,
+      "lr": 0.0005,
+      "patience": 1,
+      "weight_decay": 0.0001
+    }
+  },
+  "metrics": [
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "coordinator_grad_norm_mean": 3.7083884330285337,
+        "coordinator_parameter_delta": 0.22935348749160767,
+        "shared_parameter_identity": true
+      },
+      "method": "frozen_shared_agent_latent_coordinator",
+      "n_examples": 64,
+      "param_count": 38340,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 64,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "visible_explicit_evidence",
+      "metadata": {
+        "agent_grad_norm_mean": 3.6647920842417614,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5410253405570984,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.798757207361734,
+        "coordinator_parameter_delta": 0.28911930322647095,
+        "shared_parameter_identity": true,
+        "upper_bound_visible_explicit_evidence": true
+      },
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "n_examples": 64,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "uses_hidden_activations": false,
+        "visible_outputs_only": true
+      },
+      "method": "text_output_only_multi_agent_coordinator",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "majority_class_baseline",
+      "n_examples": 64,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "candidate_order_baseline",
+      "n_examples": 64,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "bag_of_words_candidate_patch_only",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.3125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "text_only_partial_view_baseline",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.3125
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.34375,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_0",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.34375
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_1",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_2",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_3",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.484375,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_masked",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "masked_evidence_text_baseline",
+      "n_examples": 64,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.484375
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "role_labels_only_baseline",
+      "n_examples": 64,
+      "param_count": 1188,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "explicit_evidence_neural_tuple_model",
+      "n_examples": 64,
+      "param_count": 3265,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "raw_structured_evidence_coordinator",
+      "n_examples": 64,
+      "param_count": 3201,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.234375,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_all_views": true
+      },
+      "method": "single_agent_full_context",
+      "n_examples": 64,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.234375
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "larger_tiny_transformer": true,
+        "receives_all_views": true
+      },
+      "method": "larger_tiny_transformer_full_context",
+      "n_examples": 64,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_one_partial_view": true
+      },
+      "method": "single_agent_partial_view",
+      "n_examples": 64,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "oracle_upper_bound": true,
+        "uses_structured_gold_evidence": true
+      },
+      "method": "explicit_evidence_oracle",
+      "n_examples": 64,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.25,
+        "diagnostic_only": true,
+        "epochs_run": 2,
+        "hidden_dims": [
+          32
+        ],
+        "param_count": 420,
+        "pca_components": 8,
+        "pca_explained_variance_ratio_sum": 0.4844244420528412,
+        "pca_first_component_variance_ratio": 0.0877266451716423,
+        "pooling": "mean",
+        "shared_agent_trainable": false,
+        "training_seed": 11000,
+        "visible_outputs": false
+      },
+      "method": "coordinator_only_probe",
+      "n_examples": 64,
+      "param_count": 420,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "coordinator_grad_norm_mean": 3.7083884330285337,
+        "coordinator_parameter_delta": 0.22935348749160767,
+        "shared_parameter_identity": true
+      },
+      "method": "frozen_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 38340,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "visible_explicit_evidence",
+      "metadata": {
+        "agent_grad_norm_mean": 3.6647920842417614,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5410253405570984,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.798757207361734,
+        "coordinator_parameter_delta": 0.28911930322647095,
+        "shared_parameter_identity": true,
+        "upper_bound_visible_explicit_evidence": true
+      },
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "uses_hidden_activations": false,
+        "visible_outputs_only": true
+      },
+      "method": "text_output_only_multi_agent_coordinator",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "majority_class_baseline",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "candidate_order_baseline",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "bag_of_words_candidate_patch_only",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.28125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "text_only_partial_view_baseline",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.28125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.28125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_0",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.28125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_1",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_2",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.28125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_3",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.28125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.3125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_masked",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "masked_evidence_text_baseline",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.3125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "role_labels_only_baseline",
+      "n_examples": 32,
+      "param_count": 1188,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "explicit_evidence_neural_tuple_model",
+      "n_examples": 32,
+      "param_count": 3265,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "raw_structured_evidence_coordinator",
+      "n_examples": 32,
+      "param_count": 3201,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.28125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_all_views": true
+      },
+      "method": "single_agent_full_context",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.28125
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "larger_tiny_transformer": true,
+        "receives_all_views": true
+      },
+      "method": "larger_tiny_transformer_full_context",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_one_partial_view": true
+      },
+      "method": "single_agent_partial_view",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "oracle_upper_bound": true,
+        "uses_structured_gold_evidence": true
+      },
+      "method": "explicit_evidence_oracle",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.25,
+        "diagnostic_only": true,
+        "epochs_run": 2,
+        "hidden_dims": [
+          32
+        ],
+        "param_count": 420,
+        "pca_components": 8,
+        "pca_explained_variance_ratio_sum": 0.4844244420528412,
+        "pca_first_component_variance_ratio": 0.0877266451716423,
+        "pooling": "mean",
+        "shared_agent_trainable": false,
+        "training_seed": 11000,
+        "visible_outputs": false
+      },
+      "method": "coordinator_only_probe",
+      "n_examples": 32,
+      "param_count": 420,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "coordinator_grad_norm_mean": 3.7083884330285337,
+        "coordinator_parameter_delta": 0.22935348749160767,
+        "shared_parameter_identity": true
+      },
+      "method": "frozen_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 38340,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "visible_explicit_evidence",
+      "metadata": {
+        "agent_grad_norm_mean": 3.6647920842417614,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5410253405570984,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.798757207361734,
+        "coordinator_parameter_delta": 0.28911930322647095,
+        "shared_parameter_identity": true,
+        "upper_bound_visible_explicit_evidence": true
+      },
+      "method": "trainable_shared_agent_latent_visible_explicit_evidence",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "uses_hidden_activations": false,
+        "visible_outputs_only": true
+      },
+      "method": "text_output_only_multi_agent_coordinator",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "majority_class_baseline",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "candidate_order_baseline",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "bag_of_words_candidate_patch_only",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "text_only_partial_view_baseline",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.28125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_0",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.28125
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_1",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_2",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "single_view_text_role_3",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_masked",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "masked_evidence_text_baseline",
+      "n_examples": 32,
+      "param_count": 4260,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "diagnostic_triviality_baseline": true,
+        "num_classes": 4
+      },
+      "method": "role_labels_only_baseline",
+      "n_examples": 32,
+      "param_count": 1188,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "explicit_evidence_neural_tuple_model",
+      "n_examples": 32,
+      "param_count": 3265,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "explicit_evidence",
+      "metadata": {
+        "learned_positive_control": true
+      },
+      "method": "raw_structured_evidence_coordinator",
+      "n_examples": 32,
+      "param_count": 3201,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_all_views": true
+      },
+      "method": "single_agent_full_context",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "larger_tiny_transformer": true,
+        "receives_all_views": true
+      },
+      "method": "larger_tiny_transformer_full_context",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "receives_one_partial_view": true
+      },
+      "method": "single_agent_partial_view",
+      "n_examples": 32,
+      "param_count": 136580,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 1.0,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "oracle_upper_bound": true,
+        "uses_structured_gold_evidence": true
+      },
+      "method": "explicit_evidence_oracle",
+      "n_examples": 32,
+      "param_count": 0,
+      "per_task_accuracy": {
+        "0": 1.0
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "none",
+      "metadata": {
+        "best_dev_during_fit": 0.25,
+        "diagnostic_only": true,
+        "epochs_run": 2,
+        "hidden_dims": [
+          32
+        ],
+        "param_count": 420,
+        "pca_components": 8,
+        "pca_explained_variance_ratio_sum": 0.4844244420528412,
+        "pca_first_component_variance_ratio": 0.0877266451716423,
+        "pooling": "mean",
+        "shared_agent_trainable": false,
+        "training_seed": 11000,
+        "visible_outputs": false
+      },
+      "method": "coordinator_only_probe",
+      "n_examples": 32,
+      "param_count": 420,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_masked",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "hidden_states_shuffled_across_examples",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "role_labels_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "physical_order_shuffled_roles_preserved",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "candidate_order_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "randomized_labels",
+      "metadata": {
+        "agent_grad_norm_mean": 3.4691922994251385,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5268484950065613,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.148671721308726,
+        "coordinator_parameter_delta": 0.26891183853149414,
+        "shared_parameter_identity": true,
+        "train_labels_randomized": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "dev"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_masked",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "view_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "hidden_states_shuffled_across_examples",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "role_labels_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "physical_order_shuffled_roles_preserved",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.125,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "candidate_order_shuffled",
+      "metadata": {
+        "agent_grad_norm_mean": 3.2950859862089303,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5464761853218079,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.9059726869601006,
+        "coordinator_parameter_delta": 0.21301083266735077,
+        "shared_parameter_identity": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.125
+      },
+      "seed": 0,
+      "split": "test"
+    },
+    {
+      "accuracy": 0.25,
+      "benchmark": "real_shared_weight_latent_coordination",
+      "condition": "randomized_labels",
+      "metadata": {
+        "agent_grad_norm_mean": 3.4691922994251385,
+        "agent_mode": "pretrained_adapter",
+        "agent_parameter_delta": 0.5268484950065613,
+        "agent_trainable": true,
+        "coordinator_grad_norm_mean": 3.148671721308726,
+        "coordinator_parameter_delta": 0.26891183853149414,
+        "shared_parameter_identity": true,
+        "train_labels_randomized": true
+      },
+      "method": "trainable_shared_agent_latent_coordinator",
+      "n_examples": 32,
+      "param_count": 174660,
+      "per_task_accuracy": {
+        "0": 0.25
+      },
+      "seed": 0,
+      "split": "test"
+    }
+  ],
+  "validation": {
+    "real_shared_weight_latent_coordination": {
+      "conservative_claim_allowed": false,
+      "control_accuracy": {
+        "candidate_order_shuffled": 0.125,
+        "hidden_states_shuffled_across_examples": 0.25,
+        "physical_order_shuffled_roles_preserved": 0.25,
+        "randomized_labels": 0.25,
+        "role_labels_shuffled": 0.25,
+        "view_masked": 0.25,
+        "view_shuffled": 0.25
+      },
+      "dataset_note": "constructed local-code fallback; not a publishable real-world proof dataset",
+      "gate_a_valid_training_graph": true,
+      "gate_b_frozen_control": true,
+      "gate_c_trainable_beats_frozen": false,
+      "gate_d_trainable_beats_text_only": false,
+      "gate_e_controls_collapse": true,
+      "gate_f_dataset_not_trivial": true,
+      "gate_positive_control_learnable": true,
+      "positive_control_accuracy": {
+        "explicit_evidence_neural_tuple_model": 1.0,
+        "larger_tiny_transformer_full_context": 0.25,
+        "raw_structured_evidence_coordinator": 1.0,
+        "trainable_shared_agent_latent_visible_explicit_evidence": 0.25
+      },
+      "test_accuracy": {
+        "bag_of_words_candidate_patch_only": 0.25,
+        "candidate_order_baseline": 0.25,
+        "coordinator_only_probe": 0.25,
+        "explicit_evidence_oracle": 1.0,
+        "frozen_shared_agent_latent_coordinator": 0.25,
+        "larger_tiny_transformer_full_context": 0.25,
+        "majority_class_baseline": 0.25,
+        "role_labels_only_baseline": 0.25,
+        "single_agent_full_context": 0.25,
+        "single_agent_partial_view": 0.25,
+        "single_view_text_role_0": 0.28125,
+        "single_view_text_role_1": 0.25,
+        "single_view_text_role_2": 0.25,
+        "single_view_text_role_3": 0.25,
+        "text_only_partial_view_baseline": 0.25,
+        "text_output_only_multi_agent_coordinator": 0.25,
+        "trainable_shared_agent_latent_coordinator": 0.25
+      },
+      "trivial_baseline_accuracy": {
+        "bag_of_words_candidate_patch_only": 0.25,
+        "candidate_order_baseline": 0.25,
+        "majority_class_baseline": 0.25,
+        "masked_evidence_text_baseline": 0.25,
+        "role_labels_only_baseline": 0.25,
+        "single_view_text_role_0": 0.28125,
+        "single_view_text_role_1": 0.25,
+        "single_view_text_role_2": 0.25,
+        "single_view_text_role_3": 0.25,
+        "text_only_partial_view_baseline": 0.25
+      }
+    }
+  }
+}

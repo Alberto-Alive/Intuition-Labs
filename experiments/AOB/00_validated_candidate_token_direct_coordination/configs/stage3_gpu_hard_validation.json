@@ -1,0 +1,60 @@
+{
+  "output_path": "results/stage3_gpu_hard_validation_results.json",
+  "audit_log_path": "results/stage3_gpu_hard_validation_audit.jsonl",
+  "report_path": "reports/STAGE3_GPU_HARD_VALIDATION.md",
+  "checkpoint_dir": "results/stage3_gpu_hard_validation_checkpoints",
+  "save_checkpoints": true,
+  "device": "cuda",
+  "require_cuda": true,
+  "cuda_memory_budget_gb": 16.0,
+  "architecture": "topk_attention_no_head",
+  "architecture_changes": "forbidden",
+  "dataset": "real_program_analysis_import_restoration",
+  "control_chance_tolerance": 0.1,
+  "stop_on_failed_seed": false,
+  "stage": {
+    "n_train": 2048,
+    "n_dev": 512,
+    "n_test": 1024,
+    "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "epochs": 12,
+    "patience": 5,
+    "hidden_dim": 64,
+    "tiny_layers": 3,
+    "tiny_ff_dim": 128,
+    "batch_size": 32,
+    "lr": 0.002,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": "bf16"
+  },
+  "gpu_safety": {
+    "batch_size_fallbacks": [32, 16, 8],
+    "effective_batch_size": 32,
+    "clear_cuda_cache_between_seeds": true,
+    "log_max_cuda_memory_per_seed": true
+  },
+  "required_methods": {
+    "main": [
+      "trainable topk_attention_no_head",
+      "frozen same-architecture topk_attention_no_head"
+    ],
+    "baselines": [
+      "text-only baseline",
+      "raw-latent baseline",
+      "candidate-order baseline",
+      "majority baseline",
+      "explicit evidence oracle",
+      "single-agent full-context baseline",
+      "single-view baselines for every private view"
+    ],
+    "controls": [
+      "randomized_labels",
+      "hidden_states_shuffled_across_examples",
+      "view_masked",
+      "view_shuffled",
+      "role_labels_shuffled",
+      "physical_order_shuffled_roles_preserved",
+      "candidate_order_shuffled"
+    ]
+  }
+}

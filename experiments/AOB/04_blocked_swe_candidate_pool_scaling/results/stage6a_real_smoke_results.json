@@ -1,0 +1,2318 @@
+{
+  "metadata": {
+    "architecture_selection": {},
+    "benchmark": "stage6_latent_patch_selector",
+    "candidate_pool_path": "results\\stage6_candidate_pools_real_smoke.jsonl",
+    "config": {
+      "allow_gold_diagnostic": true,
+      "batch_size": 8,
+      "device": "cpu",
+      "epochs": 2,
+      "hidden_dim": 24,
+      "max_length": 128,
+      "mixed_precision": "none",
+      "patience": 1,
+      "phase": "6A",
+      "run_controls": true,
+      "save_checkpoints": true,
+      "seed_for_pool": 0,
+      "synthetic_if_missing": false,
+      "synthetic_tasks": 0,
+      "tiny_ff_dim": 64,
+      "tiny_heads": 1,
+      "tiny_layers": 1
+    },
+    "created_at_utc": "2026-05-16T10:05:33.349745+00:00",
+    "dataset_summary": {
+      "candidate_source_agents": [
+        "stage6a_real_generator_0",
+        "stage6a_real_generator_1",
+        "stage6a_real_generator_2",
+        "stage6a_real_generator_3"
+      ],
+      "dataset_names": [
+        "SWE-bench/SWE-bench_Lite:test"
+      ],
+      "num_avenues": 4,
+      "num_candidates": 8,
+      "num_roles": 4,
+      "oracle_empty_tasks": 10,
+      "oracle_pass_at_8": 0.5,
+      "publishable_proof_dataset": false,
+      "repos": [
+        "astropy/astropy",
+        "django/django"
+      ],
+      "selector_only_no_patch_generation_claim": true,
+      "split_sizes": {
+        "dev": 4,
+        "test": 4,
+        "train": 12
+      }
+    },
+    "dataset_validation": {
+      "candidate_count": 8,
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 20,
+        "passes": true
+      },
+      "errors": [],
+      "examples_checked": 20,
+      "passes": true
+    },
+    "phase": "6A",
+    "primary_claim_template": "Given the same 8 candidate patches for a real issue-resolution task, a trained shared-weight latent cloned-agent selector chooses passing patches more reliably than specified baselines.",
+    "selected_architecture": "stage5_4x4_avenue_candidate_token_direct",
+    "selector_scope": "selector only; no patch generation claim"
+  },
+  "rows": [
+    {
+      "architecture": "stage5_4x4_avenue_candidate_token_direct",
+      "architecture_config": {
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "avenue_topk": 0,
+        "coordinator_family": "candidate_token_cross_attention",
+        "description": "Stage 5 candidate-token-direct selector with four roles and four Stage 6 avenue prompts per role.",
+        "gradient_clip_norm": 1.0,
+        "lr": 0.0003,
+        "name": "stage5_4x4_avenue_candidate_token_direct",
+        "num_avenues": 4,
+        "weight_decay": 0.0001
+      },
+      "checkpoint_paths": {
+        "embedding_reranker": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\embedding_reranker.pt",
+        "frozen": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\frozen_same_architecture_latent_selector.pt",
+        "randomized_labels": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\randomized_labels_trainable_latent_selector.pt",
+        "raw_latent": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\raw_latent_selector.pt",
+        "single_agent_full_context_reviewer": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\single_agent_full_context_reviewer.pt",
+        "static_patch_feature_reranker": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\static_patch_feature_reranker.pt",
+        "text_only_multi_agent_reviewer": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\text_only_multi_agent_reviewer.pt",
+        "trainable": "results\\stage6_latent_patch_selector_checkpoints\\stage6a_real_smoke\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\trainable_shared_weight_latent_selector.pt"
+      },
+      "completed_at_utc": "2026-05-16T10:05:33.346267+00:00",
+      "controls": {
+        "candidate_evidence_mismatch": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "candidate_evidence_mismatch",
+          "mrr": 0.375,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.3333333333333333,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            7,
+            0
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "candidate_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "candidate_only",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            6,
+            0,
+            0,
+            7
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "candidate_order_shuffled_with_label_remap": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "candidate_order_shuffled_with_label_remap",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.3333333333333333,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            6,
+            4
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "context_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "context_only",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            6,
+            0,
+            0,
+            6
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "cross_task_view_bundle_shuffle": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "cross_task_view_bundle_shuffle",
+          "mrr": 0.375,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.3333333333333333,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            7,
+            0
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "evidence_only_no_candidates": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "evidence_only_no_candidates",
+          "mrr": 0.20833333333333331,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.0
+          },
+          "per_task_family_accuracy": {
+            "django": 0.0
+          },
+          "predictions": [
+            6,
+            6,
+            6,
+            7
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "hidden_states_shuffled_across_examples": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "hidden_states_shuffled_across_examples",
+          "mrr": 0.375,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            6,
+            7
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "issue_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "issue_only",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            6,
+            7
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "patch_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "patch_only",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.3333333333333333,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "physical_order_shuffled_roles_avenues_preserved": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "physical_order_shuffled_roles_avenues_preserved",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.3333333333333333,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        },
+        "schema_template_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "schema_template_only",
+          "mrr": 0.375,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            7,
+            7
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.5,
+          "unavailable": false
+        },
+        "view_masked_candidates_visible": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.5,
+          "cost_tokens_latency": {},
+          "method": "view_masked_candidates_visible",
+          "mrr": 0.3333333333333333,
+          "n_examples": 4,
+          "n_oracle_positive_examples": 2,
+          "oracle_pass_at_8": 0.5,
+          "pass_at_1": 0.25,
+          "per_generator_accuracy": {
+            "stage6a_real_generator_0": 0.5,
+            "stage6a_real_generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "django/django": 0.25
+          },
+          "per_task_family_accuracy": {
+            "django": 0.25
+          },
+          "predictions": [
+            0,
+            0,
+            6,
+            7
+          ],
+          "selection_efficiency": 0.5,
+          "split": "control",
+          "top_2_accuracy": 0.25,
+          "unavailable": false
+        }
+      },
+      "device": "cpu",
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 20,
+        "passes": true
+      },
+      "elapsed_seconds": 8.278611499990802,
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": false,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": false,
+        "coordinator_grad_norm_mean": 0.14152544581280693,
+        "coordinator_parameter_delta": 0.03794204816222191,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": false,
+        "num_avenues": 4,
+        "param_count": 5857,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      },
+      "invariance_audit": {
+        "base_pass_at_1": 0.25,
+        "candidate_order_invariance_passes": true,
+        "candidate_order_pass_at_1": 0.25,
+        "candidate_order_selected_candidate_id_match_rate": 1.0,
+        "passes": true,
+        "physical_order_invariance_passes": true,
+        "physical_order_pass_at_1": 0.25,
+        "physical_role_avenue_order_prediction_match_rate": 1.0
+      },
+      "metrics": {
+        "dev": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 1.5499972505494952e-06,
+              "latency_seconds_total": 6.199989002197981e-06,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.020370099999126978,
+              "latency_seconds_total": 0.08148039999650791,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              6,
+              0,
+              6
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.016693550001946278,
+              "latency_seconds_total": 0.06677420000778511,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.6666666666666666,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              6
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.2916666666666667,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5,
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1
+            ],
+            "selection_efficiency": 0.5,
+            "split": "dev",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.014600700000301003,
+              "latency_seconds_total": 0.058402800001204014,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.20833333333333331,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              7,
+              0,
+              7,
+              7
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.0036819500019191764,
+              "latency_seconds_total": 0.014727800007676706,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.07142857142857142,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.017377049996866845,
+              "latency_seconds_total": 0.06950819998746738,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.375,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              0,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.5,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.00020177500118734315,
+              "latency_seconds_total": 0.0008071000047493726,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.07142857142857142,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_2": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              7,
+              4,
+              4
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.020892975000606384,
+              "latency_seconds_total": 0.08357190000242554,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.3125,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              7,
+              6,
+              0,
+              6
+            ],
+            "selection_efficiency": 0.5,
+            "split": "dev",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.01301584999600891,
+              "latency_seconds_total": 0.05206339998403564,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.375,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              0,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.5,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 2811.5,
+              "estimated_tokens_total": 11246,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          }
+        },
+        "test": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 2.1000014385208488e-06,
+              "latency_seconds_total": 8.400005754083395e-06,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.021791425002447795,
+              "latency_seconds_total": 0.08716570000979118,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.375,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              6,
+              6,
+              0,
+              6
+            ],
+            "selection_efficiency": 0.5,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.01803262500470737,
+              "latency_seconds_total": 0.07213050001882948,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.3333333333333333,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              6,
+              6,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.5,
+            "split": "test",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.2916666666666667,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5,
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1
+            ],
+            "selection_efficiency": 0.5,
+            "split": "test",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.017111050001403783,
+              "latency_seconds_total": 0.06844420000561513,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.6666666666666666,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              6
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.0042094750024261884,
+              "latency_seconds_total": 0.016837900009704754,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.07142857142857142,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.026492999997572042,
+              "latency_seconds_total": 0.10597199999028817,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.375,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              0,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.5,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.0005600000004051253,
+              "latency_seconds_total": 0.0022400000016205013,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.06696428571428571,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_2": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              4,
+              4,
+              7
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.02747945000010077,
+              "latency_seconds_total": 0.10991780000040308,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.25,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "django": 0.0
+            },
+            "predictions": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.016493549999722745,
+              "latency_seconds_total": 0.06597419999889098,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.3333333333333333,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.3333333333333333,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.25
+            },
+            "per_task_family_accuracy": {
+              "django": 0.25
+            },
+            "predictions": [
+              6,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.5,
+            "split": "test",
+            "top_2_accuracy": 0.25,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3366.0,
+              "estimated_tokens_total": 13464,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.5,
+            "n_examples": 4,
+            "n_oracle_positive_examples": 2,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          }
+        },
+        "train": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 1.2750000072022278e-06,
+              "latency_seconds_total": 1.5300000086426735e-05,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.5,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.6666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.018707483332642976,
+              "latency_seconds_total": 0.2244897999917157,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.4166666666666667,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.3333333333333333,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.6666666666666666,
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.3333333333333333,
+              "django/django": 0.3333333333333333
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.3333333333333333,
+              "django": 0.3333333333333333
+            },
+            "predictions": [
+              0,
+              1,
+              3,
+              7,
+              0,
+              1,
+              6,
+              6,
+              0,
+              7,
+              0,
+              6
+            ],
+            "selection_efficiency": 0.6666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.5,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.8333333333333334,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.011796275000961032,
+              "latency_seconds_total": 0.14155530001153238,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.4444444444444444,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.4166666666666667,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.625,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.3333333333333333
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.3333333333333333
+            },
+            "predictions": [
+              0,
+              7,
+              0,
+              0,
+              0,
+              0,
+              6,
+              6,
+              0,
+              7,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.8333333333333334,
+            "split": "train",
+            "top_2_accuracy": 0.4166666666666667,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.5,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.5,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.16666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.15287698412698414,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.08333333333333333,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.2,
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_2": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.16666666666666666,
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.16666666666666666,
+              "django": 0.0
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1,
+              1,
+              5,
+              4,
+              1,
+              3,
+              0,
+              3,
+              7
+            ],
+            "selection_efficiency": 0.16666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.08333333333333333,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.5,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.01228764166686839,
+              "latency_seconds_total": 0.1474517000024207,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.3611111111111111,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.25,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.42857142857142855,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.3333333333333333,
+              "django/django": 0.16666666666666666
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.3333333333333333,
+              "django": 0.16666666666666666
+            },
+            "predictions": [
+              6,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              7,
+              7,
+              7,
+              0
+            ],
+            "selection_efficiency": 0.5,
+            "split": "train",
+            "top_2_accuracy": 0.4166666666666667,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.0037906500001554377,
+              "latency_seconds_total": 0.04548780000186525,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.07142857142857141,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.0,
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.0,
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.8333333333333334,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.01916864999899796,
+              "latency_seconds_total": 0.2300237999879755,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.4583333333333333,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.4166666666666667,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.3333333333333333,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.3333333333333333,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              7,
+              6,
+              6,
+              0,
+              6,
+              0,
+              6,
+              0,
+              7,
+              0,
+              6
+            ],
+            "selection_efficiency": 0.8333333333333334,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.0005186000004565964,
+              "latency_seconds_total": 0.006223200005479157,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.07142857142857141,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_2": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.0,
+              "django/django": 0.0
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.0,
+              "django": 0.0
+            },
+            "predictions": [
+              4,
+              4,
+              7,
+              7,
+              7,
+              4,
+              7,
+              7,
+              4,
+              3,
+              4,
+              7
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.6666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.018905191665301874,
+              "latency_seconds_total": 0.2268622999836225,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.4166666666666667,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.3333333333333333,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 1.0,
+              "stage6a_real_generator_1": 0.0,
+              "stage6a_real_generator_2": 0.0,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.3333333333333333,
+              "django/django": 0.3333333333333333
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.3333333333333333,
+              "django": 0.3333333333333333
+            },
+            "predictions": [
+              4,
+              7,
+              0,
+              6,
+              0,
+              6,
+              0,
+              6,
+              6,
+              4,
+              0,
+              3
+            ],
+            "selection_efficiency": 0.6666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.6666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.012244400000781752,
+              "latency_seconds_total": 0.14693280000938103,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.40277777777777773,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.3333333333333333,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.4,
+              "stage6a_real_generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.3333333333333333,
+              "django/django": 0.3333333333333333
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.3333333333333333,
+              "django": 0.3333333333333333
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.6666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.4166666666666667,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 3297.25,
+              "estimated_tokens_total": 39567,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.5,
+            "n_examples": 12,
+            "n_oracle_positive_examples": 6,
+            "oracle_pass_at_8": 0.5,
+            "pass_at_1": 0.5,
+            "per_generator_accuracy": {
+              "stage6a_real_generator_0": 0.5
+            },
+            "per_repository_accuracy": {
+              "astropy/astropy": 0.5,
+              "django/django": 0.5
+            },
+            "per_task_family_accuracy": {
+              "astropy": 0.5,
+              "django": 0.5
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.5,
+            "unavailable": false
+          }
+        }
+      },
+      "output_leakage_audit": {
+        "benchmark": "stage6_latent_patch_selector",
+        "examples_checked": 20,
+        "hidden_pass_fail_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 0,
+        "type": "stage6_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "paired_tests_vs_best_baseline": {
+        "best_baseline": "first_candidate_order_baseline",
+        "best_baseline_pass_at_1": 0.5,
+        "mcnemar_pvalue": 1.0,
+        "mean_delta": -0.25,
+        "paired_bootstrap_95ci": [
+          -0.75,
+          0.0
+        ],
+        "paired_permutation_pvalue": 1.0,
+        "trainable_pass_at_1": 0.25
+      },
+      "phase": "6A",
+      "randomized_labels_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.006462683139810959,
+        "agent_parameter_delta": 0.06593217700719833,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 0.21041956880882534,
+        "coordinator_parameter_delta": 0.04079221561551094,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 114185,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      },
+      "raw_latent_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.9956635062913299,
+        "agent_parameter_delta": 0.07034090161323547,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "single",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 8.00560236810603,
+        "coordinator_parameter_delta": 0.04453733563423157,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 1,
+        "param_count": 114168,
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "seed": 0,
+      "split_leakage_audit": {
+        "benchmark": "stage6_latent_patch_selector",
+        "candidate_patch_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_file_path_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_issue_text_hash_overlap": 0,
+        "dev_test_repo_issue_overlap": 0,
+        "near_duplicate_issue_text_overlaps": [],
+        "passes": true,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_file_path_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_issue_text_hash_overlap": 0,
+        "train_dev_repo_issue_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_file_path_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_issue_text_hash_overlap": 0,
+        "train_test_repo_issue_overlap": 0,
+        "type": "stage6_swe_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage6_latent_patch_selector",
+      "status": "completed",
+      "success_gates": {
+        "checkpoints_saved": true,
+        "gradient_audits_pass": true,
+        "hidden_state_shuffle_collapse": false,
+        "leakage_audits_pass": true,
+        "order_invariance_passes": true,
+        "randomized_labels_collapse": false,
+        "selection_efficiency_improves_over_best_baseline": false,
+        "shortcut_control_pass_at_1": {
+          "candidate_evidence_mismatch": 0.25,
+          "candidate_only": 0.25,
+          "context_only": 0.25,
+          "cross_task_view_bundle_shuffle": 0.25,
+          "evidence_only_no_candidates": 0.0,
+          "issue_only": 0.25,
+          "patch_only": 0.25,
+          "schema_template_only": 0.25,
+          "view_masked_candidates_visible": 0.25
+        },
+        "shortcut_controls_collapse": false,
+        "trainable_beats_best_non_oracle_baseline_by_5_points": false,
+        "trainable_beats_frozen": false
+      },
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.004295660968270714,
+        "agent_parameter_delta": 0.06501629203557968,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 0.11972139961408111,
+        "coordinator_parameter_delta": 0.044120904058218,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 114185,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "claim_status": "no_final_claim",
+    "completed_rows": 1,
+    "completed_seeds": 1,
+    "final_gate_applicable": false,
+    "mean_best_non_oracle_baseline_pass_at_1": 0.5,
+    "mean_delta_vs_best_non_oracle_baseline": -0.25,
+    "mean_frozen_pass_at_1": 0.25,
+    "mean_trainable_pass_at_1": 0.25,
+    "paired_bootstrap_95ci_delta_vs_best_baseline": [
+      -0.25,
+      -0.25
+    ],
+    "success_gates_pass": false,
+    "trainable_beats_frozen_seed_count": 0
+  }
+}

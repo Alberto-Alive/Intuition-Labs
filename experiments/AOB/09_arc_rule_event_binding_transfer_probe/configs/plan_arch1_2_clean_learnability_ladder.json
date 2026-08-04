@@ -1,0 +1,39 @@
+{
+  "device": "cpu",
+  "seeds": [0, 1, 2],
+  "levels": [0, 1, 2, 3, 4, 5],
+  "dataset": {
+    "grid_size": 8,
+    "num_candidates": 8,
+    "plan_length": 12,
+    "obstacle_count": 0,
+    "train_examples": 24,
+    "dev_examples": 12,
+    "test_examples": 32,
+    "max_generation_attempts": 800,
+    "shortcut_pool_attempts": 500,
+    "require_exactly_one_success": true
+  },
+  "training": {
+    "epochs": 2,
+    "batch_size": 12,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "gradient_clip_norm": 1.0
+  },
+  "micro_overfit_training": {
+    "epochs": 25,
+    "patience": 25,
+    "batch_size": 16,
+    "lr": 0.001
+  },
+  "feature_training": {
+    "epochs": 4,
+    "batch_size": 16,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "hidden_dim": 24
+  }
+}

@@ -1,0 +1,1868 @@
+{
+  "heuristic_sanity": [
+    {
+      "benchmark": "plan_arch1_3_transition_token_repair",
+      "best_heuristic": "final_position_equals_goal",
+      "best_top1": 1.0,
+      "candidate_count": 8,
+      "diagnostic_only_not_model_input": true,
+      "example_count": 32,
+      "final_state_visible_to_model": true,
+      "heuristics": {
+        "any_collision_from_visible_rollout": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "final_distance_to_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "final_position_equals_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "goal_distance_improvement": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "last_action_reaches_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "rollout_endpoint_validity": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "transition_consistency": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        }
+      },
+      "level": 1,
+      "level_name": "obvious_success_failure_final_visible",
+      "seed": 0,
+      "snapshots": [
+        {
+          "example_id": "test_0",
+          "label": 0,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -0.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0
+            ],
+            "final_position_equals_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              8.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "last_action_reaches_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_1",
+          "label": 1,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -4.0,
+              -0.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              4.0,
+              8.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_2",
+          "label": 2,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -4.0,
+              -4.0,
+              -0.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              -2.0,
+              -2.0,
+              2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_3",
+          "label": 3,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -4.0,
+              -4.0,
+              -4.0,
+              -0.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              0.0,
+              4.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_4",
+          "label": 4,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -4.0,
+              -4.0,
+              -4.0,
+              -4.0,
+              -0.0,
+              -4.0,
+              -4.0,
+              -4.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "benchmark": "plan_arch1_3_transition_token_repair",
+      "best_heuristic": "final_position_equals_goal",
+      "best_top1": 1.0,
+      "candidate_count": 8,
+      "diagnostic_only_not_model_input": true,
+      "example_count": 32,
+      "final_state_visible_to_model": true,
+      "heuristics": {
+        "any_collision_from_visible_rollout": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "final_distance_to_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "final_position_equals_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "goal_distance_improvement": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "last_action_reaches_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "rollout_endpoint_validity": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "transition_consistency": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        }
+      },
+      "level": 2,
+      "level_name": "no_collision_goal_distance_final_visible",
+      "seed": 0,
+      "snapshots": [
+        {
+          "example_id": "test_0",
+          "label": 0,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "last_action_reaches_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_1",
+          "label": 1,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              6.0,
+              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_2",
+          "label": 2,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_3",
+          "label": 3,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              2.0,
+              2.0,
+              2.0,
+              4.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_4",
+          "label": 4,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "benchmark": "plan_arch1_3_transition_token_repair",
+      "best_heuristic": "final_position_equals_goal",
+      "best_top1": 1.0,
+      "candidate_count": 8,
+      "diagnostic_only_not_model_input": true,
+      "example_count": 32,
+      "final_state_visible_to_model": true,
+      "heuristics": {
+        "any_collision_from_visible_rollout": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "final_distance_to_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "final_position_equals_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "goal_distance_improvement": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "last_action_reaches_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "rollout_endpoint_validity": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "transition_consistency": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        }
+      },
+      "level": 3,
+      "level_name": "near_miss_final_visible",
+      "seed": 0,
+      "snapshots": [
+        {
+          "example_id": "test_0",
+          "label": 0,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "last_action_reaches_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_1",
+          "label": 1,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              6.0,
+              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_2",
+          "label": 2,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_3",
+          "label": 3,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              2.0,
+              2.0,
+              2.0,
+              4.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_4",
+          "label": 4,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "benchmark": "plan_arch1_3_transition_token_repair",
+      "best_heuristic": "final_position_equals_goal",
+      "best_top1": 1.0,
+      "candidate_count": 8,
+      "diagnostic_only_not_model_input": true,
+      "example_count": 32,
+      "final_state_visible_to_model": true,
+      "heuristics": {
+        "any_collision_from_visible_rollout": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "final_distance_to_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "final_position_equals_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "goal_distance_improvement": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "last_action_reaches_goal": {
+          "prediction_histogram": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "top1": 1.0
+        },
+        "rollout_endpoint_validity": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        },
+        "transition_consistency": {
+          "prediction_histogram": {
+            "0": 32
+          },
+          "top1": 0.125
+        }
+      },
+      "level": 4,
+      "level_name": "final_transition_decides_final_visible",
+      "seed": 0,
+      "snapshots": [
+        {
+          "example_id": "test_0",
+          "label": 0,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              6.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "last_action_reaches_goal": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_1",
+          "label": 1,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              6.0,
+              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_2",
+          "label": 2,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_3",
+          "label": 3,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              2.0,
+              2.0,
+              2.0,
+              4.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "example_id": "test_4",
+          "label": 4,
+          "scores": {
+            "any_collision_from_visible_rollout": [
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "final_distance_to_goal": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0,
+              -0.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "final_position_equals_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "goal_distance_improvement": [
+              8.0,
+              8.0,
+              8.0,
+              8.0,
+              10.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "last_action_reaches_goal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rollout_endpoint_validity": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "transition_consistency": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

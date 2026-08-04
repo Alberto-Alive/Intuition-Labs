@@ -1,0 +1,148 @@
+{
+  "achieved_dev_capacity": 0,
+  "achieved_dev_capacity_ratio": 0.0,
+  "baseline_capacity_from_stage8a": 0,
+  "budget": {
+    "eval_examples": 96,
+    "final_examples": 128,
+    "max_architecture_configs": 50,
+    "max_finalists": 1,
+    "max_n": 128,
+    "max_promoted_configs": 10,
+    "max_wall_clock_seconds": 7200.0,
+    "run_controls": true,
+    "stage8a_seeds": [
+      0,
+      1,
+      2
+    ],
+    "stage8b_finalist_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "stage8b_promoted_seeds": [
+      0,
+      1,
+      2
+    ],
+    "stage8b_small_seeds": [
+      0
+    ],
+    "stage8c_seeds": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "train_examples": 192
+  },
+  "budget_signature": "c2db67c343ab2249",
+  "compute_summary": {
+    "attention_ops": 24576.0,
+    "encoder_passes": 64,
+    "estimated_forward_compute": 434176.0,
+    "latent_views": 64,
+    "model_kind": "trainable_latent",
+    "parameter_count_estimate": 15360,
+    "projection_ops": 409600.0
+  },
+  "controls_summary": {
+    "avenue_permutation": "25/25 pass",
+    "candidate_only": "0/25 pass",
+    "cross_task_evidence_shuffle": "0/25 pass",
+    "cross_task_query_shuffle": "0/25 pass",
+    "distractor_only": "0/25 pass",
+    "evidence_candidate_mismatch": "1/25 pass",
+    "evidence_only": "1/25 pass",
+    "hidden_state_shuffle": "0/25 pass",
+    "query_only": "0/25 pass",
+    "randomized_candidate_order_with_label_remap": "25/25 pass",
+    "randomized_evidence_block_order": "25/25 pass",
+    "randomized_labels": "1/25 pass",
+    "role_permutation": "25/25 pass",
+    "schema_template_only": "0/25 pass"
+  },
+  "dev_seeds_used": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "freeze_statement": "This config is frozen before Stage 8C. No architecture or hyperparameter changes are allowed after this point.",
+  "full_architecture_config": {
+    "attention_routing": "hard_routing_straight_through",
+    "avenues": 8,
+    "candidate_query": "candidate_token_direct_query",
+    "chunking": "learned_router",
+    "config_id": "a8b459dd9dc98f06",
+    "coord_hops": 1,
+    "coordinator": "hierarchical_coordinator",
+    "curriculum": "hard_negative_curriculum",
+    "dropout": 0.0,
+    "epochs": 6,
+    "frozen": false,
+    "hidden_dim": 48,
+    "latent_views": 64,
+    "lr": 0.005,
+    "max_train_examples": 512,
+    "memory_compression": "recurrent_memory_slots",
+    "model_kind": "trainable_latent",
+    "name": "latent_r8_a8_035251",
+    "regularizers": [
+      "avenue_diversity_penalty"
+    ],
+    "roles": 8,
+    "top_k_views": 0,
+    "training_loss": "auxiliary_evidence_location",
+    "vector_dim": 128,
+    "view_sharing": "partially_shared_role_adapters",
+    "weight_decay": 0.0001
+  },
+  "git_commit_hash": null,
+  "n_schedule_used": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "selected_config_id": "a8b459dd9dc98f06",
+  "selection_metric": {
+    "priority": [
+      "highest_dev_capacity_ratio",
+      "controls_pass",
+      "lowest_compute_among_ties",
+      "best_stability_across_seeds",
+      "best_held_out_dev_template_performance"
+    ],
+    "selected_row_accuracy_by_n": {
+      "128": 0.11666666666666667,
+      "16": 0.12083333333333333,
+      "32": 0.13125,
+      "64": 0.14583333333333334,
+      "8": 0.11875000000000001
+    },
+    "selected_row_capacity": 0
+  },
+  "stage8b_target_n": 8,
+  "target_capacity": 0,
+  "task_families_used": [
+    "needle_binding",
+    "multi_hop_binding",
+    "constraint_satisfaction",
+    "conflict_resolution",
+    "compositional_role_evidence",
+    "sparse_relevant_evidence"
+  ],
+  "timestamp": "2026-05-17T07:23:17Z"
+}

@@ -1,0 +1,83 @@
+{
+  "output_path": "results/real_shared_weight_latent_coordination_results.json",
+  "audit_log_path": "results/real_shared_weight_latent_coordination_audit.jsonl",
+  "report_path": "reports/REPORT.md",
+  "device": "cpu",
+  "deterministic": true,
+  "seeds": [0],
+  "dataset": {
+    "n_train": 256,
+    "n_dev": 96,
+    "n_test": 128,
+    "num_candidates": 8,
+    "n_views": 4,
+    "source_roots": ["src", "tests"],
+    "max_files": 40,
+    "snippet_radius": 2,
+    "include_private_signal_tokens": true
+  },
+  "agent": {
+    "agent_mode": "tiny_transformer",
+    "max_length": 128,
+    "hidden_dim": 48,
+    "tiny_vocab_size": 4096,
+    "tiny_layers": 1,
+    "tiny_heads": 2,
+    "tiny_ff_dim": 96,
+    "adapter_hidden_dim": 48
+  },
+  "coordinator": {
+    "family": "cross_attention",
+    "input_dim": 48,
+    "model_dim": 64,
+    "num_heads": 2,
+    "num_layers": 1,
+    "ff_dim": 128,
+    "dropout": 0.0
+  },
+  "coordinator_families": ["cross_attention", "self_attention"],
+  "run_message_channel_variants": true,
+  "run_layer_token_sweep_variants": true,
+  "message_channel": {
+    "msg_position": "prepend",
+    "message_dim": 64,
+    "aux_loss_weight": 0.05,
+    "aux_warmup_epochs": 2,
+    "aux_decay_epochs": 4
+  },
+  "training": {
+    "epochs": 14,
+    "batch_size": 32,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "patience": 6,
+    "gradient_accumulation_steps": 1
+  },
+  "baseline_training": {
+    "epochs": 8,
+    "batch_size": 32,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "patience": 4,
+    "hidden_dims": [32]
+  },
+  "positive_control_training": {
+    "epochs": 40,
+    "batch_size": 32,
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "patience": 10,
+    "hidden_dims": [64, 32]
+  },
+  "text_feature_dim": 128,
+  "controls": [
+    "none",
+    "randomized_labels",
+    "view_masked",
+    "view_shuffled",
+    "hidden_states_shuffled_across_examples",
+    "role_labels_shuffled",
+    "physical_order_shuffled_roles_preserved",
+    "candidate_order_shuffled"
+  ]
+}

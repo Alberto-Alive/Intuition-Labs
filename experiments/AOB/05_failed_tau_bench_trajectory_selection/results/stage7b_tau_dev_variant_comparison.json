@@ -1,0 +1,234 @@
+{
+  "artifact": "stage7b_tau_dev_variant_comparison",
+  "candidate_pool_path": "results\\stage7b0_tau_candidate_pool_balanced.jsonl",
+  "created_at_utc": "2026-05-17T05:11:18.239983+00:00",
+  "decision": "A. READY_FOR_STAGE7C_FINAL",
+  "pool_name": "balanced_pool",
+  "selected_config": "variant_d_4x1_lr3e4_clip1",
+  "selection_rule": [
+    "1. mean dev trainable latent pass@1",
+    "2. mean trainable-minus-frozen pass@1 delta",
+    "3. mean trainable-minus-best-non-oracle-baseline pass@1 delta",
+    "4. mean selection efficiency",
+    "5. mean control health"
+  ],
+  "stage7b_only_no_final_claim": true,
+  "variant_metrics": {
+    "variant_a_4x4_lr3e4_clip1": {
+      "all_seed_gates": {
+        "candidate_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "gradient_update_audits_pass": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "oracle_pass_at_8_between_0_25_and_0_85": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "physical_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "randomized_labels_trainable_collapse": {
+          "pass_count": 1,
+          "total": 3
+        },
+        "trainable_beats_first": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "trainable_beats_frozen": {
+          "pass_count": 2,
+          "total": 3
+        },
+        "trainable_beats_random": {
+          "pass_count": 2,
+          "total": 3
+        }
+      },
+      "best_non_oracle_baseline_pass_at_1_mean": 0.5972222222222222,
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "control_health_mean": 0.75,
+      "first_pass_at_1_mean": 0.2916666666666667,
+      "frozen_pass_at_1_mean": 0.40277777777777773,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "random_pass_at_1_mean": 0.47222222222222215,
+      "selection_efficiency_mean": 0.5666666666666665,
+      "trainable_conditional_accuracy_mean": 0.5666666666666668,
+      "trainable_minus_best_non_oracle_baseline": -0.12500000000000006,
+      "trainable_minus_frozen_pass_at_1": 0.06944444444444442,
+      "trainable_mrr_mean": 0.6034722222222223,
+      "trainable_pass_at_1_mean": 0.47222222222222215,
+      "trainable_top_2_accuracy_mean": 0.6388888888888888
+    },
+    "variant_b_4x4_lr1e4_clip1": {
+      "all_seed_gates": {
+        "candidate_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "gradient_update_audits_pass": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "oracle_pass_at_8_between_0_25_and_0_85": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "physical_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "randomized_labels_trainable_collapse": {
+          "pass_count": 1,
+          "total": 3
+        },
+        "trainable_beats_first": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "trainable_beats_frozen": {
+          "pass_count": 2,
+          "total": 3
+        },
+        "trainable_beats_random": {
+          "pass_count": 1,
+          "total": 3
+        }
+      },
+      "best_non_oracle_baseline_pass_at_1_mean": 0.5972222222222222,
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "control_health_mean": 0.75,
+      "first_pass_at_1_mean": 0.2916666666666667,
+      "frozen_pass_at_1_mean": 0.3194444444444444,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "random_pass_at_1_mean": 0.47222222222222215,
+      "selection_efficiency_mean": 0.5333333333333332,
+      "trainable_conditional_accuracy_mean": 0.5333333333333333,
+      "trainable_minus_best_non_oracle_baseline": -0.1527777777777778,
+      "trainable_minus_frozen_pass_at_1": 0.125,
+      "trainable_mrr_mean": 0.584837962962963,
+      "trainable_pass_at_1_mean": 0.4444444444444444,
+      "trainable_top_2_accuracy_mean": 0.611111111111111
+    },
+    "variant_c_4x4_dropout005_lr3e4_clip1": {
+      "all_seed_gates": {
+        "candidate_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "gradient_update_audits_pass": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "oracle_pass_at_8_between_0_25_and_0_85": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "physical_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "randomized_labels_trainable_collapse": {
+          "pass_count": 1,
+          "total": 3
+        },
+        "trainable_beats_first": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "trainable_beats_frozen": {
+          "pass_count": 2,
+          "total": 3
+        },
+        "trainable_beats_random": {
+          "pass_count": 2,
+          "total": 3
+        }
+      },
+      "best_non_oracle_baseline_pass_at_1_mean": 0.5972222222222222,
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "control_health_mean": 0.75,
+      "first_pass_at_1_mean": 0.2916666666666667,
+      "frozen_pass_at_1_mean": 0.375,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "random_pass_at_1_mean": 0.47222222222222215,
+      "selection_efficiency_mean": 0.5666666666666665,
+      "trainable_conditional_accuracy_mean": 0.5666666666666668,
+      "trainable_minus_best_non_oracle_baseline": -0.12500000000000006,
+      "trainable_minus_frozen_pass_at_1": 0.09722222222222215,
+      "trainable_mrr_mean": 0.6110119047619048,
+      "trainable_pass_at_1_mean": 0.47222222222222215,
+      "trainable_top_2_accuracy_mean": 0.6805555555555555
+    },
+    "variant_d_4x1_lr3e4_clip1": {
+      "all_seed_gates": {
+        "candidate_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "gradient_update_audits_pass": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "oracle_pass_at_8_between_0_25_and_0_85": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "physical_order_invariance_passes": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "randomized_labels_trainable_collapse": {
+          "pass_count": 1,
+          "total": 3
+        },
+        "trainable_beats_first": {
+          "pass_count": 3,
+          "total": 3
+        },
+        "trainable_beats_frozen": {
+          "pass_count": 2,
+          "total": 3
+        },
+        "trainable_beats_random": {
+          "pass_count": 3,
+          "total": 3
+        }
+      },
+      "best_non_oracle_baseline_pass_at_1_mean": 0.5972222222222222,
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "control_health_mean": 0.8333333333333334,
+      "first_pass_at_1_mean": 0.2916666666666667,
+      "frozen_pass_at_1_mean": 0.5416666666666666,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "random_pass_at_1_mean": 0.47222222222222215,
+      "selection_efficiency_mean": 0.7000000000000001,
+      "trainable_conditional_accuracy_mean": 0.7000000000000001,
+      "trainable_minus_best_non_oracle_baseline": -0.01388888888888884,
+      "trainable_minus_frozen_pass_at_1": 0.04166666666666674,
+      "trainable_mrr_mean": 0.6791666666666667,
+      "trainable_pass_at_1_mean": 0.5833333333333334,
+      "trainable_top_2_accuracy_mean": 0.7083333333333334
+    }
+  }
+}

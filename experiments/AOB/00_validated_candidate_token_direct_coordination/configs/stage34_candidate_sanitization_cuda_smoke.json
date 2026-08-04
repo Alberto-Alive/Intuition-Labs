@@ -1,0 +1,52 @@
+{
+  "output_path": "results/stage34_candidate_sanitization_smoke.json",
+  "report_path": "reports/STAGE34_CANDIDATE_SANITIZATION.md",
+  "dataset_diagnostics_output_path": "results/stage34_candidate_sanitization_diagnostics.json",
+  "device": "cuda",
+  "require_cuda": true,
+  "cuda_memory_budget_gb": 16.0,
+  "architecture": "topk_attention_no_head",
+  "architecture_changes": "forbidden",
+  "dataset": "real_import_restore_candidate_sanitized_v3",
+  "control_chance_tolerance": 0.055,
+  "stage": {
+    "name": "stage34_smoke",
+    "n_train": 256,
+    "n_dev": 128,
+    "n_test": 256,
+    "seeds": [0],
+    "epochs": 3,
+    "patience": 2,
+    "hidden_dim": 64,
+    "tiny_layers": 3,
+    "tiny_ff_dim": 128,
+    "batch_size": 32,
+    "lr": 0.002,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": "bf16"
+  },
+  "dataset_config": {
+    "source_roots": ["src", "tests"],
+    "max_files": 40,
+    "snippet_radius": 2,
+    "dataset_source": "real_import_restore_candidate_sanitized_v3",
+    "generator_version": "real_import_restore_candidate_sanitized_v3_stage34",
+    "candidate_representation": "sanitized_redacted_v3"
+  },
+  "dataset_diagnostics": {
+    "baseline_epochs": 4,
+    "baseline_patience": 2,
+    "baseline_lr": 0.002,
+    "baseline_feature_dim": 128,
+    "single_view_epochs": 4,
+    "single_view_patience": 2,
+    "single_view_lr": 0.002,
+    "single_view_feature_dim": 128
+  },
+  "gpu_safety": {
+    "batch_size_fallbacks": [32, 16, 8],
+    "effective_batch_size": 32,
+    "clear_cuda_cache_between_seeds": true,
+    "log_max_cuda_memory_per_seed": true
+  }
+}

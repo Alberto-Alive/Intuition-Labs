@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "generator_recall_failure": 2,
+    "natural_pool_low_recall": 1,
+    "verifier_ranking_failure_did_not_beat_frozen": 2
+  },
+  "failed_overfit_gates": [],
+  "failure_split_definitions": {
+    "ambiguity_among_train_solving_candidates": "multiple high-train-fit candidates compete and test correctness differs",
+    "generator_recall_failure": "gold candidate absent from natural pool",
+    "representation_failure": "variant cannot overfit or ablation/control diagnostics show no useful evidence use",
+    "train_fit_false_positive": "execution/train-fit heuristic ranks a wrong candidate above gold",
+    "verifier_ranking_failure": "gold present but trainable verifier does not rank it top1"
+  }
+}

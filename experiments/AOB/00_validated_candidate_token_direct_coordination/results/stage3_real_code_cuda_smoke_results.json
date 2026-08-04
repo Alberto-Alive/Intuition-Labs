@@ -1,0 +1,608 @@
+{
+  "config": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "audit_log_path": "results/stage3_real_code_cuda_smoke_audit.jsonl",
+    "checkpoint_dir": "results/stage3_real_code_cuda_smoke_checkpoints",
+    "control_chance_tolerance": 0.1,
+    "cuda_memory_budget_gb": 16.0,
+    "dataset": "real_program_analysis_import_restoration",
+    "device": "cuda",
+    "gpu_safety": {
+      "batch_size_fallbacks": [
+        8,
+        4,
+        2
+      ],
+      "clear_cuda_cache_between_seeds": true,
+      "effective_batch_size": 8,
+      "log_max_cuda_memory_per_seed": true
+    },
+    "output_path": "results/stage3_real_code_cuda_smoke_results.json",
+    "report_path": "reports/STAGE3_REAL_CODE_CUDA_SMOKE.md",
+    "require_cuda": true,
+    "save_checkpoints": true,
+    "stage": {
+      "batch_size": 8,
+      "epochs": 1,
+      "gradient_accumulation_steps": 1,
+      "hidden_dim": 32,
+      "lr": 0.002,
+      "mixed_precision": "bf16",
+      "n_dev": 32,
+      "n_test": 32,
+      "n_train": 64,
+      "patience": 1,
+      "seeds": [
+        0
+      ],
+      "tiny_ff_dim": 64,
+      "tiny_layers": 1
+    },
+    "stop_on_failed_seed": true
+  },
+  "failed_or_interrupted_seeds": [],
+  "metadata": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "architecture_selection": "frozen before Stage 3",
+    "benchmark": "real_shared_weight_latent_coordination",
+    "config_path": "configs\\stage3_real_code_cuda_smoke.json",
+    "created_or_updated_at_utc": "2026-05-14T12:41:10+00:00",
+    "dataset": "real_program_analysis_import_restoration",
+    "device": "cuda",
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "success_claim": "not evaluated until all locked Stage 3 criteria pass",
+    "task": "stage3_gpu_hard_validation"
+  },
+  "oom_retries": [],
+  "stage3_rows": [
+    {
+      "architecture_changes_forbidden": true,
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "cross_attention",
+          "ff_dim": 64,
+          "input_dim": 32,
+          "model_dim": 32,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Top-k token attention sent directly to coordinator without message head.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "coordinator_family": "candidate_query_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "active_message",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "architecture_locked": true,
+      "batch_size": 8,
+      "candidate": "topk_attention_no_head",
+      "checkpoint_paths": {
+        "candidate_order_baseline": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\candidate_order_baseline.pt",
+        "explicit_evidence_oracle": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\explicit_evidence_oracle.pt",
+        "frozen": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\frozen_topk_attention_no_head.pt",
+        "majority_baseline": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\majority_baseline.pt",
+        "raw_latent": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\raw_latent_baseline.pt",
+        "single_agent_full_context": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\single_agent_full_context.pt",
+        "single_view_text_role_0": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\single_view_text_role_0.pt",
+        "single_view_text_role_1": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\single_view_text_role_1.pt",
+        "single_view_text_role_2": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\single_view_text_role_2.pt",
+        "single_view_text_role_3": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\single_view_text_role_3.pt",
+        "text_only": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\text_only_multi_agent_baseline.pt",
+        "trainable": "results\\stage3_real_code_cuda_smoke_checkpoints\\seed_0\\trainable_topk_attention_no_head.pt"
+      },
+      "combined_message_final_label_probe": {
+        "combined_activation": 0.09375,
+        "combined_message": 0.15625
+      },
+      "completed_at_utc": "2026-05-14T12:41:15+00:00",
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_max_memory_allocated": 50898944,
+      "cuda_max_memory_allocated_gb": 0.04740333557128906,
+      "cuda_total_memory": 17094475776,
+      "dataset_config": {
+        "dataset_source": "real_program_analysis_import_restoration",
+        "generator_version": "real_import_restore_stable_categories_balanced_stage3",
+        "include_private_signal_tokens": false,
+        "max_files": 40,
+        "n_dev": 32,
+        "n_test": 32,
+        "n_train": 64,
+        "n_views": 4,
+        "num_candidates": 8,
+        "snippet_radius": 2,
+        "source_roots": [
+          "src",
+          "tests"
+        ]
+      },
+      "dataset_summary": {
+        "constructed_fallback": false,
+        "dataset_source": "real_program_analysis_import_restoration",
+        "generator_version": "real_import_restore_stable_categories_balanced_stage3",
+        "minimum_single_view_candidate_ambiguity": 4,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_program_analysis_artifacts_no_constructed_cue_tokens",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_3",
+            "dev_real_import_restore_5"
+          ],
+          "test": [
+            "test_real_import_restore_1",
+            "test_real_import_restore_3"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "ast_import_deletion_name_usage",
+          "module_export_resolution",
+          "provider_module_name_parity_analysis",
+          "traceback_import_block_location"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/coordinators/activation.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/datasets/multiview_code_patch_selection.py",
+          "src/evaluation/audit.py",
+          "src/experiments/architecture_search.py",
+          "src/experiments/diagnostics.py",
+          "src/experiments/real_shared_weight_latent_coordination.py",
+          "src/experiments/run_latent_vs_text_efficiency.py"
+        ],
+        "source_files_used": 21,
+        "split_sizes": {
+          "dev": 32,
+          "test": 32,
+          "train": 64
+        }
+      },
+      "description": "Top-k token attention sent directly to coordinator without message head.",
+      "dev_accuracy": {
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.0,
+        "evidence_token_diagnostic_frozen": null,
+        "evidence_token_diagnostic_trainable": null,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.0,
+        "hidden_states_shuffled_across_examples": 0.0,
+        "majority_baseline": 0.125,
+        "physical_order_shuffled_roles_preserved": 0.0,
+        "randomized_labels": 0.03125,
+        "raw_latent": 0.125,
+        "role_labels_shuffled": 0.0,
+        "single_agent_full_context": 0.15625,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.0,
+        "view_masked": 0.0,
+        "view_shuffled": 0.0
+      },
+      "dev_delta": 0.0,
+      "device": "cuda",
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.03199082952057086,
+        "active_message_readout_parameter_delta": 0.12857000529766083,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "batch_size": 8,
+        "coordinator_grad_norm_mean": 1.426607144828132,
+        "coordinator_parameter_delta": 0.5721166133880615,
+        "cuda_max_memory_allocated": 49530880,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": false,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "gradient_accumulation_steps": 1,
+      "leakage_audit_passes": true,
+      "message_collapse": {
+        "active_message_readout": {
+          "between_label_cosine": 0.9120190739631653,
+          "mean_cosine_similarity": 0.9117881059646606,
+          "norm_mean": 11.36583423614502,
+          "norm_std": 0.010156289674341679,
+          "variance_mean": 0.08623449504375458,
+          "within_label_cosine": 0.9096322655677795
+        }
+      },
+      "mixed_precision": "bf16",
+      "output_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "examples_checked": 128,
+        "passes": true,
+        "seed": 0,
+        "text_only_private_views_excluded": true,
+        "type": "real_shared_weight_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "per_family_accuracy": {
+        "test_real_import_restore_1": 0.041666666666666664,
+        "test_real_import_restore_3": 0.0
+      },
+      "per_role_ablation": {
+        "accuracy_drop": {
+          "0": -0.03125,
+          "1": -0.03125,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "accuracy_when_role_masked": {
+          "0": 0.0625,
+          "1": 0.0625,
+          "2": 0.03125,
+          "3": 0.03125
+        },
+        "base_accuracy": 0.03125,
+        "one_role_only_failure": false
+      },
+      "private_cue_probes": {
+        "active_message_readout": {
+          "mean": 0.671875,
+          "per_role": {
+            "0": 0.59375,
+            "1": 1.0,
+            "2": 0.5,
+            "3": 0.59375
+          }
+        },
+        "raw_pooled_activation": {
+          "mean": 0.4375,
+          "per_role": {
+            "0": 0.5625,
+            "1": 0.40625,
+            "2": 0.5,
+            "3": 0.28125
+          }
+        }
+      },
+      "rejection_reasons": [
+        "trainable <= frozen on dev",
+        "trainable <= text-only on dev",
+        "trainable <= raw-latent on dev",
+        "trainable <= a single-view baseline on dev"
+      ],
+      "seed": 0,
+      "selection_valid": false,
+      "split_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "candidate_patch_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_file_patch_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_issue_hash_overlap": 0,
+        "dev_test_problem_family_overlap": 0,
+        "dev_test_source_import_key_overlap": 0,
+        "dev_test_target_file_overlap": 0,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_file_patch_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_issue_hash_overlap": 0,
+        "train_dev_problem_family_overlap": 0,
+        "train_dev_source_import_key_overlap": 0,
+        "train_dev_target_file_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_file_patch_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_issue_hash_overlap": 0,
+        "train_test_problem_family_overlap": 0,
+        "train_test_source_import_key_overlap": 0,
+        "train_test_target_file_overlap": 0,
+        "type": "real_shared_weight_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage3",
+      "stage_config": {
+        "batch_size": 8,
+        "epochs": 1,
+        "gradient_accumulation_steps": 1,
+        "hidden_dim": 32,
+        "lr": 0.002,
+        "max_candidates": 1,
+        "mixed_precision": "bf16",
+        "n_dev": 32,
+        "n_test": 32,
+        "n_train": 64,
+        "name": "stage3",
+        "patience": 1,
+        "seeds": [
+          0
+        ],
+        "tiny_ff_dim": 64,
+        "tiny_layers": 1
+      },
+      "status": "completed",
+      "success_criteria": {
+        "corruption_controls_near_chance": {
+          "candidate_order_baseline": true,
+          "hidden_states_shuffled_across_examples": true,
+          "majority_baseline": true,
+          "randomized_labels": true,
+          "role_labels_shuffled": true,
+          "view_masked": true,
+          "view_shuffled": true
+        },
+        "frozen_agent_unchanged": true,
+        "invariance_controls_preserve_accuracy": {
+          "candidate_order_shuffled": true,
+          "physical_order_shuffled_roles_preserved": true
+        },
+        "leakage_audits_pass": true,
+        "role_label_shuffle_drops_or_near_chance": true,
+        "single_view_accuracy": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.125
+        },
+        "trainable_agent_changed": true,
+        "trainable_beats_candidate_order": false,
+        "trainable_beats_every_single_view": false,
+        "trainable_beats_frozen": false,
+        "trainable_beats_majority": false,
+        "trainable_beats_raw_latent": false,
+        "trainable_beats_text_only": false
+      },
+      "test_accuracy": {
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.0,
+        "evidence_token_diagnostic_frozen": null,
+        "evidence_token_diagnostic_trainable": null,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.125,
+        "hidden_states_shuffled_across_examples": 0.125,
+        "majority_baseline": 0.125,
+        "physical_order_shuffled_roles_preserved": 0.03125,
+        "randomized_labels": 0.125,
+        "raw_latent": 0.125,
+        "role_labels_shuffled": 0.03125,
+        "single_agent_full_context": 0.09375,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.03125,
+        "view_masked": 0.125,
+        "view_shuffled": 0.09375
+      },
+      "test_delta": -0.09375,
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.02678738791434453,
+        "active_message_readout_parameter_delta": 0.11621551960706711,
+        "agent_grad_norm_mean": 0.23802344186496716,
+        "agent_parameter_delta": 1.3320748805999756,
+        "agent_trainable": true,
+        "batch_size": 8,
+        "coordinator_grad_norm_mean": 1.0718160843981217,
+        "coordinator_parameter_delta": 0.7516064643859863,
+        "cuda_max_memory_allocated": 49530880,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "bootstrap_95_ci_delta": [
+      -0.09375,
+      -0.09375
+    ],
+    "completed_seeds": [
+      0
+    ],
+    "mean_delta": -0.09375,
+    "mean_frozen_accuracy": 0.125,
+    "mean_trainable_accuracy": 0.03125,
+    "n_completed": 1,
+    "n_failed_or_interrupted": 0,
+    "passed_stage3_locked_success_criteria": false,
+    "std_delta": 0.0,
+    "success_criteria": [
+      {
+        "criterion": "completed Stage 3 seeds >= 10",
+        "pass": false,
+        "value": 1
+      },
+      {
+        "criterion": "trainable beats frozen on at least 8/10 seeds",
+        "pass": false,
+        "value": 0
+      },
+      {
+        "criterion": "mean trainable-frozen delta >= +0.20",
+        "pass": false,
+        "value": -0.09375
+      },
+      {
+        "criterion": "bootstrap 95% CI lower bound for delta > +0.05",
+        "pass": false,
+        "value": [
+          -0.09375,
+          -0.09375
+        ]
+      },
+      {
+        "criterion": "trainable beats text-only, raw-latent, majority, and candidate-order baselines by mean accuracy",
+        "pass": false,
+        "value": {
+          "candidate_order_mean": 0.125,
+          "majority_mean": 0.125,
+          "raw_latent_mean": 0.125,
+          "text_only_mean": 0.125,
+          "trainable_mean": 0.03125
+        }
+      },
+      {
+        "criterion": "trainable beats every single-view baseline by mean accuracy",
+        "pass": false,
+        "value": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.125
+        }
+      },
+      {
+        "criterion": "corruption controls plus majority/candidate-order remain near chance",
+        "pass": true,
+        "value": {
+          "candidate_order_baseline": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "hidden_states_shuffled_across_examples": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "majority_baseline": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "randomized_labels": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "role_labels_shuffled": {
+            "max_accuracy": 0.03125,
+            "mean_accuracy": 0.03125
+          },
+          "view_masked": {
+            "max_accuracy": 0.125,
+            "mean_accuracy": 0.125
+          },
+          "view_shuffled": {
+            "max_accuracy": 0.09375,
+            "mean_accuracy": 0.09375
+          }
+        }
+      },
+      {
+        "criterion": "invariance controls preserve accuracy",
+        "pass": true,
+        "value": {
+          "candidate_order_shuffled": {
+            "mean_accuracy": 0.0,
+            "mean_delta_from_trainable": -0.03125
+          },
+          "physical_order_shuffled_roles_preserved": {
+            "mean_accuracy": 0.03125,
+            "mean_delta_from_trainable": 0.0
+          }
+        }
+      },
+      {
+        "criterion": "role-label shuffle drops substantially or remains near chance",
+        "pass": true,
+        "value": {
+          "max_accuracy": 0.03125,
+          "mean_accuracy": 0.03125,
+          "mean_delta_from_trainable": 0.0
+        }
+      },
+      {
+        "criterion": "no single role explains the result",
+        "pass": true,
+        "value": 0
+      },
+      {
+        "criterion": "leakage audits pass",
+        "pass": true,
+        "value": "split_candidate_patch_hash_and_output"
+      },
+      {
+        "criterion": "checkpoints saved for every seed and required method",
+        "pass": true,
+        "value": [
+          "trainable",
+          "frozen",
+          "text_only",
+          "raw_latent",
+          "majority_baseline",
+          "candidate_order_baseline",
+          "single_agent_full_context",
+          "single_view_text_role_0",
+          "single_view_text_role_1",
+          "single_view_text_role_2",
+          "single_view_text_role_3",
+          "explicit_evidence_oracle"
+        ]
+      },
+      {
+        "criterion": "shared trainable model receives gradients and changes",
+        "pass": true,
+        "value": "all_completed_seeds"
+      },
+      {
+        "criterion": "frozen comparator remains frozen",
+        "pass": true,
+        "value": "all_completed_seeds"
+      }
+    ]
+  }
+}

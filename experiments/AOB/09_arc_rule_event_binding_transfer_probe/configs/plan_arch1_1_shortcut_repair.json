@@ -1,0 +1,49 @@
+{
+  "device": "cpu",
+  "cheap_seeds": [0, 1, 2],
+  "run_medium": false,
+  "run_overfit_gates": false,
+  "variants": [
+    "P1_rollout_no_final",
+    "Q_candidate_self_attention",
+    "Q_bidirectional_candidate_evidence",
+    "Q_candidate_self_attention_plus_rollout_no_final",
+    "Q_candidate_self_attention_with_stronger_mismatch_controls"
+  ],
+  "dataset": {
+    "grid_size": 8,
+    "num_candidates": 8,
+    "plan_length": 12,
+    "obstacle_count": 6,
+    "train_examples": 48,
+    "dev_examples": 24,
+    "test_examples": 64,
+    "require_exactly_one_success": true,
+    "shortcut_repaired_candidate_pools": true,
+    "max_generation_attempts": 500,
+    "shortcut_pool_attempts": 800
+  },
+  "cheap_dataset": {
+    "train_examples": 48,
+    "dev_examples": 24,
+    "test_examples": 64
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 16,
+    "lr": 0.0007,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "gradient_clip_norm": 1.0,
+    "objective": "cross_entropy",
+    "aux_weight": 0.25
+  },
+  "feature_training": {
+    "epochs": 6,
+    "batch_size": 24,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "hidden_dim": 32
+  }
+}

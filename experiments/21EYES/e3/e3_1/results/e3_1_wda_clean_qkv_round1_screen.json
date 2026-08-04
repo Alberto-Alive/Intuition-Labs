@@ -1,0 +1,526 @@
+{
+  "baselines": {
+    "candidate_only": 0.1375,
+    "clean_qkv_v1_reference": 0.5243,
+    "current_only_no_memory": 0.2,
+    "e2_memory_slot_champion_reference": 1.0,
+    "e3_parent_reference": 0.684375,
+    "evidence_only": 0.1375,
+    "post_attention_memory_addition": 0.8125,
+    "query_only": 0.2,
+    "random_candidate": 0.125,
+    "stage8_champion_reference": 0.82
+  },
+  "evaluated_count": 48,
+  "killed_variants": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_support_contradiction_split_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "096fe6f9f476dec9",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6572500000000001,
+      "variant": "support_contradiction_split"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_support_contradiction_typed_cache_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "d5c21dcfcccbd9a0",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6572500000000001,
+      "variant": "support_contradiction_typed_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_additive_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "f1f6343aec9b3e4f",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "additive"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_low_rank_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "32ebc6d4bef624e5",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "low_rank"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_head_specific_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "8915764400fc29da",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "head_specific"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_pooled_cache_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "85034e500f870ed1",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "pooled_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_slot_cache_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "a897fde251447d5a",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "slot_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_typed_slot_cache_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "038cc20439140296",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "typed_slot_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_relation_state_cache_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "4c1089594a887936",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "relation_state_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_f_layer_summary_cache_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "a9ab1eba255fd0f8",
+      "family": "Richer Activation Cache",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "layer_summary_cache"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_kv_final_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "08aa4df8e6b95974",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "kv_final"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_kv_middle_final_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "908d1935cef4e0f8",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6552500000000001,
+      "variant": "kv_middle_final"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_additive_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "68e962bb9848bd5e",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6492500000000001,
+      "variant": "additive"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_support_contradiction_split_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "540ca43557e083e6",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6492500000000001,
+      "variant": "support_contradiction_split"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_v_final_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "3c5a3b69e2846a40",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6492500000000001,
+      "variant": "v_final"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_v_middle_final_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "8e87f7c14154a4d2",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6472500000000001,
+      "variant": "v_middle_final"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_low_rank_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "37d94b122b653eca",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6432500000000001,
+      "variant": "low_rank"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_head_specific_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "e4966c11e7db2ed2",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6432500000000001,
+      "variant": "head_specific"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_low_rank_bias_v_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "cc460215eaa27ea1",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6212500000000001,
+      "variant": "low_rank_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_head_specific_bias_v_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "5bf1a376ec88cfaa",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6212500000000001,
+      "variant": "head_specific_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_support_contradiction_bias_v_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "219bb6c557926b06",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6212500000000001,
+      "variant": "support_contradiction_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_stale_aware_bias_v_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "935adf2e0091ae6e",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6212500000000001,
+      "variant": "stale_aware_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_bias_v_final_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "7795366d34def1a5",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6212500000000001,
+      "variant": "bias_v_final"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_current_override_bias_v_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "7496c8288714ef4e",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6192500000000001,
+      "variant": "current_override_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_h_bias_v_all_layers_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "407a4284ffd49a36",
+      "family": "Layer-Wise WDA Shaping",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.6192500000000001,
+      "variant": "bias_v_all_layers"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_c_additive_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "666d9051dbbdf52c",
+      "family": "WDA-QKV",
+      "hard_disqualifiers": [
+        "trainable does not beat frozen"
+      ],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.61025,
+      "variant": "additive"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_c_low_rank_02",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "dec2be39466e3092",
+      "family": "WDA-QKV",
+      "hard_disqualifiers": [
+        "trainable does not beat frozen"
+      ],
+      "held_out_template_dev_accuracy": 0.8,
+      "selection_score": 0.605,
+      "variant": "low_rank"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_c_head_specific_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "74258eb82d4d0d76",
+      "family": "WDA-QKV",
+      "hard_disqualifiers": [
+        "trainable does not beat frozen"
+      ],
+      "held_out_template_dev_accuracy": 0.8,
+      "selection_score": 0.605,
+      "variant": "head_specific"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_c_support_contradiction_split_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "6892861f919b5afa",
+      "family": "WDA-QKV",
+      "hard_disqualifiers": [
+        "trainable does not beat frozen"
+      ],
+      "held_out_template_dev_accuracy": 0.8,
+      "selection_score": 0.605,
+      "variant": "support_contradiction_split"
+    }
+  ],
+  "max_new_variants": 48,
+  "round": 1,
+  "screen": "focused_wda_screen",
+  "survivor_count": 19,
+  "survivors": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_gated_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "d608045c45414504",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70275,
+      "variant": "gated"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "036872b917847147",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70275,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_kv_gate_calibration_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "0f155f3056898b9b",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70275,
+      "variant": "wda_kv_gate_calibration"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_gated_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "4c93ac8d1f7ba6e8",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "gated"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_b_current_override_gate_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "60dfe7200aeb4892",
+      "family": "WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "current_override_gate"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_v_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "69e276df98ce9305",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "sc_wda_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_separate_gates_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "5d66b6bfa9abe5ae",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "separate_gates"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "2de0f84793fe7581",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "wda_v_gate_calibration"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_sc_separate_gates_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "e06e339d0f81b544",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.70075,
+      "variant": "sc_separate_gates"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_current_override_gate_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "65ffc6acb17d0ee9",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.69875,
+      "variant": "current_override_gate"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_contrastive_cache_loss_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "dad7e88c0f870967",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.69875,
+      "variant": "contrastive_cache_loss"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_stale_current_override_gate_objective_05",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "f5b3ad38950c643c",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.69875,
+      "variant": "stale_current_override_gate_objective"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_bias_v_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "c6461f46889c4875",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.68275,
+      "variant": "sc_wda_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_d_gated_bias_v_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "4ab78ca1dc24a714",
+      "family": "WDA Attention Bias + V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.68075,
+      "variant": "gated_bias_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_bias_v_gate_calibration_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "a7b83d59be5a3c78",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.68075,
+      "variant": "wda_bias_v_gate_calibration"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_c_gated_01",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "d824b77442b648b4",
+      "family": "WDA-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8125,
+      "selection_score": 0.67225,
+      "variant": "gated"
+    }
+  ]
+}

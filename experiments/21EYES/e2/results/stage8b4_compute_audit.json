@@ -1,0 +1,203 @@
+{
+  "architectures": [
+    {
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "capacity_C": 64,
+      "compute_normalized_capacity": 0.000576036866359447,
+      "config_id": "9737cdc966c78acf",
+      "estimated_forward_compute": {
+        "attention_ops": 4608.0,
+        "encoder_passes": 18,
+        "estimated_forward_compute": 111104.0,
+        "latent_views": 18,
+        "model_kind": "evidence_feature_latent",
+        "parameter_count_estimate": 9568,
+        "projection_ops": 106496.0
+      },
+      "memory_usage": {
+        "estimated_peak_bytes": 0,
+        "source": "not_measured_cpu_stage8b4"
+      },
+      "parameter_count": 9568,
+      "wall_clock_time": 166.51688509999076
+    },
+    {
+      "architecture_name": "stage8b3_f_memory_slot_attention_02",
+      "capacity_C": 64,
+      "compute_normalized_capacity": 0.000625,
+      "config_id": "26e1c7a05997e96c",
+      "estimated_forward_compute": {
+        "attention_ops": 4096.0,
+        "encoder_passes": 16,
+        "estimated_forward_compute": 102400.0,
+        "latent_views": 16,
+        "model_kind": "evidence_feature_latent",
+        "parameter_count_estimate": 9536,
+        "projection_ops": 98304.0
+      },
+      "memory_usage": {
+        "estimated_peak_bytes": 0,
+        "source": "not_measured_cpu_stage8b4"
+      },
+      "parameter_count": 9536,
+      "wall_clock_time": 105.12416800000938
+    },
+    {
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_02",
+      "capacity_C": 64,
+      "compute_normalized_capacity": 0.000625,
+      "config_id": "552e1a052b9675b3",
+      "estimated_forward_compute": {
+        "attention_ops": 4096.0,
+        "encoder_passes": 16,
+        "estimated_forward_compute": 102400.0,
+        "latent_views": 16,
+        "model_kind": "evidence_feature_latent",
+        "parameter_count_estimate": 9536,
+        "projection_ops": 98304.0
+      },
+      "memory_usage": {
+        "estimated_peak_bytes": 0,
+        "source": "not_measured_cpu_stage8b4"
+      },
+      "parameter_count": 9536,
+      "wall_clock_time": 70.10077039996395
+    },
+    {
+      "architecture_name": "stage8b4_clean_qkv_activation_memory_challenger",
+      "capacity_C": 0,
+      "compute_normalized_capacity": 0.0,
+      "config_id": "3ae869210307d7af",
+      "estimated_forward_compute": {
+        "attention_ops": 20736.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 217344.0,
+        "latent_views": 16,
+        "model_kind": "clean_qkv_activation_memory",
+        "parameter_count_estimate": 9536,
+        "projection_ops": 196608.0
+      },
+      "memory_usage": {
+        "estimated_peak_bytes": 0,
+        "source": "not_measured_cpu_stage8b4"
+      },
+      "parameter_count": 9536,
+      "wall_clock_time": 587.5659636000055
+    }
+  ],
+  "baselines": [
+    {
+      "architecture_name": "stage8b4_random_candidate",
+      "estimated_forward_compute": {
+        "attention_ops": 262144.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 294912.0,
+        "latent_views": 0,
+        "model_kind": "random_candidate",
+        "parameter_count_estimate": 0,
+        "projection_ops": 32768.0
+      },
+      "model_kind": "random_candidate",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_candidate_only",
+      "estimated_forward_compute": {
+        "attention_ops": 262144.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 294912.0,
+        "latent_views": 0,
+        "model_kind": "candidate_only",
+        "parameter_count_estimate": 0,
+        "projection_ops": 32768.0
+      },
+      "model_kind": "candidate_only",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_query_only",
+      "estimated_forward_compute": {
+        "attention_ops": 1024.0,
+        "encoder_passes": 0,
+        "estimated_forward_compute": 5120.0,
+        "latent_views": 0,
+        "model_kind": "query_only",
+        "parameter_count_estimate": 0,
+        "projection_ops": 4096.0
+      },
+      "model_kind": "query_only",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_evidence_only",
+      "estimated_forward_compute": {
+        "attention_ops": 262144.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 294912.0,
+        "latent_views": 0,
+        "model_kind": "evidence_only",
+        "parameter_count_estimate": 0,
+        "projection_ops": 32768.0
+      },
+      "model_kind": "evidence_only",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_retrieval_topk",
+      "estimated_forward_compute": {
+        "attention_ops": 262144.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 294912.0,
+        "latent_views": 0,
+        "model_kind": "retrieval_topk",
+        "parameter_count_estimate": 0,
+        "projection_ops": 32768.0
+      },
+      "model_kind": "retrieval_topk",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_true_monolithic_transformer",
+      "estimated_forward_compute": {
+        "attention_ops": 314703872.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 327548928.0,
+        "latent_views": 1,
+        "model_kind": "monolithic_transformer",
+        "parameter_count_estimate": 12320,
+        "projection_ops": 12845056.0
+      },
+      "model_kind": "monolithic_transformer",
+      "parameter_count": 12320
+    },
+    {
+      "architecture_name": "stage8b4_legacy_hashed_feature_baseline",
+      "estimated_forward_compute": {
+        "attention_ops": 262144.0,
+        "encoder_passes": 1,
+        "estimated_forward_compute": 294912.0,
+        "latent_views": 0,
+        "model_kind": "retrieval_topk",
+        "parameter_count_estimate": 0,
+        "projection_ops": 32768.0
+      },
+      "model_kind": "retrieval_topk",
+      "parameter_count": 0
+    },
+    {
+      "architecture_name": "stage8b4_raw_latent_comparator",
+      "estimated_forward_compute": {
+        "attention_ops": 2048.0,
+        "encoder_passes": 8,
+        "estimated_forward_compute": 67584.0,
+        "latent_views": 8,
+        "model_kind": "raw_latent_selector",
+        "parameter_count_estimate": 0,
+        "projection_ops": 65536.0
+      },
+      "model_kind": "raw_latent_selector",
+      "parameter_count": 0
+    }
+  ],
+  "stage": "8B.4"
+}

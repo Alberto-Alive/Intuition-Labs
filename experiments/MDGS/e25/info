@@ -1,0 +1,25 @@
+# Experiment E25: Familiarity Density and the Lottery Ticket Hypothesis
+
+### 1. The Question
+Does familiarity density during training correlate with weight importance as measured by the Lottery Ticket Hypothesis — and does early familiarity density predict which weights will survive LTH pruning before full training is complete?
+
+### 2. The Method
+The experiment trained a dual-parameter architecture on a four-level frequency dataset across five seeds, logging familiarity exposure scores and weight magnitudes at multiple checkpoints. A one-shot 50% global magnitude pruning procedure was applied post-training, followed by weight rewinding to step-0 initialization and retraining to identify winning tickets. Primary analysis compared the predictive power of early familiarity exposure against early weight magnitude for final pruning survival using ROC-AUC.
+
+### 3. The Primary Result
+**FAIL.** Familiarity exposure demonstrated an ROC-AUC of 0.50 to 0.53 across all seeds, layers, and checkpoints, indicating zero predictive power for LTH pruning survival. In contrast, weight magnitude showed an ROC-AUC of 0.89 to 1.0 at the same checkpoints, establishing it as the dominant predictor of structural importance.
+
+### 4. What This Means
+The familiarity system and winning ticket weights measure independent properties of the neural network. Familiarity tracks activation density — which regions of activation space are visited frequently by the training distribution. LTH pruning tracks weight magnitude — which weights have accumulated large absolute values to minimize the loss function. These two properties are not correlated in this architecture; a weight can serve a familiar region without having large magnitude, and vice versa.
+
+### 5. The Winning Ticket Count
+Four of five seeds successfully found valid winning tickets at 50% sparsity, reaching 99% or higher of the original dense accuracy. This confirms that the LTH procedure was correctly implemented and successful. The null result regarding familiarity is not an artifact of failed pruning or retraining.
+
+### 6. What This Rules Out
+Familiarity density cannot be used as an early predictor of winning ticket membership. It cannot replace or augment magnitude-based pruning for identifying structurally critical sub-networks. The hypothesized connection between familiarity and the Lottery Ticket Hypothesis is not empirically supported by this evidence.
+
+### 7. What Remains Valid
+The familiarity signal itself remains real, graded, and intrinsic, successfully updating at inference time as shown in previous experiments. E25 rules out one specific application — LTH prediction — but does not affect the core findings of experiments E14 through E20 regarding certainty scoring and experience accumulation.
+
+### 8. The Research Program Status
+Experiments E14 through E22 successfully validated the familiarity signal and its fundamental properties. Experiments E23 through E25 systematically tested three potential applications of familiarity to learning and weight structure — compositional generalization, gated contribution, and LTH prediction — and all three failed. While the signal is proven, its application to learning dynamics and weight structure is not supported by current evidence. The most supported application remains the calibration, OOD detection, and inference-time experience accumulation established in the initial phase of the program.

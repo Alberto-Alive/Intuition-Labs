@@ -1,0 +1,125 @@
+{
+  "current_only_no_memory_accuracy": 0.125,
+  "dataset_audit": {
+    "clean_qkv_cases": [
+      "current_input_overrides_memory",
+      "memory_irrelevant",
+      "memory_misleading",
+      "memory_required",
+      "memory_stale",
+      "multiple_old_activations_combine",
+      "old_activation_contradicts_one_candidate",
+      "old_activation_supports_one_candidate"
+    ],
+    "e3_1_stress_cases": [
+      "current_input_contains_exception_overriding_activation_cache",
+      "current_input_overrides_memory",
+      "memory_irrelevant",
+      "memory_misleading",
+      "memory_required",
+      "multiple_old_activations_combine",
+      "old_activation_contradicts_one_candidate",
+      "old_activation_supports_one_candidate",
+      "old_activation_supports_one_candidate_but_stale_current_input_invalidates_it",
+      "stale_memory"
+    ],
+    "e3_task_families": [
+      "compositional_role_evidence",
+      "conflict_resolution",
+      "constraint_satisfaction",
+      "irrelevant_memory_distractor_history",
+      "memory_dependent_recall",
+      "multi_hop_binding",
+      "needle_binding",
+      "sparse_relevant_evidence",
+      "stale_memory_update",
+      "support_vs_contradiction_memory"
+    ],
+    "failures": [],
+    "passes": true,
+    "summary": {
+      "all_have_k8": true,
+      "all_have_randomized_order_flag": true,
+      "candidate_index_histogram": [
+        1,
+        5,
+        8,
+        6,
+        4,
+        3,
+        6,
+        7
+      ],
+      "n_blocks": {
+        "64": 40
+      },
+      "num_examples": 40,
+      "splits": {
+        "dev": 40
+      },
+      "task_families": {
+        "compositional_role_evidence": 4,
+        "conflict_resolution": 4,
+        "constraint_satisfaction": 4,
+        "irrelevant_memory_distractor_history": 4,
+        "memory_dependent_recall": 4,
+        "multi_hop_binding": 4,
+        "needle_binding": 4,
+        "sparse_relevant_evidence": 4,
+        "stale_memory_update": 4,
+        "support_vs_contradiction_memory": 4
+      }
+    }
+  },
+  "failures": [],
+  "n_schedule": [
+    32,
+    64
+  ],
+  "no_final_templates_used": true,
+  "oracle_sanity_accuracy": 1.0,
+  "passes": true,
+  "post_attention_memory_addition_accuracy": 0.8,
+  "replay_rows": [
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_08",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "3b384f535942f26f",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.80625,
+      "selection_score": 0.6861250000000001,
+      "variant": "wda_q"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_09",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "321609740a730eb8",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8,
+      "selection_score": 0.683,
+      "variant": "wda_k"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_10",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "18b0ba366079e67d",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.80625,
+      "selection_score": 0.6781250000000001,
+      "variant": "wda_v"
+    }
+  ],
+  "retrieval_topk_accuracy": 0.525,
+  "round": 0,
+  "screen": "replay_and_sanity",
+  "seeds": [
+    0,
+    1
+  ]
+}

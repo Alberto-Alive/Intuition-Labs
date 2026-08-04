@@ -1,0 +1,47 @@
+# Model dimensions
+d_model: 256
+nhead: 8
+num_encoder_layers: 4
+num_decoder_layers: 4
+d_ff: 512
+dropout: 0.1
+
+# Vocabulary / sequences
+max_query_len: 64
+max_output_len: 48
+vocab_size: 2000
+
+# Bottleneck
+gumbel_tau_start: 2.0
+gumbel_tau_end: 0.5
+gumbel_anneal_steps: 10000
+
+# Safe executor
+min_group_size: 5
+variance_buckets: 4
+confidence_buckets: 3
+
+# Training
+batch_size: 32
+learning_rate: 0.0003
+weight_decay: 0.01
+num_epochs: 50
+warmup_steps: 500
+grad_clip: 1.0
+
+# Loss weights
+lambda_primitive: 1.0
+lambda_generation: 1.0
+lambda_policy: 0.5
+lambda_leakage: 1.0
+lambda_abstention: 0.3
+
+# Data
+num_train_samples: 10000
+num_val_samples: 1000
+num_private_records: 500
+num_query_fields: 8
+
+# Device
+device: cuda
+seed: 42

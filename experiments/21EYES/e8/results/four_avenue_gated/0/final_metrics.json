@@ -1,0 +1,343 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": true,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal"
+    ],
+    "last_attention_paths": [
+      "manual_dense",
+      "manual_dense",
+      "manual_dense",
+      "manual_dense"
+    ],
+    "note": "Avenues are per-token learned pathways; token self-attention uses SDPA during training."
+  },
+  "avenue_controls": {
+    "base_accuracy": 0.2708333333333333,
+    "base_loss": 3.336034138997396,
+    "controls": {
+      "avenue_order_shuffle": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.3354644775390625,
+        "tokens_per_sec": 7305.814014062216
+      },
+      "avenue_random": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.3309478759765625,
+        "tokens_per_sec": 7276.4684351908245
+      },
+      "avenue_shuffle": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.3310089111328125,
+        "tokens_per_sec": 7139.934049736449
+      },
+      "avenue_zero": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.331181844075521,
+        "tokens_per_sec": 7418.751897575471
+      },
+      "hidden_state_shuffle": {
+        "accuracy": 0.28125,
+        "drop": -0.010416666666666685,
+        "examples": 96,
+        "loss": 3.332697550455729,
+        "tokens_per_sec": 7343.648067226983
+      }
+    },
+    "examples": 96,
+    "full_minus_max_single_avenue": 0.0,
+    "leave_one_avenue_out": {
+      "leave_one_0": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.33514404296875
+      },
+      "leave_one_1": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.3359375
+      },
+      "leave_one_2": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.3359883626302085
+      },
+      "leave_one_3": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.3358917236328125
+      }
+    },
+    "max_single_avenue_accuracy": 0.2708333333333333,
+    "single_avenue": {
+      "single_avenue_0": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.335662841796875
+      },
+      "single_avenue_1": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.3351033528645835
+      },
+      "single_avenue_2": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.335418701171875
+      },
+      "single_avenue_3": {
+        "accuracy": 0.2708333333333333,
+        "drop": 0.0,
+        "loss": 3.3342386881510415
+      }
+    }
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e8\\configs\\four_avenue_gated.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.189453125,
+    "accuracy_by_distractor_count": {
+      "17+": 0.08433734939759036,
+      "5-8": 0.422680412371134,
+      "9-16": 0.1686746987951807
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.12,
+      "2": 0.21359223300970873,
+      "3": 0.13131313131313133,
+      "4+": 0.20701754385964913
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.16927083333333334,
+      "256": 0.25
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.22935779816513763,
+      "multi_hop_lookup": 0.16666666666666666,
+      "password_overwrite": 0.1865671641791045,
+      "variable_shadowing": 0.184
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 57.64843715372974,
+    "held_out_template_accuracy": 0.189453125,
+    "layers": {
+      "attention_entropy": [
+        3.2987449020147324,
+        1.8571134805679321,
+        1.537721037864685,
+        1.5694310516119003
+      ],
+      "avenue_diversity": [
+        0.298431396484375,
+        0.713409423828125,
+        0.841796875,
+        0.8587646484375
+      ],
+      "avenue_gate_entropy": [
+        1.0678660944104195,
+        1.3775447234511375,
+        1.3609245419502258,
+        1.103267103433609
+      ],
+      "avenue_output_norm": [
+        1.5664094164967537,
+        0.3653867933899164,
+        0.41612321324646473,
+        0.8775910027325153
+      ],
+      "avenue_scale": [
+        0.014259861782193184,
+        -0.0003331931366119534,
+        -0.0004689561028499156,
+        0.03907930850982666
+      ],
+      "avenue_usage_0": [
+        0.10230122972279787,
+        0.24646857660263777,
+        0.27748220413923264,
+        0.5359282810240984
+      ],
+      "avenue_usage_1": [
+        0.40717799961566925,
+        0.26095777936279774,
+        0.2558886092156172,
+        0.14022470358759165
+      ],
+      "avenue_usage_2": [
+        0.1097887116484344,
+        0.2614793246611953,
+        0.23034347966313362,
+        0.15789875481277704
+      ],
+      "avenue_usage_3": [
+        0.38073206320405006,
+        0.23109434265643358,
+        0.23628572095185518,
+        0.1659482643008232
+      ],
+      "distractor_avenue_concentration": [
+        0.46363745391136035,
+        0.2868323134025559,
+        0.3123971752356738,
+        0.5900389057351276
+      ],
+      "effective_attended_tokens": [
+        47.43984031677246,
+        12.608167588710785,
+        10.829721927642822,
+        10.497434824705124
+      ],
+      "pairwise_avenue_cosine": [
+        0.701568603515625,
+        0.2866058349609375,
+        0.15822601318359375,
+        0.14124679565429688
+      ],
+      "query_useful_gate_cosine": [
+        0.9860887243412435,
+        0.9945274441270158,
+        0.9841493762796745,
+        0.9641011791536584
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "useful_evidence_avenue_concentration": [
+        0.46068160072900355,
+        0.285851645632647,
+        0.31237071979558095,
+        0.5852244748966768
+      ],
+      "useful_top1_avenue_recall": [
+        0.9267578125,
+        0.5400390625,
+        0.59765625,
+        0.8974609375
+      ],
+      "useful_top1_position_recall": [
+        0.0166015625,
+        0.0126953125,
+        0.0126953125,
+        0.0068359375
+      ],
+      "useful_top3_avenue_recall": [
+        0.9599609375,
+        0.91015625,
+        0.8828125,
+        0.9775390625
+      ],
+      "useful_top3_position_recall": [
+        0.0361328125,
+        0.0302734375,
+        0.0361328125,
+        0.0390625
+      ],
+      "useful_vs_distractor_avenue_auc": [
+        0.5009075724228751,
+        0.5310806943598436,
+        0.5358604166285659,
+        0.5012714543045149
+      ]
+    },
+    "loss": 3.8395261764526367,
+    "peak_gpu_memory_mb": 538.24853515625,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.0859375,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.498390197753906,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.28125,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 3.2438201904296875,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.140625,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.136650085449219,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.25,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.4792442321777344,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 9223.749944596757,
+    "wall_clock_eval_seconds": 8.881420299992897
+  },
+  "max_steps": 2500,
+  "parameter_count": 1524500,
+  "peak_gpu_memory_mb": 538.24853515625,
+  "seed": 0,
+  "train_examples": 120000,
+  "train_examples_per_sec": 426.297680370642,
+  "train_loss_ema": 3.332631847668687,
+  "train_task_loss_ema": 3.332631847668687,
+  "train_tokens": 15360000,
+  "train_tokens_per_sec": 54566.10308744218,
+  "trainable_parameter_count": 1524500,
+  "variant": "four_avenue_gated",
+  "wall_clock_train_seconds": 281.49343880001106
+}

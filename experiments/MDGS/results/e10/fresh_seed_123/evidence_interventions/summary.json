@@ -1,0 +1,143 @@
+{
+  "checkpoint": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e10\\fresh_seed_123\\checkpoints\\best.pt",
+  "trace_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\e3\\trace_cache",
+  "split": "test",
+  "limit": null,
+  "offset": 0,
+  "seed": 123,
+  "apply_to": "all_paths",
+  "topk": 1,
+  "path_index": null,
+  "conclusion": "evidence looks causal",
+  "interventions": {
+    "boundary_up": {
+      "mean_delta": {
+        "success_guard": -0.008771184831857681,
+        "success_cert": -0.11796560138463974,
+        "ambiguity_cert": 0.19518150389194489,
+        "support_cert": 0.0,
+        "commitment_depth": -0.101717010140419,
+        "success_base": -0.16152890026569366,
+        "failure_cert": -0.04587322846055031,
+        "success_prob": -0.19900940358638763,
+        "uncertain_prob": 0.06898219883441925,
+        "failure_prob": 0.1300271898508072
+      },
+      "mean_outcome_logit_delta": [
+        -3.3636066913604736,
+        -0.21765698492527008,
+        3.014716386795044
+      ],
+      "mean_outcome_prob_delta": [
+        -0.19900938868522644,
+        0.06898219883441925,
+        0.1300271898508072
+      ],
+      "predicted_class_flip_rate": 0.3522012531757355,
+      "sign_consistency": {
+        "ambiguity_cert": 1.0,
+        "success_guard": 1.0,
+        "success_cert": 1.0,
+        "commitment_depth": 1.0,
+        "support_cert": 0.0,
+        "success_prob": 1.0,
+        "uncertain_prob": 0.5258333384990692
+      },
+      "overall_sign_consistency": 0.7894047626427242,
+      "intervention": "boundary_up",
+      "description": "Increase boundary mass and expect more ambiguity / less commitment.",
+      "evidence_override": {
+        "delta_boundary": 0.25,
+        "delta_order": 0.0,
+        "delta_support": 0.0,
+        "apply_to": "all_paths"
+      }
+    },
+    "support_down": {
+      "mean_delta": {
+        "success_guard": -0.003679713001474738,
+        "success_cert": -0.11763830482959747,
+        "ambiguity_cert": 0.14995302259922028,
+        "support_cert": -0.027348659932613373,
+        "commitment_depth": -0.08833380788564682,
+        "success_base": -0.16388481855392456,
+        "failure_cert": -0.04642684757709503,
+        "success_prob": -0.18553027510643005,
+        "uncertain_prob": 0.08381349593400955,
+        "failure_prob": 0.1017167791724205
+      },
+      "mean_outcome_logit_delta": [
+        -2.835366725921631,
+        -0.21702197194099426,
+        2.6601269245147705
+      ],
+      "mean_outcome_prob_delta": [
+        -0.18553027510643005,
+        0.08381349593400955,
+        0.1017167791724205
+      ],
+      "predicted_class_flip_rate": 0.3113207519054413,
+      "sign_consistency": {
+        "support_cert": 1.0,
+        "success_guard": 0.996875,
+        "success_cert": 1.0,
+        "commitment_depth": 1.0,
+        "ambiguity_cert": 1.0,
+        "success_prob": 1.0,
+        "failure_prob": 1.0
+      },
+      "overall_sign_consistency": 0.9995535714285715,
+      "intervention": "support_down",
+      "description": "Decrease support and expect weaker support / weaker commitment.",
+      "evidence_override": {
+        "delta_support": -0.25,
+        "delta_order": 0.0,
+        "delta_boundary": 0.0,
+        "apply_to": "all_paths"
+      }
+    },
+    "order_failure": {
+      "mean_delta": {
+        "success_guard": -0.003218537662178278,
+        "success_cert": -0.08884196728467941,
+        "ambiguity_cert": 4.685900001355492e-10,
+        "support_cert": 0.0,
+        "commitment_depth": -0.0018465439788997173,
+        "success_base": -0.1228773221373558,
+        "failure_cert": 0.12287731468677521,
+        "success_prob": -0.190522700548172,
+        "uncertain_prob": 0.1313638687133789,
+        "failure_prob": 0.059158805757761
+      },
+      "mean_outcome_logit_delta": [
+        -2.3340508937835693,
+        -0.16962113976478577,
+        2.5495476722717285
+      ],
+      "mean_outcome_prob_delta": [
+        -0.1905226856470108,
+        0.1313638687133789,
+        0.059158805757761
+      ],
+      "predicted_class_flip_rate": 0.24842767417430878,
+      "sign_consistency": {
+        "success_base": 1.0,
+        "failure_cert": 1.0,
+        "success_guard": 0.9745833396911621,
+        "success_cert": 1.0,
+        "commitment_depth": 0.9745833396911621,
+        "success_prob": 1.0,
+        "failure_prob": 1.0
+      },
+      "overall_sign_consistency": 0.9927380970546178,
+      "intervention": "order_failure",
+      "description": "Push order toward failure and expect success to drop.",
+      "evidence_override": {
+        "delta_order": -0.35,
+        "delta_boundary": 0.0,
+        "delta_support": 0.0,
+        "apply_to": "all_paths"
+      }
+    }
+  }
+}

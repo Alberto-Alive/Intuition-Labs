@@ -1,0 +1,145 @@
+{
+  "benchmark": "stage6d2_pool_scaling",
+  "candidate_order_randomization_required_before_new_harness_labels": true,
+  "candidate_sources": [
+    "results/stage6b1_generated_candidates.jsonl",
+    "results/stage6b1a_generated_candidates.jsonl",
+    "results/stage6b1b_generated_candidates.jsonl"
+  ],
+  "created_at_utc": "2026-05-16T23:01:15.079726+00:00",
+  "no_fabricated_candidates": true,
+  "no_raw_preserving_expansion": true,
+  "no_reference_or_gold_patches_used": true,
+  "official_harness_next_step": {
+    "accept_labels_only_from_official_resolved": true,
+    "batch_by_candidate_slot": true,
+    "eligible_new_k8_tasks": [
+      "sphinx-doc__sphinx-9591",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "sympy__sympy-15349"
+    ],
+    "raw_logs_selector_visible": false,
+    "slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "per_instance_unique_generated_patch_counts": {
+    "astropy__astropy-14096": 8,
+    "astropy__astropy-14598": 8,
+    "astropy__astropy-14995": 1,
+    "django__django-11099": 3,
+    "django__django-11119": 8,
+    "django__django-13279": 8,
+    "django__django-13344": 8,
+    "django__django-13516": 8,
+    "django__django-13925": 8,
+    "django__django-14539": 8,
+    "django__django-15098": 8,
+    "django__django-15916": 8,
+    "django__django-7530": 8,
+    "matplotlib__matplotlib-20676": 8,
+    "matplotlib__matplotlib-22871": 8,
+    "matplotlib__matplotlib-24177": 8,
+    "matplotlib__matplotlib-24637": 8,
+    "matplotlib__matplotlib-26113": 2,
+    "psf__requests-1142": 8,
+    "psf__requests-1766": 3,
+    "pydata__xarray-6599": 8,
+    "pydata__xarray-6721": 1,
+    "pydata__xarray-7229": 8,
+    "pytest-dev__pytest-7236": 8,
+    "sphinx-doc__sphinx-8035": 8,
+    "sphinx-doc__sphinx-9367": 3,
+    "sphinx-doc__sphinx-9591": 8,
+    "sphinx-doc__sphinx-9711": 8,
+    "sympy__sympy-14248": 8,
+    "sympy__sympy-15345": 8,
+    "sympy__sympy-15349": 8
+  },
+  "source_files": [
+    {
+      "exists": true,
+      "patch_records": 4,
+      "path": "results/stage6b1_generated_candidates.jsonl",
+      "raw_records": 4,
+      "tasks_with_k8_unique_generated_candidates": [],
+      "unique_instance_ids": 2
+    },
+    {
+      "exists": true,
+      "patch_records": 9,
+      "path": "results/stage6b1a_generated_candidates.jsonl",
+      "raw_records": 9,
+      "tasks_with_k8_unique_generated_candidates": [],
+      "unique_instance_ids": 4
+    },
+    {
+      "exists": true,
+      "patch_records": 200,
+      "path": "results/stage6b1b_generated_candidates.jsonl",
+      "raw_records": 200,
+      "tasks_with_k8_unique_generated_candidates": [
+        "astropy__astropy-14096",
+        "astropy__astropy-14598",
+        "django__django-11119",
+        "django__django-13279",
+        "django__django-13344",
+        "django__django-13516",
+        "django__django-13925",
+        "django__django-14539",
+        "django__django-15098",
+        "django__django-15916",
+        "django__django-7530",
+        "matplotlib__matplotlib-20676",
+        "matplotlib__matplotlib-22871",
+        "matplotlib__matplotlib-24177",
+        "matplotlib__matplotlib-24637",
+        "psf__requests-1142",
+        "pydata__xarray-6599",
+        "pydata__xarray-7229",
+        "pytest-dev__pytest-7236",
+        "sphinx-doc__sphinx-8035",
+        "sphinx-doc__sphinx-9591",
+        "sphinx-doc__sphinx-9711",
+        "sympy__sympy-14248",
+        "sympy__sympy-15345",
+        "sympy__sympy-15349"
+      ],
+      "unique_instance_ids": 25
+    }
+  ],
+  "source_roots": [
+    "results/stage6b0_public_sources"
+  ],
+  "summary": {
+    "candidate_source_files_scanned": 3,
+    "complete_official_labels_missing_for_extra_k8_tasks": 5,
+    "extra_k8_generated_tasks_without_complete_official_labels": [
+      "sphinx-doc__sphinx-9591",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "sympy__sympy-15349"
+    ],
+    "overlap_k8_sources_with_pool_all": 20,
+    "overlap_k8_sources_with_pool_strict": 18,
+    "patch_records_loaded": 213,
+    "raw_records_loaded": 213,
+    "source_roots_scanned": [
+      "results/stage6b0_public_sources"
+    ],
+    "source_supply_can_reach_100_tasks_before_harness": false,
+    "source_supply_can_reach_50_tasks_before_harness": false,
+    "tasks_with_at_least_k8_unique_generated_candidates": 25,
+    "unique_instance_ids_in_generated_sources": 31
+  }
+}

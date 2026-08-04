@@ -1,0 +1,891 @@
+{
+  "variant": "e3",
+  "train_loop_seed": 123,
+  "experiments": [
+    {
+      "label": "pattern_guard_x2",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x2",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.858610400682012,
+      "trajectory_macro_f1": 0.7772600020727466,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7106918096542358,
+      "success_brier": 0.6132782434004075,
+      "success_ece_10bin": 0.6788912529684823,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.36651785727590325,
+      "all_supported_monotonicity_violation_rate": 0.19831101190919675,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3566071431338787,
+      "pred_success_over_guard": 0.6833333373069763,
+      "pred_success_guard_excess": 0.0806879997253418,
+      "pred_success_prob_mean": 0.7621327638626099,
+      "pred_success_guard_mean": 0.6673839092254639,
+      "pred_success_over_guard_correct": 0.694915235042572,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.08205559104681015,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2610062893081761,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    {
+      "label": "pattern_guard_x25",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x25",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.858610400682012,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6127972529481559,
+      "success_ece_10bin": 0.6793973988658638,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.3640625001862645,
+      "all_supported_monotonicity_violation_rate": 0.19751488098874687,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3547321431338787,
+      "pred_success_over_guard": 0.6833333373069763,
+      "pred_success_guard_excess": 0.07451951503753662,
+      "pred_success_prob_mean": 0.7561818361282349,
+      "pred_success_guard_mean": 0.6691294312477112,
+      "pred_success_over_guard_correct": 0.694915235042572,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.07578255236148834,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2610062893081761,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.5
+      }
+    },
+    {
+      "label": "pattern_ctx_06",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_06",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.858610400682012,
+      "trajectory_macro_f1": 0.7772600020727466,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7075471878051758,
+      "success_brier": 0.6126619931176713,
+      "success_ece_10bin": 0.6777927116908238,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.3335937501862645,
+      "all_supported_monotonicity_violation_rate": 0.19568452385564644,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3584821431338787,
+      "pred_success_over_guard": 0.699999988079071,
+      "pred_success_guard_excess": 0.08292881399393082,
+      "pred_success_prob_mean": 0.7675649523735046,
+      "pred_success_guard_mean": 0.6670548319816589,
+      "pred_success_over_guard_correct": 0.694915235042572,
+      "pred_success_over_guard_incorrect": 1.0,
+      "pred_success_excess_correct": 0.0841425284743309,
+      "pred_success_excess_incorrect": 0.011319290846586227,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2610062893081761,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    {
+      "label": "pattern_ctx_half",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_half",
+      "outcome_acc": 0.9150943160057068,
+      "outcome_macro_f1": 0.8556962931157864,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6129259350586467,
+      "success_ece_10bin": 0.6775986289941566,
+      "unsafe_success_rate_correctness": 0.01639344262295082,
+      "success_precision_vs_is_correct": 0.9836065573770492,
+      "monotonicity_violation_rate": 0.33046875018626454,
+      "all_supported_monotonicity_violation_rate": 0.19478422620644173,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3577678571641445,
+      "pred_success_over_guard": 0.7213114500045776,
+      "pred_success_guard_excess": 0.08208668231964111,
+      "pred_success_prob_mean": 0.7664915323257446,
+      "pred_success_guard_mean": 0.6667755246162415,
+      "pred_success_over_guard_correct": 0.7166666388511658,
+      "pred_success_over_guard_incorrect": 1.0,
+      "pred_success_excess_correct": 0.08296716958284378,
+      "pred_success_excess_incorrect": 0.029257725924253464,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.24842767295597484,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.4,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    {
+      "label": "pattern_ctx_quarter",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_quarter",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.8590964706875092,
+      "trajectory_macro_f1": 0.7821878704834596,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7169811129570007,
+      "success_brier": 0.6144403939397264,
+      "success_ece_10bin": 0.6786783943527506,
+      "unsafe_success_rate_correctness": 0.016129032258064516,
+      "success_precision_vs_is_correct": 0.9838709677419355,
+      "monotonicity_violation_rate": 0.3334821430966258,
+      "all_supported_monotonicity_violation_rate": 0.19630208334575097,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3515178571641445,
+      "pred_success_over_guard": 0.7419354915618896,
+      "pred_success_guard_excess": 0.07921352982521057,
+      "pred_success_prob_mean": 0.7624297738075256,
+      "pred_success_guard_mean": 0.6667070984840393,
+      "pred_success_over_guard_correct": 0.7377049326896667,
+      "pred_success_over_guard_incorrect": 1.0,
+      "pred_success_excess_correct": 0.07974789291620255,
+      "pred_success_excess_incorrect": 0.04661686345934868,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_ambiguity_trace",
+      "largest_single_path_outcome_flip": 0.24528301886792453,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.2,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    {
+      "label": "pattern_guard_x3",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x3",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.858610400682012,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6138101265400829,
+      "success_ece_10bin": 0.6812860424432292,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.36562500018626454,
+      "all_supported_monotonicity_violation_rate": 0.1978273809887469,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3534821431338787,
+      "pred_success_over_guard": 0.6833333373069763,
+      "pred_success_guard_excess": 0.06666620820760727,
+      "pred_success_prob_mean": 0.7473121881484985,
+      "pred_success_guard_mean": 0.6709213256835938,
+      "pred_success_over_guard_correct": 0.694915235042572,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.06779614090919495,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2610062893081761,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0
+      }
+    },
+    {
+      "label": "pattern_guard_x35",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x35",
+      "outcome_acc": 0.9150943160057068,
+      "outcome_macro_f1": 0.8551685814520233,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7106918096542358,
+      "success_brier": 0.6139569547976313,
+      "success_ece_10bin": 0.6822823430067397,
+      "unsafe_success_rate_correctness": 0.01694915254237288,
+      "success_precision_vs_is_correct": 0.9830508474576272,
+      "monotonicity_violation_rate": 0.36562500018626454,
+      "all_supported_monotonicity_violation_rate": 0.19778273810322086,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35419642850756644,
+      "pred_success_over_guard": 0.6779661178588867,
+      "pred_success_guard_excess": 0.06145961582660675,
+      "pred_success_prob_mean": 0.7448663711547852,
+      "pred_success_guard_mean": 0.672472357749939,
+      "pred_success_over_guard_correct": 0.6896551847457886,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.06251926720142365,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2578616352201258,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.5
+      }
+    },
+    {
+      "label": "pattern_guard_x4",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x4",
+      "outcome_acc": 0.9119496941566467,
+      "outcome_macro_f1": 0.8516885270616613,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7075471878051758,
+      "success_brier": 0.6153283072546423,
+      "success_ece_10bin": 0.6842052567788289,
+      "unsafe_success_rate_correctness": 0.017241379310344827,
+      "success_precision_vs_is_correct": 0.9827586206896551,
+      "monotonicity_violation_rate": 0.36640625018626455,
+      "all_supported_monotonicity_violation_rate": 0.19757440476988755,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35419642850756644,
+      "pred_success_over_guard": 0.6724137663841248,
+      "pred_success_guard_excess": 0.0563378781080246,
+      "pred_success_prob_mean": 0.7417406439781189,
+      "pred_success_guard_mean": 0.6738499402999878,
+      "pred_success_over_guard_correct": 0.6842105388641357,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.05732625722885132,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2578616352201258,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 4.0
+      }
+    },
+    {
+      "label": "pattern_guard_x2_margin_003",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x2_margin_003",
+      "outcome_acc": 0.9150943160057068,
+      "outcome_macro_f1": 0.8551685814520233,
+      "trajectory_macro_f1": 0.7772600020727466,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7075471878051758,
+      "success_brier": 0.6129987880843506,
+      "success_ece_10bin": 0.678950094744203,
+      "unsafe_success_rate_correctness": 0.01694915254237288,
+      "success_precision_vs_is_correct": 0.9830508474576272,
+      "monotonicity_violation_rate": 0.36573660727590324,
+      "all_supported_monotonicity_violation_rate": 0.19799107146138945,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35535714313387873,
+      "pred_success_over_guard": 0.694915235042572,
+      "pred_success_guard_excess": 0.08011646568775177,
+      "pred_success_prob_mean": 0.7649186849594116,
+      "pred_success_guard_mean": 0.6683869361877441,
+      "pred_success_over_guard_correct": 0.7068965435028076,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.08149777352809906,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2578616352201258,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "success_prob_guard_margin": 0.03
+      }
+    },
+    {
+      "label": "pattern_guard_x3_margin_003",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x3_margin_003",
+      "outcome_acc": 0.9150943160057068,
+      "outcome_macro_f1": 0.8551685814520233,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7106918096542358,
+      "success_brier": 0.6139014388817514,
+      "success_ece_10bin": 0.6819861062806769,
+      "unsafe_success_rate_correctness": 0.01694915254237288,
+      "success_precision_vs_is_correct": 0.9830508474576272,
+      "monotonicity_violation_rate": 0.36171875018626454,
+      "all_supported_monotonicity_violation_rate": 0.1973586309887469,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3534821431338787,
+      "pred_success_over_guard": 0.694915235042572,
+      "pred_success_guard_excess": 0.06401927024126053,
+      "pred_success_prob_mean": 0.7472056746482849,
+      "pred_success_guard_mean": 0.6719936728477478,
+      "pred_success_over_guard_correct": 0.7068965435028076,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.065123051404953,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2578616352201258,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0,
+        "success_prob_guard_margin": 0.03
+      }
+    },
+    {
+      "label": "pattern_guard_x2_smooth_001",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x2_smooth_001",
+      "outcome_acc": 0.9056603908538818,
+      "outcome_macro_f1": 0.8382466549241371,
+      "trajectory_macro_f1": 0.7821878704834596,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7106918096542358,
+      "success_brier": 0.6102867217881799,
+      "success_ece_10bin": 0.6791996678067282,
+      "unsafe_success_rate_correctness": 0.017241379310344827,
+      "success_precision_vs_is_correct": 0.9827586206896551,
+      "monotonicity_violation_rate": 0.3319196430034936,
+      "all_supported_monotonicity_violation_rate": 0.19816220238183935,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35669642850756644,
+      "pred_success_over_guard": 0.6896551847457886,
+      "pred_success_guard_excess": 0.07216863334178925,
+      "pred_success_prob_mean": 0.7565346360206604,
+      "pred_success_guard_mean": 0.6659414172172546,
+      "pred_success_over_guard_correct": 0.7017543911933899,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.0734347552061081,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.25157232704402516,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.01
+      }
+    },
+    {
+      "label": "pattern_guard_x2_smooth_002",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_guard_x2_smooth_002",
+      "outcome_acc": 0.902515709400177,
+      "outcome_macro_f1": 0.8319359780113467,
+      "trajectory_macro_f1": 0.7821878704834596,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6066791048601026,
+      "success_ece_10bin": 0.6786695972268775,
+      "unsafe_success_rate_correctness": 0.017241379310344827,
+      "success_precision_vs_is_correct": 0.9827586206896551,
+      "monotonicity_violation_rate": 0.32254464300349356,
+      "all_supported_monotonicity_violation_rate": 0.19774553571517267,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35285714283585545,
+      "pred_success_over_guard": 0.6551724076271057,
+      "pred_success_guard_excess": 0.06299646943807602,
+      "pred_success_prob_mean": 0.7439611554145813,
+      "pred_success_guard_mean": 0.6645738482475281,
+      "pred_success_over_guard_correct": 0.6666666865348816,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.06410166621208191,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.24842767295597484,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.02
+      }
+    },
+    {
+      "label": "pattern_ctx_06_guard_x3",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_06_guard_x3",
+      "outcome_acc": 0.9182389974594116,
+      "outcome_macro_f1": 0.858610400682012,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6134785053573727,
+      "success_ece_10bin": 0.6806972233524382,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.3359375001862645,
+      "all_supported_monotonicity_violation_rate": 0.19589285715793572,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.35857142850756646,
+      "pred_success_over_guard": 0.6833333373069763,
+      "pred_success_guard_excess": 0.06779754161834717,
+      "pred_success_prob_mean": 0.7507922649383545,
+      "pred_success_guard_mean": 0.6704497933387756,
+      "pred_success_over_guard_correct": 0.694915235042572,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.06894665211439133,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.2610062893081761,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0
+      }
+    },
+    {
+      "label": "pattern_ctx_half_guard_x2",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_half_guard_x2",
+      "outcome_acc": 0.9150943160057068,
+      "outcome_macro_f1": 0.8556962931157864,
+      "trajectory_macro_f1": 0.779532108241491,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7138364911079407,
+      "success_brier": 0.6129259350586467,
+      "success_ece_10bin": 0.6775986289941566,
+      "unsafe_success_rate_correctness": 0.01639344262295082,
+      "success_precision_vs_is_correct": 0.9836065573770492,
+      "monotonicity_violation_rate": 0.33046875018626454,
+      "all_supported_monotonicity_violation_rate": 0.19478422620644173,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.3577678571641445,
+      "pred_success_over_guard": 0.7213114500045776,
+      "pred_success_guard_excess": 0.08208668231964111,
+      "pred_success_prob_mean": 0.7664915323257446,
+      "pred_success_guard_mean": 0.6667755246162415,
+      "pred_success_over_guard_correct": 0.7166666388511658,
+      "pred_success_over_guard_incorrect": 1.0,
+      "pred_success_excess_correct": 0.08296716958284378,
+      "pred_success_excess_incorrect": 0.029257725924253464,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.24842767295597484,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.4,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    {
+      "label": "pattern_ctx_06_guard_x2_smooth_001",
+      "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\e3\\calibration_sweep\\seed_123\\pattern_ctx_06_guard_x2_smooth_001",
+      "outcome_acc": 0.9088050127029419,
+      "outcome_macro_f1": 0.8388566764551223,
+      "trajectory_macro_f1": 0.7821878704834596,
+      "failure_recall": 0.8823529411764706,
+      "joint_acc": 0.7169811129570007,
+      "success_brier": 0.6098890900454075,
+      "success_ece_10bin": 0.6784456328508289,
+      "unsafe_success_rate_correctness": 0.016666666666666666,
+      "success_precision_vs_is_correct": 0.9833333333333333,
+      "monotonicity_violation_rate": 0.32098214300349354,
+      "all_supported_monotonicity_violation_rate": 0.19685267857586344,
+      "success_cert_violation_rate": 0.0,
+      "failure_cert_violation_rate": 0.36107142850756646,
+      "pred_success_over_guard": 0.6666666865348816,
+      "pred_success_guard_excess": 0.0713634267449379,
+      "pred_success_prob_mean": 0.7516292333602905,
+      "pred_success_guard_mean": 0.6656233668327332,
+      "pred_success_over_guard_correct": 0.6779661178588867,
+      "pred_success_over_guard_incorrect": 0.0,
+      "pred_success_excess_correct": 0.0725729763507843,
+      "pred_success_excess_incorrect": 0.0,
+      "pred_uncertain_over_guard": 0.0,
+      "pred_failure_over_guard": 0.0,
+      "largest_single_path_outcome_driver": "zero_success_core",
+      "largest_single_path_outcome_flip": 0.24213836477987422,
+      "path_scales": {
+        "shared_trace": 1.0,
+        "success_trace": 0.25,
+        "success_core": 1.0,
+        "success_residual": 1.0,
+        "success_bonus": 1.0,
+        "failure_trace": 1.0,
+        "ambiguity_trace": 1.0,
+        "cert_context": 1.0,
+        "outcome_context": 0.0,
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6,
+        "success_raw": 0.5,
+        "failure_raw": 1.0,
+        "ambiguity_raw": 1.0
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.01
+      }
+    }
+  ],
+  "failures": {},
+  "recommended_experiment": "pattern_ctx_06",
+  "recommendation_rule": "Keep runs near the pattern_guard_x2 quality baseline, then minimize over-guard on incorrect predicted SUCCESS, then overall predicted-success over-guard rate, then mean excess, then success_brier.",
+  "specs": {
+    "pattern_guard_x2": {
+      "description": "Current main default: pattern-only outcome context with x2 success-probability guard penalty.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    "pattern_guard_x25": {
+      "description": "Pattern-only context with x2.5 success-probability guard penalty.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.5
+      }
+    },
+    "pattern_ctx_06": {
+      "description": "Keep only pattern context, at strength 0.6.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    "pattern_ctx_half": {
+      "description": "Keep only pattern context, but halve its strength.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.4
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    "pattern_ctx_quarter": {
+      "description": "Keep only pattern context, but reduce it to 0.2.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.2
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    "pattern_guard_x3": {
+      "description": "Increase the direct success-probability-over-guard penalty to x3.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0
+      }
+    },
+    "pattern_guard_x35": {
+      "description": "Increase the direct success-probability-over-guard penalty to x3.5.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.5
+      }
+    },
+    "pattern_guard_x4": {
+      "description": "Quadruple the direct success-probability-over-guard penalty.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 4.0
+      }
+    },
+    "pattern_guard_x2_margin_003": {
+      "description": "Pattern-only context with x2 guard penalty and tighter 0.03 guard margin.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "success_prob_guard_margin": 0.03
+      }
+    },
+    "pattern_guard_x3_margin_003": {
+      "description": "Pattern-only context with x3 guard penalty and tighter 0.03 guard margin.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0,
+        "success_prob_guard_margin": 0.03
+      }
+    },
+    "pattern_guard_x2_smooth_001": {
+      "description": "Pattern-only context with x2 guard penalty and light 0.01 outcome label smoothing.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.01
+      }
+    },
+    "pattern_guard_x2_smooth_002": {
+      "description": "Pattern-only context with x2 guard penalty and 0.02 outcome label smoothing.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.8
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.02
+      }
+    },
+    "pattern_ctx_06_guard_x3": {
+      "description": "Pattern context 0.6 with x3 guard penalty.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 3.0
+      }
+    },
+    "pattern_ctx_half_guard_x2": {
+      "description": "Half pattern context and double the success-probability guard penalty.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.4
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0
+      }
+    },
+    "pattern_ctx_06_guard_x2_smooth_001": {
+      "description": "Pattern context 0.6 with x2 guard penalty and light 0.01 label smoothing.",
+      "path_scales": {
+        "outcome_trajectory_context": 0.0,
+        "outcome_pattern_context": 0.6
+      },
+      "config_overrides": {
+        "success_prob_guard_penalty_multiplier": 2.0,
+        "outcome_label_smoothing": 0.01
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+configs:
+  - config_id: 239bd459e396fbe8
+    architecture_name: e2_d_cleanqkv_v1_replay
+    architecture_family: Clean-QKV Activation Cache v2
+    held_out_template_dev_accuracy: 1.0
+    capacity_C: 8
+    controls_pass: true
+    no_stage8c_run: true
+    no_10x_attention_capacity_claim: true
+    architecture_parameters_json: >
+      {"activation_cache": true, "champion_reference": false, "cleanqkv_v1_replay": true, "cleanqkv_v2": false, "config_id": "239bd459e396fbe8", "dat_mode": "none", "family_code": "D", "family_name": "Clean-QKV Activation Cache v2", "frozen": false, "hierarchical": false, "mechanisms": ["activation_cache", "memory_gate", "memory_dropout"], "mutation_description": "initial", "name": "e2_d_cleanqkv_v1_replay", "parent_config_id": null, "stage8_config": {"attention_routing": "top_k_memory_routing", "avenues": 2, "candidate_query": "candidate_task_query", "chunking": "semantic_key", "config_id": "770b706d32b2f050", "coord_hops": 1, "coordinator": "clean_qkv_activation_memory_reader", "curriculum": "mixed_n", "dropout": 0.05, "epochs": 4, "frozen": false, "hidden_dim": 32, "latent_views": 16, "lr": 0.04, "max_train_examples": 128, "memory_compression": "activation_memory_slots", "model_kind": "clean_qkv_activation_memory", "name": "e2_d_cleanqkv_v1_replay", "regularizers": ["entropy_regularization_on_routing"], "roles": 8, "top_k_views": 2, "training_loss": "multi_positive_cross_entropy", "vector_dim": 128, "view_sharing": "shared_encoder_role_avenue_embeddings", "weight_decay": 0.0001}, "support_contradiction": false, "trealized_mode": "none", "typed_memory_slots": false, "wda_scope": "none"}

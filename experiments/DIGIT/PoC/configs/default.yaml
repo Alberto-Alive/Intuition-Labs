@@ -1,0 +1,69 @@
+# DIGIT PoC — Adult Income Experiment Config
+
+# Model dimensions
+d_model: 256
+nhead: 8
+num_encoder_layers: 4
+num_decoder_layers: 4
+d_ff: 512
+dropout: 0.1
+
+# Query encoding
+num_query_fields: 13
+field_vocab_sizes: [15, 17, 3, 6, 7, 9, 8, 6, 21, 3, 3, 7, 13]
+# Fields: occupation, education, sex, race, age_bracket, workclass,
+#         marital, hours_bracket, education_num_min, capital_gain_flag,
+#         native_country_flag, relationship, query_specificity
+
+# Vocabulary / sequences
+max_output_len: 48
+vocab_size: 2000
+
+# Bottleneck
+num_answer_classes: 6
+num_support_classes: 4
+num_confidence_classes: 3
+num_risk_classes: 3
+gumbel_tau_start: 2.0
+gumbel_tau_end: 0.5
+gumbel_anneal_steps: 10000
+
+# Safe executor
+min_group_size: 10
+variance_buckets: 4
+confidence_buckets: 3
+
+# Ground truth thresholds
+income_margin: 0.05
+support_thresholds: [0.01, 0.05, 0.15]
+confidence_thresholds: [30, 200]
+risk_variance_thresholds: [0.20, 0.24]
+
+# Training
+batch_size: 64
+learning_rate: 0.0001
+weight_decay: 0.01
+num_epochs: 80
+warmup_steps: 500
+grad_clip: 1.0
+patience: 15
+
+# Loss weights
+lambda_primitive: 1.0
+lambda_generation: 1.0
+lambda_policy: 0.5
+lambda_leakage: 1.0
+lambda_abstention: 0.3
+
+# Data
+num_train_queries: 8000
+num_val_queries: 2000
+num_test_queries: 2000
+
+# Experiment
+seeds: [42, 137, 256, 512, 1024]
+data_split_seed: 0
+device: cuda
+
+# DP baseline
+dp_epsilons: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0]

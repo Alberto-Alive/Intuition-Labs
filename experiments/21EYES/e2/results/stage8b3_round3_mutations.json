@@ -1,0 +1,2505 @@
+{
+  "baselines": {
+    "n_values": [
+      8,
+      16
+    ],
+    "round": "round3",
+    "rows": [
+      {
+        "accuracy_by_N": {
+          "16": 0.10763888888888888,
+          "8": 0.1388888888888889
+        },
+        "architecture_name": "round3_random_candidate",
+        "held_out_template_dev_accuracy": 0.1232638888888889,
+        "model_kind": "random_candidate",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.09722222222222222,
+          "8": 0.11805555555555555
+        },
+        "architecture_name": "round3_candidate_only",
+        "held_out_template_dev_accuracy": 0.1076388888888889,
+        "model_kind": "candidate_only",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.13541666666666666,
+          "8": 0.13541666666666666
+        },
+        "architecture_name": "round3_query_only",
+        "held_out_template_dev_accuracy": 0.13541666666666666,
+        "model_kind": "query_only",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.10416666666666667,
+          "8": 0.11805555555555555
+        },
+        "architecture_name": "round3_evidence_only",
+        "held_out_template_dev_accuracy": 0.1111111111111111,
+        "model_kind": "evidence_only",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.4131944444444445,
+          "8": 0.5486111111111112
+        },
+        "architecture_name": "round3_retrieval_topk",
+        "held_out_template_dev_accuracy": 0.4809027777777778,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.13194444444444445,
+          "8": 0.1597222222222222
+        },
+        "architecture_name": "round3_true_monolithic_transformer",
+        "held_out_template_dev_accuracy": 0.14583333333333331,
+        "model_kind": "monolithic_transformer",
+        "parameter_count": 12320
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.3715277777777778,
+          "8": 0.4270833333333333
+        },
+        "architecture_name": "round3_legacy_hashed_feature_baseline",
+        "held_out_template_dev_accuracy": 0.3993055555555555,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 0
+      },
+      {
+        "accuracy_by_N": {
+          "16": 0.3680555555555556,
+          "8": 0.47916666666666663
+        },
+        "architecture_name": "round3_raw_latent_comparator",
+        "held_out_template_dev_accuracy": 0.4236111111111111,
+        "model_kind": "raw_latent_selector",
+        "parameter_count": 0
+      }
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "discarded_mutations": [
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "d7c15a5809026d93",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.0032477353098869753,
+      "parent_config_id": "07e352e038f7685a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.960160987851665
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "8ef243ed37c67c6a",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.0032477353098869753,
+      "parent_config_id": "07e352e038f7685a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.960160987851665
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "8c6062de2b4b2be8",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.0032477353098869753,
+      "parent_config_id": "07e352e038f7685a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.960160987851665
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_03_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "9bb13836f6be1c49",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "178e45ef245f2742",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_03_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "36a4ae6883380d77",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "178e45ef245f2742",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_03_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "f4954cc4074e0440",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "178e45ef245f2742",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_04_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "05d2d8a220476e4e",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "5fb6c3026dcbfd1a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_04_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "8e035356bae7dd1b",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "5fb6c3026dcbfd1a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_04_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "b3110204f4a05215",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.0047177628712042384,
+      "parent_config_id": "5fb6c3026dcbfd1a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9599404837174674
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_01_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "28aeb8b352d08b51",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "0ce0fedaf071efca",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_01_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "ce29b34c274d0c5c",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "0ce0fedaf071efca",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_01_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "97bb2b6afd4738f9",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "0ce0fedaf071efca",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "aa568d0256c07294",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "9737cdc966c78acf",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "b8a69fc885ab912e",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "9737cdc966c78acf",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "2655bd15afd6f6ee",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.0058586597746980735,
+      "parent_config_id": "9737cdc966c78acf",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9597693491819435
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_01_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "e9e7c906484be5b0",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.007202577204085314,
+      "parent_config_id": "0d9785328ad802e8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595677615675353
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_01_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "64dc2d5e86381842",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.007202577204085314,
+      "parent_config_id": "0d9785328ad802e8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595677615675353
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_01_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "c7731debdfbe01f2",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.007202577204085314,
+      "parent_config_id": "0d9785328ad802e8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595677615675353
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_02_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "55489553964f17b9",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "26e1c7a05997e96c",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_02_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "e5d1a6820732f261",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "26e1c7a05997e96c",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_02_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "84155e9c39b76309",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "26e1c7a05997e96c",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_02_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "6e379f573179a4a7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "71d9660df514d72b",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_02_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "0c7a86dfa5a3f3ff",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "71d9660df514d72b",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_02_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "2433a2491f7fdbee",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "71d9660df514d72b",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_02_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "c6d2770dc0ecffb7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "552e1a052b9675b3",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_02_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "6deb93d6f092e4a7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "552e1a052b9675b3",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_02_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "95324e08856034d7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.007469791212740043,
+      "parent_config_id": "552e1a052b9675b3",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9595276794662371
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_01_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "00422bd27c915f27",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "685ff82d5bfe3b0e",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_01_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "6260b941b097a2ec",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "685ff82d5bfe3b0e",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_01_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "71820504325fbed3",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "685ff82d5bfe3b0e",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_04_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "48a41b0f30a8f2e7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "d4b7dbbd53fdfd76",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_04_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "25a5ecc8b49a2fa6",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "d4b7dbbd53fdfd76",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_04_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "ce36b4bdd0298f04",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "d4b7dbbd53fdfd76",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_03_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "7af947490fcddffb",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "3129c5a8cf288156",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_03_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "4b5469a341bed84c",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "3129c5a8cf288156",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_03_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "1a55f2b022159d29",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "3129c5a8cf288156",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_04_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "f42fcefca9430def",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "fed5a1faa2b8ab9a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_04_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "5bd04f7d9d0a7e96",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "fed5a1faa2b8ab9a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Recurrent Latent Search",
+      "architecture_name": "stage8b3_g_recurrent_latent_search_04_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "33295d66e89bd9b4",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "fed5a1faa2b8ab9a",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_00_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "4b0a6ba05e1a2cb3",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "b46cd996d59939a8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_00_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "1dfdf34d0e8dc190",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "b46cd996d59939a8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_00_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "3527ebdab431da41",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "b46cd996d59939a8",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "5d41fd3934f16ff1",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "2cb33fd5a2c1d6ba",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "b4c50ddfc816bb54",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "2cb33fd5a2c1d6ba",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "0c4970f32fc5dda9",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.013581438568618261,
+      "parent_config_id": "2cb33fd5a2c1d6ba",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9586109323628553
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_00_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "4dfe021cfa493ab3",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "11731ead6f5ef700",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_00_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "9b942d8be532eb1e",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "11731ead6f5ef700",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_00_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "df45a330fdaf5ef9",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "11731ead6f5ef700",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "d9ab926c9ac0470d",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "25c4d25af71c80c5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "1fb6ea7ef5c09f0a",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "25c4d25af71c80c5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "87bc487ac492b641",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.01991944323397345,
+      "parent_config_id": "25c4d25af71c80c5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.957660231663052
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Coarse-to-Fine Attention",
+      "architecture_name": "stage8b3_c_hierarchical_coarse_to_fine_attention_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "0e46ad0f4eb1097e",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.024185320019951443,
+      "parent_config_id": "3fad5c2165253bc5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9570203501451554
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Coarse-to-Fine Attention",
+      "architecture_name": "stage8b3_c_hierarchical_coarse_to_fine_attention_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "fc52874edcca8119",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.024185320019951443,
+      "parent_config_id": "3fad5c2165253bc5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9570203501451554
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Coarse-to-Fine Attention",
+      "architecture_name": "stage8b3_c_hierarchical_coarse_to_fine_attention_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "3123185444000efd",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.024185320019951443,
+      "parent_config_id": "3fad5c2165253bc5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9570203501451554
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Cross-Candidate Comparison",
+      "architecture_name": "stage8b3_h_cross_candidate_comparison_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "ee010b634def2a39",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "93ca07d6ef0b3d54",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Cross-Candidate Comparison",
+      "architecture_name": "stage8b3_h_cross_candidate_comparison_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "26158eef59e2f0b6",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "93ca07d6ef0b3d54",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Cross-Candidate Comparison",
+      "architecture_name": "stage8b3_h_cross_candidate_comparison_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "d953208124933dc7",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "93ca07d6ef0b3d54",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Retrieval-Then-Latent-Reasoning Hybrid",
+      "architecture_name": "stage8b3_i_retrieval_then_latent_reasoning_hybrid_05_mut0",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "175522bd998c41f3",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add support/contradiction split",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "82355d1deef3dda5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Retrieval-Then-Latent-Reasoning Hybrid",
+      "architecture_name": "stage8b3_i_retrieval_then_latent_reasoning_hybrid_05_mut1",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "d3da77d2f2be690c",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "add auxiliary evidence-location loss",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "82355d1deef3dda5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Retrieval-Then-Latent-Reasoning Hybrid",
+      "architecture_name": "stage8b3_i_retrieval_then_latent_reasoning_hybrid_05_mut2",
+      "candidate_evidence_mismatch_degradation": 0.8819444444444444,
+      "capacity_C": 16,
+      "config_id": "db209ae9e3c964c5",
+      "cross_task_evidence_shuffle_degradation": 0.8888888888888888,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.1111111111111111,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "change top-k routing",
+      "pairwise_hidden_state_similarity": 0.024748081111367164,
+      "parent_config_id": "82355d1deef3dda5",
+      "phase": "stage8b3_round3",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956935935981443
+    }
+  ],
+  "kept_count": 0,
+  "kept_mutations": [],
+  "mutation_count": 60,
+  "parent_count": 20,
+  "round": 3,
+  "screen": "mutation_evolution",
+  "stage": "8B.3"
+}

@@ -1,0 +1,81 @@
+{
+  "output_path": "results/real_shared_weight_latent_coordination_cuda_smoke_results.json",
+  "audit_log_path": "results/real_shared_weight_latent_coordination_cuda_smoke_audit.jsonl",
+  "report_path": "reports/REAL_SHARED_WEIGHT_CUDA_SMOKE.md",
+  "device": "cuda",
+  "deterministic": false,
+  "seeds": [0],
+  "dataset": {
+    "n_train": 64,
+    "n_dev": 32,
+    "n_test": 32,
+    "num_candidates": 4,
+    "n_views": 4,
+    "source_roots": ["src", "tests"],
+    "max_files": 40,
+    "snippet_radius": 2,
+    "include_private_signal_tokens": true
+  },
+  "agent": {
+    "agent_mode": "pretrained_adapter",
+    "model_name_or_path": "EleutherAI/pythia-70m-deduped",
+    "local_files_only": true,
+    "allow_tiny_fallback": false,
+    "max_length": 128,
+    "hidden_dim": 64,
+    "lora_rank": 2,
+    "lora_alpha": 4.0,
+    "lora_target_modules": ["query_key_value", "dense", "dense_h_to_4h", "dense_4h_to_h"],
+    "adapter_hidden_dim": 64,
+    "train_top_layers": 0
+  },
+  "coordinator": {
+    "family": "cross_attention",
+    "input_dim": 64,
+    "model_dim": 64,
+    "num_heads": 2,
+    "num_layers": 1,
+    "ff_dim": 128,
+    "dropout": 0.0
+  },
+  "coordinator_families": ["cross_attention"],
+  "training": {
+    "epochs": 1,
+    "batch_size": 2,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 1,
+    "gradient_accumulation_steps": 4
+  },
+  "baseline_training": {
+    "epochs": 2,
+    "batch_size": 16,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "patience": 1,
+    "hidden_dims": [32]
+  },
+  "positive_control_training": {
+    "epochs": 10,
+    "batch_size": 16,
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "hidden_dims": [64, 32]
+  },
+  "text_feature_dim": 128,
+  "large_full_context_hidden_dim": 64,
+  "large_full_context_layers": 1,
+  "large_full_context_heads": 2,
+  "large_full_context_ff_dim": 128,
+  "controls": [
+    "none",
+    "randomized_labels",
+    "view_masked",
+    "view_shuffled",
+    "hidden_states_shuffled_across_examples",
+    "role_labels_shuffled",
+    "physical_order_shuffled_roles_preserved",
+    "candidate_order_shuffled"
+  ]
+}

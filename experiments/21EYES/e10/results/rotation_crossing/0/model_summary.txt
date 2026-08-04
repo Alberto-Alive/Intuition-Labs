@@ -1,0 +1,54 @@
+MultiAvenueTransformer(
+  (impl): CrossingAvenueTransformer(
+    (token_emb): Embedding(224, 128)
+    (pos_emb): Embedding(256, 128)
+    (drop): Dropout(p=0.1, inplace=False)
+    (blocks): ModuleList(
+      (0-3): 4 x ModuleList(
+        (0-3): 4 x AvenueTransformerBlock(
+          (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (attn): CausalSelfAttention(
+            (qkv): Linear(in_features=128, out_features=384, bias=True)
+            (out_proj): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (mlp): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=128, out_features=512, bias=True)
+              (1): GELU(approximate='none')
+              (2): Dropout(p=0.1, inplace=False)
+              (3): Linear(in_features=512, out_features=128, bias=True)
+              (4): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (crossings): ModuleList(
+      (0-3): 4 x ActivationCrossing(
+        (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (in_proj): ModuleList(
+          (0-3): 4 x Linear(in_features=128, out_features=128, bias=False)
+        )
+        (out_proj): ModuleList(
+          (0-3): 4 x Linear(in_features=128, out_features=128, bias=False)
+        )
+        (gates): ModuleList(
+          (0-3): 4 x Sequential(
+            (0): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+            (1): Linear(in_features=128, out_features=128, bias=True)
+            (2): GELU(approximate='none')
+            (3): Linear(in_features=128, out_features=4, bias=True)
+          )
+        )
+      )
+    )
+    (ln_f): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (lm_head): Linear(in_features=128, out_features=224, bias=False)
+  )
+)
+
+total_parameters: 4036532
+trainable_parameters: 4036532
+frozen_parameters: 0

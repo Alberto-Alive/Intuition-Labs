@@ -1,0 +1,187 @@
+{
+  "benchmark": "plan_arch1_1_shortcut_repair",
+  "prior_clean_plan_1_1": {
+    "available": true,
+    "sample_controls": [
+      {
+        "candidate_only_top1": 0.0,
+        "candidate_source_metadata_only_accuracy": 0.08333333333333333,
+        "overall_control_pass": true,
+        "seed": 0,
+        "variant": "clone_object_bbox_ce"
+      },
+      {
+        "candidate_only_top1": 0.08333333333333333,
+        "candidate_source_metadata_only_accuracy": 0.08333333333333333,
+        "overall_control_pass": true,
+        "seed": 0,
+        "variant": "clone_hybrid_all_views_ce"
+      },
+      {
+        "candidate_only_top1": 0.5,
+        "candidate_source_metadata_only_accuracy": 0.16666666666666666,
+        "overall_control_pass": false,
+        "seed": 0,
+        "variant": "clone_easy_random_ce"
+      },
+      {
+        "candidate_only_top1": 0.16666666666666666,
+        "candidate_source_metadata_only_accuracy": 0.0,
+        "overall_control_pass": true,
+        "seed": 0,
+        "variant": "clone_changed_cell_ce"
+      }
+    ]
+  },
+  "prior_plan_arch1": {
+    "available": true,
+    "rows": [
+      {
+        "baselines": {
+          "bigram_action_stat": 0.0625,
+          "candidate_only_index0": 0.15625,
+          "length_only": 0.15625,
+          "progress_heuristic": 0.53125,
+          "random": 0.125,
+          "rollout_collision_heuristic": 0.15625,
+          "stats_mlp": 0.625,
+          "unigram_action_stat": 0.03125
+        },
+        "seed": 0,
+        "shortcut_best": 0.625,
+        "trainable_top1": 0.5625,
+        "variant": "P1_rollout_no_final"
+      },
+      {
+        "baselines": {
+          "bigram_action_stat": 0.0625,
+          "candidate_only_index0": 0.15625,
+          "length_only": 0.15625,
+          "progress_heuristic": 0.53125,
+          "random": 0.125,
+          "rollout_collision_heuristic": 0.15625,
+          "stats_mlp": 0.625,
+          "unigram_action_stat": 0.03125
+        },
+        "seed": 0,
+        "shortcut_best": 0.625,
+        "trainable_top1": 0.65625,
+        "variant": "Q_candidate_self_attention"
+      },
+      {
+        "baselines": {
+          "bigram_action_stat": 0.0625,
+          "candidate_only_index0": 0.15625,
+          "length_only": 0.15625,
+          "progress_heuristic": 0.53125,
+          "random": 0.125,
+          "rollout_collision_heuristic": 0.15625,
+          "stats_mlp": 0.625,
+          "unigram_action_stat": 0.03125
+        },
+        "seed": 0,
+        "shortcut_best": 0.625,
+        "trainable_top1": 0.625,
+        "variant": "Q_bidirectional_candidate_evidence"
+      }
+    ]
+  },
+  "repaired_candidate_pool_audit": [
+    {
+      "all_candidates_same_length": true,
+      "baselines": {
+        "bigram_action_stat": 0.046875,
+        "candidate_only_index0": 0.125,
+        "candidate_pair_artifact_baseline": 0.265625,
+        "candidate_source_metadata_only": 0.125,
+        "length_only": 0.125,
+        "progress_heuristic": 0.125,
+        "random": 0.125,
+        "rollout_collision_heuristic": 0.125,
+        "stats_mlp": 0.09375,
+        "unigram_action_stat": 0.171875
+      },
+      "best_shortcut": 0.171875,
+      "exactly_one_success": true,
+      "label_histogram": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8,
+        "6": 8,
+        "7": 8
+      },
+      "seed": 0,
+      "simulator_success_visible": false,
+      "source_metadata_visible": false
+    },
+    {
+      "all_candidates_same_length": true,
+      "baselines": {
+        "bigram_action_stat": 0.109375,
+        "candidate_only_index0": 0.125,
+        "candidate_pair_artifact_baseline": 0.296875,
+        "candidate_source_metadata_only": 0.125,
+        "length_only": 0.125,
+        "progress_heuristic": 0.125,
+        "random": 0.125,
+        "rollout_collision_heuristic": 0.125,
+        "stats_mlp": 0.15625,
+        "unigram_action_stat": 0.140625
+      },
+      "best_shortcut": 0.15625,
+      "exactly_one_success": true,
+      "label_histogram": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8,
+        "6": 8,
+        "7": 8
+      },
+      "seed": 1,
+      "simulator_success_visible": false,
+      "source_metadata_visible": false
+    },
+    {
+      "all_candidates_same_length": true,
+      "baselines": {
+        "bigram_action_stat": 0.078125,
+        "candidate_only_index0": 0.125,
+        "candidate_pair_artifact_baseline": 0.171875,
+        "candidate_source_metadata_only": 0.125,
+        "length_only": 0.125,
+        "progress_heuristic": 0.125,
+        "random": 0.125,
+        "rollout_collision_heuristic": 0.125,
+        "stats_mlp": 0.171875,
+        "unigram_action_stat": 0.1875
+      },
+      "best_shortcut": 0.1875,
+      "exactly_one_success": true,
+      "label_histogram": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8,
+        "6": 8,
+        "7": 8
+      },
+      "seed": 2,
+      "simulator_success_visible": false,
+      "source_metadata_visible": false
+    }
+  ],
+  "summary": {
+    "classification": "mixed representation leak and baseline bug; the dataset exposed systematic action/progress artifacts and the stats_mlp shortcut consumed rollout/state-goal features instead of candidate-only action statistics.",
+    "exact_difference_from_plan_1_1": "PLAN-1.1 generated balanced candidate grids, hid source tags, audited metadata-only accuracy, and used candidate/evidence mismatch controls. PLAN-ARCH-1 generated gold from a single BFS source and negatives from unmatched source families, then scored a shortcut baseline with rollout progress/collision features.",
+    "medium_validation_launched": false,
+    "why_shortcut_reached_0_6250": "The prior PLAN-ARCH-1 shortcut score was the trainable stats_mlp baseline. Its features included rollout-derived collision/progress and start-goal progress, while gold candidates were padded BFS plans and negatives came from visibly different action/progress families."
+  }
+}

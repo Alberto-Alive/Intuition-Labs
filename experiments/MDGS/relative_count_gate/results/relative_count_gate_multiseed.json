@@ -1,0 +1,102 @@
+{
+  "acceptance": {
+    "all_pass": true,
+    "all_weights_nonnegative": true,
+    "gate_beats_e2_in_majority_of_seeds": true,
+    "gate_mean_auroc_at_least_e2": true
+  },
+  "e2_outcome_head_mean_auroc": 0.7217851303260556,
+  "evidence_level": "multiseed_leave_one_out_detection",
+  "feature_names": [
+    "disagreement",
+    "low_margin",
+    "low_attention_concentration",
+    "mean_entropy"
+  ],
+  "folds": [
+    {
+      "e2_outcome_head_auroc": 0.7500240453977108,
+      "gate_auroc": 0.7612772915264019,
+      "heldout_seed": "seed_123",
+      "n": 318,
+      "raw_margin_auroc": 0.7610849283447149,
+      "weights": [
+        0.01699964839023715,
+        0.7748723211395818,
+        0.0,
+        0.0
+      ],
+      "weights_nonnegative": true
+    },
+    {
+      "e2_outcome_head_auroc": 0.6877945561219583,
+      "gate_auroc": 0.7612772915264019,
+      "heldout_seed": "seed_231",
+      "n": 318,
+      "raw_margin_auroc": 0.7610849283447149,
+      "weights": [
+        0.01699964839023715,
+        0.7748723211395818,
+        0.0,
+        0.0
+      ],
+      "weights_nonnegative": true
+    },
+    {
+      "e2_outcome_head_auroc": 0.7995575646821198,
+      "gate_auroc": 0.7612772915264019,
+      "heldout_seed": "seed_347",
+      "n": 318,
+      "raw_margin_auroc": 0.7610849283447149,
+      "weights": [
+        0.01699964839023715,
+        0.7748723211395818,
+        0.0,
+        0.0
+      ],
+      "weights_nonnegative": true
+    },
+    {
+      "e2_outcome_head_auroc": 0.5755506396075791,
+      "gate_auroc": 0.7612772915264019,
+      "heldout_seed": "seed_451",
+      "n": 318,
+      "raw_margin_auroc": 0.7610849283447149,
+      "weights": [
+        0.01699964839023715,
+        0.7748723211395818,
+        0.0,
+        0.0
+      ],
+      "weights_nonnegative": true
+    },
+    {
+      "e2_outcome_head_auroc": 0.7959988458209099,
+      "gate_auroc": 0.7612772915264019,
+      "heldout_seed": "seed_569",
+      "n": 318,
+      "raw_margin_auroc": 0.7610849283447149,
+      "weights": [
+        0.01699964839023715,
+        0.7748723211395818,
+        0.0,
+        0.0
+      ],
+      "weights_nonnegative": true
+    }
+  ],
+  "gate_beats_e2_seed_count": 3,
+  "gate_beats_raw_seed_count": 5,
+  "gate_mean_auroc": 0.7612772915264019,
+  "note": "monotonicity/threshold-stability are structural (see test_gate.py); this replicates only the empirical detection win",
+  "raw_margin_mean_auroc": 0.7610849283447149,
+  "raw_margin_verdict": "tied",
+  "scope": "MDGS relative/count gate detection, leave-one-seed across 5 trained e2 models",
+  "seeds": [
+    "seed_123",
+    "seed_231",
+    "seed_347",
+    "seed_451",
+    "seed_569"
+  ]
+}

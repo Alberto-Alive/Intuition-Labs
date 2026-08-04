@@ -1,0 +1,333 @@
+{
+  "baselines": {
+    "n_values": [
+      8
+    ],
+    "required_replays": [
+      {
+        "accuracy_by_N": {
+          "8": 1.0
+        },
+        "architecture_family": "Stage 8B.4 best candidate replay",
+        "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+        "capacity_C": 8,
+        "config_id": "a842c81158bc2d86",
+        "controls_pass": true,
+        "hard_disqualifiers": [],
+        "held_out_template_dev_accuracy": 1.0,
+        "mechanisms": [
+          "explicit_views",
+          "memory_slots"
+        ],
+        "selection_score": 0.686200077860536
+      },
+      {
+        "accuracy_by_N": {
+          "8": 1.0
+        },
+        "architecture_family": "Clean-QKV Activation Cache v2",
+        "architecture_name": "e2_d_cleanqkv_v1_replay",
+        "capacity_C": 8,
+        "config_id": "239bd459e396fbe8",
+        "controls_pass": true,
+        "hard_disqualifiers": [],
+        "held_out_template_dev_accuracy": 1.0,
+        "mechanisms": [
+          "activation_cache",
+          "memory_gate",
+          "memory_dropout"
+        ],
+        "selection_score": 0.7771876023908663
+      }
+    ],
+    "round": "round1",
+    "rows": [
+      {
+        "accuracy_by_N": {
+          "8": 0.0
+        },
+        "architecture_name": "e2_round1_random_candidate",
+        "baseline": "random candidate",
+        "held_out_template_dev_accuracy": 0.0,
+        "model_kind": "random_candidate",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.375
+        },
+        "architecture_name": "e2_round1_candidate_only",
+        "baseline": "candidate-only",
+        "held_out_template_dev_accuracy": 0.375,
+        "model_kind": "candidate_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.125
+        },
+        "architecture_name": "e2_round1_query_only",
+        "baseline": "query-only",
+        "held_out_template_dev_accuracy": 0.125,
+        "model_kind": "query_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.375
+        },
+        "architecture_name": "e2_round1_evidence_only",
+        "baseline": "evidence-only",
+        "held_out_template_dev_accuracy": 0.375,
+        "model_kind": "evidence_only",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.25
+        },
+        "architecture_name": "e2_round1_retrieval_topk",
+        "baseline": "retrieval/top-k",
+        "held_out_template_dev_accuracy": 0.25,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.25
+        },
+        "architecture_name": "e2_round1_legacy_hashed_feature",
+        "baseline": "legacy hashed feature",
+        "held_out_template_dev_accuracy": 0.25,
+        "model_kind": "retrieval_topk",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 0.125
+        },
+        "architecture_name": "e2_round1_raw_latent_comparator",
+        "baseline": "raw latent comparator",
+        "held_out_template_dev_accuracy": 0.125,
+        "model_kind": "raw_latent_selector",
+        "parameter_count": 116
+      },
+      {
+        "accuracy_by_N": {
+          "8": 1.0
+        },
+        "architecture_name": "e2_round1_true_monolithic_transformer",
+        "baseline": "true monolithic transformer",
+        "held_out_template_dev_accuracy": 1.0,
+        "model_kind": "monolithic_transformer",
+        "parameter_count": 12436
+      }
+    ],
+    "seeds": [
+      0
+    ]
+  },
+  "evaluated_variants": 10,
+  "family_counts": {
+    "A": 1,
+    "B": 2,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 1,
+    "H": 1,
+    "I": 1
+  },
+  "killed_variants": [],
+  "n_schedule": [
+    8
+  ],
+  "required_variants": 80,
+  "round": 1,
+  "screen": "wide_screen",
+  "seeds": [
+    0
+  ],
+  "survivor_count": 10,
+  "survivors": [
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "T-realized Candidate-Memory Attention",
+      "architecture_name": "e2_g_t_realized_candidate_memory_00",
+      "capacity_C": 8,
+      "config_id": "c1211447b472814e",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "t_realized_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "t_realized",
+        "memory_slots"
+      ],
+      "selection_score": 0.8186412459679245
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Clean-QKV Activation Cache v2",
+      "architecture_name": "e2_d_cleanqkv_v1_replay",
+      "capacity_C": 8,
+      "config_id": "239bd459e396fbe8",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "activation_cache",
+        "memory_gate",
+        "memory_dropout"
+      ],
+      "selection_score": 0.7771876023908663
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "WDA / Distributional-QKV Adapters",
+      "architecture_name": "e2_e_wda_distributional_qkv_00",
+      "capacity_C": 8,
+      "config_id": "b0f2c4e849acdf82",
+      "controls_pass": false,
+      "hard_disqualifiers": [
+        "wda_controls_do_not_affect_performance"
+      ],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "wda",
+        "distributional_qkv",
+        "memory_slots"
+      ],
+      "selection_score": 0.7688941759083544
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "e2_c_memory_slot_attention_00",
+      "capacity_C": 8,
+      "config_id": "5114c2e4e870f881",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "memory_slots",
+        "learned_memory_slots"
+      ],
+      "selection_score": 0.7450070676462461
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "DAT-style Distributional Memory Slots",
+      "architecture_name": "e2_f_dat_distributional_memory_slots_00",
+      "capacity_C": 8,
+      "config_id": "4853bcc4c08bd387",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "dat",
+        "memory_slots"
+      ],
+      "selection_score": 0.7442916372433157
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_00",
+      "capacity_C": 8,
+      "config_id": "7993fc10bbeaff44",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "entity_matching"
+      ],
+      "selection_score": 0.7428131298458986
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Support-vs-Contradiction Routing",
+      "architecture_name": "e2_h_support_contradiction_routing_00",
+      "capacity_C": 8,
+      "config_id": "5965ccd8e5999118",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "support_contradiction",
+        "explicit_views"
+      ],
+      "selection_score": 0.7428131298458986
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "e2_b_explicit_view_objective_assignment_01",
+      "capacity_C": 8,
+      "config_id": "0bb3ed8d5515a7da",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "anti_collapse",
+        "rule_matching"
+      ],
+      "selection_score": 0.7424500778605361
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Hierarchical Retrieve-Then-Score",
+      "architecture_name": "e2_i_hierarchical_retrieve_then_score_00",
+      "capacity_C": 8,
+      "config_id": "cd70f510bd6216c4",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "hierarchical",
+        "retrieval_then_score"
+      ],
+      "selection_score": 0.7244812964405397
+    },
+    {
+      "accuracy_by_N": {
+        "8": 1.0
+      },
+      "architecture_family": "Stage 8 Champion Replay",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "capacity_C": 8,
+      "config_id": "926587a996d5acde",
+      "controls_pass": true,
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 1.0,
+      "mechanisms": [
+        "explicit_views",
+        "memory_slots"
+      ],
+      "selection_score": 0.686200077860536
+    }
+  ]
+}

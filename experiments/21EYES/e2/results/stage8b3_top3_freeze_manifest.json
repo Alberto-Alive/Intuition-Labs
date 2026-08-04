@@ -1,0 +1,243 @@
+{
+  "artifacts": {
+    "capacity_curves": "results\\stage8b3_capacity_curves.csv",
+    "compute_audit": "results\\stage8b3_compute_audit.json",
+    "controls_audit": "results\\stage8b3_controls_audit.jsonl",
+    "database": "results\\stage8b3_tournament_database.jsonl",
+    "freeze_manifest": "results\\stage8b3_top3_freeze_manifest.json",
+    "report": "reports\\STAGE8B3_PARALLEL_MICRO_EVOLUTION_TOURNAMENT.md",
+    "round1": "results\\stage8b3_round1_screen.json",
+    "round2": "results\\stage8b3_round2_promotions.json",
+    "round3": "results\\stage8b3_round3_mutations.json",
+    "round4": "results\\stage8b3_round4_finalists.json",
+    "top3_configs": "results\\stage8b3_top3_configs.yaml",
+    "view_diversity_audit": "results\\stage8b3_view_diversity_audit.json"
+  },
+  "decision": "STAGE8B3_TOP3_SELECTED",
+  "freeze_statement": "Top-3 Stage 8B.3 architecture configs are frozen for later larger-scale validation. Stage 8C was not run.",
+  "no_10x_attention_capacity_claim": true,
+  "no_stage8c_run": true,
+  "selection_score_formula": {
+    "compute_normalized_capacity": 0.1,
+    "evidence_use_control_degradation": 0.2,
+    "normalized_dev_accuracy_highest_N": 0.3,
+    "stability_across_seeds": 0.1,
+    "trainable_vs_frozen_gap": 0.15,
+    "view_diversity_anti_collapse": 0.15
+  },
+  "stage": "8B.3",
+  "top3": [
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Memory Slot Attention",
+      "architecture_name": "stage8b3_f_memory_slot_attention_02",
+      "candidate_evidence_mismatch_degradation": 0.8791666666666667,
+      "capacity_C": 32,
+      "config_id": "26e1c7a05997e96c",
+      "cross_task_evidence_shuffle_degradation": 0.8770833333333333,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.12291666666666666,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "initial",
+      "pairwise_hidden_state_similarity": 0.007337758167543344,
+      "parent_config_id": null,
+      "phase": "stage8b3_round4",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956017391830424
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_02",
+      "candidate_evidence_mismatch_degradation": 0.8791666666666667,
+      "capacity_C": 32,
+      "config_id": "552e1a052b9675b3",
+      "cross_task_evidence_shuffle_degradation": 0.8770833333333333,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.12291666666666666,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "initial",
+      "pairwise_hidden_state_similarity": 0.007337758167543344,
+      "parent_config_id": null,
+      "phase": "stage8b3_round4",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.956017391830424
+    },
+    {
+      "accuracy_by_N": {
+        "16": 1.0,
+        "32": 1.0,
+        "8": 1.0
+      },
+      "architecture_family": "Explicit View Objective Assignment",
+      "architecture_name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "candidate_evidence_mismatch_degradation": 0.8791666666666667,
+      "capacity_C": 32,
+      "config_id": "9737cdc966c78acf",
+      "cross_task_evidence_shuffle_degradation": 0.8770833333333333,
+      "early_capacity_ratio": 0.0,
+      "failure_reason": null,
+      "frozen_comparator_accuracy": 0.12291666666666666,
+      "held_out_template_dev_accuracy": 1.0,
+      "mutation_description": "initial",
+      "pairwise_hidden_state_similarity": 0.005755104445132035,
+      "parent_config_id": null,
+      "phase": "stage8b3_round4",
+      "screen_checks": {
+        "candidate_only_not_explanatory": true,
+        "families_ge_085_at_N8_or_N16": [
+          "compositional_role_evidence",
+          "conflict_resolution",
+          "constraint_satisfaction",
+          "multi_hop_binding",
+          "needle_binding",
+          "sparse_relevant_evidence"
+        ],
+        "finalist_pass": true,
+        "heldout_template_not_failed": true,
+        "hidden_state_shuffle_degrades": true,
+        "query_only_not_explanatory": true,
+        "randomized_labels_collapse": true,
+        "round1_pass": true,
+        "round2_pass": true,
+        "view_not_severely_collapsed": true
+      },
+      "selection_score": 0.9456957836776055
+    }
+  ],
+  "top3_full_configs": [
+    {
+      "attention_routing": "dense_all_view_attention",
+      "avenues": 2,
+      "candidate_query": "candidate_task_query",
+      "chunking": "semantic_key",
+      "config_id": "26e1c7a05997e96c",
+      "coord_hops": 1,
+      "coordinator": "memory_slot_attention",
+      "curriculum": "mixed_n",
+      "dropout": 0.0,
+      "epochs": 4,
+      "frozen": false,
+      "hidden_dim": 32,
+      "latent_views": 16,
+      "lr": 0.05,
+      "max_train_examples": 128,
+      "memory_compression": "slot_attention_compression",
+      "model_kind": "evidence_feature_latent",
+      "name": "stage8b3_f_memory_slot_attention_02",
+      "regularizers": [
+        "entropy_regularization_on_routing"
+      ],
+      "roles": 8,
+      "top_k_views": 4,
+      "training_loss": "multi_positive_cross_entropy",
+      "vector_dim": 128,
+      "view_sharing": "shared_encoder_role_avenue_embeddings",
+      "weight_decay": 0.0001
+    },
+    {
+      "attention_routing": "dense_all_view_attention",
+      "avenues": 2,
+      "candidate_query": "candidate_task_query",
+      "chunking": "semantic_key",
+      "config_id": "552e1a052b9675b3",
+      "coord_hops": 1,
+      "coordinator": "explicit_view_objective_assignment",
+      "curriculum": "mixed_n",
+      "dropout": 0.0,
+      "epochs": 4,
+      "frozen": false,
+      "hidden_dim": 32,
+      "latent_views": 16,
+      "lr": 0.05,
+      "max_train_examples": 128,
+      "memory_compression": "slot_attention_compression",
+      "model_kind": "evidence_feature_latent",
+      "name": "stage8b3_j_explicit_view_objective_assignment_02",
+      "regularizers": [
+        "entropy_regularization_on_routing"
+      ],
+      "roles": 8,
+      "top_k_views": 4,
+      "training_loss": "multi_positive_cross_entropy",
+      "vector_dim": 128,
+      "view_sharing": "partially_shared_role_adapters",
+      "weight_decay": 0.0001
+    },
+    {
+      "attention_routing": "dense_all_view_attention",
+      "avenues": 2,
+      "candidate_query": "candidate_task_query",
+      "chunking": "semantic_key",
+      "config_id": "9737cdc966c78acf",
+      "coord_hops": 1,
+      "coordinator": "explicit_view_objective_assignment",
+      "curriculum": "mixed_n",
+      "dropout": 0.05,
+      "epochs": 4,
+      "frozen": false,
+      "hidden_dim": 32,
+      "latent_views": 18,
+      "lr": 0.05,
+      "max_train_examples": 128,
+      "memory_compression": "slot_attention_compression",
+      "model_kind": "evidence_feature_latent",
+      "name": "stage8b3_j_explicit_view_objective_assignment_03",
+      "regularizers": [
+        "entropy_regularization_on_routing"
+      ],
+      "roles": 9,
+      "top_k_views": 4,
+      "training_loss": "multi_positive_cross_entropy",
+      "vector_dim": 128,
+      "view_sharing": "shared_encoder_role_avenue_embeddings",
+      "weight_decay": 0.0001
+    }
+  ]
+}

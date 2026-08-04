@@ -1,0 +1,108 @@
+{
+  "baselines": {
+    "candidate_only": 0.15000000000000002,
+    "clean_qkv_v1_reference": 0.5243,
+    "current_only_no_memory": 0.23333333333333334,
+    "e2_memory_slot_champion_reference": 1.0,
+    "e3_parent_reference": 0.684375,
+    "evidence_only": 0.15000000000000002,
+    "post_attention_memory_addition": 0.8083333333333333,
+    "query_only": 0.23333333333333334,
+    "random_candidate": 0.125,
+    "stage8_champion_reference": 0.82
+  },
+  "c128_reached": true,
+  "evaluated_count": 16,
+  "promoted_to_round3": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "036872b917847147",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8055555555555556,
+      "selection_score": 0.7417777777777776,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_v_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "69e276df98ce9305",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8055555555555556,
+      "selection_score": 0.7417777777777776,
+      "variant": "sc_wda_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_separate_gates_04",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "5d66b6bfa9abe5ae",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8055555555555556,
+      "selection_score": 0.7377777777777776,
+      "variant": "separate_gates"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_sc_separate_gates_04",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "e06e339d0f81b544",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8055555555555556,
+      "selection_score": 0.7377777777777776,
+      "variant": "sc_separate_gates"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_gated_01",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "4c93ac8d1f7ba6e8",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8027777777777777,
+      "selection_score": 0.736388888888889,
+      "variant": "gated"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "2de0f84793fe7581",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8027777777777777,
+      "selection_score": 0.736388888888889,
+      "variant": "wda_v_gate_calibration"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_a_current_override_gate_05",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "65ffc6acb17d0ee9",
+      "family": "WDA-V",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8027777777777777,
+      "selection_score": 0.736388888888889,
+      "variant": "current_override_gate"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_contrastive_cache_loss_05",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "dad7e88c0f870967",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.8027777777777777,
+      "selection_score": 0.736388888888889,
+      "variant": "contrastive_cache_loss"
+    }
+  ],
+  "round": 2,
+  "screen": "c128_push"
+}

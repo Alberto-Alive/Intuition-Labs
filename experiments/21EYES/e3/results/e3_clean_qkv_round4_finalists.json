@@ -1,0 +1,145 @@
+{
+  "evaluated_count": 8,
+  "finalists": [
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_09",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "321609740a730eb8",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.68125,
+      "selection_score": 0.52125,
+      "variant": "wda_k"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_08",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "3b384f535942f26f",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.684375,
+      "selection_score": 0.5146875,
+      "variant": "wda_q"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_10",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "18b0ba366079e67d",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.671875,
+      "selection_score": 0.5059375,
+      "variant": "wda_v"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_11",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "f12cb2219f7f1268",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.659375,
+      "selection_score": 0.5021875,
+      "variant": "wda_kv"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "3f92701058fd839b",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.6625,
+      "selection_score": 0.49875,
+      "variant": "wda_qkv"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_g_support_contradiction_10",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "dd6e561a53cc0296",
+      "family": "Cache-Shaped Support vs Contradiction Attention",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.6578125,
+      "selection_score": 0.49328124999999995,
+      "variant": "wda_qkv"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_j_hybrid_synthesis_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "bf6307fd4e4f2dc5",
+      "family": "Hybrid Clean-QKV Synthesis",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.6296875,
+      "selection_score": 0.47984374999999996,
+      "variant": "full_qkv_plus_wda"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_f_t_realized_activation_attention_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": false,
+      "config_id": "75d9fb7779fb730e",
+      "family": "T-Realized Activation Attention",
+      "hard_disqualifiers": [
+        "cache shuffle does not degrade memory-dependent tasks"
+      ],
+      "held_out_template_dev_accuracy": 0.6640625,
+      "selection_score": 0.41210395444929593,
+      "variant": "t_realized_support_stream"
+    }
+  ],
+  "n_schedule": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "round": 4,
+  "screen": "final_development_screen_no_final_templates",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "top3": [
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_09",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "321609740a730eb8",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.68125,
+      "selection_score": 0.52125,
+      "variant": "wda_k"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_08",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "3b384f535942f26f",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.684375,
+      "selection_score": 0.5146875,
+      "variant": "wda_q"
+    },
+    {
+      "architecture_name": "e3_clean_qkv_e_wda_realized_weights_10",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "18b0ba366079e67d",
+      "family": "WDA-Realized Attention Weights",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.671875,
+      "selection_score": 0.5059375,
+      "variant": "wda_v"
+    }
+  ]
+}

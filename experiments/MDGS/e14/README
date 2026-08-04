@@ -1,0 +1,280 @@
+# DIGIT Extrapolation E14
+
+`e14` is the frozen post-hoc test of backward-looking activation familiarity.
+
+The original online EMA-bank design is rejected. This experiment does not
+implement the original spec.
+
+## Goal
+
+Answer one question only:
+
+Does querying a frozen store of historical activation patterns with current
+activations produce a certainty signal that tracks whether a combination was
+encountered during training, better than output confidence and better than
+marginal part frequency alone.
+
+This experiment does not test:
+
+- gradient modulation
+- certainty-fed forward computation
+- continual learning
+- online memory updates
+- live intrinsic certainty accumulation during training
+- cross-layer certainty propagation
+- broader architectural claims
+
+## Interpretation Boundary
+
+`e14` is a signal-validation experiment, not a full architectural validation.
+
+A positive result here would validate that querying historical activations from
+a frozen model can expose a meaningful seen/unseen certainty signal. It would
+not by itself validate the intended intrinsic architecture in which certainty is
+accumulated live during training as part of the model's internal operation.
+
+The frozen bank in `e14` is therefore a proxy for the intended mechanism. If
+`e14` passes, the next experiment tests a live intrinsic implementation. If
+`e14` fails, the architectural idea should not advance in its current form.
+
+## Accepted Critiques
+
+The following critiques of the original design are accepted and frozen into the
+revised spec:
+
+- the EMA bank collapses toward a centroid and does not store diverse patterns
+- online banks are contaminated by representation drift during training
+- max softmax weight is the wrong familiarity statistic
+- logit-space propagation is an EMA, not evidence accumulation
+- logit transforms imply calibration semantics the score does not have
+- early-training bank initialization is degenerate
+- a separate "backward attention model" is unnecessary if certainty is read-only
+- significance alone is too weak; effect size and seed stability are required
+
+## Frozen Experiment Spec
+
+### Model
+
+Train one model only: a 2-layer MLP for a compositional classification task.
+
+Proposed architecture for implementation after approval:
+
+- input: concatenated learned embeddings for two categorical parts
+- hidden layer 1: linear -> ReLU
+- hidden layer 2: linear -> ReLU
+- output head: linear logits over task classes
+
+The hidden activations after the two ReLU layers are the only activations used
+for certainty analysis.
+
+The concatenated frozen input embedding vector is also logged and used for a
+control predictor based on nearest-neighbour distance in input embedding space.
+
+Certainty is strictly post-hoc and read-only. It does not enter the forward
+prediction path and does not affect optimization.
+
+### Dataset
+
+Use a synthetic two-part compositional dataset with these constraints:
+
+- every individual part appears many times in training
+- a subset of part combinations is withheld entirely from training
+- seen/unseen combination status is tracked explicitly
+- seen/unseen status is not itself the prediction target
+- the label requires conjunction-level information, not single-part marginals
+
+Frozen dataset proposal for implementation after approval:
+
+- parts:
+  `part_a` has 8 values and `part_b` has 8 values, for 64 total combinations
+- holdout:
+  withhold 16 combinations from training, chosen so every value of `part_a` and
+  every value of `part_b` still appears frequently in the seen training set
+- target:
+  assign each of the 64 combinations to 1 of 4 output classes using a fixed,
+  balanced lookup table shared across seeds
+- train/test split:
+  training contains only seen combinations; test contains both seen and unseen
+  combinations with labels and seen/unseen flags
+
+This target is intentionally not combination identity. Multiple combinations map
+to the same class, but the class still depends on the conjunction.
+
+### Memory Bank Construction
+
+The memory bank is built only after model training is complete.
+
+For each hidden layer `l`, freeze the trained model and run the full training
+set through it once. Store one activation vector per training example:
+
+`B_l in R^(N_l x d_l)`
+
+Where:
+
+- `N_l` is the number of stored training examples for layer `l`
+- `d_l` is the hidden width of layer `l`
+
+Rules:
+
+- no online updates
+- no EMA
+- no gradients
+- no optimizer interaction
+- no mixed-time activations from different model states
+
+If the training set is larger than 4096 examples, uniformly subsample 4096 bank
+entries once per seed after training and hold that bank fixed for all test-time
+analysis in that seed.
+
+### Certainty Score
+
+For each test example and each hidden layer:
+
+1. extract the frozen hidden activation `h_l`
+2. L2-normalize `h_l` and every bank row in `B_l` with epsilon `1e-8`
+3. compute raw cosine similarity to every valid bank entry
+4. define per-layer certainty as the maximum cosine similarity
+
+`certainty_l(x) = max_i cos(h_l(x), B_l[i])`
+
+Rules:
+
+- no softmax over similarities
+- no division by `sqrt(d)`
+- no propagation across layers
+- no aggregation inside the model
+
+The two layer certainties are logged independently and analyzed as separate
+predictors.
+
+### Input-Space Control
+
+To distinguish hidden-state familiarity from simple input-level similarity,
+compute one additional control predictor for each test example:
+
+`input_nn_distance(x) = min_j ||e_in(x) - E_train[j]||_2`
+
+Where:
+
+- `e_in(x)` is the frozen concatenated input embedding vector for test example
+  `x`
+- `E_train` is the set of frozen concatenated input embedding vectors for the
+  training set under the same trained model
+
+This predictor is intended to answer a stricter question: does layer certainty
+still predict seen/unseen combination status after controlling for how close the
+test example already is to the training set in input embedding space.
+
+### Logging
+
+For every test example, log:
+
+- seed
+- `part_a`
+- `part_b`
+- target label
+- seen/unseen combination label
+- correctness
+- predicted class
+- output confidence: max softmax probability
+- input-space nearest-neighbour distance
+- layer 1 certainty
+- layer 2 certainty
+- marginal frequency of `part_a` in the training set
+- marginal frequency of `part_b` in the training set
+
+### Primary Analysis
+
+Run the experiment across 5 random seeds.
+
+For each seed, fit a logistic regression predicting the binary seen/unseen label
+from:
+
+- output confidence
+- input-space nearest-neighbour distance
+- layer 1 certainty
+- layer 2 certainty
+- `part_a` training frequency
+- `part_b` training frequency
+
+Implementation note for later code:
+
+- standardize continuous predictors within each seed before fitting so
+  coefficients are comparable across seeds
+
+Report per seed:
+
+- logistic regression coefficients
+- standard errors
+- p-values
+- Cohen's `d` for seen vs unseen distributions of output confidence
+- Cohen's `d` for seen vs unseen distributions of input-space nearest-neighbour
+  distance
+- Cohen's `d` for seen vs unseen distributions of layer 1 certainty
+- Cohen's `d` for seen vs unseen distributions of layer 2 certainty
+
+Aggregate across seeds:
+
+- mean and standard deviation of each coefficient
+- mean and standard deviation of each Cohen's `d`
+- sign consistency of each certainty coefficient across seeds
+
+### Pass / Fail Criteria
+
+Primary pass condition:
+
+- at least one layer certainty predictor retains a meaningful association with
+  seen/unseen status after controlling for output confidence, input-space
+  nearest-neighbour distance, and marginal part frequencies
+- the corresponding certainty effect shows `Cohen's d >= 0.3`
+- the effect is stable across seeds
+
+Proposed operationalization of "stable across seeds" for approval:
+
+- the certainty coefficient keeps the same sign in at least 4 of 5 seeds
+- the mean `Cohen's d` across seeds is at least `0.3`
+
+Primary fail condition:
+
+- both layer certainties are fully explained by output confidence or marginal
+  part frequencies or input-space nearest-neighbour distance
+- or the best certainty effect has `Cohen's d < 0.3`
+- or the certainty effect is unstable across seeds
+
+The experiment must end with an explicit `PASS` or `FAIL` statement on this
+condition. No additional experiments should run before that statement is made.
+
+## Preregistered Next Experiment
+
+Cross-layer propagation is explicitly out of scope for `e14`.
+
+If and only if `e14` produces a clear pass/fail result, the next experiment may
+test whether propagated certainty across layers adds information beyond treating
+layer certainties as separate predictors. That propagation experiment must be
+specified and evaluated separately after `e14` concludes.
+
+## Non-Negotiable Constraints
+
+- do not implement the original EMA-bank design
+- do not update the bank during training or inference
+- do not feed certainty back into the forward pass
+- do not use certainty to modulate gradients
+- do not add layer-propagation heuristics before the first report
+- do not tune bank construction or certainty metrics before the first pass/fail
+  report
+
+## Required Deliverables After Approval
+
+- one runnable 2-layer MLP experiment on the frozen compositional task
+- post-training bank construction from frozen activations
+- certainty computation for each hidden layer
+- logging for all per-example quantities listed above
+- tests confirming the bank is detached from optimization and certainty is
+  computed read-only
+- five-seed logistic regression analysis with coefficients, significance, and
+  effect sizes
+- one explicit `PASS` or `FAIL` conclusion on the primary condition
+
+## Approval Gate
+
+No implementation begins until this corrected spec is approved.

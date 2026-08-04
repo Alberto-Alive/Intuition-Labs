@@ -1,0 +1,123 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# PyTorch / ML artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Data (large files)
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+data/
+data_cache/
+.hf_cache/
+experiments/*/data_cache/
+
+# Experiment outputs (except JSON results)
+outputs/
+outputs_*/
+!outputs*/**/*.json
+!outputs*/**/tables/**
+!outputs*/**/figures/**
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.codex
+.claude/
+# ── DIGIT Validation ──────────────────────────────────────────────────────────
+
+# Run logs
+experiments/DIGIT/Validation/logs-terminal
+
+# Per-run artifacts (large / machine-generated — keep top-level summaries)
+experiments/DIGIT/Validation/results/**/config.json
+experiments/DIGIT/Validation/results/**/metrics.json
+experiments/DIGIT/Validation/results/**/summary.md
+experiments/DIGIT/Validation/results/**/predictions.parquet
+experiments/DIGIT/Validation/results/**/predictions.csv
+experiments/DIGIT/Validation/results/**/predictions.json
+experiments/DIGIT/Validation/results/**/events.jsonl
+experiments/DIGIT/Validation/results/**/stdout.log
+
+# Trained model checkpoints (binaries; *.pt already ignored globally)
+experiments/DIGIT/checkpoints/
+experiments/DIGIT/Validation/checkpoints/
+
+# Downloaded / derived dataset files (large; small derived tables are kept)
+experiments/DIGIT/data_cache/**/*.vcf.gz
+experiments/DIGIT/data_cache/**/*.npy
+experiments/DIGIT/data_cache/**/tcga_brca_cases.json
+experiments/DIGIT/data_cache/**/geno_n*.npy
+experiments/DIGIT/Validation/data_cache/
+
+# PoC experiment outputs (already covered by outputs/ but be explicit)
+experiments/DIGIT/PoC/outputs/
+experiments/DIGIT/PoC/data_cache/
+
+# ── AOB (Army of bots) ────────────────────────────────────────────────────────
+# Keep source/docs; ignore generated run artifacts and local environment files.
+experiments/AOB/**/__pycache__/
+experiments/AOB/**/.pytest_cache/
+experiments/AOB/**/.mypy_cache/
+experiments/AOB/**/.ruff_cache/
+experiments/AOB/**/.venv/
+experiments/AOB/**/.venv_*/
+experiments/AOB/**/checkpoints/
+experiments/AOB/**/external/
+experiments/AOB/**/results/**/*.log
+experiments/AOB/**/results/**/*.csv
+experiments/AOB/**/results/**/*.jsonl
+experiments/AOB/**/results/**/*.tmp
+experiments/AOB/**/results/tmp_*
+experiments/AOB/**/reports/TMP_*

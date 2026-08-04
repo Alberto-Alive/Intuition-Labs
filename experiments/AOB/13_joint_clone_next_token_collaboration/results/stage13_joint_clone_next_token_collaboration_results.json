@@ -1,0 +1,608 @@
+{
+  "config": {
+    "corpus": {
+      "n_train": 512,
+      "n_dev": 128,
+      "n_test": 128,
+      "num_candidates": 8,
+      "n_views": 4,
+      "max_files": 80,
+      "snippet_radius": 3,
+      "max_length": 128,
+      "vocab_size": 4096
+    },
+    "model": {
+      "num_clones": 4,
+      "hidden_size": 64,
+      "num_layers": 3,
+      "num_heads": 2,
+      "ff_dim": 128,
+      "dropout": 0.1,
+      "identity_init_std": 0.02
+    },
+    "training": {
+      "epochs": 8,
+      "batch_size": 16,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 0,
+      "device": "cuda"
+    }
+  },
+  "vocab_size": 4096,
+  "sequence_length": 128,
+  "dataset_sizes": {
+    "train_sequences": 512,
+    "dev_sequences": 128,
+    "test_sequences": 128
+  },
+  "attention_bias_norms": [
+    {
+      "layer": 0,
+      "per_clone_l2_norm": [
+        7.442518711090088,
+        7.4098052978515625,
+        7.439427852630615,
+        7.433531284332275
+      ],
+      "per_clone_mean_abs": [
+        0.029112525284290314,
+        0.028961118310689926,
+        0.029053300619125366,
+        0.028968028724193573
+      ],
+      "layer_l2_norm": 14.862663269042969,
+      "layer_mean_abs": 0.02902374416589737
+    },
+    {
+      "layer": 1,
+      "per_clone_l2_norm": [
+        8.695415496826172,
+        8.666064262390137,
+        8.640872955322266,
+        8.66883659362793
+      ],
+      "per_clone_mean_abs": [
+        0.03332002833485603,
+        0.03320974484086037,
+        0.0330934152007103,
+        0.03331909328699112
+      ],
+      "layer_l2_norm": 17.33563804626465,
+      "layer_mean_abs": 0.0332355722784996
+    },
+    {
+      "layer": 2,
+      "per_clone_l2_norm": [
+        7.998523235321045,
+        7.989220142364502,
+        8.0076265335083,
+        8.025177955627441
+      ],
+      "per_clone_mean_abs": [
+        0.030759762972593307,
+        0.030821040272712708,
+        0.030833376571536064,
+        0.03090292029082775
+      ],
+      "layer_l2_norm": 16.010295867919922,
+      "layer_mean_abs": 0.030829276889562607
+    }
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_perplexity": 341.89609811313414,
+      "dev_joint_perplexity": 32.99414076114527,
+      "dev_clone_perplexity": [
+        32.99475434731097,
+        33.001317679738364,
+        32.990503727448555,
+        32.990165510574286
+      ],
+      "dev_clone_perplexity_spread": 0.011152169164077463,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999848442773025,
+      "dev_attention_entropy_per_clone": [
+        2.2791157207423263,
+        2.2789683038422788,
+        2.2791765028369557,
+        2.2791479228559526
+      ],
+      "joint_weights": [
+        0.24988138675689697,
+        0.25148794054985046,
+        0.25129374861717224,
+        0.24733689427375793
+      ]
+    },
+    {
+      "epoch": 2,
+      "train_perplexity": 11.255087863072688,
+      "dev_joint_perplexity": 3.6420797746720224,
+      "dev_clone_perplexity": [
+        3.6417157415371295,
+        3.6424147520319963,
+        3.6420668581450895,
+        3.642183271354874
+      ],
+      "dev_clone_perplexity_spread": 0.0006990104948667586,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999785708884398,
+      "dev_attention_entropy_per_clone": [
+        1.7528524265213736,
+        1.7530393480347748,
+        1.7526077354035536,
+        1.7525980475401792
+      ],
+      "joint_weights": [
+        0.2522716522216797,
+        0.25020530819892883,
+        0.248761385679245,
+        0.24876166880130768
+      ]
+    },
+    {
+      "epoch": 3,
+      "train_perplexity": 2.7229977435456836,
+      "dev_joint_perplexity": 1.6311400511374816,
+      "dev_clone_perplexity": [
+        1.6309368909325679,
+        1.6312095978215952,
+        1.6311351413569428,
+        1.631298958573384
+      ],
+      "dev_clone_perplexity_spread": 0.0003620676408160328,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999725768963496,
+      "dev_attention_entropy_per_clone": [
+        1.4918438203093,
+        1.4920347466514414,
+        1.4916661614396283,
+        1.4916774304603053
+      ],
+      "joint_weights": [
+        0.25179460644721985,
+        0.2495783567428589,
+        0.2483745515346527,
+        0.25025248527526855
+      ]
+    },
+    {
+      "epoch": 4,
+      "train_perplexity": 1.6277255577230858,
+      "dev_joint_perplexity": 1.3073072474123473,
+      "dev_clone_perplexity": [
+        1.3072375045848863,
+        1.30737280058845,
+        1.307397999987075,
+        1.3072315098265843
+      ],
+      "dev_clone_perplexity_spread": 0.00016649016049075094,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999732275803883,
+      "dev_attention_entropy_per_clone": [
+        1.3930965906373052,
+        1.3933536380408391,
+        1.392983452814362,
+        1.3935450406393606
+      ],
+      "joint_weights": [
+        0.25279080867767334,
+        0.24864472448825836,
+        0.24821512401103973,
+        0.25034940242767334
+      ]
+    },
+    {
+      "epoch": 5,
+      "train_perplexity": 1.38903197190244,
+      "dev_joint_perplexity": 1.2184546613465015,
+      "dev_clone_perplexity": [
+        1.218448025204278,
+        1.2184609434733995,
+        1.2185437171513473,
+        1.218373672924554
+      ],
+      "dev_clone_perplexity_spread": 0.0001700442267933422,
+      "dev_mean_off_diagonal_clone_cosine": 0.999974270661672,
+      "dev_attention_entropy_per_clone": [
+        1.3674996564601338,
+        1.3676300735611306,
+        1.3673530396954732,
+        1.3678005238524669
+      ],
+      "joint_weights": [
+        0.2524985074996948,
+        0.24857519567012787,
+        0.24779252707958221,
+        0.2511337697505951
+      ]
+    },
+    {
+      "epoch": 6,
+      "train_perplexity": 1.3073936379091373,
+      "dev_joint_perplexity": 1.1820541023905649,
+      "dev_clone_perplexity": [
+        1.182036380659072,
+        1.1820578101389003,
+        1.1821440471912656,
+        1.1819843795121692
+      ],
+      "dev_clone_perplexity_spread": 0.00015966767909647572,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999739850560824,
+      "dev_attention_entropy_per_clone": [
+        1.3198962414660784,
+        1.3201117959445856,
+        1.319798577791756,
+        1.3202344937137451
+      ],
+      "joint_weights": [
+        0.25159063935279846,
+        0.24939413368701935,
+        0.24794723093509674,
+        0.25106796622276306
+      ]
+    },
+    {
+      "epoch": 7,
+      "train_perplexity": 1.262440567676698,
+      "dev_joint_perplexity": 1.1570947978361876,
+      "dev_clone_perplexity": [
+        1.157061357351614,
+        1.1570915951286995,
+        1.1572091463362701,
+        1.1570236592996215
+      ],
+      "dev_clone_perplexity_spread": 0.00018548703664866828,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999744047721226,
+      "dev_attention_entropy_per_clone": [
+        1.2925726752154585,
+        1.2928026204333343,
+        1.292507613897945,
+        1.2930123750425513
+      ],
+      "joint_weights": [
+        0.2535911798477173,
+        0.24872882664203644,
+        0.24727225303649902,
+        0.25040772557258606
+      ]
+    },
+    {
+      "epoch": 8,
+      "train_perplexity": 1.235235274121888,
+      "dev_joint_perplexity": 1.140576241507109,
+      "dev_clone_perplexity": [
+        1.140535898178238,
+        1.1405853471024674,
+        1.1406723404328385,
+        1.1405160520785123
+      ],
+      "dev_clone_perplexity_spread": 0.00015628835432623944,
+      "dev_mean_off_diagonal_clone_cosine": 0.9999754540622234,
+      "dev_attention_entropy_per_clone": [
+        1.2491352078440934,
+        1.2494710245651937,
+        1.2492035050619699,
+        1.249568308913317
+      ],
+      "joint_weights": [
+        0.2541680932044983,
+        0.24766206741333008,
+        0.24910977482795715,
+        0.24906012415885925
+      ]
+    }
+  ],
+  "final_dev": {
+    "joint_perplexity": 1.140576241507109,
+    "clone_perplexity": [
+      1.140535898178238,
+      1.1405853471024674,
+      1.1406723404328385,
+      1.1405160520785123
+    ],
+    "mean_clone_perplexity": 1.1405774094480141,
+    "clone_perplexity_spread": 0.00015628835432623944,
+    "joint_beats_best_clone": false,
+    "mean_off_diagonal_clone_cosine": 0.9999754540622234,
+    "clone_cosine_matrix": [
+      [
+        0.9999999925494194,
+        0.9999690651893616,
+        0.9999765604734421,
+        0.9999733418226242
+      ],
+      [
+        0.9999690651893616,
+        1.0,
+        0.999978743493557,
+        0.999976746737957
+      ],
+      [
+        0.9999765604734421,
+        0.999978743493557,
+        1.0,
+        0.9999782666563988
+      ],
+      [
+        0.9999733418226242,
+        0.999976746737957,
+        0.9999782666563988,
+        1.0
+      ]
+    ],
+    "attention_entropy_per_clone": [
+      1.2491352078440934,
+      1.2494710245651937,
+      1.2492035050619699,
+      1.249568308913317
+    ],
+    "pairwise_attention_kl": {
+      "per_layer_mean": [
+        0.02055701050083399,
+        0.03324290541240519,
+        0.03386790668591385
+      ],
+      "overall_mean": 0.029222607533051007,
+      "clone_pair_matrix": [
+        [
+          0.0,
+          0.02964257061869573,
+          0.02888457122820016,
+          0.029318463756369196
+        ],
+        [
+          0.02964257061869573,
+          0.0,
+          0.0288165660382123,
+          0.02999334270488038
+        ],
+        [
+          0.02888457122820016,
+          0.0288165660382123,
+          0.0,
+          0.028680130851948288
+        ],
+        [
+          0.029318463756369196,
+          0.02999334270488038,
+          0.028680130851948288,
+          0.0
+        ]
+      ]
+    },
+    "bias_zero_pairwise_attention_kl": {
+      "per_layer_mean": [
+        0.0017059255520760813,
+        0.00089747741280502,
+        0.00021683085461177143
+      ],
+      "overall_mean": 0.0009400779398309575,
+      "clone_pair_matrix": [
+        [
+          0.0,
+          0.000664612698887632,
+          0.0011130206228939672,
+          0.0014900621348410425
+        ],
+        [
+          0.000664612698887632,
+          0.0,
+          0.0008515206674621542,
+          0.0010127790581248182
+        ],
+        [
+          0.0011130206228939672,
+          0.0008515206674621542,
+          0.0,
+          0.0005084724567761314
+        ],
+        [
+          0.0014900621348410425,
+          0.0010127790581248182,
+          0.0005084724567761314,
+          0.0
+        ]
+      ]
+    },
+    "bias_used_diagnostic": {
+      "joint_perplexity_without_bias": 1.140904350127986,
+      "joint_perplexity_delta_without_bias": 0.0003281086208770656,
+      "mean_attention_shift_kl_without_bias": {
+        "per_layer_mean": [
+          0.004240929156700242,
+          0.007795365729461254,
+          0.006467851943325026
+        ],
+        "overall_mean": 0.006168048943162173
+      }
+    },
+    "joint_weights": [
+      0.2541680932044983,
+      0.24766206741333008,
+      0.24910977482795715,
+      0.24906012415885925
+    ],
+    "token_count": 16384
+  },
+  "final_test": {
+    "joint_perplexity": 1.1390531935227415,
+    "clone_perplexity": [
+      1.1390542766265541,
+      1.1390591691710081,
+      1.1391464439408332,
+      1.1389568024687815
+    ],
+    "mean_clone_perplexity": 1.1390541730517942,
+    "clone_perplexity_spread": 0.00018964147205169368,
+    "joint_beats_best_clone": false,
+    "mean_off_diagonal_clone_cosine": 0.999975444128116,
+    "clone_cosine_matrix": [
+      [
+        0.9999999925494194,
+        0.9999690651893616,
+        0.9999765753746033,
+        0.9999733343720436
+      ],
+      [
+        0.9999690651893616,
+        1.0,
+        0.9999787211418152,
+        0.9999767243862152
+      ],
+      [
+        0.9999765753746033,
+        0.9999787211418152,
+        1.0,
+        0.999978244304657
+      ],
+      [
+        0.9999733343720436,
+        0.9999767243862152,
+        0.999978244304657,
+        1.0
+      ]
+    ],
+    "attention_entropy_per_clone": [
+      1.25115920115622,
+      1.2514631425651952,
+      1.2511914132527544,
+      1.251513381052927
+    ],
+    "pairwise_attention_kl": {
+      "per_layer_mean": [
+        0.02062317528873996,
+        0.033283916577770745,
+        0.03388912841240447
+      ],
+      "overall_mean": 0.02926540675963839,
+      "clone_pair_matrix": [
+        [
+          0.0,
+          0.029772492499662084,
+          0.028981184705475605,
+          0.029452217805623432
+        ],
+        [
+          0.029772492499662084,
+          0.0,
+          0.02881020150410297,
+          0.029951204865945793
+        ],
+        [
+          0.028981184705475605,
+          0.02881020150410297,
+          0.0,
+          0.028625139177020465
+        ],
+        [
+          0.029452217805623432,
+          0.029951204865945793,
+          0.028625139177020465,
+          0.0
+        ]
+      ]
+    },
+    "bias_zero_pairwise_attention_kl": {
+      "per_layer_mean": [
+        0.0017135704887943687,
+        0.0009008415479148102,
+        0.00021682103924103532
+      ],
+      "overall_mean": 0.0009437443586500713,
+      "clone_pair_matrix": [
+        [
+          0.0,
+          0.0006680532485242486,
+          0.0011191072655866233,
+          0.0014963238435969927
+        ],
+        [
+          0.0006680532485242486,
+          0.0,
+          0.000854170285307825,
+          0.0010163191207505616
+        ],
+        [
+          0.0011191072655866233,
+          0.000854170285307825,
+          0.0,
+          0.0005084923881341769
+        ],
+        [
+          0.0014963238435969927,
+          0.0010163191207505616,
+          0.0005084923881341769,
+          0.0
+        ]
+      ]
+    },
+    "bias_used_diagnostic": {
+      "joint_perplexity_without_bias": 1.1393260685163096,
+      "joint_perplexity_delta_without_bias": 0.0002728749935680952,
+      "mean_attention_shift_kl_without_bias": {
+        "per_layer_mean": [
+          0.004224314164659317,
+          0.007866833850301583,
+          0.006449883960067571
+        ],
+        "overall_mean": 0.006180343991676157
+      }
+    },
+    "joint_weights": [
+      0.2541680932044983,
+      0.24766206741333008,
+      0.24910977482795715,
+      0.24906012415885925
+    ],
+    "token_count": 16384
+  },
+  "corpus_summary": {
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "generator_version": "real_import_restore_candidate_balanced_34b_stage13_joint_clone_lm",
+    "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+    "candidate_representation": "balanced_categories_v3",
+    "hardening": {
+      "oracle_metadata_separated_from_model_record": true,
+      "candidate_attributes_are_model_safe_opaque": false,
+      "candidate_query_structured_features_are_non_identifying": true,
+      "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+      "role_pair_ids_removed_from_model_inputs": true,
+      "family_ids_removed_from_model_inputs": true,
+      "balanced_non_identifying_candidate_categories": true
+    },
+    "program_analysis_artifacts": [
+      "redacted_ast_usage_shape",
+      "redacted_module_resolution_shape",
+      "redacted_provider_shape",
+      "redacted_import_slot_shape"
+    ],
+    "split_sizes": {
+      "train": 512,
+      "dev": 128,
+      "test": 128
+    },
+    "num_candidates": 8,
+    "num_views": 4,
+    "source_files_used": 3,
+    "source_file_examples": [
+      "virtual_consumer_0.py",
+      "virtual_consumer_1.py",
+      "virtual_consumer_2.py"
+    ],
+    "constructed_fallback": true,
+    "publishable_proof_dataset": false,
+    "open_ended_code_repair_claim_allowed": false,
+    "real_correct_patch_source": "existing repository import statement restored after deletion",
+    "minimum_single_view_candidate_ambiguity": 1,
+    "problem_families_by_split": {
+      "train": [
+        "train_real_import_restore_6"
+      ],
+      "dev": [
+        "dev_real_import_restore_4"
+      ],
+      "test": [
+        "test_real_import_restore_0"
+      ]
+    }
+  }
+}

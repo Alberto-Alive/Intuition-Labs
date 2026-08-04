@@ -1,0 +1,17 @@
+decision: E5_1_STATE_STABILITY_WEAK_SIGNAL
+best_variant: R2_slot_dropout_retention
+accuracy_only_capacity_C: 128
+control_valid_capacity_C: 0
+mean_accuracy_64: 0.925000
+architecture: integrated_rolling_activation_state_clean_qkv
+num_state_slots: 32
+state_dim: 128
+d_model: 128
+n_layers: 1
+n_heads: 4
+train_lengths: [8, 16, 32]
+eval_lengths: [32, 64, 128, 256, 512]
+seeds: [0, 1, 2, 3, 4]
+student_old_token_kv_cache: false
+student_previous_token_concatenation: false
+student_growing_activation_cache: false

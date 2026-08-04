@@ -1,0 +1,11 @@
+E19 asked one question only: does training on combinations at different frequencies teach the model to organise certainty according to familiarity, such that certainty correctly orders combinations by how often they were seen in training.
+
+The method used the same 2-layer MLP, live bank, and forward gate as the earlier experiments, but replaced the binary seen/unseen dataset with four fixed familiarity levels on the 8x8 combination grid: core, familiar, rare, and novel. Core combinations appeared 200 times in training, familiar combinations 20 times, rare combinations 2 times, and novel combinations never appeared, while the test set still contained all 64 combinations with independent Gaussian jitter. After training across 5 seeds, certainty was measured at test time with frozen weights and a frozen bank, and ordered-trend analyses were run separately for layer 1 and layer 2.
+
+The primary result was a clear pass. Jonckheere-Terpstra was significant in 5 of 5 seeds for both layers. Strict mean ordering held in 5 of 5 seeds for both layers. Mean Spearman rho was -0.851 for layer 1 and -0.887 for layer 2. The model organises certainty according to training frequency as a graded principle, not a binary classifier.
+
+The key numbers are straightforward. Core certainty was approximately 0.9998, familiar approximately 0.9997, rare approximately 0.9995, and novel approximately 0.855. The within-trained-level gradient was small but consistent. The gap between rare and novel was large and consistent.
+
+The interpretation boundary is explicit. E19 validates that training frequency alone teaches familiarity-based organisation. The bank and forward gate carry that organisation into inference. Weights are frozen at test time. The bank is frozen at test time. The next question is whether the bank can update during inference as new inputs are encountered, allowing the model to learn the familiarity structure of a new environment without retraining weights. That is e20.
+
+The preregistered next experiment is e20. E20 freezes weights after training but allows the bank to update during inference. Novel combinations are presented repeatedly. The question is whether certainty on novel combinations increases as they are encountered more, and whether that increase follows the same graded principle that training frequency produced.

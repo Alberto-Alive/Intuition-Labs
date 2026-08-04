@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "control_failure": 6,
+    "did_not_beat_frozen": 14,
+    "shortcut_baseline_explains_result": 15
+  },
+  "failed_overfit_gates": [],
+  "failure_reasons": {
+    "control_failure": "shortcut/mismatch/shuffle/invariance control failed",
+    "did_not_beat_frozen": "trainable shared model did not improve over exact frozen same architecture",
+    "failed_overfit": "variant did not satisfy micro-overfit gate",
+    "frozen_suspiciously_high": "frozen same-architecture comparator was high enough to quarantine the mechanism",
+    "shortcut_baseline_explains_result": "simple candidate/action/rollout heuristic matched or exceeded the model"
+  }
+}

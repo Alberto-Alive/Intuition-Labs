@@ -1,0 +1,591 @@
+# DIGIT Extrapolation E25
+
+`e25` is the familiarity density and Lottery Ticket Hypothesis correlation test.
+
+This experiment does not modify the e22 dual-parameter architecture. It uses the
+trained e22 model as a measurement substrate. The question is whether the
+familiarity signal produced by that architecture encodes structural information
+about which weights are important before full training is complete.
+
+## Goal
+
+Answer one question only:
+
+Does familiarity density during training correlate with weight importance as
+measured by the Lottery Ticket Hypothesis — and does early familiarity density
+predict which weights will survive LTH pruning before full training is complete.
+
+Two sub-claims are tested:
+
+Sub-claim 1 — after full training, familiarity exposure scores computed from
+the e22 per-layer certainty signal correlate with LTH pruning survival for the
+semantic weight matrices. ROC-AUC above 0.6 across seeds indicates meaningful
+correlation above chance.
+
+Sub-claim 2 — familiarity exposure scores computed at early training checkpoints
+— epoch 5, 10, 20 — predict final pruning survival. If ROC-AUC at early epochs
+approaches ROC-AUC at the final epoch, the familiarity signal identifies winning
+ticket candidates before training completes.
+
+This experiment does not test:
+
+- gradient modulation by familiarity
+- continual learning or inference-time adaptation
+- familiarity effects on task accuracy
+- prototype structure beyond what e22 established
+- causal claims — all results are correlational
+
+
+## Interpretation Boundary
+
+`e25` sits directly downstream of e24's preregistered next investigation.
+
+A positive result — sub-claim 1 passes and sub-claim 2 passes — would show
+that the familiarity signal, which is computed entirely from prototype cosine
+similarity and has no direct access to gradient information, encodes structural
+knowledge about which weights are important. This would be a novel finding: an
+experience-based signal predicting weight importance before the optimizer has
+fully converged.
+
+A positive early-prediction result — sub-claim 2 passes independently — would be
+the most important finding in the line: familiarity exposure at epoch 10 predicts
+final pruning survival better than weight magnitude at epoch 10. This would
+indicate familiarity density is a leading indicator of weight importance.
+
+A negative result on both sub-claims — familiarity exposure does not predict
+pruning survival above chance — confirms the familiarity signal is real and
+graded (established by e19 and e22) but does not encode weight-level structural
+information. The signal would remain a valid input-level signal but would not
+carry information about internal weight geometry.
+
+The baseline comparison — weight magnitude as an alternative predictor — is
+required in every report. If familiarity exposure is weaker than weight
+magnitude at all checkpoints, that null result must be stated explicitly.
+
+
+## Accepted Design Decisions
+
+The following design decisions are frozen into the experiment spec and may not
+be changed in implementation:
+
+- the e22 dual-parameter architecture is used without any modification
+- the e19 four-level frequency dataset is used without any modification
+- the five seeds from e22 are reused: 0, 1, 2, 3, 4
+- familiarity exposure scores are computed only on the semantic weight matrices
+  per layer — W_semantic_1 and W_semantic_2 — not on the attention parameter
+  matrices W_q, W_k_s, W_k_f, W_v
+- the LTH procedure uses one-shot magnitude pruning at 50% global sparsity
+  across all semantic weight matrices jointly, not per-layer
+- the retraining epoch budget after pruning is exactly the number of epochs the
+  dense model ran for that seed — matched per seed, not a fixed constant
+- the performance threshold for a valid winning ticket is 99% or above of the
+  dense model's final withheld accuracy for that seed
+- the familiarity exposure score is computed by accumulating over the full
+  training set, not over a subsample
+- checkpoint logging occurs at epoch 5, epoch 10, epoch 20, and the stopping
+  epoch — four checkpoints total
+- if the model stops before epoch 20, the missing checkpoints are omitted and
+  the analysis uses only checkpoints with data
+- the primary metric is ROC-AUC, not Spearman rank correlation
+
+
+## Frozen Experiment Spec
+
+### Model
+
+Use the e22 dual-parameter architecture exactly as specified in the e22 README.
+
+No architectural changes are permitted. All frozen constants, prototype update
+rules, certainty score definitions, occupancy gate formulas, and attention
+computations carry over without modification.
+
+The model has two hidden layers. Each layer contains:
+
+- semantic parameters: W_semantic, W_q, W_k_s, W_k_f, W_v, plus their biases
+- familiarity buffers: K_p = 32 prototype vectors and one validity mask
+
+The semantic weight matrices under analysis are:
+
+- W_semantic_1 in R^(32 x 32): the semantic weight matrix for layer 1
+- W_semantic_2 in R^(32 x 32): the semantic weight matrix for layer 2
+
+These are the only weight matrices that enter the LTH pruning procedure and
+the familiarity exposure computation. Bias terms are excluded from pruning and
+exposure analysis.
+
+
+### Dataset
+
+Use the e19 four-level frequency dataset exactly.
+
+Frozen dataset requirements carried over from e22:
+
+- same 8 x 8 combination grid
+- same fixed level assignment
+- same fixed class lookup table
+- same training frequencies: core 200, familiar 20, rare 2, novel 0
+- same test set containing all 64 combinations
+- same independent Gaussian jitter construction used in e19
+- same level names and order: core, familiar, rare, novel
+- same input jitter standard deviation: 0.05
+
+The training set with jitter is used to accumulate familiarity exposure scores
+during training. The test set is used only for accuracy evaluation.
+
+
+### Training Setup
+
+Use the same training setup as e22 for all five seeds:
+
+- seeds: 0, 1, 2, 3, 4
+- optimizer: Adam
+- learning rate: 1e-3
+- batch size: 64
+- max epochs: 200
+- early stopping improvement tolerance: 1e-4
+- early stopping patience: 20 epochs
+- embedding dimension: 16
+- hidden dimension: 32
+- input jitter standard deviation: 0.05
+
+Training rules carry over from e22:
+
+- the optimizer updates semantic parameters only
+- familiarity prototypes are registered as buffers, not parameters
+- prototype updates use detached semantic activations only
+- prototype updates occur after the forward pass during training
+- prototype updates do not occur during evaluation
+- g_f is always applied during warmup and after warmup
+- repulsion threshold is always sqrt(2 / 32) = 0.25
+- repulsion magnitude is never tuned
+
+Before training begins, store the initialisation checkpoint:
+
+- save W_semantic_1 and W_semantic_2 at step 0 before any gradient update
+- this checkpoint is used for weight rewinding in the LTH procedure
+- the initialisation checkpoint must be stored with the name `init_weights.pt`
+  and must be verified against the rewound pruned network before retraining
+
+
+### Familiarity Exposure Score
+
+#### Definition
+
+For each weight w_jk in a semantic weight matrix, the Familiarity Exposure
+Score E_jk measures the familiarity-weighted fraction of the weight's active
+lifetime spent processing familiar inputs.
+
+For a weight w_jk connecting source neuron k to destination neuron j in layer l:
+
+    E_jk = [ sum over i=1..N of F_l(x_i) * |a_k(x_i)| * M_j(x_i) ]
+           / [ sum over i=1..N of |a_k(x_i)| * M_j(x_i) + epsilon ]
+
+Where:
+
+- N is the number of training examples in one pass over the full training set
+- F_l(x_i) is the layer-level familiarity score for input x_i at layer l,
+  computed as the nearest-prototype max-cosine certainty score defined in e22:
+  F_l(x_i) = max_j cos(normalize(h_semantic_l(x_i).detach()), normalize(p_l,j))
+  taken over valid prototypes only; if no valid prototype exists F_l(x_i) = 0
+- a_k(x_i) is the activation magnitude of source neuron k at layer l for
+  input x_i — this is the pre-weight activation, i.e. the output of the
+  previous layer feeding into w_jk
+- M_j(x_i) is the binary activity indicator for destination neuron j at layer l
+  for input x_i — it equals 1 when the post-ReLU output of neuron j is strictly
+  greater than zero for that input, and 0 otherwise
+- epsilon = 1e-8 for numerical stability
+
+#### Interpretation
+
+E_jk is bounded between 0 and 1 inclusive:
+
+- if the denominator is zero (neuron j never fired when k was active), E_jk = 0
+  by convention via the epsilon floor — in practice the epsilon floor will make
+  E_jk a small number, but it will effectively be zero
+- E_jk = 1 means every activation through this weight, on every training example
+  for which the weight was active, occurred in a maximally familiar context
+- E_jk = 0 means the weight was active only on completely unfamiliar inputs or
+  never active at all
+
+#### Computation Procedure
+
+Familiarity exposure scores are not gradients and are never backpropagated.
+They are computed as a running accumulation over the full training set.
+
+At each checkpoint epoch, do the following in a separate evaluation pass:
+
+1. freeze model weights and prototypes — no updates during this pass
+2. iterate over the full training set in the same order, no shuffling
+3. for each batch, compute h_semantic_l.detach() for both layers
+4. compute F_l(x_i) using the frozen certainty formula from e22
+5. extract |a_k(x_i)| — the pre-weight activation magnitudes for that layer
+   - for layer 1: a_k is the concatenated input x_0 in R^(B x 32)
+   - for layer 2: a_k is h_out_1 in R^(B x 32), the output of layer 1
+6. extract M_j(x_i) — the binary post-ReLU activity indicator for that layer
+   - M_j(x_i) = 1 if h_semantic_l[i, j] > 0, else 0
+7. accumulate numerator and denominator sums across all batches
+8. after the full pass, divide accumulated numerator by accumulated denominator
+   with epsilon to produce E_jk for every weight in the matrix
+
+The result is one E_jk matrix of shape (32 x 32) per layer per checkpoint per
+seed. This matrix has the same shape as W_semantic_l.
+
+#### Checkpoints
+
+Compute and log E_jk at four checkpoints:
+
+- epoch 5
+- epoch 10
+- epoch 20
+- final stopping epoch (the epoch at which early stopping triggers)
+
+If the model stops at or before epoch 5, only the final checkpoint exists.
+If the model stops between epoch 5 and epoch 10, only epoch 5 and the final
+checkpoint exist. Missing checkpoints are recorded as absent and excluded from
+analysis; they do not cause an error.
+
+Log the full E_jk matrix (32 x 32) for each layer at each checkpoint for each
+seed. Also log the full W_semantic_l matrix at each checkpoint for use in the
+baseline comparison.
+
+
+### LTH Procedure
+
+#### One-Shot Magnitude Pruning
+
+Use one-shot magnitude pruning at 50% global sparsity across both semantic
+weight matrices jointly.
+
+Exact procedure:
+
+1. take the trained dense model at the stopping epoch
+2. extract W_semantic_1 and W_semantic_2 as flat tensors
+3. concatenate them into a single flat vector of length 32*32 + 32*32 = 2048
+4. compute the absolute value of every element
+5. find the 50th percentile threshold — the value below which 50% of all
+   magnitudes fall — using the global distribution across both matrices
+6. create a binary mask: mask[i] = 1 if |w_i| > threshold, else 0
+7. apply the mask globally to both matrices — 1024 weights survive, 1024 are
+   pruned to zero
+
+Record for each seed:
+
+- the global magnitude threshold used
+- layer 1 sparsity: fraction of W_semantic_1 weights pruned
+- layer 2 sparsity: fraction of W_semantic_2 weights pruned
+- global sparsity: fraction of all semantic weights pruned (target: 50%)
+
+#### Weight Rewinding
+
+After pruning, rewind the surviving weights to their initialisation values:
+
+1. load the `init_weights.pt` checkpoint saved before training began
+2. for each surviving weight (mask = 1), copy the value from `init_weights.pt`
+3. for each pruned weight (mask = 0), set the value to zero and freeze it via
+   the mask — it must not receive gradient updates during retraining
+4. verify: for every surviving weight position, assert that the rewound value
+   exactly matches `init_weights.pt` at that position, within floating-point
+   precision (absolute tolerance 1e-7)
+
+#### Retraining
+
+Retrain the pruned-and-rewound network using the same training setup as the
+dense run:
+
+- same seed
+- same optimizer: Adam
+- same learning rate: 1e-3
+- same batch size: 64
+- same max epochs as the dense run for that seed
+- same early stopping: patience 20, tolerance 1e-4
+- pruned weights are held at zero throughout retraining — the mask is applied
+  after every gradient step to enforce this
+- prototype buffers are not rewound — they retain the values from the end of
+  the dense training run
+
+Record for each seed:
+
+- retraining stopping epoch
+- final training accuracy of the pruned network
+- final withheld accuracy of the pruned network
+- dense network final withheld accuracy (from the original training run)
+- pruned network withheld accuracy as a percentage of dense withheld accuracy
+- whether the pruned network reached >= 99% of dense withheld accuracy within
+  the epoch budget — this is the winning ticket confirmation boolean
+
+
+### Primary Analysis
+
+#### Sub-claim 1: Familiarity Exposure Predicts Pruning Survival
+
+For each seed and each layer separately:
+
+1. take the final-epoch E_jk matrix (32 x 32) — flatten to length 1024
+2. take the pruning survival mask for that layer — flatten to length 1024
+   - survival label: 1 if weight survived pruning, 0 if pruned
+3. compute ROC-AUC using E_jk values as the continuous predictor score and
+   the binary survival label as the ground truth
+4. the ROC-AUC measures how well familiarity exposure rank separates surviving
+   weights from pruned weights across all possible thresholds
+
+Report per seed per layer:
+
+- ROC-AUC at the final checkpoint
+- number of surviving weights in that layer
+- number of pruned weights in that layer
+
+Aggregate across seeds for each layer:
+
+- mean ROC-AUC
+- standard deviation of ROC-AUC
+- minimum ROC-AUC
+- maximum ROC-AUC
+
+#### Sub-claim 2: Early Familiarity Exposure Predicts Final Pruning Survival
+
+For each seed and each layer separately, compute ROC-AUC at each available
+checkpoint against the same final pruning survival labels:
+
+- ROC-AUC(epoch 5)
+- ROC-AUC(epoch 10)
+- ROC-AUC(epoch 20)
+- ROC-AUC(final epoch)
+
+Report the full checkpoint progression per seed per layer.
+
+Aggregate across seeds for each checkpoint for each layer:
+
+- mean ROC-AUC
+- standard deviation of ROC-AUC
+
+Report the decay from final-epoch ROC-AUC to each early checkpoint:
+
+- delta(epoch 10) = mean ROC-AUC(final) - mean ROC-AUC(epoch 10)
+
+This delta is the primary quantity for sub-claim 2.
+
+#### Baseline Comparison: Weight Magnitude as Predictor
+
+At each checkpoint, compute weight magnitude as an alternative predictor of
+final pruning survival:
+
+- magnitude predictor for w_jk at checkpoint t: |W_semantic_l[j,k]| at epoch t
+- compute ROC-AUC between these magnitudes and the final binary survival labels
+
+Report magnitude ROC-AUC at each checkpoint for each seed for each layer.
+Aggregate the same way as the familiarity exposure analysis.
+
+Report the comparison:
+
+- at each checkpoint, report familiarity exposure ROC-AUC vs magnitude ROC-AUC
+- if familiarity exposure ROC-AUC exceeds magnitude ROC-AUC at epoch 5 or
+  epoch 10, that is the primary finding of the experiment and must be stated
+  explicitly in the results summary
+
+Note: the final-epoch magnitude ROC-AUC will approach 1.0 by construction
+because LTH prunes exactly by magnitude. This is expected. The interesting
+comparison is at early checkpoints before training is complete.
+
+
+### Logging
+
+For each seed, log:
+
+- seed
+- dense model stopping epoch
+- dense model final training accuracy
+- dense model final withheld accuracy
+- dense model final withheld accuracy per level: core, familiar, rare, novel
+- dense model layer 1 occupancy at stopping epoch
+- dense model layer 2 occupancy at stopping epoch
+
+For each seed and each checkpoint epoch:
+
+- E_jk matrix for layer 1 (32 x 32) as a saved numpy array
+- E_jk matrix for layer 2 (32 x 32) as a saved numpy array
+- W_semantic_1 matrix (32 x 32) as a saved numpy array
+- W_semantic_2 matrix (32 x 32) as a saved numpy array
+- layer 1 ROC-AUC using E_jk as predictor vs final pruning survival
+- layer 2 ROC-AUC using E_jk as predictor vs final pruning survival
+- layer 1 ROC-AUC using |W_semantic_1| as predictor vs final pruning survival
+- layer 2 ROC-AUC using |W_semantic_2| as predictor vs final pruning survival
+
+For each seed, log the LTH results:
+
+- global magnitude pruning threshold
+- layer 1 sparsity achieved
+- layer 2 sparsity achieved
+- global sparsity achieved
+- pruned network retraining stopping epoch
+- pruned network final withheld accuracy
+- ratio of pruned to dense withheld accuracy
+- winning ticket boolean: 1 if ratio >= 0.99, else 0
+
+Log the binary pruning survival mask for each layer per seed as a saved numpy
+array. This is the ground truth label for all ROC-AUC computations.
+
+Log the initialisation checkpoint `init_weights.pt` per seed.
+
+
+### Pass / Fail Criteria
+
+#### Primary Pass Condition
+
+Both of the following must hold:
+
+Condition 1 (Sub-claim 1):
+Mean ROC-AUC at the final epoch is above 0.6 for at least one layer, aggregated
+across seeds. This indicates familiarity exposure meaningfully predicts pruning
+survival above chance.
+
+Condition 2 (Sub-claim 2):
+Mean ROC-AUC at epoch 10 is within 0.1 of mean ROC-AUC at the final epoch for
+the same layer that satisfies Condition 1. Formally:
+  mean ROC-AUC(final) - mean ROC-AUC(epoch 10) <= 0.1
+This indicates the early familiarity signal predicts final pruning survival
+within 0.1 ROC-AUC of the fully-trained signal.
+
+If both conditions hold, report: PASS.
+
+#### Primary Fail Condition
+
+Either of the following is sufficient to fail:
+
+Fail Case A:
+Mean ROC-AUC at the final epoch is below 0.6 for both layers across seeds.
+Familiarity exposure does not predict pruning survival above chance.
+
+Fail Case B:
+Mean ROC-AUC at epoch 10 is more than 0.1 below mean ROC-AUC at the final
+epoch for both layers. The early familiarity signal does not predict final
+pruning survival.
+
+If either fail case holds, report: FAIL, and specify which case triggered.
+
+#### LTH Prerequisite
+
+The primary analysis is only meaningful if the LTH procedure found valid winning
+tickets. Before reporting PASS or FAIL on the primary criteria, report the count
+of seeds for which the pruned network reached >= 99% of dense withheld accuracy.
+If zero seeds found a valid winning ticket, the primary ROC-AUC analysis is not
+interpretable and the experiment reports: INDETERMINATE — LTH procedure did not
+find winning tickets at 50% sparsity on this architecture and dataset.
+
+The experiment must end with exactly one of these three outcomes:
+PASS, FAIL, or INDETERMINATE.
+
+#### Additional Findings
+
+If the experiment passes, additionally report whether familiarity exposure
+ROC-AUC at epoch 10 exceeds weight magnitude ROC-AUC at epoch 10. If it does,
+state: EARLY PREDICTION ADVANTAGE — familiarity identifies winning ticket
+membership before training is complete, better than weight magnitude.
+
+This additional finding does not affect the primary PASS / FAIL determination.
+It is a secondary result that motivates the next experiment.
+
+
+### Required Tests Before Any Training Code
+
+The following four tests must pass before any training loop is implemented.
+These tests use synthetic inputs with known properties to verify the core
+computations are correct.
+
+Test 1 — E_jk values are bounded between 0 and 1:
+
+  Create a synthetic batch of N = 100 examples with random F values in [0, 1],
+  random |a_k| values in [0, 5], and random binary M_j values. Compute E_jk
+  for a (32 x 32) weight matrix. Assert that all 1024 values of E_jk are in
+  [0, 1]. Assert that weights with M_j always zero have E_jk exactly 0 or
+  epsilon-bounded near 0 (< 1e-7 above 0). Assert that weights where F is
+  always 1.0 and M_j and a_k are always positive have E_jk = 1.0 within 1e-7.
+
+Test 2 — M_j is computed correctly:
+
+  Create a synthetic post-ReLU activation tensor h of shape (B x 32) with known
+  values: some rows all positive, some rows all zero, some rows mixed. Assert
+  that M_j[i, j] = 1 when h[i, j] > 0 and M_j[i, j] = 0 when h[i, j] <= 0.
+  Assert that M_j is a binary tensor (contains only 0 and 1). Assert that no
+  non-zero values in h map to M_j = 0 and no zero values map to M_j = 1.
+
+Test 3 — global magnitude pruning correctly selects the 50% lowest magnitude
+weights across both semantic weight matrices jointly:
+
+  Create two synthetic weight matrices W1 and W2 of shape (32 x 32) with known
+  values. Compute the global 50% magnitude threshold. Assert that exactly 1024
+  weights out of 2048 are pruned (mask = 0). Assert that every pruned weight has
+  |w| <= threshold. Assert that every surviving weight has |w| >= threshold.
+  Create an adversarial case where layer 1 has uniformly small weights and
+  layer 2 has uniformly large weights; assert that the pruning is not balanced
+  50/50 per layer — the global procedure is allowed to prune more from one layer
+  than the other.
+
+Test 4 — rewound weights are the initialisation values from step 0:
+
+  Create a model instance. Save `init_weights.pt`. Run one gradient step
+  (weights will change). Apply pruning mask. Rewind surviving weights from
+  `init_weights.pt`. For every position where mask = 1, assert that the rewound
+  weight value matches `init_weights.pt` to within absolute tolerance 1e-7.
+  For every position where mask = 0, assert that the weight value is exactly 0.
+
+
+## Non-Negotiable Constraints
+
+- the e22 architecture is used without modification — no changes to layer
+  structure, prototype mechanism, attention computation, or certainty formula
+- familiarity prototypes are buffers, never parameters — this is inherited from
+  e22 and must not change
+- E_jk is never backpropagated — it is a post-hoc measurement, not a training
+  signal
+- the E_jk computation always uses the full training set in a frozen evaluation
+  pass — no subsampling, no gradient accumulation context
+- the LTH pruning threshold is always computed globally across both semantic
+  weight matrices — never per-layer
+- weight rewinding always uses `init_weights.pt` from step 0 — never from any
+  intermediate checkpoint
+- pruned weights are held at zero throughout retraining — the mask is applied
+  after every gradient step without exception
+- prototype buffers are not rewound after pruning — they retain their trained
+  values
+- the ROC-AUC computation uses the final-epoch pruning survival mask as the
+  binary label at every checkpoint — the labels do not change across checkpoints
+- the baseline predictor is always |W_semantic_l| at the same checkpoint — not
+  the initialisation magnitude, not the magnitude change, not the gradient norm
+- checkpoint logging occurs as a frozen evaluation pass — no prototype updates,
+  no gradient steps, no weight changes during the checkpoint pass
+- all four tests must pass before any training code is written or run
+
+
+## Required Deliverables After Approval
+
+- all four unit tests passing before training code
+- stored `init_weights.pt` initialisation checkpoint per seed
+- e22 training loop extended with checkpoint hooks at epoch 5, 10, 20, and
+  stopping epoch
+- E_jk matrix computation as a standalone frozen evaluation pass
+- E_jk accumulation verified to be independent of batch size
+- saved E_jk arrays (32 x 32) for both layers at all four checkpoints per seed
+- saved W_semantic arrays (32 x 32) for both layers at all four checkpoints
+  per seed
+- one-shot global magnitude pruning at 50% sparsity across both semantic
+  weight matrices
+- pruning mask saved as numpy array per seed per layer
+- weight rewinding from `init_weights.pt` with assertion verification
+- retraining loop with mask enforcement after every gradient step
+- per-seed winning ticket boolean
+- ROC-AUC computation for familiarity exposure predictor vs pruning survival at
+  all four checkpoints per seed per layer
+- ROC-AUC computation for weight magnitude predictor vs pruning survival at all
+  four checkpoints per seed per layer
+- aggregated results table: mean and std ROC-AUC per checkpoint per layer across
+  seeds for both predictors
+- delta table: mean ROC-AUC(final) minus mean ROC-AUC(epoch 10) per layer for
+  both predictors
+- baseline comparison table: familiarity vs magnitude ROC-AUC per checkpoint
+- one explicit PASS, FAIL, or INDETERMINATE conclusion on the primary criterion
+- if PASS, one explicit statement on whether EARLY PREDICTION ADVANTAGE holds
+
+
+## Approval Gate
+
+No implementation begins until this spec is approved.

@@ -1,0 +1,557 @@
+{
+  "dataset_config": {
+    "candidate_representation": "balanced_categories_v3",
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "generator_version": "real_import_restore_candidate_balanced_34b_stage41_physical_order_audit",
+    "include_private_signal_tokens": false,
+    "max_files": 40,
+    "n_dev": 256,
+    "n_test": 256,
+    "n_train": 512,
+    "n_views": 4,
+    "num_candidates": 8,
+    "snippet_radius": 2,
+    "source_roots": [
+      "src",
+      "tests"
+    ]
+  },
+  "rows": [
+    {
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "candidate_token_cross_attention",
+          "ff_dim": 128,
+          "input_dim": 64,
+          "model_dim": 64,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Candidate-token direct architecture with deterministic role-id canonicalization before readout.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "active_message_topk": 8,
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "canonicalize_role_order": true,
+          "coordinator_family": "candidate_token_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "pooled",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "dataset_summary": {
+        "candidate_representation": "balanced_categories_v3",
+        "constructed_fallback": false,
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage41_physical_order_audit",
+        "hardening": {
+          "balanced_non_identifying_candidate_categories": true,
+          "candidate_attributes_are_model_safe_opaque": false,
+          "candidate_query_structured_features_are_non_identifying": true,
+          "family_ids_removed_from_model_inputs": true,
+          "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+          "oracle_metadata_separated_from_model_record": true,
+          "role_pair_ids_removed_from_model_inputs": true
+        },
+        "minimum_single_view_candidate_ambiguity": 1,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_1",
+            "dev_real_import_restore_2",
+            "dev_real_import_restore_3",
+            "dev_real_import_restore_6"
+          ],
+          "test": [
+            "test_real_import_restore_1",
+            "test_real_import_restore_2",
+            "test_real_import_restore_3",
+            "test_real_import_restore_6"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "redacted_ast_usage_shape",
+          "redacted_module_resolution_shape",
+          "redacted_provider_shape",
+          "redacted_import_slot_shape"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/agents/strict_coordination.py",
+          "src/agents/transformer_strict.py",
+          "src/coordinators/activation.py",
+          "src/coordinators/baselines.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/coordinators/role_attention.py",
+          "src/coordinators/set_hidden.py",
+          "src/datasets/multiview_code_patch_selection.py"
+        ],
+        "source_files_used": 33,
+        "split_sizes": {
+          "dev": 256,
+          "test": 256,
+          "train": 512
+        }
+      },
+      "dev_accuracy": {
+        "candidate_evidence_mismatch": 0.1328125,
+        "candidate_only": 0.1796875,
+        "candidate_order_shuffled_with_gold_remap": 1.0,
+        "frozen": 0.1796875,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 1.0,
+        "raw_latent": 0.1484375,
+        "schema_only": 0.15234375,
+        "text_only": 0.125,
+        "trainable": 1.0,
+        "value_shuffle_within_schema": 0.0859375,
+        "view_masked_candidates_visible": 0.15625
+      },
+      "dev_delta": 0.8203125,
+      "frozen_audit": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "best_dev_selection_acc": 0.1796875,
+        "coordinator_grad_norm_mean": 0.6053326196968818,
+        "coordinator_parameter_delta": 0.6336406469345093,
+        "epochs_run": 8,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "seed": 0,
+      "test_smoke_accuracy": {
+        "candidate_evidence_mismatch": 0.1171875,
+        "candidate_only": 0.12109375,
+        "candidate_order_shuffled_with_gold_remap": 1.0,
+        "frozen": 0.12109375,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 1.0,
+        "raw_latent": 0.1171875,
+        "schema_only": 0.12890625,
+        "text_only": 0.125,
+        "trainable": 1.0,
+        "value_shuffle_within_schema": 0.14453125,
+        "view_masked_candidates_visible": 0.125
+      },
+      "test_smoke_delta": 0.87890625,
+      "trainable_audit": {
+        "agent_grad_norm_mean": 0.2940129988205477,
+        "agent_parameter_delta": 6.405752658843994,
+        "best_dev_selection_acc": 1.0,
+        "coordinator_grad_norm_mean": 1.1239822363708796,
+        "coordinator_parameter_delta": 2.9957761764526367,
+        "epochs_run": 22,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "variant": "candidate_token_direct_role_canonical"
+    },
+    {
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "candidate_token_cross_attention",
+          "ff_dim": 128,
+          "input_dim": 64,
+          "model_dim": 64,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Candidate-token direct architecture with deterministic role-id canonicalization before readout.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "active_message_topk": 8,
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "canonicalize_role_order": true,
+          "coordinator_family": "candidate_token_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "pooled",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "dataset_summary": {
+        "candidate_representation": "balanced_categories_v3",
+        "constructed_fallback": false,
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage41_physical_order_audit",
+        "hardening": {
+          "balanced_non_identifying_candidate_categories": true,
+          "candidate_attributes_are_model_safe_opaque": false,
+          "candidate_query_structured_features_are_non_identifying": true,
+          "family_ids_removed_from_model_inputs": true,
+          "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+          "oracle_metadata_separated_from_model_record": true,
+          "role_pair_ids_removed_from_model_inputs": true
+        },
+        "minimum_single_view_candidate_ambiguity": 1,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_1",
+            "dev_real_import_restore_2"
+          ],
+          "test": [
+            "test_real_import_restore_1",
+            "test_real_import_restore_2",
+            "test_real_import_restore_3",
+            "test_real_import_restore_5"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "redacted_ast_usage_shape",
+          "redacted_module_resolution_shape",
+          "redacted_provider_shape",
+          "redacted_import_slot_shape"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/agents/strict_coordination.py",
+          "src/agents/transformer_strict.py",
+          "src/coordinators/activation.py",
+          "src/coordinators/baselines.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/coordinators/role_attention.py",
+          "src/coordinators/set_hidden.py",
+          "src/datasets/multiview_code_patch_selection.py"
+        ],
+        "source_files_used": 33,
+        "split_sizes": {
+          "dev": 256,
+          "test": 256,
+          "train": 512
+        }
+      },
+      "dev_accuracy": {
+        "candidate_evidence_mismatch": 0.12109375,
+        "candidate_only": 0.03515625,
+        "candidate_order_shuffled_with_gold_remap": 0.85546875,
+        "frozen": 0.1015625,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 0.85546875,
+        "raw_latent": 0.14453125,
+        "schema_only": 0.1171875,
+        "text_only": 0.125,
+        "trainable": 0.85546875,
+        "value_shuffle_within_schema": 0.09765625,
+        "view_masked_candidates_visible": 0.08984375
+      },
+      "dev_delta": 0.75390625,
+      "frozen_audit": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "best_dev_selection_acc": 0.1015625,
+        "coordinator_grad_norm_mean": 1.0872245499168025,
+        "coordinator_parameter_delta": 1.1127896308898926,
+        "epochs_run": 11,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "seed": 1,
+      "test_smoke_accuracy": {
+        "candidate_evidence_mismatch": 0.11328125,
+        "candidate_only": 0.0859375,
+        "candidate_order_shuffled_with_gold_remap": 0.875,
+        "frozen": 0.13671875,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 0.8671875,
+        "raw_latent": 0.12109375,
+        "schema_only": 0.17578125,
+        "text_only": 0.125,
+        "trainable": 0.8671875,
+        "value_shuffle_within_schema": 0.1171875,
+        "view_masked_candidates_visible": 0.18359375
+      },
+      "test_smoke_delta": 0.73046875,
+      "trainable_audit": {
+        "agent_grad_norm_mean": 0.26522189153635073,
+        "agent_parameter_delta": 7.072800159454346,
+        "best_dev_selection_acc": 0.85546875,
+        "coordinator_grad_norm_mean": 1.1570003075525297,
+        "coordinator_parameter_delta": 2.604449987411499,
+        "epochs_run": 19,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "variant": "candidate_token_direct_role_canonical"
+    },
+    {
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "candidate_token_cross_attention",
+          "ff_dim": 128,
+          "input_dim": 64,
+          "model_dim": 64,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Candidate-token direct architecture with deterministic role-id canonicalization before readout.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "active_message_topk": 8,
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "canonicalize_role_order": true,
+          "coordinator_family": "candidate_token_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "pooled",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "dataset_summary": {
+        "candidate_representation": "balanced_categories_v3",
+        "constructed_fallback": false,
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage41_physical_order_audit",
+        "hardening": {
+          "balanced_non_identifying_candidate_categories": true,
+          "candidate_attributes_are_model_safe_opaque": false,
+          "candidate_query_structured_features_are_non_identifying": true,
+          "family_ids_removed_from_model_inputs": true,
+          "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+          "oracle_metadata_separated_from_model_record": true,
+          "role_pair_ids_removed_from_model_inputs": true
+        },
+        "minimum_single_view_candidate_ambiguity": 1,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_2",
+            "dev_real_import_restore_3",
+            "dev_real_import_restore_4"
+          ],
+          "test": [
+            "test_real_import_restore_0",
+            "test_real_import_restore_6"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "redacted_ast_usage_shape",
+          "redacted_module_resolution_shape",
+          "redacted_provider_shape",
+          "redacted_import_slot_shape"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/agents/strict_coordination.py",
+          "src/agents/transformer_strict.py",
+          "src/coordinators/activation.py",
+          "src/coordinators/baselines.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/coordinators/role_attention.py",
+          "src/coordinators/set_hidden.py",
+          "src/datasets/multiview_code_patch_selection.py"
+        ],
+        "source_files_used": 33,
+        "split_sizes": {
+          "dev": 256,
+          "test": 256,
+          "train": 512
+        }
+      },
+      "dev_accuracy": {
+        "candidate_evidence_mismatch": 0.13671875,
+        "candidate_only": 0.1875,
+        "candidate_order_shuffled_with_gold_remap": 0.5234375,
+        "frozen": 0.16015625,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 0.51953125,
+        "raw_latent": 0.140625,
+        "schema_only": 0.1796875,
+        "text_only": 0.1328125,
+        "trainable": 0.51953125,
+        "value_shuffle_within_schema": 0.1640625,
+        "view_masked_candidates_visible": 0.1796875
+      },
+      "dev_delta": 0.359375,
+      "frozen_audit": {
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "best_dev_selection_acc": 0.16015625,
+        "coordinator_grad_norm_mean": 0.7124714314237367,
+        "coordinator_parameter_delta": 0.3536357879638672,
+        "epochs_run": 8,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "seed": 2,
+      "test_smoke_accuracy": {
+        "candidate_evidence_mismatch": 0.125,
+        "candidate_only": 0.19921875,
+        "candidate_order_shuffled_with_gold_remap": 0.484375,
+        "frozen": 0.14453125,
+        "oracle": 1.0,
+        "physical_order_shuffled_roles_preserved": 0.4921875,
+        "raw_latent": 0.1328125,
+        "schema_only": 0.140625,
+        "text_only": 0.1015625,
+        "trainable": 0.4921875,
+        "value_shuffle_within_schema": 0.11328125,
+        "view_masked_candidates_visible": 0.140625
+      },
+      "test_smoke_delta": 0.34765625,
+      "trainable_audit": {
+        "agent_grad_norm_mean": 0.2584082480165898,
+        "agent_parameter_delta": 5.518551826477051,
+        "best_dev_selection_acc": 0.51953125,
+        "coordinator_grad_norm_mean": 1.38958679346369,
+        "coordinator_parameter_delta": 1.522033452987671,
+        "epochs_run": 14,
+        "message_coordinator_family": "candidate_token_cross_attention",
+        "readout_source": "pooled",
+        "shared_parameter_identity": true
+      },
+      "variant": "candidate_token_direct_role_canonical"
+    }
+  ],
+  "selection_metric": "dev only; test is smoke sanity",
+  "stage_config": {
+    "batch_size": 32,
+    "epochs": 50,
+    "gradient_accumulation_steps": 1,
+    "hidden_dim": 64,
+    "lr": 0.0003,
+    "max_candidates": 1,
+    "mixed_precision": "bf16",
+    "n_dev": 256,
+    "n_test": 256,
+    "n_train": 512,
+    "name": "stage41_physical_order_invariance_smoke",
+    "patience": 6,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "tiny_ff_dim": 128,
+    "tiny_layers": 3
+  },
+  "summary": {
+    "cheap_validation_passed": true,
+    "control_means": {
+      "candidate_evidence_mismatch": 0.13020833333333334,
+      "candidate_only": 0.13411458333333334,
+      "schema_only": 0.14973958333333334,
+      "value_shuffle_within_schema": 0.11588541666666667,
+      "view_masked_candidates_visible": 0.14192708333333334
+    },
+    "controls_near_chance": true,
+    "dev_trainable_beats_frozen_count": 3,
+    "mean_dev_candidate_order_delta_from_trainable": 0.0013020833333333703,
+    "mean_dev_delta": 0.64453125,
+    "mean_dev_frozen": 0.14713541666666666,
+    "mean_dev_physical_delta_from_trainable": 0.0,
+    "mean_dev_trainable": 0.7916666666666666,
+    "oracle_mean": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "device": "cpu",
+  "seeds": [0, 1, 2],
+  "dataset": {
+    "grid_size": 7,
+    "num_candidates": 8,
+    "plan_length": 48,
+    "train_examples": 256,
+    "dev_examples": 64,
+    "test_examples": 64,
+    "families": ["color_zone", "ordered_subgoal", "key_door"],
+    "all_goal_every": 1
+  },
+  "training": {
+    "epochs": 8,
+    "batch_size": 64,
+    "lr": 0.003,
+    "weight_decay": 0.0,
+    "patience": 4,
+    "gradient_clip_norm": 1.0
+  },
+  "micro_overfit_training": {
+    "epochs": 40,
+    "batch_size": 32,
+    "lr": 0.003,
+    "weight_decay": 0.0,
+    "patience": 40,
+    "gradient_clip_norm": 1.0
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "config": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "audit_log_path": "results/stage38_full_hard_validation_dryrun_audit.jsonl",
+    "checkpoint_dir": "results/stage38_full_hard_validation_dryrun_checkpoints",
+    "cuda_memory_budget_gb": 16.0,
+    "dataset": "real_import_restore_candidate_balanced_34b",
+    "dataset_config": {
+      "candidate_representation": "balanced_categories_v3",
+      "dataset_source": "real_import_restore_candidate_balanced_34b",
+      "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+      "max_files": 40,
+      "snippet_radius": 2,
+      "source_roots": [
+        "src",
+        "tests"
+      ]
+    },
+    "dataset_diagnostics": {
+      "baseline_epochs": 4,
+      "baseline_feature_dim": 128,
+      "baseline_lr": 0.002,
+      "baseline_patience": 2,
+      "single_view_epochs": 4,
+      "single_view_feature_dim": 128,
+      "single_view_lr": 0.002,
+      "single_view_patience": 2
+    },
+    "device": "cuda",
+    "gpu_safety": {
+      "batch_size_fallbacks": [
+        32,
+        16,
+        8
+      ],
+      "clear_cuda_cache_between_seeds": true,
+      "effective_batch_size": 32,
+      "log_max_cuda_memory_per_seed": true
+    },
+    "invariance_tolerance": 0.08,
+    "near_chance_max": 0.18,
+    "oracle_min": 0.9,
+    "output_path": "results/stage38_full_hard_validation_dryrun_results.json",
+    "positive_control": {
+      "batch_size": 32,
+      "epochs": 8,
+      "hidden_dims": [
+        64
+      ],
+      "lr": 0.002,
+      "patience": 3
+    },
+    "positive_control_min": 0.5,
+    "report_path": "reports/STAGE38_FULL_HARD_VALIDATION_DRYRUN.md",
+    "require_cuda": true,
+    "save_checkpoints": true,
+    "stage": {
+      "batch_size": 32,
+      "epochs": 1,
+      "gradient_accumulation_steps": 1,
+      "hidden_dim": 64,
+      "lr": 0.002,
+      "mixed_precision": "bf16",
+      "n_dev": 32,
+      "n_test": 64,
+      "n_train": 64,
+      "name": "stage38_full_dryrun",
+      "patience": 1,
+      "seeds": [
+        0
+      ],
+      "tiny_ff_dim": 128,
+      "tiny_layers": 3
+    },
+    "static_frequency_max": 0.2,
+    "stop_on_failed_seed": false,
+    "stop_on_preflight_failure": false
+  },
+  "failed_or_interrupted_seeds": [],
+  "metadata": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "forbidden",
+    "architecture_selection": "locked before Stage 3.8 full validation",
+    "benchmark": "real_shared_weight_latent_coordination",
+    "candidate_representation": "balanced_categories_v3",
+    "config_path": "configs\\stage38_full_hard_validation.json",
+    "created_or_updated_at_utc": "2026-05-15T16:57:44.058254+00:00",
+    "dataset": "real_import_restore_candidate_balanced_34b",
+    "device": "cuda",
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "role_embedding_shuffle_primary_gate": false,
+    "schema_policy": "role-specific schema fields preserved as legitimate program-analysis evidence",
+    "success_claim": "not evaluated until all Stage 3.8 full hard-validation gates pass",
+    "task": "stage38_schema_aware_full_hard_validation"
+  },
+  "oom_retries": [],
+  "pre_run": {
+    "positive_control": {
+      "accuracy": {
+        "dev": 1.0,
+        "test": 1.0,
+        "train": 1.0
+      },
+      "learnability_confirmed": true,
+      "method": "candidate_pair_compatibility_mlp",
+      "seed": 0,
+      "target": 0.5
+    },
+    "schema_dataset_baselines": {
+      "seed_rows": [
+        {
+          "rows": {
+            "candidate_only_baseline": {
+              "dev": 0.125,
+              "test": 0.125,
+              "train": 0.125
+            },
+            "evidence_only_no_candidates_baseline": {
+              "dev": 0.125,
+              "test": 0.125,
+              "train": 0.125
+            },
+            "null_evidence_values_baseline": {
+              "dev": 0.125,
+              "test": 0.125,
+              "train": 0.125
+            },
+            "schema_only_baseline": {
+              "dev": 0.125,
+              "test": 0.125,
+              "train": 0.125
+            }
+          },
+          "seed": 0
+        }
+      ],
+      "summary": {
+        "candidate_only_baseline": {
+          "max_test_accuracy": 0.125,
+          "mean_test_accuracy": 0.125
+        },
+        "evidence_only_no_candidates_baseline": {
+          "max_test_accuracy": 0.125,
+          "mean_test_accuracy": 0.125
+        },
+        "null_evidence_values_baseline": {
+          "max_test_accuracy": 0.125,
+          "mean_test_accuracy": 0.125
+        },
+        "schema_only_baseline": {
+          "max_test_accuracy": 0.125,
+          "mean_test_accuracy": 0.125
+        }
+      }
+    },
+    "shortcut_diagnostics": {
+      "dataset_config": {
+        "candidate_representation": "balanced_categories_v3",
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+        "include_private_signal_tokens": false,
+        "max_files": 40,
+        "n_dev": 32,
+        "n_test": 64,
+        "n_train": 64,
+        "n_views": 4,
+        "num_candidates": 8,
+        "snippet_radius": 2,
+        "source_roots": [
+          "src",
+          "tests"
+        ]
+      },
+      "metadata": {
+        "all_role_structured_target": 0.9,
+        "architecture_changes": "none",
+        "config_path": "configs\\stage38_full_hard_validation.json",
+        "dataset_source": "real_import_restore_candidate_sanitized_v3",
+        "pairwise_structured_target": 0.7,
+        "preferred_max": 0.15,
+        "scope": "dataset-only shortcut diagnostics before any Stage 3.4 training",
+        "stage": "stage3.4_candidate_sanitization_diagnostics",
+        "static_frequency_max": 0.2,
+        "strict_max": 0.18
+      },
+      "seed_rows": [
+        {
+          "baselines": {
+            "all_role_structured_oracle_accuracy": 1.0,
+            "candidate_metadata_only_accuracy": 0.125,
+            "candidate_only_accuracy": 0.125,
+            "family_only_accuracy": 0.125,
+            "lexical_overlap_accuracy": 0.125,
+            "pairwise_structured_oracle": {
+              "0,1": 0.390625,
+              "0,2": 0.515625,
+              "0,3": 0.484375,
+              "1,2": 0.578125,
+              "1,3": 0.421875,
+              "2,3": 0.515625
+            },
+            "role_pair_only_accuracy": 0.125,
+            "single_view_text": {
+              "0": 0.125,
+              "1": 0.125,
+              "2": 0.125,
+              "3": 0.125
+            },
+            "static_frequency_accuracy": 0.0625,
+            "view_masked_candidates_visible_accuracy": 0.125
+          },
+          "gate_results": [
+            {
+              "gate": "exact symbol/module/path/candidate leakage remains 0",
+              "pass": true,
+              "value": {
+                "exact_candidate_symbol_module_or_path_rate": 0.0,
+                "exact_gold_import_statement_rate": 0.0,
+                "exact_gold_module_path_rate": 0.0,
+                "exact_gold_path_rate": 0.0,
+                "exact_gold_symbol_rate": 0.0,
+                "model_record_oracle_key_assertion_failures": 0,
+                "passes": true
+              }
+            },
+            {
+              "gate": "candidate-only baseline <= 0.18",
+              "pass": true,
+              "preferred": true,
+              "value": 0.125
+            },
+            {
+              "gate": "candidate-metadata-only baseline <= 0.18",
+              "pass": true,
+              "preferred": true,
+              "value": 0.125
+            },
+            {
+              "gate": "role-pair-only baseline <= 0.18",
+              "pass": true,
+              "preferred": true,
+              "value": 0.125
+            },
+            {
+              "gate": "family-only baseline <= 0.18",
+              "pass": true,
+              "preferred": true,
+              "value": 0.125
+            },
+            {
+              "gate": "view-masked + candidates-visible baseline <= 0.18",
+              "pass": true,
+              "value": 0.125
+            },
+            {
+              "gate": "lexical-overlap baseline <= 0.18",
+              "pass": true,
+              "value": 0.125
+            },
+            {
+              "gate": "static frequency baseline <= 0.20",
+              "pass": true,
+              "value": 0.0625
+            },
+            {
+              "gate": "single-view baselines <= 0.18",
+              "pass": true,
+              "value": {
+                "0": 0.125,
+                "1": 0.125,
+                "2": 0.125,
+                "3": 0.125
+              }
+            },
+            {
+              "gate": "at least one pairwise-role oracle >= 0.70",
+              "pass": false,
+              "value": {
+                "0,1": 0.390625,
+                "0,2": 0.515625,
+                "0,3": 0.484375,
+                "1,2": 0.578125,
+                "1,3": 0.421875,
+                "2,3": 0.515625
+              }
+            },
+            {
+              "gate": "all-role structured oracle >= 0.90",
+              "pass": true,
+              "value": 1.0
+            }
+          ],
+          "label_counts": {
+            "dev": {
+              "0": 4,
+              "1": 4,
+              "2": 4,
+              "3": 4,
+              "4": 4,
+              "5": 4,
+              "6": 4,
+              "7": 4
+            },
+            "test": {
+              "0": 8,
+              "1": 8,
+              "2": 8,
+              "3": 8,
+              "4": 8,
+              "5": 8,
+              "6": 8,
+              "7": 8
+            },
+            "train": {
+              "0": 8,
+              "1": 8,
+              "2": 8,
+              "3": 8,
+              "4": 8,
+              "5": 8,
+              "6": 8,
+              "7": 8
+            }
+          },
+          "leakage": {
+            "exact_candidate_symbol_module_or_path_rate": 0.0,
+            "exact_gold_import_statement_rate": 0.0,
+            "exact_gold_module_path_rate": 0.0,
+            "exact_gold_path_rate": 0.0,
+            "exact_gold_symbol_rate": 0.0,
+            "model_record_oracle_key_assertion_failures": 0,
+            "passes": true
+          },
+          "seed": 0,
+          "split_sizes": {
+            "dev": 32,
+            "test": 64,
+            "train": 64
+          }
+        }
+      ],
+      "summary": {
+        "gate_table": [
+          {
+            "gate": "exact symbol/module/path/candidate leakage remains 0",
+            "pass": true,
+            "value": [
+              {
+                "exact_candidate_symbol_module_or_path_rate": 0.0,
+                "exact_gold_import_statement_rate": 0.0,
+                "exact_gold_module_path_rate": 0.0,
+                "exact_gold_path_rate": 0.0,
+                "exact_gold_symbol_rate": 0.0,
+                "model_record_oracle_key_assertion_failures": 0,
+                "passes": true
+              }
+            ]
+          },
+          {
+            "gate": "candidate-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "candidate-metadata-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "role-pair-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "family-only baseline <= 0.18",
+            "pass": true,
+            "preferred": true,
+            "value": 0.125
+          },
+          {
+            "gate": "view-masked + candidates-visible <= 0.18",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "lexical-overlap baseline <= 0.18",
+            "pass": true,
+            "value": 0.125
+          },
+          {
+            "gate": "static frequency baseline <= 0.20",
+            "pass": true,
+            "value": 0.0625
+          },
+          {
+            "gate": "single-view baselines <= 0.18",
+            "pass": true,
+            "value": {
+              "0": 0.125,
+              "1": 0.125,
+              "2": 0.125,
+              "3": 0.125
+            }
+          },
+          {
+            "gate": "at least one pairwise-role oracle >= 0.70",
+            "pass": false,
+            "value": {
+              "0,1": 0.390625,
+              "0,2": 0.515625,
+              "0,3": 0.484375,
+              "1,2": 0.578125,
+              "1,3": 0.421875,
+              "2,3": 0.515625
+            }
+          },
+          {
+            "gate": "all-role structured oracle >= 0.90",
+            "pass": true,
+            "value": 1.0
+          }
+        ],
+        "leakage_passes": true,
+        "max_pairwise_structured_oracle_accuracy": 0.578125,
+        "max_single_view_accuracy": 0.125,
+        "mean_all_role_structured_oracle_accuracy": 1.0,
+        "mean_candidate_metadata_only_accuracy": 0.125,
+        "mean_candidate_only_accuracy": 0.125,
+        "mean_family_only_accuracy": 0.125,
+        "mean_lexical_overlap_accuracy": 0.125,
+        "mean_pairwise_structured_oracle": {
+          "0,1": 0.390625,
+          "0,2": 0.515625,
+          "0,3": 0.484375,
+          "1,2": 0.578125,
+          "1,3": 0.421875,
+          "2,3": 0.515625
+        },
+        "mean_role_pair_only_accuracy": 0.125,
+        "mean_single_view_text": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        },
+        "mean_static_frequency_accuracy": 0.0625,
+        "mean_view_masked_candidates_visible_accuracy": 0.125,
+        "pretraining_dataset_validity_passed": false
+      }
+    },
+    "summary": {
+      "gates": {
+        "all_role_oracle": true,
+        "candidate_metadata_only": true,
+        "candidate_only": true,
+        "evidence_only_no_candidates_baseline": true,
+        "lexical_overlap": true,
+        "null_evidence_values_baseline": true,
+        "positive_control_learnability": true,
+        "role_pair_only": true,
+        "schema_only_baseline": true,
+        "static_frequency": true,
+        "view_masked_candidates_visible": true
+      },
+      "near_chance_max": 0.18,
+      "oracle_min": 0.9,
+      "passes": true,
+      "static_frequency_max": 0.2
+    }
+  },
+  "stage38_rows": [
+    {
+      "architecture_changes_forbidden": true,
+      "architecture_config": {
+        "coordinator_config": {
+          "dropout": 0.0,
+          "family": "cross_attention",
+          "ff_dim": 64,
+          "input_dim": 32,
+          "model_dim": 32,
+          "num_heads": 2,
+          "num_layers": 1
+        },
+        "description": "Top-k token attention sent directly to coordinator without message head.",
+        "message_config": {
+          "active_message_dropout": 0.0,
+          "active_message_ff_dim": 96,
+          "active_message_heads": 2,
+          "active_message_layers": [
+            -1
+          ],
+          "active_message_num_queries": 1,
+          "active_message_readout_type": "topk_attention",
+          "aux_decay_epochs": 4,
+          "aux_loss_weight": 0.0,
+          "aux_warmup_epochs": 2,
+          "coordinator_family": "candidate_query_cross_attention",
+          "message_dim": 64,
+          "message_head_dropout": 0.0,
+          "message_head_type": "mlp",
+          "message_norm_regularizer_target": 8.0,
+          "message_norm_regularizer_weight": 0.0,
+          "message_variance_regularizer_target": 0.01,
+          "message_variance_regularizer_weight": 0.0,
+          "msg_position": "prepend",
+          "readout_source": "active_message",
+          "residual_message_readout": false,
+          "use_message_head": false,
+          "use_msg_token": false,
+          "use_private_cue_aux": false
+        }
+      },
+      "architecture_locked": true,
+      "batch_size": 32,
+      "candidate": "topk_attention_no_head",
+      "checkpoint_paths": {
+        "candidate_order_baseline": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\candidate_order_baseline.pt",
+        "candidate_pair_compatibility_mlp": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\candidate_pair_compatibility_mlp.pt",
+        "explicit_evidence_oracle": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\explicit_evidence_oracle.pt",
+        "frozen": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\frozen_topk_attention_no_head.pt",
+        "majority_baseline": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\majority_baseline.pt",
+        "randomized_labels": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\randomized_labels_trainable_topk_attention_no_head.pt",
+        "raw_latent": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\raw_latent_baseline.pt",
+        "single_agent_full_context": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\single_agent_full_context.pt",
+        "single_view_text_role_0": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\single_view_text_role_0.pt",
+        "single_view_text_role_1": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\single_view_text_role_1.pt",
+        "single_view_text_role_2": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\single_view_text_role_2.pt",
+        "single_view_text_role_3": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\single_view_text_role_3.pt",
+        "text_only": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\text_only_multi_agent_baseline.pt",
+        "trainable": "results\\stage38_full_hard_validation_dryrun_checkpoints\\seed_0\\trainable_topk_attention_no_head.pt"
+      },
+      "completed_at_utc": "2026-05-15T16:57:59.572598+00:00",
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_max_memory_allocated": 79224320,
+      "cuda_max_memory_allocated_gb": 0.07378339767456055,
+      "cuda_total_memory": 17094475776,
+      "dataset_config": {
+        "candidate_representation": "balanced_categories_v3",
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+        "include_private_signal_tokens": false,
+        "max_files": 40,
+        "n_dev": 32,
+        "n_test": 64,
+        "n_train": 64,
+        "n_views": 4,
+        "num_candidates": 8,
+        "snippet_radius": 2,
+        "source_roots": [
+          "src",
+          "tests"
+        ]
+      },
+      "dataset_summary": {
+        "candidate_representation": "balanced_categories_v3",
+        "constructed_fallback": false,
+        "dataset_source": "real_import_restore_candidate_balanced_34b",
+        "generator_version": "real_import_restore_candidate_balanced_34b_stage38_full",
+        "hardening": {
+          "balanced_non_identifying_candidate_categories": true,
+          "candidate_attributes_are_model_safe_opaque": false,
+          "candidate_query_structured_features_are_non_identifying": true,
+          "family_ids_removed_from_model_inputs": true,
+          "model_candidate_text_has_no_symbol_module_path_or_codebook_labels": true,
+          "oracle_metadata_separated_from_model_record": true,
+          "role_pair_ids_removed_from_model_inputs": true
+        },
+        "minimum_single_view_candidate_ambiguity": 2,
+        "num_candidates": 8,
+        "num_views": 4,
+        "open_ended_code_repair_claim_allowed": false,
+        "private_cue_style": "real_import_restore_candidate_balanced_34b_oracle_separated",
+        "problem_families_by_split": {
+          "dev": [
+            "dev_real_import_restore_0",
+            "dev_real_import_restore_1",
+            "dev_real_import_restore_2",
+            "dev_real_import_restore_3",
+            "dev_real_import_restore_6"
+          ],
+          "test": [
+            "test_real_import_restore_1",
+            "test_real_import_restore_2",
+            "test_real_import_restore_3",
+            "test_real_import_restore_6"
+          ],
+          "train": [
+            "train_real_import_restore_0",
+            "train_real_import_restore_1",
+            "train_real_import_restore_2",
+            "train_real_import_restore_3",
+            "train_real_import_restore_4",
+            "train_real_import_restore_5",
+            "train_real_import_restore_6"
+          ]
+        },
+        "program_analysis_artifacts": [
+          "redacted_ast_usage_shape",
+          "redacted_module_resolution_shape",
+          "redacted_provider_shape",
+          "redacted_import_slot_shape"
+        ],
+        "publishable_proof_dataset": false,
+        "real_correct_patch_source": "existing repository import statement restored after deletion",
+        "source_file_examples": [
+          "src/agents/simulated.py",
+          "src/agents/strict_coordination.py",
+          "src/agents/transformer_strict.py",
+          "src/coordinators/mlp.py",
+          "src/coordinators/probes.py",
+          "src/datasets/multiview_code_patch_selection.py",
+          "src/evaluation/audit.py",
+          "src/experiments/architecture_search.py",
+          "src/experiments/diagnostics.py",
+          "src/experiments/real_shared_weight_latent_coordination.py"
+        ],
+        "source_files_used": 27,
+        "split_sizes": {
+          "dev": 32,
+          "test": 64,
+          "train": 64
+        }
+      },
+      "description": "Top-k token attention sent directly to coordinator without message head.",
+      "dev_accuracy": {
+        "all_role_oracle": 1.0,
+        "candidate_evidence_mismatch": 0.125,
+        "candidate_only": 0.0625,
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.1875,
+        "candidate_order_shuffled_with_gold_remap": 0.1875,
+        "candidate_pair_compatibility_mlp": 1.0,
+        "cross_example_view_bundle_shuffle": 0.1875,
+        "evidence_only_no_candidates": 0.125,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.15625,
+        "hidden_states_shuffled_across_examples": 0.1875,
+        "majority_baseline": 0.125,
+        "null_evidence_values": 0.1875,
+        "physical_order_shuffled_roles_preserved": 0.1875,
+        "randomized_labels": 0.1875,
+        "raw_latent": 0.15625,
+        "role_embedding_shuffle_diagnostic": 0.1875,
+        "role_labels_shuffled": 0.1875,
+        "schema_only": 0.1875,
+        "schema_preserved_role_value_shuffle": 0.1875,
+        "single_agent_full_context": 0.09375,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.1875,
+        "value_shuffle_within_schema": 0.1875,
+        "view_masked": 0.1875,
+        "view_masked_candidates_visible": 0.1875
+      },
+      "dev_delta": 0.03125,
+      "device": "cuda",
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.008095823460779085,
+        "active_message_readout_parameter_delta": 0.07305880635976791,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "batch_size": 32,
+        "coordinator_grad_norm_mean": 0.6656497327232818,
+        "coordinator_parameter_delta": 0.3230838179588318,
+        "cuda_max_memory_allocated": 75827712,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": false,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "gradient_accumulation_steps": 1,
+      "mixed_precision": "bf16",
+      "output_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "examples_checked": 160,
+        "passes": true,
+        "seed": 0,
+        "text_only_private_views_excluded": true,
+        "type": "real_shared_weight_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "per_family_accuracy": {
+        "test_real_import_restore_1": 0.1111111111111111,
+        "test_real_import_restore_2": 0.0,
+        "test_real_import_restore_3": 0.0,
+        "test_real_import_restore_6": 0.14285714285714285
+      },
+      "per_role_ablation": {
+        "accuracy_drop": {
+          "0": -0.015625,
+          "1": 0.015625,
+          "2": -0.078125,
+          "3": -0.046875
+        },
+        "accuracy_when_role_masked": {
+          "0": 0.125,
+          "1": 0.09375,
+          "2": 0.1875,
+          "3": 0.15625
+        },
+        "base_accuracy": 0.109375,
+        "one_role_only_failure": false
+      },
+      "randomized_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.010786817743692998,
+        "active_message_readout_parameter_delta": 0.0756084993481636,
+        "agent_grad_norm_mean": 0.12184926232677812,
+        "agent_parameter_delta": 1.1175405979156494,
+        "agent_trainable": true,
+        "batch_size": 32,
+        "coordinator_grad_norm_mean": 0.5777868373744746,
+        "coordinator_parameter_delta": 0.3022746443748474,
+        "cuda_max_memory_allocated": 79224320,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "role_embedding_shuffle_primary_gate": false,
+      "schema_policy": "role-specific schema fields preserved as legitimate program-analysis evidence",
+      "seed": 0,
+      "split_leakage_audit": {
+        "benchmark": "real_shared_weight_latent_coordination",
+        "candidate_patch_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_file_patch_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_issue_hash_overlap": 2,
+        "dev_test_problem_family_overlap": 0,
+        "dev_test_source_import_key_overlap": 0,
+        "dev_test_target_file_overlap": 0,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_file_patch_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_issue_hash_overlap": 2,
+        "train_dev_problem_family_overlap": 0,
+        "train_dev_source_import_key_overlap": 0,
+        "train_dev_target_file_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_file_patch_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_issue_hash_overlap": 2,
+        "train_test_problem_family_overlap": 0,
+        "train_test_source_import_key_overlap": 0,
+        "train_test_target_file_overlap": 0,
+        "type": "real_shared_weight_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage38_full_hard_validation",
+      "stage_config": {
+        "batch_size": 32,
+        "epochs": 1,
+        "gradient_accumulation_steps": 1,
+        "hidden_dim": 64,
+        "lr": 0.002,
+        "max_candidates": 1,
+        "mixed_precision": "bf16",
+        "n_dev": 32,
+        "n_test": 64,
+        "n_train": 64,
+        "name": "stage38_full_dryrun",
+        "patience": 1,
+        "seeds": [
+          0
+        ],
+        "tiny_ff_dim": 128,
+        "tiny_layers": 3
+      },
+      "status": "completed",
+      "success_criteria": {
+        "frozen_agent_unchanged": true,
+        "invariance_controls_preserve_accuracy": {
+          "candidate_order_shuffled_with_gold_remap": true,
+          "physical_order_shuffled_roles_preserved": true
+        },
+        "leakage_audits_pass": true,
+        "role_embedding_shuffle_diagnostic_accuracy": 0.09375,
+        "role_embedding_shuffle_primary_gate": false,
+        "schema_aware_corruption_controls_near_chance": {
+          "candidate_evidence_mismatch": true,
+          "candidate_only": true,
+          "cross_example_view_bundle_shuffle": true,
+          "evidence_only_no_candidates": true,
+          "hidden_states_shuffled_across_examples": true,
+          "null_evidence_values": true,
+          "randomized_labels": true,
+          "schema_only": true,
+          "schema_preserved_role_value_shuffle": true,
+          "value_shuffle_within_schema": true,
+          "view_masked_candidates_visible": true
+        },
+        "single_view_accuracy": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.140625
+        },
+        "trainable_agent_changed": true,
+        "trainable_beats_candidate_order": false,
+        "trainable_beats_every_single_view": false,
+        "trainable_beats_frozen": false,
+        "trainable_beats_full_context": false,
+        "trainable_beats_majority": false,
+        "trainable_beats_raw_latent": false,
+        "trainable_beats_text_only": false
+      },
+      "test_accuracy": {
+        "all_role_oracle": 1.0,
+        "candidate_evidence_mismatch": 0.140625,
+        "candidate_only": 0.03125,
+        "candidate_order_baseline": 0.125,
+        "candidate_order_shuffled": 0.109375,
+        "candidate_order_shuffled_with_gold_remap": 0.109375,
+        "candidate_pair_compatibility_mlp": 1.0,
+        "cross_example_view_bundle_shuffle": 0.09375,
+        "evidence_only_no_candidates": 0.125,
+        "explicit_evidence_oracle": 1.0,
+        "frozen": 0.171875,
+        "hidden_states_shuffled_across_examples": 0.125,
+        "majority_baseline": 0.125,
+        "null_evidence_values": 0.09375,
+        "physical_order_shuffled_roles_preserved": 0.109375,
+        "randomized_labels": 0.0,
+        "raw_latent": 0.140625,
+        "role_embedding_shuffle_diagnostic": 0.09375,
+        "role_labels_shuffled": 0.09375,
+        "schema_only": 0.046875,
+        "schema_preserved_role_value_shuffle": 0.078125,
+        "single_agent_full_context": 0.109375,
+        "single_view_text_role_0": 0.125,
+        "single_view_text_role_1": 0.125,
+        "single_view_text_role_2": 0.125,
+        "single_view_text_role_3": 0.140625,
+        "text_only": 0.125,
+        "trainable": 0.109375,
+        "value_shuffle_within_schema": 0.078125,
+        "view_masked": 0.125,
+        "view_masked_candidates_visible": 0.125
+      },
+      "test_delta": -0.0625,
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "active_message_readout_grad_norm_mean": 0.009815773876049115,
+        "active_message_readout_parameter_delta": 0.07300858199596405,
+        "agent_grad_norm_mean": 0.11198145740426432,
+        "agent_parameter_delta": 1.114542841911316,
+        "agent_trainable": true,
+        "batch_size": 32,
+        "coordinator_grad_norm_mean": 0.5903988065871073,
+        "coordinator_parameter_delta": 0.33045533299446106,
+        "cuda_max_memory_allocated": 75827712,
+        "device": "cuda",
+        "gradient_accumulation_steps": 1,
+        "loss_backward_reaches_shared_agent": true,
+        "message_head_grad_norm_mean": 0.0,
+        "message_head_parameter_delta": 0.0,
+        "mixed_precision": "bf16",
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "bootstrap_95_ci_delta": [
+      -0.0625,
+      -0.0625
+    ],
+    "completed_seeds": [
+      0
+    ],
+    "mean_delta": -0.0625,
+    "mean_frozen_accuracy": 0.171875,
+    "mean_trainable_accuracy": 0.109375,
+    "n_completed": 1,
+    "n_failed_or_interrupted": 0,
+    "passed_stage38_full_hard_validation_gates": false,
+    "std_delta": 0.0,
+    "success_criteria": [
+      {
+        "criterion": "completed seeds >= 10",
+        "pass": false,
+        "value": 1
+      },
+      {
+        "criterion": "trainable beats frozen on at least 8/10 seeds",
+        "pass": false,
+        "value": 0
+      },
+      {
+        "criterion": "mean trainable-frozen delta >= +0.20",
+        "pass": false,
+        "value": -0.0625
+      },
+      {
+        "criterion": "bootstrap 95% CI lower bound for delta > +0.05",
+        "pass": false,
+        "value": [
+          -0.0625,
+          -0.0625
+        ]
+      },
+      {
+        "criterion": "trainable beats text-only, raw-latent, majority, candidate-order, and full-context baselines by mean accuracy",
+        "pass": false,
+        "value": {
+          "candidate_order_baseline": 0.125,
+          "majority_baseline": 0.125,
+          "raw_latent": 0.140625,
+          "single_agent_full_context": 0.109375,
+          "text_only": 0.125,
+          "trainable_mean": 0.109375
+        }
+      },
+      {
+        "criterion": "trainable beats every single-view baseline by mean accuracy",
+        "pass": false,
+        "value": {
+          "single_view_text_role_0": 0.125,
+          "single_view_text_role_1": 0.125,
+          "single_view_text_role_2": 0.125,
+          "single_view_text_role_3": 0.140625
+        }
+      },
+      {
+        "criterion": "primary corruption controls collapse near chance",
+        "pass": true,
+        "value": {
+          "candidate_evidence_mismatch": 0.140625,
+          "candidate_only": 0.03125,
+          "cross_example_view_bundle_shuffle": 0.09375,
+          "evidence_only_no_candidates": 0.125,
+          "hidden_states_shuffled_across_examples": 0.125,
+          "null_evidence_values": 0.09375,
+          "randomized_labels": 0.0,
+          "schema_only": 0.046875,
+          "schema_preserved_role_value_shuffle": 0.078125,
+          "value_shuffle_within_schema": 0.078125,
+          "view_masked_candidates_visible": 0.125
+        }
+      },
+      {
+        "criterion": "invariance controls preserve accuracy",
+        "pass": true,
+        "value": {
+          "candidate_order_shuffled_with_gold_remap": {
+            "mean_accuracy": 0.109375,
+            "mean_delta_from_trainable": 0.0
+          },
+          "physical_order_shuffled_roles_preserved": {
+            "mean_accuracy": 0.109375,
+            "mean_delta_from_trainable": 0.0
+          }
+        }
+      },
+      {
+        "criterion": "pre-run shortcut diagnostics and positive controls pass",
+        "pass": true,
+        "value": {
+          "all_role_oracle": true,
+          "candidate_metadata_only": true,
+          "candidate_only": true,
+          "evidence_only_no_candidates_baseline": true,
+          "lexical_overlap": true,
+          "null_evidence_values_baseline": true,
+          "positive_control_learnability": true,
+          "role_pair_only": true,
+          "schema_only_baseline": true,
+          "static_frequency": true,
+          "view_masked_candidates_visible": true
+        }
+      },
+      {
+        "criterion": "leakage audits pass",
+        "pass": true,
+        "value": "split_candidate_patch_hash_and_output"
+      },
+      {
+        "criterion": "shared trainable model receives gradients and changes",
+        "pass": true,
+        "value": "all_completed_seeds"
+      },
+      {
+        "criterion": "frozen comparator remains frozen",
+        "pass": true,
+        "value": "all_completed_seeds"
+      },
+      {
+        "criterion": "checkpoints saved for every seed and required method",
+        "pass": true,
+        "value": [
+          "trainable",
+          "frozen",
+          "randomized_labels",
+          "text_only",
+          "raw_latent",
+          "majority_baseline",
+          "candidate_order_baseline",
+          "single_agent_full_context",
+          "single_view_text_role_0",
+          "single_view_text_role_1",
+          "single_view_text_role_2",
+          "single_view_text_role_3",
+          "candidate_pair_compatibility_mlp",
+          "explicit_evidence_oracle"
+        ]
+      }
+    ]
+  }
+}

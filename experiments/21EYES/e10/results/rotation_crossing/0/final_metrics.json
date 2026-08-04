@@ -1,0 +1,685 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": true,
+    "crossing_kind": "rotation",
+    "crossing_points": [
+      1
+    ],
+    "crossing_variant": true,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ]
+    ],
+    "last_attention_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ]
+    ],
+    "note": "Private avenue streams use causal SDPA; E10 crossing is per-token shared-subspace feature mixing."
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e10\\configs\\rotation_crossing.yaml",
+  "controls": {
+    "avenue_controls": {
+      "avenue_order_shuffle": {
+        "accuracy": 0.07291666666666667,
+        "drop": -0.020833333333333336,
+        "examples": 96,
+        "loss": 4.005228698253632,
+        "tokens_per_sec": 54481.222422804785
+      },
+      "avenue_random": {
+        "accuracy": 0.03125,
+        "drop": 0.020833333333333336,
+        "examples": 96,
+        "loss": 5.290425658226013,
+        "tokens_per_sec": 59538.86451513735
+      },
+      "avenue_shuffle": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.03125,
+        "examples": 96,
+        "loss": 5.076578855514526,
+        "tokens_per_sec": 62363.66828743239
+      },
+      "avenue_zero": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.03125,
+        "examples": 96,
+        "loss": 4.807210326194763,
+        "tokens_per_sec": 59473.709935595325
+      },
+      "hidden_state_shuffle": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.8997192978858948,
+        "tokens_per_sec": 61945.00666858715
+      }
+    },
+    "base_accuracy": 0.052083333333333336,
+    "base_loss": 3.8996378779411316,
+    "crossing_controls": {
+      "crossing_identity": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.899881958961487,
+        "tokens_per_sec": 60346.876682444636
+      },
+      "crossing_point_zero_0": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.8996378779411316,
+        "tokens_per_sec": 58010.23204469334
+      },
+      "crossing_point_zero_1": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.897725462913513,
+        "tokens_per_sec": 59404.41849834502
+      },
+      "crossing_point_zero_2": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.8996378779411316,
+        "tokens_per_sec": 58904.00583499862
+      },
+      "crossing_point_zero_3": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.8996378779411316,
+        "tokens_per_sec": 64039.39090155934
+      },
+      "crossing_random": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.899251341819763,
+        "tokens_per_sec": 63299.35526748239
+      },
+      "crossing_shuffle": {
+        "accuracy": 0.041666666666666664,
+        "drop": 0.010416666666666671,
+        "examples": 96,
+        "loss": 3.8942667841911316,
+        "tokens_per_sec": 59018.01855644885
+      },
+      "crossing_zero": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.897725462913513,
+        "tokens_per_sec": 61079.478376601604
+      }
+    },
+    "examples": 96,
+    "full_minus_max_single_avenue": -0.052083333333333336,
+    "leave_one_avenue_out": {
+      "leave_one_0": {
+        "accuracy": 0.0625,
+        "drop": -0.010416666666666664,
+        "examples": 96,
+        "loss": 4.1531678438186646,
+        "tokens_per_sec": 62090.64789868287
+      },
+      "leave_one_1": {
+        "accuracy": 0.0625,
+        "drop": -0.010416666666666664,
+        "examples": 96,
+        "loss": 4.035451173782349,
+        "tokens_per_sec": 61813.04170117809
+      },
+      "leave_one_2": {
+        "accuracy": 0.07291666666666667,
+        "drop": -0.020833333333333336,
+        "examples": 96,
+        "loss": 3.932729125022888,
+        "tokens_per_sec": 57548.78158045325
+      },
+      "leave_one_3": {
+        "accuracy": 0.0625,
+        "drop": -0.010416666666666664,
+        "examples": 96,
+        "loss": 3.987030029296875,
+        "tokens_per_sec": 57237.61435253531
+      }
+    },
+    "max_single_avenue_accuracy": 0.10416666666666667,
+    "single_avenue": {
+      "single_avenue_0": {
+        "accuracy": 0.10416666666666667,
+        "drop": -0.052083333333333336,
+        "examples": 96,
+        "loss": 4.284352719783783,
+        "tokens_per_sec": 58338.963240843965
+      },
+      "single_avenue_1": {
+        "accuracy": 0.03125,
+        "drop": 0.020833333333333336,
+        "examples": 96,
+        "loss": 4.425028443336487,
+        "tokens_per_sec": 62459.939584018466
+      },
+      "single_avenue_2": {
+        "accuracy": 0.041666666666666664,
+        "drop": 0.010416666666666671,
+        "examples": 96,
+        "loss": 4.686767578125,
+        "tokens_per_sec": 59694.73488154403
+      },
+      "single_avenue_3": {
+        "accuracy": 0.052083333333333336,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.617131590843201,
+        "tokens_per_sec": 58749.98505669424
+      }
+    }
+  },
+  "custom_variant_rationale": null,
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.076171875,
+    "accuracy_by_distractor_count": {
+      "17+": 0.023391812865497075,
+      "5-8": 0.13829787234042554,
+      "9-16": 0.08906882591093117
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.07692307692307693,
+      "2": 0.047619047619047616,
+      "3": 0.0784313725490196,
+      "4+": 0.08602150537634409
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.07552083333333333,
+      "256": 0.078125
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.06504065040650407,
+      "multi_hop_lookup": 0.07142857142857142,
+      "password_overwrite": 0.07142857142857142,
+      "variable_shadowing": 0.0948905109489051
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 178.4908362735311,
+    "held_out_template_accuracy": 0.076171875,
+    "layers": {
+      "attention_entropy": [
+        3.0503551363945007,
+        4.0254267156124115,
+        3.991848275065422,
+        3.9536556266248226
+      ],
+      "avenue_diversity": [
+        0.9231719970703125,
+        0.9292831420898438,
+        0.9370193481445312,
+        0.9384841918945312
+      ],
+      "avenue_diversity_after_crossing": [
+        0.9231719970703125,
+        0.9314041137695312,
+        0.9370193481445312,
+        0.9384841918945312
+      ],
+      "avenue_diversity_before_crossing": [
+        0.9231719970703125,
+        0.9292831420898438,
+        0.9370193481445312,
+        0.9384841918945312
+      ],
+      "avenue_gate_entropy": [
+        1.383267192170024,
+        1.3833429273217916,
+        1.3838546369224787,
+        1.383651603013277
+      ],
+      "avenue_output_norm": [
+        10.64622862637043,
+        16.313410833477974,
+        20.455059051513672,
+        23.373323887586594
+      ],
+      "avenue_scale": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "avenue_usage_0": [
+        0.2465525157749653,
+        0.2487543763127178,
+        0.2528085757512599,
+        0.2542353773023933
+      ],
+      "avenue_usage_1": [
+        0.255270334193483,
+        0.25987888034433126,
+        0.24981711502186954,
+        0.24308766098693013
+      ],
+      "avenue_usage_2": [
+        0.2382784355431795,
+        0.23694219184108078,
+        0.24250959604978561,
+        0.24574599508196115
+      ],
+      "avenue_usage_3": [
+        0.259898733580485,
+        0.2544245752505958,
+        0.25486474484205246,
+        0.25693100737407804
+      ],
+      "crossing_activation_norm": [
+        0.0,
+        11.578719079494476,
+        0.0,
+        0.0
+      ],
+      "crossing_applied": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "crossing_contribution_norm": [
+        0.0,
+        1.1319691259413958,
+        0.0,
+        0.0
+      ],
+      "crossing_contribution_ratio": [
+        0.0,
+        0.06940787215717137,
+        0.0,
+        0.0
+      ],
+      "crossing_diversity": [
+        0.0,
+        1.0030364990234375,
+        0.0,
+        0.0
+      ],
+      "crossing_gamma": [
+        0.0,
+        0.07870766520500183,
+        0.0,
+        0.0
+      ],
+      "crossing_gamma_0": [
+        0.0,
+        0.09861289709806442,
+        0.0,
+        0.0
+      ],
+      "crossing_gamma_1": [
+        0.0,
+        0.06158582866191864,
+        0.0,
+        0.0
+      ],
+      "crossing_gamma_2": [
+        0.0,
+        0.07452178001403809,
+        0.0,
+        0.0
+      ],
+      "crossing_gamma_3": [
+        0.0,
+        0.08011017739772797,
+        0.0,
+        0.0
+      ],
+      "crossing_gate_entropy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "crossing_hidden_norm": [
+        10.64622862637043,
+        16.313410833477974,
+        20.455059051513672,
+        23.373323887586594
+      ],
+      "crossing_latent_pairwise_cosine": [
+        0.0,
+        -0.0030640624463558197,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_0_0": [
+        0.0,
+        0.974609375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_0_1": [
+        0.0,
+        -0.00614166259765625,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_0_2": [
+        0.0,
+        -0.022369384765625,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_0_3": [
+        0.0,
+        -0.006160736083984375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_1_0": [
+        0.0,
+        0.006320953369140625,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_1_1": [
+        0.0,
+        0.9267578125,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_1_2": [
+        0.0,
+        -0.006195068359375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_1_3": [
+        0.0,
+        -0.0285491943359375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_2_0": [
+        0.0,
+        0.031768798828125,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_2_1": [
+        0.0,
+        -0.0190582275390625,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_2_2": [
+        0.0,
+        0.921875,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_2_3": [
+        0.0,
+        0.0212249755859375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_3_0": [
+        0.0,
+        0.015625,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_3_1": [
+        0.0,
+        0.0008001327514648438,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_3_2": [
+        0.0,
+        -0.0289154052734375,
+        0.0,
+        0.0
+      ],
+      "crossing_mix_3_3": [
+        0.0,
+        0.95361328125,
+        0.0,
+        0.0
+      ],
+      "crossing_source_usage_0": [
+        0.0,
+        0.2570810317993164,
+        0.0,
+        0.0
+      ],
+      "crossing_source_usage_1": [
+        0.0,
+        0.2381894588470459,
+        0.0,
+        0.0
+      ],
+      "crossing_source_usage_2": [
+        0.0,
+        0.24483871459960938,
+        0.0,
+        0.0
+      ],
+      "crossing_source_usage_3": [
+        0.0,
+        0.25238704681396484,
+        0.0,
+        0.0
+      ],
+      "distractor_concentration": [
+        null,
+        0.155471949816274,
+        null,
+        null
+      ],
+      "effective_attended_tokens": [
+        33.35101714730263,
+        78.73360669612885,
+        76.38374257087708,
+        74.19316828250885
+      ],
+      "pairwise_avenue_cosine": [
+        0.07686614990234375,
+        0.07075166702270508,
+        0.06299352645874023,
+        0.06154298782348633
+      ],
+      "pairwise_avenue_cosine_after_crossing": [
+        0.07686614990234375,
+        0.06861543655395508,
+        0.06299352645874023,
+        0.06154298782348633
+      ],
+      "pairwise_avenue_cosine_before_crossing": [
+        0.07686614990234375,
+        0.07075166702270508,
+        0.06299352645874023,
+        0.06154298782348633
+      ],
+      "query_useful_cosine_after_crossing": [
+        null,
+        0.5472137570104678,
+        null,
+        null
+      ],
+      "query_useful_cosine_before_crossing": [
+        null,
+        0.5490238926995517,
+        null,
+        null
+      ],
+      "query_useful_cosine_delta": [
+        null,
+        -0.001810135689083836,
+        null,
+        null
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "useful_evidence_concentration": [
+        null,
+        0.015690346476731065,
+        null,
+        null
+      ],
+      "useful_top1_recall": [
+        null,
+        0.01953125,
+        null,
+        null
+      ],
+      "useful_top3_recall": [
+        null,
+        0.05859375,
+        null,
+        null
+      ],
+      "useful_vs_distractor_crossing_auc": [
+        null,
+        0.4667483396115131,
+        null,
+        null
+      ]
+    },
+    "loss": 4.108747493475676,
+    "peak_gpu_memory_mb": 479.68994140625,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.03125,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.439567595720291,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.1015625,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 3.7777557522058487,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "long": {
+        "accuracy": 0.078125,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.06810761988163,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "many_overwrite": {
+        "accuracy": 0.09375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.149559006094933,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 28558.533803764978,
+    "wall_clock_eval_seconds": 2.8684945999993943
+  },
+  "max_steps": 2500,
+  "parameter_count": 4036532,
+  "peak_gpu_memory_mb": 479.68994140625,
+  "seed": 0,
+  "train_examples": 80000,
+  "train_examples_per_sec": 306.8234545923187,
+  "train_loss_ema": 3.858475743859396,
+  "train_task_loss_ema": 3.858475267656873,
+  "train_tokens": 10240000,
+  "train_tokens_per_sec": 39273.40218781679,
+  "trainable_parameter_count": 4036532,
+  "variant": "rotation_crossing",
+  "wall_clock_train_seconds": 260.73625990000437
+}

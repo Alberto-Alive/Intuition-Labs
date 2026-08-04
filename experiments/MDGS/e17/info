@@ -1,0 +1,25 @@
+**E17 Summary**
+
+1. **Question**
+
+`e17` asked one question only: does certainty-modulated gradient updating improve learning dynamics relative to the `e16` baseline.
+
+2. **Method**
+
+`e17` reused the `e16` model, forward gate, live bank, data, seeds, optimizer, and training loop, with one change only: backward gradients were modulated using per-example loss and live certainty through a tensor hook on the pre-gate hidden activations. The modulation was batch-normalized within each mini-batch and reduced to the neutral case during the fill period so overall gradient magnitude stayed close to the `e16` baseline. The original primary metric was normalized area under the training accuracy curve across epochs, compared seed-by-seed against matched `e16`.
+
+3. **Result**
+
+`E17 INCONCLUSIVE — metric confound.` The original primary metric, normalized area under the training accuracy curve, is confounded by the fact that `e17` trains for roughly twice as many epochs as `e16` due to slower loss convergence, not faster learning. Both models reach `0.99` training accuracy at the same epoch in all 5 seeds. The area difference is entirely explained by additional perfect-accuracy epochs in `e17`, not by faster learning.
+
+4. **What The Data Did Show**
+
+The gradient modulation does change training dynamics. `e17` reaches the `0.99` training-accuracy threshold at the same epoch as `e16`, but then converges more slowly in loss, runs for many more epochs, and stops at a higher final loss floor. This is a real effect, but it is not the intended effect: the modulation is keeping the loss moving longer without improving how quickly the model learns the training distribution.
+
+5. **What This Suggests For E18**
+
+This is not a failure of the idea. It is a failure of the metric and a signal that the modulation as currently designed, batch-normalized certainty weighting applied uniformly to all layers, is slowing convergence rather than accelerating learning in unfamiliar territory. The gradient modulation mechanism needs redesign before the backward-pass claim can be tested. Specifically, the modulation should only apply to examples in genuinely uncertain territory, low-certainty inputs, rather than to all examples with batch-normalized scaling. Applying it to all examples, including high-certainty training examples, may be slowing convergence on the already-learned parts of the distribution.
+
+6. **Preregistered Next Question For E18**
+
+`e18` tests a targeted version of gradient modulation that applies only to low-certainty examples, leaving high-certainty example gradients unchanged. That is the version that is actually faithful to the architectural claim.

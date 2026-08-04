@@ -1,0 +1,35 @@
+configs:
+  - config_id: c52aeea0dd340c0d
+    architecture_name: e4_collab_clean_qkv_b_candidate_summary_00
+    architecture_family: Current-to-Cache Query, Cache-to-WDA-KV
+    collaborative_guidance_type: current_to_cache_query
+    variant: candidate_summary
+    held_out_template_dev_accuracy: 0.721667
+    capacity_C: 128
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "c52aeea0dd340c0d"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "B"
+      family_name: "Current-to-Cache Query, Cache-to-WDA-KV"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "current_to_cache_query"
+      mod_k: true
+      mod_q: false
+      mod_v: true
+      mutation_description: "collaborative activation-guided Clean-QKV variant"
+      name: "e4_collab_clean_qkv_b_candidate_summary_00"
+      parent_config_id: "036872b917847147"
+      recency_confidence: false
+      strength: 1.58
+      support_contradiction: true
+      trealized_mode: "none"
+      typed_activation_cache: true
+      variant: "candidate_summary"
+      wda_scope: "kv"

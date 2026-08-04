@@ -1,0 +1,657 @@
+{
+  "accepted_candidate_rows": 4,
+  "benchmark": "stage6b1_candidate_generation",
+  "benchmark_dataset_audit": {
+    "benchmark_jsonl": null,
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "error": null,
+    "loaded": true,
+    "missing_requested_task_ids": [],
+    "requested_task_ids": [
+      "psf__requests-1766",
+      "pydata__xarray-6721"
+    ],
+    "rows": 500,
+    "selected_task_ids": [
+      "psf__requests-1766",
+      "pydata__xarray-6721"
+    ],
+    "split": "test"
+  },
+  "candidate_count_k": 8,
+  "candidate_diversity_by_normalized_patch_edit_distance": {
+    "mean_pairwise_distance": 0.6978310265521818,
+    "method": "1 - SequenceMatcher ratio on normalized patch text",
+    "min_pairwise_distance": 0.3591160220994475,
+    "per_task": [
+      {
+        "candidate_count": 3,
+        "instance_id": "psf__requests-1766",
+        "mean_pairwise_distance": 0.6978310265521818,
+        "min_pairwise_distance": 0.3591160220994475,
+        "pair_count": 3
+      },
+      {
+        "candidate_count": 1,
+        "instance_id": "pydata__xarray-6721",
+        "mean_pairwise_distance": 0.0,
+        "min_pairwise_distance": 0.0,
+        "pair_count": 0
+      }
+    ],
+    "tasks_checked": 2
+  },
+  "candidate_file_save_audit": {
+    "candidate_patch_root": "results\\stage6b1_candidate_patches",
+    "jsonl_output_exists": true,
+    "jsonl_output_rows": 4,
+    "missing_trajectories": [],
+    "passes": true,
+    "trajectory_root": "results\\stage6b1_trajectories"
+  },
+  "candidate_schema_audit": {
+    "passes": true,
+    "required_keys": [
+      "candidate_id",
+      "generator_name",
+      "instance_id",
+      "model_name_or_path",
+      "model_patch",
+      "seed",
+      "source_visible_to_selector",
+      "temperature",
+      "trajectory_path"
+    ],
+    "rows": [
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-00-cbd1f97b6a26",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-01-a81522e0d838",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-02-5d854939747a",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6721-stage6b1-candidate-00-68871a637add",
+        "missing": []
+      }
+    ]
+  },
+  "candidates_per_task_distribution": {
+    "1": 1,
+    "3": 1
+  },
+  "created_at_utc": "2026-05-16T18:12:34.536208+00:00",
+  "dataset_name": "princeton-nlp/SWE-bench_Verified",
+  "duplicate_patch_hash_audit": {
+    "duplicate_attempts_before_selection": 0,
+    "duplicate_rate_before_selection": 0.0,
+    "duplicates_excluded": [],
+    "duplicates_excluded_total": 0,
+    "passes": true,
+    "threshold": 0.2,
+    "total_attempts_before_selection": 14
+  },
+  "empty_patch_audit": {
+    "passes": true,
+    "rows": [],
+    "total": 0
+  },
+  "environment": {
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "mini_swe_agent_available": false,
+    "packages": {
+      "datasets": "4.8.2",
+      "mini-swe-agent": "not found",
+      "numpy": "2.4.3",
+      "pytest": "8.4.2",
+      "swebench": "4.1.0"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.0",
+    "runner_argv": [
+      "W:\\HocusPocus\\armyofbots - m4 but picpalac choose\\src\\experiments\\run_stage6b1_candidate_generation.py",
+      "--dataset-name",
+      "princeton-nlp/SWE-bench_Verified",
+      "--split",
+      "test",
+      "--n-tasks",
+      "10",
+      "--task-id",
+      "psf__requests-1766",
+      "--task-id",
+      "pydata__xarray-6721",
+      "--include-default-hf-public",
+      "--source-root",
+      "results/stage6b0_public_sources",
+      "--output",
+      "results/stage6b1_generated_candidates.jsonl",
+      "--audit",
+      "results/stage6b1_generation_audit.json",
+      "--report",
+      "reports/STAGE6B1_CANDIDATE_GENERATION.md"
+    ],
+    "split": "test"
+  },
+  "exact_reference_patch_hash_audit": {
+    "accepted_hits": [],
+    "passes": true,
+    "source_hits_excluded": [],
+    "source_hits_excluded_total": 0
+  },
+  "generation_build_audit": {
+    "accepted_candidate_rows": 4,
+    "attempt_rows_for_selected_tasks": 14,
+    "attempt_rows_loaded": 14,
+    "candidate_diversity_by_normalized_patch_edit_distance": {
+      "mean_pairwise_distance": 0.6978310265521818,
+      "method": "1 - SequenceMatcher ratio on normalized patch text",
+      "min_pairwise_distance": 0.3591160220994475,
+      "per_task": [
+        {
+          "candidate_count": 3,
+          "instance_id": "psf__requests-1766",
+          "mean_pairwise_distance": 0.6978310265521818,
+          "min_pairwise_distance": 0.3591160220994475,
+          "pair_count": 3
+        },
+        {
+          "candidate_count": 1,
+          "instance_id": "pydata__xarray-6721",
+          "mean_pairwise_distance": 0.0,
+          "min_pairwise_distance": 0.0,
+          "pair_count": 0
+        }
+      ],
+      "tasks_checked": 2
+    },
+    "candidate_order_randomizable": true,
+    "candidates_per_task_distribution": {
+      "1": 1,
+      "3": 1
+    },
+    "duplicate_patch_hash_audit": {
+      "duplicate_attempts_before_selection": 0,
+      "duplicate_rate_before_selection": 0.0,
+      "duplicates_excluded": [],
+      "duplicates_excluded_total": 0,
+      "passes": true,
+      "threshold": 0.2,
+      "total_attempts_before_selection": 14
+    },
+    "empty_patch_audit": {
+      "passes": true,
+      "rows": [],
+      "total": 0
+    },
+    "exact_reference_patch_hash_audit": {
+      "accepted_hits": [],
+      "passes": true,
+      "source_hits_excluded": [],
+      "source_hits_excluded_total": 0
+    },
+    "generated_candidate_files_saved": true,
+    "generator_source_distribution": {
+      "by_generator_name": {
+        "qwen/qwen3-coder-next": 4
+      },
+      "by_model_name_or_path": {
+        "qwen/qwen3-coder-next": 4
+      }
+    },
+    "invalid_diff_audit": {
+      "passes": false,
+      "rows": [
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "b98ae4848f5e5e418436839a5c92cc60cf10b339aa80053db0066a333ac9bd01",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_00_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "c800d55424f80e7b8ec07af5f97f353461912af71015f19306f150c9166a7827",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_01_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "7a6f8ec6d999adadb3eb32b68cfb71ccdef023ef5757687d727ffb69ae09f92c",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_02_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "014a0ef0a3d589bdfbc2918467add2d8fc22c49f2f9fe43fc738126923beac02",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_03_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "56ad6c4c1fd14038eb77ecebf79167f92638da0ac2d47178123d330685f7af28",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_04_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "45ee5638eb8e7ceda1adda3f54e2bc9ac5e1a3cb6c1140c065cf85cf9516719c",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_08_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "psf__requests-1766",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "ad41262c709dbe331775729a660e6220052bf885a9f72247687646a53cdda251",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 32,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_09_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "pydata__xarray-6721",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "cad77e2e586ab39a0f8d5845088b41b6315ac2009af257760faaef7c871e1dac",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 36,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_00_qwen_qwen3-coder-next_0c07fb863d9f.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "pydata__xarray-6721",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "39575cc78a90efff5cb3b0b296a01bafcd54c0ec334c3cda0344c62ba80ca857",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 36,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_02_qwen_qwen3-coder-next_0c07fb863d9f.json"
+        },
+        {
+          "config_name": "hf_message_trajectory",
+          "generator_name": "qwen/qwen3-coder-next",
+          "instance_id": "pydata__xarray-6721",
+          "model_name_or_path": "qwen/qwen3-coder-next",
+          "patch_hash": "e8128d03aa71246a658126aeaddd0170f3feb06a47eb89647feed703093d5bbc",
+          "seed": null,
+          "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "source_row_index": 36,
+          "temperature": null,
+          "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_03_qwen_qwen3-coder-next_0c07fb863d9f.json"
+        }
+      ],
+      "total": 10
+    },
+    "missing_candidate_fabrication_used": false,
+    "near_reference_similarity_audit": {
+      "hits": [],
+      "hits_total": 0,
+      "passes": true,
+      "threshold": 0.95
+    },
+    "raw_preserving_expansion_used": false,
+    "selected_source_rows": [
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-00-cbd1f97b6a26",
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "output_index": 0,
+        "patch_hash": "cbd1f97b6a26008c06db06860ecc740815f6f0d3734237d9536b3fec6f0f43e8",
+        "pre_shuffle_index": 0,
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_05_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-01-a81522e0d838",
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "output_index": 1,
+        "patch_hash": "a81522e0d8381f438aaaec199ea79736063f3c027598b8c79eefcad0f5dbcf4d",
+        "pre_shuffle_index": 1,
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_06_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-02-5d854939747a",
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "output_index": 2,
+        "patch_hash": "5d854939747adc00cb9fa48e29068f296b4050f5d8988255d7be6d2ca2ec28da",
+        "pre_shuffle_index": 2,
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_07_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6721-stage6b1-candidate-00-68871a637add",
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "pydata__xarray-6721",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "output_index": 0,
+        "patch_hash": "68871a637add02ff01bf2ab7ec0ed0812c74d630d43a0ddc14247b0f515b9a73",
+        "pre_shuffle_index": 0,
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 36,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_01_qwen_qwen3-coder-next_0c07fb863d9f.json"
+      }
+    ],
+    "source_visible_to_selector_all_false": true,
+    "tasks_attempted": 2,
+    "tasks_with_any_generated_candidate": 2,
+    "tasks_with_at_least_k_unique_generated_candidate_ids": [],
+    "tasks_with_at_least_k_unique_generated_candidates": 0,
+    "unique_candidates_per_task": {
+      "psf__requests-1766": 3,
+      "pydata__xarray-6721": 1
+    }
+  },
+  "generator_source_distribution": {
+    "by_generator_name": {
+      "qwen/qwen3-coder-next": 4
+    },
+    "by_model_name_or_path": {
+      "qwen/qwen3-coder-next": 4
+    }
+  },
+  "invalid_diff_audit": {
+    "passes": false,
+    "rows": [
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "b98ae4848f5e5e418436839a5c92cc60cf10b339aa80053db0066a333ac9bd01",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_00_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "c800d55424f80e7b8ec07af5f97f353461912af71015f19306f150c9166a7827",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_01_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "7a6f8ec6d999adadb3eb32b68cfb71ccdef023ef5757687d727ffb69ae09f92c",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_02_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "014a0ef0a3d589bdfbc2918467add2d8fc22c49f2f9fe43fc738126923beac02",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_03_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "56ad6c4c1fd14038eb77ecebf79167f92638da0ac2d47178123d330685f7af28",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_04_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "45ee5638eb8e7ceda1adda3f54e2bc9ac5e1a3cb6c1140c065cf85cf9516719c",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_08_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "psf__requests-1766",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "ad41262c709dbe331775729a660e6220052bf885a9f72247687646a53cdda251",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 32,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_09_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "pydata__xarray-6721",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "cad77e2e586ab39a0f8d5845088b41b6315ac2009af257760faaef7c871e1dac",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 36,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_00_qwen_qwen3-coder-next_0c07fb863d9f.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "pydata__xarray-6721",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "39575cc78a90efff5cb3b0b296a01bafcd54c0ec334c3cda0344c62ba80ca857",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 36,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_02_qwen_qwen3-coder-next_0c07fb863d9f.json"
+      },
+      {
+        "config_name": "hf_message_trajectory",
+        "generator_name": "qwen/qwen3-coder-next",
+        "instance_id": "pydata__xarray-6721",
+        "model_name_or_path": "qwen/qwen3-coder-next",
+        "patch_hash": "e8128d03aa71246a658126aeaddd0170f3feb06a47eb89647feed703093d5bbc",
+        "seed": null,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+        "source_row_index": 36,
+        "temperature": null,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_03_qwen_qwen3-coder-next_0c07fb863d9f.json"
+      }
+    ],
+    "total": 10
+  },
+  "near_reference_similarity_audit": {
+    "hits": [],
+    "hits_total": 0,
+    "passes": true,
+    "threshold": 0.95
+  },
+  "no_final_model_claim_made": true,
+  "official_harness_evaluation_executed": false,
+  "output_path": "results\\stage6b1_generated_candidates.jsonl",
+  "quality_gates": {
+    "all_generated_candidate_files_saved": true,
+    "at_least_20_tasks_with_k8_unique_generated_candidates": false,
+    "at_least_25_tasks_attempted": false,
+    "candidate_generation_quality_gates_pass": false,
+    "candidate_order_randomizable": true,
+    "duplicate_rate_below_threshold": true,
+    "no_exact_reference_patch_hits": true,
+    "no_final_model_claim_made": true,
+    "no_missing_candidate_fabrication": true,
+    "no_raw_preserving_expansion": true,
+    "selector_training_executed": false
+  },
+  "raw_preserving_expansion_audit": {
+    "missing_candidate_fabrication_used": false,
+    "passes": true,
+    "raw_preserving_expansion_used": false
+  },
+  "requested_tasks": 10,
+  "seed": 606281,
+  "selector_training_executed": false,
+  "source_generation_audit": {
+    "errors": [
+      {
+        "candidate_attempts": 0,
+        "error": "DatasetGenerationError: An error occurred while generating the dataset",
+        "loaded": false,
+        "records": 0,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory"
+      }
+    ],
+    "sources": [
+      {
+        "candidate_attempts": 0,
+        "error": "DatasetGenerationError: An error occurred while generating the dataset",
+        "loaded": false,
+        "records": 0,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory"
+      },
+      {
+        "candidate_attempts": 14,
+        "error": null,
+        "loaded": true,
+        "records": 55,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories"
+      },
+      {
+        "candidate_attempts": 0,
+        "error": null,
+        "loaded": true,
+        "records": 200,
+        "source_name": "hf:antieval/swebench-trajectories"
+      },
+      {
+        "command_templates": 0,
+        "configs": [],
+        "enabled": false,
+        "error": null,
+        "installed": false,
+        "records": 0,
+        "source_name": "mini-swe-agent"
+      },
+      {
+        "command_templates": 0,
+        "error": null,
+        "models": [],
+        "records": 0,
+        "seeds": [],
+        "source_name": "api-generator-wrapper",
+        "temperatures": []
+      }
+    ]
+  },
+  "split": "test",
+  "tasks_attempted": 2,
+  "tasks_with_at_least_k_unique_generated_candidates": 0,
+  "trajectory_path_audit": {
+    "missing_total": 0,
+    "passes": true,
+    "rows": [
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-00-cbd1f97b6a26",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_05_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-01-a81522e0d838",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_06_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "psf__requests-1766-stage6b1-candidate-02-5d854939747a",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\psf__requests-1766\\000032_07_qwen_qwen3-coder-next_4fe15f6f83f8.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6721-stage6b1-candidate-00-68871a637add",
+        "exists": true,
+        "trajectory_path": "results\\stage6b1_trajectories\\hf_messages\\pydata__xarray-6721\\000036_01_qwen_qwen3-coder-next_0c07fb863d9f.json"
+      }
+    ]
+  }
+}

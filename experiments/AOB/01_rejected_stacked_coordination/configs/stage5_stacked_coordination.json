@@ -1,0 +1,90 @@
+{
+  "output_path": "results/stage5_stacked_coordination_results.json",
+  "audit_log_path": "results/stage5_stacked_coordination_audit.jsonl",
+  "error_cases_path": "results/stage5_stacked_coordination_error_cases.jsonl",
+  "attention_summaries_path": "results/stage5_stacked_coordination_attention_summaries.jsonl",
+  "compute_metrics_path": "results/stage5_stacked_coordination_compute_metrics.json",
+  "report_path": "reports/STAGE5_STACKED_COORDINATION_FULL_METRICS.md",
+  "device": "cuda",
+  "require_cuda": true,
+  "cuda_memory_budget_gb": 16.0,
+  "architecture": "stage5_stacked_candidate_token_direct",
+  "architecture_changes": "bounded_depth_scaling_only_before_final_selection",
+  "dataset": "real_import_restore_candidate_balanced_34b",
+  "near_chance_max": 0.18,
+  "static_frequency_max": 0.20,
+  "oracle_min": 0.90,
+  "positive_control_min": 0.50,
+  "invariance_tolerance": 0.08,
+  "stop_on_preflight_failure": true,
+  "stop_on_failed_seed": false,
+  "include_optional_bounded_variants": false,
+  "error_cases_per_bucket": 12,
+  "stage": {
+    "name": "stage5_stacked_coordination",
+    "n_train": 512,
+    "n_dev": 256,
+    "n_test": 256,
+    "seeds": [0, 1, 2],
+    "epochs": 50,
+    "patience": 6,
+    "hidden_dim": 64,
+    "tiny_layers": 3,
+    "tiny_ff_dim": 128,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": "bf16"
+  },
+  "protocol": {
+    "cheap": {
+      "n_train": 512,
+      "n_dev": 256,
+      "n_test": 256,
+      "seeds": [0, 1, 2]
+    },
+    "medium": {
+      "n_train": 1024,
+      "n_dev": 512,
+      "n_test": 512,
+      "seeds": [0, 1, 2, 3, 4]
+    },
+    "final": {
+      "n_train": 2048,
+      "n_dev": 512,
+      "n_test": 1024,
+      "seeds": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+    }
+  },
+  "dataset_config": {
+    "source_roots": ["src", "tests"],
+    "max_files": 40,
+    "snippet_radius": 2,
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "generator_version": "real_import_restore_candidate_balanced_34b_stage5_stacked_coordination",
+    "candidate_representation": "balanced_categories_v3"
+  },
+  "dataset_diagnostics": {
+    "baseline_epochs": 4,
+    "baseline_patience": 2,
+    "baseline_lr": 0.002,
+    "baseline_feature_dim": 128,
+    "single_view_epochs": 4,
+    "single_view_patience": 2,
+    "single_view_lr": 0.002,
+    "single_view_feature_dim": 128
+  },
+  "positive_control": {
+    "epochs": 8,
+    "patience": 3,
+    "lr": 0.002,
+    "hidden_dims": [64],
+    "batch_size": 32
+  },
+  "gpu_safety": {
+    "batch_size_fallbacks": [32, 16, 8],
+    "effective_batch_size": 32,
+    "clear_cuda_cache_between_seeds": true,
+    "log_max_cuda_memory_per_seed": true
+  }
+}

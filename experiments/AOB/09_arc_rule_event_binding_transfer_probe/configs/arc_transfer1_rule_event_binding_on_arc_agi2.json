@@ -1,0 +1,36 @@
+{
+  "device": "cpu",
+  "seeds": [0, 1],
+  "run_n16_if_n8_works": true,
+  "dataset": {
+    "dataset_root": "W:\\HocusPocus\\ARC-AGI-2",
+    "data_split": "training",
+    "num_candidates": 8,
+    "train_tasks": 64,
+    "dev_tasks": 16,
+    "test_tasks": 16,
+    "include_evaluation": false,
+    "max_train_pairs": 6,
+    "max_grid_size": 30,
+    "negative_difficulty": "mixed_hard"
+  },
+  "candidate_generator": {
+    "num_candidates": 8,
+    "natural_candidate_count": 8,
+    "max_programs": 18,
+    "mutation_rounds": 2,
+    "refinement_branching": 2,
+    "refinement_iterations": 1,
+    "include_output_grid_mutations": true,
+    "include_symbolic_programs": true,
+    "select_by_train_fit_before_shuffle": true
+  },
+  "training": {
+    "epochs": 4,
+    "batch_size": 32,
+    "lr": 0.004,
+    "weight_decay": 0.0,
+    "patience": 2,
+    "gradient_clip_norm": 1.0
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "alpha": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "attention_kernel_summary": {
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      "sdpa_causal",
+      "gathered_block_sparse",
+      "gathered_block_sparse",
+      "gathered_block_sparse"
+    ],
+    "last_attention_paths": [
+      "manual_dense",
+      "gathered_block_sparse",
+      "gathered_block_sparse",
+      "gathered_block_sparse"
+    ],
+    "note": "PyTorch does not expose the exact selected SDPA backend here; flags show enabled backend families and paths show whether SDPA was requested."
+  },
+  "beta": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e6\\configs\\fused_routing_v2\\block_route_topk_b32_k4.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.27890625,
+    "accuracy_by_distractor_count": {
+      "17+": 0.14092140921409213,
+      "5-8": 0.484251968503937,
+      "9-16": 0.2770167427701674
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.0851063829787234,
+      "2": 0.1746031746031746,
+      "3": 0.3041825095057034,
+      "4+": 0.318941504178273
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.2682291666666667,
+      "256": 0.31640625,
+      "512": 0.2734375
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.25,
+      "multi_hop_lookup": 0.2652439024390244,
+      "password_overwrite": 0.2921686746987952,
+      "variable_shadowing": 0.3108108108108108
+    },
+    "examples": 1280,
+    "examples_per_sec": 71.15347430862484,
+    "layers": {
+      "alpha": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "attention_entropy": [
+        2.3616475045681,
+        2.0250921964645388,
+        2.214988973736763,
+        1.7432878881692886
+      ],
+      "beta": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "distractor_outranks_useful": [
+        null,
+        0.8546875,
+        0.89453125,
+        0.87734375
+      ],
+      "distractor_token_gate_norm_rank": [
+        null,
+        0.6152960856619757,
+        0.5171679675142513,
+        0.5312209913274273
+      ],
+      "distractor_token_gate_rank": [
+        null,
+        82.26696905940771,
+        65.69099138900637,
+        70.14714335873722
+      ],
+      "distractor_token_route_norm_rank": [
+        null,
+        0.6152960856619757,
+        0.5171679675142513,
+        0.5312209913274273
+      ],
+      "distractor_token_route_rank": [
+        null,
+        82.26696905940771,
+        65.69099138900637,
+        70.14714335873722
+      ],
+      "effective_attended_blocks": [
+        1.9927951514720916,
+        1.9592975854873658,
+        1.9724252671003342,
+        1.769139677286148
+      ],
+      "effective_attended_tokens": [
+        34.913935613632205,
+        12.964785015583038,
+        19.972833395004272,
+        14.62256691455841
+      ],
+      "gate_bias": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_max": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_mean": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_min": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_open_rate": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "route_entropy": [
+        null,
+        4.28778504729271,
+        4.287732219696045,
+        4.287538176774978
+      ],
+      "route_score_mean": [
+        null,
+        -0.024024224397726356,
+        -0.008451372006675228,
+        -0.00782273473814712
+      ],
+      "route_score_std": [
+        null,
+        0.03377829249948263,
+        0.037786835245788096,
+        0.04920731205493212
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_block_count": [
+        null,
+        3.3375,
+        3.3375,
+        3.3375
+      ],
+      "selected_token_count": [
+        null,
+        91.3,
+        91.3,
+        91.3
+      ],
+      "useful_token_gate_norm_rank": [
+        null,
+        0.5526915484268102,
+        0.517488381358271,
+        0.538517108267115
+      ],
+      "useful_token_gate_rank": [
+        null,
+        74.814453125,
+        66.384375,
+        72.13984375
+      ],
+      "useful_token_route_norm_rank": [
+        null,
+        0.5526915484268102,
+        0.517488381358271,
+        0.538517108267115
+      ],
+      "useful_token_route_rank": [
+        null,
+        74.814453125,
+        66.384375,
+        72.13984375
+      ],
+      "useful_top10_recall": [
+        null,
+        0.037109375,
+        0.06875,
+        0.110546875
+      ],
+      "useful_top1_recall": [
+        null,
+        0.000390625,
+        0.00390625,
+        0.0078125
+      ],
+      "useful_top3_recall": [
+        null,
+        0.005859375,
+        0.01328125,
+        0.02734375
+      ],
+      "useful_top5_recall": [
+        null,
+        0.016796875,
+        0.02578125,
+        0.048828125
+      ],
+      "useful_vs_distractor_auc": [
+        null,
+        0.6091214429659886,
+        0.49586182707280385,
+        0.49940691064402926
+      ]
+    },
+    "loss": 3.2482680797576906,
+    "peak_gpu_memory_mb": 4162.22998046875,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.125,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 256,
+        "loss": 4.60561466217041,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.35546875,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 256,
+        "loss": 2.521221160888672,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.32421875,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 2.952609062194824,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.31640625,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 2.826866865158081,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "seq_len_512": {
+        "accuracy": 0.2734375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 3.335028648376465,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 512
+      }
+    },
+    "tokens": 294912,
+    "tokens_per_sec": 16393.760480707162,
+    "wall_clock_eval_seconds": 17.989283199975034
+  },
+  "max_steps": 5000,
+  "parameter_count": 920576,
+  "peak_gpu_memory_mb": 4162.22998046875,
+  "seed": 0,
+  "train_examples": 320000,
+  "train_examples_per_sec": 353.8861038374445,
+  "train_loss_ema": 2.6107191681114315,
+  "train_tokens": 40960000,
+  "train_tokens_per_sec": 45297.4212911929,
+  "trainable_parameter_count": 920576,
+  "variant": "block_route_topk_b32_k4",
+  "wall_clock_train_seconds": 904.2457348000025
+}

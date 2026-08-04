@@ -1,0 +1,57 @@
+{
+  "out": "transformer_uncertainty/runs/aux_validation_gpu_20260508",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "models": [
+    "baseline",
+    "aux"
+  ],
+  "ablations": [
+    "aux_no_mdgs",
+    "aux_random_mdgs",
+    "aux_shuffled_mdgs",
+    "aux_detached_mdgs",
+    "aux_frozen_mdgs"
+  ],
+  "references": [],
+  "ood_modes": [
+    "easy",
+    "medium",
+    "hard",
+    "support_mismatch"
+  ],
+  "train_ood_mode": "easy",
+  "resume": true,
+  "device": "cuda",
+  "num_threads": 1,
+  "epochs": 20,
+  "batch_size": 128,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "grad_clip": 5.0,
+  "aux_warmup_epochs": 2,
+  "n_train": 1200,
+  "n_val": 400,
+  "n_test": 400,
+  "ood_ratio_train": 0.25,
+  "seq_len": 18,
+  "vocab_size": 64,
+  "d_model": 64,
+  "nhead": 4,
+  "num_layers": 2,
+  "num_refine_layers": 1,
+  "dim_feedforward": 128,
+  "dropout": 0.05,
+  "num_views": 6,
+  "num_prototypes": 16
+}

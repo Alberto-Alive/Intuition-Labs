@@ -1,0 +1,72 @@
+{
+  "output_path": "results/validation_parity_cpu.json",
+  "report_path": "reports/VALIDATION_PARITY_CPU.md",
+  "device": "cpu",
+  "deterministic": true,
+  "cuda_memory_budget_gb": 16.0,
+  "seeds": [0],
+  "dataset": {
+    "n_train": 240,
+    "n_dev": 80,
+    "n_test": 80,
+    "num_tasks": 4,
+    "num_classes": 4,
+    "feature_mod": 997
+  },
+  "agents": {
+    "n_agents": 5,
+    "hidden_dim": 16,
+    "num_layers": 3,
+    "activation_signal_strength": 1.25,
+    "activation_noise": 0.85,
+    "confidence_noise": 0.28,
+    "hidden_label_signal_strength": 0.0,
+    "task_signal_strength": 1.0,
+    "agent_signal_strength": 1.0,
+    "agent_quality_signal_strength": 0.25,
+    "reasoning_mode_signal_strength": 0.35,
+    "stuckness_signal_strength": 0.25
+  },
+  "label_reduced_agents": {
+    "hidden_label_signal_strength": 0.0,
+    "task_signal_strength": 0.0,
+    "agent_signal_strength": 1.0,
+    "agent_quality_signal_strength": 0.35,
+    "reasoning_mode_signal_strength": 0.45,
+    "stuckness_signal_strength": 0.35
+  },
+  "strict_dataset": {
+    "n_train": 240,
+    "n_dev": 80,
+    "n_test": 80,
+    "num_classes": 4,
+    "num_tasks": 1,
+    "n_evidence_bits": 4
+  },
+  "strict_agents": {
+    "n_agents": 5,
+    "hidden_dim": 16,
+    "num_layers": 3,
+    "evidence_signal_strength": 1.35,
+    "uncertainty_signal_strength": 0.45,
+    "reasoning_mode_signal_strength": 0.35,
+    "activation_noise": 0.65,
+    "confidence_noise": 0.20
+  },
+  "training": {
+    "epochs": 8,
+    "batch_size": 128,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 4,
+    "hidden_dims": [48, 24],
+    "pca_components": 8,
+    "clusters": 6
+  },
+  "controls": ["none"],
+  "run_diagnostics": true,
+  "run_label_signal_ablation": true,
+  "run_strict_coordination": true,
+  "run_randomized_label_leakage": false,
+  "run_telemetry_channel_ablations": false
+}

@@ -1,0 +1,45 @@
+{
+  "output_path": "results/shared_weight_cloned_agent_results.json",
+  "audit_log_path": "results/shared_weight_cloned_agent_audit.jsonl",
+  "report_path": "reports/REPORT.md",
+  "device": "cpu",
+  "deterministic": true,
+  "seeds": [0, 1, 2],
+  "strict_dataset": {
+    "n_train": 512,
+    "n_dev": 256,
+    "n_test": 512,
+    "num_classes": 4,
+    "num_tasks": 1,
+    "n_evidence_bits": 4
+  },
+  "agent": {
+    "n_agents": 4,
+    "hidden_dim": 16,
+    "num_layers": 1,
+    "num_heads": 2,
+    "ff_dim": 64,
+    "evidence_embedding_scale": 0.001
+  },
+  "coordinator": {
+    "num_layers": 1,
+    "num_heads": 2,
+    "ff_dim": 64
+  },
+  "training": {
+    "epochs": 60,
+    "batch_size": 128,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 60
+  },
+  "probe_training": {
+    "epochs": 20,
+    "batch_size": 128,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "hidden_dims": [32],
+    "pca_components": 8
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "current_only_no_memory_accuracy": 0.11538461538461539,
+  "dataset_audit": {
+    "clean_qkv_cases": [
+      "current_input_overrides_memory",
+      "memory_irrelevant",
+      "memory_misleading",
+      "memory_required",
+      "memory_stale",
+      "multiple_old_activations_combine",
+      "old_activation_contradicts_one_candidate",
+      "old_activation_supports_one_candidate"
+    ],
+    "e3_1_stress_cases": [
+      "current_input_contains_exception_overriding_activation_cache",
+      "current_input_overrides_memory",
+      "memory_irrelevant",
+      "memory_misleading",
+      "memory_required",
+      "multiple_old_activations_combine",
+      "old_activation_contradicts_one_candidate",
+      "old_activation_supports_one_candidate",
+      "old_activation_supports_one_candidate_but_stale_current_input_invalidates_it",
+      "stale_memory"
+    ],
+    "e3_task_families": [
+      "compositional_role_evidence",
+      "conflict_resolution",
+      "constraint_satisfaction",
+      "irrelevant_memory_distractor_history",
+      "memory_dependent_recall",
+      "multi_hop_binding",
+      "needle_binding",
+      "sparse_relevant_evidence",
+      "stale_memory_update",
+      "support_vs_contradiction_memory"
+    ],
+    "e4_stress_cases": [
+      "cache_guidance_changes_current_attention_distribution",
+      "current_activations_disambiguate_cache_stream",
+      "current_candidate_must_select_contradiction_activation",
+      "current_candidate_must_select_support_activation",
+      "current_input_overrides_activation_cache",
+      "current_query_must_select_relevant_past_activation",
+      "irrelevant_activation_cache_should_be_ignored",
+      "memory_independent_examples_not_harmed_by_cache_guidance",
+      "misleading_activation_cache_should_be_ignored",
+      "multiple_past_activations_must_combine",
+      "stale_contradiction_must_be_ignored",
+      "stale_support_must_be_ignored",
+      "support_and_contradiction_both_present"
+    ],
+    "failures": [],
+    "passes": true,
+    "summary": {
+      "all_have_k8": true,
+      "all_have_randomized_order_flag": true,
+      "candidate_index_histogram": [
+        2,
+        9,
+        4,
+        7,
+        5,
+        9,
+        6,
+        10
+      ],
+      "n_blocks": {
+        "128": 52
+      },
+      "num_examples": 52,
+      "splits": {
+        "dev": 52
+      },
+      "task_families": {
+        "compositional_role_evidence": 5,
+        "conflict_resolution": 5,
+        "constraint_satisfaction": 5,
+        "irrelevant_memory_distractor_history": 5,
+        "memory_dependent_recall": 5,
+        "multi_hop_binding": 6,
+        "needle_binding": 6,
+        "sparse_relevant_evidence": 5,
+        "stale_memory_update": 5,
+        "support_vs_contradiction_memory": 5
+      }
+    }
+  },
+  "failures": [],
+  "n_schedule": [
+    64,
+    128
+  ],
+  "no_final_templates_used": true,
+  "oracle_sanity_accuracy": 1.0,
+  "passes": true,
+  "post_attention_memory_baseline_accuracy": 0.8076923076923077,
+  "replay_rows": [
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_kv_01",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "036872b917847147",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7999999999999999,
+      "selection_score": 0.76775,
+      "variant": "sc_wda_kv"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_e_sc_wda_v_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "69e276df98ce9305",
+      "family": "WDA Support/Contradiction Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7999999999999999,
+      "selection_score": 0.76775,
+      "variant": "sc_wda_v"
+    },
+    {
+      "architecture_name": "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00_e31_mut0",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "2090b178a34e9e71",
+      "family": "Gate-Selective WDA Clean-QKV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7999999999999999,
+      "selection_score": 0.76775,
+      "variant": "wda_v_gate_calibration"
+    }
+  ],
+  "retrieval_topk_accuracy": 0.5,
+  "round": 0,
+  "screen": "replay_and_sanity",
+  "seeds": [
+    0,
+    1,
+    2
+  ]
+}

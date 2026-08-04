@@ -1,0 +1,85 @@
+{
+  "probe_answer_labels": [
+    "ABOVE_BASELINE",
+    "BELOW_BASELINE",
+    "NEAR_BASELINE"
+  ],
+  "trajectory_labels": [
+    "DECREASING",
+    "STABLE",
+    "INCREASING",
+    "VOLATILE"
+  ],
+  "attention_pattern_labels": [
+    "FOCUSED",
+    "MIXED",
+    "DIFFUSE"
+  ],
+  "confidence_labels": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "outcome_labels": [
+    "SUCCESS_LIKELY",
+    "UNCERTAIN",
+    "FAILURE_LIKELY"
+  ],
+  "train_distribution": {
+    "1": 913,
+    "0": 261,
+    "2": 139
+  },
+  "train_hard_case_count": 35,
+  "train_failure_share": 0.10586443259710586,
+  "val_failure_share": 0.07861635220125786,
+  "test_failure_share": 0.05345911949685535,
+  "probe_seed": 140,
+  "hard_mining_seed": 223,
+  "corpus_fingerprint": "b860894951a862dd",
+  "mlp_converged": null,
+  "label_version": "v4",
+  "cluster_to_shape": {
+    "2": "DECREASING",
+    "1": "INCREASING",
+    "3": "VOLATILE",
+    "0": "STABLE"
+  },
+  "mean_entropy_mean": 0.8796921172747911,
+  "mean_entropy_std": 0.0049057537629788464,
+  "max_attention_mean": 0.22000416440311862,
+  "max_attention_std": 0.005839000174392244,
+  "agreement_values": [
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "agreement_medium": 0.875,
+  "agreement_high": 1.0,
+  "margin_low": 0.6956897592544556,
+  "margin_high": 0.9012991237640381,
+  "pattern_z_threshold": 0.75,
+  "pattern_threshold_mode": "auto",
+  "attention_pattern_distribution": {
+    "DIFFUSE": 174,
+    "MIXED": 957,
+    "FOCUSED": 182
+  },
+  "pattern_threshold_search": {
+    "0.75": {
+      "DIFFUSE": 174,
+      "MIXED": 957,
+      "FOCUSED": 182
+    }
+  },
+  "correctness_labeler": "logistic_regression_full_v1",
+  "correctness_cv_folds": 5,
+  "success_min_correctness_prob": 0.9,
+  "failure_max_correctness_prob": 0.6,
+  "success_min_support_ratio": 0.01,
+  "success_min_group_size": 30,
+  "correctness_train_auroc": 0.9138308948435532,
+  "correctness_train_brier": 0.07029339066496024
+}

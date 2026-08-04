@@ -1,0 +1,52 @@
+{
+  "allow_cpu_smoke": false,
+  "cuda_available": true,
+  "decision": null,
+  "device_requested": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+  "os": "Windows-11-10.0.26200-SP0",
+  "passes": true,
+  "python_version": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "smoke": {
+    "current_self_attention_token_count": 5,
+    "dataset_audit": {
+      "chance": 0.125,
+      "failures": [],
+      "families": [
+        "current_override",
+        "entity_binding",
+        "entity_update_override",
+        "interleaved_distractors",
+        "multi_hop_binding",
+        "sparse_relevant_history",
+        "stale_memory",
+        "support_contradiction"
+      ],
+      "num_examples": 8,
+      "passes": true,
+      "sequence_lengths": [
+        8
+      ]
+    },
+    "growing_activation_cache_audit_pass": true,
+    "old_token_kv_audit_pass": true,
+    "ran": true,
+    "state_size_fixed": true,
+    "student_state_shape": [
+      8,
+      8,
+      8,
+      64
+    ],
+    "teacher_attended_tokens": 40
+  },
+  "timestamp": "2026-05-18T09:13:43.553997+00:00",
+  "torch_version": "2.11.0+cu128",
+  "visible_files": [
+    "code",
+    "reports",
+    "results",
+    "tests"
+  ],
+  "working_directory": "W:\\Intuition-Labs\\experiments\\21EYES\\e5_1_state_stability"
+}

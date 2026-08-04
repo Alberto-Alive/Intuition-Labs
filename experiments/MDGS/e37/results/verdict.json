@@ -1,0 +1,38 @@
+{
+  "verdict": "VALIDATED",
+  "checks": {
+    "accuracy_preserved": true,
+    "ood_uncertainty_advantage": true,
+    "risk_equal_or_better": true,
+    "seed_stability": true,
+    "aux_mdgs_ablation_drop": true
+  },
+  "details": {
+    "accuracy_diff_aux_minus_baseline": 0.002499997615814209,
+    "ood_auc_uncertainty_diff_aux_minus_baseline": 0.09313796875000013,
+    "risk_auc_diff_aux_minus_baseline": -2.978180061745661e-05,
+    "ece_diff_aux_minus_baseline": 0.010835294751450418,
+    "nll_diff_aux_minus_baseline": 0.004727318859659135,
+    "paired_ood_auc_uncertainty_diff": {
+      "n": 10,
+      "mean": 0.09313796875000004,
+      "std": 0.0561747667412149,
+      "positive": 9,
+      "negative": 1,
+      "zero": 0
+    },
+    "aux_validation_score": 1.2146398007827435,
+    "broken_aux_ablation_mean_validation_score": 1.1556100904503794,
+    "broken_aux_ablation_count_below_aux": 4,
+    "aux_no_mdgs_validation_score": 1.2048596274105878,
+    "validation_score_diff_aux_minus_aux_no_mdgs": 0.009780173372155643,
+    "aux_random_mdgs_validation_score": 1.08736077846055,
+    "validation_score_diff_aux_minus_aux_random_mdgs": 0.12727902232219357,
+    "aux_shuffled_mdgs_validation_score": 1.12746902487071,
+    "validation_score_diff_aux_minus_aux_shuffled_mdgs": 0.08717077591203348,
+    "aux_detached_mdgs_validation_score": 1.2148576334130232,
+    "validation_score_diff_aux_minus_aux_detached_mdgs": -0.0002178326302797462,
+    "aux_frozen_mdgs_validation_score": 1.1435033880970251,
+    "validation_score_diff_aux_minus_aux_frozen_mdgs": 0.07113641268571835
+  }
+}

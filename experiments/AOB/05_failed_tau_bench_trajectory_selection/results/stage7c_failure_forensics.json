@@ -1,0 +1,688 @@
+{
+  "artifact": "stage7c_failure_forensics",
+  "baseline_saturation_analysis": {
+    "baselines": [
+      {
+        "conditional_accuracy": 0.6500000000000001,
+        "method": "best_generator_on_train_baseline",
+        "mrr": 0.6315972222222221,
+        "pass_at_1": 0.5416666666666667,
+        "selection_efficiency": 0.65,
+        "top_2_accuracy": 0.625,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.6500000000000001,
+        "method": "best_generator_on_train_dev_baseline",
+        "mrr": 0.6315972222222221,
+        "pass_at_1": 0.5416666666666667,
+        "selection_efficiency": 0.65,
+        "top_2_accuracy": 0.625,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.5999999999999999,
+        "method": "embedding_reranker",
+        "mrr": 0.5868055555555555,
+        "pass_at_1": 0.5,
+        "selection_efficiency": 0.5999999999999999,
+        "top_2_accuracy": 0.5416666666666667,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.35,
+        "method": "first_trajectory_order_baseline",
+        "mrr": 0.5087301587301588,
+        "pass_at_1": 0.29166666666666663,
+        "selection_efficiency": 0.35000000000000003,
+        "top_2_accuracy": 0.625,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.58,
+        "method": "frozen_same_architecture_latent_selector",
+        "mrr": 0.6167410714285714,
+        "pass_at_1": 0.4833333333333333,
+        "selection_efficiency": 0.5799999999999998,
+        "top_2_accuracy": 0.6666666666666667,
+        "unavailable": false
+      },
+      {
+        "method": "llm_judge_baseline",
+        "unavailable": true
+      },
+      {
+        "conditional_accuracy": 0.63,
+        "method": "random_trajectory",
+        "mrr": 0.6396626984126984,
+        "pass_at_1": 0.525,
+        "selection_efficiency": 0.63,
+        "top_2_accuracy": 0.675,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.47000000000000003,
+        "method": "randomized_labels_trainable_latent_selector",
+        "mrr": 0.565952380952381,
+        "pass_at_1": 0.3916666666666667,
+        "selection_efficiency": 0.4699999999999999,
+        "top_2_accuracy": 0.6458333333333333,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.5900000000000001,
+        "method": "raw_latent_selector",
+        "mrr": 0.6135813492063491,
+        "pass_at_1": 0.4916666666666666,
+        "selection_efficiency": 0.59,
+        "top_2_accuracy": 0.6166666666666668,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.54,
+        "method": "static_trajectory_feature_reranker",
+        "mrr": 0.5924156746031746,
+        "pass_at_1": 0.45,
+        "selection_efficiency": 0.54,
+        "top_2_accuracy": 0.6166666666666667,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.605,
+        "method": "text_only_multi_agent_reviewer",
+        "mrr": 0.60875,
+        "pass_at_1": 0.5041666666666667,
+        "selection_efficiency": 0.605,
+        "top_2_accuracy": 0.5958333333333334,
+        "unavailable": false
+      },
+      {
+        "conditional_accuracy": 0.585,
+        "method": "text_only_single_reviewer",
+        "mrr": 0.5972916666666667,
+        "pass_at_1": 0.48749999999999993,
+        "selection_efficiency": 0.5849999999999999,
+        "top_2_accuracy": 0.5791666666666667,
+        "unavailable": false
+      }
+    ],
+    "oracle_minus_strongest_baseline": 0.29166666666666663,
+    "oracle_pass_at_8_leaves_room_for_improvement": true,
+    "strongest_baseline": {
+      "conditional_accuracy": 0.6500000000000001,
+      "method": "best_generator_on_train_baseline",
+      "mrr": 0.6315972222222221,
+      "pass_at_1": 0.5416666666666667,
+      "selection_efficiency": 0.65,
+      "top_2_accuracy": 0.625,
+      "unavailable": false
+    },
+    "strongest_baseline_may_exploit_trajectory_or_source_artifacts": true,
+    "strongest_baseline_uses_similar_information_as_trainable_latent": false
+  },
+  "conclusion": "A. PAUSE_STAGE7. Stage 7C failed as a final benchmark result. The dominant diagnosed categories are: dev_overfitting, best_baseline_saturation, trainable_frozen_gap_absent, evidence_controls_failed, candidate_only_or_trajectory_only_explains_result, insufficient_final_task_count, architecture_mismatch, text_embedding_baselines_stronger_than_expected. No Stage 7 success or final benchmark claim is supported by these artifacts.",
+  "constraints": {
+    "architecture_changed": false,
+    "candidate_pool_changed": false,
+    "candidate_trajectories_altered": false,
+    "controls_weakened": false,
+    "final_benchmark_claim_made": false,
+    "hyperparameters_changed": false,
+    "labels_altered": false,
+    "splits_changed": false,
+    "training_rerun": false
+  },
+  "created_at_utc": "2026-05-17T10:28:09.465744+00:00",
+  "decision_recommendation": "A. PAUSE_STAGE7",
+  "dev_vs_final_comparison": {
+    "candidate_only_dev": {
+      "base_minus_control_pass_at_1_mean": 0.027777777777777773,
+      "pass_at_1_mean": 0.5555555555555556,
+      "pass_count": 3
+    },
+    "candidate_only_final": {
+      "base_minus_control_pass_at_1_mean": -0.004166666666666652,
+      "pass_at_1_mean": 0.4333333333333334,
+      "pass_count": 10
+    },
+    "dev_best_non_oracle_baseline_pass_at_1": 0.5972222222222222,
+    "dev_frozen_pass_at_1": 0.5416666666666666,
+    "dev_oracle_pass_at_8": 0.8333333333333334,
+    "dev_trainable_pass_at_1": 0.5833333333333334,
+    "evidence_corruption_degradation_dev": 0.15277777777777776,
+    "evidence_corruption_degradation_final": 0.01666666666666668,
+    "final_best_non_oracle_baseline": "best_generator_on_train_baseline",
+    "final_best_non_oracle_baseline_pass_at_1": 0.5416666666666667,
+    "final_frozen_pass_at_1": 0.4833333333333333,
+    "final_oracle_pass_at_8": 0.8333333333333334,
+    "final_trainable_pass_at_1": 0.4291666666666667,
+    "selected_variant": "variant_d_4x1_lr3e4_clip1",
+    "stage7b_success_gates": {
+      "candidate_order_invariance_passes": true,
+      "completed_seeds_gte_3": true,
+      "duplicate_and_near_duplicate_audits_pass": true,
+      "gradient_update_audits_pass": true,
+      "leakage_audits_pass": true,
+      "mismatch_or_cross_task_shuffle_degrades_by_0_05": true,
+      "no_final_claim_made": true,
+      "one_final_config_selected_for_stage7c": true,
+      "oracle_pass_at_8_between_0_25_and_0_85": true,
+      "physical_order_invariance_passes": true,
+      "randomized_labels_collapse": true,
+      "trainable_beats_frozen_mean_pass_at_1": true,
+      "trainable_beats_random_and_first": true,
+      "trainable_competitive_with_embedding_static_text": true
+    },
+    "trajectory_only_dev": {
+      "base_minus_control_pass_at_1_mean": 0.18055555555555558,
+      "pass_at_1_mean": 0.40277777777777773,
+      "pass_count": 3
+    },
+    "trajectory_only_final": {
+      "base_minus_control_pass_at_1_mean": 0.020833333333333343,
+      "pass_at_1_mean": 0.4083333333333333,
+      "pass_count": 10
+    }
+  },
+  "evidence_use_analysis": {
+    "candidate_evidence_mismatch_delta": 0.012500000000000011,
+    "candidate_only_delta": -0.004166666666666652,
+    "controls": {
+      "candidate_evidence_mismatch": {
+        "base_minus_control_pass_at_1_mean": 0.012500000000000011,
+        "pass_at_1_mean": 0.4166666666666667,
+        "pass_count": 10
+      },
+      "candidate_only": {
+        "base_minus_control_pass_at_1_mean": -0.004166666666666652,
+        "pass_at_1_mean": 0.4333333333333334,
+        "pass_count": 10
+      },
+      "cross_task_policy_shuffle": {
+        "base_minus_control_pass_at_1_mean": 0.0,
+        "pass_at_1_mean": 0.4291666666666667,
+        "pass_count": 10
+      },
+      "cross_task_tool_observation_shuffle": {
+        "base_minus_control_pass_at_1_mean": 0.01666666666666668,
+        "pass_at_1_mean": 0.4125,
+        "pass_count": 10
+      },
+      "cross_task_user_goal_shuffle": {
+        "base_minus_control_pass_at_1_mean": 0.004166666666666685,
+        "pass_at_1_mean": 0.425,
+        "pass_count": 10
+      },
+      "hidden_states_shuffled_across_examples": {
+        "base_minus_control_pass_at_1_mean": -0.016666666666666663,
+        "pass_at_1_mean": 0.4458333333333333,
+        "pass_count": 10
+      },
+      "policy_only": {
+        "base_minus_control_pass_at_1_mean": -0.03749999999999999,
+        "pass_at_1_mean": 0.4666666666666667,
+        "pass_count": 10
+      },
+      "schema_template_only": {
+        "base_minus_control_pass_at_1_mean": 0.00416666666666668,
+        "pass_at_1_mean": 0.425,
+        "pass_count": 10
+      },
+      "tool_observations_only": {
+        "base_minus_control_pass_at_1_mean": 0.04166666666666668,
+        "pass_at_1_mean": 0.3875,
+        "pass_count": 10
+      },
+      "trajectory_only": {
+        "base_minus_control_pass_at_1_mean": 0.020833333333333343,
+        "pass_at_1_mean": 0.4083333333333333,
+        "pass_count": 10
+      },
+      "user_goal_only": {
+        "base_minus_control_pass_at_1_mean": 0.0,
+        "pass_at_1_mean": 0.4291666666666667,
+        "pass_count": 10
+      }
+    },
+    "cross_task_shuffle_deltas": {
+      "cross_task_policy_shuffle": 0.0,
+      "cross_task_tool_observation_shuffle": 0.01666666666666668,
+      "cross_task_user_goal_shuffle": 0.004166666666666685
+    },
+    "did_candidate_only_match_or_exceed_full_model": true,
+    "did_cross_task_shuffles_degrade": false,
+    "did_evidence_mismatch_degrade": false,
+    "did_trajectory_only_match_or_exceed_full_model": false,
+    "full_model": {
+      "conditional_accuracy_mean": 0.5149999999999999,
+      "pass_at_1_mean": 0.4291666666666667,
+      "selection_efficiency_mean": 0.5149999999999999
+    },
+    "interpretation": "The final model does not show reliable task-evidence use: evidence mismatch and cross-task shuffles do not degrade by the required margin, and candidate-only slightly exceeds the full model.",
+    "trajectory_only_delta": 0.020833333333333343
+  },
+  "failure_categories": {
+    "architecture_mismatch": {
+      "evidence": {
+        "evidence_corruption_final": 0.01666666666666668,
+        "trainable_vs_frozen_delta": -0.054166666666666585
+      },
+      "present": true
+    },
+    "best_baseline_saturation": {
+      "evidence": {
+        "best_baseline": "best_generator_on_train_baseline",
+        "best_baseline_pass_at_1": 0.5416666666666667,
+        "oracle_minus_best_baseline": 0.29166666666666663
+      },
+      "present": true
+    },
+    "candidate_only_or_trajectory_only_explains_result": {
+      "evidence": {
+        "candidate_only_delta": -0.004166666666666652,
+        "trajectory_only_delta": 0.020833333333333343
+      },
+      "present": true
+    },
+    "dev_overfitting": {
+      "evidence": {
+        "dev_trainable": 0.5833333333333334,
+        "dev_trainable_minus_best": -0.01388888888888884,
+        "final_trainable": 0.4291666666666667,
+        "final_trainable_minus_best": -0.11250000000000004
+      },
+      "present": true
+    },
+    "evidence_controls_failed": {
+      "evidence": {
+        "evidence_answers": {
+          "cross_task_degraded": false,
+          "mismatch_degraded": false
+        },
+        "evidence_corruption_final": 0.01666666666666668
+      },
+      "present": true
+    },
+    "final_pool_distribution_shift": {
+      "evidence": {
+        "dev_final_trainable_gap": 0.15416666666666667,
+        "dev_oracle": 0.8333333333333334,
+        "final_oracle": 0.8333333333333334,
+        "note": "Stage 7C reused the frozen held-out task IDs from the Stage 7B split, so the observed score drop is not attributed to oracle-rate distribution shift."
+      },
+      "present": false
+    },
+    "generator_identity_source_leakage": {
+      "evidence": {
+        "leakage_gates_pass": true
+      },
+      "present": false
+    },
+    "hidden_evaluator_leakage": {
+      "evidence": {
+        "leakage_gates_pass": true
+      },
+      "present": false
+    },
+    "insufficient_final_task_count": {
+      "evidence": {
+        "final_task_count": 24
+      },
+      "present": true
+    },
+    "optimizer_training_instability": {
+      "evidence": {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      "present": false
+    },
+    "oracle_pass_at_8_too_high_or_too_low": {
+      "evidence": {
+        "oracle_pass_at_8": 0.8333333333333334
+      },
+      "present": false
+    },
+    "text_embedding_baselines_stronger_than_expected": {
+      "evidence": {
+        "embedding_reranker": 0.5,
+        "text_only_multi_agent_reviewer": 0.5041666666666667,
+        "text_only_single_reviewer": 0.48749999999999993
+      },
+      "present": true
+    },
+    "trainable_frozen_gap_absent": {
+      "evidence": {
+        "seeds_won_lost_vs_frozen": {
+          "lost": 8,
+          "tied": 0,
+          "won": 2
+        },
+        "trainable_vs_frozen_delta": -0.054166666666666585
+      },
+      "present": true
+    }
+  },
+  "final_failure_summary": {
+    "best_non_oracle_baseline": "best_generator_on_train_baseline",
+    "best_non_oracle_baseline_pass_at_1": 0.5416666666666667,
+    "ci_vs_best_baseline": {
+      "lower": -0.17916665971279144,
+      "mean": -0.11249999701976776,
+      "upper": -0.0416666679084301
+    },
+    "ci_vs_frozen": {
+      "lower": -0.11666666716337204,
+      "mean": -0.05416666716337204,
+      "upper": 0.012604166870005333
+    },
+    "failed_gates": [
+      "evidence_corruption_control_degrades_by_gte_0_05",
+      "paired_bootstrap_ci_lower_vs_best_non_oracle_gt_0",
+      "paired_bootstrap_ci_lower_vs_frozen_gt_0",
+      "randomized_labels_collapse",
+      "trainable_beats_best_non_oracle_by_gte_0_05",
+      "trainable_beats_frozen_on_gte_8_of_10_seeds",
+      "trainable_mean_pass_at_1_beats_frozen",
+      "trainable_selection_efficiency_beats_best_non_oracle"
+    ],
+    "frozen_latent_mean_pass_at_1": 0.4833333333333333,
+    "oracle_pass_at_8": 0.8333333333333334,
+    "paired_sign_test_vs_best_baseline": {
+      "losses": 52,
+      "n_untied": 77,
+      "ties": 163,
+      "two_sided_p": 0.0027990538772776244,
+      "wins": 25
+    },
+    "paired_sign_test_vs_frozen": {
+      "losses": 42,
+      "n_untied": 71,
+      "ties": 169,
+      "two_sided_p": 0.1539127693264563,
+      "wins": 29
+    },
+    "seeds_won_lost_vs_best_non_oracle": {
+      "lost": 10,
+      "tied": 0,
+      "won": 0
+    },
+    "seeds_won_lost_vs_frozen": {
+      "lost": 8,
+      "tied": 0,
+      "won": 2
+    },
+    "stage7c_decision": "C. STAGE7C_FINAL_FAILED",
+    "trainable_latent_mean_pass_at_1": 0.4291666666666667,
+    "trainable_vs_best_baseline_delta": -0.11250000000000004,
+    "trainable_vs_frozen_delta": -0.054166666666666585
+  },
+  "inputs": {
+    "stage7b_comparison": "results\\stage7b_tau_dev_variant_comparison.json",
+    "stage7b_results": "results\\stage7b_tau_dev_selector_results.json",
+    "stage7c_audit": "results\\stage7c_tau_final_selector_audit.jsonl",
+    "stage7c_controls": "results\\stage7c_tau_final_control_results.json",
+    "stage7c_report": "reports\\STAGE7C_TAU_FINAL_VALIDATION.md",
+    "stage7c_results": "results\\stage7c_tau_final_selector_results.json",
+    "stage7c_splits": "results\\stage7c_tau_final_splits.json",
+    "stage7c_statistics": "results\\stage7c_tau_final_statistics.json"
+  },
+  "likely_blocker": "architecture_and_view_design",
+  "pool_difficulty_analysis": {
+    "all_fail_tasks": 4,
+    "all_success_tasks": 0,
+    "duplicate_trajectory_audit": {
+      "duplicates": [],
+      "examples_checked": 93,
+      "passes": true
+    },
+    "final_task_count": 24,
+    "near_duplicate_audit": {
+      "examples_checked": 93,
+      "near_duplicates": [],
+      "passes": true,
+      "threshold": 0.98
+    },
+    "near_duplicate_trajectory_rate": 0.0,
+    "oracle_empty_count": 4,
+    "oracle_positive_count": 20,
+    "per_generator_success_rates_audit_only": {
+      "llm_agent:claude-3-7-sonnet-20250219": {
+        "candidates": 48,
+        "success_rate": 0.4375
+      },
+      "llm_agent:gpt-4.1-2025-04-14": {
+        "candidates": 46,
+        "success_rate": 0.6086956521739131
+      },
+      "llm_agent:gpt-4.1-mini-2025-04-14": {
+        "candidates": 49,
+        "success_rate": 0.3877551020408163
+      },
+      "llm_agent:o4-mini-2025-04-16": {
+        "candidates": 49,
+        "success_rate": 0.46938775510204084
+      }
+    },
+    "per_task_type_breakdown": {
+      "retail_official_existing_trajectory": {
+        "oracle_positive_rate": 0.8333333333333334,
+        "tasks": 24
+      }
+    },
+    "random_baseline_expected_per_success_count": 0.4739583333333333,
+    "random_baseline_observed_pass_at_1_mean": 0.525,
+    "successful_candidates_per_oracle_positive_task_distribution": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 3,
+      "6": 3,
+      "7": 4
+    },
+    "successful_candidates_per_task_distribution": {
+      "0": 4,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 3,
+      "6": 3,
+      "7": 4
+    }
+  },
+  "selected_stage7b_config": {
+    "avenue_dropout": 0.0,
+    "avenue_prompt_mode": "single",
+    "coordinator_family": "candidate_token_cross_attention",
+    "description": "4 roles x 1 avenue candidate-token-direct baseline, lr=3e-4, clip=1.0.",
+    "gradient_clip_norm": 1.0,
+    "lr": 0.0003,
+    "name": "variant_d_4x1_lr3e4_clip1",
+    "num_avenues": 1
+  },
+  "training_audit_sanity": {
+    "aggregate_checks": {
+      "activation_requires_grad_before_coordinator": true,
+      "candidate_order_invariance": true,
+      "checkpoints_saved": true,
+      "coordinator_grad_delta_gt_0": true,
+      "frozen_agent_grad_delta_zero": true,
+      "leakage_audits_pass": true,
+      "no_detach_in_main_path": true,
+      "physical_order_invariance": true,
+      "shared_parameter_identity": true,
+      "trainable_grad_norm_gt_0": true,
+      "trainable_parameter_delta_gt_0": true
+    },
+    "all_checks_pass": true,
+    "audit_row_count": 76,
+    "audit_types": {
+      "candidate_order_randomized": 1,
+      "controls": 10,
+      "duplicate_trajectory_hash": 1,
+      "frozen_audit": 10,
+      "invariance_audit": 10,
+      "near_duplicate_trajectory": 1,
+      "randomized_labels_audit": 10,
+      "raw_latent_audit": 10,
+      "raw_trajectory_separation": 1,
+      "stage7_output_leakage": 1,
+      "stage7_taubench_split_leakage": 1,
+      "success_gates": 10,
+      "trainable_audit": 10
+    },
+    "per_seed": [
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 10,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 11,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 12,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 13,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 14,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 15,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 16,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 17,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 18,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      },
+      {
+        "activation_requires_grad_before_coordinator": true,
+        "candidate_order_invariance": true,
+        "checkpoints_saved": true,
+        "coordinator_grad_delta_gt_0": true,
+        "frozen_agent_grad_delta_zero": true,
+        "leakage_audits_pass": true,
+        "no_detach_in_main_path": true,
+        "physical_order_invariance": true,
+        "seed": 19,
+        "shared_parameter_identity": true,
+        "trainable_grad_norm_gt_0": true,
+        "trainable_parameter_delta_gt_0": true
+      }
+    ]
+  }
+}

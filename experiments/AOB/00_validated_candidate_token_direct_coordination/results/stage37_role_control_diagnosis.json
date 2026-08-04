@@ -1,0 +1,818 @@
+{
+  "metadata": {
+    "architecture": "topk_attention_no_head",
+    "architecture_changes": "none",
+    "candidate_representation": "balanced_categories_v3",
+    "checkpoint_source": "no Stage 3.6 tiny-smoke checkpoint artifact was available in results; reran only the one-seed tiny smoke",
+    "config_path": "configs\\stage34_candidate_sanitization_cuda_smoke.json",
+    "created_at_utc": "2026-05-15T16:10:57.044638+00:00",
+    "dataset_source": "real_import_restore_candidate_balanced_34b",
+    "device": "cuda",
+    "full_10_seed_validation_run": false,
+    "hardware": {
+      "bf16_supported": true,
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_memory_budget_gb": 16.0,
+      "cuda_memory_fraction": 1.0,
+      "cuda_total_memory": 17094475776,
+      "requested_device": "cuda",
+      "torch": "2.11.0+cu128"
+    },
+    "scope": "one-seed tiny-smoke fitting plus cheap role-control and dataset-only diagnostics; no full 10-seed validation",
+    "stage": "stage3.7_role_control_diagnosis",
+    "stage_config": {
+      "batch_size": 32,
+      "epochs": 3,
+      "gradient_accumulation_steps": 1,
+      "hidden_dim": 64,
+      "lr": 0.002,
+      "max_candidates": 1,
+      "mixed_precision": "bf16",
+      "n_dev": 128,
+      "n_test": 256,
+      "n_train": 256,
+      "name": "stage3",
+      "patience": 2,
+      "seeds": [
+        0
+      ],
+      "tiny_ff_dim": 128,
+      "tiny_layers": 3
+    }
+  },
+  "normalized_view_format_variant": {
+    "checkpoint_only_eval_original_models": {
+      "accuracy": {
+        "frozen": 0.01171875,
+        "raw_latent": 0.125,
+        "text_only": 0.125,
+        "trainable": 0.09375
+      },
+      "interpretation": "distribution-shift check only; these models were fit on original role-leaky view templates",
+      "split": "test"
+    },
+    "implementation": "Stage 3.7 transient data transform: private view text uses identical field names and generic FEATURE_ALPHA/BETA values for every role; locked architecture unchanged.",
+    "implemented": true,
+    "role_ablation_evaluations_after_fix": {
+      "chance": 0.125,
+      "near_chance_max": 0.18,
+      "rows": [
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "Reference, no role corruption.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "baseline_none"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.16015625,
+            "raw_latent": 0.1328125,
+            "text_only": 0.125,
+            "trainable": 0.046875
+          },
+          "description": "Both active-readout and coordinator role embedding tables zeroed.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "A_role_embeddings_zeroed"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.12109375,
+            "text_only": 0.125,
+            "trainable": 0.07421875
+          },
+          "description": "All runtime role_ids replaced with role 0.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "B_all_role_labels_same_null_role"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "Independent non-identity role_id permutation for each example.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "C_role_labels_randomly_permuted_per_example"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "One non-identity role_id permutation shared by every example.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "D_role_labels_randomly_permuted_globally"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "View texts are moved across physical role slots; runtime role_ids remain slot ids.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "E_private_views_permuted_without_updating_role_labels"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "View texts are permuted across examples within each role slot.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "F_private_views_permuted_with_role_labels_preserved"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.16015625,
+            "raw_latent": 0.1328125,
+            "text_only": 0.125,
+            "trainable": 0.046875
+          },
+          "description": "Same operational intervention as A; physical tensor order is unchanged.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "G_role_embeddings_removed_physical_order_preserved"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "Views are reordered within each example and explicit role_ids follow the moved view.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "H_physical_view_order_randomized_correct_role_labels_preserved"
+        },
+        {
+          "accuracy": {
+            "frozen": 0.1640625,
+            "raw_latent": 0.1171875,
+            "text_only": 0.125,
+            "trainable": 0.03125
+          },
+          "description": "Original fitted models evaluated on normalized private-view text.",
+          "frozen_collapses_near_chance": true,
+          "trainable_collapses_near_chance": true,
+          "variant": "I_view_format_normalized_original_checkpoint_eval"
+        }
+      ],
+      "split": "test",
+      "summary": {
+        "trainable_above_chance_variants": [],
+        "trainable_near_chance_variants": [
+          "baseline_none",
+          "A_role_embeddings_zeroed",
+          "B_all_role_labels_same_null_role",
+          "C_role_labels_randomly_permuted_per_example",
+          "D_role_labels_randomly_permuted_globally",
+          "E_private_views_permuted_without_updating_role_labels",
+          "F_private_views_permuted_with_role_labels_preserved",
+          "G_role_embeddings_removed_physical_order_preserved",
+          "H_physical_view_order_randomized_correct_role_labels_preserved",
+          "I_view_format_normalized_original_checkpoint_eval"
+        ]
+      }
+    },
+    "role_pair_shortcut_audit": {
+      "baselines": {
+        "candidate_category_without_role": {
+          "accuracy": 0.125,
+          "exceeds_chance_gate": false
+        },
+        "category_pair_without_candidate": {
+          "accuracy": 0.09375,
+          "exceeds_chance_gate": false
+        },
+        "role_pair_only": {
+          "accuracy": 0.125,
+          "exceeds_chance_gate": false
+        },
+        "role_pair_plus_candidate_category": {
+          "accuracy": 0.125,
+          "exceeds_chance_gate": false
+        },
+        "view_type_pair_only": {
+          "accuracy": 0.125,
+          "exceeds_chance_gate": false
+        }
+      },
+      "chance": 0.125,
+      "near_chance_max": 0.18,
+      "summary": {
+        "any_exceeds_chance_gate": false,
+        "max_accuracy": 0.125
+      }
+    },
+    "tiny_smoke_after_fix": {
+      "accuracy": {
+        "candidate_only": 0.046875,
+        "frozen": 0.1640625,
+        "oracle": 1.0,
+        "raw_latent": 0.1171875,
+        "role_labels_shuffled": 0.03125,
+        "text_only": 0.125,
+        "trainable": 0.03125,
+        "view_masked": 0.03125
+      },
+      "full_validation_justified": false,
+      "passes_max_role_shuffle_gate": true,
+      "passes_preferred_role_shuffle_gate": true,
+      "seed": 0,
+      "split": "test"
+    },
+    "view_format_leakage_audit": {
+      "chance": 0.25,
+      "diagnostics": {
+        "role_id_from_category_fields": {
+          "dev": 0.25,
+          "epochs_run": 5,
+          "history": [
+            {
+              "dev": 0.25,
+              "epoch": 1,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 2,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 3,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 4,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 5,
+              "train": 0.25
+            }
+          ],
+          "test": 0.25,
+          "train": 0.25
+        },
+        "role_id_from_length_statistics": {
+          "dev": 0.28515625,
+          "epochs_run": 5,
+          "history": [
+            {
+              "dev": 0.28515625,
+              "epoch": 1,
+              "train": 0.263671875
+            },
+            {
+              "dev": 0.265625,
+              "epoch": 2,
+              "train": 0.2666015625
+            },
+            {
+              "dev": 0.28515625,
+              "epoch": 3,
+              "train": 0.263671875
+            },
+            {
+              "dev": 0.265625,
+              "epoch": 4,
+              "train": 0.2666015625
+            },
+            {
+              "dev": 0.28515625,
+              "epoch": 5,
+              "train": 0.263671875
+            }
+          ],
+          "test": 0.24609375,
+          "train": 0.263671875
+        },
+        "role_id_from_token_template": {
+          "dev": 0.25,
+          "epochs_run": 5,
+          "history": [
+            {
+              "dev": 0.25,
+              "epoch": 1,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 2,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 3,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 4,
+              "train": 0.25
+            },
+            {
+              "dev": 0.25,
+              "epoch": 5,
+              "train": 0.25
+            }
+          ],
+          "test": 0.25,
+          "train": 0.25
+        },
+        "role_id_from_view_text": {
+          "dev": 0.28515625,
+          "epochs_run": 7,
+          "history": [
+            {
+              "dev": 0.25,
+              "epoch": 1,
+              "train": 0.25
+            },
+            {
+              "dev": 0.265625,
+              "epoch": 2,
+              "train": 0.2666015625
+            },
+            {
+              "dev": 0.28515625,
+              "epoch": 3,
+              "train": 0.263671875
+            },
+            {
+              "dev": 0.25,
+              "epoch": 4,
+              "train": 0.25
+            },
+            {
+              "dev": 0.265625,
+              "epoch": 5,
+              "train": 0.2666015625
+            },
+            {
+              "dev": 0.28515625,
+              "epoch": 6,
+              "train": 0.263671875
+            },
+            {
+              "dev": 0.208984375,
+              "epoch": 7,
+              "train": 0.2607421875
+            }
+          ],
+          "test": 0.24609375,
+          "train": 0.263671875
+        }
+      },
+      "sample_view_text_by_role": {
+        "0": "Redacted compatibility artifact:\nobserved_value: FEATURE_BETA\nexact_symbol_module_path: withheld",
+        "1": "Redacted compatibility artifact:\nobserved_value: FEATURE_BETA\nexact_symbol_module_path: withheld",
+        "2": "Redacted compatibility artifact:\nobserved_value: FEATURE_BETA\nexact_symbol_module_path: withheld",
+        "3": "Redacted compatibility artifact:\nobserved_value: FEATURE_ALPHA\nexact_symbol_module_path: withheld"
+      },
+      "samples": {
+        "dev": 512,
+        "test": 1024,
+        "train": 1024
+      },
+      "summary": {
+        "high_accuracy_threshold": 0.8,
+        "max_test_accuracy": 0.25,
+        "role_id_predictable_from_view_text": false
+      }
+    }
+  },
+  "original_tiny_smoke": {
+    "accuracy": {
+      "candidate_only": 0.24609375,
+      "frozen": 0.04296875,
+      "oracle": 1.0,
+      "raw_latent": 0.125,
+      "role_labels_shuffled": 0.265625,
+      "text_only": 0.125,
+      "trainable": 0.44140625,
+      "view_masked": 0.1171875
+    },
+    "full_validation_justified": false,
+    "passes_max_role_shuffle_gate": false,
+    "passes_preferred_role_shuffle_gate": false,
+    "seed": 0,
+    "split": "test"
+  },
+  "role_ablation_evaluations": {
+    "chance": 0.125,
+    "near_chance_max": 0.18,
+    "rows": [
+      {
+        "accuracy": {
+          "frozen": 0.04296875,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.44140625
+        },
+        "description": "Reference, no role corruption.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "baseline_none"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.05859375,
+          "raw_latent": 0.12109375,
+          "text_only": 0.125,
+          "trainable": 0.2890625
+        },
+        "description": "Both active-readout and coordinator role embedding tables zeroed.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "A_role_embeddings_zeroed"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.1640625,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.06640625
+        },
+        "description": "All runtime role_ids replaced with role 0.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": true,
+        "variant": "B_all_role_labels_same_null_role"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.0234375,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.25
+        },
+        "description": "Independent non-identity role_id permutation for each example.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "C_role_labels_randomly_permuted_per_example"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.0234375,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.42578125
+        },
+        "description": "One non-identity role_id permutation shared by every example.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "D_role_labels_randomly_permuted_globally"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.01953125,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.27734375
+        },
+        "description": "View texts are moved across physical role slots; runtime role_ids remain slot ids.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "E_private_views_permuted_without_updating_role_labels"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.0234375,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.12109375
+        },
+        "description": "View texts are permuted across examples within each role slot.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": true,
+        "variant": "F_private_views_permuted_with_role_labels_preserved"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.05859375,
+          "raw_latent": 0.12109375,
+          "text_only": 0.125,
+          "trainable": 0.2890625
+        },
+        "description": "Same operational intervention as A; physical tensor order is unchanged.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "G_role_embeddings_removed_physical_order_preserved"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.04296875,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.44140625
+        },
+        "description": "Views are reordered within each example and explicit role_ids follow the moved view.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": false,
+        "variant": "H_physical_view_order_randomized_correct_role_labels_preserved"
+      },
+      {
+        "accuracy": {
+          "frozen": 0.01171875,
+          "raw_latent": 0.125,
+          "text_only": 0.125,
+          "trainable": 0.09375
+        },
+        "description": "Original fitted models evaluated on normalized private-view text.",
+        "frozen_collapses_near_chance": true,
+        "trainable_collapses_near_chance": true,
+        "variant": "I_view_format_normalized_original_checkpoint_eval"
+      }
+    ],
+    "split": "test",
+    "summary": {
+      "trainable_above_chance_variants": [
+        "baseline_none",
+        "A_role_embeddings_zeroed",
+        "C_role_labels_randomly_permuted_per_example",
+        "D_role_labels_randomly_permuted_globally",
+        "E_private_views_permuted_without_updating_role_labels",
+        "G_role_embeddings_removed_physical_order_preserved",
+        "H_physical_view_order_randomized_correct_role_labels_preserved"
+      ],
+      "trainable_near_chance_variants": [
+        "B_all_role_labels_same_null_role",
+        "F_private_views_permuted_with_role_labels_preserved",
+        "I_view_format_normalized_original_checkpoint_eval"
+      ]
+    }
+  },
+  "role_pair_shortcut_audit": {
+    "baselines": {
+      "candidate_category_without_role": {
+        "accuracy": 0.125,
+        "exceeds_chance_gate": false
+      },
+      "category_pair_without_candidate": {
+        "accuracy": 0.09375,
+        "exceeds_chance_gate": false
+      },
+      "role_pair_only": {
+        "accuracy": 0.125,
+        "exceeds_chance_gate": false
+      },
+      "role_pair_plus_candidate_category": {
+        "accuracy": 0.125,
+        "exceeds_chance_gate": false
+      },
+      "view_type_pair_only": {
+        "accuracy": 0.125,
+        "exceeds_chance_gate": false
+      }
+    },
+    "chance": 0.125,
+    "near_chance_max": 0.18,
+    "summary": {
+      "any_exceeds_chance_gate": false,
+      "max_accuracy": 0.125
+    }
+  },
+  "role_shuffle_implementation": {
+    "answers": {
+      "1_shuffles_role_embeddings_only": true,
+      "2_shuffles_role_text_labels": false,
+      "3_shuffles_private_views": false,
+      "4_shuffles_role_view_pairing": "yes for runtime role_id embeddings versus clone activations; no for dataclass view.role/text pairing and no physical view reordering",
+      "5_shuffle_scope": "per-example row-wise permutation inside each forward batch; predict_latent_system reuses the same seed for each batch",
+      "6_same_permutation_train_dev_test": "not inherently; permutations are deterministic from the seed passed to forward. Existing dev/test controls use split-specific seeds; Stage 3.6 tiny smoke evaluated test only.",
+      "7_corrupted_train_or_test_time": "evaluation/control time only for role_labels_shuffled; normal trainable/frozen fitting uses condition='none'"
+    },
+    "mechanics": {
+      "apply_example_control_returns_examples_unchanged": true,
+      "candidate_features_mutated": false,
+      "collect_uses_format_clone_prompt_without_view_role_label": true,
+      "forward_shuffles_role_ids": true,
+      "private_view_text_mutated": false,
+      "role_text_fields_mutated": false
+    },
+    "source_excerpts": {
+      "SharedClonedAgentSystem.forward": "7:     ) -> Tuple[torch.Tensor, Dict[str, object], torch.Tensor]:\n8:         if not examples:\n9:             raise ValueError(\"at least one example is required\")\n10:         device = next(self.parameters()).device\n11:         base_role_ids = torch.arange(self.n_roles, dtype=torch.long, device=device).view(1, self.n_roles)\n12:         base_role_ids = base_role_ids.expand(len(examples), self.n_roles)\n13:         role_ids = base_role_ids\n14:         rng = np.random.default_rng(seed + 53_977)\n15:         if condition == \"role_labels_shuffled\":\n16:             order = _role_permutation(len(examples), self.n_roles, rng, device)\n17:             role_ids = base_role_ids.gather(1, order)\n18: \n19:         readouts = self.collect_clone_representations(examples, condition=condition, seed=seed, role_ids=role_ids)\n20:         clone_activations = readouts[\"message\"]\n21:         self.last_aux_logits = None\n22:         if self.private_cue_head is not None:\n23:             self.last_aux_logits = self.private_cue_head(clone_activations)\n24:         if retain_activation_grad and clone_activations.requires_grad:\n25:             clone_activations.retain_grad()\n26: \n27:         if condition == \"physical_order_shuffled_roles_preserved\":\n28:             order = _role_permutation(clone_activations.shape[0], self.n_roles, rng, clone_activations.device)\n29:             clone_activations = clone_activations.gather(1, order.unsqueeze(-1).expand(-1, -1, clone_activations.shape[-1]))\n30:             role_ids = role_ids.gather(1, order)\n31: \n32:         if bool(getattr(self.coordinator, \"requires_candidate_features\", False)):\n33:             candidate_features = _candidate_feature_tensor(examples, clone_activations.device)\n34:             logits = self.coordinator(clone_activations, role_ids, candidate_features)\n35:         else:\n36:             logits = self.coordinator(clone_activations, role_ids)\n37:         audit = {\n38:             \"activation_requires_grad_before_coordinator\": bool(clone_activations.requires_grad),\n39:             \"no_detach_between_clone_activations_and_loss\": bool(clone_activations.grad_fn is not None or clone_activations.requires_grad),\n40:             \"shared_parameter_identity\": shared_parameter_identity_check(self.shared_agent, self.n_roles)[\"pass\"],",
+      "apply_example_control": "7:         raise ValueError(f\"unknown control condition: {condition}\")\n8:     if condition in {\n9:         \"none\",\n10:         \"hidden_states_shuffled_across_examples\",\n11:         \"role_labels_shuffled\",\n12:         \"physical_order_shuffled_roles_preserved\",\n13:     }:\n14:         return list(examples)\n15:     if condition == \"view_masked\":\n16:         out = []\n17:         for example in examples:\n18:             views = tuple("
+    }
+  },
+  "summary": {
+    "cheap_fix_implemented": true,
+    "classification": {
+      "control_weakness": true,
+      "null_role_labels_above_chance": false,
+      "role_embeddings_zeroed_above_chance": true,
+      "role_format_leakage": true,
+      "role_labels_not_needed_by_original_checkpoint": false,
+      "role_pair_shortcut": false,
+      "true_role_invariant_learning": false
+    },
+    "full_validation_justified": false,
+    "implementation_answers": {
+      "1_shuffles_role_embeddings_only": true,
+      "2_shuffles_role_text_labels": false,
+      "3_shuffles_private_views": false,
+      "4_shuffles_role_view_pairing": "yes for runtime role_id embeddings versus clone activations; no for dataclass view.role/text pairing and no physical view reordering",
+      "5_shuffle_scope": "per-example row-wise permutation inside each forward batch; predict_latent_system reuses the same seed for each batch",
+      "6_same_permutation_train_dev_test": "not inherently; permutations are deterministic from the seed passed to forward. Existing dev/test controls use split-specific seeds; Stage 3.6 tiny smoke evaluated test only.",
+      "7_corrupted_train_or_test_time": "evaluation/control time only for role_labels_shuffled; normal trainable/frozen fitting uses condition='none'"
+    },
+    "supporting_metrics": {
+      "fixed_role_labels_shuffled_accuracy": 0.03125,
+      "normalized_role_id_from_view_text_max_test_accuracy": 0.25,
+      "original_candidate_only_accuracy": 0.24609375,
+      "original_role_id_from_view_text_max_test_accuracy": 1.0,
+      "original_role_labels_shuffled_accuracy": 0.265625,
+      "original_role_pair_shortcut_max_accuracy": 0.125
+    },
+    "validation_decision": "not justified",
+    "why_role_shuffled_stayed_high": "The existing control corrupts only learned runtime role ids. In Stage 3.4b private view text contains role-specific field names such as symbol_surface/provider_area/provider_name_shape/import_slot_shape, so role identity survives the role-id shuffle."
+  },
+  "view_format_leakage_audit": {
+    "chance": 0.25,
+    "diagnostics": {
+      "role_id_from_category_fields": {
+        "dev": 1.0,
+        "epochs_run": 5,
+        "history": [
+          {
+            "dev": 1.0,
+            "epoch": 1,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 2,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 3,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 4,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 5,
+            "train": 1.0
+          }
+        ],
+        "test": 1.0,
+        "train": 1.0
+      },
+      "role_id_from_length_statistics": {
+        "dev": 0.873046875,
+        "epochs_run": 6,
+        "history": [
+          {
+            "dev": 0.623046875,
+            "epoch": 1,
+            "train": 0.6259765625
+          },
+          {
+            "dev": 0.873046875,
+            "epoch": 2,
+            "train": 0.8759765625
+          },
+          {
+            "dev": 0.873046875,
+            "epoch": 3,
+            "train": 0.8759765625
+          },
+          {
+            "dev": 0.873046875,
+            "epoch": 4,
+            "train": 0.8759765625
+          },
+          {
+            "dev": 0.873046875,
+            "epoch": 5,
+            "train": 0.8759765625
+          },
+          {
+            "dev": 0.873046875,
+            "epoch": 6,
+            "train": 0.8759765625
+          }
+        ],
+        "test": 0.853515625,
+        "train": 0.8759765625
+      },
+      "role_id_from_token_template": {
+        "dev": 1.0,
+        "epochs_run": 6,
+        "history": [
+          {
+            "dev": 0.75,
+            "epoch": 1,
+            "train": 0.75
+          },
+          {
+            "dev": 1.0,
+            "epoch": 2,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 3,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 4,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 5,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 6,
+            "train": 1.0
+          }
+        ],
+        "test": 1.0,
+        "train": 1.0
+      },
+      "role_id_from_view_text": {
+        "dev": 1.0,
+        "epochs_run": 5,
+        "history": [
+          {
+            "dev": 1.0,
+            "epoch": 1,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 2,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 3,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 4,
+            "train": 1.0
+          },
+          {
+            "dev": 1.0,
+            "epoch": 5,
+            "train": 1.0
+          }
+        ],
+        "test": 1.0,
+        "train": 1.0
+      }
+    },
+    "sample_view_text_by_role": {
+      "0": "Redacted compatibility artifact:\nsymbol_surface: symbol kind class\nexact_symbol_module_path: withheld",
+      "1": "Redacted compatibility artifact:\nprovider_area: provider area coordination or experiment\nexact_symbol_module_path: withheld",
+      "2": "Redacted compatibility artifact:\nprovider_name_shape: provider name odd\nexact_symbol_module_path: withheld",
+      "3": "Redacted compatibility artifact:\nimport_slot_shape: import line even\nexact_symbol_module_path: withheld"
+    },
+    "samples": {
+      "dev": 512,
+      "test": 1024,
+      "train": 1024
+    },
+    "summary": {
+      "high_accuracy_threshold": 0.8,
+      "max_test_accuracy": 1.0,
+      "role_id_predictable_from_view_text": true
+    }
+  }
+}

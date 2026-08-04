@@ -1,0 +1,3148 @@
+{
+  "controls": [
+    {
+      "benchmark": "arc1_latent_rule_clones",
+      "candidate_evidence_mismatch": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          7,
+          4,
+          5,
+          3,
+          4,
+          5,
+          2,
+          8,
+          7,
+          5,
+          3,
+          4
+        ],
+        "mean_gold_rank": 4.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.012285763553033272,
+        "min_gold_vs_best_wrong_logit_margin": -0.05640023946762085,
+        "mrr": 0.24394841269841272,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "color_swapped_palette": 1,
+          "cross_example_train_output_adapted": 1,
+          "difference_over_transform_unchanged": 1,
+          "difference_preserve_input_too_much": 3,
+          "geometry_flipped_objects": 2,
+          "geometry_shifted_objects": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.25,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_only": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "0": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          6,
+          5,
+          4,
+          7,
+          4,
+          5,
+          5,
+          6,
+          8,
+          4,
+          2,
+          3
+        ],
+        "mean_gold_rank": 4.916666666666667,
+        "mean_gold_vs_best_wrong_logit_margin": -0.017520903920133907,
+        "min_gold_vs_best_wrong_logit_margin": -0.08066564053297043,
+        "mrr": 0.23204365079365077,
+        "negative_type_confusion": {
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "geometry_shifted_objects": 3,
+          "object_extra": 1
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.16666666666666666,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_order_invariance_delta": 0.0,
+      "candidate_order_shuffle_with_gold_remap": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          2,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          4
+        ],
+        "mean_gold_rank": 3.5833333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02757275632272164,
+        "min_gold_vs_best_wrong_logit_margin": -0.09717607498168945,
+        "mrr": 0.3083333333333333,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_source_metadata_only_accuracy": 0.08333333333333333,
+      "chance": 0.125,
+      "color_permutation": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          2,
+          3,
+          4,
+          7,
+          6,
+          6,
+          3,
+          2,
+          5,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.8333333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.024959436773012083,
+        "min_gold_vs_best_wrong_logit_margin": -0.0928424671292305,
+        "mrr": 0.31329365079365085,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "color_swapped_palette": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.25,
+        "top3": 0.5833333333333334,
+        "verifier_failure_rate": 1.0
+      },
+      "color_renaming_diagnostic_delta": 0.0,
+      "control_pass": {
+        "candidate_evidence_mismatch": true,
+        "candidate_only": true,
+        "candidate_order_shuffle_with_gold_remap": true,
+        "candidate_source_audit": true,
+        "cross_task_train_pair_shuffle": true,
+        "examples_only_no_candidates": true,
+        "grid_size_control": true,
+        "hidden_state_shuffle": true,
+        "overall": true,
+        "physical_role_order_shuffle": true,
+        "randomized_labels": true,
+        "train_pair_shuffle": true
+      },
+      "coordinate_shift_padding": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "11x11": 0.0,
+          "11x5": 0.0,
+          "13x13": 0.0,
+          "15x14": 0.0,
+          "18x17": 0.0,
+          "20x20": 0.0,
+          "29x29": 0.0,
+          "4x4": 0.0,
+          "6x7": 0.0,
+          "7x11": 0.0,
+          "8x18": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          4,
+          3,
+          3,
+          3,
+          7,
+          5,
+          4,
+          3,
+          6,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.9166666666666665,
+        "mean_gold_vs_best_wrong_logit_margin": -0.029592906435330708,
+        "min_gold_vs_best_wrong_logit_margin": -0.21076911687850952,
+        "mrr": 0.29523809523809524,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 2,
+          "difference_preserve_input_too_much": 4,
+          "object_extra": 1,
+          "object_missing": 3
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "cross_task_train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.9166666666666665,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02841158552716176,
+        "min_gold_vs_best_wrong_logit_margin": -0.08974071405827999,
+        "mrr": 0.2791666666666667,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.4166666666666667,
+        "verifier_failure_rate": 1.0
+      },
+      "examples_only_no_candidates": {
+        "by_candidate_count": {
+          "8": 0.16666666666666666
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 1.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 1.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.16666666666666666,
+          "4": 0.0,
+          "5": 0.5
+        },
+        "by_train_examples": {
+          "2": 0.3333333333333333,
+          "3": 0.16666666666666666,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.25,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.3333333333333333
+        },
+        "gold_ranks": [
+          7,
+          6,
+          5,
+          1,
+          8,
+          7,
+          7,
+          3,
+          4,
+          1,
+          7,
+          6
+        ],
+        "mean_gold_rank": 5.166666666666667,
+        "mean_gold_vs_best_wrong_logit_margin": -2.60770320892334e-08,
+        "min_gold_vs_best_wrong_logit_margin": -5.960464477539063e-08,
+        "mrr": 0.3177579365079365,
+        "negative_type_confusion": {
+          "color_swapped_palette": 1,
+          "difference_preserve_input_too_much": 2,
+          "geometry_flipped_objects": 1,
+          "geometry_shifted_objects": 4,
+          "gold": 2,
+          "object_missing": 2
+        },
+        "top1": 0.16666666666666666,
+        "top2": 0.16666666666666666,
+        "top3": 0.25,
+        "verifier_failure_rate": 0.8333333333333334
+      },
+      "grid_size_control_pass": true,
+      "hidden_state_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          3,
+          4,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.8333333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02800274748976032,
+        "min_gold_vs_best_wrong_logit_margin": -0.09717598557472229,
+        "mrr": 0.2833333333333333,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.4166666666666667,
+        "verifier_failure_rate": 1.0
+      },
+      "physical_role_order_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          4,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.5833333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.0275727321083347,
+        "min_gold_vs_best_wrong_logit_margin": -0.09717601537704468,
+        "mrr": 0.3083333333333333,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "randomized_labels": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          7,
+          2,
+          2,
+          3,
+          3,
+          4,
+          3,
+          7,
+          7,
+          2,
+          4,
+          8
+        ],
+        "mean_gold_rank": 4.333333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.043108762707561255,
+        "min_gold_vs_best_wrong_logit_margin": -0.11561751365661621,
+        "mrr": 0.2961309523809524,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.25,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "role_order_invariance_delta": 0.0,
+      "role_view_masking": {
+        "color": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "diff": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "geometry": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "raw": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        }
+      },
+      "seed": 0,
+      "train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          3,
+          4,
+          4,
+          3,
+          4,
+          5,
+          3,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.028717633181562025,
+        "min_gold_vs_best_wrong_logit_margin": -0.10929694771766663,
+        "mrr": 0.2902777777777778,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 2,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "variant": "A_basic_latent_rule_clones"
+    },
+    {
+      "benchmark": "arc1_latent_rule_clones",
+      "candidate_evidence_mismatch": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          4,
+          5,
+          4,
+          4,
+          5,
+          2,
+          8,
+          7,
+          4,
+          4,
+          6
+        ],
+        "mean_gold_rank": 4.833333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.012561792818208536,
+        "min_gold_vs_best_wrong_logit_margin": -0.0563679076731205,
+        "mrr": 0.23204365079365077,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "color_swapped_palette": 1,
+          "cross_example_train_output_adapted": 1,
+          "difference_over_transform_unchanged": 1,
+          "difference_preserve_input_too_much": 3,
+          "geometry_flipped_objects": 2,
+          "geometry_shifted_objects": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.08333333333333333,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_only": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "0": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          6,
+          5,
+          4,
+          7,
+          4,
+          5,
+          4,
+          6,
+          8,
+          4,
+          2,
+          4
+        ],
+        "mean_gold_rank": 4.916666666666667,
+        "mean_gold_vs_best_wrong_logit_margin": -0.017772451974451542,
+        "min_gold_vs_best_wrong_logit_margin": -0.08180803060531616,
+        "mrr": 0.229265873015873,
+        "negative_type_confusion": {
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "geometry_shifted_objects": 3,
+          "object_extra": 1
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.08333333333333333,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_order_invariance_delta": 0.0,
+      "candidate_order_shuffle_with_gold_remap": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          4,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.5833333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02811085960517327,
+        "min_gold_vs_best_wrong_logit_margin": -0.09905970096588135,
+        "mrr": 0.3083333333333333,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_source_metadata_only_accuracy": 0.08333333333333333,
+      "chance": 0.125,
+      "color_permutation": {
+        "by_candidate_count": {
+          "8": 0.08333333333333333
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 1.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.16666666666666666,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.16666666666666666,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.25,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          4,
+          2,
+          3,
+          4,
+          7,
+          6,
+          6,
+          3,
+          2,
+          5,
+          2,
+          1
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.025188055510322254,
+        "min_gold_vs_best_wrong_logit_margin": -0.09340078383684158,
+        "mrr": 0.36190476190476195,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "color_swapped_palette": 2,
+          "difference_preserve_input_too_much": 5,
+          "gold": 1,
+          "object_missing": 2
+        },
+        "top1": 0.08333333333333333,
+        "top2": 0.3333333333333333,
+        "top3": 0.5,
+        "verifier_failure_rate": 0.9166666666666666
+      },
+      "color_renaming_diagnostic_delta": 0.08333333333333333,
+      "control_pass": {
+        "candidate_evidence_mismatch": true,
+        "candidate_only": true,
+        "candidate_order_shuffle_with_gold_remap": true,
+        "candidate_source_audit": true,
+        "cross_task_train_pair_shuffle": true,
+        "examples_only_no_candidates": false,
+        "grid_size_control": true,
+        "hidden_state_shuffle": true,
+        "overall": false,
+        "physical_role_order_shuffle": true,
+        "randomized_labels": true,
+        "train_pair_shuffle": true
+      },
+      "coordinate_shift_padding": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "11x11": 0.0,
+          "11x5": 0.0,
+          "13x13": 0.0,
+          "15x14": 0.0,
+          "18x17": 0.0,
+          "20x20": 0.0,
+          "29x29": 0.0,
+          "4x4": 0.0,
+          "6x7": 0.0,
+          "7x11": 0.0,
+          "8x18": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          4,
+          3,
+          3,
+          3,
+          7,
+          5,
+          4,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.8333333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.0301119452342391,
+        "min_gold_vs_best_wrong_logit_margin": -0.21584483608603477,
+        "mrr": 0.2924603174603175,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 2,
+          "difference_preserve_input_too_much": 4,
+          "object_extra": 1,
+          "object_missing": 3
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.5833333333333334,
+        "verifier_failure_rate": 1.0
+      },
+      "cross_task_train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.028884151329596836,
+        "min_gold_vs_best_wrong_logit_margin": -0.0903051532804966,
+        "mrr": 0.2902777777777778,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "examples_only_no_candidates": {
+        "by_candidate_count": {
+          "8": 0.25
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 1.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 1.0,
+          "7x17": 1.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.3333333333333333,
+          "4": 0.5,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.3333333333333333,
+          "3": 0.3333333333333333,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.25,
+          "sparse_edit": 0.6666666666666666
+        },
+        "gold_ranks": [
+          8,
+          1,
+          5,
+          6,
+          1,
+          2,
+          7,
+          7,
+          2,
+          1,
+          7,
+          3
+        ],
+        "mean_gold_rank": 4.166666666666667,
+        "mean_gold_vs_best_wrong_logit_margin": -2.1730860074361164e-08,
+        "min_gold_vs_best_wrong_logit_margin": -8.940696716308594e-08,
+        "mrr": 0.437797619047619,
+        "negative_type_confusion": {
+          "color_reduced_region": 3,
+          "color_swapped_palette": 3,
+          "difference_over_transform_unchanged": 1,
+          "geometry_shifted_objects": 1,
+          "gold": 3,
+          "object_missing": 1
+        },
+        "top1": 0.25,
+        "top2": 0.4166666666666667,
+        "top3": 0.5,
+        "verifier_failure_rate": 0.75
+      },
+      "grid_size_control_pass": true,
+      "hidden_state_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02846563731630643,
+        "min_gold_vs_best_wrong_logit_margin": -0.09905961155891418,
+        "mrr": 0.2875,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.4166666666666667,
+        "verifier_failure_rate": 1.0
+      },
+      "physical_role_order_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.5833333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.028110858363409836,
+        "min_gold_vs_best_wrong_logit_margin": -0.09905961155891418,
+        "mrr": 0.3013888888888889,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.5833333333333334,
+        "verifier_failure_rate": 1.0
+      },
+      "randomized_labels": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          7,
+          2,
+          2,
+          3,
+          3,
+          4,
+          3,
+          7,
+          7,
+          2,
+          4,
+          8
+        ],
+        "mean_gold_rank": 4.333333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.043495023623108864,
+        "min_gold_vs_best_wrong_logit_margin": -0.11743542551994324,
+        "mrr": 0.2961309523809524,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.25,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "role_order_invariance_delta": 0.0,
+      "role_view_masking": {
+        "slot_0": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "slot_1": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "slot_2": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "slot_3": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        }
+      },
+      "seed": 0,
+      "train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          4,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5,
+          3,
+          3,
+          6,
+          2,
+          4
+        ],
+        "mean_gold_rank": 3.8333333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02933922999848922,
+        "min_gold_vs_best_wrong_logit_margin": -0.11111950874328613,
+        "mrr": 0.2805555555555555,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 2,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.3333333333333333,
+        "verifier_failure_rate": 1.0
+      },
+      "variant": "B_learned_rule_slot_clones"
+    },
+    {
+      "benchmark": "arc1_latent_rule_clones",
+      "candidate_evidence_mismatch": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          6,
+          4,
+          5,
+          3,
+          4,
+          5,
+          2,
+          8,
+          7,
+          7,
+          3,
+          4
+        ],
+        "mean_gold_rank": 4.833333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.012557276835044226,
+        "min_gold_vs_best_wrong_logit_margin": -0.05780884623527527,
+        "mrr": 0.24117063492063492,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "color_swapped_palette": 1,
+          "cross_example_train_output_adapted": 1,
+          "difference_over_transform_unchanged": 1,
+          "difference_preserve_input_too_much": 3,
+          "geometry_flipped_objects": 2,
+          "geometry_shifted_objects": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.25,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_only": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "0": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          6,
+          5,
+          4,
+          7,
+          4,
+          5,
+          4,
+          6,
+          7,
+          4,
+          2,
+          4
+        ],
+        "mean_gold_rank": 4.833333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.017684577653805416,
+        "min_gold_vs_best_wrong_logit_margin": -0.08136235922574997,
+        "mrr": 0.23075396825396824,
+        "negative_type_confusion": {
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "geometry_shifted_objects": 3,
+          "object_extra": 1
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.08333333333333333,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_order_invariance_delta": 0.0,
+      "candidate_order_shuffle_with_gold_remap": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          2,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.5,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02799496768663327,
+        "min_gold_vs_best_wrong_logit_margin": -0.09862002730369568,
+        "mrr": 0.31527777777777777,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5833333333333334,
+        "verifier_failure_rate": 1.0
+      },
+      "candidate_source_metadata_only_accuracy": 0.08333333333333333,
+      "chance": 0.125,
+      "color_permutation": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          2,
+          4,
+          4,
+          7,
+          6,
+          6,
+          3,
+          2,
+          5,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.8333333333333335,
+        "mean_gold_vs_best_wrong_logit_margin": -0.024939267430454493,
+        "min_gold_vs_best_wrong_logit_margin": -0.0925760269165039,
+        "mrr": 0.32023809523809527,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "color_swapped_palette": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.3333333333333333,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "color_renaming_diagnostic_delta": 0.0,
+      "control_pass": {
+        "candidate_evidence_mismatch": true,
+        "candidate_only": true,
+        "candidate_order_shuffle_with_gold_remap": true,
+        "candidate_source_audit": true,
+        "cross_task_train_pair_shuffle": true,
+        "examples_only_no_candidates": true,
+        "grid_size_control": true,
+        "hidden_state_shuffle": true,
+        "overall": true,
+        "physical_role_order_shuffle": true,
+        "randomized_labels": true,
+        "train_pair_shuffle": true
+      },
+      "coordinate_shift_padding": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "11x11": 0.0,
+          "11x5": 0.0,
+          "13x13": 0.0,
+          "15x14": 0.0,
+          "18x17": 0.0,
+          "20x20": 0.0,
+          "29x29": 0.0,
+          "4x4": 0.0,
+          "6x7": 0.0,
+          "7x11": 0.0,
+          "8x18": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          4,
+          3,
+          3,
+          3,
+          7,
+          5,
+          4,
+          3,
+          6,
+          2,
+          4
+        ],
+        "mean_gold_rank": 3.9166666666666665,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02982438976565997,
+        "min_gold_vs_best_wrong_logit_margin": -0.2135053053498268,
+        "mrr": 0.28551587301587306,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 2,
+          "difference_preserve_input_too_much": 4,
+          "object_extra": 1,
+          "object_missing": 3
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "cross_task_train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          2,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          3,
+          6,
+          2,
+          3
+        ],
+        "mean_gold_rank": 3.6666666666666665,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02874543114254872,
+        "min_gold_vs_best_wrong_logit_margin": -0.09059231542050838,
+        "mrr": 0.30416666666666664,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "examples_only_no_candidates": {
+        "by_candidate_count": {
+          "8": 0.08333333333333333
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 1.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.5,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.16666666666666666,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.3333333333333333
+        },
+        "gold_ranks": [
+          5,
+          5,
+          8,
+          4,
+          8,
+          2,
+          7,
+          6,
+          1,
+          4,
+          7,
+          3
+        ],
+        "mean_gold_rank": 5.0,
+        "mean_gold_vs_best_wrong_logit_margin": -1.9868214925130207e-08,
+        "min_gold_vs_best_wrong_logit_margin": -8.940696716308594e-08,
+        "mrr": 0.28630952380952385,
+        "negative_type_confusion": {
+          "color_reduced_region": 2,
+          "difference_over_transform_unchanged": 1,
+          "difference_preserve_input_too_much": 2,
+          "geometry_flipped_objects": 2,
+          "gold": 1,
+          "object_extra": 1,
+          "object_missing": 3
+        },
+        "top1": 0.08333333333333333,
+        "top2": 0.16666666666666666,
+        "top3": 0.25,
+        "verifier_failure_rate": 0.9166666666666666
+      },
+      "grid_size_control_pass": true,
+      "hidden_state_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          3,
+          4,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          4
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.02845993498340249,
+        "min_gold_vs_best_wrong_logit_margin": -0.09862002730369568,
+        "mrr": 0.2875,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.08333333333333333,
+        "top3": 0.4166666666666667,
+        "verifier_failure_rate": 1.0
+      },
+      "physical_role_order_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          3,
+          3,
+          3,
+          4,
+          3,
+          4,
+          5,
+          4,
+          3,
+          6,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.5,
+        "mean_gold_vs_best_wrong_logit_margin": -0.027994978862504166,
+        "min_gold_vs_best_wrong_logit_margin": -0.0986199676990509,
+        "mrr": 0.31527777777777777,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.5833333333333334,
+        "verifier_failure_rate": 1.0
+      },
+      "randomized_labels": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          7,
+          2,
+          2,
+          3,
+          3,
+          4,
+          3,
+          7,
+          7,
+          2,
+          4,
+          8
+        ],
+        "mean_gold_rank": 4.333333333333333,
+        "mean_gold_vs_best_wrong_logit_margin": -0.0434342121394972,
+        "min_gold_vs_best_wrong_logit_margin": -0.11721143126487732,
+        "mrr": 0.2961309523809524,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.25,
+        "top3": 0.5,
+        "verifier_failure_rate": 1.0
+      },
+      "role_order_invariance_delta": 0.0,
+      "role_view_masking": {
+        "color": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "diff": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "geometry": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "object": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "raw": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        },
+        "symmetry": {
+          "by_candidate_count": {
+            "8": 0.08333333333333333
+          },
+          "by_grid_size": {
+            "10x10": 0.0,
+            "10x4": 0.0,
+            "12x12": 0.0,
+            "14x13": 1.0,
+            "17x16": 0.0,
+            "19x19": 0.0,
+            "28x28": 0.0,
+            "3x3": 0.0,
+            "5x6": 0.0,
+            "6x10": 0.0,
+            "7x17": 0.0
+          },
+          "by_palette_size": {
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.5,
+            "5": 0.0
+          },
+          "by_train_examples": {
+            "2": 0.0,
+            "3": 0.16666666666666666,
+            "4": 0.0,
+            "6": 0.0
+          },
+          "by_transformation_type": {
+            "dense_rewrite": 0.0,
+            "partial_rewrite": 0.0,
+            "resize_or_construct": 0.0,
+            "sparse_edit": 0.3333333333333333
+          },
+          "gold_ranks": [
+            7,
+            5,
+            7,
+            3,
+            8,
+            3,
+            7,
+            6,
+            1,
+            2,
+            6,
+            3
+          ],
+          "mean_gold_rank": 4.833333333333333,
+          "mean_gold_vs_best_wrong_logit_margin": NaN,
+          "min_gold_vs_best_wrong_logit_margin": NaN,
+          "mrr": 0.29890873015873015,
+          "negative_type_confusion": {
+            "color_reduced_region": 1,
+            "difference_preserve_input_too_much": 1,
+            "geometry_shifted_objects": 4,
+            "gold": 1,
+            "object_missing": 5
+          },
+          "top1": 0.08333333333333333,
+          "top2": 0.16666666666666666,
+          "top3": 0.4166666666666667,
+          "verifier_failure_rate": 0.9166666666666666
+        }
+      },
+      "seed": 0,
+      "train_pair_shuffle": {
+        "by_candidate_count": {
+          "8": 0.0
+        },
+        "by_grid_size": {
+          "10x10": 0.0,
+          "10x4": 0.0,
+          "12x12": 0.0,
+          "14x13": 0.0,
+          "17x16": 0.0,
+          "19x19": 0.0,
+          "28x28": 0.0,
+          "3x3": 0.0,
+          "5x6": 0.0,
+          "6x10": 0.0,
+          "7x17": 0.0
+        },
+        "by_palette_size": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "by_train_examples": {
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "6": 0.0
+        },
+        "by_transformation_type": {
+          "dense_rewrite": 0.0,
+          "partial_rewrite": 0.0,
+          "resize_or_construct": 0.0,
+          "sparse_edit": 0.0
+        },
+        "gold_ranks": [
+          5,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5,
+          3,
+          3,
+          6,
+          2,
+          2
+        ],
+        "mean_gold_rank": 3.75,
+        "mean_gold_vs_best_wrong_logit_margin": -0.029166170085469883,
+        "min_gold_vs_best_wrong_logit_margin": -0.11063700914382935,
+        "mrr": 0.2972222222222222,
+        "negative_type_confusion": {
+          "color_reduced_region": 1,
+          "difference_over_transform_unchanged": 3,
+          "difference_preserve_input_too_much": 5,
+          "object_extra": 1,
+          "object_missing": 2
+        },
+        "top1": 0.0,
+        "top2": 0.16666666666666666,
+        "top3": 0.4166666666666667,
+        "verifier_failure_rate": 1.0
+      },
+      "variant": "C_view_biased_rule_clones"
+    }
+  ],
+  "summary": {
+    "bootstrap_95ci_lower_gt_0_05": false,
+    "candidate_evidence_mismatch_collapses": true,
+    "candidate_metadata_source_only_near_chance": true,
+    "candidate_only_near_chance": true,
+    "candidate_order_remap_invariance_passes": true,
+    "final_validation_required_for_primary_success": true,
+    "frozen_comparator_remains_frozen": true,
+    "mean_trainable_frozen_delta_at_least_0_20": false,
+    "role_order_invariance_passes": true,
+    "train_pair_shuffle_collapses": true,
+    "trainable_beats_frozen_on_at_least_8_of_10_final_seeds": false,
+    "trainable_shared_model_receives_gradients_and_changes": true
+  }
+}

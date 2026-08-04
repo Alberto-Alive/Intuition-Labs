@@ -1,0 +1,17 @@
+
+E14 Summary
+
+Question
+e14 asked one question only: does querying a frozen store of historical activation patterns with current activations produce a certainty signal that tracks whether a combination was encountered during training?
+
+Method
+A 2-layer MLP was trained on a synthetic compositional task with 8 values for part_a, 8 values for part_b, and 16 held-out combinations per seed, while seen/unseen status was not itself the prediction target. After training, the model was frozen and a post-hoc memory bank was built by storing hidden activations for all training examples at each hidden layer. For each test example, certainty was defined as the maximum cosine similarity between its hidden activation and the frozen bank at that layer, and the seen versus unseen distributions were compared across 5 seeds.
+
+Primary Result
+Layer 1 certainty achieved rank-biserial correlation of 1.0 across all 5 seeds, Cohen’s d = 3.743, and p ≈ 2.19e-252. This is perfect separation of seen from unseen combinations.
+
+Interpretation Boundary
+This validates the signal from a frozen post-hoc bank. It does not validate the live intrinsic architecture.
+
+Preregistered Next Experiment
+The next experiment is to test whether a live online mechanism, accumulating during training, produces the same signal without requiring a frozen post-hoc bank.

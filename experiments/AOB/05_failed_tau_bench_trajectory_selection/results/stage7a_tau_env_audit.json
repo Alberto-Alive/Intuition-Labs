@@ -1,0 +1,202 @@
+{
+  "artifact": "stage7a_tau_env_audit",
+  "cli_commands_available": {
+    "tau2 --help": true,
+    "tau2 check-data": true,
+    "tau2 evaluate-trajs --help": true,
+    "tau2 run --help": true
+  },
+  "cli_help_outputs": {
+    "tau2 --help": {
+      "args": [
+        "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\Scripts\\tau2.exe",
+        "--help"
+      ],
+      "returncode": 0,
+      "stderr_tail": "\u001b[32m2026-05-17 04:48:21.908\u001b[0m | \u001b[33m\u001b[1mWARNING \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m15\u001b[0m - \u001b[33m\u001b[1mNo .env file found\u001b[0m\n\u001b[32m2026-05-17 04:48:21.908\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m23\u001b[0m - \u001b[1mUsing data directory from environment: W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench\\data\u001b[0m\n04:48:22 - LiteLLM:WARNING: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions. Falling back to local backup.\n\u001b[32m2026-05-17 04:48:23.572\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.llm_utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m102\u001b[0m - \u001b[1mLiteLLM: Cache is disabled\u001b[0m\n\u001b[32m2026-05-17 04:48:23.629\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m281\u001b[0m - \u001b[34m\u001b[1mRegistering default components...\u001b[0m\n\u001b[32m2026-05-17 04:48:23.631\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m292\u001b[0m - \u001b[34m\u001b[1mVoice dependencies not installed, skipping voice user registration\u001b[0m\n\u001b[32m2026-05-17 04:48:23.631\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m350\u001b[0m - \u001b[34m\u001b[1mDefault components registered successfully. Registry info: {\n  \"domains\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ],\n  \"agents\": [\n    \"llm_agent\",\n    \"llm_agent_gt\",\n    \"llm_agent_solo\",\n    \"discrete_time_audio_native_agent\"\n  ],\n  \"users\": [\n    \"user_simulator\",\n    \"dummy_user\"\n  ],\n  \"task_sets\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom_full\",\n    \"telecom_small\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ]\n}\u001b[0m\n",
+      "stdout_tail": "usage: tau2 [-h]\n            {run,play,view,domain,start,intro,check-data,evaluate-trajs,review,leaderboard,submit,convert-results}\n            ...\n\nTau2 command line interface\n\npositional arguments:\n  {run,play,view,domain,start,intro,check-data,evaluate-trajs,review,leaderboard,submit,convert-results}\n                        Available commands\n    run                 Run a benchmark\n    play                Play manual mode - interact with a domain as the agent\n    view                View simulation results\n    domain              Show domain documentation\n    start               Start all servers\n    intro               Show an overview of tau-bench and available commands\n    check-data          Check if data directory is properly configured\n    evaluate-trajs      Evaluate trajectories and update rewards\n    review              Run LLM-based conversation review on simulation\n                        results\n    leaderboard         Show the tau-bench leaderboard\n    submit              Submission management for the leaderboard\n    convert-results     Convert simulation results between storage formats\n\noptions:\n  -h, --help            show this help message and exit\n"
+    },
+    "tau2 check-data": {
+      "args": [
+        "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\Scripts\\tau2.exe",
+        "check-data"
+      ],
+      "returncode": 0,
+      "stderr_tail": "\u001b[32m2026-05-17 04:48:29.630\u001b[0m | \u001b[33m\u001b[1mWARNING \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m15\u001b[0m - \u001b[33m\u001b[1mNo .env file found\u001b[0m\n\u001b[32m2026-05-17 04:48:29.632\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m23\u001b[0m - \u001b[1mUsing data directory from environment: W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench\\data\u001b[0m\n04:48:29 - LiteLLM:WARNING: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions. Falling back to local backup.\n\u001b[32m2026-05-17 04:48:31.271\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.llm_utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m102\u001b[0m - \u001b[1mLiteLLM: Cache is disabled\u001b[0m\n\u001b[32m2026-05-17 04:48:31.326\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m281\u001b[0m - \u001b[34m\u001b[1mRegistering default components...\u001b[0m\n\u001b[32m2026-05-17 04:48:31.330\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m292\u001b[0m - \u001b[34m\u001b[1mVoice dependencies not installed, skipping voice user registration\u001b[0m\n\u001b[32m2026-05-17 04:48:31.330\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m350\u001b[0m - \u001b[34m\u001b[1mDefault components registered successfully. Registry info: {\n  \"domains\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ],\n  \"agents\": [\n    \"llm_agent\",\n    \"llm_agent_gt\",\n    \"llm_agent_solo\",\n    \"discrete_time_audio_native_agent\"\n  ],\n  \"users\": [\n    \"user_simulator\",\n    \"dummy_user\"\n  ],\n  \"task_sets\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom_full\",\n    \"telecom_small\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ]\n}\u001b[0m\n",
+      "stdout_tail": "tau2 Data Directory Checker\n========================================\nData directory: W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench\\data\n\u00e2\u0153\u2026 Data directory exists\nYou can now run tau2 commands.\n"
+    },
+    "tau2 evaluate-trajs --help": {
+      "args": [
+        "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\Scripts\\tau2.exe",
+        "evaluate-trajs",
+        "--help"
+      ],
+      "returncode": 0,
+      "stderr_tail": "\u001b[32m2026-05-17 04:48:27.055\u001b[0m | \u001b[33m\u001b[1mWARNING \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m15\u001b[0m - \u001b[33m\u001b[1mNo .env file found\u001b[0m\n\u001b[32m2026-05-17 04:48:27.055\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m23\u001b[0m - \u001b[1mUsing data directory from environment: W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench\\data\u001b[0m\n04:48:27 - LiteLLM:WARNING: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions. Falling back to local backup.\n\u001b[32m2026-05-17 04:48:28.706\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.llm_utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m102\u001b[0m - \u001b[1mLiteLLM: Cache is disabled\u001b[0m\n\u001b[32m2026-05-17 04:48:28.761\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m281\u001b[0m - \u001b[34m\u001b[1mRegistering default components...\u001b[0m\n\u001b[32m2026-05-17 04:48:28.764\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m292\u001b[0m - \u001b[34m\u001b[1mVoice dependencies not installed, skipping voice user registration\u001b[0m\n\u001b[32m2026-05-17 04:48:28.764\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m350\u001b[0m - \u001b[34m\u001b[1mDefault components registered successfully. Registry info: {\n  \"domains\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ],\n  \"agents\": [\n    \"llm_agent\",\n    \"llm_agent_gt\",\n    \"llm_agent_solo\",\n    \"discrete_time_audio_native_agent\"\n  ],\n  \"users\": [\n    \"user_simulator\",\n    \"dummy_user\"\n  ],\n  \"task_sets\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom_full\",\n    \"telecom_small\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ]\n}\u001b[0m\n",
+      "stdout_tail": "usage: tau2 evaluate-trajs [-h] [-o OUTPUT_DIR] paths [paths ...]\n\npositional arguments:\n  paths                 Paths to trajectory files, directories, or glob\n                        patterns\n\noptions:\n  -h, --help            show this help message and exit\n  -o OUTPUT_DIR, --output-dir OUTPUT_DIR\n                        Directory to save updated trajectory files with\n                        recomputed rewards. If not provided, only displays\n                        metrics.\n"
+    },
+    "tau2 run --help": {
+      "args": [
+        "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\Scripts\\tau2.exe",
+        "run",
+        "--help"
+      ],
+      "returncode": 0,
+      "stderr_tail": "\u001b[32m2026-05-17 04:48:24.499\u001b[0m | \u001b[33m\u001b[1mWARNING \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m15\u001b[0m - \u001b[33m\u001b[1mNo .env file found\u001b[0m\n\u001b[32m2026-05-17 04:48:24.499\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m23\u001b[0m - \u001b[1mUsing data directory from environment: W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench\\data\u001b[0m\n04:48:24 - LiteLLM:WARNING: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions. Falling back to local backup.\n\u001b[32m2026-05-17 04:48:26.130\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mtau2.utils.llm_utils\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m102\u001b[0m - \u001b[1mLiteLLM: Cache is disabled\u001b[0m\n\u001b[32m2026-05-17 04:48:26.186\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m281\u001b[0m - \u001b[34m\u001b[1mRegistering default components...\u001b[0m\n\u001b[32m2026-05-17 04:48:26.189\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m292\u001b[0m - \u001b[34m\u001b[1mVoice dependencies not installed, skipping voice user registration\u001b[0m\n\u001b[32m2026-05-17 04:48:26.190\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mtau2.registry\u001b[0m:\u001b[36m<module>\u001b[0m:\u001b[36m350\u001b[0m - \u001b[34m\u001b[1mDefault components registered successfully. Registry info: {\n  \"domains\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ],\n  \"agents\": [\n    \"llm_agent\",\n    \"llm_agent_gt\",\n    \"llm_agent_solo\",\n    \"discrete_time_audio_native_agent\"\n  ],\n  \"users\": [\n    \"user_simulator\",\n    \"dummy_user\"\n  ],\n  \"task_sets\": [\n    \"mock\",\n    \"airline\",\n    \"retail\",\n    \"telecom_full\",\n    \"telecom_small\",\n    \"telecom\",\n    \"telecom-workflow\",\n    \"banking_knowledge\"\n  ]\n}\u001b[0m\n",
+      "stdout_tail": "       No timeout by default.\n  --save-to SAVE_TO     The path to save the simulation results. Will be saved\n                        to data/simulations/<save_to>/results.json. If not\n                        provided, will save to\n                        <timestamp>_<domain>_<agent>_<user>. If the file\n                        already exists, it will try to resume the run.\n  --max-concurrency MAX_CONCURRENCY\n                        The maximum number of concurrent simulations to run.\n                        Default is 3.\n  --seed SEED           The seed to use for the simulation. Default is 300.\n  --log-level LOG_LEVEL\n                        The log level to use for the simulation. Default is\n                        ERROR.\n  --verbose-logs        Enable verbose logging: saves LLM call logs, audio\n                        files, per-task logs, and ticks (for audio-native).\n                        Files are saved to the save directory (auto-generated\n                        if --save-to not specified).\n  --audio-debug         Enable audio debugging for audio-native mode. Saves\n                        per-tick audio files and timing analysis report for\n                        diagnosing alignment issues. Requires --audio-native.\n  --audio-taps          Enable audio tap recording for audio-native mode.\n                        Saves WAV files at each pipeline stage (pre-effects,\n                        post-noise, post-telephony, final, agent-input) for\n                        diagnosing signal property differences. Requires\n                        --audio-native.\n  --llm-log-mode {all,latest}\n                        LLM debug logging mode. Only takes effect when\n                        --verbose-logs is enabled. 'all' saves every LLM call\n                        (can generate many files), 'latest' keeps only the\n                        most recent call of each type (saves space). Default\n                        is 'latest'. Ignored if --verbose-logs is not\n                        specified.\n  --max-retries MAX_RETRIES\n                        Maximum number of retries for failed tasks. Default is\n                        3.\n  --retry-delay RETRY_DELAY\n                        Delay in seconds between retries. Default is 1.0.\n  --enforce-communication-protocol\n                        Enforce communication protocol rules (e.g., no mixed\n                        messages with text and tool calls). Default is False.\n  --user-persona USER_PERSONA\n                        User persona config as JSON dict. Supports explicit\n                        values or weighted probabilities. Examples:\n                        '{\"verbosity\": \"minimal\"}', '{\"verbosity\": {\"minimal\":\n                        0.8, \"standard\": 0.2}}'. If not provided, uses default\n                        behavior (standard verbosity).\n  --audio-native        Enable audio-native mode using\n                        DiscreteTimeAudioNativeAgent with\n                        VoiceStreamingUserSimulator. This enables full-duplex\n                        voice simulation using audio native APIs.\n  --audio-native-provider {openai,gemini,xai,livekit}\n                        Audio native API provider. Default is 'openai'.\n  --cascaded-config CASCADED_CONFIG\n                        Cascaded config preset name for livekit provider.\n                        Available presets: 'default', 'openai-thinking'. See\n                        tau2.voice.audio_native.livekit.config for details.\n  --audio-native-model AUDIO_NATIVE_MODEL\n                        Audio native model to use. If not specified, uses the\n                        default model for the selected provider.\n  --reasoning-effort {minimal,low,medium,high}\n                        Reasoning effort for thinking models. Only applies to\n                        providers that support it (e.g. OpenAI).\n  --tick-duration TICK_DURATION\n                        Tick duration in seconds for audio-native mode.\n                        Default is 0.2.\n  --max-steps-seconds MAX_STEPS_SECONDS\n                        Maximum conversation duration in seconds for audio-\n                        native mode. Default is 1200.\n  --speech-complexity {control,regular,control_audio,control_accents,control_behavior,control_audio_accents,control_audio_behavior,control_accents_behavior}\n                        Speech complexity level for audio effects. Default is\n                        'regular'.\n  --pcm-sample-rate PCM_SAMPLE_RATE\n                        User simulator PCM synthesis sample rate. Default is\n                        16000.\n  --telephony-rate TELEPHONY_RATE\n                        API/agent telephony sample rate (OpenAI Realtime API).\n                        Default is 8000.\n  --wait-to-respond-other WAIT_TO_RESPOND_OTHER\n                        Min time since OTHER (agent) spoke before user\n                        responds (seconds). Default is 1.0.\n  --wait-to-respond-self WAIT_TO_RESPOND_SELF\n                        Min time since SELF (user) spoke before responding\n                        (seconds). Default is 5.0.\n  --yield-when-interrupted YIELD_WHEN_INTERRUPTED\n                        How long user keeps speaking when agent interrupts\n                        (seconds). Default is 1.0.\n  --yield-when-interrupting YIELD_WHEN_INTERRUPTING\n                        How long user keeps speaking when user interrupts\n                        agent (seconds). Default is 5.0.\n  --interruption-check-interval INTERRUPTION_CHECK_INTERVAL\n                        Interval for checking interruptions (seconds). Default\n                        is 2.0.\n  --integration-duration INTEGRATION_DURATION\n                        Integration duration for linearization (seconds).\n                        Default is 0.5.\n  --silence-annotation-threshold SILENCE_ANNOTATION_THRESHOLD\n                        Silence threshold for adding annotations to\n                        conversation history (seconds). Default is 4.0.\n  --xml-prompt          Use XML tags in system prompt (overrides auto-\n                        detection).\n  --no-xml-prompt       Use plain text system prompt without XML tags\n                        (overrides auto-detection).\n  --retrieval-config {alltools,alltools-qwen,bm25,bm25_grep,bm25_reranker,bm25_reranker_grep,full_kb,golden_retrieval,grep_only,no_knowledge,openai_embeddings,openai_embeddings_grep,openai_embeddings_reranker,openai_embeddings_reranker_grep,qwen_embeddings,qwen_embeddings_grep,qwen_embeddings_reranker,qwen_embeddings_reranker_grep,terminal_use,terminal_use_write}\n                        Knowledge retrieval config name (banking_knowledge\n                        domain). Offline: no_knowledge, full_kb,\n                        golden_retrieval, bm25, bm25_grep, grep_only. Requires\n                        OPENAI_API_KEY: openai_embeddings*, alltools. Requires\n                        OPENROUTER_API_KEY: qwen_embeddings*, alltools-qwen.\n                        Requires sandbox-runtime: terminal_use*, alltools,\n                        alltools-qwen. Default for banking_knowledge: alltools\n                        (BM25 + dense + shell).\n  --retrieval-config-kwargs RETRIEVAL_CONFIG_KWARGS\n                        Arguments to pass to the retrieval config constructor\n                        as JSON (e.g., '{\"top_k\": 10}').\n  --auto-resume         Automatically resume from existing save file without\n                        prompting (for non-interactive runs).\n  --auto-review         Automatically run LLM conversation review after each\n                        simulation.\n  --review-mode {full,user}\n                        Review mode when --auto-review is enabled: 'full'\n                        (agent+user errors, default) or 'user' (user simulator\n                        only).\n  --hallucination-retries HALLUCINATION_RETRIES\n                        Max retries when a user simulator hallucination is\n                        detected (full-duplex only). Set to 0 to disable.\n"
+    }
+  },
+  "conda_env_name": "stage7_tau",
+  "conda_env_path": "C:\\Users\\Alber\\anaconda3\\envs",
+  "created_at_utc": "2026-05-17T01:48:31.973561+00:00",
+  "install_commands_used": [
+    "conda create -y -n stage7_tau python=3.12",
+    "python -m pip install git+https://github.com/sierra-research/tau2-bench.git",
+    "python -m pip install pytest torch datasets scikit-learn",
+    "python -m pip install annotated-types python-dotenv",
+    "git clone https://github.com/sierra-research/tau2-bench.git external/tau2-bench",
+    "python -m pip install -e external/tau2-bench"
+  ],
+  "os": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "release": "11",
+    "system": "Windows"
+  },
+  "pip_check": {
+    "args": [
+      "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "No broken requirements found.\n"
+  },
+  "pip_freeze": [
+    "addict==2.4.0",
+    "aiohappyeyeballs==2.6.1",
+    "aiohttp==3.13.5",
+    "aiosignal==1.4.0",
+    "annotated-doc==0.0.4",
+    "annotated-types==0.7.0",
+    "anyio==4.13.0",
+    "attrs==26.1.0",
+    "cachebox==5.2.3",
+    "certifi==2026.4.22",
+    "charset-normalizer==3.4.7",
+    "click==8.4.0",
+    "colorama==0.4.6",
+    "datasets==4.8.5",
+    "deepdiff==9.1.0",
+    "dill==0.4.1",
+    "distro==1.9.0",
+    "docstring_parser==0.18.0",
+    "fastapi==0.136.1",
+    "fastuuid==0.14.0",
+    "filelock==3.29.0",
+    "frozenlist==1.8.0",
+    "fsspec==2026.2.0",
+    "h11==0.16.0",
+    "hf-xet==1.5.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "huggingface_hub==1.15.0",
+    "idna==3.15",
+    "importlib_metadata==9.0.0",
+    "iniconfig==2.3.0",
+    "Jinja2==3.1.6",
+    "jiter==0.14.0",
+    "joblib==1.5.3",
+    "jsonschema==4.26.0",
+    "jsonschema-specifications==2025.9.1",
+    "litellm==1.82.6",
+    "loguru==0.7.3",
+    "markdown-it-py==4.2.0",
+    "MarkupSafe==3.0.3",
+    "mdurl==0.1.2",
+    "mpmath==1.3.0",
+    "multidict==6.7.1",
+    "multiprocess==0.70.19",
+    "networkx==3.6.1",
+    "numpy==2.4.5",
+    "openai==2.37.0",
+    "orderly-set==5.5.0",
+    "packaging==26.0",
+    "pandas==3.0.3",
+    "pluggy==1.6.0",
+    "propcache==0.5.2",
+    "psutil==7.2.2",
+    "pyarrow==24.0.0",
+    "pydantic==2.13.4",
+    "pydantic_core==2.46.4",
+    "Pygments==2.20.0",
+    "pytest==9.0.3",
+    "python-dateutil==2.9.0.post0",
+    "python-dotenv==1.2.2",
+    "PyYAML==6.0.3",
+    "referencing==0.37.0",
+    "regex==2026.5.9",
+    "requests==2.34.2",
+    "rich==15.0.0",
+    "rpds-py==0.30.0",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "setuptools==81.0.0",
+    "shellingham==1.5.4",
+    "six==1.17.0",
+    "sniffio==1.3.1",
+    "starlette==1.0.0",
+    "sympy==1.14.0",
+    "tabulate==0.10.0",
+    "# Editable Git install with no remote (tau2==1.0.0)",
+    "-e w:\\hocuspocus\\armyofbots - m4 but picpalac choose - \u00cf\u201e-bench trajectory selection\\external\\tau2-bench",
+    "tenacity==9.1.4",
+    "threadpoolctl==3.6.0",
+    "tiktoken==0.13.0",
+    "tokenizers==0.23.1",
+    "toml==0.10.2",
+    "torch==2.12.0",
+    "tqdm==4.67.3",
+    "typer==0.25.1",
+    "typing-inspection==0.4.2",
+    "typing_extensions==4.15.0",
+    "tzdata==2026.2",
+    "urllib3==2.7.0",
+    "uvicorn==0.47.0",
+    "wheel==0.46.3",
+    "win32_setctime==1.2.0",
+    "xxhash==3.7.0",
+    "yarl==1.23.0",
+    "zipp==3.23.1"
+  ],
+  "project_install": {
+    "pip_install_e_attempted": false,
+    "reason": "No pyproject.toml/setup.py/setup.cfg was present; project code was run with PYTHONPATH set to the workspace root."
+  },
+  "python": {
+    "env_python_version": {
+      "args": [
+        "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\python.exe",
+        "--version"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Python 3.12.13\n"
+    },
+    "executable": "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\python.exe",
+    "version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]"
+  },
+  "python_utf8_note": "tau2 Results.load uses open(path, \"r\") without an explicit encoding; PYTHONUTF8=1 made the official evaluator read/write UTF-8 correctly on Windows.",
+  "python_utf8_required_for_tau2_evaluate_trajs_on_windows": true,
+  "pythonioencoding_utf8_required": true,
+  "tau2": {
+    "cli_path": "C:\\Users\\Alber\\anaconda3\\envs\\stage7_tau\\Scripts\\tau2.exe",
+    "commit_hash": "0ed8c0ef0a1f6b024a0fb733e186922411874879",
+    "data_dir": "W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u03c4-bench trajectory selection\\external\\tau2-bench\\data",
+    "local_checkout": "W:\\HocusPocus\\armyofbots - m4 but picpalac choose - \u03c4-bench trajectory selection\\external\\tau2-bench",
+    "official_repo": "https://github.com/sierra-research/tau2-bench.git",
+    "package_version": "1.0.0"
+  },
+  "user_site_disabled_for_runs": true
+}

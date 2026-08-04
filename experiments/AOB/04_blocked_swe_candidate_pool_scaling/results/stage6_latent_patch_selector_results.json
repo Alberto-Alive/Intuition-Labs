@@ -1,0 +1,2702 @@
+{
+  "metadata": {
+    "architecture_selection": {},
+    "benchmark": "stage6_latent_patch_selector",
+    "candidate_pool_path": "results\\stage6_candidate_pools.jsonl",
+    "config": {
+      "batch_size": 8,
+      "device": "cpu",
+      "epochs": 1,
+      "hidden_dim": 8,
+      "max_length": 96,
+      "mixed_precision": "none",
+      "patience": 1,
+      "phase": "smoke",
+      "run_controls": true,
+      "save_checkpoints": true,
+      "seed_for_pool": 0,
+      "synthetic_if_missing": true,
+      "synthetic_tasks": 24,
+      "tiny_ff_dim": 64,
+      "tiny_heads": 1,
+      "tiny_layers": 1
+    },
+    "created_at_utc": "2026-05-16T09:24:31.914726+00:00",
+    "dataset_summary": {
+      "candidate_source_agents": [
+        "generator_0",
+        "generator_1",
+        "generator_2",
+        "generator_3"
+      ],
+      "dataset_names": [
+        "synthetic_swe_style_stage6_smoke"
+      ],
+      "num_avenues": 4,
+      "num_candidates": 8,
+      "num_roles": 4,
+      "oracle_empty_tasks": 3,
+      "oracle_pass_at_8": 0.875,
+      "publishable_proof_dataset": false,
+      "repos": [
+        "synthetic/repo_alpha",
+        "synthetic/repo_beta",
+        "synthetic/repo_delta",
+        "synthetic/repo_gamma"
+      ],
+      "selector_only_no_patch_generation_claim": true,
+      "split_sizes": {
+        "dev": 5,
+        "test": 5,
+        "train": 14
+      }
+    },
+    "dataset_validation": {
+      "candidate_count": 8,
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 24,
+        "passes": true
+      },
+      "errors": [],
+      "examples_checked": 24,
+      "passes": true
+    },
+    "phase": "smoke",
+    "primary_claim_template": "Given the same 8 candidate patches for a real issue-resolution task, a trained shared-weight latent cloned-agent selector chooses passing patches more reliably than specified baselines.",
+    "selected_architecture": "stage5_4x4_avenue_candidate_token_direct",
+    "selector_scope": "selector only; no patch generation claim"
+  },
+  "rows": [
+    {
+      "architecture": "stage5_4x4_avenue_candidate_token_direct",
+      "architecture_config": {
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "avenue_topk": 0,
+        "coordinator_family": "candidate_token_cross_attention",
+        "description": "Stage 5 candidate-token-direct selector with four roles and four Stage 6 avenue prompts per role.",
+        "gradient_clip_norm": 1.0,
+        "lr": 0.0003,
+        "name": "stage5_4x4_avenue_candidate_token_direct",
+        "num_avenues": 4,
+        "weight_decay": 0.0001
+      },
+      "checkpoint_paths": {
+        "embedding_reranker": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\embedding_reranker.pt",
+        "frozen": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\frozen_same_architecture_latent_selector.pt",
+        "randomized_labels": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\randomized_labels_trainable_latent_selector.pt",
+        "raw_latent": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\raw_latent_selector.pt",
+        "single_agent_full_context_reviewer": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\single_agent_full_context_reviewer.pt",
+        "static_patch_feature_reranker": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\static_patch_feature_reranker.pt",
+        "text_only_multi_agent_reviewer": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\text_only_multi_agent_reviewer.pt",
+        "trainable": "results\\stage6_latent_patch_selector_checkpoints\\stage5_4x4_avenue_candidate_token_direct\\seed_0\\trainable_shared_weight_latent_selector.pt"
+      },
+      "completed_at_utc": "2026-05-16T09:24:31.912947+00:00",
+      "controls": {
+        "candidate_evidence_mismatch": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "candidate_evidence_mismatch",
+          "mrr": 0.22857142857142856,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            6,
+            1,
+            0,
+            6
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.2,
+          "unavailable": false
+        },
+        "candidate_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "candidate_only",
+          "mrr": 0.26190476190476186,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            6,
+            7,
+            6,
+            6
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.2,
+          "unavailable": false
+        },
+        "candidate_order_shuffled_with_label_remap": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "candidate_order_shuffled_with_label_remap",
+          "mrr": 0.15857142857142859,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_1": 0.0,
+            "generator_2": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            0,
+            5,
+            1,
+            0
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "context_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.25,
+          "cost_tokens_latency": {},
+          "method": "context_only",
+          "mrr": 0.33166666666666667,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.2,
+          "per_generator_accuracy": {
+            "generator_0": 0.25,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.5,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.5,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.25,
+          "split": "control",
+          "top_2_accuracy": 0.2,
+          "unavailable": false
+        },
+        "cross_task_view_bundle_shuffle": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "cross_task_view_bundle_shuffle",
+          "mrr": 0.22857142857142856,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            6,
+            1,
+            0,
+            6
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.2,
+          "unavailable": false
+        },
+        "evidence_only_no_candidates": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.25,
+          "cost_tokens_latency": {},
+          "method": "evidence_only_no_candidates",
+          "mrr": 0.33166666666666667,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.2,
+          "per_generator_accuracy": {
+            "generator_0": 0.2
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.5,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.5,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.25,
+          "split": "control",
+          "top_2_accuracy": 0.2,
+          "unavailable": false
+        },
+        "hidden_states_shuffled_across_examples": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.25,
+          "cost_tokens_latency": {},
+          "method": "hidden_states_shuffled_across_examples",
+          "mrr": 0.3619047619047619,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.2,
+          "per_generator_accuracy": {
+            "generator_0": 0.3333333333333333,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.5,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.5,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            6,
+            1,
+            0,
+            6
+          ],
+          "selection_efficiency": 0.25,
+          "split": "control",
+          "top_2_accuracy": 0.4,
+          "unavailable": false
+        },
+        "issue_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "issue_only",
+          "mrr": 0.19833333333333333,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            6,
+            0,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "patch_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "patch_only",
+          "mrr": 0.2952380952380952,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            0,
+            1,
+            6,
+            0
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.4,
+          "unavailable": false
+        },
+        "physical_order_shuffled_roles_avenues_preserved": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.0,
+          "cost_tokens_latency": {},
+          "method": "physical_order_shuffled_roles_avenues_preserved",
+          "mrr": 0.19166666666666665,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.0,
+          "per_generator_accuracy": {
+            "generator_0": 0.0,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.0,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.0,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            6,
+            0,
+            7,
+            0,
+            0
+          ],
+          "selection_efficiency": 0.0,
+          "split": "control",
+          "top_2_accuracy": 0.0,
+          "unavailable": false
+        },
+        "schema_template_only": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.25,
+          "cost_tokens_latency": {},
+          "method": "schema_template_only",
+          "mrr": 0.4066666666666666,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.2,
+          "per_generator_accuracy": {
+            "generator_0": 0.25,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.5,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.5,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          "selection_efficiency": 0.25,
+          "split": "control",
+          "top_2_accuracy": 0.4,
+          "unavailable": false
+        },
+        "view_masked_candidates_visible": {
+          "benchmark": "stage6_latent_patch_selector",
+          "conditional_selector_accuracy": 0.25,
+          "cost_tokens_latency": {},
+          "method": "view_masked_candidates_visible",
+          "mrr": 0.3952380952380952,
+          "n_examples": 5,
+          "n_oracle_positive_examples": 4,
+          "oracle_pass_at_8": 0.8,
+          "pass_at_1": 0.2,
+          "per_generator_accuracy": {
+            "generator_0": 0.5,
+            "generator_3": 0.0
+          },
+          "per_repository_accuracy": {
+            "synthetic/repo_alpha": 0.0,
+            "synthetic/repo_beta": 0.0,
+            "synthetic/repo_delta": 0.5,
+            "synthetic/repo_gamma": 0.0
+          },
+          "per_task_family_accuracy": {
+            "api_contract": 0.0,
+            "dependency_update": 0.5,
+            "edge_case": 0.0,
+            "state_regression": 0.0
+          },
+          "predictions": [
+            0,
+            6,
+            7,
+            6,
+            0
+          ],
+          "selection_efficiency": 0.25,
+          "split": "control",
+          "top_2_accuracy": 0.4,
+          "unavailable": false
+        }
+      },
+      "device": "cpu",
+      "duplicate_candidate_patch_hash_audit": {
+        "duplicates": [],
+        "examples_checked": 24,
+        "passes": true
+      },
+      "elapsed_seconds": 4.465867299993988,
+      "frozen_audit": {
+        "activation_requires_grad_before_coordinator": false,
+        "agent_grad_norm_mean": 0.0,
+        "agent_parameter_delta": 0.0,
+        "agent_trainable": false,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": false,
+        "coordinator_grad_norm_mean": 0.9323341248820991,
+        "coordinator_parameter_delta": 0.016124090179800987,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": false,
+        "num_avenues": 4,
+        "param_count": 801,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      },
+      "invariance_audit": {
+        "base_pass_at_1": 0.0,
+        "candidate_order_invariance_passes": true,
+        "candidate_order_pass_at_1": 0.0,
+        "candidate_order_selected_candidate_id_match_rate": 0.6,
+        "passes": true,
+        "physical_order_invariance_passes": true,
+        "physical_order_pass_at_1": 0.0,
+        "physical_role_avenue_order_prediction_match_rate": 1.0
+      },
+      "metrics": {
+        "dev": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 2.0600040443241595e-06,
+              "latency_seconds_total": 1.0300020221620798e-05,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.47857142857142854,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_3": 0.2
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 1.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.6,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.003494059998774901,
+              "latency_seconds_total": 0.017470299993874505,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.34833333333333333,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_2": 0.0,
+              "generator_3": 1.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.5
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.5
+            },
+            "predictions": [
+              7,
+              0,
+              5,
+              4,
+              0
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.24357142857142855,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.012002899998333306,
+              "latency_seconds_total": 0.060014499991666526,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.43166666666666664,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_3": 0.5
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 1.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              1,
+              0,
+              6,
+              1
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.4,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.24357142857142855,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 1.0,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 1.0,
+            "per_generator_accuracy": {
+              "generator_0": 1.0,
+              "generator_1": 1.0,
+              "generator_2": 1.0,
+              "generator_3": 1.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 1.0,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 1.0,
+              "synthetic/repo_gamma": 1.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 1.0,
+              "dependency_update": 1.0,
+              "edge_case": 1.0,
+              "state_regression": 1.0
+            },
+            "predictions": [
+              7,
+              4,
+              1,
+              6,
+              3
+            ],
+            "selection_efficiency": 1.0,
+            "split": "dev",
+            "top_2_accuracy": 1.0,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.3083333333333333,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.0,
+              "generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1,
+              1
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.011701099999481813,
+              "latency_seconds_total": 0.05850549999740906,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.26666666666666666,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              0,
+              2,
+              1,
+              6
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0034348400018643587,
+              "latency_seconds_total": 0.017174200009321794,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.4333333333333333,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.2
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 1.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 1.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.4,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.003504439996322617,
+              "latency_seconds_total": 0.017522199981613085,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.3488095238095238,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_2": 0.0,
+              "generator_3": 1.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.5
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.5
+            },
+            "predictions": [
+              7,
+              0,
+              5,
+              4,
+              0
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0002905600005760789,
+              "latency_seconds_total": 0.0014528000028803945,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.375,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_1": 0.0,
+              "generator_2": 0.25
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 1.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 1.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              4,
+              3,
+              5,
+              5
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0035559399984776974,
+              "latency_seconds_total": 0.017779699992388487,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.44666666666666666,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.5,
+              "generator_2": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.5
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.5
+            },
+            "predictions": [
+              4,
+              6,
+              2,
+              1,
+              3
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.4,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.2,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.01207307999720797,
+              "latency_seconds_total": 0.06036539998603985,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.38166666666666665,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_3": 0.3333333333333333
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 1.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              1,
+              6,
+              6,
+              1
+            ],
+            "selection_efficiency": 0.2,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 836.6,
+              "estimated_tokens_total": 4183,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.2833333333333333,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 5,
+            "oracle_pass_at_8": 1.0,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.0,
+            "split": "dev",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          }
+        },
+        "test": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 2.039998071268201e-06,
+              "latency_seconds_total": 1.0199990356341004e-05,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.2352380952380952,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.003493480000179261,
+              "latency_seconds_total": 0.017467400000896305,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.25,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_2": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              7,
+              0,
+              5,
+              5
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.33166666666666667,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.2
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.5,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.5,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.01130045999889262,
+              "latency_seconds_total": 0.0565022999944631,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.1952380952380952,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              0,
+              7,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.33166666666666667,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.2
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.5,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.5,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.8,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.8,
+            "per_generator_accuracy": {
+              "generator_0": 0.5,
+              "generator_1": 1.0,
+              "generator_2": 1.0,
+              "generator_3": 1.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 1.0,
+              "synthetic/repo_gamma": 1.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 1.0,
+              "edge_case": 1.0,
+              "state_regression": 1.0
+            },
+            "predictions": [
+              0,
+              0,
+              2,
+              7,
+              4
+            ],
+            "selection_efficiency": 1.0,
+            "split": "test",
+            "top_2_accuracy": 0.8,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.12857142857142856,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.0,
+              "generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1,
+              1
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.011569119995692745,
+              "latency_seconds_total": 0.057845599978463724,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.19833333333333333,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              2,
+              1,
+              0,
+              2,
+              7
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0034231999947223813,
+              "latency_seconds_total": 0.017115999973611906,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.17857142857142855,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0034829800017178057,
+              "latency_seconds_total": 0.01741490000858903,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.19166666666666665,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_2": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              7,
+              0,
+              5,
+              1
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0002874600002542138,
+              "latency_seconds_total": 0.001437300001271069,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.25,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_1": 0.0,
+              "generator_2": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              4,
+              2,
+              5,
+              4,
+              5
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0035465599969029425,
+              "latency_seconds_total": 0.017732799984514713,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.2935714285714286,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_1": 0.0,
+              "generator_2": 1.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.5,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.5,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              2,
+              1,
+              6,
+              2,
+              4
+            ],
+            "selection_efficiency": 0.25,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.011864120000973344,
+              "latency_seconds_total": 0.05932060000486672,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.19166666666666665,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              0,
+              7,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.0,
+            "split": "test",
+            "top_2_accuracy": 0.0,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 826.2,
+              "estimated_tokens_total": 4131,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.34523809523809523,
+            "n_examples": 5,
+            "n_oracle_positive_examples": 4,
+            "oracle_pass_at_8": 0.8,
+            "pass_at_1": 0.2,
+            "per_generator_accuracy": {
+              "generator_0": 0.2
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.5,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.5,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "test",
+            "top_2_accuracy": 0.2,
+            "unavailable": false
+          }
+        },
+        "train": {
+          "best_generator_on_dev_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.16666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 2.042856067419052e-06,
+              "latency_seconds_total": 2.859998494386673e-05,
+              "method": "best_generator_on_dev_baseline"
+            },
+            "method": "best_generator_on_dev_baseline",
+            "mrr": 0.32746598639455776,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.14285714285714285,
+            "per_generator_accuracy": {
+              "generator_3": 0.14285714285714285
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.5,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.5,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "selection_efficiency": 0.16666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.21428571428571427,
+            "unavailable": false
+          },
+          "embedding_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0034439714280389516,
+              "latency_seconds_total": 0.04821559999254532,
+              "method": "embedding_reranker"
+            },
+            "method": "embedding_reranker",
+            "mrr": 0.4137755102040816,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_0": 0.4,
+              "generator_2": 0.1111111111111111
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.5,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.3333333333333333,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.5,
+              "dependency_update": 0.3333333333333333,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              5,
+              4,
+              0,
+              5,
+              4,
+              0,
+              5,
+              4,
+              0,
+              5,
+              4,
+              0,
+              5
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.42857142857142855,
+            "unavailable": false
+          },
+          "first_candidate_order_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "first_candidate"
+            },
+            "method": "first_candidate_order_baseline",
+            "mrr": 0.3799319727891156,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_0": 0.21428571428571427
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.6666666666666666,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.6666666666666666,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.2857142857142857,
+            "unavailable": false
+          },
+          "frozen_same_architecture_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.0,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.007949235713957543,
+              "latency_seconds_total": 0.1112892999954056,
+              "method": "frozen_same_architecture_latent_selector"
+            },
+            "method": "frozen_same_architecture_latent_selector",
+            "mrr": 0.19481292517006804,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.0,
+            "per_generator_accuracy": {
+              "generator_0": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              6,
+              1,
+              6,
+              6,
+              7,
+              0,
+              6,
+              1,
+              6
+            ],
+            "selection_efficiency": 0.0,
+            "split": "train",
+            "top_2_accuracy": 0.07142857142857142,
+            "unavailable": false
+          },
+          "llm_judge_baseline": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "available": false
+            },
+            "method": "llm_judge_baseline",
+            "mrr": 0.3799319727891156,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_0": 0.21428571428571427
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.6666666666666666,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.6666666666666666,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.2857142857142857,
+            "unavailable": true
+          },
+          "oracle_pass_at_8": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 1.0,
+            "cost_tokens_latency": {
+              "oracle": true
+            },
+            "method": "oracle_pass_at_8",
+            "mrr": 0.8571428571428571,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.8571428571428571,
+            "per_generator_accuracy": {
+              "generator_0": 0.6666666666666666,
+              "generator_1": 1.0,
+              "generator_2": 1.0,
+              "generator_3": 1.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.75,
+              "synthetic/repo_beta": 1.0,
+              "synthetic/repo_delta": 1.0,
+              "synthetic/repo_gamma": 0.6666666666666666
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.75,
+              "dependency_update": 1.0,
+              "edge_case": 1.0,
+              "state_regression": 0.6666666666666666
+            },
+            "predictions": [
+              0,
+              6,
+              3,
+              0,
+              5,
+              2,
+              3,
+              4,
+              1,
+              6,
+              0,
+              0,
+              0,
+              2
+            ],
+            "selection_efficiency": 1.0,
+            "split": "train",
+            "top_2_accuracy": 0.8571428571428571,
+            "unavailable": false
+          },
+          "random_candidate": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.08333333333333333,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "random_candidate"
+            },
+            "method": "random_candidate",
+            "mrr": 0.24957482993197283,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.07142857142857142,
+            "per_generator_accuracy": {
+              "generator_0": 0.16666666666666666,
+              "generator_1": 0.0,
+              "generator_2": 0.0,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              5,
+              2,
+              0,
+              1,
+              1,
+              5,
+              4,
+              1,
+              3,
+              0,
+              3,
+              7,
+              0,
+              5
+            ],
+            "selection_efficiency": 0.08333333333333333,
+            "split": "train",
+            "top_2_accuracy": 0.14285714285714285,
+            "unavailable": false
+          },
+          "randomized_labels_trainable_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.16666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.007954642858489283,
+              "latency_seconds_total": 0.11136500001884997,
+              "method": "randomized_labels_trainable_latent_selector"
+            },
+            "method": "randomized_labels_trainable_latent_selector",
+            "mrr": 0.348469387755102,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.14285714285714285,
+            "per_generator_accuracy": {
+              "generator_0": 0.16666666666666666,
+              "generator_1": 0.16666666666666666,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.25,
+              "synthetic/repo_delta": 0.3333333333333333,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.3333333333333333,
+              "edge_case": 0.25,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              2,
+              1,
+              0,
+              2,
+              7,
+              0,
+              2,
+              7,
+              0,
+              2,
+              1,
+              3,
+              2
+            ],
+            "selection_efficiency": 0.16666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.35714285714285715,
+            "unavailable": false
+          },
+          "raw_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.08333333333333333,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0024327499995706603,
+              "latency_seconds_total": 0.034058499993989244,
+              "method": "raw_latent_selector"
+            },
+            "method": "raw_latent_selector",
+            "mrr": 0.2876700680272109,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.07142857142857142,
+            "per_generator_accuracy": {
+              "generator_0": 0.07142857142857142
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.0,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "selection_efficiency": 0.08333333333333333,
+            "split": "train",
+            "top_2_accuracy": 0.21428571428571427,
+            "unavailable": false
+          },
+          "single_agent_full_context_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0034427714292957845,
+              "latency_seconds_total": 0.048198800010140985,
+              "method": "single_agent_full_context_reviewer"
+            },
+            "method": "single_agent_full_context_reviewer",
+            "mrr": 0.4084183673469388,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_0": 0.3333333333333333,
+              "generator_2": 0.125
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.5,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.3333333333333333,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.5,
+              "dependency_update": 0.3333333333333333,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              0,
+              5,
+              4,
+              0,
+              5,
+              1,
+              0,
+              5,
+              4,
+              0,
+              5,
+              4,
+              0,
+              5
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.42857142857142855,
+            "unavailable": false
+          },
+          "static_patch_feature_reranker": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.00026587142825259695,
+              "latency_seconds_total": 0.003722199995536357,
+              "method": "static_patch_feature_reranker"
+            },
+            "method": "static_patch_feature_reranker",
+            "mrr": 0.3704081632653061,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_1": 0.5,
+              "generator_2": 0.16666666666666666
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.25,
+              "synthetic/repo_delta": 0.3333333333333333,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.3333333333333333,
+              "edge_case": 0.25,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              4,
+              3,
+              5,
+              5,
+              4,
+              2,
+              5,
+              4,
+              5,
+              5,
+              4,
+              5,
+              5,
+              4
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.21428571428571427,
+            "unavailable": false
+          },
+          "text_only_multi_agent_reviewer": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.16666666666666666,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.003542178570309521,
+              "latency_seconds_total": 0.04959049998433329,
+              "method": "text_only_multi_agent_reviewer"
+            },
+            "method": "text_only_multi_agent_reviewer",
+            "mrr": 0.3578231292517007,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.14285714285714285,
+            "per_generator_accuracy": {
+              "generator_1": 0.2,
+              "generator_2": 0.0,
+              "generator_3": 0.125
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.5,
+              "synthetic/repo_delta": 0.0,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.0,
+              "edge_case": 0.5,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              6,
+              2,
+              7,
+              6,
+              2,
+              7,
+              6,
+              2,
+              4,
+              6,
+              2,
+              7,
+              6,
+              2
+            ],
+            "selection_efficiency": 0.16666666666666666,
+            "split": "train",
+            "top_2_accuracy": 0.2857142857142857,
+            "unavailable": false
+          },
+          "trainable_shared_weight_latent_selector": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.08333333333333333,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.007910978570829943,
+              "latency_seconds_total": 0.11075369999161921,
+              "method": "trainable_shared_weight_latent_selector"
+            },
+            "method": "trainable_shared_weight_latent_selector",
+            "mrr": 0.23945578231292516,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.07142857142857142,
+            "per_generator_accuracy": {
+              "generator_0": 0.14285714285714285,
+              "generator_3": 0.0
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.0,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.3333333333333333,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.0,
+              "dependency_update": 0.3333333333333333,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              7,
+              0,
+              0,
+              7,
+              6,
+              0,
+              1,
+              6,
+              6,
+              7,
+              6,
+              0,
+              1,
+              0
+            ],
+            "selection_efficiency": 0.08333333333333333,
+            "split": "train",
+            "top_2_accuracy": 0.14285714285714285,
+            "unavailable": false
+          },
+          "visible_test_heuristic": {
+            "benchmark": "stage6_latent_patch_selector",
+            "conditional_selector_accuracy": 0.25,
+            "cost_tokens_latency": {
+              "estimated_tokens_per_decision": 828.4285714285714,
+              "estimated_tokens_total": 11598,
+              "latency_seconds_per_decision": 0.0,
+              "latency_seconds_total": 0.0,
+              "method": "visible_test_heuristic"
+            },
+            "method": "visible_test_heuristic",
+            "mrr": 0.40119047619047615,
+            "n_examples": 14,
+            "n_oracle_positive_examples": 12,
+            "oracle_pass_at_8": 0.8571428571428571,
+            "pass_at_1": 0.21428571428571427,
+            "per_generator_accuracy": {
+              "generator_0": 0.21428571428571427
+            },
+            "per_repository_accuracy": {
+              "synthetic/repo_alpha": 0.25,
+              "synthetic/repo_beta": 0.0,
+              "synthetic/repo_delta": 0.6666666666666666,
+              "synthetic/repo_gamma": 0.0
+            },
+            "per_task_family_accuracy": {
+              "api_contract": 0.25,
+              "dependency_update": 0.6666666666666666,
+              "edge_case": 0.0,
+              "state_regression": 0.0
+            },
+            "predictions": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "selection_efficiency": 0.25,
+            "split": "train",
+            "top_2_accuracy": 0.35714285714285715,
+            "unavailable": false
+          }
+        }
+      },
+      "output_leakage_audit": {
+        "benchmark": "stage6_latent_patch_selector",
+        "examples_checked": 24,
+        "hidden_pass_fail_labels_excluded_from_visible_text": true,
+        "passes": true,
+        "seed": 0,
+        "type": "stage6_output_leakage",
+        "visible_text_or_candidate_forbidden_pattern_hits": []
+      },
+      "output_leakage_audit_passes": true,
+      "paired_tests_vs_best_baseline": {
+        "best_baseline": "first_candidate_order_baseline",
+        "best_baseline_pass_at_1": 0.2,
+        "mcnemar_pvalue": 1.0,
+        "mean_delta": -0.2,
+        "paired_bootstrap_95ci": [
+          -0.6,
+          0.0
+        ],
+        "paired_permutation_pvalue": 1.0,
+        "trainable_pass_at_1": 0.0
+      },
+      "phase": "smoke",
+      "randomized_labels_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.020161724280582834,
+        "agent_parameter_delta": 0.03179740160703659,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 0.37424316299791877,
+        "coordinator_parameter_delta": 0.014461140148341656,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 35929,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      },
+      "raw_latent_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.11156276414187333,
+        "agent_parameter_delta": 0.027983734384179115,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "single",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 1.3195107599647908,
+        "coordinator_parameter_delta": 0.014118434861302376,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 1,
+        "param_count": 35928,
+        "per_clone_gradient_contribution": true,
+        "shared_parameter_identity": true
+      },
+      "seed": 0,
+      "split_leakage_audit": {
+        "benchmark": "stage6_latent_patch_selector",
+        "candidate_patch_hash_leakage_audit_passes": true,
+        "dev_test_candidate_hash_overlap": 0,
+        "dev_test_file_path_overlap": 0,
+        "dev_test_id_overlap": 0,
+        "dev_test_issue_text_hash_overlap": 0,
+        "dev_test_repo_issue_overlap": 0,
+        "near_duplicate_issue_text_overlaps": [],
+        "passes": true,
+        "seed": 0,
+        "train_dev_candidate_hash_overlap": 0,
+        "train_dev_file_path_overlap": 0,
+        "train_dev_id_overlap": 0,
+        "train_dev_issue_text_hash_overlap": 0,
+        "train_dev_repo_issue_overlap": 0,
+        "train_test_candidate_hash_overlap": 0,
+        "train_test_file_path_overlap": 0,
+        "train_test_id_overlap": 0,
+        "train_test_issue_text_hash_overlap": 0,
+        "train_test_repo_issue_overlap": 0,
+        "type": "stage6_swe_split_leakage"
+      },
+      "split_leakage_audit_passes": true,
+      "stage": "stage6_latent_patch_selector",
+      "status": "completed",
+      "success_gates": {
+        "checkpoints_saved": true,
+        "gradient_audits_pass": true,
+        "hidden_state_shuffle_collapse": true,
+        "leakage_audits_pass": true,
+        "order_invariance_passes": true,
+        "randomized_labels_collapse": true,
+        "selection_efficiency_improves_over_best_baseline": false,
+        "shortcut_control_pass_at_1": {
+          "candidate_evidence_mismatch": 0.0,
+          "candidate_only": 0.0,
+          "context_only": 0.2,
+          "cross_task_view_bundle_shuffle": 0.0,
+          "evidence_only_no_candidates": 0.2,
+          "issue_only": 0.0,
+          "patch_only": 0.0,
+          "schema_template_only": 0.2,
+          "view_masked_candidates_visible": 0.2
+        },
+        "shortcut_controls_collapse": true,
+        "trainable_beats_best_non_oracle_baseline_by_5_points": false,
+        "trainable_beats_frozen": false
+      },
+      "trainable_audit": {
+        "activation_requires_grad_before_coordinator": true,
+        "agent_grad_norm_mean": 0.006689088756187931,
+        "agent_parameter_delta": 0.028398219496011734,
+        "agent_trainable": true,
+        "avenue_prompt_mode": "stage6_patch_selection",
+        "batch_size": 8,
+        "clone_activation_requires_grad": true,
+        "coordinator_grad_norm_mean": 0.44821911063288195,
+        "coordinator_parameter_delta": 0.013783454895019531,
+        "device": "cpu",
+        "gradient_clip_norm": 1.0,
+        "multi_positive_loss": "negative_log_sum_softmax_probability_assigned_to_passing_candidates",
+        "no_detach_between_clone_activations_and_loss": true,
+        "num_avenues": 4,
+        "param_count": 35929,
+        "per_clone_gradient_contribution": false,
+        "shared_parameter_identity": true
+      }
+    }
+  ],
+  "summary": {
+    "claim_status": "no_final_claim",
+    "completed_rows": 1,
+    "completed_seeds": 1,
+    "final_gate_applicable": false,
+    "mean_best_non_oracle_baseline_pass_at_1": 0.2,
+    "mean_delta_vs_best_non_oracle_baseline": -0.2,
+    "mean_frozen_pass_at_1": 0.0,
+    "mean_trainable_pass_at_1": 0.0,
+    "paired_bootstrap_95ci_delta_vs_best_baseline": [
+      -0.2,
+      -0.2
+    ],
+    "success_gates_pass": false,
+    "trainable_beats_frozen_seed_count": 0
+  }
+}

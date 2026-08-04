@@ -1,0 +1,192 @@
+{
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e6\\configs\\prev_attn_reuse.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.28359375,
+    "accuracy_by_distractor_count": {
+      "17+": 0.1111111111111111,
+      "5-8": 0.5196850393700787,
+      "9-16": 0.289193302891933
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.0851063829787234,
+      "2": 0.25396825396825395,
+      "3": 0.30798479087452474,
+      "4+": 0.298050139275766
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.2630208333333333,
+      "256": 0.30078125,
+      "512": 0.328125
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.2623456790123457,
+      "multi_hop_lookup": 0.2774390243902439,
+      "password_overwrite": 0.2891566265060241,
+      "variable_shadowing": 0.30743243243243246
+    },
+    "examples": 1280,
+    "examples_per_sec": 205.82115614519807,
+    "layers": {
+      "alpha": [
+        0.0,
+        0.16530345380306244,
+        0.0684070885181427,
+        0.19945962727069855
+      ],
+      "attention_entropy": [
+        2.440450942516327,
+        2.0599562734365464,
+        2.3321471571922303,
+        1.6387330919504166
+      ],
+      "distractor_token_gate_norm_rank": [
+        null,
+        0.17396155985479708,
+        0.4763078175164992,
+        0.4839711575943511
+      ],
+      "distractor_token_gate_rank": [
+        null,
+        18.431913015991448,
+        58.61289449930191,
+        59.97540173977613
+      ],
+      "gate_bias": [
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "gate_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gate_max": [
+        null,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "gate_mean": [
+        null,
+        0.011638474545907228,
+        0.011638472869526595,
+        0.011638472881168127
+      ],
+      "gate_min": [
+        null,
+        1.2555640083178332e-08,
+        9.99999993922529e-09,
+        9.99999993922529e-09
+      ],
+      "gate_open_rate": [
+        null,
+        0.0020885324549453797,
+        0.0025375184734002685,
+        0.001016520694247447
+      ],
+      "useful_token_gate_norm_rank": [
+        null,
+        0.21821480442122265,
+        0.48234427776624217,
+        0.5254000868306321
+      ],
+      "useful_token_gate_rank": [
+        null,
+        22.812109375,
+        58.850390625,
+        65.684375
+      ]
+    },
+    "loss": 3.263823223114014,
+    "peak_gpu_memory_mb": 1355.62890625,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.09765625,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 256,
+        "loss": 4.707283020019531,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.34765625,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 256,
+        "loss": 2.451805353164673,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.34375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 3.1337838172912598,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.30078125,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 2.804377555847168,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "seq_len_512": {
+        "accuracy": 0.328125,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 256,
+        "loss": 3.2218663692474365,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 512
+      }
+    },
+    "tokens": 294912,
+    "tokens_per_sec": 47421.194375853636
+  },
+  "max_steps": 5000,
+  "parameter_count": 887560,
+  "peak_gpu_memory_mb": 1355.62890625,
+  "seed": 0,
+  "train_examples": 320000,
+  "train_examples_per_sec": 964.3137114876803,
+  "train_loss_ema": 2.627559158685877,
+  "train_tokens": 40960000,
+  "train_tokens_per_sec": 123432.15507042308,
+  "trainable_parameter_count": 887560,
+  "variant": "prev_attn_reuse"
+}

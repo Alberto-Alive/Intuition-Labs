@@ -1,0 +1,69 @@
+{
+  "scope": "Controlled synthetic Stage 16 smoke run for ARC concept transfer.",
+  "date": "2026-06-23",
+  "note": "Tiny CPU run over prepared synthetic Hotpot-style rows. This validates the routing hook and gives an early transfer signal; it is not a full benchmark.",
+  "dataset": {
+    "train": 4,
+    "dev": 3,
+    "test": 3,
+    "window_size": 4,
+    "num_clones": 4,
+    "design": "Rows include distant support windows and answer windows that are not always identical to support windows."
+  },
+  "configs": {
+    "epochs": 3,
+    "batch_size": 2,
+    "seed": 11,
+    "device": "cpu",
+    "hidden_size": 16,
+    "num_layers": 1,
+    "num_heads": 2,
+    "ff_dim": 32,
+    "communication_mode": "continuous"
+  },
+  "results": {
+    "oracle_support": {
+      "exact_match": 0.3333333333333333,
+      "f1": 0.7777777777777777,
+      "joint_beats_single": true,
+      "best_single_clone_f1": 0.3333333333333333,
+      "mean_off_diagonal_clone_cosine": 0.749828780690829,
+      "answer_window_hit_rate": 0.6666666666666666,
+      "support_window_hit_rate": 1.0,
+      "selected_window_mean_mass": [0.3333333333333333, 0.16666666666666666, 0.16666666666666666, 0.3333333333333333],
+      "per_clone_f1": [0.3333333333333333, 0.2222222222222222, 0.2222222222222222, 0.2222222222222222],
+      "train_loss_by_epoch": [10004.033203125, 10004.00341796875, 10003.975968122482]
+    },
+    "relative_support": {
+      "exact_match": 0.3333333333333333,
+      "f1": 0.7777777777777777,
+      "joint_beats_single": true,
+      "best_single_clone_f1": 0.3333333333333333,
+      "mean_off_diagonal_clone_cosine": 0.6961069305737813,
+      "answer_window_hit_rate": 1.0,
+      "support_window_hit_rate": 1.0,
+      "selected_window_mean_mass": [0.25, 0.25, 0.25, 0.25],
+      "per_clone_f1": [0.3333333333333333, 0.2222222222222222, 0.2222222222222222, 0.0],
+      "train_loss_by_epoch": [5.425286054611206, 5.392090082168579, 5.362681865692139]
+    },
+    "learned_distinct": {
+      "exact_match": 0.3333333333333333,
+      "f1": 0.5555555555555555,
+      "joint_beats_single": true,
+      "best_single_clone_f1": 0.2222222222222222,
+      "mean_off_diagonal_clone_cosine": 0.7048832128445307,
+      "answer_window_hit_rate": 1.0,
+      "support_window_hit_rate": 1.0,
+      "selected_window_mean_mass": [0.25, 0.25, 0.25, 0.25],
+      "per_clone_f1": [0.0, 0.2222222222222222, 0.2222222222222222, 0.2222222222222222],
+      "train_loss_by_epoch": [5.422048091888428, 5.387422323226929, 5.361860752105713]
+    }
+  },
+  "interpretation": [
+    "relative_support transferred the relativeness/counting idea into an existing AOB routing mechanism.",
+    "It preserved support-window hit rate at 1.0 while improving answer-window hit rate over oracle_support from 0.6667 to 1.0 on this controlled split.",
+    "It matched oracle_support final F1 in this tiny run and beat learned_distinct final F1, but this is too small to claim general improvement.",
+    "The large oracle_support loss is expected in cases where support-only routing omits the answer window; relative_support includes answer as a role and avoids that failure mode.",
+    "Next empirical step is a real Stage 16 screen with relative_support included, ideally across seeds and without relying on answer-window oracle labels at test time."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "output_path": "results/real_shared_weight_latent_coordination_results.json",
+  "audit_log_path": "results/real_shared_weight_latent_coordination_audit.jsonl",
+  "report_path": "reports/REPORT.md",
+  "device": "cuda",
+  "deterministic": false,
+  "seeds": [0, 1, 2],
+  "dataset": {
+    "n_train": 512,
+    "n_dev": 128,
+    "n_test": 256,
+    "num_candidates": 8,
+    "n_views": 4,
+    "source_roots": ["src", "tests"],
+    "max_files": 80,
+    "snippet_radius": 3,
+    "include_private_signal_tokens": true
+  },
+  "agent": {
+    "agent_mode": "pretrained_adapter",
+    "model_name_or_path": "EleutherAI/pythia-70m-deduped",
+    "local_files_only": true,
+    "allow_tiny_fallback": true,
+    "max_length": 256,
+    "hidden_dim": 128,
+    "lora_rank": 4,
+    "lora_alpha": 8.0,
+    "lora_target_modules": ["query_key_value", "dense", "dense_h_to_4h", "dense_4h_to_h"],
+    "adapter_hidden_dim": 128,
+    "train_top_layers": 0
+  },
+  "coordinator": {
+    "family": "cross_attention",
+    "input_dim": 128,
+    "model_dim": 128,
+    "num_heads": 4,
+    "num_layers": 1,
+    "ff_dim": 256,
+    "dropout": 0.0
+  },
+  "coordinator_families": ["cross_attention", "self_attention"],
+  "training": {
+    "epochs": 10,
+    "batch_size": 4,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "gradient_accumulation_steps": 4
+  },
+  "baseline_training": {
+    "epochs": 8,
+    "batch_size": 32,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "hidden_dims": [64]
+  },
+  "positive_control_training": {
+    "epochs": 40,
+    "batch_size": 64,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "patience": 10,
+    "hidden_dims": [128, 64]
+  },
+  "text_feature_dim": 256,
+  "controls": [
+    "none",
+    "randomized_labels",
+    "view_masked",
+    "view_shuffled",
+    "hidden_states_shuffled_across_examples",
+    "role_labels_shuffled",
+    "physical_order_shuffled_roles_preserved",
+    "candidate_order_shuffled"
+  ]
+}

@@ -1,0 +1,4367 @@
+{
+  "accepted_candidate_rows": 200,
+  "accepted_candidates_per_task_distribution": {
+    "8": 25
+  },
+  "attempts_path": "results/stage6b1b_generation_attempts.jsonl",
+  "benchmark": "stage6b1b_candidate_supply_expansion",
+  "benchmark_dataset_audit": {
+    "benchmark_jsonl": null,
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "error": null,
+    "loaded": true,
+    "missing_requested_task_ids": [],
+    "requested_task_ids": [
+      "psf__requests-1142",
+      "sphinx-doc__sphinx-9591",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "sympy__sympy-15349",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "rows": 500,
+    "selected_task_ids": [
+      "psf__requests-1142",
+      "sphinx-doc__sphinx-9591",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "sympy__sympy-15349",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "split": "test"
+  },
+  "candidate_count_k": 8,
+  "candidate_diversity_by_normalized_patch_edit_distance": {
+    "mean_pairwise_distance": 0.7344632666239371,
+    "method": "1 - SequenceMatcher ratio on normalized patch text",
+    "min_pairwise_distance": 0.011509116772274619,
+    "per_task": [
+      {
+        "candidate_count": 8,
+        "instance_id": "astropy__astropy-14096",
+        "mean_pairwise_distance": 0.8014656867116624,
+        "min_pairwise_distance": 0.2750962392656203,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "astropy__astropy-14598",
+        "mean_pairwise_distance": 0.8733208878732522,
+        "min_pairwise_distance": 0.7622285588944944,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-11119",
+        "mean_pairwise_distance": 0.677549305600306,
+        "min_pairwise_distance": 0.011509116772274619,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-13279",
+        "mean_pairwise_distance": 0.8407187436942023,
+        "min_pairwise_distance": 0.5816266822703335,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-13344",
+        "mean_pairwise_distance": 0.4388340178399311,
+        "min_pairwise_distance": 0.1559030492572322,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-13516",
+        "mean_pairwise_distance": 0.8159205699477118,
+        "min_pairwise_distance": 0.5056436271401394,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-13925",
+        "mean_pairwise_distance": 0.7641937617176559,
+        "min_pairwise_distance": 0.37445675031543535,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-14539",
+        "mean_pairwise_distance": 0.7549960235691968,
+        "min_pairwise_distance": 0.4335635920357578,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-15098",
+        "mean_pairwise_distance": 0.6075730183350425,
+        "min_pairwise_distance": 0.22352328909705954,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-15916",
+        "mean_pairwise_distance": 0.47061867412303576,
+        "min_pairwise_distance": 0.1275422268183385,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "django__django-7530",
+        "mean_pairwise_distance": 0.8393221268434755,
+        "min_pairwise_distance": 0.5642105263157895,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "matplotlib__matplotlib-20676",
+        "mean_pairwise_distance": 0.5690003307302215,
+        "min_pairwise_distance": 0.29266136162687884,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "matplotlib__matplotlib-22871",
+        "mean_pairwise_distance": 0.73232527009786,
+        "min_pairwise_distance": 0.30909943714821764,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "matplotlib__matplotlib-24177",
+        "mean_pairwise_distance": 0.7186630075733793,
+        "min_pairwise_distance": 0.43286624203821655,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "matplotlib__matplotlib-24637",
+        "mean_pairwise_distance": 0.8143212926668559,
+        "min_pairwise_distance": 0.3388480392156863,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "psf__requests-1142",
+        "mean_pairwise_distance": 0.9476654001491125,
+        "min_pairwise_distance": 0.8309754281459419,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "pydata__xarray-6599",
+        "mean_pairwise_distance": 0.6189051769516265,
+        "min_pairwise_distance": 0.26682926829268294,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "pydata__xarray-7229",
+        "mean_pairwise_distance": 0.7277727230315473,
+        "min_pairwise_distance": 0.3577694235588973,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "pytest-dev__pytest-7236",
+        "mean_pairwise_distance": 0.8217164283673891,
+        "min_pairwise_distance": 0.1611316113161132,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sphinx-doc__sphinx-8035",
+        "mean_pairwise_distance": 0.9089797493065356,
+        "min_pairwise_distance": 0.7278631395533027,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "mean_pairwise_distance": 0.7788887435131782,
+        "min_pairwise_distance": 0.10045961917268553,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sphinx-doc__sphinx-9711",
+        "mean_pairwise_distance": 0.813927203914874,
+        "min_pairwise_distance": 0.49945355191256835,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sympy__sympy-14248",
+        "mean_pairwise_distance": 0.661991773722659,
+        "min_pairwise_distance": 0.3566137566137566,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sympy__sympy-15345",
+        "mean_pairwise_distance": 0.5964070505253547,
+        "min_pairwise_distance": 0.29674418604651165,
+        "pair_count": 28
+      },
+      {
+        "candidate_count": 8,
+        "instance_id": "sympy__sympy-15349",
+        "mean_pairwise_distance": 0.766504698792361,
+        "min_pairwise_distance": 0.31604938271604943,
+        "pair_count": 28
+      }
+    ],
+    "tasks_checked": 25
+  },
+  "candidate_file_save_audit": {
+    "attempts_output_exists": true,
+    "attempts_output_rows": 216,
+    "candidate_patch_root": "results/stage6b1b_candidate_patches",
+    "jsonl_output_exists": true,
+    "jsonl_output_rows": 200,
+    "missing_candidate_patch_files": [],
+    "missing_trajectories": [],
+    "passes": true,
+    "trajectory_root": "results/stage6b1b_trajectories"
+  },
+  "candidate_schema_audit": {
+    "passes": true,
+    "required_keys": [
+      "candidate_id",
+      "generator_name",
+      "instance_id",
+      "model_name_or_path",
+      "model_patch",
+      "seed",
+      "source_visible_to_selector",
+      "temperature",
+      "trajectory_path"
+    ],
+    "rows": [
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-00-51657d38f977",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-01-fd9aa754824f",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-02-c277afd44a66",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-03-02d9910915c3",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-04-de9f26c0b2e7",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-05-98169eb07d7d",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-06-b2ca9efbcc40",
+        "missing": []
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-07-9d7f8f9ba04d",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-00-8ded22f4d2de",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-01-a583b5e7c060",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-02-67555bccad2c",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-03-b7811fdd2ddc",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-04-a77984ee16b1",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-05-0b22eac6012a",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-06-328ad3974f3f",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-07-2db4cbadd143",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-00-7ffb911b60fd",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-01-323145890cf0",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-02-8e2ea5df9b10",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-03-650c4c29f6d4",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-04-c15b7256cd8c",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-05-4888fc580633",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-06-ae442df4266b",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-07-afe1106167dc",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-00-1a168a1bea97",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-01-ecfd76174d67",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-02-1f552c5d9310",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-03-fa50b09fdcaf",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-04-c6b3e26b13de",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-05-8b4e050871dd",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-06-27b29adf32e9",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-07-a8e569125bbb",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-00-a3c9e334f6f3",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-01-6098cb281e12",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-02-377f32259e32",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-03-2663c9e9bf64",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-04-762efc85ba35",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-05-596491a0b568",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-06-8dc4293aab1a",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-07-f6570af664ed",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-00-6767d75f22e4",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-01-63a7b2b63744",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-02-3484cdb20fbf",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-03-ef5dd69793c3",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-04-bf1bfc1e4942",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-05-570bbb995c1c",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-06-5f293900d0d1",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-07-5d91276f8e35",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-00-7fe5a859f08a",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-01-568eff7b6789",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-02-c40800a45c48",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-03-fb7f77984cf2",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-04-81b604bb4dd7",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-05-8108cdf6fde3",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-06-0180448a56dd",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-07-b95d34a1a535",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-00-dd336eac01f9",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-01-9e08a3205276",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-02-c1dc2435ffdc",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-03-0ce1cc8e052f",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-04-967a708f2e6d",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-05-c8a520d31b44",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-06-08dcc852a368",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-07-34ecae650de7",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-00-a6a307254288",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-01-9e2c7ef55ea7",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-02-0c8dd2f20d10",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-03-7bb4141d9091",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-04-48b6b01fc799",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-05-695d6a5d0ff0",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-06-985e18b76e1d",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-07-0d2e785bd77c",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-00-b9410d275b79",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-01-f54abf259278",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-02-f53a09387ab8",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-03-6d44df8b3c22",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-04-3120e5034933",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-05-00fed2abbd87",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-06-4bc8fcafcade",
+        "missing": []
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-07-fb698200d514",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-00-1ddfb96dbd25",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-01-a669ffe6368b",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-02-0efeef7d8125",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-03-976e6e1ef5ed",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-04-3a883b4f730e",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-05-a4dbf4d5c720",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-06-6705b55102ea",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-07-faf9fd1cfb6e",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-00-5379378523b2",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-01-f2c32cf6cf47",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-02-8eb8f134a814",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-03-880fca4972d5",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-04-d2c491cb5c82",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-05-35ce7b803189",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-06-d4e6aa04cb0a",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-07-77b452a5088f",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-00-7703935fa1cb",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-01-029f0490c736",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-02-f80bcb54cda4",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-03-ad21cd8f6cce",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-04-22ec531f5183",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-05-829ce6681d71",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-06-8b30dabe90ec",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-07-21331981e5bb",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-00-e18ecc214c9b",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-01-71f8e4f02339",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-02-707873b4bd51",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-03-a21e7f01578c",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-04-2f643a17d781",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-05-1d5c16d2301b",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-06-c95d8516a7ca",
+        "missing": []
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-07-04a0012c2953",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-00-d4f3ca589ffe",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-01-2babd177b9bb",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-02-6474560353c0",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-03-0432e1c3b0fc",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-04-4bc1c2a6f671",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-05-cbe4d7164bb1",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-06-35f6b8e389ff",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-07-064948f92512",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-00-777d3c428e07",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-01-c128a9cb564e",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-02-68fc80849c5d",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-03-b84cb3879b54",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-04-fb764ecd79a8",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-05-698cc48b7684",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-06-dddabd81389f",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-07-8aedac008f18",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-00-7ebd7f319c1a",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-01-58c414cb9029",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-02-d682d4b164bf",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-03-c49b062d6f9e",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-04-ed7e5ce8706b",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-05-1bffa49fe930",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-06-f020fe02341e",
+        "missing": []
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-07-9bffc9c5b715",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-00-b398223a383e",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-01-0350d14f86f4",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-02-8b198674fa14",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-03-aadbd4f2b443",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-04-5f775f443df3",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-05-5c1848c4bc1b",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-06-487b7bdc7a7a",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-07-25c3852b15ed",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-00-16bd3edf6a2f",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-01-b2054098e2aa",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-02-089f76f35025",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-03-fb9e060e3056",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-04-1eb2af2cee95",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-05-84194f920705",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-06-0e37598b4c76",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-07-22606fe80925",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-00-f5acea4e382a",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-01-9440b07ad413",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-02-7f1425dac893",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-03-fb4213d796d4",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-04-0356a3e9bb0d",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-05-58aac4ee86ef",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-06-7d33ccca2c5a",
+        "missing": []
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-07-613430b7464a",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-00-7a5d6c4e6394",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-01-3bafdae47c64",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-02-298d05bf6761",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-03-5ffc06f72c93",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-04-db8388f505aa",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-05-cffc666a074a",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-06-a8a1c739d9aa",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-07-5eb04129eb45",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-00-106ffe8efc89",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-01-ee6ea3ec4ee9",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-02-e794dd141e20",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-03-92b5a372b5d1",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-04-e317aa1f1160",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-05-da4f8b1ec371",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-06-710f92c5412a",
+        "missing": []
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-07-b903b0ae47a5",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-00-15836459ed9f",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-01-47e6e9950c6f",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-02-29485bc608f8",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-03-9145832887f7",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-04-acf22b82fd2f",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-05-80e89d011065",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-06-dcda3d280d02",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-07-e126e7695ec1",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-00-86da026fbff7",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-01-1d22c2d123a1",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-02-7f75d5309fed",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-03-cf3023891b09",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-04-5f9977172c8c",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-05-66ad5ee9b99c",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-06-a0f90ee92c43",
+        "missing": []
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-07-05bffc2c3069",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-00-a0507a6bea6b",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-01-4775c220dd1c",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-02-5beb77b55ccf",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-03-1f4f4691857e",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-04-4ce3f4f43552",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-05-1f87b9421ffb",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-06-7dd10c816c3d",
+        "missing": []
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-07-de5abc010c80",
+        "missing": []
+      }
+    ]
+  },
+  "created_at_utc": "2026-05-16T19:13:50.656796+00:00",
+  "dataset_name": "princeton-nlp/SWE-bench_Verified",
+  "duplicate_patch_hash_audit": {
+    "duplicate_rate": 0.0,
+    "duplicates_excluded": [],
+    "duplicates_excluded_total": 0,
+    "passes": true,
+    "patch_bearing_attempts": 216,
+    "threshold": 0.25
+  },
+  "empty_patch_audit": {
+    "passes": true,
+    "rows": [],
+    "total": 0
+  },
+  "environment": {
+    "dataset_name": "princeton-nlp/SWE-bench_Verified",
+    "mini_swe_agent_available": false,
+    "packages": {
+      "datasets": "4.8.5",
+      "mini-swe-agent": "not found",
+      "numpy": "2.4.5",
+      "pytest": "9.0.3",
+      "swebench": "4.1.0"
+    },
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "runner_argv": [
+      "/mnt/w/HocusPocus/armyofbots - m4 but picpalac choose/src/experiments/run_stage6b1b_candidate_supply_expansion.py",
+      "--n-tasks",
+      "25",
+      "--k",
+      "8",
+      "--include-default-hf-public",
+      "--task-id",
+      "psf__requests-1142",
+      "--task-id",
+      "sphinx-doc__sphinx-9591",
+      "--task-id",
+      "django__django-13925",
+      "--task-id",
+      "astropy__astropy-14598",
+      "--task-id",
+      "matplotlib__matplotlib-22871",
+      "--task-id",
+      "django__django-13279",
+      "--task-id",
+      "matplotlib__matplotlib-24177",
+      "--task-id",
+      "django__django-7530",
+      "--task-id",
+      "sympy__sympy-15349",
+      "--task-id",
+      "astropy__astropy-14096",
+      "--task-id",
+      "django__django-13344",
+      "--task-id",
+      "django__django-15916",
+      "--task-id",
+      "django__django-11119",
+      "--task-id",
+      "pytest-dev__pytest-7236",
+      "--task-id",
+      "sphinx-doc__sphinx-9711",
+      "--task-id",
+      "sympy__sympy-14248",
+      "--task-id",
+      "sympy__sympy-15345",
+      "--task-id",
+      "django__django-15098",
+      "--task-id",
+      "pydata__xarray-6599",
+      "--task-id",
+      "sphinx-doc__sphinx-8035",
+      "--task-id",
+      "django__django-13516",
+      "--task-id",
+      "django__django-14539",
+      "--task-id",
+      "matplotlib__matplotlib-20676",
+      "--task-id",
+      "matplotlib__matplotlib-24637",
+      "--task-id",
+      "pydata__xarray-7229"
+    ],
+    "split": "test"
+  },
+  "exact_reference_patch_hash_audit": {
+    "hits": [],
+    "hits_total": 0,
+    "passes": true
+  },
+  "extends_benchmark": "stage6b1_candidate_generation",
+  "failure_taxonomy": {
+    "status_counts": {
+      "accepted": 200,
+      "invalid_diff": 16
+    },
+    "task_skipped_cause_counts": {},
+    "task_skipped_statuses": [
+      "task_skipped_budget_limit",
+      "task_skipped_generation_backend_unavailable",
+      "task_skipped_no_matching_instance_id",
+      "task_skipped_no_source_artifact",
+      "task_skipped_repo_not_supported",
+      "task_skipped_source_has_no_patch_field",
+      "task_skipped_source_has_no_trajectory",
+      "task_skipped_unknown"
+    ],
+    "terminal_statuses": [
+      "accepted",
+      "duplicate_patch",
+      "empty_response",
+      "exact_reference_hash",
+      "generator_call_failed",
+      "invalid_diff",
+      "near_reference_similarity_flag",
+      "no_patch_found",
+      "patch_apply_check_failed",
+      "repo_setup_failed",
+      "task_skipped_budget_limit",
+      "task_skipped_generation_backend_unavailable",
+      "task_skipped_no_matching_instance_id",
+      "task_skipped_no_source_artifact",
+      "task_skipped_repo_not_supported",
+      "task_skipped_source_has_no_patch_field",
+      "task_skipped_source_has_no_trajectory",
+      "task_skipped_unknown",
+      "timeout",
+      "unknown_error"
+    ]
+  },
+  "generation_build_audit": {
+    "accepted_candidate_rows": 200,
+    "accepted_candidates_per_task": {
+      "astropy__astropy-14096": 8,
+      "astropy__astropy-14598": 8,
+      "django__django-11119": 8,
+      "django__django-13279": 8,
+      "django__django-13344": 8,
+      "django__django-13516": 8,
+      "django__django-13925": 8,
+      "django__django-14539": 8,
+      "django__django-15098": 8,
+      "django__django-15916": 8,
+      "django__django-7530": 8,
+      "matplotlib__matplotlib-20676": 8,
+      "matplotlib__matplotlib-22871": 8,
+      "matplotlib__matplotlib-24177": 8,
+      "matplotlib__matplotlib-24637": 8,
+      "psf__requests-1142": 8,
+      "pydata__xarray-6599": 8,
+      "pydata__xarray-7229": 8,
+      "pytest-dev__pytest-7236": 8,
+      "sphinx-doc__sphinx-8035": 8,
+      "sphinx-doc__sphinx-9591": 8,
+      "sphinx-doc__sphinx-9711": 8,
+      "sympy__sympy-14248": 8,
+      "sympy__sympy-15345": 8,
+      "sympy__sympy-15349": 8
+    },
+    "accepted_candidates_per_task_distribution": {
+      "8": 25
+    },
+    "candidate_diversity_by_normalized_patch_edit_distance": {
+      "mean_pairwise_distance": 0.7344632666239371,
+      "method": "1 - SequenceMatcher ratio on normalized patch text",
+      "min_pairwise_distance": 0.011509116772274619,
+      "per_task": [
+        {
+          "candidate_count": 8,
+          "instance_id": "astropy__astropy-14096",
+          "mean_pairwise_distance": 0.8014656867116624,
+          "min_pairwise_distance": 0.2750962392656203,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "astropy__astropy-14598",
+          "mean_pairwise_distance": 0.8733208878732522,
+          "min_pairwise_distance": 0.7622285588944944,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-11119",
+          "mean_pairwise_distance": 0.677549305600306,
+          "min_pairwise_distance": 0.011509116772274619,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-13279",
+          "mean_pairwise_distance": 0.8407187436942023,
+          "min_pairwise_distance": 0.5816266822703335,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-13344",
+          "mean_pairwise_distance": 0.4388340178399311,
+          "min_pairwise_distance": 0.1559030492572322,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-13516",
+          "mean_pairwise_distance": 0.8159205699477118,
+          "min_pairwise_distance": 0.5056436271401394,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-13925",
+          "mean_pairwise_distance": 0.7641937617176559,
+          "min_pairwise_distance": 0.37445675031543535,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-14539",
+          "mean_pairwise_distance": 0.7549960235691968,
+          "min_pairwise_distance": 0.4335635920357578,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-15098",
+          "mean_pairwise_distance": 0.6075730183350425,
+          "min_pairwise_distance": 0.22352328909705954,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-15916",
+          "mean_pairwise_distance": 0.47061867412303576,
+          "min_pairwise_distance": 0.1275422268183385,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "django__django-7530",
+          "mean_pairwise_distance": 0.8393221268434755,
+          "min_pairwise_distance": 0.5642105263157895,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "matplotlib__matplotlib-20676",
+          "mean_pairwise_distance": 0.5690003307302215,
+          "min_pairwise_distance": 0.29266136162687884,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "matplotlib__matplotlib-22871",
+          "mean_pairwise_distance": 0.73232527009786,
+          "min_pairwise_distance": 0.30909943714821764,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "matplotlib__matplotlib-24177",
+          "mean_pairwise_distance": 0.7186630075733793,
+          "min_pairwise_distance": 0.43286624203821655,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "matplotlib__matplotlib-24637",
+          "mean_pairwise_distance": 0.8143212926668559,
+          "min_pairwise_distance": 0.3388480392156863,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "psf__requests-1142",
+          "mean_pairwise_distance": 0.9476654001491125,
+          "min_pairwise_distance": 0.8309754281459419,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "pydata__xarray-6599",
+          "mean_pairwise_distance": 0.6189051769516265,
+          "min_pairwise_distance": 0.26682926829268294,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "pydata__xarray-7229",
+          "mean_pairwise_distance": 0.7277727230315473,
+          "min_pairwise_distance": 0.3577694235588973,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "pytest-dev__pytest-7236",
+          "mean_pairwise_distance": 0.8217164283673891,
+          "min_pairwise_distance": 0.1611316113161132,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sphinx-doc__sphinx-8035",
+          "mean_pairwise_distance": 0.9089797493065356,
+          "min_pairwise_distance": 0.7278631395533027,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "mean_pairwise_distance": 0.7788887435131782,
+          "min_pairwise_distance": 0.10045961917268553,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sphinx-doc__sphinx-9711",
+          "mean_pairwise_distance": 0.813927203914874,
+          "min_pairwise_distance": 0.49945355191256835,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sympy__sympy-14248",
+          "mean_pairwise_distance": 0.661991773722659,
+          "min_pairwise_distance": 0.3566137566137566,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sympy__sympy-15345",
+          "mean_pairwise_distance": 0.5964070505253547,
+          "min_pairwise_distance": 0.29674418604651165,
+          "pair_count": 28
+        },
+        {
+          "candidate_count": 8,
+          "instance_id": "sympy__sympy-15349",
+          "mean_pairwise_distance": 0.766504698792361,
+          "min_pairwise_distance": 0.31604938271604943,
+          "pair_count": 28
+        }
+      ],
+      "tasks_checked": 25
+    },
+    "candidate_order_randomizable": true,
+    "duplicate_patch_hash_audit": {
+      "duplicate_rate": 0.0,
+      "duplicates_excluded": [],
+      "duplicates_excluded_total": 0,
+      "passes": true,
+      "patch_bearing_attempts": 216,
+      "threshold": 0.25
+    },
+    "empty_patch_audit": {
+      "passes": true,
+      "rows": [],
+      "total": 0
+    },
+    "exact_reference_patch_hash_audit": {
+      "hits": [],
+      "hits_total": 0,
+      "passes": true
+    },
+    "generated_candidate_files_saved": true,
+    "generator_source_distribution": {
+      "accepted_by_config_name": {
+        "hf_message_trajectory": 4,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+      },
+      "accepted_by_generator_name": {
+        "qwen/qwen3-coder-next": 4,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+      },
+      "accepted_by_model_name_or_path": {
+        "qwen/qwen3-coder-next": 4,
+        "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+      },
+      "accepted_by_prompt_variant": {
+        "hf_coderforge_expanded": 196,
+        "hf_message_trajectory": 4
+      }
+    },
+    "invalid_diff_audit": {
+      "invalid_diff_rate": 0.07407407407407407,
+      "passes": true,
+      "reason_counts": {
+        "invalid_hunk_line_prefix": 2,
+        "missing_file_header": 14
+      },
+      "rows": [
+        {
+          "attempt_id": "hf-coderforge-expanded-00000419-04",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 4,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "1b643dc1a854a3daddefcdcb1928317eaa60e224f168af5a1f90e136ccf3f563",
+          "patch_length": 237,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 419,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d6f9ff7cdbd9.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000419-05",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 5,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "99d115c1697c3091f1aa33df376dc8ce9f2e6b593de2a30c933edb24924e46ff",
+          "patch_length": 321,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 419,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9f517055d5a4.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000419-06",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 6,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "60550118f2ed33acb06672f282085ff6dcc88b26a7502353c748810e6d04320b",
+          "patch_length": 333,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 419,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_af033a2f7cd8.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000419-07",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 7,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "0fbc6903a55268be39813b8080c3218309138fd58fc353faf2933d07e1106b41",
+          "patch_length": 324,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 419,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ce8a187915a9.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000419-08",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 8,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "sphinx-doc__sphinx-9591",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "3222ae1555caf4cf63f959179729fb60cee210616c970394ae353e329cedeede",
+          "patch_length": 222,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 419,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1266083b5f61.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000262-00",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 0,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-22871",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "a3d3edb4010f6460791e8d771d5fdcacc2bf53566bb0101a0cddf82bfea1943c",
+          "patch_length": 164,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 262,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5c04a69a6562.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000262-01",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 1,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-22871",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "fb9de5b873539cc820f35a2ebf17b2b835cf6bccd8d337d02d97030452f55832",
+          "patch_length": 182,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 262,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_972724afb539.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000104-04",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 4,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "django__django-13279",
+          "invalid_diff_reason": "invalid_hunk_line_prefix",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "bbe8ede9072158671d4507f2a3d88d17057a754aecc5a8ce7fea6290927655e5",
+          "patch_length": 2115,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 104,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_21144d3fd76a.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-00",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 0,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "c0008d778fe4f6d9b36951c074f67fa4072fdbe10c8bc310bc852c559699ba1f",
+          "patch_length": 137,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5531250052f1.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-06",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 6,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "04aa96e7553d40171441403fb26e03f73f4f2e63d67ebb7f6393771ec3d38a78",
+          "patch_length": 170,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_2d87c9954e8c.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-08",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 8,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "7d43fbd934a8e7be1f10bc86847a33faeafc920dd38189fba6fab466790b8eea",
+          "patch_length": 158,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0ecd0b42390f.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-09",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 9,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "49e33e3a1a442585ef2ad2a043ab9e94c579616a9a360c7a95a5ac1f9dda297e",
+          "patch_length": 155,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_09_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c6b4521e770b.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-10",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 10,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "7e913ff3579206d94404ea44295668954d731dded2c8a252e23bf2ce1a476761",
+          "patch_length": 155,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_10_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ee38eb99ad60.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-11",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 11,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "eea8ac329ef91c93080b3cb87dcb3057cf4fee62ceacf7de8934925dd3917e3f",
+          "patch_length": 149,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_11_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_30cdfa96bfd0.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-12",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 12,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "missing_file_header",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "5dea43e261a3c92cca5312cd0440b3cf866efe4a8922d3989ba71bc36eae8158",
+          "patch_length": 155,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_12_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3a51f60864c0.json"
+        },
+        {
+          "attempt_id": "hf-coderforge-expanded-00000272-13",
+          "candidate_id": null,
+          "candidate_patch_path": null,
+          "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "failure_message": null,
+          "generation_attempt_index": 13,
+          "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "instance_id": "matplotlib__matplotlib-24637",
+          "invalid_diff_reason": "invalid_hunk_line_prefix",
+          "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+          "near_reference_similarity": null,
+          "patch_apply_check": {
+            "required": false,
+            "status": "not_requested"
+          },
+          "patch_hash": "b5ef82478e4635dd29101952868bf2e8e0fd273a5607147cbeb64d4f023ffd96",
+          "patch_length": 2264,
+          "prompt_variant": "hf_coderforge_expanded",
+          "seed": null,
+          "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+          "source_row_index": 272,
+          "source_visible_to_selector": false,
+          "temperature": null,
+          "terminal_status": "invalid_diff",
+          "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_13_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8af2b8e90d76.json"
+        }
+      ],
+      "total": 16
+    },
+    "max_attempts_per_task": 32,
+    "missing_candidate_fabrication_used": false,
+    "near_reference_similarity_audit": {
+      "flags": [],
+      "flags_total": 0,
+      "passes": true,
+      "threshold": 0.98
+    },
+    "patch_apply_check_audit": {
+      "enabled_rows": 0,
+      "required_failure_rows": [],
+      "status_counts": {
+        "not_requested": 216
+      }
+    },
+    "raw_preserving_expansion_used": false,
+    "rejection_reason_counts": {
+      "invalid_diff": 16
+    },
+    "source_visible_to_selector_all_false": true,
+    "task_skipped_cause_counts": {},
+    "tasks_attempted": 25,
+    "tasks_with_at_least_1_candidate": 25,
+    "tasks_with_at_least_1_candidate_ids": [
+      "psf__requests-1142",
+      "sphinx-doc__sphinx-9591",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "sympy__sympy-15349",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "tasks_with_at_least_4_candidate_ids": [
+      "psf__requests-1142",
+      "sphinx-doc__sphinx-9591",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "sympy__sympy-15349",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "tasks_with_at_least_4_candidates": 25,
+    "tasks_with_at_least_8_candidate_ids": [
+      "psf__requests-1142",
+      "sphinx-doc__sphinx-9591",
+      "django__django-13925",
+      "astropy__astropy-14598",
+      "matplotlib__matplotlib-22871",
+      "django__django-13279",
+      "matplotlib__matplotlib-24177",
+      "django__django-7530",
+      "sympy__sympy-15349",
+      "astropy__astropy-14096",
+      "django__django-13344",
+      "django__django-15916",
+      "django__django-11119",
+      "pytest-dev__pytest-7236",
+      "sphinx-doc__sphinx-9711",
+      "sympy__sympy-14248",
+      "sympy__sympy-15345",
+      "django__django-15098",
+      "pydata__xarray-6599",
+      "sphinx-doc__sphinx-8035",
+      "django__django-13516",
+      "django__django-14539",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-7229"
+    ],
+    "tasks_with_at_least_8_candidates": 25,
+    "terminal_status_counts": {
+      "accepted": 200,
+      "invalid_diff": 16
+    }
+  },
+  "generator_source_distribution": {
+    "accepted_by_config_name": {
+      "hf_message_trajectory": 4,
+      "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+    },
+    "accepted_by_generator_name": {
+      "qwen/qwen3-coder-next": 4,
+      "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+    },
+    "accepted_by_model_name_or_path": {
+      "qwen/qwen3-coder-next": 4,
+      "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty": 196
+    },
+    "accepted_by_prompt_variant": {
+      "hf_coderforge_expanded": 196,
+      "hf_message_trajectory": 4
+    }
+  },
+  "invalid_diff_audit": {
+    "invalid_diff_rate": 0.07407407407407407,
+    "passes": true,
+    "reason_counts": {
+      "invalid_hunk_line_prefix": 2,
+      "missing_file_header": 14
+    },
+    "rows": [
+      {
+        "attempt_id": "hf-coderforge-expanded-00000419-04",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 4,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "1b643dc1a854a3daddefcdcb1928317eaa60e224f168af5a1f90e136ccf3f563",
+        "patch_length": 237,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 419,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d6f9ff7cdbd9.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000419-05",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 5,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "99d115c1697c3091f1aa33df376dc8ce9f2e6b593de2a30c933edb24924e46ff",
+        "patch_length": 321,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 419,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9f517055d5a4.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000419-06",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 6,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "60550118f2ed33acb06672f282085ff6dcc88b26a7502353c748810e6d04320b",
+        "patch_length": 333,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 419,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_af033a2f7cd8.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000419-07",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 7,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "0fbc6903a55268be39813b8080c3218309138fd58fc353faf2933d07e1106b41",
+        "patch_length": 324,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 419,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ce8a187915a9.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000419-08",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 8,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "sphinx-doc__sphinx-9591",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "3222ae1555caf4cf63f959179729fb60cee210616c970394ae353e329cedeede",
+        "patch_length": 222,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 419,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1266083b5f61.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000262-00",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 0,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-22871",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "a3d3edb4010f6460791e8d771d5fdcacc2bf53566bb0101a0cddf82bfea1943c",
+        "patch_length": 164,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 262,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5c04a69a6562.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000262-01",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 1,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-22871",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "fb9de5b873539cc820f35a2ebf17b2b835cf6bccd8d337d02d97030452f55832",
+        "patch_length": 182,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 262,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_972724afb539.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000104-04",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 4,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "django__django-13279",
+        "invalid_diff_reason": "invalid_hunk_line_prefix",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "bbe8ede9072158671d4507f2a3d88d17057a754aecc5a8ce7fea6290927655e5",
+        "patch_length": 2115,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 104,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_21144d3fd76a.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-00",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 0,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "c0008d778fe4f6d9b36951c074f67fa4072fdbe10c8bc310bc852c559699ba1f",
+        "patch_length": 137,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5531250052f1.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-06",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 6,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "04aa96e7553d40171441403fb26e03f73f4f2e63d67ebb7f6393771ec3d38a78",
+        "patch_length": 170,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_2d87c9954e8c.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-08",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 8,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "7d43fbd934a8e7be1f10bc86847a33faeafc920dd38189fba6fab466790b8eea",
+        "patch_length": 158,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0ecd0b42390f.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-09",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 9,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "49e33e3a1a442585ef2ad2a043ab9e94c579616a9a360c7a95a5ac1f9dda297e",
+        "patch_length": 155,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_09_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c6b4521e770b.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-10",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 10,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "7e913ff3579206d94404ea44295668954d731dded2c8a252e23bf2ce1a476761",
+        "patch_length": 155,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_10_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ee38eb99ad60.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-11",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 11,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "eea8ac329ef91c93080b3cb87dcb3057cf4fee62ceacf7de8934925dd3917e3f",
+        "patch_length": 149,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_11_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_30cdfa96bfd0.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-12",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 12,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "missing_file_header",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "5dea43e261a3c92cca5312cd0440b3cf866efe4a8922d3989ba71bc36eae8158",
+        "patch_length": 155,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_12_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3a51f60864c0.json"
+      },
+      {
+        "attempt_id": "hf-coderforge-expanded-00000272-13",
+        "candidate_id": null,
+        "candidate_patch_path": null,
+        "config_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "failure_message": null,
+        "generation_attempt_index": 13,
+        "generator_name": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "instance_id": "matplotlib__matplotlib-24637",
+        "invalid_diff_reason": "invalid_hunk_line_prefix",
+        "model_name_or_path": "swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty",
+        "near_reference_similarity": null,
+        "patch_apply_check": {
+          "required": false,
+          "status": "not_requested"
+        },
+        "patch_hash": "b5ef82478e4635dd29101952868bf2e8e0fd273a5607147cbeb64d4f023ffd96",
+        "patch_length": 2264,
+        "prompt_variant": "hf_coderforge_expanded",
+        "seed": null,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "source_row_index": 272,
+        "source_visible_to_selector": false,
+        "temperature": null,
+        "terminal_status": "invalid_diff",
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_13_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8af2b8e90d76.json"
+      }
+    ],
+    "total": 16
+  },
+  "near_reference_similarity_audit": {
+    "flags": [],
+    "flags_total": 0,
+    "passes": true,
+    "threshold": 0.98
+  },
+  "no_final_model_claim_made": true,
+  "official_harness_evaluation_executed": false,
+  "output_path": "results/stage6b1b_generated_candidates.jsonl",
+  "patch_apply_check_audit": {
+    "enabled_rows": 0,
+    "required_failure_rows": [],
+    "status_counts": {
+      "not_requested": 216
+    }
+  },
+  "quality_gates": {
+    "all_generated_candidate_files_saved": true,
+    "at_least_160_accepted_candidates_total": true,
+    "at_least_20_tasks_with_k8_unique_generated_candidates": true,
+    "at_least_25_tasks_attempted": true,
+    "candidate_order_randomizable": true,
+    "candidate_supply_expansion_quality_gates_pass": true,
+    "duplicate_rate_below_threshold": true,
+    "invalid_diff_rate_reported_and_below_50_percent": true,
+    "no_exact_reference_patch_hits": true,
+    "no_final_model_claim_made": true,
+    "no_missing_candidate_fabrication": true,
+    "no_raw_preserving_expansion": true,
+    "official_harness_not_executed": true,
+    "selector_training_not_executed": true
+  },
+  "raw_preserving_expansion_audit": {
+    "missing_candidate_fabrication_used": false,
+    "passes": true,
+    "raw_preserving_expansion_used": false
+  },
+  "rejection_reason_counts": {
+    "invalid_diff": 16
+  },
+  "requested_tasks": 25,
+  "seed": 606282,
+  "selector_training_executed": false,
+  "source_coverage_report": {
+    "candidates_per_overlapped_instance_after_filtering": {
+      "astropy__astropy-14096": 8,
+      "astropy__astropy-14598": 8,
+      "django__django-11119": 8,
+      "django__django-13279": 8,
+      "django__django-13344": 8,
+      "django__django-13516": 8,
+      "django__django-13925": 8,
+      "django__django-14539": 8,
+      "django__django-15098": 8,
+      "django__django-15916": 8,
+      "django__django-7530": 8,
+      "matplotlib__matplotlib-20676": 8,
+      "matplotlib__matplotlib-22871": 8,
+      "matplotlib__matplotlib-24177": 8,
+      "matplotlib__matplotlib-24637": 8,
+      "psf__requests-1142": 8,
+      "pydata__xarray-6599": 8,
+      "pydata__xarray-7229": 8,
+      "pytest-dev__pytest-7236": 8,
+      "sphinx-doc__sphinx-8035": 8,
+      "sphinx-doc__sphinx-9591": 8,
+      "sphinx-doc__sphinx-9711": 8,
+      "sympy__sympy-14248": 8,
+      "sympy__sympy-15345": 8,
+      "sympy__sympy-15349": 8
+    },
+    "candidates_per_overlapped_instance_before_filtering": {
+      "astropy__astropy-14096": 18,
+      "astropy__astropy-14598": 25,
+      "django__django-11119": 20,
+      "django__django-13279": 24,
+      "django__django-13344": 18,
+      "django__django-13516": 17,
+      "django__django-13925": 44,
+      "django__django-14539": 15,
+      "django__django-15098": 16,
+      "django__django-15916": 18,
+      "django__django-7530": 23,
+      "matplotlib__matplotlib-20676": 15,
+      "matplotlib__matplotlib-22871": 27,
+      "matplotlib__matplotlib-24177": 21,
+      "matplotlib__matplotlib-24637": 26,
+      "psf__requests-1142": 66,
+      "pydata__xarray-6599": 16,
+      "pydata__xarray-7229": 17,
+      "pytest-dev__pytest-7236": 19,
+      "sphinx-doc__sphinx-8035": 16,
+      "sphinx-doc__sphinx-9591": 45,
+      "sphinx-doc__sphinx-9711": 18,
+      "sympy__sympy-14248": 17,
+      "sympy__sympy-15345": 17,
+      "sympy__sympy-15349": 19
+    },
+    "overlap_with_selected_benchmark_tasks": {
+      "count": 25,
+      "instance_ids": [
+        "astropy__astropy-14096",
+        "astropy__astropy-14598",
+        "django__django-11119",
+        "django__django-13279",
+        "django__django-13344",
+        "django__django-13516",
+        "django__django-13925",
+        "django__django-14539",
+        "django__django-15098",
+        "django__django-15916",
+        "django__django-7530",
+        "matplotlib__matplotlib-20676",
+        "matplotlib__matplotlib-22871",
+        "matplotlib__matplotlib-24177",
+        "matplotlib__matplotlib-24637",
+        "psf__requests-1142",
+        "pydata__xarray-6599",
+        "pydata__xarray-7229",
+        "pytest-dev__pytest-7236",
+        "sphinx-doc__sphinx-8035",
+        "sphinx-doc__sphinx-9591",
+        "sphinx-doc__sphinx-9711",
+        "sympy__sympy-14248",
+        "sympy__sympy-15345",
+        "sympy__sympy-15349"
+      ],
+      "selected_task_count": 25
+    },
+    "source_artifacts_loaded": 3,
+    "source_files_loaded": 3,
+    "top_missing_instance_ids": [],
+    "top_source_files_by_accepted_candidates": [
+      {
+        "accepted_candidates": 196,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages"
+      },
+      {
+        "accepted_candidates": 4,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories:messages"
+      }
+    ],
+    "total_raw_records_loaded": 755,
+    "unique_instance_ids_in_sources": 600
+  },
+  "source_generation_audit": {
+    "errors": [],
+    "sources": [
+      {
+        "candidate_attempts": 545,
+        "error": null,
+        "loaded": true,
+        "matching_records": 25,
+        "records": 500,
+        "rows_with_messages": 500,
+        "rows_with_patch_field": 500,
+        "rows_with_trajectory": 500,
+        "source_name": "hf:togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories:trajectory+messages",
+        "terminal_no_patch_rows": 0,
+        "unique_instance_ids": [
+          "astropy__astropy-12907",
+          "astropy__astropy-13033",
+          "astropy__astropy-13236",
+          "astropy__astropy-13398",
+          "astropy__astropy-13453",
+          "astropy__astropy-13579",
+          "astropy__astropy-13977",
+          "astropy__astropy-14096",
+          "astropy__astropy-14182",
+          "astropy__astropy-14309",
+          "astropy__astropy-14365",
+          "astropy__astropy-14369",
+          "astropy__astropy-14508",
+          "astropy__astropy-14539",
+          "astropy__astropy-14598",
+          "astropy__astropy-14995",
+          "astropy__astropy-7166",
+          "astropy__astropy-7336",
+          "astropy__astropy-7606",
+          "astropy__astropy-7671",
+          "astropy__astropy-8707",
+          "astropy__astropy-8872",
+          "django__django-10097",
+          "django__django-10554",
+          "django__django-10880",
+          "django__django-10914",
+          "django__django-10973",
+          "django__django-10999",
+          "django__django-11066",
+          "django__django-11087",
+          "django__django-11095",
+          "django__django-11099",
+          "django__django-11119",
+          "django__django-11133",
+          "django__django-11138",
+          "django__django-11141",
+          "django__django-11149",
+          "django__django-11163",
+          "django__django-11179",
+          "django__django-11206",
+          "django__django-11211",
+          "django__django-11239",
+          "django__django-11265",
+          "django__django-11276",
+          "django__django-11292",
+          "django__django-11299",
+          "django__django-11333",
+          "django__django-11400",
+          "django__django-11433",
+          "django__django-11451",
+          "django__django-11477",
+          "django__django-11490",
+          "django__django-11532",
+          "django__django-11551",
+          "django__django-11555",
+          "django__django-11603",
+          "django__django-11728",
+          "django__django-11734",
+          "django__django-11740",
+          "django__django-11749",
+          "django__django-11790",
+          "django__django-11815",
+          "django__django-11820",
+          "django__django-11848",
+          "django__django-11880",
+          "django__django-11885",
+          "django__django-11951",
+          "django__django-11964",
+          "django__django-11999",
+          "django__django-12039",
+          "django__django-12050",
+          "django__django-12125",
+          "django__django-12143",
+          "django__django-12155",
+          "django__django-12193",
+          "django__django-12209",
+          "django__django-12262",
+          "django__django-12273",
+          "django__django-12276",
+          "django__django-12304",
+          "django__django-12308",
+          "django__django-12325",
+          "django__django-12406",
+          "django__django-12419",
+          "django__django-12663",
+          "django__django-12708",
+          "django__django-12713",
+          "django__django-12741",
+          "django__django-12754",
+          "django__django-12774",
+          "django__django-12858",
+          "django__django-12965",
+          "django__django-13012",
+          "django__django-13023",
+          "django__django-13028",
+          "django__django-13033",
+          "django__django-13089",
+          "django__django-13109",
+          "django__django-13112",
+          "django__django-13121",
+          "django__django-13128",
+          "django__django-13158",
+          "django__django-13195",
+          "django__django-13212",
+          "django__django-13279",
+          "django__django-13297",
+          "django__django-13315",
+          "django__django-13343",
+          "django__django-13344",
+          "django__django-13346",
+          "django__django-13363",
+          "django__django-13401",
+          "django__django-13406",
+          "django__django-13410",
+          "django__django-13417",
+          "django__django-13449",
+          "django__django-13512",
+          "django__django-13513",
+          "django__django-13516",
+          "django__django-13551",
+          "django__django-13568",
+          "django__django-13569",
+          "django__django-13590",
+          "django__django-13658",
+          "django__django-13670",
+          "django__django-13741",
+          "django__django-13786",
+          "django__django-13794",
+          "django__django-13807",
+          "django__django-13809",
+          "django__django-13810",
+          "django__django-13820",
+          "django__django-13821",
+          "django__django-13837",
+          "django__django-13925",
+          "django__django-13933",
+          "django__django-13964",
+          "django__django-14007",
+          "django__django-14011",
+          "django__django-14017",
+          "django__django-14034",
+          "django__django-14053",
+          "django__django-14089",
+          "django__django-14122",
+          "django__django-14140",
+          "django__django-14155",
+          "django__django-14170",
+          "django__django-14238",
+          "django__django-14311",
+          "django__django-14315",
+          "django__django-14349",
+          "django__django-14351",
+          "django__django-14373",
+          "django__django-14376",
+          "django__django-14404",
+          "django__django-14434",
+          "django__django-14493",
+          "django__django-14500",
+          "django__django-14534",
+          "django__django-14539",
+          "django__django-14559",
+          "django__django-14580",
+          "django__django-14608",
+          "django__django-14631",
+          "django__django-14672",
+          "django__django-14725",
+          "django__django-14752",
+          "django__django-14765",
+          "django__django-14771",
+          "django__django-14787",
+          "django__django-14792",
+          "django__django-14855",
+          "django__django-14915",
+          "django__django-14999",
+          "django__django-15022",
+          "django__django-15037",
+          "django__django-15098",
+          "django__django-15103",
+          "django__django-15104",
+          "django__django-15127",
+          "django__django-15128",
+          "django__django-15161",
+          "django__django-15252",
+          "django__django-15268",
+          "django__django-15277",
+          "django__django-15278",
+          "django__django-15280",
+          "django__django-15315",
+          "django__django-15368",
+          "django__django-15375",
+          "django__django-15380",
+          "django__django-15382",
+          "django__django-15467",
+          "django__django-15499",
+          "django__django-15503",
+          "django__django-15525",
+          "django__django-15554",
+          "django__django-15561",
+          "django__django-15563",
+          "django__django-15569",
+          "django__django-15572",
+          "django__django-15629",
+          "django__django-15695",
+          "django__django-15731",
+          "django__django-15732",
+          "django__django-15741",
+          "django__django-15814",
+          "django__django-15851",
+          "django__django-15863",
+          "django__django-15916",
+          "django__django-15930",
+          "django__django-15957",
+          "django__django-15973",
+          "django__django-15987",
+          "django__django-16032",
+          "django__django-16082",
+          "django__django-16100",
+          "django__django-16116",
+          "django__django-16136",
+          "django__django-16139",
+          "django__django-16145",
+          "django__django-16255",
+          "django__django-16256",
+          "django__django-16263",
+          "django__django-16315",
+          "django__django-16333",
+          "django__django-16429",
+          "django__django-16454",
+          "django__django-16485",
+          "django__django-16493",
+          "django__django-16502",
+          "django__django-16527",
+          "django__django-16560",
+          "django__django-16569",
+          "django__django-16595",
+          "django__django-16612",
+          "django__django-16631",
+          "django__django-16642",
+          "django__django-16661",
+          "django__django-16662",
+          "django__django-16667",
+          "django__django-16801",
+          "django__django-16819",
+          "django__django-16877",
+          "django__django-16899",
+          "django__django-16901",
+          "django__django-16938",
+          "django__django-16950",
+          "django__django-17029",
+          "django__django-17084",
+          "django__django-17087",
+          "django__django-7530",
+          "django__django-9296",
+          "matplotlib__matplotlib-13989",
+          "matplotlib__matplotlib-14623",
+          "matplotlib__matplotlib-20488",
+          "matplotlib__matplotlib-20676",
+          "matplotlib__matplotlib-20826",
+          "matplotlib__matplotlib-20859",
+          "matplotlib__matplotlib-21568",
+          "matplotlib__matplotlib-22719",
+          "matplotlib__matplotlib-22865",
+          "matplotlib__matplotlib-22871",
+          "matplotlib__matplotlib-23299",
+          "matplotlib__matplotlib-23314",
+          "matplotlib__matplotlib-23412",
+          "matplotlib__matplotlib-23476",
+          "matplotlib__matplotlib-24026",
+          "matplotlib__matplotlib-24149",
+          "matplotlib__matplotlib-24177",
+          "matplotlib__matplotlib-24570",
+          "matplotlib__matplotlib-24627",
+          "matplotlib__matplotlib-24637",
+          "matplotlib__matplotlib-24870",
+          "matplotlib__matplotlib-24970",
+          "matplotlib__matplotlib-25122",
+          "matplotlib__matplotlib-25287",
+          "matplotlib__matplotlib-25311",
+          "matplotlib__matplotlib-25332",
+          "matplotlib__matplotlib-25479",
+          "matplotlib__matplotlib-25775",
+          "matplotlib__matplotlib-25960",
+          "matplotlib__matplotlib-26113",
+          "matplotlib__matplotlib-26208",
+          "matplotlib__matplotlib-26291",
+          "matplotlib__matplotlib-26342",
+          "matplotlib__matplotlib-26466",
+          "mwaskom__seaborn-3069",
+          "mwaskom__seaborn-3187",
+          "pallets__flask-5014",
+          "psf__requests-1142",
+          "psf__requests-1724",
+          "psf__requests-1766",
+          "psf__requests-1921",
+          "psf__requests-2317",
+          "psf__requests-2931",
+          "psf__requests-5414",
+          "psf__requests-6028",
+          "pydata__xarray-2905",
+          "pydata__xarray-3095",
+          "pydata__xarray-3151",
+          "pydata__xarray-3305",
+          "pydata__xarray-3677",
+          "pydata__xarray-3993",
+          "pydata__xarray-4075",
+          "pydata__xarray-4094",
+          "pydata__xarray-4356",
+          "pydata__xarray-4629",
+          "pydata__xarray-4687",
+          "pydata__xarray-4695",
+          "pydata__xarray-4966",
+          "pydata__xarray-6461",
+          "pydata__xarray-6599",
+          "pydata__xarray-6721",
+          "pydata__xarray-6744",
+          "pydata__xarray-6938",
+          "pydata__xarray-6992",
+          "pydata__xarray-7229",
+          "pydata__xarray-7233",
+          "pydata__xarray-7393",
+          "pylint-dev__pylint-4551",
+          "pylint-dev__pylint-4604",
+          "pylint-dev__pylint-4661",
+          "pylint-dev__pylint-4970",
+          "pylint-dev__pylint-6386",
+          "pylint-dev__pylint-6528",
+          "pylint-dev__pylint-6903",
+          "pylint-dev__pylint-7080",
+          "pylint-dev__pylint-7277",
+          "pylint-dev__pylint-8898",
+          "pytest-dev__pytest-10051",
+          "pytest-dev__pytest-10081",
+          "pytest-dev__pytest-10356",
+          "pytest-dev__pytest-5262",
+          "pytest-dev__pytest-5631",
+          "pytest-dev__pytest-5787",
+          "pytest-dev__pytest-5809",
+          "pytest-dev__pytest-5840",
+          "pytest-dev__pytest-6197",
+          "pytest-dev__pytest-6202",
+          "pytest-dev__pytest-7205",
+          "pytest-dev__pytest-7236",
+          "pytest-dev__pytest-7324",
+          "pytest-dev__pytest-7432",
+          "pytest-dev__pytest-7490",
+          "pytest-dev__pytest-7521",
+          "pytest-dev__pytest-7571",
+          "pytest-dev__pytest-7982",
+          "pytest-dev__pytest-8399",
+          "scikit-learn__scikit-learn-10297",
+          "scikit-learn__scikit-learn-10844",
+          "scikit-learn__scikit-learn-10908",
+          "scikit-learn__scikit-learn-11310",
+          "scikit-learn__scikit-learn-11578",
+          "scikit-learn__scikit-learn-12585",
+          "scikit-learn__scikit-learn-12682",
+          "scikit-learn__scikit-learn-12973",
+          "scikit-learn__scikit-learn-13124",
+          "scikit-learn__scikit-learn-13135",
+          "scikit-learn__scikit-learn-13142",
+          "scikit-learn__scikit-learn-13328",
+          "scikit-learn__scikit-learn-13439",
+          "scikit-learn__scikit-learn-13496",
+          "scikit-learn__scikit-learn-13779",
+          "scikit-learn__scikit-learn-14053",
+          "scikit-learn__scikit-learn-14087",
+          "scikit-learn__scikit-learn-14141",
+          "scikit-learn__scikit-learn-14496",
+          "scikit-learn__scikit-learn-14629",
+          "scikit-learn__scikit-learn-14710",
+          "scikit-learn__scikit-learn-14894",
+          "scikit-learn__scikit-learn-14983",
+          "scikit-learn__scikit-learn-15100",
+          "scikit-learn__scikit-learn-25102",
+          "scikit-learn__scikit-learn-25232",
+          "scikit-learn__scikit-learn-25747",
+          "scikit-learn__scikit-learn-25931",
+          "scikit-learn__scikit-learn-25973",
+          "scikit-learn__scikit-learn-26194",
+          "scikit-learn__scikit-learn-26323",
+          "scikit-learn__scikit-learn-9288",
+          "sphinx-doc__sphinx-10323",
+          "sphinx-doc__sphinx-10435",
+          "sphinx-doc__sphinx-10449",
+          "sphinx-doc__sphinx-10466",
+          "sphinx-doc__sphinx-10614",
+          "sphinx-doc__sphinx-10673",
+          "sphinx-doc__sphinx-11445",
+          "sphinx-doc__sphinx-11510",
+          "sphinx-doc__sphinx-7440",
+          "sphinx-doc__sphinx-7454",
+          "sphinx-doc__sphinx-7462",
+          "sphinx-doc__sphinx-7590",
+          "sphinx-doc__sphinx-7748",
+          "sphinx-doc__sphinx-7757",
+          "sphinx-doc__sphinx-7889",
+          "sphinx-doc__sphinx-7910",
+          "sphinx-doc__sphinx-7985",
+          "sphinx-doc__sphinx-8035",
+          "sphinx-doc__sphinx-8056",
+          "sphinx-doc__sphinx-8120",
+          "sphinx-doc__sphinx-8265",
+          "sphinx-doc__sphinx-8269",
+          "sphinx-doc__sphinx-8459",
+          "sphinx-doc__sphinx-8475",
+          "sphinx-doc__sphinx-8548",
+          "sphinx-doc__sphinx-8551",
+          "sphinx-doc__sphinx-8593",
+          "sphinx-doc__sphinx-8595",
+          "sphinx-doc__sphinx-8621",
+          "sphinx-doc__sphinx-8638",
+          "sphinx-doc__sphinx-8721",
+          "sphinx-doc__sphinx-9229",
+          "sphinx-doc__sphinx-9230",
+          "sphinx-doc__sphinx-9258",
+          "sphinx-doc__sphinx-9281",
+          "sphinx-doc__sphinx-9320",
+          "sphinx-doc__sphinx-9367",
+          "sphinx-doc__sphinx-9461",
+          "sphinx-doc__sphinx-9591",
+          "sphinx-doc__sphinx-9602",
+          "sphinx-doc__sphinx-9658",
+          "sphinx-doc__sphinx-9673",
+          "sphinx-doc__sphinx-9698",
+          "sphinx-doc__sphinx-9711",
+          "sympy__sympy-11618",
+          "sympy__sympy-12096",
+          "sympy__sympy-12419",
+          "sympy__sympy-12481",
+          "sympy__sympy-12489",
+          "sympy__sympy-13031",
+          "sympy__sympy-13091",
+          "sympy__sympy-13372",
+          "sympy__sympy-13480",
+          "sympy__sympy-13551",
+          "sympy__sympy-13615",
+          "sympy__sympy-13647",
+          "sympy__sympy-13757",
+          "sympy__sympy-13798",
+          "sympy__sympy-13852",
+          "sympy__sympy-13877",
+          "sympy__sympy-13878",
+          "sympy__sympy-13974",
+          "sympy__sympy-14248",
+          "sympy__sympy-14531",
+          "sympy__sympy-14711",
+          "sympy__sympy-14976",
+          "sympy__sympy-15017",
+          "sympy__sympy-15345",
+          "sympy__sympy-15349",
+          "sympy__sympy-15599",
+          "sympy__sympy-15809",
+          "sympy__sympy-15875",
+          "sympy__sympy-15976",
+          "sympy__sympy-16450",
+          "sympy__sympy-16597",
+          "sympy__sympy-16766",
+          "sympy__sympy-16792",
+          "sympy__sympy-16886",
+          "sympy__sympy-17139",
+          "sympy__sympy-17318",
+          "sympy__sympy-17630",
+          "sympy__sympy-17655",
+          "sympy__sympy-18189",
+          "sympy__sympy-18199",
+          "sympy__sympy-18211",
+          "sympy__sympy-18698",
+          "sympy__sympy-18763",
+          "sympy__sympy-19040",
+          "sympy__sympy-19346",
+          "sympy__sympy-19495",
+          "sympy__sympy-19637",
+          "sympy__sympy-19783",
+          "sympy__sympy-19954",
+          "sympy__sympy-20154",
+          "sympy__sympy-20428",
+          "sympy__sympy-20438",
+          "sympy__sympy-20590",
+          "sympy__sympy-20801",
+          "sympy__sympy-20916",
+          "sympy__sympy-21379",
+          "sympy__sympy-21596",
+          "sympy__sympy-21612",
+          "sympy__sympy-21847",
+          "sympy__sympy-21930",
+          "sympy__sympy-22080",
+          "sympy__sympy-22456",
+          "sympy__sympy-22714",
+          "sympy__sympy-22914",
+          "sympy__sympy-23262",
+          "sympy__sympy-23413",
+          "sympy__sympy-23534",
+          "sympy__sympy-23824",
+          "sympy__sympy-23950",
+          "sympy__sympy-24066",
+          "sympy__sympy-24213",
+          "sympy__sympy-24443",
+          "sympy__sympy-24539",
+          "sympy__sympy-24562",
+          "sympy__sympy-24661"
+        ]
+      },
+      {
+        "candidate_attempts": 32,
+        "error": null,
+        "loaded": true,
+        "matching_records": 4,
+        "records": 55,
+        "rows_with_messages": 55,
+        "rows_with_patch_field": 0,
+        "rows_with_trajectory": 55,
+        "source_name": "hf:hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories:messages",
+        "terminal_no_patch_rows": 0,
+        "unique_instance_ids": [
+          "astropy__astropy-13398",
+          "astropy__astropy-14508",
+          "astropy__astropy-14995",
+          "django__django-10880",
+          "django__django-11066",
+          "django__django-11099",
+          "django__django-11119",
+          "django__django-11815",
+          "django__django-11964",
+          "django__django-12143",
+          "django__django-12209",
+          "django__django-13410",
+          "django__django-13512",
+          "django__django-13551",
+          "django__django-13590",
+          "django__django-13741",
+          "django__django-13807",
+          "django__django-14089",
+          "django__django-14311",
+          "django__django-14376",
+          "django__django-14434",
+          "django__django-14493",
+          "django__django-15695",
+          "django__django-15741",
+          "django__django-16527",
+          "django__django-16642",
+          "django__django-7530",
+          "django__django-9296",
+          "matplotlib__matplotlib-20488",
+          "matplotlib__matplotlib-23412",
+          "matplotlib__matplotlib-24026",
+          "matplotlib__matplotlib-26113",
+          "psf__requests-1766",
+          "psf__requests-5414",
+          "pydata__xarray-4687",
+          "pydata__xarray-4695",
+          "pydata__xarray-6721",
+          "pylint-dev__pylint-7080",
+          "pytest-dev__pytest-7236",
+          "pytest-dev__pytest-7324",
+          "pytest-dev__pytest-7521",
+          "pytest-dev__pytest-7982",
+          "scikit-learn__scikit-learn-10844",
+          "scikit-learn__scikit-learn-13779",
+          "sphinx-doc__sphinx-11510",
+          "sphinx-doc__sphinx-7590",
+          "sphinx-doc__sphinx-8269",
+          "sphinx-doc__sphinx-8595",
+          "sphinx-doc__sphinx-9367",
+          "sphinx-doc__sphinx-9711",
+          "sympy__sympy-15017",
+          "sympy__sympy-18698",
+          "sympy__sympy-19346",
+          "sympy__sympy-21612",
+          "sympy__sympy-22714"
+        ]
+      },
+      {
+        "candidate_attempts": 0,
+        "error": null,
+        "loaded": true,
+        "matching_records": 0,
+        "records": 200,
+        "rows_with_messages": 0,
+        "rows_with_patch_field": 0,
+        "rows_with_trajectory": 0,
+        "source_name": "hf:antieval/swebench-trajectories:messages",
+        "terminal_no_patch_rows": 0,
+        "unique_instance_ids": [
+          "swebench:astropy__astropy-12907",
+          "swebench:astropy__astropy-13033",
+          "swebench:astropy__astropy-13236",
+          "swebench:astropy__astropy-13398",
+          "swebench:astropy__astropy-13453",
+          "swebench:astropy__astropy-13579",
+          "swebench:astropy__astropy-13977",
+          "swebench:astropy__astropy-14096",
+          "swebench:astropy__astropy-14182",
+          "swebench:astropy__astropy-14309",
+          "swebench:astropy__astropy-14365",
+          "swebench:astropy__astropy-14369",
+          "swebench:astropy__astropy-14508",
+          "swebench:astropy__astropy-14539",
+          "swebench:astropy__astropy-14598",
+          "swebench:astropy__astropy-14995",
+          "swebench:astropy__astropy-7166",
+          "swebench:astropy__astropy-7336",
+          "swebench:astropy__astropy-7606",
+          "swebench:astropy__astropy-7671",
+          "swebench:astropy__astropy-8707",
+          "swebench:astropy__astropy-8872",
+          "swebench:django__django-10097",
+          "swebench:django__django-10554",
+          "swebench:django__django-10880",
+          "swebench:django__django-10914",
+          "swebench:django__django-10973",
+          "swebench:django__django-10999",
+          "swebench:django__django-11066",
+          "swebench:django__django-11087",
+          "swebench:django__django-11095",
+          "swebench:django__django-11099",
+          "swebench:django__django-11119",
+          "swebench:django__django-11133",
+          "swebench:django__django-11138",
+          "swebench:django__django-11141",
+          "swebench:django__django-11149",
+          "swebench:django__django-11163",
+          "swebench:django__django-11179",
+          "swebench:django__django-11206",
+          "swebench:django__django-11211",
+          "swebench:django__django-11239",
+          "swebench:django__django-11265",
+          "swebench:django__django-11276",
+          "swebench:django__django-11292",
+          "swebench:django__django-11299",
+          "swebench:django__django-11333",
+          "swebench:django__django-11400",
+          "swebench:django__django-11433",
+          "swebench:django__django-11451",
+          "swebench:django__django-11477",
+          "swebench:django__django-11490",
+          "swebench:django__django-11532",
+          "swebench:django__django-11551",
+          "swebench:django__django-11555",
+          "swebench:django__django-11603",
+          "swebench:django__django-11728",
+          "swebench:django__django-11734",
+          "swebench:django__django-11740",
+          "swebench:django__django-11749",
+          "swebench:django__django-11790",
+          "swebench:django__django-11815",
+          "swebench:django__django-11820",
+          "swebench:django__django-11848",
+          "swebench:django__django-11880",
+          "swebench:django__django-11885",
+          "swebench:django__django-11951",
+          "swebench:django__django-11964",
+          "swebench:django__django-11999",
+          "swebench:django__django-12039",
+          "swebench:django__django-12050",
+          "swebench:django__django-12125",
+          "swebench:django__django-12143",
+          "swebench:django__django-12155",
+          "swebench:django__django-12193",
+          "swebench:django__django-12209",
+          "swebench:django__django-12262",
+          "swebench:django__django-12273",
+          "swebench:django__django-12276",
+          "swebench:django__django-12304",
+          "swebench:django__django-12308",
+          "swebench:django__django-12325",
+          "swebench:django__django-12406",
+          "swebench:django__django-12419",
+          "swebench:django__django-12663",
+          "swebench:django__django-12708",
+          "swebench:django__django-12713",
+          "swebench:django__django-12741",
+          "swebench:django__django-12754",
+          "swebench:django__django-12774",
+          "swebench:django__django-12858",
+          "swebench:django__django-12965",
+          "swebench:django__django-13012",
+          "swebench:django__django-13023",
+          "swebench:django__django-13028",
+          "swebench:django__django-13033",
+          "swebench:django__django-13089",
+          "swebench:django__django-13109",
+          "swebench:django__django-13112",
+          "swebench:django__django-13121"
+        ]
+      },
+      {
+        "candidate_attempts": 577,
+        "datasets": [
+          "togethercomputer/CoderForge-Preview-32B-SWE-Bench-Verified-Evaluation-trajectories",
+          "hanspeterlyngsoeraaschoujensen/swebench-eval-trajectories",
+          "antieval/swebench-trajectories"
+        ],
+        "multi_diff_trajectory_expansion": "distinct generated patch hashes only",
+        "source_name": "hf-public-stage6b1b-expanded"
+      },
+      {
+        "command_templates": 0,
+        "error": null,
+        "records": 0,
+        "source_name": "local-generator-wrapper"
+      },
+      {
+        "command_templates": 0,
+        "error": null,
+        "records": 0,
+        "source_name": "api-generator-wrapper"
+      },
+      {
+        "enabled": false,
+        "records": 0,
+        "source_name": "mini-swe-agent"
+      }
+    ]
+  },
+  "split": "test",
+  "tasks_attempted": 25,
+  "tasks_with_at_least_1_candidate": 25,
+  "tasks_with_at_least_4_candidates": 25,
+  "tasks_with_at_least_8_candidates": 25,
+  "trajectory_path_audit": {
+    "missing_total": 0,
+    "passes": true,
+    "rows": [
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-00-51657d38f977",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_12363a35ca24.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-01-fd9aa754824f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3be7498408fc.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-02-c277afd44a66",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b52282e0e3bd.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-03-02d9910915c3",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a1f066a4d433.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-04-de9f26c0b2e7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fac4adc36452.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-05-98169eb07d7d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3c648e65b29a.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-06-b2ca9efbcc40",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8bbb09b00861.json"
+      },
+      {
+        "candidate_id": "psf__requests-1142-stage6b1b-candidate-07-9d7f8f9ba04d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/psf__requests-1142/000290_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_782edf53f9fd.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-00-8ded22f4d2de",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1f283951304a.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-01-a583b5e7c060",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_12_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5da9bee5ee27.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-02-67555bccad2c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b88be3ae524e.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-03-b7811fdd2ddc",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_11_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_6939573d2a15.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-04-a77984ee16b1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_09_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_4a0acd5c79e6.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-05-0b22eac6012a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_6750a22ff401.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-06-328ad3974f3f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_10_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_df965ae5a798.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9591-stage6b1b-candidate-07-2db4cbadd143",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9591/000419_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d6d8c4ae6090.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-00-7ffb911b60fd",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_57038fa20c66.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-01-323145890cf0",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fa1c1162b2a8.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-02-8e2ea5df9b10",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1de5aed36050.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-03-650c4c29f6d4",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e84f02f1c9c9.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-04-c15b7256cd8c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_daeb09092864.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-05-4888fc580633",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3312444fe9ff.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-06-ae442df4266b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5243931cad58.json"
+      },
+      {
+        "candidate_id": "django__django-13925-stage6b1b-candidate-07-afe1106167dc",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13925/000134_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_bc8245b28ee7.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-00-1a168a1bea97",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_eb9cb10bb090.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-01-ecfd76174d67",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_408473e1a30c.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-02-1f552c5d9310",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3237418ef4d5.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-03-fa50b09fdcaf",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9d4050d6fb75.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-04-c6b3e26b13de",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_175fc7e8ae69.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-05-8b4e050871dd",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c6cc347722dc.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-06-27b29adf32e9",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_671861e40a2f.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14598-stage6b1b-candidate-07-a8e569125bbb",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14598/000014_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_4bec8c886ed9.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-00-a3c9e334f6f3",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_37309031d40b.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-01-6098cb281e12",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8c49150f5228.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-02-377f32259e32",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_86016e58cf41.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-03-2663c9e9bf64",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_248caba81348.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-04-762efc85ba35",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_71e8a4aff638.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-05-596491a0b568",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_23a7ba9cfb97.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-06-8dc4293aab1a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0e9b26953cda.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-22871-stage6b1b-candidate-07-f6570af664ed",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-22871/000262_09_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0e675a2237a2.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-00-6767d75f22e4",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_08_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_94ef780bd31b.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-01-63a7b2b63744",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3757d99ff250.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-02-3484cdb20fbf",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b339c32c6dbe.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-03-ef5dd69793c3",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9aa90c734dbb.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-04-bf1bfc1e4942",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_146e8a4ab8ce.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-05-570bbb995c1c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_459fd896c7e3.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-06-5f293900d0d1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_be6605e84555.json"
+      },
+      {
+        "candidate_id": "django__django-13279-stage6b1b-candidate-07-5d91276f8e35",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13279/000104_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d2d6dda78b6e.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-00-7fe5a859f08a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1e5b8f098573.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-01-568eff7b6789",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a036cdb7d0b3.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-02-c40800a45c48",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_44fb3689dbdc.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-03-fb7f77984cf2",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_86d72df6c245.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-04-81b604bb4dd7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_886e03d3f94b.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-05-8108cdf6fde3",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_94b16cac2d75.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-06-0180448a56dd",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fc71353ec9a3.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24177-stage6b1b-candidate-07-b95d34a1a535",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24177/000269_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_17e7241ba1a5.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-00-dd336eac01f9",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c5e2db7d9ba9.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-01-9e08a3205276",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cf8695d3f852.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-02-c1dc2435ffdc",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_280488befc73.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-03-0ce1cc8e052f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_17f674857c0c.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-04-967a708f2e6d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a869ef74fcad.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-05-c8a520d31b44",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-7530/000251_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_378401f8ba0d.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-06-08dcc852a368",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_messages_expanded/django__django-7530/000026_01_qwen_qwen3-coder-next_0cc853511ac5.json"
+      },
+      {
+        "candidate_id": "django__django-7530-stage6b1b-candidate-07-34ecae650de7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_messages_expanded/django__django-7530/000026_00_qwen_qwen3-coder-next_19d41bd3df07.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-00-a6a307254288",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_97e30eb64466.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-01-9e2c7ef55ea7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cec0b7b183af.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-02-0c8dd2f20d10",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1e12f2e9e3e3.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-03-7bb4141d9091",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a3bdbd61e9ca.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-04-48b6b01fc799",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e9ae0ab0a365.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-05-695d6a5d0ff0",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_453e574ff2dc.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-06-985e18b76e1d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c5fa19d871fc.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15349-stage6b1b-candidate-07-0d2e785bd77c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15349/000449_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e63cb7fb03fe.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-00-b9410d275b79",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0d9bb224155a.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-01-f54abf259278",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_32afecfbb764.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-02-f53a09387ab8",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_44b508318707.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-03-6d44df8b3c22",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9944d4513001.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-04-3120e5034933",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_7851e8403546.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-05-00fed2abbd87",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8991a0b3950c.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-06-4bc8fcafcade",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a1aa18bc0c3c.json"
+      },
+      {
+        "candidate_id": "astropy__astropy-14096-stage6b1b-candidate-07-fb698200d514",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/astropy__astropy-14096/000007_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ac0d0a1776b3.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-00-1ddfb96dbd25",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_498d524c91ba.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-01-a669ffe6368b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_bd2562ed4383.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-02-0efeef7d8125",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_f5c7b81fe0f0.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-03-976e6e1ef5ed",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b5fce8119dfb.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-04-3a883b4f730e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_7765138c5023.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-05-a4dbf4d5c720",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3b7517fb6678.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-06-6705b55102ea",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_7804693dd0eb.json"
+      },
+      {
+        "candidate_id": "django__django-13344-stage6b1b-candidate-07-faf9fd1cfb6e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13344/000108_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_eb2f90614516.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-00-5379378523b2",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c86c494baddc.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-01-f2c32cf6cf47",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_f836cf211fd9.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-02-8eb8f134a814",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_6ab94902097f.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-03-880fca4972d5",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_af9d5a875b26.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-04-d2c491cb5c82",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_da5c2d788df0.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-05-35ce7b803189",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_4e5809bf8266.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-06-d4e6aa04cb0a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1c1cc1805793.json"
+      },
+      {
+        "candidate_id": "django__django-15916-stage6b1b-candidate-07-77b452a5088f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15916/000209_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_f71392e9ed4e.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-00-7703935fa1cb",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_569a3957fcdb.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-01-029f0490c736",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_5af16647541a.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-02-f80bcb54cda4",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e64fb31a5547.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-03-ad21cd8f6cce",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d0afbbd6b926.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-04-22ec531f5183",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_7be02c461c99.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-05-829ce6681d71",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9931fd7c6f84.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-06-8b30dabe90ec",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_56eb62542f70.json"
+      },
+      {
+        "candidate_id": "django__django-11119-stage6b1b-candidate-07-21331981e5bb",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-11119/000032_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0269deb09a3f.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-00-e18ecc214c9b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_39b4537295a1.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-01-71f8e4f02339",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cd34326a5306.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-02-707873b4bd51",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_dbe809462793.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-03-a21e7f01578c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a35ddd6dd2da.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-04-2f643a17d781",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a0a9a52938d8.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-05-1d5c16d2301b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_messages_expanded/pytest-dev__pytest-7236/000038_01_qwen_qwen3-coder-next_c3dec8cc3d5b.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-06-c95d8516a7ca",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_messages_expanded/pytest-dev__pytest-7236/000038_00_qwen_qwen3-coder-next_f8d2ffd786ef.json"
+      },
+      {
+        "candidate_id": "pytest-dev__pytest-7236-stage6b1b-candidate-07-04a0012c2953",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pytest-dev__pytest-7236/000341_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a68aa6c70949.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-00-d4f3ca589ffe",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_f4890bc47a94.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-01-2babd177b9bb",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_efa8fca35757.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-02-6474560353c0",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_230d585ab50a.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-03-0432e1c3b0fc",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a8b300a8afe0.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-04-4bc1c2a6f671",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a16e664f30bb.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-05-cbe4d7164bb1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9a4d26609f91.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-06-35f6b8e389ff",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_bae3d2079655.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-9711-stage6b1b-candidate-07-064948f92512",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-9711/000424_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c033813f4058.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-00-777d3c428e07",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_f07a77750fca.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-01-c128a9cb564e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ff05fc107b69.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-02-68fc80849c5d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_812d6dc09799.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-03-b84cb3879b54",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_96e220db0993.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-04-fb764ecd79a8",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d792844051ce.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-05-698cc48b7684",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8d463cee828c.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-06-dddabd81389f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_385730c405fd.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-14248-stage6b1b-candidate-07-8aedac008f18",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-14248/000443_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ee4d45950475.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-00-7ebd7f319c1a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_50788ed0879f.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-01-58c414cb9029",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9377a7b6c5fa.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-02-d682d4b164bf",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_852dc3dd3046.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-03-c49b062d6f9e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0438c04ede9b.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-04-ed7e5ce8706b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_64f0f07a70ec.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-05-1bffa49fe930",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_340951819556.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-06-f020fe02341e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_399df42cbb92.json"
+      },
+      {
+        "candidate_id": "sympy__sympy-15345-stage6b1b-candidate-07-9bffc9c5b715",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sympy__sympy-15345/000448_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_74bf16132db8.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-00-b398223a383e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fea68df05318.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-01-0350d14f86f4",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_28d89c046ea1.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-02-8b198674fa14",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b931631137b6.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-03-aadbd4f2b443",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c817d0453ed5.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-04-5f775f443df3",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_225a3e1c0a55.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-05-5c1848c4bc1b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_b20fa8a04f34.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-06-487b7bdc7a7a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_389e8723f0a1.json"
+      },
+      {
+        "candidate_id": "django__django-15098-stage6b1b-candidate-07-25c3852b15ed",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-15098/000176_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fe3106da2d33.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-00-16bd3edf6a2f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_75769b46a450.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-01-b2054098e2aa",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ca123167c734.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-02-089f76f35025",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_97017cf0c714.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-03-fb9e060e3056",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1f240ac19b6a.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-04-1eb2af2cee95",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8eb01c80058c.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-05-84194f920705",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e4d66c194312.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-06-0e37598b4c76",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_253b06d14246.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-6599-stage6b1b-candidate-07-22606fe80925",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-6599/000312_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e30a07a7902d.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-00-f5acea4e382a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_4bdccc8213be.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-01-9440b07ad413",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_420d24992447.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-02-7f1425dac893",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_405dfe1e39a8.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-03-fb4213d796d4",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_2d5e6686bc9e.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-04-0356a3e9bb0d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ac8c5d68424c.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-05-58aac4ee86ef",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_4399d9b96de5.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-06-7d33ccca2c5a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8f7919ff2554.json"
+      },
+      {
+        "candidate_id": "sphinx-doc__sphinx-8035-stage6b1b-candidate-07-613430b7464a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/sphinx-doc__sphinx-8035/000398_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cc00c756dc3b.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-00-7a5d6c4e6394",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1cf42da52114.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-01-3bafdae47c64",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3e2c9f99dabf.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-02-298d05bf6761",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_6ea14cc74345.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-03-5ffc06f72c93",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3f606466a2aa.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-04-db8388f505aa",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_909acf4b168f.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-05-cffc666a074a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1d6fb883052e.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-06-a8a1c739d9aa",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_17d8a61771f8.json"
+      },
+      {
+        "candidate_id": "django__django-13516-stage6b1b-candidate-07-5eb04129eb45",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-13516/000118_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d6db35b7897e.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-00-106ffe8efc89",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c87421194366.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-01-ee6ea3ec4ee9",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a21382b03179.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-02-e794dd141e20",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d2bc19aa3888.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-03-92b5a372b5d1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_19a7259c501c.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-04-e317aa1f1160",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d9cab0265814.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-05-da4f8b1ec371",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_051ea132757e.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-06-710f92c5412a",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0ec1c7efd0f7.json"
+      },
+      {
+        "candidate_id": "django__django-14539-stage6b1b-candidate-07-b903b0ae47a5",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/django__django-14539/000159_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_205b2a22cac3.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-00-15836459ed9f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_989c3b9541da.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-01-47e6e9950c6f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_10c110f365a8.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-02-29485bc608f8",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8a4e27317df5.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-03-9145832887f7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1ed44f76fa63.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-04-acf22b82fd2f",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_d0d7978e6525.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-05-80e89d011065",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_fb5ef0931582.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-06-dcda3d280d02",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_8645ef557a83.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-20676-stage6b1b-candidate-07-e126e7695ec1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-20676/000256_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_342315bfec63.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-00-86da026fbff7",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_da25e71b976a.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-01-1d22c2d123a1",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_15_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_0ba0de8d10a4.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-02-7f75d5309fed",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_1db12bd51cad.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-03-cf3023891b09",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a59e44efd9d8.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-04-5f9977172c8c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_84d95243cdb1.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-05-66ad5ee9b99c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_54aa5f684d9d.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-06-a0f90ee92c43",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_14_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_a0a397e92168.json"
+      },
+      {
+        "candidate_id": "matplotlib__matplotlib-24637-stage6b1b-candidate-07-05bffc2c3069",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/matplotlib__matplotlib-24637/000272_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cfe28032bfd0.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-00-a0507a6bea6b",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_07_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_58704c9236e2.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-01-4775c220dd1c",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_04_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_c4656ecbc966.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-02-5beb77b55ccf",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_05_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_cf8201dcd093.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-03-1f4f4691857e",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_00_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_3ac3ce5e1a3f.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-04-4ce3f4f43552",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_01_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_ca04a53ddebf.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-05-1f87b9421ffb",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_06_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_e14b2f6f540b.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-06-7dd10c816c3d",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_03_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_9b17499d0e40.json"
+      },
+      {
+        "candidate_id": "pydata__xarray-7229-stage6b1b-candidate-07-de5abc010c80",
+        "exists": true,
+        "trajectory_path": "results/stage6b1b_trajectories/hf_coderforge_expanded/pydata__xarray-7229/000317_02_swebench-python-qwen3-coder-32b-sft-mix-25000-no-penalty_dd050c0b5335.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "benchmark": "conflict",
+  "n_per_seed": 70,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "top_k": 6,
+  "decoder": "Qwen/Qwen2.5-1.5B-Instruct",
+  "gen_wall_s": 738.8,
+  "abstention_tau_dev_calibrated": 0.06,
+  "ctx_token_budget": 600,
+  "metrics": {
+    "digrag_gated": {
+      "n": 210,
+      "final_answer_acc": 0.4524,
+      "answerable_acc": 0.4524,
+      "abstention_acc": null,
+      "answerability_acc": 0.5762,
+      "temporal_update_acc": 0.4524,
+      "support_recall": 0.781,
+      "source_span_acc": 0.5289,
+      "unsupported_claim_rate": 0.1277,
+      "mean_context_tokens": 624.0,
+      "mean_output_tokens": 22.3048,
+      "mean_latency_ms": 649.9496,
+      "recall@1": 0.1952,
+      "recall@3": 0.4714,
+      "recall@5": 0.6238,
+      "recall@10": 0.781,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.4524
+      },
+      "final_answer_acc_std": 0.0575,
+      "n_seeds": 3
+    },
+    "digrag_raw": {
+      "n": 210,
+      "final_answer_acc": 0.4524,
+      "answerable_acc": 0.4524,
+      "abstention_acc": null,
+      "answerability_acc": 0.5762,
+      "temporal_update_acc": 0.4524,
+      "support_recall": 0.781,
+      "source_span_acc": 0.5289,
+      "unsupported_claim_rate": 0.1277,
+      "mean_context_tokens": 624.0,
+      "mean_output_tokens": 22.3048,
+      "mean_latency_ms": 649.9496,
+      "recall@1": 0.1952,
+      "recall@3": 0.4714,
+      "recall@5": 0.6238,
+      "recall@10": 0.781,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.4524
+      },
+      "final_answer_acc_std": 0.0575,
+      "n_seeds": 3
+    },
+    "greprag": {
+      "n": 210,
+      "final_answer_acc": 0.2381,
+      "answerable_acc": 0.2381,
+      "abstention_acc": null,
+      "answerability_acc": 0.2952,
+      "temporal_update_acc": 0.2381,
+      "support_recall": 0.719,
+      "source_span_acc": 0.3387,
+      "unsupported_claim_rate": 0.0473,
+      "mean_context_tokens": 605.8,
+      "mean_output_tokens": 19.6905,
+      "mean_latency_ms": 587.6119,
+      "recall@1": 0.2762,
+      "recall@3": 0.5048,
+      "recall@5": 0.581,
+      "recall@10": 0.719,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.2381
+      },
+      "final_answer_acc_std": 0.0375,
+      "n_seeds": 3
+    },
+    "hybrid": {
+      "n": 210,
+      "final_answer_acc": 0.3429,
+      "answerable_acc": 0.3429,
+      "abstention_acc": null,
+      "answerability_acc": 0.4095,
+      "temporal_update_acc": 0.3429,
+      "support_recall": 0.781,
+      "source_span_acc": 0.4535,
+      "unsupported_claim_rate": 0.0618,
+      "mean_context_tokens": 592.4905,
+      "mean_output_tokens": 23.0667,
+      "mean_latency_ms": 579.8536,
+      "recall@1": 0.1952,
+      "recall@3": 0.4714,
+      "recall@5": 0.6238,
+      "recall@10": 0.781,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.3429
+      },
+      "final_answer_acc_std": 0.065,
+      "n_seeds": 3
+    },
+    "lexical": {
+      "n": 210,
+      "final_answer_acc": 0.3857,
+      "answerable_acc": 0.3857,
+      "abstention_acc": null,
+      "answerability_acc": 0.4286,
+      "temporal_update_acc": 0.3857,
+      "support_recall": 0.8667,
+      "source_span_acc": 0.4222,
+      "unsupported_claim_rate": 0.0431,
+      "mean_context_tokens": 604.5714,
+      "mean_output_tokens": 22.3476,
+      "mean_latency_ms": 588.7276,
+      "recall@1": 0.3,
+      "recall@3": 0.5905,
+      "recall@5": 0.7048,
+      "recall@10": 0.8667,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.3857
+      },
+      "final_answer_acc_std": 0.0508,
+      "n_seeds": 3
+    },
+    "vector": {
+      "n": 210,
+      "final_answer_acc": 0.3571,
+      "answerable_acc": 0.3571,
+      "abstention_acc": null,
+      "answerability_acc": 0.4238,
+      "temporal_update_acc": 0.3571,
+      "support_recall": 0.619,
+      "source_span_acc": 0.3034,
+      "unsupported_claim_rate": 0.041,
+      "mean_context_tokens": 601.4952,
+      "mean_output_tokens": 24.0476,
+      "mean_latency_ms": 587.6528,
+      "recall@1": 0.0905,
+      "recall@3": 0.3333,
+      "recall@5": 0.4524,
+      "recall@10": 0.619,
+      "usd_per_q": 0.0,
+      "by_question_type": {
+        "conflict_freshness": 0.3571
+      },
+      "final_answer_acc_std": 0.0535,
+      "n_seeds": 3
+    }
+  }
+}

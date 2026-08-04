@@ -1,0 +1,59 @@
+It did not help uncertainty because the new path-signed branch did **not learn a real failure signal**. It learned a mostly constant, success-biased prior, then that prior was allowed to influence the hard-gate margin.
+
+The smoking guns from the logs:
+
+- `path_only_failure_recall = 0.0` in both new runs.
+- `path_only_predicts_failure = 0.0`.
+- `path_margin_predicts_failure = 0.0`.
+- Path-only logits never choose failure.
+- Path failure probability is basically identical across true classes:
+
+`path_signed_seed_123`:
+- true success: `0.05722`
+- true uncertain: `0.05688`
+- true failure: `0.05732`
+
+`cooperative_path_signed_seed_123`:
+- true success: `0.04283`
+- true uncertain: `0.04283`
+- true failure: `0.04265`
+
+So the path head is not saying “this looks like failure.” It is saying almost the same thing for everything.
+
+Worse, the signed path margin became strongly positive everywhere:
+
+- `path_signed_margin_mean = 2.168` in `path_signed_seed_123`
+- `path_signed_margin_mean = 2.537` in `cooperative_path_signed_seed_123`
+- tiny std in both runs, around `0.055`
+
+That means the path branch injected a broad “success / not-failure” push into the decision system. In the cooperative run, it actively erased useful base behavior:
+
+- base hard failure recall: `0.7143`
+- final hard failure recall: `0.0`
+
+So the base model still had some failure sensitivity, but the path-signed cooperation overrode it in the wrong direction.
+
+The apparent uncertainty changes are therefore not real improvement. `SUCCESS_LIKELY` collapsed to `0%`, so unsafe success goes away trivially, but the model mostly abstains or misroutes. In `path_signed_seed_123`, final predictions were:
+
+- `SUCCESS_LIKELY`: `0.0`
+- `UNCERTAIN`: `0.6415`
+- `FAILURE_LIKELY`: `0.3585`
+
+In `cooperative_path_signed_seed_123`:
+
+- `SUCCESS_LIKELY`: `0.0`
+- `UNCERTAIN`: `0.9119`
+- `FAILURE_LIKELY`: `0.0881`
+
+That is not mastery of uncertainty. It is decision collapse.
+
+The deeper reason: the path features we fed to the supervised head are not currently separable enough for failure. The correlations say this clearly:
+
+- path failure logit vs true failure: around `0` or negative
+- path failure probability vs true failure: around `0` or negative
+- path disagreement/error correlation is weak or negative overall
+- path-only macro F1 is very low, around `0.13-0.15`
+
+So this version failed because cooperation happened **before trust was earned**. We let the path method influence the final decision even though diagnostics show it had not learned the failure axis.
+
+The next intelligent fix is: make the path branch earn authority. Keep it diagnostic-only until it proves useful, or replace the 3-way path head with a binary `failure_vs_rest` head using strong class weighting/focal loss. Then only let it subtract from the hard-gate margin when calibrated failure probability is high. Also add split-level logging for `path_outcome_loss`, because right now the final summaries tell us what the head did, but not enough about how it trained.

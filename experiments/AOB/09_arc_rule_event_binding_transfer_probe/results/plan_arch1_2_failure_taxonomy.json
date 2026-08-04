@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "control_failure": 38,
+    "did_not_beat_frozen": 79,
+    "micro_overfit_failure": 1,
+    "no_meaningful_ablation_drop": 88,
+    "shortcut_baseline_above_chance": 22
+  },
+  "failure_reasons": {
+    "control_failure": "one or more repaired controls failed",
+    "did_not_beat_frozen": "trainable shared model did not improve over exact frozen same architecture",
+    "heldout_generalization_bottleneck": "micro-overfit passed but held-out ladder gates did not",
+    "micro_overfit_failure": "scoring, labels, masks, gradients, or tokenization remain suspect",
+    "no_meaningful_ablation_drop": "view ablation did not remove enough accuracy",
+    "shortcut_baseline_above_chance": "candidate-only, length, action-stat, metadata, or candidate-stat shortcut exceeded chance window"
+  }
+}

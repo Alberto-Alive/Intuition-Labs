@@ -1,0 +1,207 @@
+{
+  "variant": "e2",
+  "train_loop_seed": 451,
+  "corpus_fingerprint": "b860894951a862dd",
+  "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e2\\seed_451",
+  "test_metrics": {
+    "trajectory_acc": 0.8144654035568237,
+    "trajectory_macro_f1": 0.7903499313776401,
+    "trajectory_confusion": [
+      [
+        91,
+        9,
+        0,
+        0
+      ],
+      [
+        17,
+        83,
+        10,
+        6
+      ],
+      [
+        1,
+        3,
+        67,
+        3
+      ],
+      [
+        4,
+        6,
+        0,
+        18
+      ]
+    ],
+    "pattern_acc": 0.9685534834861755,
+    "pattern_macro_f1": 0.9514825268286969,
+    "pattern_confusion": [
+      [
+        31,
+        0,
+        0
+      ],
+      [
+        3,
+        236,
+        6
+      ],
+      [
+        0,
+        1,
+        41
+      ]
+    ],
+    "confidence_acc": 0.9716981053352356,
+    "confidence_macro_f1": 0.9719993798800776,
+    "confidence_confusion": [
+      [
+        94,
+        2,
+        0
+      ],
+      [
+        1,
+        101,
+        2
+      ],
+      [
+        0,
+        4,
+        114
+      ]
+    ],
+    "outcome_acc": 0.8962264060974121,
+    "outcome_macro_f1": 0.8485409411128604,
+    "outcome_confusion": [
+      [
+        56,
+        20,
+        0
+      ],
+      [
+        5,
+        213,
+        7
+      ],
+      [
+        0,
+        1,
+        16
+      ]
+    ],
+    "joint_acc": 0.6886792182922363,
+    "success_likely_precision": 0.9180327868852459,
+    "success_likely_recall": 0.7368421052631579,
+    "success_likely_f1": 0.8175182481751825,
+    "uncertain_precision": 0.9102564102564102,
+    "uncertain_recall": 0.9466666666666667,
+    "uncertain_f1": 0.9281045751633987,
+    "failure_likely_precision": 0.6956521739130435,
+    "failure_likely_recall": 0.9411764705882353,
+    "failure_likely_f1": 0.8,
+    "failure_recall": 0.9411764705882353,
+    "pattern_focused_precision": 0.9117647058823529,
+    "pattern_focused_recall": 1.0,
+    "pattern_focused_f1": 0.9538461538461539,
+    "pattern_mixed_precision": 0.9957805907172996,
+    "pattern_mixed_recall": 0.963265306122449,
+    "pattern_mixed_f1": 0.979253112033195,
+    "pattern_diffuse_precision": 0.8723404255319149,
+    "pattern_diffuse_recall": 0.9761904761904762,
+    "pattern_diffuse_f1": 0.9213483146067416,
+    "unsafe_success_rate_label": 0.08196721311475409,
+    "unsafe_success_rate_correctness": 0.01639344262295082,
+    "success_precision_vs_is_correct": 0.9836065573770492,
+    "success_auroc": 0.5755506396075791,
+    "success_auprc": 0.9242884612514688,
+    "success_brier": 0.6748163134261642,
+    "success_ece_10bin": 0.6921510527629052,
+    "success_label_auroc": 0.9706937799043062,
+    "success_label_auprc": 0.9362951711414655,
+    "success_label_brier": 0.06332668542310334,
+    "success_label_ece_10bin": 0.059715874156140006,
+    "nonfailure_correct_auroc": 0.7736847167452149,
+    "nonfailure_correct_auprc": 0.9504399389708613,
+    "nonfailure_correct_brier": 0.09393369342354901,
+    "nonfailure_correct_ece_10bin": 0.08373033241610447,
+    "failure_incorrect_auroc": 0.773684716745215,
+    "failure_incorrect_auprc": 0.40375188316937105,
+    "failure_incorrect_brier": 0.09393369342354901,
+    "failure_incorrect_ece_10bin": 0.08373033241610447,
+    "predicted_success_rate": 0.1918238993710692,
+    "loss": 0.2627856047273432
+  },
+  "label_audit": {
+    "p_is_correct_given_outcome": {
+      "SUCCESS_LIKELY": 0.9975369458128078,
+      "UNCERTAIN": 0.9001468428781204,
+      "FAILURE_LIKELY": 0.4198895027624309
+    },
+    "correctness_separation_success_minus_uncertain": 0.09739010293468742,
+    "max_outcome_share_swing": 0.20831195484864032,
+    "label_revision_trigger": true
+  },
+  "correctness_baselines": {
+    "majority": {
+      "positive_label": 1,
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.4691151919866444
+    },
+    "logistic_regression": {
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.5909327956054653,
+      "auroc": 0.751178224487833,
+      "auprc": 0.9391876736580158,
+      "brier": 0.08979844640927075,
+      "ece_10bin": 0.05710227356928392
+    },
+    "mlp": {
+      "accuracy": 0.889937106918239,
+      "macro_f1": 0.5437589670014347,
+      "auroc": 0.7036645186111378,
+      "auprc": 0.9424874138825272,
+      "brier": 0.11098464639363805,
+      "ece_10bin": 0.12714844154861737,
+      "converged": true,
+      "n_iter": 14
+    }
+  },
+  "monotonicity": {
+    "num_examples": 318,
+    "trace_input_dim": 15,
+    "supported_checks": [
+      "lower_agreement",
+      "lower_margin",
+      "higher_entropy",
+      "lower_attention_concentration",
+      "higher_variation_ratio"
+    ],
+    "lower_agreement_violation_rate": 0.8736607134342194,
+    "lower_margin_violation_rate": 0.36875,
+    "higher_entropy_violation_rate": 0.20178571492433547,
+    "lower_attention_concentration_violation_rate": 0.15089285746216774,
+    "higher_variation_ratio_violation_rate": 0.747321429848671,
+    "lower_agreement__nonfailure_violation_rate": 0.028125,
+    "lower_margin__nonfailure_violation_rate": 0.20803571492433548,
+    "higher_entropy__nonfailure_violation_rate": 0.5401785716414451,
+    "lower_attention_concentration__nonfailure_violation_rate": 0.19419642873108386,
+    "higher_variation_ratio__nonfailure_violation_rate": 0.0,
+    "monotonicity_violation_rate": 0.39877232145518066,
+    "all_supported_monotonicity_violation_rate": 0.3312946430966258,
+    "nonfailure_monotonicity_violation_rate": 0.2426339288242161,
+    "all_supported_nonfailure_monotonicity_violation_rate": 0.19410714305937288
+  },
+  "acceptance": {
+    "failure_recall_ok": true,
+    "outcome_macro_f1_ok": true,
+    "outcome_acc_ok": true,
+    "trajectory_ok": true,
+    "monotonicity_ok": false,
+    "label_revision_trigger": true
+  },
+  "artifacts": {
+    "metrics": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e2\\seed_451\\metrics.json",
+    "predictions": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e2\\seed_451\\predictions.jsonl",
+    "summary": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e2\\seed_451\\summary.json"
+  }
+}

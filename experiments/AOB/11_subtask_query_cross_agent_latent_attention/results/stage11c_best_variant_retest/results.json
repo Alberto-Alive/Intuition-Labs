@@ -1,0 +1,6729 @@
+{
+  "aggregate": {
+    "all_eval_ablations": {
+      "cross_agent_latent_attention::cross_task_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3389578287800153,
+          "planner": 0.3361753597855568,
+          "reader": 0.3248668263355891
+        },
+        "attention_entropy_mean": 1.065288205941518,
+        "attention_entropy_raw": [
+          1.0678563714027405,
+          1.085057556629181,
+          1.042950689792633
+        ],
+        "attention_entropy_std": 0.017285710169093523,
+        "inject_norm_ratio_mean": 0.15535525853435198,
+        "inject_norm_ratio_raw": [
+          0.15699071809649467,
+          0.1523926705121994,
+          0.15668238699436188
+        ],
+        "inject_norm_ratio_std": 0.0020986444607392126,
+        "mean_actions_mean": 11.614583333333334,
+        "mean_actions_raw": [
+          11.921875,
+          10.546875,
+          12.375
+        ],
+        "mean_actions_std": 0.7773164864705295,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.296875,
+          0.453125,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.0736569563735987,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6402499597045549,
+        "supervised_action_accuracy_raw": [
+          0.6195488721804512,
+          0.6587677725118484,
+          0.642433234421365
+        ],
+        "supervised_action_accuracy_std": 0.01608530493271863,
+        "valid_action_rate_mean": 0.4883073710749552,
+        "valid_action_rate_raw": [
+          0.4967234600262123,
+          0.47703703703703704,
+          0.4911616161616162
+        ],
+        "valid_action_rate_std": 0.008286488954445809
+      },
+      "cross_agent_latent_attention::mask_actor_peer_reads": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 0.8211324711640676,
+        "attention_entropy_raw": [
+          0.8200313150882721,
+          0.8219487369060516,
+          0.821417361497879
+        ],
+        "attention_entropy_std": 0.000808289751491236,
+        "inject_norm_ratio_mean": 0.1559089981019497,
+        "inject_norm_ratio_raw": [
+          0.1555238999426365,
+          0.15673205256462097,
+          0.1554710417985916
+        ],
+        "inject_norm_ratio_std": 0.0005823873179939613,
+        "mean_actions_mean": 11.682291666666666,
+        "mean_actions_raw": [
+          11.875,
+          10.734375,
+          12.4375
+        ],
+        "mean_actions_std": 0.7085247903018088,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.3125,
+          0.4375,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06293253111247173,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.631778376191133,
+        "supervised_action_accuracy_raw": [
+          0.6195488721804512,
+          0.655608214849921,
+          0.6201780415430267
+        ],
+        "supervised_action_accuracy_std": 0.01685219810389936,
+        "valid_action_rate_mean": 0.4760639268509867,
+        "valid_action_rate_raw": [
+          0.4697368421052632,
+          0.4672489082969432,
+          0.49120603015075376
+        ],
+        "valid_action_rate_std": 0.010755151414221849
+      },
+      "cross_agent_latent_attention::remove_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "mean_actions_mean": 11.572916666666666,
+        "mean_actions_raw": [
+          11.6875,
+          10.671875,
+          12.359375
+        ],
+        "mean_actions_std": 0.6936670996514747,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.359375,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.4375,
+          0.3125
+        ],
+        "rollout_success_rate_std": 0.05560978256266308,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6343099816661159,
+        "supervised_action_accuracy_raw": [
+          0.6255639097744361,
+          0.6571879936808847,
+          0.6201780415430267
+        ],
+        "supervised_action_accuracy_std": 0.016325939880293912,
+        "valid_action_rate_mean": 0.4718594451817753,
+        "valid_action_rate_raw": [
+          0.4692513368983957,
+          0.4494875549048316,
+          0.4968394437420986
+        ],
+        "valid_action_rate_std": 0.0194190973996836
+      },
+      "cross_agent_latent_attention::role_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.32911232113838196,
+          "planner": 0.3489067107439041,
+          "reader": 0.3219809755682945
+        },
+        "attention_entropy_mean": 1.069934884707133,
+        "attention_entropy_raw": [
+          1.079328179359436,
+          1.073487639427185,
+          1.0569888353347778
+        ],
+        "attention_entropy_std": 0.00945967308944121,
+        "inject_norm_ratio_mean": 0.154884684830904,
+        "inject_norm_ratio_raw": [
+          0.15421593934297562,
+          0.15564389899373055,
+          0.15479421615600586
+        ],
+        "inject_norm_ratio_std": 0.0005864614945583409,
+        "mean_actions_mean": 11.619791666666666,
+        "mean_actions_raw": [
+          11.75,
+          10.671875,
+          12.4375
+        ],
+        "mean_actions_std": 0.7266698322752149,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.359375,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.453125,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06750771560841522,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6328129155587108,
+        "supervised_action_accuracy_raw": [
+          0.6225563909774436,
+          0.6571879936808847,
+          0.6186943620178041
+        ],
+        "supervised_action_accuracy_std": 0.01730774666669681,
+        "valid_action_rate_mean": 0.4832133191475795,
+        "valid_action_rate_raw": [
+          0.46941489361702127,
+          0.4890190336749634,
+          0.49120603015075376
+        ],
+        "valid_action_rate_std": 0.009797725883695336
+      },
+      "cross_causal_mean_summary::cross_task_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3451484640439351,
+          "planner": 0.3723877966403961,
+          "reader": 0.28246375421682995
+        },
+        "attention_entropy_mean": 1.0766465465227764,
+        "attention_entropy_raw": [
+          1.0573971271514893,
+          1.0914976596832275,
+          1.081044852733612
+        ],
+        "attention_entropy_std": 0.014264651015248443,
+        "inject_norm_ratio_mean": 0.40300186475118,
+        "inject_norm_ratio_raw": [
+          0.4985905587673187,
+          0.3319232910871506,
+          0.37849174439907074
+        ],
+        "inject_norm_ratio_std": 0.07021421522146526,
+        "mean_actions_mean": 11.78125,
+        "mean_actions_raw": [
+          11.875,
+          10.953125,
+          12.515625
+        ],
+        "mean_actions_std": 0.6413232982799445,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3333333333333333,
+        "rollout_success_rate_raw": [
+          0.3125,
+          0.453125,
+          0.234375
+        ],
+        "rollout_success_rate_std": 0.09051118331761858,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6278441673067119,
+        "supervised_action_accuracy_raw": [
+          0.6421052631578947,
+          0.6761453396524486,
+          0.5652818991097923
+        ],
+        "supervised_action_accuracy_std": 0.04636960033898819,
+        "valid_action_rate_mean": 0.4510368785333122,
+        "valid_action_rate_raw": [
+          0.475,
+          0.43366619115549215,
+          0.4444444444444444
+        ],
+        "valid_action_rate_std": 0.01750649553376551
+      },
+      "cross_causal_mean_summary::mask_actor_peer_reads": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.999999980131785,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 0.8127249677975973,
+        "attention_entropy_raw": [
+          0.7952611744403839,
+          0.8200187981128693,
+          0.8228949308395386
+        ],
+        "attention_entropy_std": 0.012404464080401086,
+        "inject_norm_ratio_mean": 0.43360593169927597,
+        "inject_norm_ratio_raw": [
+          0.5424695611000061,
+          0.3683069869875908,
+          0.390041247010231
+        ],
+        "inject_norm_ratio_std": 0.077487899568933,
+        "mean_actions_mean": 11.333333333333334,
+        "mean_actions_raw": [
+          11.796875,
+          10.03125,
+          12.171875
+        ],
+        "mean_actions_std": 0.9333530968889653,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3854166666666667,
+        "rollout_success_rate_raw": [
+          0.296875,
+          0.546875,
+          0.3125
+        ],
+        "rollout_success_rate_std": 0.11434634583385495,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6276223288237799,
+        "supervised_action_accuracy_raw": [
+          0.6210526315789474,
+          0.669826224328594,
+          0.5919881305637982
+        ],
+        "supervised_action_accuracy_std": 0.0321150318039269,
+        "valid_action_rate_mean": 0.4843435324539347,
+        "valid_action_rate_raw": [
+          0.49271523178807947,
+          0.4750778816199377,
+          0.4852374839537869
+        ],
+        "valid_action_rate_std": 0.007228111426990164
+      },
+      "cross_causal_mean_summary::remove_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "mean_actions_mean": 11.697916666666666,
+        "mean_actions_raw": [
+          11.84375,
+          10.90625,
+          12.34375
+        ],
+        "mean_actions_std": 0.5958479019197955,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3541666666666667,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.4375,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06029081720203242,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6095657362898059,
+        "supervised_action_accuracy_raw": [
+          0.6075187969924812,
+          0.660347551342812,
+          0.5608308605341247
+        ],
+        "supervised_action_accuracy_std": 0.04065329349300961,
+        "valid_action_rate_mean": 0.47213456442050133,
+        "valid_action_rate_raw": [
+          0.46701846965699206,
+          0.42406876790830944,
+          0.5253164556962026
+        ],
+        "valid_action_rate_std": 0.04149220320189144
+      },
+      "cross_causal_mean_summary::role_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.29099103560050327,
+          "planner": 0.2756693437695503,
+          "reader": 0.43333961566289264
+        },
+        "attention_entropy_mean": 1.0654653211434681,
+        "attention_entropy_raw": [
+          1.0459934771060944,
+          1.082969307899475,
+          1.0674331784248352
+        ],
+        "attention_entropy_std": 0.015159317540158871,
+        "inject_norm_ratio_mean": 0.42417143036921817,
+        "inject_norm_ratio_raw": [
+          0.5167698115110397,
+          0.36354730278253555,
+          0.3921971768140793
+        ],
+        "inject_norm_ratio_std": 0.06651340197318818,
+        "mean_actions_mean": 11.359375,
+        "mean_actions_raw": [
+          11.71875,
+          10.265625,
+          12.09375
+        ],
+        "mean_actions_std": 0.788404738221429,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3854166666666667,
+        "rollout_success_rate_raw": [
+          0.3125,
+          0.515625,
+          0.328125
+        ],
+        "rollout_success_rate_std": 0.09229190180556954,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6346652124942515,
+        "supervised_action_accuracy_raw": [
+          0.6406015037593985,
+          0.6714060031595577,
+          0.5919881305637982
+        ],
+        "supervised_action_accuracy_std": 0.032692805400144416,
+        "valid_action_rate_mean": 0.4690881030759973,
+        "valid_action_rate_raw": [
+          0.4573333333333333,
+          0.4550989345509893,
+          0.49483204134366926
+        ],
+        "valid_action_rate_std": 0.018226553936988268
+      }
+    },
+    "methods": {
+      "capacity_control_self_read": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 6.216980352746759e-08,
+        "attention_entropy_raw": [
+          6.216980352746759e-08,
+          6.216980352746759e-08,
+          6.216980352746759e-08
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.1523253358900547,
+        "inject_norm_ratio_raw": [
+          0.14636718481779099,
+          0.15906638279557228,
+          0.15154244005680084
+        ],
+        "inject_norm_ratio_std": 0.005213898204735483,
+        "mean_actions_mean": 11.604166666666666,
+        "mean_actions_raw": [
+          11.734375,
+          10.640625,
+          12.4375
+        ],
+        "mean_actions_std": 0.7393265399259578,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3385416666666667,
+        "rollout_success_rate_raw": [
+          0.3125,
+          0.453125,
+          0.25
+        ],
+        "rollout_success_rate_std": 0.08494534599114631,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6387096638892857,
+        "supervised_action_accuracy_raw": [
+          0.631578947368421,
+          0.6777251184834123,
+          0.6068249258160238
+        ],
+        "supervised_action_accuracy_std": 0.02938077226854216,
+        "valid_action_rate_mean": 0.4677160963801025,
+        "valid_action_rate_raw": [
+          0.43142476697736354,
+          0.4390602055800294,
+          0.5326633165829145
+        ],
+        "valid_action_rate_std": 0.04603028741830889
+      },
+      "cross_agent_latent_attention": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.32503291219472885,
+          "planner": 0.33063409974177677,
+          "reader": 0.3443329979976018
+        },
+        "attention_entropy_mean": 1.0657640894254048,
+        "attention_entropy_raw": [
+          1.067055881023407,
+          1.0861202478408813,
+          1.0441161394119263
+        ],
+        "attention_entropy_std": 0.017172416358360976,
+        "inject_norm_ratio_mean": 0.15550698960820833,
+        "inject_norm_ratio_raw": [
+          0.15425565838813782,
+          0.15724758431315422,
+          0.15501772612333298
+        ],
+        "inject_norm_ratio_std": 0.001269498392652416,
+        "mean_actions_mean": 11.630208333333334,
+        "mean_actions_raw": [
+          11.78125,
+          10.671875,
+          12.4375
+        ],
+        "mean_actions_std": 0.728682875220002,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.359375,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.453125,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06750771560841522,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.632819608849802,
+        "supervised_action_accuracy_raw": [
+          0.6240601503759399,
+          0.6571879936808847,
+          0.6172106824925816
+        ],
+        "supervised_action_accuracy_std": 0.017456468467363647,
+        "valid_action_rate_mean": 0.4838443394684488,
+        "valid_action_rate_raw": [
+          0.47214854111405835,
+          0.49194729136163984,
+          0.48743718592964824
+        ],
+        "valid_action_rate_std": 0.008472663379435535
+      },
+      "cross_causal_mean_summary": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3424615065256755,
+          "planner": 0.3733702003955841,
+          "reader": 0.2841683303316434
+        },
+        "attention_entropy_mean": 1.0739796956380208,
+        "attention_entropy_raw": [
+          1.0526811480522156,
+          1.090321958065033,
+          1.078935980796814
+        ],
+        "attention_entropy_std": 0.0157613708485167,
+        "inject_norm_ratio_mean": 0.43131794035434723,
+        "inject_norm_ratio_raw": [
+          0.5265034139156342,
+          0.36815834045410156,
+          0.39929206669330597
+        ],
+        "inject_norm_ratio_std": 0.06849590260348556,
+        "mean_actions_mean": 11.447916666666666,
+        "mean_actions_raw": [
+          11.890625,
+          10.359375,
+          12.09375
+        ],
+        "mean_actions_std": 0.7741693016639764,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3697916666666667,
+        "rollout_success_rate_raw": [
+          0.296875,
+          0.484375,
+          0.328125
+        ],
+        "rollout_success_rate_std": 0.0820209153542897,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6397523299014972,
+        "supervised_action_accuracy_raw": [
+          0.643609022556391,
+          0.6777251184834123,
+          0.5979228486646885
+        ],
+        "supervised_action_accuracy_std": 0.03269307904058425,
+        "valid_action_rate_mean": 0.4679534463047049,
+        "valid_action_rate_raw": [
+          0.4507227332457293,
+          0.45701357466063347,
+          0.49612403100775193
+        ],
+        "valid_action_rate_std": 0.020084489094996147
+      },
+      "role_clones_no_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "mean_actions_mean": 11.645833333333334,
+        "mean_actions_raw": [
+          11.96875,
+          11.015625,
+          11.953125
+        ],
+        "mean_actions_std": 0.44567023886002927,
+        "param_count_mean": 173636.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.421875,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.05311478659992484,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6333201053599445,
+        "supervised_action_accuracy_raw": [
+          0.6150375939849624,
+          0.6350710900473934,
+          0.6498516320474778
+        ],
+        "supervised_action_accuracy_std": 0.014266599036124613,
+        "valid_action_rate_mean": 0.44188981754705225,
+        "valid_action_rate_raw": [
+          0.43733681462140994,
+          0.4595744680851064,
+          0.4287581699346405
+        ],
+        "valid_action_rate_std": 0.012986106284674209
+      },
+      "single_actor": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "mean_actions_mean": 11.645833333333334,
+        "mean_actions_raw": [
+          11.96875,
+          11.015625,
+          11.953125
+        ],
+        "mean_actions_std": 0.44567023886002927,
+        "param_count_mean": 173636.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.421875,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.05311478659992484,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6328255455182037,
+        "supervised_action_accuracy_raw": [
+          0.6150375939849624,
+          0.6350710900473934,
+          0.6483679525222552
+        ],
+        "supervised_action_accuracy_std": 0.013699392997028556,
+        "valid_action_rate_mean": 0.44188981754705225,
+        "valid_action_rate_raw": [
+          0.43733681462140994,
+          0.4595744680851064,
+          0.4287581699346405
+        ],
+        "valid_action_rate_std": 0.012986106284674209
+      }
+    },
+    "proposed_eval_ablations": {
+      "cross_task_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.3389578287800153,
+          "planner": 0.3361753597855568,
+          "reader": 0.3248668263355891
+        },
+        "attention_entropy_mean": 1.065288205941518,
+        "attention_entropy_raw": [
+          1.0678563714027405,
+          1.085057556629181,
+          1.042950689792633
+        ],
+        "attention_entropy_std": 0.017285710169093523,
+        "inject_norm_ratio_mean": 0.15535525853435198,
+        "inject_norm_ratio_raw": [
+          0.15699071809649467,
+          0.1523926705121994,
+          0.15668238699436188
+        ],
+        "inject_norm_ratio_std": 0.0020986444607392126,
+        "mean_actions_mean": 11.614583333333334,
+        "mean_actions_raw": [
+          11.921875,
+          10.546875,
+          12.375
+        ],
+        "mean_actions_std": 0.7773164864705295,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.296875,
+          0.453125,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.0736569563735987,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6402499597045549,
+        "supervised_action_accuracy_raw": [
+          0.6195488721804512,
+          0.6587677725118484,
+          0.642433234421365
+        ],
+        "supervised_action_accuracy_std": 0.01608530493271863,
+        "valid_action_rate_mean": 0.4883073710749552,
+        "valid_action_rate_raw": [
+          0.4967234600262123,
+          0.47703703703703704,
+          0.4911616161616162
+        ],
+        "valid_action_rate_std": 0.008286488954445809
+      },
+      "mask_actor_peer_reads": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy_mean": 0.8211324711640676,
+        "attention_entropy_raw": [
+          0.8200313150882721,
+          0.8219487369060516,
+          0.821417361497879
+        ],
+        "attention_entropy_std": 0.000808289751491236,
+        "inject_norm_ratio_mean": 0.1559089981019497,
+        "inject_norm_ratio_raw": [
+          0.1555238999426365,
+          0.15673205256462097,
+          0.1554710417985916
+        ],
+        "inject_norm_ratio_std": 0.0005823873179939613,
+        "mean_actions_mean": 11.682291666666666,
+        "mean_actions_raw": [
+          11.875,
+          10.734375,
+          12.4375
+        ],
+        "mean_actions_std": 0.7085247903018088,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.3489583333333333,
+        "rollout_success_rate_raw": [
+          0.3125,
+          0.4375,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06293253111247173,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.631778376191133,
+        "supervised_action_accuracy_raw": [
+          0.6195488721804512,
+          0.655608214849921,
+          0.6201780415430267
+        ],
+        "supervised_action_accuracy_std": 0.01685219810389936,
+        "valid_action_rate_mean": 0.4760639268509867,
+        "valid_action_rate_raw": [
+          0.4697368421052632,
+          0.4672489082969432,
+          0.49120603015075376
+        ],
+        "valid_action_rate_std": 0.010755151414221849
+      },
+      "remove_path": {
+        "actor_attention_mass_by_source_mean": {},
+        "attention_entropy_mean": 0.0,
+        "attention_entropy_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "attention_entropy_std": 0.0,
+        "inject_norm_ratio_mean": 0.0,
+        "inject_norm_ratio_raw": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inject_norm_ratio_std": 0.0,
+        "mean_actions_mean": 11.572916666666666,
+        "mean_actions_raw": [
+          11.6875,
+          10.671875,
+          12.359375
+        ],
+        "mean_actions_std": 0.6936670996514747,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.359375,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.4375,
+          0.3125
+        ],
+        "rollout_success_rate_std": 0.05560978256266308,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6343099816661159,
+        "supervised_action_accuracy_raw": [
+          0.6255639097744361,
+          0.6571879936808847,
+          0.6201780415430267
+        ],
+        "supervised_action_accuracy_std": 0.016325939880293912,
+        "valid_action_rate_mean": 0.4718594451817753,
+        "valid_action_rate_raw": [
+          0.4692513368983957,
+          0.4494875549048316,
+          0.4968394437420986
+        ],
+        "valid_action_rate_std": 0.0194190973996836
+      },
+      "role_kv_shuffle": {
+        "actor_attention_mass_by_source_mean": {
+          "actor": 0.0,
+          "critic": 0.32911232113838196,
+          "planner": 0.3489067107439041,
+          "reader": 0.3219809755682945
+        },
+        "attention_entropy_mean": 1.069934884707133,
+        "attention_entropy_raw": [
+          1.079328179359436,
+          1.073487639427185,
+          1.0569888353347778
+        ],
+        "attention_entropy_std": 0.00945967308944121,
+        "inject_norm_ratio_mean": 0.154884684830904,
+        "inject_norm_ratio_raw": [
+          0.15421593934297562,
+          0.15564389899373055,
+          0.15479421615600586
+        ],
+        "inject_norm_ratio_std": 0.0005864614945583409,
+        "mean_actions_mean": 11.619791666666666,
+        "mean_actions_raw": [
+          11.75,
+          10.671875,
+          12.4375
+        ],
+        "mean_actions_std": 0.7266698322752149,
+        "param_count_mean": 223940.0,
+        "rollout_success_rate_mean": 0.359375,
+        "rollout_success_rate_raw": [
+          0.328125,
+          0.453125,
+          0.296875
+        ],
+        "rollout_success_rate_std": 0.06750771560841522,
+        "seeds": 3,
+        "supervised_action_accuracy_mean": 0.6328129155587108,
+        "supervised_action_accuracy_raw": [
+          0.6225563909774436,
+          0.6571879936808847,
+          0.6186943620178041
+        ],
+        "supervised_action_accuracy_std": 0.01730774666669681,
+        "valid_action_rate_mean": 0.4832133191475795,
+        "valid_action_rate_raw": [
+          0.46941489361702127,
+          0.4890190336749634,
+          0.49120603015075376
+        ],
+        "valid_action_rate_std": 0.009797725883695336
+      }
+    }
+  },
+  "causality_audit": {
+    "actor_only_emits_action": true,
+    "future_observations_in_input": false,
+    "gold_future_actions_in_input": false,
+    "role_specific_tools_or_privileged_observations": false,
+    "subtask_query_source": "learned role/subtask embedding plus role token in the causal stream",
+    "success_labels_in_input": false,
+    "summary_source": "last non-pad token hidden state at the current decision step"
+  },
+  "claim_boundary": "Development-only Stage 11C selected-variant retest on the same randomly initialized causal decoder gridworld harness. No final claim and no pretrained-backbone claim.",
+  "config": {
+    "batch_size": 96,
+    "cross_layers": [
+      1,
+      2
+    ],
+    "d_model": 64,
+    "dev_worlds": 64,
+    "epochs": 16,
+    "ff_mult": 4,
+    "grid_size": 7,
+    "lr": 0.0015,
+    "max_seq_len": 64,
+    "max_steps": 14,
+    "min_path_len": 4,
+    "n_heads": 4,
+    "n_layers": 3,
+    "obstacle_density": 0.16,
+    "recovery_states_per_world": 4,
+    "train_worlds": 192,
+    "weight_decay": 0.0001
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_device_name": "NVIDIA GeForce RTX 5070 Ti",
+    "cuda_total_memory": 17094475776,
+    "device": "cuda",
+    "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128"
+  },
+  "hypothesis": "Direct architecture-faithful variants of the subtask-query cross-agent block may rescue the negative Stage 11A result if failure came from layer placement, query source, summary source, or role count.",
+  "new_stage11b_variants": [
+    {
+      "cross_layers": [],
+      "cross_mode": "none",
+      "name": "single_actor",
+      "query_mode": "subtask",
+      "roles": [
+        "actor"
+      ],
+      "shared_query": false,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "none",
+      "name": "role_clones_no_path",
+      "query_mode": "subtask",
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "self_only",
+      "name": "capacity_control_self_read",
+      "query_mode": "subtask",
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "cross_peer",
+      "name": "cross_agent_latent_attention",
+      "query_mode": "subtask",
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "summary_mode": "last_token"
+    },
+    {
+      "cross_layers": [],
+      "cross_mode": "cross_peer",
+      "name": "cross_causal_mean_summary",
+      "query_mode": "subtask",
+      "roles": [
+        "planner",
+        "reader",
+        "critic",
+        "actor"
+      ],
+      "shared_query": false,
+      "summary_mode": "causal_mean"
+    }
+  ],
+  "report_title": "Stage 11C Best Variant Retest",
+  "results": [
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "single_actor",
+        "query_mode": "subtask",
+        "roles": [
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 665,
+        "dev_worlds": 64,
+        "train_step_examples": 1983,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.1938583966417595,
+        "backbone_grad_norm": 0.7301819960728427,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3849624060150376,
+          "epoch": 1.0,
+          "train_loss": 1.379909878685361
+        },
+        {
+          "dev_action_accuracy": 0.46015037593984964,
+          "epoch": 2.0,
+          "train_loss": 1.2351783570789157
+        },
+        {
+          "dev_action_accuracy": 0.5022556390977444,
+          "epoch": 3.0,
+          "train_loss": 1.1110806748980568
+        },
+        {
+          "dev_action_accuracy": 0.562406015037594,
+          "epoch": 4.0,
+          "train_loss": 0.930959477311089
+        },
+        {
+          "dev_action_accuracy": 0.6360902255639098,
+          "epoch": 5.0,
+          "train_loss": 0.8122592653547015
+        },
+        {
+          "dev_action_accuracy": 0.6676691729323309,
+          "epoch": 6.0,
+          "train_loss": 0.7043349657739911
+        },
+        {
+          "dev_action_accuracy": 0.6571428571428571,
+          "epoch": 7.0,
+          "train_loss": 0.6551097773370289
+        },
+        {
+          "dev_action_accuracy": 0.6661654135338346,
+          "epoch": 8.0,
+          "train_loss": 0.5784956443877447
+        },
+        {
+          "dev_action_accuracy": 0.6766917293233082,
+          "epoch": 9.0,
+          "train_loss": 0.5327968753519512
+        },
+        {
+          "dev_action_accuracy": 0.6466165413533834,
+          "epoch": 10.0,
+          "train_loss": 0.47083179581732976
+        },
+        {
+          "dev_action_accuracy": 0.6736842105263158,
+          "epoch": 11.0,
+          "train_loss": 0.4123895423752921
+        },
+        {
+          "dev_action_accuracy": 0.6556390977443609,
+          "epoch": 12.0,
+          "train_loss": 0.3773008223090853
+        },
+        {
+          "dev_action_accuracy": 0.6180451127819548,
+          "epoch": 13.0,
+          "train_loss": 0.30547768161410377
+        },
+        {
+          "dev_action_accuracy": 0.6270676691729323,
+          "epoch": 14.0,
+          "train_loss": 0.2652856856584549
+        },
+        {
+          "dev_action_accuracy": 0.6195488721804512,
+          "epoch": 15.0,
+          "train_loss": 0.23924738452548072
+        },
+        {
+          "dev_action_accuracy": 0.6150375939849624,
+          "epoch": 16.0,
+          "train_loss": 0.20518201944373904
+        }
+      ],
+      "method": "single_actor",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 3,
+          "collision_or_wall_budget": 40
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.96875,
+        "rollout_success_rate": 0.328125,
+        "supervised_action_accuracy": 0.6150375939849624,
+        "trace_examples": [
+          {
+            "actions": "RRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUULLLLLLLLLLL",
+            "final": [
+              2,
+              5
+            ],
+            "goal": [
+              0,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              1,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URURRRRRRRRRRR",
+            "final": [
+              1,
+              4
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDDLRRDDDDDDDD",
+            "final": [
+              1,
+              6
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.43733681462140994
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          43,
+          4
+        ],
+        "role_count": 1
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.602623599988874,
+      "seed": 101,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "role_clones_no_path",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 665,
+        "dev_worlds": 64,
+        "train_step_examples": 1983,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.1938583966417595,
+        "backbone_grad_norm": 0.7301820013739997,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3849624060150376,
+          "epoch": 1.0,
+          "train_loss": 1.3799098900386266
+        },
+        {
+          "dev_action_accuracy": 0.46015037593984964,
+          "epoch": 2.0,
+          "train_loss": 1.2351783627555484
+        },
+        {
+          "dev_action_accuracy": 0.5022556390977444,
+          "epoch": 3.0,
+          "train_loss": 1.1110806635447912
+        },
+        {
+          "dev_action_accuracy": 0.562406015037594,
+          "epoch": 4.0,
+          "train_loss": 0.9309594460896083
+        },
+        {
+          "dev_action_accuracy": 0.6360902255639098,
+          "epoch": 5.0,
+          "train_loss": 0.8122592369715372
+        },
+        {
+          "dev_action_accuracy": 0.6676691729323309,
+          "epoch": 6.0,
+          "train_loss": 0.7043349090076628
+        },
+        {
+          "dev_action_accuracy": 0.6571428571428571,
+          "epoch": 7.0,
+          "train_loss": 0.65510974469639
+        },
+        {
+          "dev_action_accuracy": 0.6661654135338346,
+          "epoch": 8.0,
+          "train_loss": 0.5784956543218522
+        },
+        {
+          "dev_action_accuracy": 0.6766917293233082,
+          "epoch": 9.0,
+          "train_loss": 0.5327968285197303
+        },
+        {
+          "dev_action_accuracy": 0.6466165413533834,
+          "epoch": 10.0,
+          "train_loss": 0.47083176033837454
+        },
+        {
+          "dev_action_accuracy": 0.6736842105263158,
+          "epoch": 11.0,
+          "train_loss": 0.4123895083154951
+        },
+        {
+          "dev_action_accuracy": 0.6556390977443609,
+          "epoch": 12.0,
+          "train_loss": 0.3773007598661241
+        },
+        {
+          "dev_action_accuracy": 0.6180451127819548,
+          "epoch": 13.0,
+          "train_loss": 0.3054777497336978
+        },
+        {
+          "dev_action_accuracy": 0.6270676691729323,
+          "epoch": 14.0,
+          "train_loss": 0.26528607663654147
+        },
+        {
+          "dev_action_accuracy": 0.6195488721804512,
+          "epoch": 15.0,
+          "train_loss": 0.23924603845391954
+        },
+        {
+          "dev_action_accuracy": 0.6150375939849624,
+          "epoch": 16.0,
+          "train_loss": 0.2051826190380823
+        }
+      ],
+      "method": "role_clones_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 3,
+          "collision_or_wall_budget": 40
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.96875,
+        "rollout_success_rate": 0.328125,
+        "supervised_action_accuracy": 0.6150375939849624,
+        "trace_examples": [
+          {
+            "actions": "RRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUULLLLLLLLLLL",
+            "final": [
+              2,
+              5
+            ],
+            "goal": [
+              0,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              1,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URURRRRRRRRRRR",
+            "final": [
+              1,
+              4
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDDLRRDDDDDDDD",
+            "final": [
+              1,
+              6
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.43733681462140994
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          43,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.2621170000056736,
+      "seed": 101,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "self_only",
+        "name": "capacity_control_self_read",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 665,
+        "dev_worlds": 64,
+        "train_step_examples": 1983,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.420668232677842,
+        "backbone_grad_norm": 0.9159007255498174,
+        "cross_qkv_grad_norm": 0.3458348388382216
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3368421052631579,
+          "epoch": 1.0,
+          "train_loss": 1.38856726033347
+        },
+        {
+          "dev_action_accuracy": 0.48270676691729325,
+          "epoch": 2.0,
+          "train_loss": 1.247820984749567
+        },
+        {
+          "dev_action_accuracy": 0.5278195488721804,
+          "epoch": 3.0,
+          "train_loss": 1.1137534039361137
+        },
+        {
+          "dev_action_accuracy": 0.6135338345864662,
+          "epoch": 4.0,
+          "train_loss": 0.9406971874691191
+        },
+        {
+          "dev_action_accuracy": 0.649624060150376,
+          "epoch": 5.0,
+          "train_loss": 0.8155152996381124
+        },
+        {
+          "dev_action_accuracy": 0.6676691729323309,
+          "epoch": 6.0,
+          "train_loss": 0.7010669552144551
+        },
+        {
+          "dev_action_accuracy": 0.6616541353383458,
+          "epoch": 7.0,
+          "train_loss": 0.6345967707179841
+        },
+        {
+          "dev_action_accuracy": 0.6857142857142857,
+          "epoch": 8.0,
+          "train_loss": 0.5714162176563626
+        },
+        {
+          "dev_action_accuracy": 0.6631578947368421,
+          "epoch": 9.0,
+          "train_loss": 0.5209953969433194
+        },
+        {
+          "dev_action_accuracy": 0.6736842105263158,
+          "epoch": 10.0,
+          "train_loss": 0.4849926034609477
+        },
+        {
+          "dev_action_accuracy": 0.6015037593984962,
+          "epoch": 11.0,
+          "train_loss": 0.4479791550409226
+        },
+        {
+          "dev_action_accuracy": 0.6285714285714286,
+          "epoch": 12.0,
+          "train_loss": 0.3766658100343886
+        },
+        {
+          "dev_action_accuracy": 0.6330827067669172,
+          "epoch": 13.0,
+          "train_loss": 0.3417739350171316
+        },
+        {
+          "dev_action_accuracy": 0.58796992481203,
+          "epoch": 14.0,
+          "train_loss": 0.3016343648944582
+        },
+        {
+          "dev_action_accuracy": 0.6150375939849624,
+          "epoch": 15.0,
+          "train_loss": 0.2793181205079669
+        },
+        {
+          "dev_action_accuracy": 0.631578947368421,
+          "epoch": 16.0,
+          "train_loss": 0.24610666646843865
+        }
+      ],
+      "method": "capacity_control_self_read",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy": 6.216980352746759e-08,
+        "failure_counts": {
+          "budget_exhausted": 2,
+          "collision_or_wall_budget": 42
+        },
+        "inject_norm_ratio": 0.14636718481779099,
+        "mean_actions": 11.734375,
+        "rollout_success_rate": 0.3125,
+        "supervised_action_accuracy": 0.631578947368421,
+        "trace_examples": [
+          {
+            "actions": "RRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              2,
+              5
+            ],
+            "goal": [
+              0,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              1,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRUU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DLLLDDDDLLDRDR",
+            "final": [
+              4,
+              2
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.43142476697736354
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.11006522178649902,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.18266914784908295,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          45,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.467555599985644,
+      "seed": 101,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3508888930082321,
+            "planner": 0.28161949664354324,
+            "reader": 0.3674916476011276
+          },
+          "attention_entropy": 1.0678563714027405,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 44
+          },
+          "inject_norm_ratio": 0.15699071809649467,
+          "mean_actions": 11.921875,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.6195488721804512,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DLLLLRDDRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4967234600262123
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.8200313150882721,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 44
+          },
+          "inject_norm_ratio": 0.1555238999426365,
+          "mean_actions": 11.875,
+          "rollout_success_rate": 0.3125,
+          "supervised_action_accuracy": 0.6195488721804512,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUULUUUUUUUUU",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DLLLLRDDRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4697368421052632
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 42
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 11.6875,
+          "rollout_success_rate": 0.328125,
+          "supervised_action_accuracy": 0.6255639097744361,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DLLLLRDDRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4692513368983957
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3680749386548996,
+            "planner": 0.3365055173635483,
+            "reader": 0.2954195737838745
+          },
+          "attention_entropy": 1.079328179359436,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 43
+          },
+          "inject_norm_ratio": 0.15421593934297562,
+          "mean_actions": 11.75,
+          "rollout_success_rate": 0.328125,
+          "supervised_action_accuracy": 0.6225563909774436,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DLLLLRDDRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.46941489361702127
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_agent_latent_attention",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 665,
+        "dev_worlds": 64,
+        "train_step_examples": 1983,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.4216296015659686,
+        "backbone_grad_norm": 0.9162206213648627,
+        "cross_qkv_grad_norm": 0.345651331841914
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3368421052631579,
+          "epoch": 1.0,
+          "train_loss": 1.3886155344191051
+        },
+        {
+          "dev_action_accuracy": 0.48120300751879697,
+          "epoch": 2.0,
+          "train_loss": 1.2478096314838953
+        },
+        {
+          "dev_action_accuracy": 0.5293233082706766,
+          "epoch": 3.0,
+          "train_loss": 1.1140116623469762
+        },
+        {
+          "dev_action_accuracy": 0.606015037593985,
+          "epoch": 4.0,
+          "train_loss": 0.9409821856589544
+        },
+        {
+          "dev_action_accuracy": 0.6481203007518797,
+          "epoch": 5.0,
+          "train_loss": 0.8151574645723615
+        },
+        {
+          "dev_action_accuracy": 0.6691729323308271,
+          "epoch": 6.0,
+          "train_loss": 0.7024056471529461
+        },
+        {
+          "dev_action_accuracy": 0.649624060150376,
+          "epoch": 7.0,
+          "train_loss": 0.6388326826549712
+        },
+        {
+          "dev_action_accuracy": 0.687218045112782,
+          "epoch": 8.0,
+          "train_loss": 0.5732377909478688
+        },
+        {
+          "dev_action_accuracy": 0.6571428571428571,
+          "epoch": 9.0,
+          "train_loss": 0.5209152528217861
+        },
+        {
+          "dev_action_accuracy": 0.6511278195488722,
+          "epoch": 10.0,
+          "train_loss": 0.4805499315261841
+        },
+        {
+          "dev_action_accuracy": 0.6165413533834586,
+          "epoch": 11.0,
+          "train_loss": 0.4289376139640808
+        },
+        {
+          "dev_action_accuracy": 0.6345864661654136,
+          "epoch": 12.0,
+          "train_loss": 0.3771547490642184
+        },
+        {
+          "dev_action_accuracy": 0.6511278195488722,
+          "epoch": 13.0,
+          "train_loss": 0.3299932572103682
+        },
+        {
+          "dev_action_accuracy": 0.6105263157894737,
+          "epoch": 14.0,
+          "train_loss": 0.289049201068424
+        },
+        {
+          "dev_action_accuracy": 0.6285714285714286,
+          "epoch": 15.0,
+          "train_loss": 0.26426961592265535
+        },
+        {
+          "dev_action_accuracy": 0.6240601503759399,
+          "epoch": 16.0,
+          "train_loss": 0.23863860077801205
+        }
+      ],
+      "method": "cross_agent_latent_attention",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.31253208220005035,
+          "planner": 0.28267405182123184,
+          "reader": 0.404793843626976
+        },
+        "attention_entropy": 1.067055881023407,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 42
+        },
+        "inject_norm_ratio": 0.15425565838813782,
+        "mean_actions": 11.78125,
+        "rollout_success_rate": 0.328125,
+        "supervised_action_accuracy": 0.6240601503759399,
+        "trace_examples": [
+          {
+            "actions": "RRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              2,
+              5
+            ],
+            "goal": [
+              0,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UULUUL",
+            "final": [
+              1,
+              2
+            ],
+            "goal": [
+              1,
+              2
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRUU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DLLLLRDDRR",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.47214854111405835
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.8238433003425598,
+            "attention_mass": [
+              [
+                0.0,
+                0.33022981882095337,
+                0.3372528851032257,
+                0.3325173258781433
+              ],
+              [
+                0.33437925577163696,
+                0.0,
+                0.324392706155777,
+                0.34122806787490845
+              ],
+              [
+                0.33076000213623047,
+                0.3352842926979065,
+                0.0,
+                0.3339557349681854
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.10116014629602432,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.8162193298339844,
+            "attention_mass": [
+              [
+                0.0,
+                0.33653417229652405,
+                0.3315896987915039,
+                0.33187615871429443
+              ],
+              [
+                0.3361921012401581,
+                0.0,
+                0.3389894366264343,
+                0.32481849193573
+              ],
+              [
+                0.2959212064743042,
+                0.36383986473083496,
+                0.0,
+                0.3402389883995056
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.20988765358924866,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          44,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.387038899993058,
+      "seed": 101,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.41080449521541595,
+            "planner": 0.3508770614862442,
+            "reader": 0.23831846565008163
+          },
+          "attention_entropy": 1.0573971271514893,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 43
+          },
+          "inject_norm_ratio": 0.4985905587673187,
+          "mean_actions": 11.875,
+          "rollout_success_rate": 0.3125,
+          "supervised_action_accuracy": 0.6421052631578947,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "ULUUUUURRUUUUR",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LDLLDDURRD",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.475
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.7952611744403839,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 44
+          },
+          "inject_norm_ratio": 0.5424695611000061,
+          "mean_actions": 11.796875,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.6210526315789474,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UURUUUL",
+              "final": [
+                0,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULURLUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LDDD",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.49271523178807947
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 42
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 11.84375,
+          "rollout_success_rate": 0.328125,
+          "supervised_action_accuracy": 0.6075187969924812,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UURUUUL",
+              "final": [
+                0,
+                5
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LDLDDR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.46701846965699206
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.26809079200029373,
+            "planner": 0.27522462606430054,
+            "reader": 0.4566846489906311
+          },
+          "attention_entropy": 1.0459934771060944,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 44
+          },
+          "inject_norm_ratio": 0.5167698115110397,
+          "mean_actions": 11.71875,
+          "rollout_success_rate": 0.3125,
+          "supervised_action_accuracy": 0.6406015037593985,
+          "trace_examples": [
+            {
+              "actions": "RRRRRR",
+              "final": [
+                6,
+                6
+              ],
+              "goal": [
+                6,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUURRUURDU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UULUUL",
+              "final": [
+                1,
+                2
+              ],
+              "goal": [
+                1,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRUU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "LDDD",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4573333333333333
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_causal_mean_summary",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 665,
+        "dev_worlds": 64,
+        "train_step_examples": 1983,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2620558037541265,
+        "backbone_grad_norm": 0.8410188511700251,
+        "cross_qkv_grad_norm": 0.31672601013200175
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3744360902255639,
+          "epoch": 1.0,
+          "train_loss": 1.3782129401252383
+        },
+        {
+          "dev_action_accuracy": 0.5022556390977444,
+          "epoch": 2.0,
+          "train_loss": 1.2262212208339147
+        },
+        {
+          "dev_action_accuracy": 0.5774436090225564,
+          "epoch": 3.0,
+          "train_loss": 1.0763838773682004
+        },
+        {
+          "dev_action_accuracy": 0.5774436090225564,
+          "epoch": 4.0,
+          "train_loss": 0.9285582474299839
+        },
+        {
+          "dev_action_accuracy": 0.6406015037593985,
+          "epoch": 5.0,
+          "train_loss": 0.8009361340886071
+        },
+        {
+          "dev_action_accuracy": 0.6646616541353384,
+          "epoch": 6.0,
+          "train_loss": 0.7198214672860646
+        },
+        {
+          "dev_action_accuracy": 0.6541353383458647,
+          "epoch": 7.0,
+          "train_loss": 0.648153570436296
+        },
+        {
+          "dev_action_accuracy": 0.643609022556391,
+          "epoch": 8.0,
+          "train_loss": 0.5676459868748983
+        },
+        {
+          "dev_action_accuracy": 0.6631578947368421,
+          "epoch": 9.0,
+          "train_loss": 0.5458980514889672
+        },
+        {
+          "dev_action_accuracy": 0.637593984962406,
+          "epoch": 10.0,
+          "train_loss": 0.4883671970594497
+        },
+        {
+          "dev_action_accuracy": 0.6601503759398496,
+          "epoch": 11.0,
+          "train_loss": 0.44139591994739713
+        },
+        {
+          "dev_action_accuracy": 0.637593984962406,
+          "epoch": 12.0,
+          "train_loss": 0.40848823814165025
+        },
+        {
+          "dev_action_accuracy": 0.6586466165413534,
+          "epoch": 13.0,
+          "train_loss": 0.3680086540324347
+        },
+        {
+          "dev_action_accuracy": 0.6285714285714286,
+          "epoch": 14.0,
+          "train_loss": 0.3023175902309872
+        },
+        {
+          "dev_action_accuracy": 0.631578947368421,
+          "epoch": 15.0,
+          "train_loss": 0.2721730215208871
+        },
+        {
+          "dev_action_accuracy": 0.643609022556391,
+          "epoch": 16.0,
+          "train_loss": 0.2422172168181056
+        }
+      ],
+      "method": "cross_causal_mean_summary",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.41377346217632294,
+          "planner": 0.3516436815261841,
+          "reader": 0.23458288609981537
+        },
+        "attention_entropy": 1.0526811480522156,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 44
+        },
+        "inject_norm_ratio": 0.5265034139156342,
+        "mean_actions": 11.890625,
+        "rollout_success_rate": 0.296875,
+        "supervised_action_accuracy": 0.643609022556391,
+        "trace_examples": [
+          {
+            "actions": "RRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUUURRUURDU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              1,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRUU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "LDDD",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4507227332457293
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.7674394845962524,
+            "attention_mass": [
+              [
+                0.0,
+                0.427215039730072,
+                0.18898919224739075,
+                0.38379576802253723
+              ],
+              [
+                0.3733968138694763,
+                0.0,
+                0.3763389587402344,
+                0.2502642571926117
+              ],
+              [
+                0.1307200789451599,
+                0.5185468792915344,
+                0.0,
+                0.35073307156562805
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.607836902141571,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.8230828642845154,
+            "attention_mass": [
+              [
+                0.0,
+                0.33356043696403503,
+                0.32182109355926514,
+                0.34461843967437744
+              ],
+              [
+                0.32315313816070557,
+                0.0,
+                0.3584980070590973,
+                0.31834888458251953
+              ],
+              [
+                0.33618831634521484,
+                0.3382118344306946,
+                0.0,
+                0.32559987902641296
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.47710222005844116,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          45,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.569277300033718,
+      "seed": 101,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "single_actor",
+        "query_mode": "subtask",
+        "roles": [
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 633,
+        "dev_worlds": 64,
+        "train_step_examples": 2022,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 0.8857871331248154,
+        "backbone_grad_norm": 0.5892130099900258,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3949447077409163,
+          "epoch": 1.0,
+          "train_loss": 1.3406261964277788
+        },
+        {
+          "dev_action_accuracy": 0.4960505529225908,
+          "epoch": 2.0,
+          "train_loss": 1.1996149691668423
+        },
+        {
+          "dev_action_accuracy": 0.5197472353870458,
+          "epoch": 3.0,
+          "train_loss": 1.0202394127845764
+        },
+        {
+          "dev_action_accuracy": 0.6018957345971564,
+          "epoch": 4.0,
+          "train_loss": 0.8684256618673151
+        },
+        {
+          "dev_action_accuracy": 0.617693522906793,
+          "epoch": 5.0,
+          "train_loss": 0.7661795589056882
+        },
+        {
+          "dev_action_accuracy": 0.6666666666666666,
+          "epoch": 6.0,
+          "train_loss": 0.6451745290647853
+        },
+        {
+          "dev_action_accuracy": 0.6777251184834123,
+          "epoch": 7.0,
+          "train_loss": 0.5849566608667374
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 8.0,
+          "train_loss": 0.5428506731987
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 9.0,
+          "train_loss": 0.4862010993740775
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 10.0,
+          "train_loss": 0.4129694564775987
+        },
+        {
+          "dev_action_accuracy": 0.6682464454976303,
+          "epoch": 11.0,
+          "train_loss": 0.3848237164995887
+        },
+        {
+          "dev_action_accuracy": 0.665086887835703,
+          "epoch": 12.0,
+          "train_loss": 0.348467692732811
+        },
+        {
+          "dev_action_accuracy": 0.669826224328594,
+          "epoch": 13.0,
+          "train_loss": 0.2926810417662967
+        },
+        {
+          "dev_action_accuracy": 0.6303317535545023,
+          "epoch": 14.0,
+          "train_loss": 0.28436184200373565
+        },
+        {
+          "dev_action_accuracy": 0.6350710900473934,
+          "epoch": 15.0,
+          "train_loss": 0.23700073767792096
+        },
+        {
+          "dev_action_accuracy": 0.6350710900473934,
+          "epoch": 16.0,
+          "train_loss": 0.2104377777908336
+        }
+      ],
+      "method": "single_actor",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 36
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.015625,
+        "rollout_success_rate": 0.421875,
+        "supervised_action_accuracy": 0.6350710900473934,
+        "trace_examples": [
+          {
+            "actions": "DDRRRRURURRRRR",
+            "final": [
+              1,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUULLRURRRLDUD",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDDLL",
+            "final": [
+              6,
+              3
+            ],
+            "goal": [
+              6,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRRRRRRRRRRR",
+            "final": [
+              3,
+              1
+            ],
+            "goal": [
+              3,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "RDDRR",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4595744680851064
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          37,
+          4
+        ],
+        "role_count": 1
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.4421957000158727,
+      "seed": 102,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "role_clones_no_path",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 633,
+        "dev_worlds": 64,
+        "train_step_examples": 2022,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 0.8857871331248154,
+        "backbone_grad_norm": 0.5892130093478984,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3949447077409163,
+          "epoch": 1.0,
+          "train_loss": 1.3406261801719666
+        },
+        {
+          "dev_action_accuracy": 0.4960505529225908,
+          "epoch": 2.0,
+          "train_loss": 1.1996149908412586
+        },
+        {
+          "dev_action_accuracy": 0.5197472353870458,
+          "epoch": 3.0,
+          "train_loss": 1.0202394100752743
+        },
+        {
+          "dev_action_accuracy": 0.6018957345971564,
+          "epoch": 4.0,
+          "train_loss": 0.868425653739409
+        },
+        {
+          "dev_action_accuracy": 0.617693522906793,
+          "epoch": 5.0,
+          "train_loss": 0.7661795345219699
+        },
+        {
+          "dev_action_accuracy": 0.6666666666666666,
+          "epoch": 6.0,
+          "train_loss": 0.6451745453205976
+        },
+        {
+          "dev_action_accuracy": 0.6777251184834123,
+          "epoch": 7.0,
+          "train_loss": 0.584956633773717
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 8.0,
+          "train_loss": 0.5428506962277673
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 9.0,
+          "train_loss": 0.4862010655078021
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 10.0,
+          "train_loss": 0.4129693724892356
+        },
+        {
+          "dev_action_accuracy": 0.6682464454976303,
+          "epoch": 11.0,
+          "train_loss": 0.3848238804123618
+        },
+        {
+          "dev_action_accuracy": 0.665086887835703,
+          "epoch": 12.0,
+          "train_loss": 0.34846805510195816
+        },
+        {
+          "dev_action_accuracy": 0.669826224328594,
+          "epoch": 13.0,
+          "train_loss": 0.29267987473444507
+        },
+        {
+          "dev_action_accuracy": 0.6303317535545023,
+          "epoch": 14.0,
+          "train_loss": 0.2843617194078185
+        },
+        {
+          "dev_action_accuracy": 0.6350710900473934,
+          "epoch": 15.0,
+          "train_loss": 0.2370053462006829
+        },
+        {
+          "dev_action_accuracy": 0.6350710900473934,
+          "epoch": 16.0,
+          "train_loss": 0.21043517245826396
+        }
+      ],
+      "method": "role_clones_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 36
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.015625,
+        "rollout_success_rate": 0.421875,
+        "supervised_action_accuracy": 0.6350710900473934,
+        "trace_examples": [
+          {
+            "actions": "DDRRRRURURRRRR",
+            "final": [
+              1,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUULLRURRRLDUD",
+            "final": [
+              1,
+              3
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDDLL",
+            "final": [
+              6,
+              3
+            ],
+            "goal": [
+              6,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRRRRRRRRRRR",
+            "final": [
+              3,
+              1
+            ],
+            "goal": [
+              3,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "RDDRR",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4595744680851064
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          37,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.3270184000139125,
+      "seed": 102,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "self_only",
+        "name": "capacity_control_self_read",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 633,
+        "dev_worlds": 64,
+        "train_step_examples": 2022,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2685581211633883,
+        "backbone_grad_norm": 0.8734574421983757,
+        "cross_qkv_grad_norm": 0.3318509638836518
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3412322274881517,
+          "epoch": 1.0,
+          "train_loss": 1.3721145662394436
+        },
+        {
+          "dev_action_accuracy": 0.48657187993680884,
+          "epoch": 2.0,
+          "train_loss": 1.2458411834456704
+        },
+        {
+          "dev_action_accuracy": 0.5402843601895735,
+          "epoch": 3.0,
+          "train_loss": 1.046768906441602
+        },
+        {
+          "dev_action_accuracy": 0.6287519747235387,
+          "epoch": 4.0,
+          "train_loss": 0.8621635951779105
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 5.0,
+          "train_loss": 0.7859019284898584
+        },
+        {
+          "dev_action_accuracy": 0.6872037914691943,
+          "epoch": 6.0,
+          "train_loss": 0.6653115939010273
+        },
+        {
+          "dev_action_accuracy": 0.6729857819905213,
+          "epoch": 7.0,
+          "train_loss": 0.5900550782680511
+        },
+        {
+          "dev_action_accuracy": 0.684044233807267,
+          "epoch": 8.0,
+          "train_loss": 0.5389839878136461
+        },
+        {
+          "dev_action_accuracy": 0.6903633491311216,
+          "epoch": 9.0,
+          "train_loss": 0.48453931645913556
+        },
+        {
+          "dev_action_accuracy": 0.6872037914691943,
+          "epoch": 10.0,
+          "train_loss": 0.40401454506949946
+        },
+        {
+          "dev_action_accuracy": 0.660347551342812,
+          "epoch": 11.0,
+          "train_loss": 0.3901824382218448
+        },
+        {
+          "dev_action_accuracy": 0.660347551342812,
+          "epoch": 12.0,
+          "train_loss": 0.36679525537924335
+        },
+        {
+          "dev_action_accuracy": 0.665086887835703,
+          "epoch": 13.0,
+          "train_loss": 0.2847225381569429
+        },
+        {
+          "dev_action_accuracy": 0.6619273301737757,
+          "epoch": 14.0,
+          "train_loss": 0.2603210813619874
+        },
+        {
+          "dev_action_accuracy": 0.6714060031595577,
+          "epoch": 15.0,
+          "train_loss": 0.2221519679508426
+        },
+        {
+          "dev_action_accuracy": 0.6777251184834123,
+          "epoch": 16.0,
+          "train_loss": 0.23199398883364417
+        }
+      ],
+      "method": "capacity_control_self_read",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy": 6.216980352746759e-08,
+        "failure_counts": {
+          "budget_exhausted": 2,
+          "collision_or_wall_budget": 33
+        },
+        "inject_norm_ratio": 0.15906638279557228,
+        "mean_actions": 10.640625,
+        "rollout_success_rate": 0.453125,
+        "supervised_action_accuracy": 0.6777251184834123,
+        "trace_examples": [
+          {
+            "actions": "RRRRR",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUUUUUUUUUUU",
+            "final": [
+              1,
+              5
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDDLL",
+            "final": [
+              6,
+              3
+            ],
+            "goal": [
+              6,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRDDDDRDRRRRR",
+            "final": [
+              3,
+              1
+            ],
+            "goal": [
+              3,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DRDRR",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4390602055800294
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.11369621008634567,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.2044365555047989,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          36,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.475428300036583,
+      "seed": 102,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.329851970076561,
+            "planner": 0.33405549824237823,
+            "reader": 0.3360925614833832
+          },
+          "attention_entropy": 1.085057556629181,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 34
+          },
+          "inject_norm_ratio": 0.1523926705121994,
+          "mean_actions": 10.546875,
+          "rollout_success_rate": 0.453125,
+          "supervised_action_accuracy": 0.6587677725118484,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUULUUUULLLR",
+              "final": [
+                0,
+                2
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRDDDDRRRDRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.47703703703703704
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.8219487369060516,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 34
+          },
+          "inject_norm_ratio": 0.15673205256462097,
+          "mean_actions": 10.734375,
+          "rollout_success_rate": 0.4375,
+          "supervised_action_accuracy": 0.655608214849921,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUULUUUULLLR",
+              "final": [
+                0,
+                2
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRDDDDRRRDRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4672489082969432
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 34
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 10.671875,
+          "rollout_success_rate": 0.4375,
+          "supervised_action_accuracy": 0.6571879936808847,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                1,
+                5
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRDDDDRRRDRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4494875549048316
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.310907244682312,
+            "planner": 0.3473792225122452,
+            "reader": 0.3417135253548622
+          },
+          "attention_entropy": 1.073487639427185,
+          "failure_counts": {
+            "budget_exhausted": 3,
+            "collision_or_wall_budget": 32
+          },
+          "inject_norm_ratio": 0.15564389899373055,
+          "mean_actions": 10.671875,
+          "rollout_success_rate": 0.453125,
+          "supervised_action_accuracy": 0.6571879936808847,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUULUUUULLLR",
+              "final": [
+                0,
+                2
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRDDDDRRRDRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4890190336749634
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_agent_latent_attention",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 633,
+        "dev_worlds": 64,
+        "train_step_examples": 2022,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2727078515159236,
+        "backbone_grad_norm": 0.8774481774959049,
+        "cross_qkv_grad_norm": 0.33406628571302216
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.3412322274881517,
+          "epoch": 1.0,
+          "train_loss": 1.3722343932498584
+        },
+        {
+          "dev_action_accuracy": 0.4834123222748815,
+          "epoch": 2.0,
+          "train_loss": 1.246024722402746
+        },
+        {
+          "dev_action_accuracy": 0.5402843601895735,
+          "epoch": 3.0,
+          "train_loss": 1.0464142967354169
+        },
+        {
+          "dev_action_accuracy": 0.6287519747235387,
+          "epoch": 4.0,
+          "train_loss": 0.8616312633861195
+        },
+        {
+          "dev_action_accuracy": 0.6824644549763034,
+          "epoch": 5.0,
+          "train_loss": 0.7856595678762957
+        },
+        {
+          "dev_action_accuracy": 0.6872037914691943,
+          "epoch": 6.0,
+          "train_loss": 0.6648754856803201
+        },
+        {
+          "dev_action_accuracy": 0.6761453396524486,
+          "epoch": 7.0,
+          "train_loss": 0.5897309969771992
+        },
+        {
+          "dev_action_accuracy": 0.6872037914691943,
+          "epoch": 8.0,
+          "train_loss": 0.5399385995485566
+        },
+        {
+          "dev_action_accuracy": 0.6761453396524486,
+          "epoch": 9.0,
+          "train_loss": 0.4828677908940749
+        },
+        {
+          "dev_action_accuracy": 0.6919431279620853,
+          "epoch": 10.0,
+          "train_loss": 0.4062266136434945
+        },
+        {
+          "dev_action_accuracy": 0.6682464454976303,
+          "epoch": 11.0,
+          "train_loss": 0.3955210880799727
+        },
+        {
+          "dev_action_accuracy": 0.6856240126382307,
+          "epoch": 12.0,
+          "train_loss": 0.37463048100471497
+        },
+        {
+          "dev_action_accuracy": 0.6619273301737757,
+          "epoch": 13.0,
+          "train_loss": 0.27348300408233295
+        },
+        {
+          "dev_action_accuracy": 0.6571879936808847,
+          "epoch": 14.0,
+          "train_loss": 0.2729966416954994
+        },
+        {
+          "dev_action_accuracy": 0.6729857819905213,
+          "epoch": 15.0,
+          "train_loss": 0.21352305195548318
+        },
+        {
+          "dev_action_accuracy": 0.6571879936808847,
+          "epoch": 16.0,
+          "train_loss": 0.2130706709894267
+        }
+      ],
+      "method": "cross_agent_latent_attention",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.32482627034187317,
+          "planner": 0.3368883728981018,
+          "reader": 0.3382853716611862
+        },
+        "attention_entropy": 1.0861202478408813,
+        "failure_counts": {
+          "budget_exhausted": 3,
+          "collision_or_wall_budget": 32
+        },
+        "inject_norm_ratio": 0.15724758431315422,
+        "mean_actions": 10.671875,
+        "rollout_success_rate": 0.453125,
+        "supervised_action_accuracy": 0.6571879936808847,
+        "trace_examples": [
+          {
+            "actions": "RRRRR",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UUUUULUUUULLLR",
+            "final": [
+              0,
+              2
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDDLL",
+            "final": [
+              6,
+              3
+            ],
+            "goal": [
+              6,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRDDDDRRRDRRR",
+            "final": [
+              3,
+              1
+            ],
+            "goal": [
+              3,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "RDDRR",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.49194729136163984
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.8211705088615417,
+            "attention_mass": [
+              [
+                0.0,
+                0.332981675863266,
+                0.33302780985832214,
+                0.33399051427841187
+              ],
+              [
+                0.288998544216156,
+                0.0,
+                0.32024046778678894,
+                0.39076098799705505
+              ],
+              [
+                0.32351186871528625,
+                0.3348119258880615,
+                0.0,
+                0.341676265001297
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.11339135468006134,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.8227269649505615,
+            "attention_mass": [
+              [
+                0.0,
+                0.3323698937892914,
+                0.339297354221344,
+                0.3283327519893646
+              ],
+              [
+                0.33487439155578613,
+                0.0,
+                0.3331565856933594,
+                0.3319690227508545
+              ],
+              [
+                0.3130069375038147,
+                0.33456751704216003,
+                0.0,
+                0.35242557525634766
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.2000727504491806,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          37,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.553171599982306,
+      "seed": 102,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.3020467311143875,
+            "planner": 0.32353243231773376,
+            "reader": 0.3744208961725235
+          },
+          "attention_entropy": 1.0914976596832275,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 35
+          },
+          "inject_norm_ratio": 0.3319232910871506,
+          "mean_actions": 10.953125,
+          "rollout_success_rate": 0.453125,
+          "supervised_action_accuracy": 0.6761453396524486,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUUUUUUUUUUUU",
+              "final": [
+                1,
+                5
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRRRRRRRRRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DRDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.43366619115549215
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.8200187981128693,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 29
+          },
+          "inject_norm_ratio": 0.3683069869875908,
+          "mean_actions": 10.03125,
+          "rollout_success_rate": 0.546875,
+          "supervised_action_accuracy": 0.669826224328594,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UURU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                4,
+                0
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4750778816199377
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 0,
+            "collision_or_wall_budget": 36
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 10.90625,
+          "rollout_success_rate": 0.4375,
+          "supervised_action_accuracy": 0.660347551342812,
+          "trace_examples": [
+            {
+              "actions": "RRRDRRU",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UUUURU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "UDRRRRRRRRRRRR",
+              "final": [
+                4,
+                0
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DRDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.42406876790830944
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.37242522835731506,
+            "planner": 0.2800692468881607,
+            "reader": 0.34750545024871826
+          },
+          "attention_entropy": 1.082969307899475,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 30
+          },
+          "inject_norm_ratio": 0.36354730278253555,
+          "mean_actions": 10.265625,
+          "rollout_success_rate": 0.515625,
+          "supervised_action_accuracy": 0.6714060031595577,
+          "trace_examples": [
+            {
+              "actions": "RRRRR",
+              "final": [
+                3,
+                5
+              ],
+              "goal": [
+                3,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "UURU",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                6
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "DDDDLL",
+              "final": [
+                6,
+                3
+              ],
+              "goal": [
+                6,
+                3
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "URRRRRRRRRRRRR",
+              "final": [
+                3,
+                1
+              ],
+              "goal": [
+                3,
+                3
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RDDRR",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4550989345509893
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_causal_mean_summary",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 633,
+        "dev_worlds": 64,
+        "train_step_examples": 2022,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.2863252723145557,
+        "backbone_grad_norm": 0.9064085305300605,
+        "cross_qkv_grad_norm": 0.3533412707648677
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.41706161137440756,
+          "epoch": 1.0,
+          "train_loss": 1.3463996973904697
+        },
+        {
+          "dev_action_accuracy": 0.4660347551342812,
+          "epoch": 2.0,
+          "train_loss": 1.1936303864825855
+        },
+        {
+          "dev_action_accuracy": 0.5639810426540285,
+          "epoch": 3.0,
+          "train_loss": 1.0308795124292374
+        },
+        {
+          "dev_action_accuracy": 0.6334913112164297,
+          "epoch": 4.0,
+          "train_loss": 0.8404206308451566
+        },
+        {
+          "dev_action_accuracy": 0.6208530805687204,
+          "epoch": 5.0,
+          "train_loss": 0.7697093297134746
+        },
+        {
+          "dev_action_accuracy": 0.7030015797788309,
+          "epoch": 6.0,
+          "train_loss": 0.669668051329526
+        },
+        {
+          "dev_action_accuracy": 0.6872037914691943,
+          "epoch": 7.0,
+          "train_loss": 0.6016050495884635
+        },
+        {
+          "dev_action_accuracy": 0.6777251184834123,
+          "epoch": 8.0,
+          "train_loss": 0.5610313334248282
+        },
+        {
+          "dev_action_accuracy": 0.6856240126382307,
+          "epoch": 9.0,
+          "train_loss": 0.5031117851083929
+        },
+        {
+          "dev_action_accuracy": 0.688783570300158,
+          "epoch": 10.0,
+          "train_loss": 0.4358848834579641
+        },
+        {
+          "dev_action_accuracy": 0.7014218009478673,
+          "epoch": 11.0,
+          "train_loss": 0.41014362465251575
+        },
+        {
+          "dev_action_accuracy": 0.688783570300158,
+          "epoch": 12.0,
+          "train_loss": 0.40246983753009274
+        },
+        {
+          "dev_action_accuracy": 0.6477093206951027,
+          "epoch": 13.0,
+          "train_loss": 0.29013360969044943
+        },
+        {
+          "dev_action_accuracy": 0.684044233807267,
+          "epoch": 14.0,
+          "train_loss": 0.2830614965747703
+        },
+        {
+          "dev_action_accuracy": 0.660347551342812,
+          "epoch": 15.0,
+          "train_loss": 0.22430812940001488
+        },
+        {
+          "dev_action_accuracy": 0.6777251184834123,
+          "epoch": 16.0,
+          "train_loss": 0.21792413328181615
+        }
+      ],
+      "method": "cross_causal_mean_summary",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.29755255579948425,
+          "planner": 0.31888647377491,
+          "reader": 0.38356101512908936
+        },
+        "attention_entropy": 1.090321958065033,
+        "failure_counts": {
+          "budget_exhausted": 1,
+          "collision_or_wall_budget": 32
+        },
+        "inject_norm_ratio": 0.36815834045410156,
+        "mean_actions": 10.359375,
+        "rollout_success_rate": 0.484375,
+        "supervised_action_accuracy": 0.6777251184834123,
+        "trace_examples": [
+          {
+            "actions": "RRRRR",
+            "final": [
+              3,
+              5
+            ],
+            "goal": [
+              3,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "UURU",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              6
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "DDDDLL",
+            "final": [
+              6,
+              3
+            ],
+            "goal": [
+              6,
+              3
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "URRRRRRRRRRRRR",
+            "final": [
+              3,
+              1
+            ],
+            "goal": [
+              3,
+              3
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "RDDRR",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.45701357466063347
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.8229610323905945,
+            "attention_mass": [
+              [
+                0.0,
+                0.3290376365184784,
+                0.34830138087272644,
+                0.32266098260879517
+              ],
+              [
+                0.3498869240283966,
+                0.0,
+                0.34684044122695923,
+                0.30327263474464417
+              ],
+              [
+                0.34459158778190613,
+                0.33678725361824036,
+                0.0,
+                0.31862112879753113
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.5237045884132385,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.817076563835144,
+            "attention_mass": [
+              [
+                0.0,
+                0.31156617403030396,
+                0.319820374250412,
+                0.36861345171928406
+              ],
+              [
+                0.33049049973487854,
+                0.0,
+                0.3404513895511627,
+                0.32905805110931396
+              ],
+              [
+                0.3021547496318817,
+                0.2911410629749298,
+                0.0,
+                0.40670421719551086
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.21290938556194305,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          29,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.746795999992173,
+      "seed": 102,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "single_actor",
+        "query_mode": "subtask",
+        "roles": [
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 674,
+        "dev_worlds": 64,
+        "train_step_examples": 2003,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.388071788964251,
+        "backbone_grad_norm": 0.7536610581690266,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.41097922848664686,
+          "epoch": 1.0,
+          "train_loss": 1.3560866571608043
+        },
+        {
+          "dev_action_accuracy": 0.486646884272997,
+          "epoch": 2.0,
+          "train_loss": 1.2297533353169758
+        },
+        {
+          "dev_action_accuracy": 0.5504451038575667,
+          "epoch": 3.0,
+          "train_loss": 1.092926269485837
+        },
+        {
+          "dev_action_accuracy": 0.6439169139465876,
+          "epoch": 4.0,
+          "train_loss": 0.8866486095246815
+        },
+        {
+          "dev_action_accuracy": 0.6350148367952523,
+          "epoch": 5.0,
+          "train_loss": 0.7567101206098285
+        },
+        {
+          "dev_action_accuracy": 0.6958456973293768,
+          "epoch": 6.0,
+          "train_loss": 0.6582714588869185
+        },
+        {
+          "dev_action_accuracy": 0.6824925816023739,
+          "epoch": 7.0,
+          "train_loss": 0.5824109102998462
+        },
+        {
+          "dev_action_accuracy": 0.6869436201780416,
+          "epoch": 8.0,
+          "train_loss": 0.5195540062018803
+        },
+        {
+          "dev_action_accuracy": 0.6632047477744807,
+          "epoch": 9.0,
+          "train_loss": 0.5009866030443282
+        },
+        {
+          "dev_action_accuracy": 0.6691394658753709,
+          "epoch": 10.0,
+          "train_loss": 0.42194304012116934
+        },
+        {
+          "dev_action_accuracy": 0.6676557863501483,
+          "epoch": 11.0,
+          "train_loss": 0.3962211566311972
+        },
+        {
+          "dev_action_accuracy": 0.6646884272997032,
+          "epoch": 12.0,
+          "train_loss": 0.34509296289512087
+        },
+        {
+          "dev_action_accuracy": 0.6661721068249258,
+          "epoch": 13.0,
+          "train_loss": 0.2905544014204116
+        },
+        {
+          "dev_action_accuracy": 0.6528189910979229,
+          "epoch": 14.0,
+          "train_loss": 0.24600153593789964
+        },
+        {
+          "dev_action_accuracy": 0.6468842729970327,
+          "epoch": 15.0,
+          "train_loss": 0.23041547480083646
+        },
+        {
+          "dev_action_accuracy": 0.6483679525222552,
+          "epoch": 16.0,
+          "train_loss": 0.2029053033107803
+        }
+      ],
+      "method": "single_actor",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 0,
+          "collision_or_wall_budget": 45
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.953125,
+        "rollout_success_rate": 0.296875,
+        "supervised_action_accuracy": 0.6483679525222552,
+        "trace_examples": [
+          {
+            "actions": "UURUUUURRR",
+            "final": [
+              0,
+              4
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "RRRRRRRRRRRRRR",
+            "final": [
+              1,
+              1
+            ],
+            "goal": [
+              2,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UURRRURRRRRDUR",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              3,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "DRDRRDRRDRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDRDRRDRRRRRRR",
+            "final": [
+              4,
+              6
+            ],
+            "goal": [
+              5,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4287581699346405
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          45,
+          4
+        ],
+        "role_count": 1
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.4245674000121653,
+      "seed": 103,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "none",
+        "name": "role_clones_no_path",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 674,
+        "dev_worlds": 64,
+        "train_step_examples": 2003,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 1.388071788964251,
+        "backbone_grad_norm": 0.7536610546066449,
+        "cross_qkv_grad_norm": 0.0
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.41097922848664686,
+          "epoch": 1.0,
+          "train_loss": 1.35608666851407
+        },
+        {
+          "dev_action_accuracy": 0.486646884272997,
+          "epoch": 2.0,
+          "train_loss": 1.2297533409936088
+        },
+        {
+          "dev_action_accuracy": 0.5504451038575667,
+          "epoch": 3.0,
+          "train_loss": 1.0929262666475206
+        },
+        {
+          "dev_action_accuracy": 0.6439169139465876,
+          "epoch": 4.0,
+          "train_loss": 0.8866486237162635
+        },
+        {
+          "dev_action_accuracy": 0.6350148367952523,
+          "epoch": 5.0,
+          "train_loss": 0.7567101404780433
+        },
+        {
+          "dev_action_accuracy": 0.6958456973293768,
+          "epoch": 6.0,
+          "train_loss": 0.658271461725235
+        },
+        {
+          "dev_action_accuracy": 0.6824925816023739,
+          "epoch": 7.0,
+          "train_loss": 0.5824108904316312
+        },
+        {
+          "dev_action_accuracy": 0.6869436201780416,
+          "epoch": 8.0,
+          "train_loss": 0.519554024650937
+        },
+        {
+          "dev_action_accuracy": 0.6632047477744807,
+          "epoch": 9.0,
+          "train_loss": 0.5009865689845312
+        },
+        {
+          "dev_action_accuracy": 0.6691394658753709,
+          "epoch": 10.0,
+          "train_loss": 0.4219429705824171
+        },
+        {
+          "dev_action_accuracy": 0.6676557863501483,
+          "epoch": 11.0,
+          "train_loss": 0.39622110696065993
+        },
+        {
+          "dev_action_accuracy": 0.6646884272997032,
+          "epoch": 12.0,
+          "train_loss": 0.3450931055205209
+        },
+        {
+          "dev_action_accuracy": 0.6661721068249258,
+          "epoch": 13.0,
+          "train_loss": 0.2905548569701967
+        },
+        {
+          "dev_action_accuracy": 0.6528189910979229,
+          "epoch": 14.0,
+          "train_loss": 0.2460028784615653
+        },
+        {
+          "dev_action_accuracy": 0.6468842729970327,
+          "epoch": 15.0,
+          "train_loss": 0.23041765178952897
+        },
+        {
+          "dev_action_accuracy": 0.6498516320474778,
+          "epoch": 16.0,
+          "train_loss": 0.20290638896681013
+        }
+      ],
+      "method": "role_clones_no_path",
+      "metrics": {
+        "actor_attention_mass_by_source": {},
+        "attention_entropy": 0.0,
+        "failure_counts": {
+          "budget_exhausted": 0,
+          "collision_or_wall_budget": 45
+        },
+        "inject_norm_ratio": 0.0,
+        "mean_actions": 11.953125,
+        "rollout_success_rate": 0.296875,
+        "supervised_action_accuracy": 0.6498516320474778,
+        "trace_examples": [
+          {
+            "actions": "UURUUUURRR",
+            "final": [
+              0,
+              4
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "RRRRRRRRRRRRRR",
+            "final": [
+              1,
+              1
+            ],
+            "goal": [
+              2,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UURRRURRRRRDUR",
+            "final": [
+              3,
+              4
+            ],
+            "goal": [
+              3,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "DRDRRDRRDRRRRR",
+            "final": [
+              6,
+              6
+            ],
+            "goal": [
+              6,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDRDRRDRRRRRRR",
+            "final": [
+              4,
+              6
+            ],
+            "goal": [
+              5,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.4287581699346405
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [],
+        "logits_shape": [
+          45,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 173636,
+      "runtime_seconds": 3.323335200024303,
+      "seed": 103,
+      "trainable_param_count": 173636
+    },
+    {
+      "ablations": {},
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "self_only",
+        "name": "capacity_control_self_read",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 674,
+        "dev_worlds": 64,
+        "train_step_examples": 2003,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.355032736561862,
+        "backbone_grad_norm": 1.3846286133992325,
+        "cross_qkv_grad_norm": 0.507648261304613
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.41097922848664686,
+          "epoch": 1.0,
+          "train_loss": 1.4008132219314575
+        },
+        {
+          "dev_action_accuracy": 0.46735905044510384,
+          "epoch": 2.0,
+          "train_loss": 1.2477560610998244
+        },
+        {
+          "dev_action_accuracy": 0.5059347181008902,
+          "epoch": 3.0,
+          "train_loss": 1.1559036175409954
+        },
+        {
+          "dev_action_accuracy": 0.5637982195845698,
+          "epoch": 4.0,
+          "train_loss": 0.9862596023650396
+        },
+        {
+          "dev_action_accuracy": 0.599406528189911,
+          "epoch": 5.0,
+          "train_loss": 0.8343449518794105
+        },
+        {
+          "dev_action_accuracy": 0.6275964391691394,
+          "epoch": 6.0,
+          "train_loss": 0.6767216282231467
+        },
+        {
+          "dev_action_accuracy": 0.6172106824925816,
+          "epoch": 7.0,
+          "train_loss": 0.6254419258662632
+        },
+        {
+          "dev_action_accuracy": 0.6513353115727003,
+          "epoch": 8.0,
+          "train_loss": 0.5836459951741355
+        },
+        {
+          "dev_action_accuracy": 0.6706231454005934,
+          "epoch": 9.0,
+          "train_loss": 0.5467510422070821
+        },
+        {
+          "dev_action_accuracy": 0.6661721068249258,
+          "epoch": 10.0,
+          "train_loss": 0.47103602687517804
+        },
+        {
+          "dev_action_accuracy": 0.6201780415430267,
+          "epoch": 11.0,
+          "train_loss": 0.41758014758427936
+        },
+        {
+          "dev_action_accuracy": 0.6394658753709199,
+          "epoch": 12.0,
+          "train_loss": 0.3625347309169315
+        },
+        {
+          "dev_action_accuracy": 0.6142433234421365,
+          "epoch": 13.0,
+          "train_loss": 0.3307476022413799
+        },
+        {
+          "dev_action_accuracy": 0.6053412462908012,
+          "epoch": 14.0,
+          "train_loss": 0.2695647861276354
+        },
+        {
+          "dev_action_accuracy": 0.6097922848664689,
+          "epoch": 15.0,
+          "train_loss": 0.2501503967103504
+        },
+        {
+          "dev_action_accuracy": 0.6068249258160238,
+          "epoch": 16.0,
+          "train_loss": 0.2319825469028382
+        }
+      ],
+      "method": "capacity_control_self_read",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 1.0,
+          "critic": 0.0,
+          "planner": 0.0,
+          "reader": 0.0
+        },
+        "attention_entropy": 6.216980352746759e-08,
+        "failure_counts": {
+          "budget_exhausted": 5,
+          "collision_or_wall_budget": 43
+        },
+        "inject_norm_ratio": 0.15154244005680084,
+        "mean_actions": 12.4375,
+        "rollout_success_rate": 0.25,
+        "supervised_action_accuracy": 0.6068249258160238,
+        "trace_examples": [
+          {
+            "actions": "UURRUUURRRDUUD",
+            "final": [
+              1,
+              5
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "DRRRRRRRRRRURR",
+            "final": [
+              0,
+              3
+            ],
+            "goal": [
+              2,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "RUUUURRRRRRURR",
+            "final": [
+              1,
+              5
+            ],
+            "goal": [
+              3,
+              2
+            ],
+            "success": false,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "DDRRRDRRDLDDRL",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDDDRR",
+            "final": [
+              5,
+              5
+            ],
+            "goal": [
+              5,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.5326633165829145
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.141427144408226,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 6.216980352746759e-08,
+            "attention_mass": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.16165773570537567,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          48,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.413905899971724,
+      "seed": 103,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.33613262325525284,
+            "planner": 0.3928510844707489,
+            "reader": 0.27101626992225647
+          },
+          "attention_entropy": 1.042950689792633,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 44
+          },
+          "inject_norm_ratio": 0.15668238699436188,
+          "mean_actions": 12.375,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.642433234421365,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRUURL",
+              "final": [
+                0,
+                5
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "URRRRRRDRRRULL",
+              "final": [
+                0,
+                4
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURURD",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "RDRRDDD",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDDDRR",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4911616161616162
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 1.0,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.821417361497879,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 43
+          },
+          "inject_norm_ratio": 0.1554710417985916,
+          "mean_actions": 12.4375,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.6201780415430267,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRDUUL",
+              "final": [
+                0,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "URRRRRDD",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURURD",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDRDDDRR",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDDDRR",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.49120603015075376
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 1,
+            "collision_or_wall_budget": 43
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 12.359375,
+          "rollout_success_rate": 0.3125,
+          "supervised_action_accuracy": 0.6201780415430267,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRDUUL",
+              "final": [
+                0,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "URRRRRDD",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURURD",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDRRRRDDRLDL",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDDDRR",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4968394437420986
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.30835478007793427,
+            "planner": 0.3628353923559189,
+            "reader": 0.32880982756614685
+          },
+          "attention_entropy": 1.0569888353347778,
+          "failure_counts": {
+            "budget_exhausted": 2,
+            "collision_or_wall_budget": 43
+          },
+          "inject_norm_ratio": 0.15479421615600586,
+          "mean_actions": 12.4375,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.6186943620178041,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRDUUL",
+              "final": [
+                0,
+                4
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "URRRRRDD",
+              "final": [
+                2,
+                5
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "UUURURD",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDRDDDRR",
+              "final": [
+                6,
+                4
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": true,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDDDRR",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.49120603015075376
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_agent_latent_attention",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "last_token"
+      },
+      "dataset": {
+        "dev_step_examples": 674,
+        "dev_worlds": 64,
+        "train_step_examples": 2003,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.3537365473344076,
+        "backbone_grad_norm": 1.3833361228419838,
+        "cross_qkv_grad_norm": 0.5070194815977489
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.4094955489614243,
+          "epoch": 1.0,
+          "train_loss": 1.4007572673615956
+        },
+        {
+          "dev_action_accuracy": 0.47032640949554894,
+          "epoch": 2.0,
+          "train_loss": 1.2475338947205317
+        },
+        {
+          "dev_action_accuracy": 0.5103857566765578,
+          "epoch": 3.0,
+          "train_loss": 1.1554153533208937
+        },
+        {
+          "dev_action_accuracy": 0.5623145400593472,
+          "epoch": 4.0,
+          "train_loss": 0.9852073334512257
+        },
+        {
+          "dev_action_accuracy": 0.6008902077151336,
+          "epoch": 5.0,
+          "train_loss": 0.8332954872222174
+        },
+        {
+          "dev_action_accuracy": 0.6275964391691394,
+          "epoch": 6.0,
+          "train_loss": 0.6760171893097106
+        },
+        {
+          "dev_action_accuracy": 0.612759643916914,
+          "epoch": 7.0,
+          "train_loss": 0.623082038902101
+        },
+        {
+          "dev_action_accuracy": 0.6498516320474778,
+          "epoch": 8.0,
+          "train_loss": 0.5853453675905863
+        },
+        {
+          "dev_action_accuracy": 0.6676557863501483,
+          "epoch": 9.0,
+          "train_loss": 0.5490742723147074
+        },
+        {
+          "dev_action_accuracy": 0.6602373887240356,
+          "epoch": 10.0,
+          "train_loss": 0.47155984952336266
+        },
+        {
+          "dev_action_accuracy": 0.6320474777448071,
+          "epoch": 11.0,
+          "train_loss": 0.41821174536432537
+        },
+        {
+          "dev_action_accuracy": 0.6439169139465876,
+          "epoch": 12.0,
+          "train_loss": 0.3609204412925811
+        },
+        {
+          "dev_action_accuracy": 0.6275964391691394,
+          "epoch": 13.0,
+          "train_loss": 0.32416078945000965
+        },
+        {
+          "dev_action_accuracy": 0.6023738872403561,
+          "epoch": 14.0,
+          "train_loss": 0.27578280511356534
+        },
+        {
+          "dev_action_accuracy": 0.6246290801186943,
+          "epoch": 15.0,
+          "train_loss": 0.24075492648851304
+        },
+        {
+          "dev_action_accuracy": 0.6172106824925816,
+          "epoch": 16.0,
+          "train_loss": 0.22028044611215591
+        }
+      ],
+      "method": "cross_agent_latent_attention",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.33774038404226303,
+          "planner": 0.3723398745059967,
+          "reader": 0.28991977870464325
+        },
+        "attention_entropy": 1.0441161394119263,
+        "failure_counts": {
+          "budget_exhausted": 2,
+          "collision_or_wall_budget": 43
+        },
+        "inject_norm_ratio": 0.15501772612333298,
+        "mean_actions": 12.4375,
+        "rollout_success_rate": 0.296875,
+        "supervised_action_accuracy": 0.6172106824925816,
+        "trace_examples": [
+          {
+            "actions": "UURRUUURRRDUUL",
+            "final": [
+              0,
+              4
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": true,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "URRRRRDD",
+            "final": [
+              2,
+              5
+            ],
+            "goal": [
+              2,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "UUURURD",
+            "final": [
+              3,
+              2
+            ],
+            "goal": [
+              3,
+              2
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "DDRDDDRR",
+            "final": [
+              6,
+              4
+            ],
+            "goal": [
+              6,
+              4
+            ],
+            "success": true,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDDDRR",
+            "final": [
+              5,
+              5
+            ],
+            "goal": [
+              5,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.48743718592964824
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.8209160566329956,
+            "attention_mass": [
+              [
+                0.0,
+                0.3158097267150879,
+                0.34353920817375183,
+                0.3406510651111603
+              ],
+              [
+                0.2982155680656433,
+                0.0,
+                0.36742281913757324,
+                0.33436161279678345
+              ],
+              [
+                0.34314554929733276,
+                0.3286798298358917,
+                0.0,
+                0.3281746804714203
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.1459599733352661,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.8219186663627625,
+            "attention_mass": [
+              [
+                0.0,
+                0.3331736624240875,
+                0.326421320438385,
+                0.34040501713752747
+              ],
+              [
+                0.3500072658061981,
+                0.0,
+                0.3097204864025116,
+                0.34027227759361267
+              ],
+              [
+                0.34109821915626526,
+                0.32346317172050476,
+                0.0,
+                0.33543863892555237
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inject_norm_ratio": 0.16498211026191711,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          46,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.4305385000188835,
+      "seed": 103,
+      "trainable_param_count": 223940
+    },
+    {
+      "ablations": {
+        "cross_task_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.32259416580200195,
+            "planner": 0.4427538961172104,
+            "reader": 0.23465190082788467
+          },
+          "attention_entropy": 1.081044852733612,
+          "failure_counts": {
+            "budget_exhausted": 3,
+            "collision_or_wall_budget": 46
+          },
+          "inject_norm_ratio": 0.37849174439907074,
+          "mean_actions": 12.515625,
+          "rollout_success_rate": 0.234375,
+          "supervised_action_accuracy": 0.5652818991097923,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRURRR",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "DRRRRRRRRRRRRR",
+              "final": [
+                1,
+                1
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                6,
+                1
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDDRRRRRDDDLRL",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "RRRDDLDLLLLLLL",
+              "final": [
+                4,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4444444444444444
+        },
+        "mask_actor_peer_reads": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.9999999403953552,
+            "critic": 0.0,
+            "planner": 0.0,
+            "reader": 0.0
+          },
+          "attention_entropy": 0.8228949308395386,
+          "failure_counts": {
+            "budget_exhausted": 6,
+            "collision_or_wall_budget": 38
+          },
+          "inject_norm_ratio": 0.390041247010231,
+          "mean_actions": 12.171875,
+          "rollout_success_rate": 0.3125,
+          "supervised_action_accuracy": 0.5919881305637982,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRURRR",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                1,
+                1
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "RULULRRRRDLLUU",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDDRRRRRDDDDDL",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDLRRRRDDL",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.4852374839537869
+        },
+        "remove_path": {
+          "actor_attention_mass_by_source": {},
+          "attention_entropy": 0.0,
+          "failure_counts": {
+            "budget_exhausted": 5,
+            "collision_or_wall_budget": 40
+          },
+          "inject_norm_ratio": 0.0,
+          "mean_actions": 12.34375,
+          "rollout_success_rate": 0.296875,
+          "supervised_action_accuracy": 0.5608308605341247,
+          "trace_examples": [
+            {
+              "actions": "RURRURURURUUUR",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                1,
+                1
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                6,
+                1
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": false,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDDRRRRRDDDLRL",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDLRRRRDRDL",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.5253164556962026
+        },
+        "role_kv_shuffle": {
+          "actor_attention_mass_by_source": {
+            "actor": 0.0,
+            "critic": 0.23245708644390106,
+            "planner": 0.27171415835618973,
+            "reader": 0.4958287477493286
+          },
+          "attention_entropy": 1.0674331784248352,
+          "failure_counts": {
+            "budget_exhausted": 6,
+            "collision_or_wall_budget": 37
+          },
+          "inject_norm_ratio": 0.3921971768140793,
+          "mean_actions": 12.09375,
+          "rollout_success_rate": 0.328125,
+          "supervised_action_accuracy": 0.5919881305637982,
+          "trace_examples": [
+            {
+              "actions": "UURRUUURRRURRR",
+              "final": [
+                0,
+                6
+              ],
+              "goal": [
+                0,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00000"
+            },
+            {
+              "actions": "RRRRRRRRRRRRRR",
+              "final": [
+                1,
+                1
+              ],
+              "goal": [
+                2,
+                5
+              ],
+              "success": false,
+              "world_id": "dev_00001"
+            },
+            {
+              "actions": "RULULRRRRDLLUU",
+              "final": [
+                3,
+                2
+              ],
+              "goal": [
+                3,
+                2
+              ],
+              "success": true,
+              "world_id": "dev_00002"
+            },
+            {
+              "actions": "DDDRRRRRDDDDDL",
+              "final": [
+                6,
+                5
+              ],
+              "goal": [
+                6,
+                4
+              ],
+              "success": false,
+              "world_id": "dev_00003"
+            },
+            {
+              "actions": "DDLRRRRDRDL",
+              "final": [
+                5,
+                5
+              ],
+              "goal": [
+                5,
+                5
+              ],
+              "success": true,
+              "world_id": "dev_00004"
+            }
+          ],
+          "valid_action_rate": 0.49483204134366926
+        }
+      },
+      "config": {
+        "cross_layers": [],
+        "cross_mode": "cross_peer",
+        "name": "cross_causal_mean_summary",
+        "query_mode": "subtask",
+        "roles": [
+          "planner",
+          "reader",
+          "critic",
+          "actor"
+        ],
+        "shared_query": false,
+        "summary_mode": "causal_mean"
+      },
+      "dataset": {
+        "dev_step_examples": 674,
+        "dev_worlds": 64,
+        "train_step_examples": 2003,
+        "train_worlds": 192
+      },
+      "first_gradient_summary": {
+        "action_head_grad_norm": 2.2109676803847456,
+        "backbone_grad_norm": 1.4088544222921306,
+        "cross_qkv_grad_norm": 0.5495074530538656
+      },
+      "history": [
+        {
+          "dev_action_accuracy": 0.39020771513353114,
+          "epoch": 1.0,
+          "train_loss": 1.3898946046829224
+        },
+        {
+          "dev_action_accuracy": 0.4317507418397626,
+          "epoch": 2.0,
+          "train_loss": 1.2372131631487893
+        },
+        {
+          "dev_action_accuracy": 0.5059347181008902,
+          "epoch": 3.0,
+          "train_loss": 1.1176035688036965
+        },
+        {
+          "dev_action_accuracy": 0.5252225519287834,
+          "epoch": 4.0,
+          "train_loss": 1.023792224270957
+        },
+        {
+          "dev_action_accuracy": 0.6068249258160238,
+          "epoch": 5.0,
+          "train_loss": 0.8616329914047605
+        },
+        {
+          "dev_action_accuracy": 0.6186943620178041,
+          "epoch": 6.0,
+          "train_loss": 0.7146451558385577
+        },
+        {
+          "dev_action_accuracy": 0.5801186943620178,
+          "epoch": 7.0,
+          "train_loss": 0.6294692967619214
+        },
+        {
+          "dev_action_accuracy": 0.6483679525222552,
+          "epoch": 8.0,
+          "train_loss": 0.6012952200004033
+        },
+        {
+          "dev_action_accuracy": 0.6454005934718101,
+          "epoch": 9.0,
+          "train_loss": 0.5579556538945153
+        },
+        {
+          "dev_action_accuracy": 0.6646884272997032,
+          "epoch": 10.0,
+          "train_loss": 0.5199137911910102
+        },
+        {
+          "dev_action_accuracy": 0.6261127596439169,
+          "epoch": 11.0,
+          "train_loss": 0.4501307649271829
+        },
+        {
+          "dev_action_accuracy": 0.6468842729970327,
+          "epoch": 12.0,
+          "train_loss": 0.37769446202686857
+        },
+        {
+          "dev_action_accuracy": 0.642433234421365,
+          "epoch": 13.0,
+          "train_loss": 0.33731588863191153
+        },
+        {
+          "dev_action_accuracy": 0.6097922848664689,
+          "epoch": 14.0,
+          "train_loss": 0.296460571033614
+        },
+        {
+          "dev_action_accuracy": 0.6008902077151336,
+          "epoch": 15.0,
+          "train_loss": 0.2550761117821648
+        },
+        {
+          "dev_action_accuracy": 0.5979228486646885,
+          "epoch": 16.0,
+          "train_loss": 0.22542807175999596
+        }
+      ],
+      "method": "cross_causal_mean_summary",
+      "metrics": {
+        "actor_attention_mass_by_source": {
+          "actor": 0.0,
+          "critic": 0.3160585016012192,
+          "planner": 0.44958044588565826,
+          "reader": 0.23436108976602554
+        },
+        "attention_entropy": 1.078935980796814,
+        "failure_counts": {
+          "budget_exhausted": 6,
+          "collision_or_wall_budget": 37
+        },
+        "inject_norm_ratio": 0.39929206669330597,
+        "mean_actions": 12.09375,
+        "rollout_success_rate": 0.328125,
+        "supervised_action_accuracy": 0.5979228486646885,
+        "trace_examples": [
+          {
+            "actions": "UURRUUURRRURRR",
+            "final": [
+              0,
+              6
+            ],
+            "goal": [
+              0,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00000"
+          },
+          {
+            "actions": "RRRRRRRRRRRRRR",
+            "final": [
+              1,
+              1
+            ],
+            "goal": [
+              2,
+              5
+            ],
+            "success": false,
+            "world_id": "dev_00001"
+          },
+          {
+            "actions": "RULULRRRRDLLUU",
+            "final": [
+              3,
+              2
+            ],
+            "goal": [
+              3,
+              2
+            ],
+            "success": true,
+            "world_id": "dev_00002"
+          },
+          {
+            "actions": "DDDRRRRRDDDDDL",
+            "final": [
+              6,
+              5
+            ],
+            "goal": [
+              6,
+              4
+            ],
+            "success": false,
+            "world_id": "dev_00003"
+          },
+          {
+            "actions": "DDLRRRRDRDL",
+            "final": [
+              5,
+              5
+            ],
+            "goal": [
+              5,
+              5
+            ],
+            "success": true,
+            "world_id": "dev_00004"
+          }
+        ],
+        "valid_action_rate": 0.49612403100775193
+      },
+      "model_debug": {
+        "cross_layers": [
+          1,
+          2
+        ],
+        "diagnostics": [
+          {
+            "attention_entropy": 0.822497546672821,
+            "attention_mass": [
+              [
+                0.0,
+                0.3636884391307831,
+                0.31943395733833313,
+                0.316877543926239
+              ],
+              [
+                0.35807231068611145,
+                0.0,
+                0.33038845658302307,
+                0.31153926253318787
+              ],
+              [
+                0.31310272216796875,
+                0.35870450735092163,
+                0.0,
+                0.3281927704811096
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.9999999403953552
+              ]
+            ],
+            "inject_norm_ratio": 0.5857889652252197,
+            "layer": 1
+          },
+          {
+            "attention_entropy": 0.8232923150062561,
+            "attention_mass": [
+              [
+                0.0,
+                0.3299677073955536,
+                0.32970210909843445,
+                0.3403301537036896
+              ],
+              [
+                0.3428827226161957,
+                0.0,
+                0.34081441164016724,
+                0.3163028359413147
+              ],
+              [
+                0.3526681959629059,
+                0.32288500666618347,
+                0.0,
+                0.32444676756858826
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.9999999403953552
+              ]
+            ],
+            "inject_norm_ratio": 0.1942935287952423,
+            "layer": 2
+          }
+        ],
+        "logits_shape": [
+          47,
+          4
+        ],
+        "role_count": 4
+      },
+      "param_count": 223940,
+      "runtime_seconds": 6.5693225000286475,
+      "seed": 103,
+      "trainable_param_count": 223940
+    }
+  ],
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "still_not_tried_after_stage11b": [
+    "A pretrained causal decoder checkpoint.",
+    "Full token-level cross-role attention instead of role summaries.",
+    "Learned or external subtask decomposition beyond fixed role/subtask tokens.",
+    "Learned residual gate schedules or initialized near-zero gates.",
+    "Retrained mechanism controls for every variant.",
+    "More role-count schedules beyond four roles and Actor/Critic two-role.",
+    "Larger model/data/epoch scaling and difficulty-sliced validation.",
+    "Held-out final evaluation."
+  ],
+  "tried_before_stage11b": [
+    "Single Actor baseline with one Actor stream and no cross-agent path.",
+    "Role Clones, No Latent Cross-Agent Path with Planner/Reader/Critic/Actor streams.",
+    "Capacity Control, Self Read with the cross block restricted to self-state reads.",
+    "Base Proposed Cross-Agent Latent Attention with middle-plus-late insertion, last-token summaries, and subtask-only Q.",
+    "Shared-Query Control replacing role/subtask-specific Q with a learned shared query.",
+    "Eval-time ablations on the base proposed model: remove path, role K/V shuffle, cross-task K/V shuffle, Actor peer-read mask."
+  ]
+}

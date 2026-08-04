@@ -1,0 +1,432 @@
+## Summary of what we have proven so far
+
+### 1. Core controlled proof: shared-weight cloned agents can learn latent coordination
+
+**Proven in:** controlled semantic benchmark / Stage 3-style validation
+**Main idea:** one shared model is cloned into multiple agents; each clone sees a partial view; a coordinator reads internal activations; group loss updates the shared model.
+
+**What was proven:**
+
+* A **trainable shared cloned model** can learn internal activations that become useful for coordination.
+* The result is not explained by frozen hidden states alone.
+* The result is not explained by text-only communication.
+* The result survives random-label, shuffled-view, hidden-shuffle, and leakage controls.
+
+**Representative result:**
+
+```text
+trainable latent clones: ~0.88
+frozen same architecture: ~0.43–0.45
+text-only: ~0.12
+chance: 0.125
+```
+
+**Key implication:**
+
+> Training the shared cloned model matters. The coordinator alone cannot explain the win.
+
+---
+
+### 2. Winning architecture discovery: candidate-token-direct coordination
+
+**Proven in:** Stage 4 architecture search and final validation
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_SCHEMA_AWARE_ARCHITECTURE_SEARCH.md
+results/stage4_schema_aware_architecture_search_results.json
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+results/stage4_final_candidate_token_direct_validation_results.json
+results/stage4_final_candidate_token_direct_validation_audit.jsonl
+```
+
+**Model/variant:**
+
+```text
+candidate_token_direct_lr3e4_clip1
+```
+
+**Architecture:**
+
+```text
+shared-weight cloned agent
+candidate-conditioned readout
+candidate queries attend directly over role token states
+LR = 3e-4
+gradient clipping = 1.0
+frozen same-architecture comparator
+```
+
+**What was proven:**
+
+* Candidate-specific token querying works much better than generic role messages.
+* Each candidate can directly query each clone’s internal token states for supporting/rejecting evidence.
+* The trainable shared model massively outperforms the frozen same-architecture comparator.
+
+**Final Stage 4 result:**
+
+```text
+trainable: 0.7892
+frozen:    0.1518
+delta:    +0.6374
+95% CI:   [0.4818, 0.7836]
+wins:     10/10 seeds
+```
+
+**Key implication:**
+
+> The architecture should not ask each clone to send one generic hidden message. The better design is to let each candidate answer directly interrogate each clone’s token states.
+
+---
+
+### 3. Real-code schema-aware benchmark proof
+
+**Proven in:** clean real-code import-restoration benchmark
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+results/stage4_final_candidate_token_direct_validation_results.json
+results/stage4_final_candidate_token_direct_validation_audit.jsonl
+```
+
+**Benchmark:**
+
+```text
+Stage 3.8 schema-aware real-code import-restoration benchmark
+balanced_categories_v3
+8-way candidate selection
+4 role views
+real program-analysis style evidence
+```
+
+**What was proven:**
+
+* The benchmark is not solved by candidate-only information.
+* It is not solved by schema-only information.
+* It is not solved by evidence-only without candidates.
+* It is not solved by text-only baselines.
+* It is not solved by single-view baselines.
+* It is not solved by raw latent baselines.
+* It is not solved by frozen hidden states alone.
+* Trainable shared clones solve it much better.
+
+**Important controls passed:**
+
+```text
+candidate_only: near chance
+candidate_metadata_only: near chance
+view_masked_candidates_visible: near chance
+schema_only: near chance
+null_evidence_values: near chance
+evidence_only_no_candidates: near chance
+value_shuffle_within_schema: near chance
+cross_example_view_bundle_shuffle: near chance
+candidate_evidence_mismatch: near chance
+schema_preserved_role_value_shuffle: near chance
+randomized_labels: near chance
+hidden_states_shuffled_across_examples: near chance
+```
+
+**Key implication:**
+
+> The model is not using obvious shortcuts. It needs matched candidate/evidence compatibility across views.
+
+---
+
+### 4. Frozen-comparator proof: the win comes from training the shared model
+
+**Proven in:** final Stage 4 validation
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+results/stage4_final_candidate_token_direct_validation_audit.jsonl
+```
+
+**What was proven:**
+
+* The frozen comparator used the same architecture and training budget.
+* Only the shared cloned model weights were frozen.
+* Frozen shared model gradient was zero.
+* Frozen shared model parameter delta was zero.
+* Trainable shared model had nonzero gradients and parameter changes.
+
+**Final audit pattern:**
+
+```text
+trainable shared grad: nonzero
+trainable shared delta: nonzero
+frozen shared grad: 0.0000
+frozen shared delta: 0.0000
+shared identity: true
+```
+
+**Key implication:**
+
+> This is not merely a coordinator learning to read pre-existing hidden states. The shared model itself learned to produce coordination-useful internal token states.
+
+---
+
+### 5. Text coordination failed while latent coordination succeeded
+
+**Proven in:** Stage 4 final validation
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+results/stage4_final_candidate_token_direct_validation_results.json
+```
+
+**Result:**
+
+```text
+trainable latent: 0.7892
+text-only:        0.1256
+chance:           0.1250
+```
+
+**What was proven:**
+
+* Text-only multi-agent coordination stayed at chance.
+* The latent trained system solved the same task far above chance.
+* This supports the benefit of internal latent coordination over text summary coordination on this benchmark.
+
+**Key implication:**
+
+> For this class of multi-view candidate-selection task, hidden-state coordination can carry useful evidence that text-only communication fails to capture.
+
+---
+
+### 6. Single-view baselines failed: the system combines distributed evidence
+
+**Proven in:** Stage 4 final validation
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+results/stage4_final_candidate_token_direct_validation_results.json
+```
+
+**Single-view baselines:**
+
+```text
+single_view_text_role_0: ~0.1258
+single_view_text_role_1: ~0.1246
+single_view_text_role_2: ~0.1225
+single_view_text_role_3: ~0.1246
+chance: 0.1250
+```
+
+**What was proven:**
+
+* No individual role view solves the task by itself.
+* The full trainable latent system solves it.
+* The task requires matched multi-view evidence, not a single obvious clue.
+
+**Key implication:**
+
+> The architecture is doing multi-view evidence fusion, not single-view shortcut extraction.
+
+---
+
+### 7. Physical role-order invariance was fixed and validated
+
+**Proven in:** Stage 4.1 audit and corrected final Stage 4 report
+**Main files/artifacts:**
+
+```text
+reports/STAGE41_PHYSICAL_ORDER_INVARIANCE_AUDIT.md
+results/stage41_physical_order_invariance_audit.json
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+```
+
+**Bug found:**
+
+```text
+legacy evaluator permuted role_ids and clone_activations
+but did not permute token_states or token_mask
+```
+
+**Corrected result:**
+
+```text
+normal mean:              0.7904
+correct all-24 mean:      0.7904
+canonicalized mean:       0.7904
+legacy buggy mean:        0.2701
+```
+
+**What was proven:**
+
+* The previous physical-order failure was an evaluator bug.
+* After permuting all role-axis tensors together, all 24 role permutations match normal accuracy.
+* The candidate-token-direct architecture is invariant to physical role ordering when evaluated correctly.
+
+**Key implication:**
+
+> The model is not relying on arbitrary role seat position. It uses role-aligned evidence correctly.
+
+---
+
+### 8. Multi-avenue expansion improves performance as a portfolio/search mechanism
+
+**Proven in:** Stage 5 and Stage 5.1
+**Main files/artifacts:**
+
+```text
+reports/STAGE5_MULTI_AVENUE_SEARCH.md
+results/stage5_multi_avenue_search_results.json
+results/stage5_multi_avenue_search_audit.jsonl
+reports/STAGE51_MULTI_AVENUE_PORTFOLIO_ANALYSIS.md
+results/stage51_multi_avenue_portfolio_analysis.json
+```
+
+**Stage 5 model/variant:**
+
+```text
+avenue4_goal_dropout05_lr3e4_clip1
+```
+
+**Result:**
+
+```text
+Stage 4 4x1 baseline: 0.7892
+Stage 5 full 4-avenue: 0.9144
+best fixed single avenue: 0.8489
+random single avenue: 0.6027
+```
+
+**What was proven:**
+
+* Giving each role multiple avenues improves mean accuracy.
+* Full 4-avenue model beats Stage 4 baseline.
+* Full 4-avenue model beats the best fixed single avenue on average.
+* Different avenues dominate different seeds/families.
+* Controls remain passing.
+
+**What was not proven:**
+
+* It does **not** prove mandatory joint fusion of all avenues.
+* In several seeds, one avenue alone recovered most of the result.
+
+**Correct interpretation:**
+
+> Multi-avenue expansion works as a latent portfolio/search mechanism, not necessarily as mandatory joint multi-avenue reasoning.
+
+**Key implication:**
+
+> You may not need thousands of agents. A few stable roles can each explore multiple hidden investigation paths, and candidate queries can select the useful path.
+
+---
+
+### 9. Architecture-level auditability was demonstrated
+
+**Proven across:** Stages 3.8, 4, 4.1, 5.1
+**Main files/artifacts:**
+
+```text
+reports/STAGE4_FINAL_CANDIDATE_TOKEN_DIRECT_VALIDATION.md
+reports/STAGE41_PHYSICAL_ORDER_INVARIANCE_AUDIT.md
+reports/STAGE51_MULTI_AVENUE_PORTFOLIO_ANALYSIS.md
+```
+
+**Auditable components:**
+
+```text
+role views
+avenues
+candidate queries
+token states
+candidate-only controls
+schema-only controls
+view-masked controls
+hidden-state shuffle
+value shuffle
+candidate-evidence mismatch
+physical-order permutations
+candidate-order permutations
+frozen-vs-trainable comparison
+single-view baselines
+single-avenue ablations
+```
+
+**What this enables:**
+
+* You can test whether the model uses candidates.
+* You can test whether it uses evidence.
+* You can test whether it uses matched candidate/evidence compatibility.
+* You can test whether frozen activations are enough.
+* You can test whether text communication is enough.
+* You can test whether one view or one avenue explains the result.
+* You can test whether role/candidate order matters.
+
+**Key implication:**
+
+> The architecture is not fully mechanistically interpretable, but it is highly auditable at the system/coordination level.
+
+---
+
+## Main proven claims
+
+### Strongly supported claim
+
+> A shared-weight cloned transformer-like model can be trained so candidate-specific queries into its clones’ internal token states become useful for coordination, substantially outperforming an exact frozen same-architecture comparator and text/raw/single-view baselines on a clean schema-aware real-code import-restoration benchmark.
+
+### Strongly supported numbers
+
+```text
+Stage 4 final:
+trainable latent: 0.7892
+frozen same architecture: 0.1518
+text-only: 0.1256
+chance: 0.1250
+delta: +0.6374
+CI: [0.4818, 0.7836]
+wins: 10/10 seeds
+```
+
+### Stage 5 portfolio extension
+
+```text
+Stage 5 full 4-avenue:
+trainable: 0.9144
+frozen: 0.2655
+delta: +0.6488
+
+Stage 4 baseline:
+trainable: 0.7892
+frozen: 0.1518
+delta: +0.6374
+```
+
+### Best concise summary
+
+> Stage 4 proves trained latent coordination between shared-weight cloned agents on a clean real-code candidate-selection task. Stage 5 shows that letting each role explore multiple latent avenues improves the system as a portfolio/search mechanism.
+
+---
+
+## What has **not** been proven yet
+
+Do **not** claim these yet:
+
+* Open-ended code repair.
+* SWE-bench success.
+* General coding-agent superiority.
+* Human-level coding.
+* Lower dollar cost in production.
+* Faster wall-clock inference.
+* Faster training.
+* Scaling to thousands of full agents.
+* Mandatory joint multi-avenue fusion.
+* Full mechanistic interpretability.
+
+---
+
+## Current research position
+
+The strongest current position is:
+
+> Prior work has studied learned communication and latent inter-agent communication, but this project demonstrates a specific architecture-level proof: shared-weight cloned agents trained end-to-end for candidate-specific latent coordination, validated against frozen same-architecture, text, raw-latent, single-view, shortcut, corruption, invariance, leakage, and parameter-update controls on a clean real-code schema-aware benchmark.
+
+That is the clean result.

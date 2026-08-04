@@ -1,0 +1,573 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": true,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ]
+    ],
+    "junction_points": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "junction_variant": true,
+    "last_attention_paths": [
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ],
+      [
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal",
+        "sdpa_causal"
+      ]
+    ],
+    "note": "Avenue streams use causal SDPA; junction tokens use causal prefix bottleneck attention over avenue states."
+  },
+  "avenue_controls": {
+    "base_accuracy": 0.09375,
+    "base_loss": 4.270599365234375,
+    "controls": {
+      "avenue_order_shuffle": {
+        "accuracy": 0.0625,
+        "drop": 0.03125,
+        "examples": 96,
+        "loss": 4.295155843098958,
+        "tokens_per_sec": 30003.603949384877
+      },
+      "avenue_random": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.07291666666666667,
+        "examples": 96,
+        "loss": 5.406697591145833,
+        "tokens_per_sec": 30782.11831563297
+      },
+      "avenue_shuffle": {
+        "accuracy": 0.0,
+        "drop": 0.09375,
+        "examples": 96,
+        "loss": 4.777669270833333,
+        "tokens_per_sec": 30307.12602331975
+      },
+      "avenue_zero": {
+        "accuracy": 0.0,
+        "drop": 0.09375,
+        "examples": 96,
+        "loss": 4.593790690104167,
+        "tokens_per_sec": 32278.892996293845
+      },
+      "hidden_state_shuffle": {
+        "accuracy": 0.010416666666666666,
+        "drop": 0.08333333333333333,
+        "examples": 96,
+        "loss": 4.68267822265625,
+        "tokens_per_sec": 30873.18502684256
+      }
+    },
+    "examples": 96,
+    "full_minus_max_single_avenue": 0.02083333333333333,
+    "junction_controls": {
+      "junction_point_zero_0": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.269968668619792,
+        "tokens_per_sec": 30640.19760451814
+      },
+      "junction_point_zero_1": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.270395914713542,
+        "tokens_per_sec": 31895.989172075275
+      },
+      "junction_point_zero_2": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.270528157552083,
+        "tokens_per_sec": 32168.179261137622
+      },
+      "junction_point_zero_3": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.27032470703125,
+        "tokens_per_sec": 31432.270975724485
+      },
+      "junction_random": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.270182291666667,
+        "tokens_per_sec": 29157.54899892039
+      },
+      "junction_shuffle": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.270284016927083,
+        "tokens_per_sec": 32044.018800223002
+      },
+      "junction_zero": {
+        "accuracy": 0.09375,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 4.270161946614583,
+        "tokens_per_sec": 32058.122041827806
+      }
+    },
+    "leave_one_avenue_out": {
+      "leave_one_0": {
+        "accuracy": 0.07291666666666667,
+        "drop": 0.02083333333333333,
+        "loss": 4.303436279296875
+      },
+      "leave_one_1": {
+        "accuracy": 0.08333333333333333,
+        "drop": 0.010416666666666671,
+        "loss": 4.317952473958333
+      },
+      "leave_one_2": {
+        "accuracy": 0.08333333333333333,
+        "drop": 0.010416666666666671,
+        "loss": 4.299723307291667
+      },
+      "leave_one_3": {
+        "accuracy": 0.07291666666666667,
+        "drop": 0.02083333333333333,
+        "loss": 4.412272135416667
+      }
+    },
+    "max_single_avenue_accuracy": 0.07291666666666667,
+    "single_avenue": {
+      "single_avenue_0": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.07291666666666667,
+        "loss": 4.6058349609375
+      },
+      "single_avenue_1": {
+        "accuracy": 0.03125,
+        "drop": 0.0625,
+        "loss": 4.611714680989583
+      },
+      "single_avenue_2": {
+        "accuracy": 0.020833333333333332,
+        "drop": 0.07291666666666667,
+        "loss": 4.661366780598958
+      },
+      "single_avenue_3": {
+        "accuracy": 0.07291666666666667,
+        "drop": 0.02083333333333333,
+        "loss": 4.398529052734375
+      }
+    }
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e9\\configs\\junction_every_layer_bottleneck.yaml",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.068359375,
+    "accuracy_by_distractor_count": {
+      "17+": 0.04216867469879518,
+      "5-8": 0.12371134020618557,
+      "9-16": 0.0642570281124498
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.0,
+      "2": 0.08737864077669903,
+      "3": 0.06060606060606061,
+      "4+": 0.07017543859649122
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.0625,
+      "256": 0.0859375
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.045871559633027525,
+      "multi_hop_lookup": 0.10416666666666667,
+      "password_overwrite": 0.08208955223880597,
+      "variable_shadowing": 0.032
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 65.24128974939504,
+    "held_out_template_accuracy": 0.068359375,
+    "layers": {
+      "attention_entropy": [
+        2.895443469285965,
+        4.021258510649204,
+        3.9938789680600166,
+        3.939930573105812
+      ],
+      "avenue_diversity": [
+        0.9033203125,
+        0.9186248779296875,
+        0.920166015625,
+        0.917266845703125
+      ],
+      "avenue_gate_entropy": [
+        1.378309864550829,
+        1.3793859966099262,
+        1.3786457553505898,
+        1.3783510103821754
+      ],
+      "avenue_output_norm": [
+        14.27480924129486,
+        21.83459198474884,
+        26.787829041481018,
+        30.7378648519516
+      ],
+      "avenue_scale": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "avenue_to_junction_attention_entropy": [
+        5.43013596534729,
+        5.336864411830902,
+        5.188694506883621,
+        5.001800030469894
+      ],
+      "avenue_usage_0": [
+        0.2401418020017445,
+        0.24070354038849473,
+        0.22674452839419246,
+        0.22218229994177818
+      ],
+      "avenue_usage_1": [
+        0.2339375433512032,
+        0.241039230953902,
+        0.25303441006690264,
+        0.25829479983076453
+      ],
+      "avenue_usage_2": [
+        0.28046017698943615,
+        0.2753577157855034,
+        0.27669622749090195,
+        0.2735999096184969
+      ],
+      "avenue_usage_3": [
+        0.24546047439798713,
+        0.24289951007813215,
+        0.24352483358234167,
+        0.24592299293726683
+      ],
+      "distractor_avenue_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "distractor_junction_concentration": [
+        0.002984068301429943,
+        0.0029281000714718175,
+        0.003300584945236551,
+        0.0029684489121564184
+      ],
+      "effective_attended_tokens": [
+        28.945538878440857,
+        78.52174961566925,
+        76.97325265407562,
+        73.59214854240417
+      ],
+      "final_avenue_to_junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_attention_entropy": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_diversity": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_effective_source_tokens": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_norm": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "final_junction_token_utilization": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "junction_attention_entropy": [
+        5.43013596534729,
+        5.336864411830902,
+        5.188694506883621,
+        5.001800030469894
+      ],
+      "junction_contribution_norm": [
+        0.07489906286355108,
+        0.1290267447475344,
+        0.07338156527839601,
+        0.11626678565517068
+      ],
+      "junction_diversity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "junction_effective_source_tokens": [
+        320.55028915405273,
+        299.57055950164795,
+        268.69769382476807,
+        231.416512966156
+      ],
+      "junction_norm": [
+        0.540605815127492,
+        0.7597183175384998,
+        0.6854341048747301,
+        1.3810431212186813
+      ],
+      "junction_read_gate": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "junction_read_scale": [
+        0.2831289768218994,
+        0.29554492235183716,
+        0.27231737971305847,
+        0.2774733304977417
+      ],
+      "junction_to_avenue_attention_entropy": [
+        2.079441547393799,
+        2.079441547393799,
+        2.079441547393799,
+        2.079441547393799
+      ],
+      "junction_token_utilization": [
+        1.0,
+        0.9999994616955519,
+        0.9999997951090336,
+        0.9999999143183231
+      ],
+      "pairwise_avenue_cosine": [
+        0.09670257568359375,
+        0.08136558532714844,
+        0.07983589172363281,
+        0.0827789306640625
+      ],
+      "query_useful_gate_cosine": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "useful_evidence_avenue_concentration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_evidence_junction_concentration": [
+        0.0029745570209342986,
+        0.0029245736923257937,
+        0.0030499499212055525,
+        0.0029129851213838265
+      ],
+      "useful_evidence_junction_mass": [
+        0.0038521000533364713,
+        0.003808663300333137,
+        0.00397806351975305,
+        0.003779606174248329
+      ],
+      "useful_top1_avenue_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top1_junction_recall": [
+        0.0029296875,
+        0.0068359375,
+        0.00390625,
+        0.0029296875
+      ],
+      "useful_top1_position_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top3_avenue_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_top3_junction_recall": [
+        0.013671875,
+        0.0244140625,
+        0.017578125,
+        0.013671875
+      ],
+      "useful_top3_position_recall": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_vs_distractor_avenue_auc": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "useful_vs_distractor_junction_auc": [
+        0.47258048472576775,
+        0.5070704195350118,
+        0.42489544521231437,
+        0.4832286728997133
+      ]
+    },
+    "loss": 4.32830810546875,
+    "peak_gpu_memory_mb": 2950.55712890625,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.046875,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.5153656005859375,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.0703125,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 4.1992645263671875,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "many_overwrite": {
+        "accuracy": 0.0703125,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.401832580566406,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      },
+      "seq_len_256": {
+        "accuracy": 0.0859375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 4.196769714355469,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 10438.606359903206,
+    "wall_clock_eval_seconds": 7.8477909000066575
+  },
+  "max_steps": 2500,
+  "parameter_count": 4826513,
+  "peak_gpu_memory_mb": 2950.55712890625,
+  "seed": 0,
+  "train_examples": 40000,
+  "train_examples_per_sec": 86.20537227725185,
+  "train_loss_ema": 4.202702562881727,
+  "train_task_loss_ema": 4.202702562881727,
+  "train_tokens": 5120000,
+  "train_tokens_per_sec": 11034.287651488237,
+  "trainable_parameter_count": 4826513,
+  "variant": "junction_every_layer_bottleneck",
+  "wall_clock_train_seconds": 464.0082043999864
+}

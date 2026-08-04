@@ -1,0 +1,100 @@
+configs:
+  - config_id: 321609740a730eb8
+    architecture_name: e3_clean_qkv_e_wda_realized_weights_09
+    architecture_family: WDA-Realized Attention Weights
+    variant: wda_k
+    held_out_template_dev_accuracy: 0.681250
+    capacity_C: 64
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "321609740a730eb8"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA-Realized Attention Weights"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_realized_attention_weights"
+      mod_k: true
+      mod_q: false
+      mod_v: false
+      mutation_description: "initial"
+      name: "e3_clean_qkv_e_wda_realized_weights_09"
+      parent_config_id: null
+      recency_confidence: false
+      strength: 1.1500000000000001
+      support_contradiction: false
+      trealized_mode: "none"
+      typed_activation_cache: false
+      variant: "wda_k"
+      wda_scope: "k"
+  - config_id: 3b384f535942f26f
+    architecture_name: e3_clean_qkv_e_wda_realized_weights_08
+    architecture_family: WDA-Realized Attention Weights
+    variant: wda_q
+    held_out_template_dev_accuracy: 0.684375
+    capacity_C: 64
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "3b384f535942f26f"
+      control_mode: "frozen_controller"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA-Realized Attention Weights"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_realized_attention_weights"
+      mod_k: false
+      mod_q: true
+      mod_v: false
+      mutation_description: "initial"
+      name: "e3_clean_qkv_e_wda_realized_weights_08"
+      parent_config_id: null
+      recency_confidence: false
+      strength: 1.12
+      support_contradiction: false
+      trealized_mode: "none"
+      typed_activation_cache: false
+      variant: "wda_q"
+      wda_scope: "q"
+  - config_id: 18b0ba366079e67d
+    architecture_name: e3_clean_qkv_e_wda_realized_weights_10
+    architecture_family: WDA-Realized Attention Weights
+    variant: wda_v
+    held_out_template_dev_accuracy: 0.671875
+    capacity_C: 64
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "18b0ba366079e67d"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA-Realized Attention Weights"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_realized_attention_weights"
+      mod_k: false
+      mod_q: false
+      mod_v: true
+      mutation_description: "initial"
+      name: "e3_clean_qkv_e_wda_realized_weights_10"
+      parent_config_id: null
+      recency_confidence: false
+      strength: 1.1800000000000002
+      support_contradiction: false
+      trealized_mode: "none"
+      typed_activation_cache: false
+      variant: "wda_v"
+      wda_scope: "v"

@@ -1,0 +1,60 @@
+usage: run_e5_1_state_stability.py [-h] [--device {cuda,cpu}]
+                                   [--allow-cpu-smoke]
+                                   [--eval-examples EVAL_EXAMPLES]
+                                   [--teacher-eval-examples TEACHER_EVAL_EXAMPLES]
+                                   [--batch-size BATCH_SIZE]
+                                   [--train-lengths TRAIN_LENGTHS]
+                                   [--eval-lengths EVAL_LENGTHS]
+                                   [--baseline-steps BASELINE_STEPS]
+                                   [--replay-steps REPLAY_STEPS]
+                                   [--round1-steps ROUND1_STEPS]
+                                   [--round1-top-steps ROUND1_TOP_STEPS]
+                                   [--round2-steps ROUND2_STEPS]
+                                   [--round2-top-steps ROUND2_TOP_STEPS]
+                                   [--round3-steps ROUND3_STEPS]
+                                   [--max-round MAX_ROUND]
+                                   [--round1-limit ROUND1_LIMIT]
+                                   [--round2-limit ROUND2_LIMIT]
+                                   [--round2-seeds ROUND2_SEEDS]
+                                   [--round3-seeds ROUND3_SEEDS]
+                                   [--randomized-label-steps RANDOMIZED_LABEL_STEPS]
+                                   [--learning-rate LEARNING_RATE]
+                                   [--d-model D_MODEL] [--n-layers N_LAYERS]
+                                   [--n-heads N_HEADS]
+                                   [--num-state-slots NUM_STATE_SLOTS]
+                                   [--no-curriculum]
+                                   [--state-ablation-margin STATE_ABLATION_MARGIN]
+                                   [--seeds SEEDS]
+
+E5.1 Rolling Activation-State Stability and Anti-Collapse
+
+options:
+  -h, --help            show this help message and exit
+  --device {cuda,cpu}
+  --allow-cpu-smoke
+  --eval-examples EVAL_EXAMPLES
+  --teacher-eval-examples TEACHER_EVAL_EXAMPLES
+  --batch-size BATCH_SIZE
+  --train-lengths TRAIN_LENGTHS
+  --eval-lengths EVAL_LENGTHS
+  --baseline-steps BASELINE_STEPS
+  --replay-steps REPLAY_STEPS
+  --round1-steps ROUND1_STEPS
+  --round1-top-steps ROUND1_TOP_STEPS
+  --round2-steps ROUND2_STEPS
+  --round2-top-steps ROUND2_TOP_STEPS
+  --round3-steps ROUND3_STEPS
+  --max-round MAX_ROUND
+  --round1-limit ROUND1_LIMIT
+  --round2-limit ROUND2_LIMIT
+  --round2-seeds ROUND2_SEEDS
+  --round3-seeds ROUND3_SEEDS
+  --randomized-label-steps RANDOMIZED_LABEL_STEPS
+  --learning-rate LEARNING_RATE
+  --d-model D_MODEL
+  --n-layers N_LAYERS
+  --n-heads N_HEADS
+  --num-state-slots NUM_STATE_SLOTS
+  --no-curriculum
+  --state-ablation-margin STATE_ABLATION_MARGIN
+  --seeds SEEDS

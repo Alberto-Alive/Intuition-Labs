@@ -1,0 +1,924 @@
+{
+  "nist_genomics": {
+    "mechanism": {
+      "dp_laplace_e0p1": {
+        "per_seed": [
+          {
+            "auroc": 0.53365,
+            "advantage": 0.06729999999999992,
+            "tpr_at_1pct_fpr": 0.05,
+            "tpr_at_5pct_fpr": 0.07,
+            "query_count": 481000,
+            "cumulative_epsilon": 48100.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.53365,
+              "advantage": 0.06729999999999992,
+              "tpr_at_1pct_fpr": 0.05,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 1000,
+              "cumulative_epsilon": 100.0
+            },
+            "shadow": {
+              "auroc": 0.4771000000000001,
+              "advantage": -0.04579999999999984,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.04,
+              "query_count": 480000,
+              "cumulative_epsilon": 48000.0
+            }
+          },
+          {
+            "auroc": 0.5321,
+            "advantage": 0.06420000000000003,
+            "tpr_at_1pct_fpr": 0.02,
+            "tpr_at_5pct_fpr": 0.06,
+            "query_count": 481000,
+            "cumulative_epsilon": 48100.0,
+            "attack": "shadow",
+            "direct": {
+              "auroc": 0.50755,
+              "advantage": 0.015099999999999891,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 1000,
+              "cumulative_epsilon": 100.0
+            },
+            "shadow": {
+              "auroc": 0.5321,
+              "advantage": 0.06420000000000003,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.06,
+              "query_count": 480000,
+              "cumulative_epsilon": 48000.0
+            }
+          },
+          {
+            "auroc": 0.5086999999999999,
+            "advantage": 0.01739999999999986,
+            "tpr_at_1pct_fpr": 0.02,
+            "tpr_at_5pct_fpr": 0.06,
+            "query_count": 481000,
+            "cumulative_epsilon": 48100.0,
+            "attack": "shadow",
+            "direct": {
+              "auroc": 0.506275,
+              "advantage": 0.012550000000000061,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.02,
+              "query_count": 1000,
+              "cumulative_epsilon": 100.0
+            },
+            "shadow": {
+              "auroc": 0.5086999999999999,
+              "advantage": 0.01739999999999986,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.06,
+              "query_count": 480000,
+              "cumulative_epsilon": 48000.0
+            }
+          },
+          {
+            "auroc": 0.5700000000000001,
+            "advantage": 0.14000000000000012,
+            "tpr_at_1pct_fpr": 0.03,
+            "tpr_at_5pct_fpr": 0.08,
+            "query_count": 481000,
+            "cumulative_epsilon": 48100.0,
+            "attack": "shadow",
+            "direct": {
+              "auroc": 0.4972,
+              "advantage": -0.005600000000000049,
+              "tpr_at_1pct_fpr": 0.015,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 1000,
+              "cumulative_epsilon": 100.0
+            },
+            "shadow": {
+              "auroc": 0.5700000000000001,
+              "advantage": 0.14000000000000012,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.08,
+              "query_count": 480000,
+              "cumulative_epsilon": 48000.0
+            }
+          },
+          {
+            "auroc": 0.5257,
+            "advantage": 0.05139999999999989,
+            "tpr_at_1pct_fpr": 0.01,
+            "tpr_at_5pct_fpr": 0.05,
+            "query_count": 481000,
+            "cumulative_epsilon": 48100.0,
+            "attack": "shadow",
+            "direct": {
+              "auroc": 0.5134,
+              "advantage": 0.026799999999999935,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.05,
+              "query_count": 1000,
+              "cumulative_epsilon": 100.0
+            },
+            "shadow": {
+              "auroc": 0.5257,
+              "advantage": 0.05139999999999989,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.05,
+              "query_count": 480000,
+              "cumulative_epsilon": 48000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.53403,
+        "auroc_std": 0.020043492709605325,
+        "auroc_ci_low": 0.5188944999999999,
+        "auroc_ci_high": 0.5538700000000001,
+        "advantage_mean": 0.06805999999999997,
+        "advantage_std": 0.04008698541921065,
+        "advantage_ci_low": 0.03778899999999988,
+        "advantage_ci_high": 0.10774000000000003,
+        "tpr_at_1pct_fpr_mean": 0.026000000000000002,
+        "tpr_at_1pct_fpr_std": 0.013564659966250536,
+        "tpr_at_1pct_fpr_ci_low": 0.016,
+        "tpr_at_1pct_fpr_ci_high": 0.038,
+        "tpr_at_5pct_fpr_mean": 0.064,
+        "tpr_at_5pct_fpr_std": 0.01019803902718557,
+        "tpr_at_5pct_fpr_ci_low": 0.055999999999999994,
+        "tpr_at_5pct_fpr_ci_high": 0.07200000000000001,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 48100.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 48100.0,
+        "cumulative_epsilon_ci_high": 48100.0
+      },
+      "dp_laplace_e0p25": {
+        "per_seed": [
+          {
+            "auroc": 0.569525,
+            "advantage": 0.1390499999999999,
+            "tpr_at_1pct_fpr": 0.04,
+            "tpr_at_5pct_fpr": 0.075,
+            "query_count": 481000,
+            "cumulative_epsilon": 120250.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.569525,
+              "advantage": 0.1390499999999999,
+              "tpr_at_1pct_fpr": 0.04,
+              "tpr_at_5pct_fpr": 0.075,
+              "query_count": 1000,
+              "cumulative_epsilon": 250.0
+            },
+            "shadow": {
+              "auroc": 0.4717,
+              "advantage": -0.056599999999999984,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.04,
+              "query_count": 480000,
+              "cumulative_epsilon": 120000.0
+            }
+          },
+          {
+            "auroc": 0.55055,
+            "advantage": 0.10109999999999997,
+            "tpr_at_1pct_fpr": 0.01,
+            "tpr_at_5pct_fpr": 0.07,
+            "query_count": 481000,
+            "cumulative_epsilon": 120250.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.55055,
+              "advantage": 0.10109999999999997,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 1000,
+              "cumulative_epsilon": 250.0
+            },
+            "shadow": {
+              "auroc": 0.5331,
+              "advantage": 0.06620000000000004,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.06,
+              "query_count": 480000,
+              "cumulative_epsilon": 120000.0
+            }
+          },
+          {
+            "auroc": 0.5315500000000001,
+            "advantage": 0.06310000000000016,
+            "tpr_at_1pct_fpr": 0.025,
+            "tpr_at_5pct_fpr": 0.07,
+            "query_count": 481000,
+            "cumulative_epsilon": 120250.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.5315500000000001,
+              "advantage": 0.06310000000000016,
+              "tpr_at_1pct_fpr": 0.025,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 1000,
+              "cumulative_epsilon": 250.0
+            },
+            "shadow": {
+              "auroc": 0.5031,
+              "advantage": 0.006199999999999983,
+              "tpr_at_1pct_fpr": 0.0,
+              "tpr_at_5pct_fpr": 0.02,
+              "query_count": 480000,
+              "cumulative_epsilon": 120000.0
+            }
+          },
+          {
+            "auroc": 0.5725,
+            "advantage": 0.14500000000000002,
+            "tpr_at_1pct_fpr": 0.03,
+            "tpr_at_5pct_fpr": 0.12,
+            "query_count": 481000,
+            "cumulative_epsilon": 120250.0,
+            "attack": "shadow",
+            "direct": {
+              "auroc": 0.544,
+              "advantage": 0.08800000000000008,
+              "tpr_at_1pct_fpr": 0.025,
+              "tpr_at_5pct_fpr": 0.085,
+              "query_count": 1000,
+              "cumulative_epsilon": 250.0
+            },
+            "shadow": {
+              "auroc": 0.5725,
+              "advantage": 0.14500000000000002,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.12,
+              "query_count": 480000,
+              "cumulative_epsilon": 120000.0
+            }
+          },
+          {
+            "auroc": 0.5355749999999999,
+            "advantage": 0.07114999999999982,
+            "tpr_at_1pct_fpr": 0.015,
+            "tpr_at_5pct_fpr": 0.055,
+            "query_count": 481000,
+            "cumulative_epsilon": 120250.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.5355749999999999,
+              "advantage": 0.07114999999999982,
+              "tpr_at_1pct_fpr": 0.015,
+              "tpr_at_5pct_fpr": 0.055,
+              "query_count": 1000,
+              "cumulative_epsilon": 250.0
+            },
+            "shadow": {
+              "auroc": 0.5198,
+              "advantage": 0.03960000000000008,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.12,
+              "query_count": 480000,
+              "cumulative_epsilon": 120000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.5519399999999999,
+        "auroc_std": 0.01683712119098748,
+        "auroc_ci_low": 0.53696,
+        "auroc_ci_high": 0.56692,
+        "advantage_mean": 0.10387999999999997,
+        "advantage_std": 0.03367424238197496,
+        "advantage_ci_low": 0.07391999999999999,
+        "advantage_ci_high": 0.13383999999999996,
+        "tpr_at_1pct_fpr_mean": 0.024,
+        "tpr_at_1pct_fpr_std": 0.010677078252031312,
+        "tpr_at_1pct_fpr_ci_low": 0.015,
+        "tpr_at_1pct_fpr_ci_high": 0.033,
+        "tpr_at_5pct_fpr_mean": 0.078,
+        "tpr_at_5pct_fpr_std": 0.0220454076850486,
+        "tpr_at_5pct_fpr_ci_low": 0.062,
+        "tpr_at_5pct_fpr_ci_high": 0.1,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 120250.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 120250.0,
+        "cumulative_epsilon_ci_high": 120250.0
+      },
+      "dp_laplace_e0p5": {
+        "per_seed": [
+          {
+            "auroc": 0.6364000000000001,
+            "advantage": 0.27280000000000015,
+            "tpr_at_1pct_fpr": 0.05,
+            "tpr_at_5pct_fpr": 0.125,
+            "query_count": 481000,
+            "cumulative_epsilon": 240500.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6364000000000001,
+              "advantage": 0.27280000000000015,
+              "tpr_at_1pct_fpr": 0.05,
+              "tpr_at_5pct_fpr": 0.125,
+              "query_count": 1000,
+              "cumulative_epsilon": 500.0
+            },
+            "shadow": {
+              "auroc": 0.48169999999999996,
+              "advantage": -0.03660000000000008,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.03,
+              "query_count": 480000,
+              "cumulative_epsilon": 240000.0
+            }
+          },
+          {
+            "auroc": 0.59185,
+            "advantage": 0.18369999999999997,
+            "tpr_at_1pct_fpr": 0.035,
+            "tpr_at_5pct_fpr": 0.075,
+            "query_count": 481000,
+            "cumulative_epsilon": 240500.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.59185,
+              "advantage": 0.18369999999999997,
+              "tpr_at_1pct_fpr": 0.035,
+              "tpr_at_5pct_fpr": 0.075,
+              "query_count": 1000,
+              "cumulative_epsilon": 500.0
+            },
+            "shadow": {
+              "auroc": 0.5355,
+              "advantage": 0.07099999999999995,
+              "tpr_at_1pct_fpr": 0.04,
+              "tpr_at_5pct_fpr": 0.09,
+              "query_count": 480000,
+              "cumulative_epsilon": 240000.0
+            }
+          },
+          {
+            "auroc": 0.590225,
+            "advantage": 0.18045,
+            "tpr_at_1pct_fpr": 0.035,
+            "tpr_at_5pct_fpr": 0.125,
+            "query_count": 481000,
+            "cumulative_epsilon": 240500.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.590225,
+              "advantage": 0.18045,
+              "tpr_at_1pct_fpr": 0.035,
+              "tpr_at_5pct_fpr": 0.125,
+              "query_count": 1000,
+              "cumulative_epsilon": 500.0
+            },
+            "shadow": {
+              "auroc": 0.5001,
+              "advantage": 0.00019999999999997797,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.03,
+              "query_count": 480000,
+              "cumulative_epsilon": 240000.0
+            }
+          },
+          {
+            "auroc": 0.6099749999999999,
+            "advantage": 0.21994999999999987,
+            "tpr_at_1pct_fpr": 0.04,
+            "tpr_at_5pct_fpr": 0.165,
+            "query_count": 481000,
+            "cumulative_epsilon": 240500.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6099749999999999,
+              "advantage": 0.21994999999999987,
+              "tpr_at_1pct_fpr": 0.04,
+              "tpr_at_5pct_fpr": 0.165,
+              "query_count": 1000,
+              "cumulative_epsilon": 500.0
+            },
+            "shadow": {
+              "auroc": 0.5628,
+              "advantage": 0.12559999999999993,
+              "tpr_at_1pct_fpr": 0.04,
+              "tpr_at_5pct_fpr": 0.1,
+              "query_count": 480000,
+              "cumulative_epsilon": 240000.0
+            }
+          },
+          {
+            "auroc": 0.601925,
+            "advantage": 0.2038500000000001,
+            "tpr_at_1pct_fpr": 0.015,
+            "tpr_at_5pct_fpr": 0.075,
+            "query_count": 481000,
+            "cumulative_epsilon": 240500.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.601925,
+              "advantage": 0.2038500000000001,
+              "tpr_at_1pct_fpr": 0.015,
+              "tpr_at_5pct_fpr": 0.075,
+              "query_count": 1000,
+              "cumulative_epsilon": 500.0
+            },
+            "shadow": {
+              "auroc": 0.5153,
+              "advantage": 0.03059999999999996,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.05,
+              "query_count": 480000,
+              "cumulative_epsilon": 240000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.6060749999999999,
+        "auroc_std": 0.016766700629521625,
+        "auroc_ci_low": 0.59354,
+        "auroc_ci_high": 0.622205,
+        "advantage_mean": 0.21215,
+        "advantage_std": 0.03353340125904325,
+        "advantage_ci_low": 0.18708,
+        "advantage_ci_high": 0.24441000000000007,
+        "tpr_at_1pct_fpr_mean": 0.034999999999999996,
+        "tpr_at_1pct_fpr_std": 0.01140175425099138,
+        "tpr_at_1pct_fpr_ci_low": 0.024,
+        "tpr_at_1pct_fpr_ci_high": 0.044000000000000004,
+        "tpr_at_5pct_fpr_mean": 0.11299999999999999,
+        "tpr_at_5pct_fpr_std": 0.0342928563989645,
+        "tpr_at_5pct_fpr_ci_low": 0.08499999999999999,
+        "tpr_at_5pct_fpr_ci_high": 0.14100000000000001,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 240500.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 240500.0,
+        "cumulative_epsilon_ci_high": 240500.0
+      },
+      "dp_laplace_e1p0": {
+        "per_seed": [
+          {
+            "auroc": 0.6918000000000001,
+            "advantage": 0.38360000000000016,
+            "tpr_at_1pct_fpr": 0.11,
+            "tpr_at_5pct_fpr": 0.16,
+            "query_count": 481000,
+            "cumulative_epsilon": 481000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6918000000000001,
+              "advantage": 0.38360000000000016,
+              "tpr_at_1pct_fpr": 0.11,
+              "tpr_at_5pct_fpr": 0.16,
+              "query_count": 1000,
+              "cumulative_epsilon": 1000.0
+            },
+            "shadow": {
+              "auroc": 0.48450000000000004,
+              "advantage": -0.030999999999999917,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.05,
+              "query_count": 480000,
+              "cumulative_epsilon": 480000.0
+            }
+          },
+          {
+            "auroc": 0.6657,
+            "advantage": 0.3313999999999999,
+            "tpr_at_1pct_fpr": 0.03,
+            "tpr_at_5pct_fpr": 0.1,
+            "query_count": 481000,
+            "cumulative_epsilon": 481000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6657,
+              "advantage": 0.3313999999999999,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.1,
+              "query_count": 1000,
+              "cumulative_epsilon": 1000.0
+            },
+            "shadow": {
+              "auroc": 0.5399999999999999,
+              "advantage": 0.07999999999999985,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.09,
+              "query_count": 480000,
+              "cumulative_epsilon": 480000.0
+            }
+          },
+          {
+            "auroc": 0.63415,
+            "advantage": 0.2683,
+            "tpr_at_1pct_fpr": 0.06,
+            "tpr_at_5pct_fpr": 0.185,
+            "query_count": 481000,
+            "cumulative_epsilon": 481000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.63415,
+              "advantage": 0.2683,
+              "tpr_at_1pct_fpr": 0.06,
+              "tpr_at_5pct_fpr": 0.185,
+              "query_count": 1000,
+              "cumulative_epsilon": 1000.0
+            },
+            "shadow": {
+              "auroc": 0.5065999999999999,
+              "advantage": 0.013199999999999878,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.06,
+              "query_count": 480000,
+              "cumulative_epsilon": 480000.0
+            }
+          },
+          {
+            "auroc": 0.6604,
+            "advantage": 0.3208,
+            "tpr_at_1pct_fpr": 0.08,
+            "tpr_at_5pct_fpr": 0.215,
+            "query_count": 481000,
+            "cumulative_epsilon": 481000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6604,
+              "advantage": 0.3208,
+              "tpr_at_1pct_fpr": 0.08,
+              "tpr_at_5pct_fpr": 0.215,
+              "query_count": 1000,
+              "cumulative_epsilon": 1000.0
+            },
+            "shadow": {
+              "auroc": 0.5636000000000001,
+              "advantage": 0.1272000000000002,
+              "tpr_at_1pct_fpr": 0.06,
+              "tpr_at_5pct_fpr": 0.11,
+              "query_count": 480000,
+              "cumulative_epsilon": 480000.0
+            }
+          },
+          {
+            "auroc": 0.6808750000000001,
+            "advantage": 0.36175000000000024,
+            "tpr_at_1pct_fpr": 0.045,
+            "tpr_at_5pct_fpr": 0.2,
+            "query_count": 481000,
+            "cumulative_epsilon": 481000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6808750000000001,
+              "advantage": 0.36175000000000024,
+              "tpr_at_1pct_fpr": 0.045,
+              "tpr_at_5pct_fpr": 0.2,
+              "query_count": 1000,
+              "cumulative_epsilon": 1000.0
+            },
+            "shadow": {
+              "auroc": 0.5169,
+              "advantage": 0.03380000000000005,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.05,
+              "query_count": 480000,
+              "cumulative_epsilon": 480000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.6665850000000001,
+        "auroc_std": 0.01965231284098647,
+        "auroc_ci_low": 0.65090425,
+        "auroc_ci_high": 0.6822100000000002,
+        "advantage_mean": 0.3331700000000001,
+        "advantage_std": 0.03930462568197294,
+        "advantage_ci_low": 0.30180850000000004,
+        "advantage_ci_high": 0.36442000000000013,
+        "tpr_at_1pct_fpr_mean": 0.065,
+        "tpr_at_1pct_fpr_std": 0.027928480087537885,
+        "tpr_at_1pct_fpr_ci_low": 0.041999999999999996,
+        "tpr_at_1pct_fpr_ci_high": 0.091,
+        "tpr_at_5pct_fpr_mean": 0.17200000000000001,
+        "tpr_at_5pct_fpr_std": 0.0403236903073119,
+        "tpr_at_5pct_fpr_ci_low": 0.13394999999999999,
+        "tpr_at_5pct_fpr_ci_high": 0.20299999999999999,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 481000.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 481000.0,
+        "cumulative_epsilon_ci_high": 481000.0
+      },
+      "dp_laplace_e2p0": {
+        "per_seed": [
+          {
+            "auroc": 0.7390000000000001,
+            "advantage": 0.4780000000000002,
+            "tpr_at_1pct_fpr": 0.155,
+            "tpr_at_5pct_fpr": 0.33,
+            "query_count": 481000,
+            "cumulative_epsilon": 962000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7390000000000001,
+              "advantage": 0.4780000000000002,
+              "tpr_at_1pct_fpr": 0.155,
+              "tpr_at_5pct_fpr": 0.33,
+              "query_count": 1000,
+              "cumulative_epsilon": 2000.0
+            },
+            "shadow": {
+              "auroc": 0.4864,
+              "advantage": -0.027200000000000002,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.04,
+              "query_count": 480000,
+              "cumulative_epsilon": 960000.0
+            }
+          },
+          {
+            "auroc": 0.7132499999999999,
+            "advantage": 0.4264999999999999,
+            "tpr_at_1pct_fpr": 0.085,
+            "tpr_at_5pct_fpr": 0.275,
+            "query_count": 481000,
+            "cumulative_epsilon": 962000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7132499999999999,
+              "advantage": 0.4264999999999999,
+              "tpr_at_1pct_fpr": 0.085,
+              "tpr_at_5pct_fpr": 0.275,
+              "query_count": 1000,
+              "cumulative_epsilon": 2000.0
+            },
+            "shadow": {
+              "auroc": 0.5399,
+              "advantage": 0.0798000000000001,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 480000,
+              "cumulative_epsilon": 960000.0
+            }
+          },
+          {
+            "auroc": 0.6972750000000001,
+            "advantage": 0.3945500000000002,
+            "tpr_at_1pct_fpr": 0.14,
+            "tpr_at_5pct_fpr": 0.375,
+            "query_count": 481000,
+            "cumulative_epsilon": 962000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.6972750000000001,
+              "advantage": 0.3945500000000002,
+              "tpr_at_1pct_fpr": 0.14,
+              "tpr_at_5pct_fpr": 0.375,
+              "query_count": 1000,
+              "cumulative_epsilon": 2000.0
+            },
+            "shadow": {
+              "auroc": 0.4975,
+              "advantage": -0.0050000000000000044,
+              "tpr_at_1pct_fpr": 0.0,
+              "tpr_at_5pct_fpr": 0.01,
+              "query_count": 480000,
+              "cumulative_epsilon": 960000.0
+            }
+          },
+          {
+            "auroc": 0.7111999999999999,
+            "advantage": 0.4223999999999999,
+            "tpr_at_1pct_fpr": 0.14,
+            "tpr_at_5pct_fpr": 0.455,
+            "query_count": 481000,
+            "cumulative_epsilon": 962000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7111999999999999,
+              "advantage": 0.4223999999999999,
+              "tpr_at_1pct_fpr": 0.14,
+              "tpr_at_5pct_fpr": 0.455,
+              "query_count": 1000,
+              "cumulative_epsilon": 2000.0
+            },
+            "shadow": {
+              "auroc": 0.5644,
+              "advantage": 0.12880000000000003,
+              "tpr_at_1pct_fpr": 0.04,
+              "tpr_at_5pct_fpr": 0.15,
+              "query_count": 480000,
+              "cumulative_epsilon": 960000.0
+            }
+          },
+          {
+            "auroc": 0.7298,
+            "advantage": 0.4596,
+            "tpr_at_1pct_fpr": 0.155,
+            "tpr_at_5pct_fpr": 0.34,
+            "query_count": 481000,
+            "cumulative_epsilon": 962000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7298,
+              "advantage": 0.4596,
+              "tpr_at_1pct_fpr": 0.155,
+              "tpr_at_5pct_fpr": 0.34,
+              "query_count": 1000,
+              "cumulative_epsilon": 2000.0
+            },
+            "shadow": {
+              "auroc": 0.5164,
+              "advantage": 0.03279999999999994,
+              "tpr_at_1pct_fpr": 0.05,
+              "tpr_at_5pct_fpr": 0.1,
+              "query_count": 480000,
+              "cumulative_epsilon": 960000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.718105,
+        "auroc_std": 0.014686817218172235,
+        "auroc_ci_low": 0.70604,
+        "auroc_ci_high": 0.73017,
+        "advantage_mean": 0.43621,
+        "advantage_std": 0.02937363443634447,
+        "advantage_ci_low": 0.41208,
+        "advantage_ci_high": 0.4603400000000001,
+        "tpr_at_1pct_fpr_mean": 0.135,
+        "tpr_at_1pct_fpr_std": 0.02588435821108957,
+        "tpr_at_1pct_fpr_ci_low": 0.11000000000000001,
+        "tpr_at_1pct_fpr_ci_high": 0.15200000000000002,
+        "tpr_at_5pct_fpr_mean": 0.35500000000000004,
+        "tpr_at_5pct_fpr_std": 0.05941380311005179,
+        "tpr_at_5pct_fpr_ci_low": 0.30599999999999994,
+        "tpr_at_5pct_fpr_ci_high": 0.40700000000000003,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 962000.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 962000.0,
+        "cumulative_epsilon_ci_high": 962000.0
+      },
+      "dp_laplace_e3p0": {
+        "per_seed": [
+          {
+            "auroc": 0.7590749999999999,
+            "advantage": 0.5181499999999999,
+            "tpr_at_1pct_fpr": 0.185,
+            "tpr_at_5pct_fpr": 0.535,
+            "query_count": 481000,
+            "cumulative_epsilon": 1443000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7590749999999999,
+              "advantage": 0.5181499999999999,
+              "tpr_at_1pct_fpr": 0.185,
+              "tpr_at_5pct_fpr": 0.535,
+              "query_count": 1000,
+              "cumulative_epsilon": 3000.0
+            },
+            "shadow": {
+              "auroc": 0.48850000000000005,
+              "advantage": -0.02299999999999991,
+              "tpr_at_1pct_fpr": 0.02,
+              "tpr_at_5pct_fpr": 0.04,
+              "query_count": 480000,
+              "cumulative_epsilon": 1440000.0
+            }
+          },
+          {
+            "auroc": 0.7569,
+            "advantage": 0.5138,
+            "tpr_at_1pct_fpr": 0.25,
+            "tpr_at_5pct_fpr": 0.525,
+            "query_count": 481000,
+            "cumulative_epsilon": 1443000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.7569,
+              "advantage": 0.5138,
+              "tpr_at_1pct_fpr": 0.25,
+              "tpr_at_5pct_fpr": 0.525,
+              "query_count": 1000,
+              "cumulative_epsilon": 3000.0
+            },
+            "shadow": {
+              "auroc": 0.5398000000000001,
+              "advantage": 0.07960000000000012,
+              "tpr_at_1pct_fpr": 0.03,
+              "tpr_at_5pct_fpr": 0.07,
+              "query_count": 480000,
+              "cumulative_epsilon": 1440000.0
+            }
+          },
+          {
+            "auroc": 0.707025,
+            "advantage": 0.41405000000000003,
+            "tpr_at_1pct_fpr": 0.28,
+            "tpr_at_5pct_fpr": 0.45,
+            "query_count": 481000,
+            "cumulative_epsilon": 1443000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.707025,
+              "advantage": 0.41405000000000003,
+              "tpr_at_1pct_fpr": 0.28,
+              "tpr_at_5pct_fpr": 0.45,
+              "query_count": 1000,
+              "cumulative_epsilon": 3000.0
+            },
+            "shadow": {
+              "auroc": 0.5054,
+              "advantage": 0.01079999999999992,
+              "tpr_at_1pct_fpr": 0.0,
+              "tpr_at_5pct_fpr": 0.02,
+              "query_count": 480000,
+              "cumulative_epsilon": 1440000.0
+            }
+          },
+          {
+            "auroc": 0.738325,
+            "advantage": 0.47665,
+            "tpr_at_1pct_fpr": 0.27,
+            "tpr_at_5pct_fpr": 0.52,
+            "query_count": 481000,
+            "cumulative_epsilon": 1443000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.738325,
+              "advantage": 0.47665,
+              "tpr_at_1pct_fpr": 0.27,
+              "tpr_at_5pct_fpr": 0.52,
+              "query_count": 1000,
+              "cumulative_epsilon": 3000.0
+            },
+            "shadow": {
+              "auroc": 0.5765,
+              "advantage": 0.15300000000000002,
+              "tpr_at_1pct_fpr": 0.06,
+              "tpr_at_5pct_fpr": 0.12,
+              "query_count": 480000,
+              "cumulative_epsilon": 1440000.0
+            }
+          },
+          {
+            "auroc": 0.771375,
+            "advantage": 0.5427500000000001,
+            "tpr_at_1pct_fpr": 0.465,
+            "tpr_at_5pct_fpr": 0.53,
+            "query_count": 481000,
+            "cumulative_epsilon": 1443000.0,
+            "attack": "direct",
+            "direct": {
+              "auroc": 0.771375,
+              "advantage": 0.5427500000000001,
+              "tpr_at_1pct_fpr": 0.465,
+              "tpr_at_5pct_fpr": 0.53,
+              "query_count": 1000,
+              "cumulative_epsilon": 3000.0
+            },
+            "shadow": {
+              "auroc": 0.516,
+              "advantage": 0.03200000000000003,
+              "tpr_at_1pct_fpr": 0.01,
+              "tpr_at_5pct_fpr": 0.04,
+              "query_count": 480000,
+              "cumulative_epsilon": 1440000.0
+            }
+          }
+        ],
+        "auroc_mean": 0.74654,
+        "auroc_std": 0.02240604605904397,
+        "auroc_ci_low": 0.72575225,
+        "auroc_ci_high": 0.76356,
+        "advantage_mean": 0.49307999999999996,
+        "advantage_std": 0.04481209211808794,
+        "advantage_ci_low": 0.4515045,
+        "advantage_ci_high": 0.5271199999999999,
+        "tpr_at_1pct_fpr_mean": 0.29000000000000004,
+        "tpr_at_1pct_fpr_std": 0.09354143466934854,
+        "tpr_at_1pct_fpr_ci_low": 0.221,
+        "tpr_at_1pct_fpr_ci_high": 0.38305,
+        "tpr_at_5pct_fpr_mean": 0.5120000000000001,
+        "tpr_at_5pct_fpr_std": 0.03140063693621517,
+        "tpr_at_5pct_fpr_ci_low": 0.48100000000000004,
+        "tpr_at_5pct_fpr_ci_high": 0.531,
+        "query_count_mean": 481000.0,
+        "query_count_std": 0.0,
+        "query_count_ci_low": 481000.0,
+        "query_count_ci_high": 481000.0,
+        "cumulative_epsilon_mean": 1443000.0,
+        "cumulative_epsilon_std": 0.0,
+        "cumulative_epsilon_ci_low": 1443000.0,
+        "cumulative_epsilon_ci_high": 1443000.0
+      }
+    }
+  }
+}

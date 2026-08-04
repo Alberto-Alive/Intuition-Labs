@@ -1,0 +1,204 @@
+{
+  "variant": "e1",
+  "train_loop_seed": 123,
+  "corpus_fingerprint": "de718ff12a86a7e4",
+  "result_dir": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_123",
+  "test_metrics": {
+    "trajectory_acc": 0.4716981053352356,
+    "trajectory_macro_f1": 0.339380162450844,
+    "trajectory_confusion": [
+      [
+        71,
+        7,
+        22,
+        0
+      ],
+      [
+        36,
+        13,
+        67,
+        0
+      ],
+      [
+        6,
+        2,
+        66,
+        0
+      ],
+      [
+        23,
+        3,
+        2,
+        0
+      ]
+    ],
+    "pattern_acc": 0.9748427867889404,
+    "pattern_macro_f1": 0.9603093286494926,
+    "pattern_confusion": [
+      [
+        31,
+        0,
+        0
+      ],
+      [
+        2,
+        240,
+        3
+      ],
+      [
+        0,
+        3,
+        39
+      ]
+    ],
+    "confidence_acc": 0.9245283007621765,
+    "confidence_macro_f1": 0.9251935938126521,
+    "confidence_confusion": [
+      [
+        96,
+        0,
+        0
+      ],
+      [
+        1,
+        80,
+        23
+      ],
+      [
+        0,
+        0,
+        118
+      ]
+    ],
+    "outcome_acc": 0.8773584961891174,
+    "outcome_macro_f1": 0.7140257721141777,
+    "outcome_confusion": [
+      [
+        207,
+        1,
+        0
+      ],
+      [
+        0,
+        62,
+        11
+      ],
+      [
+        14,
+        13,
+        10
+      ]
+    ],
+    "joint_acc": 0.4150943458080292,
+    "success_likely_precision": 0.9366515837104072,
+    "success_likely_recall": 0.9951923076923077,
+    "success_likely_f1": 0.965034965034965,
+    "uncertain_precision": 0.8157894736842105,
+    "uncertain_recall": 0.8493150684931506,
+    "uncertain_f1": 0.8322147651006712,
+    "failure_likely_precision": 0.47619047619047616,
+    "failure_likely_recall": 0.2702702702702703,
+    "failure_likely_f1": 0.3448275862068966,
+    "failure_recall": 0.2702702702702703,
+    "pattern_focused_precision": 0.9393939393939394,
+    "pattern_focused_recall": 1.0,
+    "pattern_focused_f1": 0.96875,
+    "pattern_mixed_precision": 0.9876543209876543,
+    "pattern_mixed_recall": 0.9795918367346939,
+    "pattern_mixed_f1": 0.9836065573770492,
+    "pattern_diffuse_precision": 0.9285714285714286,
+    "pattern_diffuse_recall": 0.9285714285714286,
+    "pattern_diffuse_f1": 0.9285714285714286,
+    "unsafe_success_rate_label": 0.06334841628959276,
+    "unsafe_success_rate_correctness": 0.06334841628959276,
+    "success_precision_vs_is_correct": 0.9366515837104072,
+    "success_auroc": 0.7580071174377224,
+    "success_auprc": 0.9600648834530285,
+    "success_brier": 0.25894044181383846,
+    "success_ece_10bin": 0.2599928965630982,
+    "success_label_auroc": 0.964117132867133,
+    "success_label_auprc": 0.9759504286825884,
+    "success_label_brier": 0.04978076623095825,
+    "success_label_ece_10bin": 0.05509011157928913,
+    "nonfailure_correct_auroc": 0.7782052515148601,
+    "nonfailure_correct_auprc": 0.962862503012777,
+    "nonfailure_correct_brier": 0.09604041841277745,
+    "nonfailure_correct_ece_10bin": 0.07105481031983395,
+    "failure_incorrect_auroc": 0.7782052515148601,
+    "failure_incorrect_auprc": 0.3416397042969426,
+    "failure_incorrect_brier": 0.09604041841277745,
+    "failure_incorrect_ece_10bin": 0.07105481031983386,
+    "predicted_success_rate": 0.6949685534591195,
+    "loss": 0.5356028349894397
+  },
+  "label_audit": {
+    "p_is_correct_given_outcome": {
+      "SUCCESS_LIKELY": 1.0,
+      "UNCERTAIN": 1.0,
+      "FAILURE_LIKELY": 0.0
+    },
+    "correctness_separation_success_minus_uncertain": 0.0,
+    "max_outcome_share_swing": 0.030785017957927124,
+    "label_revision_trigger": true
+  },
+  "correctness_baselines": {
+    "majority": {
+      "positive_label": 1,
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.4691151919866444
+    },
+    "logistic_regression": {
+      "accuracy": 0.8836477987421384,
+      "macro_f1": 0.5909327956054653,
+      "auroc": 0.751178224487833,
+      "auprc": 0.9391876736580158,
+      "brier": 0.08979844640927075,
+      "ece_10bin": 0.05710227356928392
+    },
+    "mlp": {
+      "accuracy": 0.889937106918239,
+      "macro_f1": 0.5437589670014347,
+      "auroc": 0.7036645186111378,
+      "auprc": 0.9424874138825272,
+      "brier": 0.11098464639363805,
+      "ece_10bin": 0.12714844154861737,
+      "converged": true,
+      "n_iter": 14
+    }
+  },
+  "monotonicity": {
+    "num_examples": 318,
+    "trace_input_dim": 9,
+    "supported_checks": [
+      "lower_agreement",
+      "lower_margin",
+      "higher_entropy",
+      "lower_attention_concentration"
+    ],
+    "lower_agreement_violation_rate": 0.990625,
+    "lower_margin_violation_rate": 0.0,
+    "higher_entropy_violation_rate": 0.22678571492433547,
+    "lower_attention_concentration_violation_rate": 0.5571428567171097,
+    "lower_agreement__nonfailure_violation_rate": 0.818303570151329,
+    "lower_margin__nonfailure_violation_rate": 0.0,
+    "higher_entropy__nonfailure_violation_rate": 0.10982142873108387,
+    "lower_attention_concentration__nonfailure_violation_rate": 0.3053571432828903,
+    "monotonicity_violation_rate": 0.4436383929103613,
+    "all_supported_monotonicity_violation_rate": 0.37600446422584355,
+    "nonfailure_monotonicity_violation_rate": 0.3083705355413258,
+    "all_supported_nonfailure_monotonicity_violation_rate": 0.3083705355413258
+  },
+  "acceptance": {
+    "failure_recall_ok": false,
+    "outcome_macro_f1_ok": true,
+    "outcome_acc_ok": true,
+    "trajectory_ok": false,
+    "monotonicity_ok": false,
+    "label_revision_trigger": true
+  },
+  "artifacts": {
+    "metrics": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_123\\metrics.json",
+    "predictions": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_123\\predictions.jsonl",
+    "summary": "W:\\Intuition-Labs\\experiments\\DIGIT\\Extrapolation\\results\\eval_suite\\e1\\seed_123\\summary.json"
+  }
+}

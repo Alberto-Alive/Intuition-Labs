@@ -1,0 +1,133 @@
+configs:
+  - config_id: 036872b917847147
+    architecture_name: e3_1_wda_clean_qkv_e_sc_wda_kv_01
+    architecture_family: WDA Support/Contradiction Clean-QKV
+    variant: sc_wda_kv
+    held_out_template_dev_accuracy: 0.757500
+    capacity_C: 128
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "036872b917847147"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA Support/Contradiction Clean-QKV"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_sc"
+      mod_k: true
+      mod_q: false
+      mod_v: true
+      mutation_description: "focused WDA hardening variant"
+      name: "e3_1_wda_clean_qkv_e_sc_wda_kv_01"
+      parent_config_id: "321609740a730eb8"
+      recency_confidence: false
+      strength: 1.385
+      support_contradiction: true
+      trealized_mode: "none"
+      typed_activation_cache: true
+      variant: "sc_wda_kv"
+      wda_scope: "kv"
+  - config_id: 69e276df98ce9305
+    architecture_name: e3_1_wda_clean_qkv_e_sc_wda_v_00
+    architecture_family: WDA Support/Contradiction Clean-QKV
+    variant: sc_wda_v
+    held_out_template_dev_accuracy: 0.755000
+    capacity_C: 128
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "69e276df98ce9305"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA Support/Contradiction Clean-QKV"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_sc"
+      mod_k: false
+      mod_q: false
+      mod_v: true
+      mutation_description: "focused WDA hardening variant"
+      name: "e3_1_wda_clean_qkv_e_sc_wda_v_00"
+      parent_config_id: "321609740a730eb8"
+      recency_confidence: false
+      strength: 1.35
+      support_contradiction: true
+      trealized_mode: "none"
+      typed_activation_cache: true
+      variant: "sc_wda_v"
+      wda_scope: "v"
+  - config_id: 9b097bb7b6b5bb82
+    architecture_name: e3_1_wda_clean_qkv_e_sc_wda_kv_01_e31_mut0
+    architecture_family: WDA Support/Contradiction Clean-QKV
+    variant: sc_wda_kv
+    held_out_template_dev_accuracy: 0.755000
+    capacity_C: 128
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "9b097bb7b6b5bb82"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "E"
+      family_name: "WDA Support/Contradiction Clean-QKV"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "wda_sc"
+      mod_k: true
+      mod_q: false
+      mod_v: true
+      mutation_description: "add support/contradiction typed cache"
+      name: "e3_1_wda_clean_qkv_e_sc_wda_kv_01_e31_mut0"
+      parent_config_id: "036872b917847147"
+      recency_confidence: false
+      strength: 1.465
+      support_contradiction: true
+      trealized_mode: "none"
+      typed_activation_cache: true
+      variant: "sc_wda_kv"
+      wda_scope: "kv"
+  - config_id: 2090b178a34e9e71
+    architecture_name: e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00_e31_mut0
+    architecture_family: Gate-Selective WDA Clean-QKV
+    variant: wda_v_gate_calibration
+    held_out_template_dev_accuracy: 0.755000
+    capacity_C: 128
+    clean_qkv_valid: true
+    architecture_parameters:
+      bias: false
+      cache_dropout: 0.0
+      cache_shuffle_contrastive: false
+      config_id: "2090b178a34e9e71"
+      control_mode: "none"
+      current_override_training: false
+      family_code: "G"
+      family_name: "Gate-Selective WDA Clean-QKV"
+      frozen: false
+      gate_selective: true
+      layer_shaping: "none"
+      mechanism: "gate_selective_wda"
+      mod_k: false
+      mod_q: false
+      mod_v: true
+      mutation_description: "add support/contradiction typed cache"
+      name: "e3_1_wda_clean_qkv_g_wda_v_gate_calibration_00_e31_mut0"
+      parent_config_id: "2de0f84793fe7581"
+      recency_confidence: false
+      strength: 1.35
+      support_contradiction: true
+      trealized_mode: "none"
+      typed_activation_cache: true
+      variant: "wda_v_gate_calibration"
+      wda_scope: "v"

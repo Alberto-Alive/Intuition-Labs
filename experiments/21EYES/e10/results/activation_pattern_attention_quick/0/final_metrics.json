@@ -1,0 +1,261 @@
+{
+  "attention_kernel_summary": {
+    "avenue_variant": false,
+    "crossing_variant": false,
+    "cuda_sdp_flags": {
+      "flash_sdp_enabled": true,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "expected_training_paths": [
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal"
+    ],
+    "last_attention_paths": [
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal",
+      "sdpa_causal"
+    ],
+    "note": "Decoder-only transformer with a second attention over hidden feature-group activation patterns inside each token.",
+    "pattern_attention_variant": true,
+    "pattern_points": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "config_path": "W:\\Intuition-Labs\\experiments\\21EYES\\e10\\configs\\activation_pattern_attention_quick.yaml",
+  "controls": {
+    "avenue_controls": {},
+    "base_accuracy": 0.14583333333333334,
+    "base_loss": 3.719146728515625,
+    "crossing_controls": {},
+    "examples": 96,
+    "full_minus_max_single_avenue": null,
+    "interweave_controls": {},
+    "leave_one_avenue_out": {},
+    "max_single_avenue_accuracy": null,
+    "pattern_controls": {
+      "pattern_point_zero_0": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.7191670735677085,
+        "tokens_per_sec": 350007.6905046819
+      },
+      "pattern_point_zero_1": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.7194722493489585,
+        "tokens_per_sec": 343263.2355806311
+      },
+      "pattern_point_zero_2": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.719451904296875,
+        "tokens_per_sec": 345936.2069124197
+      },
+      "pattern_point_zero_3": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.7194417317708335,
+        "tokens_per_sec": 355023.4311498114
+      },
+      "pattern_random": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.720550537109375,
+        "tokens_per_sec": 331975.31817507755
+      },
+      "pattern_shuffle": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.7192281087239585,
+        "tokens_per_sec": 319593.84937736625
+      },
+      "pattern_zero": {
+        "accuracy": 0.14583333333333334,
+        "drop": 0.0,
+        "examples": 96,
+        "loss": 3.719818115234375,
+        "tokens_per_sec": 354188.4047396167
+      }
+    },
+    "single_avenue": {}
+  },
+  "custom_variant_rationale": "Quick decoder-only follow-up: keep a normal causal transformer and add a second attention mechanism over hidden activation-pattern groups inside each token. This does not add avenue streams and does not attend over future token positions.\n",
+  "device": "cuda",
+  "eval": {
+    "accuracy": 0.1875,
+    "accuracy_by_distractor_count": {
+      "17+": 0.10625,
+      "5-8": 0.39090909090909093,
+      "9-16": 0.1487603305785124
+    },
+    "accuracy_by_overwrite_depth": {
+      "1": 0.058823529411764705,
+      "2": 0.21621621621621623,
+      "3": 0.21686746987951808,
+      "4+": 0.1760797342192691
+    },
+    "accuracy_by_seq_len": {
+      "128": 0.16927083333333334,
+      "256": 0.2421875
+    },
+    "accuracy_by_task": {
+      "matched_distractors": 0.192,
+      "multi_hop_lookup": 0.23255813953488372,
+      "password_overwrite": 0.14788732394366197,
+      "variable_shadowing": 0.1810344827586207
+    },
+    "avenue_diagnostics": {
+      "predicted_actual_avenue_cosine": 0.0,
+      "predicted_actual_avenue_cosine_by_pair": []
+    },
+    "control": null,
+    "examples": 512,
+    "examples_per_sec": 2151.24965763579,
+    "held_out_template_accuracy": 0.1875,
+    "layers": {
+      "attention_entropy": [
+        3.4375325739383698,
+        1.8054852932691574,
+        1.907113142311573,
+        2.1784698367118835
+      ],
+      "effective_attended_tokens": [
+        50.163328647613525,
+        8.191285520792007,
+        12.241444110870361,
+        15.189953804016113
+      ],
+      "pattern_attention_applied": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pattern_attention_delta_norm": [
+        0.01248824642971158,
+        0.024025779217481613,
+        0.0334523213095963,
+        0.024907475570216775
+      ],
+      "pattern_attention_delta_ratio": [
+        0.0031717277743155137,
+        0.0034254435304319486,
+        0.0036068671324755996,
+        0.0022942713258089498
+      ],
+      "pattern_attention_entropy": [
+        2.7725887298583984,
+        2.7725887298583984,
+        2.7725887298583984,
+        2.7725887298583984
+      ],
+      "pattern_attention_gamma": [
+        0.08697262406349182,
+        0.1097402572631836,
+        0.11532745510339737,
+        0.10863911360502243
+      ],
+      "pattern_attention_hidden_norm": [
+        3.9427196979522705,
+        7.014176696538925,
+        9.275106191635132,
+        10.8575599193573
+      ],
+      "sdpa_used": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "loss": 3.924348831176758,
+    "peak_gpu_memory_mb": 1014.45263671875,
+    "scenarios": {
+      "high_distractor": {
+        "accuracy": 0.109375,
+        "distractor_range": [
+          18,
+          30
+        ],
+        "examples": 128,
+        "loss": 4.533195495605469,
+        "overwrite_range": [
+          1,
+          4
+        ],
+        "seq_len": 128
+      },
+      "in_distribution": {
+        "accuracy": 0.25,
+        "distractor_range": [
+          6,
+          16
+        ],
+        "examples": 128,
+        "loss": 3.6334228515625,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 128
+      },
+      "long": {
+        "accuracy": 0.2421875,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.653778076171875,
+        "overwrite_range": [
+          2,
+          5
+        ],
+        "seq_len": 256
+      },
+      "many_overwrite": {
+        "accuracy": 0.1484375,
+        "distractor_range": [
+          6,
+          18
+        ],
+        "examples": 128,
+        "loss": 3.8769989013671875,
+        "overwrite_range": [
+          5,
+          8
+        ],
+        "seq_len": 128
+      }
+    },
+    "tokens": 81920,
+    "tokens_per_sec": 344199.94522172643,
+    "wall_clock_eval_seconds": 0.23800119999214076
+  },
+  "max_steps": 1500,
+  "parameter_count": 872740,
+  "peak_gpu_memory_mb": 1014.45263671875,
+  "seed": 0,
+  "train_examples": 96000,
+  "train_examples_per_sec": 2507.701700481389,
+  "train_loss_ema": 3.590398390027547,
+  "train_task_loss_ema": 3.590398390027547,
+  "train_tokens": 12288000,
+  "train_tokens_per_sec": 320985.81766161777,
+  "trainable_parameter_count": 872740,
+  "variant": "activation_pattern_attention_quick",
+  "wall_clock_train_seconds": 38.28206520000822
+}

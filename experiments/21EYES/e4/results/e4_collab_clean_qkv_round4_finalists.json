@@ -1,0 +1,111 @@
+{
+  "baselines": {
+    "candidate_only": 0.12666666666666665,
+    "clean_qkv_v1_reference": 0.5243,
+    "current_only_no_memory": 0.20833333333333334,
+    "e2_memory_slot_champion_reference": 1.0,
+    "e3_1_parent_reference": 0.7575,
+    "e3_parent_reference": 0.68125,
+    "evidence_only": 0.12666666666666665,
+    "post_attention_memory_addition": 0.81,
+    "query_only": 0.20833333333333334,
+    "random_candidate": 0.125,
+    "stage8_champion_reference": 0.82
+  },
+  "c256_reached": false,
+  "evaluated_count": 4,
+  "finalists": [
+    {
+      "architecture_name": "e4_collab_clean_qkv_b_candidate_summary_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "c52aeea0dd340c0d",
+      "family": "Current-to-Cache Query, Cache-to-WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7216666666666666,
+      "selection_score": 0.6274583333333333,
+      "variant": "candidate_summary"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_b_stale_override_typed_cache_05",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "8d60cea58f4c906a",
+      "family": "Current-to-Cache Query, Cache-to-WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7233333333333333,
+      "selection_score": 0.6262916666666667,
+      "variant": "stale_override_typed_cache"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_c_unshared_steps_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "44b4e43a0eb3b194",
+      "family": "Reciprocal Refinement Loop",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7033333333333334,
+      "selection_score": 0.5710416666666668,
+      "variant": "unshared_steps"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_c_shared_steps_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "f85af05f85d699be",
+      "family": "Reciprocal Refinement Loop",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7016666666666667,
+      "selection_score": 0.5702083333333333,
+      "variant": "shared_steps"
+    }
+  ],
+  "round": 4,
+  "screen": "final_development_screen",
+  "top_configs": [
+    {
+      "architecture_name": "e4_collab_clean_qkv_b_candidate_summary_00",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "c52aeea0dd340c0d",
+      "family": "Current-to-Cache Query, Cache-to-WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7216666666666666,
+      "selection_score": 0.6274583333333333,
+      "variant": "candidate_summary"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_b_stale_override_typed_cache_05",
+      "capacity_C": 128,
+      "clean_qkv_valid": true,
+      "config_id": "8d60cea58f4c906a",
+      "family": "Current-to-Cache Query, Cache-to-WDA-KV",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7233333333333333,
+      "selection_score": 0.6262916666666667,
+      "variant": "stale_override_typed_cache"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_c_unshared_steps_04",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "44b4e43a0eb3b194",
+      "family": "Reciprocal Refinement Loop",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7033333333333334,
+      "selection_score": 0.5710416666666668,
+      "variant": "unshared_steps"
+    },
+    {
+      "architecture_name": "e4_collab_clean_qkv_c_shared_steps_03",
+      "capacity_C": 64,
+      "clean_qkv_valid": true,
+      "config_id": "f85af05f85d699be",
+      "family": "Reciprocal Refinement Loop",
+      "hard_disqualifiers": [],
+      "held_out_template_dev_accuracy": 0.7016666666666667,
+      "selection_score": 0.5702083333333333,
+      "variant": "shared_steps"
+    }
+  ]
+}

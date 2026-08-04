@@ -1,0 +1,992 @@
+{
+  "artifact": "stage7c_tau_final_statistics",
+  "best_non_oracle_baseline": "best_generator_on_train_baseline",
+  "best_non_oracle_baseline_pass_at_1_mean": 0.5416666666666667,
+  "best_non_oracle_selection_efficiency_mean": 0.65,
+  "completed_seeds": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "created_at_utc": "2026-05-17T07:41:15.375447+00:00",
+  "frozen_pass_at_1_mean": 0.4833333333333333,
+  "method_summary": {
+    "best_generator_on_train_baseline": {
+      "conditional_selector_accuracy_mean": 0.6500000000000001,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 5.214583021976674e-06
+      },
+      "mrr_mean": 0.6315972222222221,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.5416666666666667,
+      "pass_at_1_std": 1.1102230246251565e-16,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 23.0,
+          "selected_success_rate": 0.5652173913043478
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 1.0,
+          "selected_success_rate": 0.0
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.5
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.5
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 0.65,
+      "top_2_accuracy_mean": 0.625
+    },
+    "best_generator_on_train_dev_baseline": {
+      "conditional_selector_accuracy_mean": 0.6500000000000001,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 5.214583021976674e-06
+      },
+      "mrr_mean": 0.6315972222222221,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.5416666666666667,
+      "pass_at_1_std": 1.1102230246251565e-16,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 23.0,
+          "selected_success_rate": 0.5652173913043478
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 1.0,
+          "selected_success_rate": 0.0
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.5
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.5
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 0.65,
+      "top_2_accuracy_mean": 0.625
+    },
+    "embedding_reranker": {
+      "conditional_selector_accuracy_mean": 0.5999999999999999,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.0
+      },
+      "mrr_mean": 0.5868055555555555,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.5,
+      "pass_at_1_std": 0.0,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 4.0,
+          "selected_success_rate": 0.5
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 4.0,
+          "selected_success_rate": 0.5
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 13.0,
+          "selected_success_rate": 0.46153846153846156
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 3.0,
+          "selected_success_rate": 0.6666666666666667
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.5
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.33333333333333337
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.0
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 0.5999999999999999,
+      "top_2_accuracy_mean": 0.5416666666666667
+    },
+    "first_trajectory_order_baseline": {
+      "conditional_selector_accuracy_mean": 0.35,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.0
+      },
+      "mrr_mean": 0.5087301587301588,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.29166666666666663,
+      "pass_at_1_std": 5.551115123125783e-17,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 4.0,
+          "selected_success_rate": 0.5
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 4.0,
+          "selected_success_rate": 0.5
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 6.0,
+          "selected_success_rate": 0.33333333333333337
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 10.0,
+          "selected_success_rate": 0.1
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.5
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.33333333333333337
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.25
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.33333333333333337
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.25
+        }
+      },
+      "selection_efficiency_mean": 0.35000000000000003,
+      "top_2_accuracy_mean": 0.625
+    },
+    "frozen_same_architecture_latent_selector": {
+      "conditional_selector_accuracy_mean": 0.58,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.033844286250193055
+      },
+      "mrr_mean": 0.6167410714285714,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.4833333333333333,
+      "pass_at_1_std": 0.11211353372561424,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 5.6,
+          "selected_success_rate": 0.5878499278499278
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 5.2,
+          "selected_success_rate": 0.7070238095238095
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 4.8,
+          "selected_success_rate": 0.3477777777777778
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 8.4,
+          "selected_success_rate": 0.40726190476190477
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.45
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.39999999999999997
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.525
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.7333333333333333
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.8333333333333333
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.675
+        }
+      },
+      "selection_efficiency_mean": 0.5799999999999998,
+      "top_2_accuracy_mean": 0.6666666666666667
+    },
+    "llm_judge_baseline": {
+      "unavailable": true
+    },
+    "oracle_pass_at_8": {
+      "conditional_selector_accuracy_mean": 1.0,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 0.0,
+        "latency_seconds_per_selector_decision": 0.0
+      },
+      "mrr_mean": 0.8333333333333334,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.8333333333333334,
+      "pass_at_1_std": 0.0,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 4.0,
+          "selected_success_rate": 1.0
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 8.0,
+          "selected_success_rate": 0.875
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 4.0,
+          "selected_success_rate": 1.0
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 8.0,
+          "selected_success_rate": 0.625
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 1.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 1.0
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 1.0
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 1.0
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 1.0
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 1.0,
+      "top_2_accuracy_mean": 0.8333333333333334
+    },
+    "random_trajectory": {
+      "conditional_selector_accuracy_mean": 0.63,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.0
+      },
+      "mrr_mean": 0.6396626984126984,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.525,
+      "pass_at_1_std": 0.053359368645273755,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 7.3,
+          "selected_success_rate": 0.5526190476190476
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 5.4,
+          "selected_success_rate": 0.7193650793650794
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 5.5,
+          "selected_success_rate": 0.30273809523809525
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 5.8,
+          "selected_success_rate": 0.4758333333333334
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.2
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.3
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.5
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.625
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.5666666666666667
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.8666666666666666
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.875
+        }
+      },
+      "selection_efficiency_mean": 0.63,
+      "top_2_accuracy_mean": 0.675
+    },
+    "randomized_labels_trainable_latent_selector": {
+      "conditional_selector_accuracy_mean": 0.47000000000000003,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.03381455625009645
+      },
+      "mrr_mean": 0.565952380952381,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.3916666666666667,
+      "pass_at_1_std": 0.07728015412913085,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 3.7777777777777777,
+          "selected_success_rate": 0.4160493827160494
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 4.3,
+          "selected_success_rate": 0.49214285714285716
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 7.2,
+          "selected_success_rate": 0.3479020979020979
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 9.1,
+          "selected_success_rate": 0.36100233100233103
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.45
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.23333333333333334
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.45
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.4999999999999999
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.7666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.55
+        }
+      },
+      "selection_efficiency_mean": 0.4699999999999999,
+      "top_2_accuracy_mean": 0.6458333333333333
+    },
+    "raw_latent_selector": {
+      "conditional_selector_accuracy_mean": 0.5900000000000001,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.033804371666822895
+      },
+      "mrr_mean": 0.6135813492063491,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.4916666666666666,
+      "pass_at_1_std": 0.08498365855987974,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 6.4,
+          "selected_success_rate": 0.48023809523809524
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 5.3,
+          "selected_success_rate": 0.5952380952380952
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 6.2,
+          "selected_success_rate": 0.4444444444444445
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 6.1,
+          "selected_success_rate": 0.4807142857142857
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.1
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.3
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.5
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.475
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.4666666666666667
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.8333333333333333
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.95
+        }
+      },
+      "selection_efficiency_mean": 0.59,
+      "top_2_accuracy_mean": 0.6166666666666668
+    },
+    "static_trajectory_feature_reranker": {
+      "conditional_selector_accuracy_mean": 0.54,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.01767883291637797
+      },
+      "mrr_mean": 0.5924156746031746,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.45,
+      "pass_at_1_std": 0.07168604389202189,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 9.0,
+          "selected_success_rate": 0.312863005050505
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 6.0,
+          "selected_success_rate": 0.6616666666666666
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 4.5,
+          "selected_success_rate": 0.3825541125541126
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 6.3,
+          "selected_success_rate": 0.48243589743589743
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.1
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.35
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.26666666666666666
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.55
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.5666666666666667
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.7333333333333333
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.775
+        }
+      },
+      "selection_efficiency_mean": 0.54,
+      "top_2_accuracy_mean": 0.6166666666666667
+    },
+    "text_only_multi_agent_reviewer": {
+      "conditional_selector_accuracy_mean": 0.605,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.1350880929164608
+      },
+      "mrr_mean": 0.60875,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.5041666666666667,
+      "pass_at_1_std": 0.02916666666666666,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 7.0,
+          "selected_success_rate": 0.29698412698412696
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 8.9,
+          "selected_success_rate": 0.5612373737373737
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 3.6,
+          "selected_success_rate": 0.8016666666666665
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 4.5,
+          "selected_success_rate": 0.40714285714285714
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 1.0
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.23333333333333334
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.55
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.4
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 0.605,
+      "top_2_accuracy_mean": 0.5958333333333334
+    },
+    "text_only_single_reviewer": {
+      "conditional_selector_accuracy_mean": 0.585,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.13543563416678808
+      },
+      "mrr_mean": 0.5972916666666667,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.48749999999999993,
+      "pass_at_1_std": 0.02667968432263687,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 8.2,
+          "selected_success_rate": 0.28619047619047616
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 7.8,
+          "selected_success_rate": 0.5678571428571428
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 3.3,
+          "selected_success_rate": 0.8
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 4.7,
+          "selected_success_rate": 0.4471428571428572
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.0
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 1.0
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.1
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.525
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.4333333333333333
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.6666666666666667
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 1.0
+        }
+      },
+      "selection_efficiency_mean": 0.5849999999999999,
+      "top_2_accuracy_mean": 0.5791666666666667
+    },
+    "trainable_shared_weight_latent_selector": {
+      "conditional_selector_accuracy_mean": 0.5149999999999999,
+      "cost_tokens_latency_mean": {
+        "estimated_tokens_per_selector_decision": 26788.291666666668,
+        "latency_seconds_per_selector_decision": 0.0339848041665391
+      },
+      "mrr_mean": 0.5937946428571428,
+      "oracle_pass_at_8_mean": 0.8333333333333334,
+      "pass_at_1_mean": 0.4291666666666667,
+      "pass_at_1_std": 0.11938790651578671,
+      "per_generator_source_audit_breakdown": {
+        "llm_agent:claude-3-7-sonnet-20250219": {
+          "selected_count": 5.6,
+          "selected_success_rate": 0.4875000000000001
+        },
+        "llm_agent:gpt-4.1-2025-04-14": {
+          "selected_count": 4.4,
+          "selected_success_rate": 0.6166666666666667
+        },
+        "llm_agent:gpt-4.1-mini-2025-04-14": {
+          "selected_count": 4.9,
+          "selected_success_rate": 0.2906060606060606
+        },
+        "llm_agent:o4-mini-2025-04-16": {
+          "selected_count": 9.1,
+          "selected_success_rate": 0.35417748917748915
+        }
+      },
+      "per_task_success_count_breakdown": {
+        "0": {
+          "n": 4.0,
+          "pass_at_1": 0.0
+        },
+        "1": {
+          "n": 1.0,
+          "pass_at_1": 0.1
+        },
+        "2": {
+          "n": 2.0,
+          "pass_at_1": 0.5
+        },
+        "3": {
+          "n": 3.0,
+          "pass_at_1": 0.36666666666666664
+        },
+        "4": {
+          "n": 4.0,
+          "pass_at_1": 0.425
+        },
+        "5": {
+          "n": 3.0,
+          "pass_at_1": 0.6
+        },
+        "6": {
+          "n": 3.0,
+          "pass_at_1": 0.7333333333333334
+        },
+        "7": {
+          "n": 4.0,
+          "pass_at_1": 0.6
+        }
+      },
+      "selection_efficiency_mean": 0.5149999999999999,
+      "top_2_accuracy_mean": 0.6833333333333333
+    }
+  },
+  "oracle_pass_at_8_mean": 0.8333333333333334,
+  "paired_trainable_vs_best_non_oracle_baseline": {
+    "absolute_pass_at_1_delta": -0.11249999701976776,
+    "baseline": "best_generator_on_train_baseline",
+    "baseline_pass_at_1": 0.5416666865348816,
+    "n_pairs": 240,
+    "paired_bootstrap_95_ci": {
+      "lower": -0.17916665971279144,
+      "mean": -0.11249999701976776,
+      "upper": -0.0416666679084301
+    },
+    "paired_sign_test": {
+      "losses": 52,
+      "n_untied": 77,
+      "ties": 163,
+      "two_sided_p": 0.0027990538772776244,
+      "wins": 25
+    },
+    "trainable_pass_at_1": 0.42916667461395264
+  },
+  "paired_trainable_vs_frozen": {
+    "absolute_pass_at_1_delta": -0.05416666716337204,
+    "baseline": "frozen_same_architecture_latent_selector",
+    "baseline_pass_at_1": 0.4833333194255829,
+    "n_pairs": 240,
+    "paired_bootstrap_95_ci": {
+      "lower": -0.11666666716337204,
+      "mean": -0.05416666716337204,
+      "upper": 0.012604166870005333
+    },
+    "paired_sign_test": {
+      "losses": 42,
+      "n_untied": 71,
+      "ties": 169,
+      "two_sided_p": 0.1539127693264563,
+      "wins": 29
+    },
+    "trainable_pass_at_1": 0.42916667461395264
+  },
+  "per_seed_results": [
+    {
+      "best_non_oracle_baseline": "frozen_same_architecture_latent_selector",
+      "best_non_oracle_baseline_pass_at_1": 0.5833333333333334,
+      "frozen_pass_at_1": 0.5833333333333334,
+      "seed": 10,
+      "trainable_minus_best_non_oracle_baseline": -0.08333333333333337,
+      "trainable_minus_frozen": -0.08333333333333337,
+      "trainable_pass_at_1": 0.5
+    },
+    {
+      "best_non_oracle_baseline": "raw_latent_selector",
+      "best_non_oracle_baseline_pass_at_1": 0.625,
+      "frozen_pass_at_1": 0.2916666666666667,
+      "seed": 11,
+      "trainable_minus_best_non_oracle_baseline": -0.04166666666666663,
+      "trainable_minus_frozen": 0.2916666666666667,
+      "trainable_pass_at_1": 0.5833333333333334
+    },
+    {
+      "best_non_oracle_baseline": "random_trajectory",
+      "best_non_oracle_baseline_pass_at_1": 0.5833333333333334,
+      "frozen_pass_at_1": 0.5,
+      "seed": 12,
+      "trainable_minus_best_non_oracle_baseline": -0.16666666666666669,
+      "trainable_minus_frozen": -0.08333333333333331,
+      "trainable_pass_at_1": 0.4166666666666667
+    },
+    {
+      "best_non_oracle_baseline": "frozen_same_architecture_latent_selector",
+      "best_non_oracle_baseline_pass_at_1": 0.6666666666666666,
+      "frozen_pass_at_1": 0.6666666666666666,
+      "seed": 13,
+      "trainable_minus_best_non_oracle_baseline": -0.04166666666666663,
+      "trainable_minus_frozen": -0.04166666666666663,
+      "trainable_pass_at_1": 0.625
+    },
+    {
+      "best_non_oracle_baseline": "random_trajectory",
+      "best_non_oracle_baseline_pass_at_1": 0.5833333333333334,
+      "frozen_pass_at_1": 0.5416666666666666,
+      "seed": 14,
+      "trainable_minus_best_non_oracle_baseline": -0.20833333333333337,
+      "trainable_minus_frozen": -0.16666666666666663,
+      "trainable_pass_at_1": 0.375
+    },
+    {
+      "best_non_oracle_baseline": "best_generator_on_train_baseline",
+      "best_non_oracle_baseline_pass_at_1": 0.5416666666666666,
+      "frozen_pass_at_1": 0.2916666666666667,
+      "seed": 15,
+      "trainable_minus_best_non_oracle_baseline": -0.29166666666666663,
+      "trainable_minus_frozen": -0.041666666666666685,
+      "trainable_pass_at_1": 0.25
+    },
+    {
+      "best_non_oracle_baseline": "raw_latent_selector",
+      "best_non_oracle_baseline_pass_at_1": 0.625,
+      "frozen_pass_at_1": 0.5,
+      "seed": 16,
+      "trainable_minus_best_non_oracle_baseline": -0.375,
+      "trainable_minus_frozen": -0.25,
+      "trainable_pass_at_1": 0.25
+    },
+    {
+      "best_non_oracle_baseline": "best_generator_on_train_baseline",
+      "best_non_oracle_baseline_pass_at_1": 0.5416666666666666,
+      "frozen_pass_at_1": 0.4583333333333333,
+      "seed": 17,
+      "trainable_minus_best_non_oracle_baseline": -0.12499999999999994,
+      "trainable_minus_frozen": -0.04166666666666663,
+      "trainable_pass_at_1": 0.4166666666666667
+    },
+    {
+      "best_non_oracle_baseline": "random_trajectory",
+      "best_non_oracle_baseline_pass_at_1": 0.5833333333333334,
+      "frozen_pass_at_1": 0.4583333333333333,
+      "seed": 18,
+      "trainable_minus_best_non_oracle_baseline": -0.08333333333333337,
+      "trainable_minus_frozen": 0.041666666666666685,
+      "trainable_pass_at_1": 0.5
+    },
+    {
+      "best_non_oracle_baseline": "static_trajectory_feature_reranker",
+      "best_non_oracle_baseline_pass_at_1": 0.5833333333333334,
+      "frozen_pass_at_1": 0.5416666666666666,
+      "seed": 19,
+      "trainable_minus_best_non_oracle_baseline": -0.20833333333333337,
+      "trainable_minus_frozen": -0.16666666666666663,
+      "trainable_pass_at_1": 0.375
+    }
+  ],
+  "randomized_labels_trainable_pass_at_1_mean": 0.3916666666666667,
+  "trainable_beats_frozen_seed_count": 2,
+  "trainable_minus_best_non_oracle_baseline": -0.11250000000000004,
+  "trainable_minus_frozen_pass_at_1": -0.054166666666666585,
+  "trainable_minus_randomized_labels_trainable": 0.03749999999999998,
+  "trainable_pass_at_1_mean": 0.4291666666666667,
+  "trainable_selection_efficiency_mean": 0.5149999999999999
+}

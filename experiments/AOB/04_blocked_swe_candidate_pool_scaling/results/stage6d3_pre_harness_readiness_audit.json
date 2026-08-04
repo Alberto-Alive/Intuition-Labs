@@ -1,0 +1,64 @@
+{
+  "benchmark": "stage6d3_candidate_source_expansion",
+  "created_at_utc": "2026-05-16T23:40:21.715773+00:00",
+  "decision": "NEED_SELF_GENERATION",
+  "decision_meaning": "current public/local sources are insufficient; use the included self-generation plan",
+  "exact_reference_source_scan_audit": {
+    "hits": [],
+    "hits_total": 0,
+    "note": "Exact reference hashes are excluded before unlabeled pool construction.",
+    "passes": true,
+    "type": "source_scan_exact_reference_exclusion"
+  },
+  "minimum_k8_tasks": 50,
+  "no_final_swe_bench_improvement_claim": true,
+  "no_selector_training_executed": true,
+  "official_harness_should_run_now": false,
+  "pool_all_duplicate_audit": {
+    "duplicates": [],
+    "examples_checked": 25,
+    "passes": true
+  },
+  "pool_all_k8_tasks": 25,
+  "pool_all_order_audit": {
+    "candidate_order_randomized_tasks": 25,
+    "candidate_order_source_counts": {
+      "stage6d3_randomized_after_dedup": 25
+    },
+    "examples_checked": 25,
+    "not_randomized_task_ids": [],
+    "passes": true
+  },
+  "pool_strict_duplicate_audit": {
+    "duplicates": [],
+    "examples_checked": 23,
+    "passes": true
+  },
+  "pool_strict_k8_tasks": 23,
+  "pool_strict_order_audit": {
+    "candidate_order_randomized_tasks": 23,
+    "candidate_order_source_counts": {
+      "stage6d3_randomized_after_dedup": 23
+    },
+    "examples_checked": 23,
+    "not_randomized_task_ids": [],
+    "passes": true
+  },
+  "pre_harness_gates": {
+    "at_least_50_k8_generated_candidate_tasks_in_pool_all": false,
+    "at_least_50_k8_generated_candidate_tasks_in_pool_strict_or_source_limit_documented": true,
+    "candidate_order_randomized": true,
+    "duplicate_candidate_patch_audit_passes": true,
+    "exact_reference_patch_hits_zero": true,
+    "near_reference_candidates_flagged_or_quarantined": true,
+    "no_fabricated_candidates": true,
+    "no_final_model_claim_made": true,
+    "no_raw_preserving_expansion": true,
+    "selector_training_not_executed": true,
+    "source_generator_skew_reported": true
+  },
+  "pre_harness_gates_pass": false,
+  "seed": 606430,
+  "slot_prediction_files_ready": false,
+  "source_or_compute_limit_documented": true
+}
